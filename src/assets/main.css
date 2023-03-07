@@ -1,0 +1,24 @@
+:root {
+    --primary: #8dd0ff;;
+    --primary-hover: #56bdff;
+    --inline-spacing: 0.5rem;
+    --inline-block-spacing: 1rem;
+}
+*:not(.p-tooltip) {
+    transition: 0.15s;
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+}
+
+p {
+    max-width: 70ch;
+    line-height: 1.5;
+}
+
+.main-container {
+    padding: var(--content-padding)
+}

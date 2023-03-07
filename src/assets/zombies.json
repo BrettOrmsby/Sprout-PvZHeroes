@@ -1,0 +1,4538 @@
+[
+  {
+    "name": "Skunk Punk",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Skunk_PunkH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Smelly Zombie is the only zombie who really gets him, you know?"
+  },
+  {
+    "name": "Pied Piper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b2/Pied_PiperH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Plants here get -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "He was told that playing the pipe would summon raccoons. But whatevs."
+  },
+  {
+    "name": "Zookeeper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/66/ZookeeperH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Professional"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When you play another Pet, all Pets get +1{{Strength}}.",
+    "flavour": "Snaaaaake!"
+  },
+  {
+    "name": "Dolphin Rider",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Dolphin_RiderH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "The dolphin is also a Zombie."
+  },
+  {
+    "name": "Locust Swarm",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Locust_SwarmH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Plant.",
+    "flavour": "A plague upon your lawns!"
+  },
+  {
+    "name": "Dog Walker",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Dog_WalkerH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Hunt</b>",
+    "flavour": "Is the Zombie walking the dog, or is the dog walking the Zombie? Hard to say."
+  },
+  {
+    "name": "Nibble",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8a/NibbleH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}. Heal your Hero for 2.",
+    "flavour": "Just a quick bite."
+  },
+  {
+    "name": "Snorkel Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/13/Snorkel_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Party"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "Breathing out: check. Breathing in? Not so much."
+  },
+  {
+    "name": "Yeti Lunchbox",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Yeti_LunchboxH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "What's inside? A peanut butter and brains sandwich... with the crusts cut off."
+  },
+  {
+    "name": "Haunting Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Haunting_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Monster"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When destroyed</b>: Gain a Haunting Ghost.",
+    "flavour": "He doesn't realize he would look even scarier without the spooky ghost costume..."
+  },
+  {
+    "name": "Loudmouth",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/LoudmouthH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "What he lacks in size, he makes up for in volume."
+  },
+  {
+    "name": "B-flat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/44/B-flatH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Dancing"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a random Plant.",
+    "flavour": "Just wait until you C-Sharp."
+  },
+  {
+    "name": "Total Eclipse",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Total_EclipseH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants here get -1 {{Strength}}/-1 {{Heart}}.",
+    "flavour": "Zombies love a good eclipse. They usually celebrate by eating Plants. And brains."
+  },
+  {
+    "name": "Alien Ooze",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/de/Alien_OozeH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Monster"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets -2 {{Strength}}/-2 {{Heart}}.\nIf it's on Heights or an Environment, it gets -6 {{Strength}}/-6 {{Heart}} instead.",
+    "flavour": "Oozin' for a bruisin!"
+  },
+  {
+    "name": "Surfer Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5d/Surfer_ZombieH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Party",
+      "Sports"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>Amphibious</b>\n<center>{{Frenzy}}<b>Frenzy</b></center>",
+    "flavour": "He used to hang 10 with the best of them, but ever since he lost that toe to a shark he hasn't been able to hang more than 9."
+  },
+  {
+    "name": "Haunting Ghost",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/77/Haunting_GhostH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Monster"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: A Plant gets -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "Is he a zombie? Is he a ghost? He refuses to be pigeonholed."
+  },
+  {
+    "name": "Goat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/GoatH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 0,
+    "strength": 1,
+    "health": 1,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when any kind of Goat is hurt.",
+    "flavour": "Hungry... Smelly... A lot like a Zombie but with 100% more goat."
+  },
+  {
+    "name": "Vengeful Cyborg",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Vengeful_CyborgH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>Hunt</b>",
+    "flavour": "His toupee went missing in the heat of battle and he's been furious about it ever since."
+  },
+  {
+    "name": "Squirrel Herder",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/16/Squirrel_HerderH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Professional"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Destroy one of their Nuts or Berries.",
+    "flavour": "The only thing more difficult than herding cats."
+  },
+  {
+    "name": "Vimpire",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f5/VimpireH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Monster",
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nThis gets +2{{Strength}}/+2{{Heart}} when it destroys a Plant.",
+    "flavour": "He vants to suck your chlorophyll."
+  },
+  {
+    "name": "Vitamin Z",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/89/Vitamin_ZH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +3{{Strength}}/+3{{Heart}}.",
+    "flavour": "Side effects include headaches, blurred vision, and insatiable hunger."
+  },
+  {
+    "name": "Kangaroo Rider",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/86/Kangaroo_RiderH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pet"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>When hurt:</b> <b>Bounce</b> this kangaroo.",
+    "flavour": "Sure, it's a bumpy ride, but it beats walking. Have you seen an Imp's legs?"
+  },
+  {
+    "name": "Smashing Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Smashing_GargantuarH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gargantuar"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "All Gargantuars have {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "When he phones home, it means something completely different."
+  },
+  {
+    "name": "Biodome Botanist",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cf/Biodome_BotanistH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Science"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>When played:</b> Make a 1 {{Strength}}/1 {{Heart}} Plant with no abilities.",
+    "flavour": "Growing Plants in Space? Some of his fellow Zombies think he's crazy, but others appreciate the effort."
+  },
+  {
+    "name": "Cosmic Yeti",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Cosmic_YetiH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Monster"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> <b>Conjure</b> a Pet, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
+    "flavour": "He's hoping they name a constellation after him. \"The Big Yeti\" does have a ring to it."
+  },
+  {
+    "name": "Primordial Cheese Shover",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/98/Primordial_Cheese_ShoverH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "History"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>Zombie Evolution</b>: Destroy a Plant.",
+    "flavour": "He's wheely cheesy."
+  },
+  {
+    "name": "Killer Whale",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Killer_WhaleH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Zombie played on this gets +2{{Strength}}/+1{{Heart}} and <b>Amphibious</b>.",
+    "flavour": "Flooding Hollow Earth with water from above, Neptuna attacked with flying whale cavalry. Or really, falling whale cavalry."
+  },
+  {
+    "name": "Cat Lady",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Cat_LadyH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 4,
+    "abilities": "This gets +3{{Strength}} this turn when you play another Pet.",
+    "flavour": "The cat on the left is a Z-Tube celebrity."
+  },
+  {
+    "name": "Zombie Yeti",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/88/Zombie_YetiH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Monster"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> Gain a Yeti Lunchbox.\n<b>End of Turn:</b> <b>Bounce</b> this Yeti.",
+    "flavour": "Enjoys warm hugs."
+  },
+  {
+    "name": "Deep Sea Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Deep_Sea_GargantuarH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Monster",
+      "Gargantuar"
+    ],
+    "cost": 6,
+    "strength": 7,
+    "health": 8,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "Has every single issue of Deep Sea Quarterly, but rarely has time to read them."
+  },
+  {
+    "name": "Maniacal Laugh",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/96/Maniacal_LaughH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 6,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +5{{Strength}}/+5{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "It's not so much \"hahaha\" as it is \"mwahahaha.\""
+  },
+  {
+    "name": "Cheese Cutter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a8/Cheese_CutterH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Mustache"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When this hurts the Plant Hero</b>: <b>Conjure</b> a Gourmet card, and it costs 1 {{Brain}} less.",
+    "flavour": "Is that the exquisite scent of an aged Camembert, or just rotting flesh?"
+  },
+  {
+    "name": "Cyborg Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Cyborg_ZombieH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Hunt</b>\n<b>When destroyed:</b> Gain a Vengeful Cyborg.",
+    "flavour": "He'll be back."
+  },
+  {
+    "name": "Area 22",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Area_22H.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Environment",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get +2 {{Strength}}/+2 {{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "<b>\"Zombies from outer space? What an absurd conspiracy theory! Now move along. Nothing to see here.\" - Dr. Zomboss</b>"
+  },
+  {
+    "name": "Ancient Vimpire",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fb/Ancient_VimpireH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Monster",
+      "Imp"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\nWhen a Zombie with {{Frenzy}}<b>Frenzy</b> destroys a Plant, that Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Vimpirism - an ancient curse evolved from the dawn of time."
+  },
+  {
+    "name": "Extinction Event",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5e/Extinction_EventH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "History"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets -2{{Strength}}/-2{{Heart}}. All other copies of that Plant also get -2{{Strength}}/-2{{Heart}}.",
+    "flavour": "Sometimes the evolutionary tree withers at the root."
+  },
+  {
+    "name": "Hunting Grounds",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/db/Hunting_GroundsH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Environment",
+    "tribes": [
+      "History",
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get <b>Hunt</b>. When a Zombie enters or leaves this lane, it gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Are the Zombies hunting dinosaurs, or are the dinosaurs hunting them?"
+  },
+  {
+    "name": "Nurse Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/Nurse_GargantuarH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Gargantuar"
+    ],
+    "cost": 7,
+    "strength": 6,
+    "health": 6,
+    "abilities": "When this does damage, heal your Hero for that much.",
+    "flavour": "Their bedside manner could use some work."
+  },
+  {
+    "name": "Octo Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Octo_ZombieH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 8,
+    "strength": 8,
+    "health": 8,
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When destroyed</b>: Gain an Octo Zombie",
+    "flavour": "Is the correct term 'octopuses' or 'octopi'? You'd think he'd have an opinion, but he doesn't."
+  },
+  {
+    "name": "Zombot 1000",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Zombot_1000H.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Gargantuar"
+    ],
+    "cost": 9,
+    "strength": 9,
+    "health": 9,
+    "abilities": "<b>When played:</b> Destroy all Plants.",
+    "flavour": "The first 999 Zombots are now considered classics."
+  },
+  {
+    "name": "Interstellar Bounty Hunter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Interstellar_Bounty_HunterH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Pirate"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Hunt</b>\n{{Frenzy}}<b>Frenzy</b>\nWhen this destroys a Plant, draw a card.",
+    "flavour": "If you have a bounty on your head, she won't stop until she eats your brains. It's not personal. It's just business."
+  },
+  {
+    "name": "Supernova Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Supernova_GargantuarH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Gargantuar"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 7,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, destroy all copies of that Plant.",
+    "flavour": "This one's got a real temper on him. When he decides to take out a Plant...it's brutal. Just brutal."
+  },
+  {
+    "name": "Mondo Bronto",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Mondo_BrontoH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Pet"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: This gets +1{{Strength}}/+1{{Heart}} and destroy all Plants here.",
+    "flavour": "Deep in Hollow Earth, Zombie warrior women tame herds of enormous dinosaurs. Any good history book will tell you that."
+  },
+  {
+    "name": "Gargantuar-Throwing Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/Gargantuar-Throwing_GargantuarH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Gargantuar"
+    ],
+    "cost": 7,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>When hurt</b>: Make a random Gargantuar in a random lane.",
+    "flavour": "The ultimate, epic, last, absolutely final conclusion to the Zombie-throwing Zombie saga. ...or is it?"
+  },
+  {
+    "name": "Fraidy Cat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Fraidy_CatH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When a Plant Trick is played, this gets +1{{Strength}}/+1{{Heart}} and moves to a random lane.",
+    "flavour": "What's a black cat's favorite color? Purrrrr-ple."
+  },
+  {
+    "name": "Secret Agent",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Secret_AgentH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Professional"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a Zombie, and it gets +3{{Strength}}/+3{{Heart}}.",
+    "flavour": "He likes his brains shaken, not stirred."
+  },
+  {
+    "name": "Energy Drink Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ce/Energy_Drink_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Sports"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Start of Tricks:</b> This gets +1{{Strength}}/+1{{Heart}} and moves to a random lane.",
+    "flavour": "He can quit any time he wants."
+  },
+  {
+    "name": "Synchronized Swimmer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Synchronized_SwimmerH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Sports"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> This Zombie copies the {{Strength}} and {{Heart}} of another Zombie.",
+    "flavour": "It takes a lot of practice for two Zombies' heads to fall off at the exact same time."
+  },
+  {
+    "name": "Hover-Goat 3000",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a1/Hover-Goat_3000H.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Science"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 3,
+    "abilities": "<b>Amphibious.</b>\n<b>When played</b>: Another Zombie gets +2{{Strength}}/+2{{Heart}}.\n<b>When hurt</b>: <b>Bounce</b> this Goat.",
+    "flavour": "The future is Hovering. The future is Radical. The future is Goat."
+  },
+  {
+    "name": "Overstuffed Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/21/Overstuffed_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Mustache"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 4,
+    "abilities": "This heals to full and gets +2{{Heart}} when it destroys a Plant.",
+    "flavour": "His cholesterol level is off the charts, and yet he seems to be in remarkably good Health."
+  },
+  {
+    "name": "Sneezing Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3a/Sneezing_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Party"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 4,
+    "abilities": "Plants and the Plant Hero can't be healed.\n<b>When played:</b> All Plants get -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "Flowers give her awful allergies and sickening sneezes. Is that why she wears one on her head?"
+  },
+  {
+    "name": "King of the Grill",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/King_of_the_GrillH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Gargantuar"
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 6,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, <b>Conjure</b> a Gourmet card.",
+    "flavour": "Chillin' beside the ol' backyard grill, cookin' up some brains, hangin' with his zombies... that's the good unlife."
+  },
+  {
+    "name": "Zom-Bats",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "beastly",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\nWhen this hurts a Plant, draw a Card.",
+    "flavour": "Like Chihuahuas with wings... and fangs... and a taste for Plants."
+  },
+  {
+    "name": "Acid Rain",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Acid_RainH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "All Plants on the Ground get -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "Strong enough to destroy a Plant, but pH-balanced for a Zombie."
+  },
+  {
+    "name": "Evaporate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e6/EvaporateH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a damaged Plant.\nDraw a card.",
+    "flavour": "Did you know that Plants are 62 percent water? Well, not any more."
+  },
+  {
+    "name": "Galvanize",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/39/GalvanizeH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "beastly",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "To protect and serve... brains."
+  },
+  {
+    "name": "Cardboard Robot Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Cardboard_Robot_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "He's Rustbolt's biggest fan."
+  },
+  {
+    "name": "Paparazzi Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ab/Paparazzi_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Party"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Trick.",
+    "flavour": "Why is everyone always screaming and running away in his photos?"
+  },
+  {
+    "name": "Lurch for Lunch",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/Lurch_for_LunchH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie does a Bonus Attack.",
+    "flavour": "Will work overtime for food."
+  },
+  {
+    "name": "Fun-Dead Raiser",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Fun-Dead_RaiserH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Party"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw two cards.",
+    "flavour": "Pledge now and get two Zombies plus a free tote bag."
+  },
+  {
+    "name": "Drum Major",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0b/Drum_MajorH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Sports"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 4,
+    "abilities": "",
+    "flavour": "Recently promoted from Drum Minor."
+  },
+  {
+    "name": "Chimney Sweep",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3f/Chimney_SweepH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Professional"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played on Heights:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "It's a growth industry."
+  },
+  {
+    "name": "Beam Me Up",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c6/Beam_Me_UpH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a 2{{Strength}}/3{{Heart}} Space Cadet Zombie.",
+    "flavour": "A sure way to get Space Cadet's attention."
+  },
+  {
+    "name": "Cell Phone Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d1/Cell_Phone_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Professional"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played:</b> Draw a card.",
+    "flavour": "Hang on - he's got to take this."
+  },
+  {
+    "name": "Pool Shark",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/Pool_SharkH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Sports"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 1,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>",
+    "flavour": "Not actually a shark."
+  },
+  {
+    "name": "Zombot Drone Engineer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9a/Zombot_Drone_EngineerH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Science"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\nWhen a Science Zombie does damage, that Zombie gets +1{{Strength}}.",
+    "flavour": "He's not entirely sure how to fly this thing."
+  },
+  {
+    "name": "Brain Vendor",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/16/Brain_VendorH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Sports"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played:</b> You get 3{{Brain}} this turn.",
+    "flavour": "Sells only 100% organic brains."
+  },
+  {
+    "name": "Mountain Climber",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/Mountain_ClimberH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Sports"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played on Heights:</b> This gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "She's climbed 'em all: Everest. K2. Your house."
+  },
+  {
+    "name": "Cryo-Brain",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/de/Cryo-BrainH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      "Science"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "You get +1 {{Brain}} for the rest of the game.",
+    "flavour": "Putting brains on ice is the best way to keep them fresh. Ask any Zombie."
+  },
+  {
+    "name": "Medulla Nebula",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/47/Medulla_NebulaH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Environment",
+    "tribes": [
+      "Gourmet"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "When you play a Zombie here, you get +2 {{Brain}} this turn.",
+    "flavour": "Zombies often find brains in space. It's usually the space between your ears."
+  },
+  {
+    "name": "Moonwalker",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/28/MoonwalkerH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Science"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played on Heights or an Environment:</b> This gets +2 {{Strength}}/+2 {{Heart}}.",
+    "flavour": "That's one small nibble for Zombies, one giant bite for Zombiekind."
+  },
+  {
+    "name": "Copter Commando",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a5/Copter_CommandoH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Imp"
+    ],
+    "cost": 5,
+    "strength": 6,
+    "health": 5,
+    "abilities": "",
+    "flavour": "Refuses to fly over water due to a severe case of aquaphobia."
+  },
+  {
+    "name": "Mustache Waxer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Mustache_WaxerH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Mustache"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When you play a Mustache, this gets +1{{Heart}} and you get +1{{Brain}}.",
+    "flavour": "Customers have been telling him \"Get a brain\" for years now."
+  },
+  {
+    "name": "Pirate's Booty",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Pirate%27s_BootyH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Pirate",
+      "Barrel"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw a card for each Zombie.",
+    "flavour": "Zombie Pirates kick a lot of booty. Maybe someday they'll figure how to spend it."
+  },
+  {
+    "name": "Gentleman Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c1/Gentleman_ZombieH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Party"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>Start of Tricks:</b> You get +2{{Brain}} this turn.",
+    "flavour": "Life comes and goes, but proper manners are forever."
+  },
+  {
+    "name": "Kite Flyer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Kite_FlyerH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Science"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\nWhen this does damage, draw a card.",
+    "flavour": "The naysayers were right. Flying a kite in a lightning storm WAS a real bright idea."
+  },
+  {
+    "name": "Gadget Scientist",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Gadget_ScientistH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 5,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>When played:</b> Each Science Zombie does a Bonus Attack.",
+    "flavour": "Wishes the Mad Chemist would stop copying his hair style."
+  },
+  {
+    "name": "Hail-a-Copter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4e/Hail-a-CopterH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Science",
+      "Imp"
+    ],
+    "cost": 6,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a 6{{Strength}}/5{{Heart}} Copter Commando Imp.",
+    "flavour": "Refuses to fly over water due to a severe case of aquaphobia."
+  },
+  {
+    "name": "Wizard Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Wizard_GargantuarH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Gargantuar"
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 7,
+    "abilities": "All Gargantuars have {{Truestrike}}<b>Bullseye</b>.",
+    "flavour": "A wizard did it. An enormous, green, Zombie wizard."
+  },
+  {
+    "name": "Cosmic Scientist",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/09/Cosmic_ScientistH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 2,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a Science card, and it gets {{Truestrike}}<b>Bullseye</b>.",
+    "flavour": "He has no idea what's in the beakers. He just likes to mix them together until they go BOOM!"
+  },
+  {
+    "name": "Triplication",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/TriplicationH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Imp",
+      "Gargantuar"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> an Imp, a Zombie, and a Gargantuar.",
+    "flavour": "An Imp, a Zombie, and Gargantuar walk into a bar..."
+  },
+  {
+    "name": "Zom-Blob",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/Zom-BlobH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Monster"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>Zombie Evolution</b>: This gets +1{{Strength}} for each {{Brain}} you got this turn.",
+    "flavour": "This is why you shouldn't drink primordial soup."
+  },
+  {
+    "name": "Mustache Monument",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Mustache_MonumentH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "History"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>Fusion:</b> A Zombie played on this does a Bonus Attack.",
+    "flavour": "If Neptuna's Triassic Invasion force can align all of Hollow Earth's Mustache Monuments at once, she will become truly unstoppable."
+  },
+  {
+    "name": "Electrician",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/ElectricianH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Science"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Zombie does a Bonus Attack.",
+    "flavour": "He charges for the full hour."
+  },
+  {
+    "name": "Rocket Science",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/72/Rocket_ScienceH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Plant that has 4{{Strength}} or more.",
+    "flavour": "Turns out, it IS rocket science."
+  },
+  {
+    "name": "Mad Chemist",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Mad_ChemistH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 5,
+    "abilities": "<b>Gravestone</b>\nWhen you play your first Trick each turn, <b>Conjure </b>a Trick.",
+    "flavour": "He's not so much \"mad\" as he is \"mildly annoyed.\""
+  },
+  {
+    "name": "Portal Technician",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/93/Portal_TechnicianH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Science"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When destroyed:</b> Make a random Zombie here.",
+    "flavour": "Soon everyone will own their own portal. But for now, he enjoys being an early adopter."
+  },
+  {
+    "name": "Neutron Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/61/Neutron_ImpH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Science"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When you play an Environment, this does a Bonus Attack.",
+    "flavour": "He's not small, he's just very compact."
+  },
+  {
+    "name": "Transformation Station",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Transformation_StationH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Environment",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Start of turn:</b> Transform the Zombie here into a random Zombie that costs 1 {{Brain}} more.",
+    "flavour": "According to the Transformation Station brochure, every Zombie who visits is guaranteed to shuffle away feeling like a brand new Zombie."
+  },
+  {
+    "name": "Wormhole Gatekeeper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Wormhole_GatekeeperH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Science"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 5,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nEach player draws an extra card each turn.",
+    "flavour": "\"Stand here and guard this gate with your unlife,\" she was told. And that's what she's been doing ever since."
+  },
+  {
+    "name": "Evolutionary Leap",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0e/Evolutionary_LeapH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "History"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Transform a Zombie into a random Zombie that costs 1{{Brain}} more.\nDraw a card.",
+    "flavour": "When Dr. Zomboss sent Meteor Z and Huge-Gigantacus from space, they smashed a tunnel to the center of the Earth. There, Plants and Zombies had evolved into insane new forms."
+  },
+  {
+    "name": "Parasol Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c5/Parasol_ZombieH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Party"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 6,
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\nZombies next door are {{Untrickable}}<b>Untrickable</b>.",
+    "flavour": "Her favorite author is Brain Austen."
+  },
+  {
+    "name": "Duckstache",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/25/DuckstacheH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Mustache"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "When this does damage, <b>Conjure</b> a Mustache.\n<b>Mustache Evolution</b>: This gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Determined to find every Mustache Monument in Hollow Earth, Neptuna brought in the experts."
+  },
+  {
+    "name": "Teleport",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/60/TeleportH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "You may play a Zombie when it's time for Tricks this turn.\nDraw a card.",
+    "flavour": "Feels like cheating."
+  },
+  {
+    "name": "Shieldcrusher Viking",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/Shieldcrusher_VikingH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Pirate"
+    ],
+    "cost": 5,
+    "strength": 7,
+    "health": 5,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen this hurts the Plant Hero, empty their Block Meter.",
+    "flavour": "Been crushing shields since the 9th Century. Has gotten pretty darn good at it."
+  },
+  {
+    "name": "Trickster",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/TricksterH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Party"
+    ],
+    "cost": 10,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>While in your hand:</b> This costs 1{{Brain}} less when you play a Trick.\n<b>When played:</b> This does a Bonus Attack.",
+    "flavour": "Never gets tired of the rubber chicken gag."
+  },
+  {
+    "name": "Interdimensional Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fb/Interdimensional_ZombieH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When you play a Science card, this transforms into a Zombie that costs 3{{Brain}}.",
+    "flavour": "In a parallel dimension, this zombie is a Space Pirate. In another he's a Trash Can Zombie. Turns out, little choices in life can make a big difference."
+  },
+  {
+    "name": "Teleportation Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/Teleportation_ZombieH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>Gravestone</b>\n{{Truestrike}}<b>Bullseye</b>\nYou can play Zombies when it's time for Tricks.",
+    "flavour": "The phone cord stretches to another dimension."
+  },
+  {
+    "name": "Gargantuar Mime",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7e/Gargantuar_MimeH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Gargantuar",
+      "Mime"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 7,
+    "abilities": "When a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
+    "flavour": "The Gargantuar Mime groans like any other zombie. He just does it silently, and in French."
+  },
+  {
+    "name": "Zombot Dinotronic Mechasaur",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/Zombot_Dinotronic_MechasaurH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 7,
+    "strength": 6,
+    "health": 7,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>&#160;Make a random History Zombie in a random lane.",
+    "flavour": "What's better than a dinosaur? A gigantic, metal, laser monster that gates in four more dinosaurs."
+  },
+  {
+    "name": "Leprechaun Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/00/Leprechaun_ImpH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> Shuffle a Pot of Gold into your deck.",
+    "flavour": "When he offers to grant you a wish, do not wish for infinite wishes. It just doesn't work like that."
+  },
+  {
+    "name": "Regifting Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c4/Regifting_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Party",
+      "Pirate"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played:</b> Each player draws two cards.",
+    "flavour": "Regifting: Is it really an embarrassing social faux pas? Or is it just good ol' recycling?"
+  },
+  {
+    "name": "Trick-or-Treater",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Trick-or-TreaterH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Party"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>When you play your first Trick each turn, <b>Conjure</b> a Treat.",
+    "flavour": "Trick or Treat? He is haunted by that question - and by an answer that continues to elude him."
+  },
+  {
+    "name": "Thinking Cap",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Thinking_CapH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> two Superpowers.",
+    "flavour": "Only the best and the brainiest University Zombies graduate to using full-fledged Superpowers."
+  },
+  {
+    "name": "Kitchen Sink Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/95/Kitchen_Sink_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Mustache"
+    ],
+    "cost": 6,
+    "strength": 3,
+    "health": 6,
+    "abilities": "<b>{{Truestrike}}Bullseye</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Armored}}<b>Armored 1</b>\n{{Weird unused  icon}}<b>Overshoot 2</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "flavour": "He's got everything but the - no wait, he's got that too."
+  },
+  {
+    "name": "Bad Moon Rising",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2b/Bad_Moon_RisingH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 7,
+    "strength": null,
+    "health": null,
+    "abilities": "Transform every Zombie into random Zombies that costs 5{{Brain}} or more.",
+    "flavour": "Sometimes a full moon turns bad dreams into horrible nightmares."
+  },
+  {
+    "name": "Pot of Gold",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/57/Pot_of_GoldH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw three cards.",
+    "flavour": "The luck of the Zombies!"
+  },
+  {
+    "name": "Space Cadet",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Space_CadetH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "",
+    "flavour": "His body is in space, but his head is in the clouds."
+  },
+  {
+    "name": "Zom-Bats",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious </b>When this hurts a Plant, draw a Card.",
+    "flavour": "Like Chihuahuas with wings... and fangs... and a taste for Plants."
+  },
+  {
+    "name": "Cut Down to Size",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c6/Cut_Down_to_SizeH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Plant that has 5{{Strength}} or more.",
+    "flavour": "\"The tallest blade of grass is the first to get cut. Braaainz!\" - Ancient Zombie Proverb"
+  },
+  {
+    "name": "Summoning",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2a/SummoningH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a random Zombie that costs 2{{Brain}} or less.",
+    "flavour": "It's like a blind date... but with Zombies... and fighting."
+  },
+  {
+    "name": "Telepathy",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1f/TelepathyH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw two cards.",
+    "flavour": "You're thinking of a number between 1 and braaaaains."
+  },
+  {
+    "name": "Iron Boarder",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Iron_BoarderH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Zombie",
+    "tribes": [
+      "Sports",
+      "Imp",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>While in an Environment</b>: This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Working for a Huge-Gigantacus isn't the worst job he's ever had. It comes with a 401Z plan, which is more than what most Zombie employers offer."
+  },
+  {
+    "name": "Teleportation Station",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b1/Teleportation_StationH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "brainy",
+    "type": "Environment",
+    "tribes": [
+      "Science",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Start of turn</b>: If there's a Zombie here, gain a Teleport.",
+    "flavour": "Teleportation is a relatively new technology. Has a few kinks that need ironing out. So yeah, sometimes things get a little...mixed up."
+  },
+  {
+    "name": "Backup Dancer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Backup_DancerH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Spent six years perfecting his art at the Chewliard School for the Performing Arts."
+  },
+  {
+    "name": "Bungee Plumber",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d0/Bungee_PlumberH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Professional",
+      "Mustache",
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 2 damage.",
+    "flavour": "Likes: Plumbing and adventure sports. Dislikes: Belts."
+  },
+  {
+    "name": "Cuckoo Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/60/Cuckoo_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 4,
+    "health": 1,
+    "abilities": "",
+    "flavour": "He always knows what time it is. CRAZY TIME!"
+  },
+  {
+    "name": "Disco Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/41/Disco_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 3,
+    "health": 1,
+    "abilities": "<b>When played:</b> Make a 1{{Strength}}/1{{Heart}} Backup Dancer.",
+    "flavour": "Disco is undead."
+  },
+  {
+    "name": "Flamenco Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Flamenco_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played:</b> Do 2 damage to the Plant Hero for each Dancing Zombie.",
+    "flavour": "Also enjoys dancing the rumba, tango, and the Hokey Pokey."
+  },
+  {
+    "name": "Tennis Champ",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Tennis_ChampH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played:</b> This gets +3{{Strength}} this turn.",
+    "flavour": "When it's Plants vs. Zombies, the score is never love-love."
+  },
+  {
+    "name": "Unlife of the Party",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e6/Unlife_of_the_PartyH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Zombie.",
+    "flavour": "His archenemy is the Wall-Flower."
+  },
+  {
+    "name": "Conga Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Conga_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Do 1 damage.",
+    "flavour": "Important Note: The fruit on her hat is made of plastic."
+  },
+  {
+    "name": "Newspaper Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Newspaper_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 1,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\n<b>When hurt:</b> This gets +4{{Strength}}.",
+    "flavour": "Newspapers are an undead medium."
+  },
+  {
+    "name": "Cakesplosion",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f1/CakesplosionH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Imp",
+      "Party"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 4 damage to a Plant.",
+    "flavour": "4 eggs. 2 cups flour. 10 sticks TNT."
+  },
+  {
+    "name": "Orchestra Conductor",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/37/Orchestra_ConductorH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 0,
+    "health": 2,
+    "abilities": "<b>When played:</b> All Zombies get +2{{Strength}}.",
+    "flavour": "He isn't in it for the music. He just likes waving sticks."
+  },
+  {
+    "name": "Foot Soldier Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Foot_Soldier_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>When played on Heights:</b> Do 3 damage.",
+    "flavour": "Each Foot Soldier Zombie shall be issued one (1) combat foot."
+  },
+  {
+    "name": "Loose Cannon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c1/Loose_CannonH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Barrel",
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Weird unused  icon}}<b>Overshoot 2</b>",
+    "flavour": "His friends keep telling him it's too dangerous, but he never listens. He's having a blast."
+  },
+  {
+    "name": "Meteor Z",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9d/Meteor_ZH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Environment",
+    "tribes": [
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here have +2 {{Strength}}.",
+    "flavour": "Huge-Gigantacus drove Meteor Z deep into the Earth, creating a tunnel to a hidden world of strange creatures...but what's down there???"
+  },
+  {
+    "name": "Space Ninja",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Space_NinjaH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>While in an Environment:</b> The first time each turn this does damage, do 1 damage to each Plant.",
+    "flavour": "You will never hear him coming in the vacuum of space."
+  },
+  {
+    "name": "Mystery Egg",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Mystery_EggH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 0,
+    "health": 2,
+    "abilities": "<b>Start of Tricks:</b> Transform this into a random zombie that costs 2{{Brain}} or less.",
+    "flavour": "\"Mommy, where do little Zombies come from?\" Asked and answered."
+  },
+  {
+    "name": "Sugary Treat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b9/Sugary_TreatH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +3{{Strength}}/+1{{Heart}}.",
+    "flavour": "Tooth decay: Not exactly a big concern for Zombies."
+  },
+  {
+    "name": "Trapper Territory",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6a/Trapper_TerritoryH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "crazy",
+    "type": "Environment",
+    "tribes": [
+      "Gourmet",
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Before combat here</b>: Do 1 damage to each Plant here.",
+    "flavour": "Plants do not like feeling trapped. Can you blame them?"
+  },
+  {
+    "name": "Exploding Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4d/Exploding_ImpH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 6,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n<b>End of Turn:</b> This does 1 damage to itself.",
+    "flavour": "You could say he's an IMPlosives expert."
+  },
+  {
+    "name": "Jester",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2e/JesterH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>Gravestone</b>\n<b>When hurt:</b> Do 2 damage to the Plant Hero.",
+    "flavour": "The joke's on you!"
+  },
+  {
+    "name": "Zombot's Wrath",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Zombot%27s_WrathH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Science",
+      "Gargantuar",
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage. If there is a zombie in every lane, this does double damage.",
+    "flavour": "Dr. Zomboss believes that there's no problem that can't be solved by a giant robot."
+  },
+  {
+    "name": "The Chickening",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/The_ChickeningH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "crazy",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 2 damage to each Plant.",
+    "flavour": "So. Many. Feathers."
+  },
+  {
+    "name": "Imp-Throwing Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/88/Imp-Throwing_GargantuarH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>When hurt:</b> Make a 1{{Strength}}/1{{Heart}}Swabbie with <b>Amphibious </b>in a random lane.",
+    "flavour": "Seems like a better idea than a Gargantuar-Throwing Imp."
+  },
+  {
+    "name": "Final Mission",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/27/Final_MissionH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Science",
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie. Then do 4 damage.",
+    "flavour": "The round-trip ticket is the same price as the one-way."
+  },
+  {
+    "name": "Cosmic Dancer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/Cosmic_DancerH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Weird unused  icon}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a Dancing card, and it gets {{Weird unused  icon}}<b>Overshoot 2</b>.",
+    "flavour": "Across the cosmos, the passion for dance is the only universal language."
+  },
+  {
+    "name": "Gizzard Lizard",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7f/Gizzard_LizardH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>Zombie Evolution</b>: Do 2 damage to each Plant.",
+    "flavour": "He's the missing skink."
+  },
+  {
+    "name": "Disco Dance Floor",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Disco_Dance_FloorH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 0,
+    "health": 3,
+    "abilities": "{{Weird unused  icon}}<b>Overshoot 3</b>\n<b>Fusion:</b> a Zombie played on this gets {{Weird unused  icon}}<b>Overshoot 3</b>.",
+    "flavour": "The Triassic Invasion brought the very best of Zombie culture: Disco."
+  },
+  {
+    "name": "Aerobics Instructor",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Aerobics_InstructorH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Start of Turn:</b> All Dancing Zombies get +2{{Strength}}.",
+    "flavour": "Aerobics really bring the dead to life."
+  },
+  {
+    "name": "Abracadaver",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/AbracadaverH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, do 3 damage to a random Plant.",
+    "flavour": "Keeps forgetting that the magic word is \"Please.\""
+  },
+  {
+    "name": "Fireworks Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/ba/Fireworks_ZombieH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>When played:</b> Do 1 damage to all Plants and Zombies.",
+    "flavour": "Want to clear some mushrooms? Fire works."
+  },
+  {
+    "name": "Disco-Tron 3000",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fd/Disco-Tron_3000H.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 6,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a 3{{Strength}}/1{{Heart}} Disco Zombie that makes a 1{{Strength}}/1{{Heart}} Backup Dancer.",
+    "flavour": "A fully weaponized jukebox."
+  },
+  {
+    "name": "Disco-Naut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Disco-NautH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "Zombies with 2{{Strength}} or less have {{Truestrike}}<b>Bullseye</b>.",
+    "flavour": "Nothing focuses your aim like the super-sick wailing of a space keytar solo."
+  },
+  {
+    "name": "Moon Base Z",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cf/Moon_Base_ZH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Environment",
+    "tribes": [
+      "Science",
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here have {{Weird unused  icon}}<b>Overshoot 3</b>.",
+    "flavour": "Zombies landed on the Moon? Many believe it's nothing but a conspiracy theory, and yet, here's the proof."
+  },
+  {
+    "name": "Gas Giant",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Gas_GiantH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Monster",
+      "Gargantuar"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>When hurt:</b> Do 1 damage to each other Plant and Zombie.\n<b>When destroyed:</b> Do 5 damage to the Plant Hero.",
+    "flavour": "There isn't a fart joke he hasn't heard."
+  },
+  {
+    "name": "Quickdraw Con Man",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3e/Quickdraw_Con_ManH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Monster"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 3,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen the Plant Hero draws a card, do 1 damage to them.",
+    "flavour": "How did he know the Plants were coming? Because four-armed is forewarned."
+  },
+  {
+    "name": "Grave Robber",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/Grave_RobberH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nThis gets +1{{Strength}} when a Zombie is revealed from a Gravestone.",
+    "flavour": "Why not rob graves? They're not going to miss it. It's not like the dead are rising up or anything."
+  },
+  {
+    "name": "Zombie's Best Friend",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Zombie%27s_Best_FriendH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played next to a Zombie</b>: Make a random Zombie that costs 1{{Brain}}.",
+    "flavour": "\"What counts is not necessarily the size of the dog in the fight; it's the size of the fight in the dog.\" - Wight Z. Diesenhower"
+  },
+  {
+    "name": "Barrel of Deadbeards",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/65/Barrel_of_DeadbeardsH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n<p>4{{Strength}}/3{{Heart}}Captain Deadbeard here.\n</p>",
+    "flavour": "No monkeys, just Zombies."
+  },
+  {
+    "name": "Valkyrie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/eb/ValkyrieH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 0,
+    "health": 6,
+    "abilities": "<b>While in your hand:</b> This gets +2{{Strength}} when a Zombie is destroyed.",
+    "flavour": "It's not easy hitting those high notes when all you can sing is, \"Braaaaains.\""
+  },
+  {
+    "name": "Gargantuars' Feast",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/65/Gargantuars%27_FeastH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      "Gargantuar",
+      ""
+    ],
+    "cost": 11,
+    "strength": null,
+    "health": null,
+    "abilities": "Make 3 random Gargantuars in random Lanes.",
+    "flavour": "This party doesn't make reservations."
+  },
+  {
+    "name": "Quasar Wizard",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d7/Quasar_WizardH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> If there is a Zombie next door, <b>Conjure</b> a Superpower.",
+    "flavour": "You can call him Quazard for short."
+  },
+  {
+    "name": "Binary Stars",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/Binary_StarsH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\nAll your cards do double damage.",
+    "flavour": "He's a Gemini and so is she. Which explains so much, right?"
+  },
+  {
+    "name": "Tankylosaurus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/TankylosaurusH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 6,
+    "abilities": "<b>Dino-Roar</b>: Do 2 damage to a random Plant or Plant Hero.",
+    "flavour": "When not exploring Hollow Earth's jungles, they like to go clubbing."
+  },
+  {
+    "name": "Headhunter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b1/HeadhunterH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "When you play a Dancing card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets +2{{Strength}}/+2{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "flavour": "He offers a special deal: Two of his heads for one of yours. Anyway you slice it, you still come out a head."
+  },
+  {
+    "name": "Exploding Fruitcake",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Exploding_FruitcakeH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      "Party",
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 7 damage to a Plant. The Plant player <b>Conjures</b> a Fruit.",
+    "flavour": "Once you get past all the dynamite and bombs, fruitcakes actually contain at least 5% Fruit."
+  },
+  {
+    "name": "Unexpected Gifts",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a1/Unexpected_GiftsH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Trick",
+    "tribes": [
+      "Party",
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> three Event cards. Then the Plant player <b>Conjures</b> an Event card.",
+    "flavour": "\"For the 4th day of Feastivus, my true love gave to me: 1 Fire Rooster, 1 Sneezing Zombie, 1 Bad Moon Rising, and a partridge in a Pear Tree!\""
+  },
+  {
+    "name": "Stupid Cupid",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Stupid_CupidH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 4,
+    "health": 2,
+    "abilities": "<b>When played:</b> Do 1 damage to a Plant. That Plant has 0{{Strength}} this turn.",
+    "flavour": "What's love got to do with it? Honestly, he has no idea."
+  },
+  {
+    "name": "Frankentuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/FrankentuarH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 5,
+    "health": 7,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Zombie is destroyed.",
+    "flavour": "IT'S ALIVE! IT'S ALI-I-I-IVE! Ok, strictly speaking, it's not alive."
+  },
+  {
+    "name": "Gargantuar-Throwing Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Gargantuar-Throwing_ImpH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When hurt:</b> Make a random Gargantuar that costs 5 in a random lane.",
+    "flavour": "When lifting a Gargantuar, always bend at the knees. He learned this the hard way."
+  },
+  {
+    "name": "Hippity Hop Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Hippity_Hop_GargantuarH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 6,
+    "health": 5,
+    "abilities": "<b>When hurt:</b> Make a Mystery Egg in a random lane.",
+    "flavour": "Sometimes, what has been seen... can't be unseen. This is one of those times."
+  },
+  {
+    "name": "Impfinity Clone",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Impfinity_CloneH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "An IMPerfect copy, but it'll do."
+  },
+  {
+    "name": "Captain Deadbeard",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Captain_DeadbeardH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "crazy",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 4,
+    "health": 3,
+    "abilities": "",
+    "flavour": "Yo ho ho! It's a pirate's unlife for him!"
+  },
+  {
+    "name": "Brute Strength",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Brute_StrengthH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +3{{Strength}}.",
+    "flavour": "Is there any other kind?"
+  },
+  {
+    "name": "Dance Off",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Dance_OffH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make two Backup Dancers in random lanes.",
+    "flavour": "You put your right foot in! No, wait, you might need that."
+  },
+  {
+    "name": "Electrobolt",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/99/ElectroboltH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "crazy",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage to a Plant.",
+    "flavour": "Ever get zapped by static electricity? It's like that, times a bazillion."
+  },
+  {
+    "name": "Baseball Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Baseball_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Home run. Running for your home. It's all the same to him."
+  },
+  {
+    "name": "Rolling Stone",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Rolling_StoneH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Plant with 2{{Strength}} or less.",
+    "flavour": "Gives new meaning to the phrase \"rock n' roll\"."
+  },
+  {
+    "name": "Conehead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/ConeheadH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Armored}}<b>Armored 1</b>",
+    "flavour": "Almost went out with a lampshade on his head. Thought better of it."
+  },
+  {
+    "name": "Team Mascot",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/Team_MascotH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 1,
+    "health": 4,
+    "abilities": "<b>Start of Turn:</b> All Sports Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Say what you will about the costume - Zombie morale has never been better."
+  },
+  {
+    "name": "Medic",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/MedicH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> Heal 4.",
+    "flavour": "It's hard keeping Zombies on their feet. It's harder keeping feet on the Zombies."
+  },
+  {
+    "name": "Arm Wrestler",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/34/Arm_WrestlerH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Plant enters this lane.",
+    "flavour": "Lots of carbs, lots of protein, and five brain shakes a day."
+  },
+  {
+    "name": "Camel Crossing",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b0/Camel_CrossingH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      "History",
+      "Pet",
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies get +2{{Heart}}.",
+    "flavour": "Camels - they're filthy, ill-tempered animals that'll spit on you just for fun. But Zombies love 'em all the same."
+  },
+  {
+    "name": "Flag Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Flag_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 1,
+    "health": 3,
+    "abilities": "Zombies cost 1{{Brain}} less.",
+    "flavour": "He's not patriotic; he just likes fabric suspended from sticks."
+  },
+  {
+    "name": "Terrify",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ed/TerrifyH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Plant.\nDraw a card.",
+    "flavour": "Just a disembodied Zombie head screaming uncontrollably. Nope. Nothing terrifying about that."
+  },
+  {
+    "name": "Trash Can Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/Trash_Can_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> This can't be hurt this turn.",
+    "flavour": "It's dark and quiet in there. He finds it soothing. That's what no one gets."
+  },
+  {
+    "name": "Buckethead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/dc/BucketheadH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "{{Armored}}<b>Armored 1</b>",
+    "flavour": "Why a bucket? Well, gosh, in this economy, why NOT?"
+  },
+  {
+    "name": "Ra Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Ra_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 6,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>When played:</b> The Plant Hero loses 2{{Sun}} this turn.",
+    "flavour": "Some nights sundown comes early..."
+  },
+  {
+    "name": "Cone Zone",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/72/Cone_ZoneH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Environment",
+    "tribes": [
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get +3{{Heart}}.",
+    "flavour": "You are about to enter another dimension. A dimension not only of sight and sound, but of cones."
+  },
+  {
+    "name": "Celestial Custodian",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/95/Celestial_CustodianH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played in an Environment:</b> Destroy a Plant with 2{{Strength}} or less.",
+    "flavour": "Don't call him a \"Space Janitor.\" He's a \"Celestial Custodian\" and darn proud of it."
+  },
+  {
+    "name": "Screen Door Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fa/Screen_Door_ZombieH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> This can't be hurt this turn.",
+    "flavour": "Little known fact: He carries a door to protect himself from solar radiation."
+  },
+  {
+    "name": "Healthy Treat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Healthy_TreatH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +1{{Strength}}/+3{{Heart}}.",
+    "flavour": "Great for Zombie Health. Like a vitamin only sweeter."
+  },
+  {
+    "name": "Zombie Middle Manager",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/Zombie_Middle_ManagerH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      ""
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 2,
+    "abilities": "This gets +1{{Strength}} when another Professional gets hurt.\n<b>When played</b>: <b>Conjure</b> a Professional.",
+    "flavour": "Like most managers, bringing pain to his employees gives him strength."
+  },
+  {
+    "name": "Leftovers",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/LeftoversH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      "Gourmet",
+      "Pet",
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Zombies love them almost as much as brains."
+  },
+  {
+    "name": "Sumo Wrestler",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Sumo_WrestlerH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Move a Plant.",
+    "flavour": "Hey, he's in shape. Round is a shape."
+  },
+  {
+    "name": "Zombie Coach",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6c/Zombie_CoachH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played</b>: All Sports Zombies can't be hurt this turn.",
+    "flavour": "There's no \"i\" in Zombee!"
+  },
+  {
+    "name": "Monster Mash",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4b/Monster_MashH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      "Dancing",
+      "Monster",
+      ""
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies get +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Zombies never feel more alive than when they're dancing."
+  },
+  {
+    "name": "Knight of the Living Dead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/36/Knight_of_the_Living_DeadH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 7,
+    "strength": 5,
+    "health": 5,
+    "abilities": "{{Armored}}<b>Armored 2</b>",
+    "flavour": "He's both secretary and treasurer for the Knights of the Square Table."
+  },
+  {
+    "name": "Rodeo Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/02/Rodeo_GargantuarH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 7,
+    "strength": 5,
+    "health": 9,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Move a Plant.",
+    "flavour": "Why yes, this IS his first rodeo."
+  },
+  {
+    "name": "Escape through Time",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Escape_through_TimeH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      "History",
+      "Science",
+      ""
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie can't be hurt this turn.\n<b>Conjure</b> a History card.",
+    "flavour": "Possible side effects include: the creation of a temporal paradox, the unraveling of the fabric of reality, erasing your entire existence, a mild foot rash."
+  },
+  {
+    "name": "Cosmic Sports Star",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Cosmic_Sports_StarH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> <b>Conjure</b> a Sports card, and it costs 2{{Brain}} less.",
+    "flavour": "He's been named Most Valuable Zombie of the Galaxy two years in a row!"
+  },
+  {
+    "name": "Primeval Yeti",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/64/Primeval_YetiH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Zombie Evolution</b>: All Zombies get +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "What's for lunch? Mostly solid stone."
+  },
+  {
+    "name": "Lost Colosseum",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Lost_ColosseumH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Fusion:</b> A Zombie played on this gets +2{{Strength}}/+3{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "The Legend of the Mustache Monuments led Zombie explorers to uncover ancient colosseums."
+  },
+  {
+    "name": "Landscaper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/LandscaperH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Plant gets -2{{Strength}}.",
+    "flavour": "If barren rock and wilted Plants are what you want, he's the landscaper for the job."
+  },
+  {
+    "name": "Weed Spray",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/80/Weed_SprayH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy each Plant with 2{{Strength}} or less.",
+    "flavour": "Act now! Rids your lawn of pesky weeds... and Peashooters and Sunflowers. Also Wall-Nuts."
+  },
+  {
+    "name": "All-Star Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/17/All-Star_ZombieH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 5,
+    "strength": 4,
+    "health": 6,
+    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Frenzy}}<b>Frenzy</b>",
+    "flavour": "Gives 110% on the field. Has no idea what a football is."
+  },
+  {
+    "name": "Coffee Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/Coffee_ZombieH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 6,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>When played:</b> All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "He's been trying to cut back."
+  },
+  {
+    "name": "Planetary Gladiator",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Planetary_GladiatorH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 1,
+    "health": 3,
+    "abilities": "{{Armored}}<b>Armored 1</b>\nIf your Hero would get hurt, this gets hurt instead.",
+    "flavour": "He's still not sure if he should defend Pluto or not."
+  },
+  {
+    "name": "Genetic Experiment",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Genetic_ExperimentH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Start of Tricks:</b> This gets +1{{Strength}}/+1{{Heart}} if there's a Zombie next door.",
+    "flavour": "Pickled Zombie is the best kind of Zombie."
+  },
+  {
+    "name": "Black Hole",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Black_HoleH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Environment",
+    "tribes": [
+      ""
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants here get -1{{Strength}}.\nWhen a Plant is played, move it here.",
+    "flavour": "Plants usually like being planted in holes. Black holes? Not so much."
+  },
+  {
+    "name": "Jurassic Fossilhead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/Jurassic_FossilheadH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>Professional Evolution</b>: This gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "For him, Fossilheading isn't just a hobby. It's a career."
+  },
+  {
+    "name": "Knockout",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b7/KnockoutH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Choose a lane. Destroy all Plants there with 3{{Strength}} or less.",
+    "flavour": "No one knows where the giant green hand and the giant purple hand comes from. What will happen when they clap?"
+  },
+  {
+    "name": "Turquoise Skull Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4e/Turquoise_Skull_ZombieH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 2,
+    "health": 6,
+    "abilities": "<b>Gravestone</b>\n<b>Start of turn</b>: The Plant Player loses 1{{Sun}}. This gets +1{{Strength}}.",
+    "flavour": "The mystical Turquoise Skull stole the sun itself, lighting the way to the Mustache Monuments."
+  },
+  {
+    "name": "Zombie King",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Zombie_KingH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [],
+    "cost": 4,
+    "strength": 3,
+    "health": 5,
+    "abilities": "<b>End of Turn:</b> Transform another random Zombie into a 5{{Strength}}/5{{Heart}} Knight of the Living Dead with <b>Armored 2</b>{{Armored}}.",
+    "flavour": "Contrary to popular opinion, it's just OK to be king."
+  },
+  {
+    "name": "Undying Pharaoh",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Undying_PharaohH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      ""
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 6,
+    "abilities": "Your Hero's Health can't go below 1.",
+    "flavour": "If the Plants think they're going to beat the Undying Pharaoh, they're in de-Nile."
+  },
+  {
+    "name": "Wannabe Hero",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Wannabe_HeroH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Gargantuar",
+      ""
+    ],
+    "cost": 7,
+    "strength": 6,
+    "health": 1,
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> This gets +1{{Heart}} for each Health your Hero has.",
+    "flavour": "He has Super Brainz stickers all over his binder."
+  },
+  {
+    "name": "Intergalactic Warlord",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/Intergalactic_WarlordH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Pirate",
+      ""
+    ],
+    "cost": 5,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> For the rest of the game, all Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "In space Zombie circles, he's a very powerful figure. Just don't talk about him in front of Huge-Gigantacus. There's some jealousy there."
+  },
+  {
+    "name": "Zombot Battlecruiser 5000",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Zombot_Battlecruiser_5000H.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Barrel",
+      ""
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 5,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Zombies can't be hurt this turn.",
+    "flavour": "Not space legal in 35 different galaxies."
+  },
+  {
+    "name": "Stompadon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fc/StompadonH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Pet"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Dino-Roar:</b> All Zombies in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "With a cerebellum the size of a Wall-Nut, it specializes in oversized bodies for little brains."
+  },
+  {
+    "name": "Chum Champion",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Chum_ChampionH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Sports",
+      ""
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played</b>: All Plants get -1{{Strength}}.\n<b>Sports Evolution</b>: Destroy each Plant with 2{{Strength}} or less.",
+    "flavour": "The Retiarius gladiator was classically armed with a trident, a net, and a 10-day-old fish."
+  },
+  {
+    "name": "Zombology Teacher",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Zombology_TeacherH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Science",
+      ""
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "Zombie Tricks cost 1{{Brain}} less.",
+    "flavour": "\"If you don't pay attention in class, you'll never improve your brains...\""
+  },
+  {
+    "name": "Gargologist",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c7/GargologistH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      ""
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "Gargantuars cost 2{{Brain}} less.",
+    "flavour": "After years of studying Gargantuars in the wild, she's dedicated herself to telling the world they're just misunderstood gentle giants. So far, nobody's buying it."
+  },
+  {
+    "name": "Turkey Rider",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Turkey_RiderH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When destroyed:</b> Gain a Leftovers.",
+    "flavour": "He insists that, as far as modes of transportation go, turkeys outperform dolphins, walruses, and kangaroos any day."
+  },
+  {
+    "name": "Going Viral",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Going_ViralH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Trick",
+    "tribes": [
+      ""
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.\nShuffle three Going Viral cards into your deck.\nDraw a card.",
+    "flavour": "Though Zombies can't get ill, this plague is totally sick."
+  },
+  {
+    "name": "Bonus Track Buckethead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Bonus_Track_BucketheadH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      ""
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do Bonus Attacks.",
+    "flavour": "He put all his favorite songs on that mixtape. If only he could find the right Zombie to give it to."
+  },
+  {
+    "name": "Defensive End",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Defensive_EndH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Sports",
+      "Gargantuar",
+      ""
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 5,
+    "abilities": "{{Armored}}<b>Armored 1</b>\nPlant Tricks cost 2{{Sun}} more.",
+    "flavour": "Somebody once told him the best defense is a good offence. He disagrees. Da fence he like best is da one he SMASH through."
+  },
+  {
+    "name": "Octo-Pet",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "hearty",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "It's slimy, beady-eyed, and it leaves ink splotches wherever it goes. Neptuna loves it all the same."
+  },
+  {
+    "name": "Heroic Health",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Heroic_HealthH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Heal your Hero for 6.",
+    "flavour": "A healthy Hero is a happy Hero."
+  },
+  {
+    "name": "Possessed",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/PossessedH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +2{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "There's nothing like a good possession to perk a Zombie up."
+  },
+  {
+    "name": "Rock Wall",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Rock_WallH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "hearty",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +5{{Heart}}.",
+    "flavour": "Better than a wall of scissors, but worse than a wall of paper."
+  },
+  {
+    "name": "Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/34/ImpH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "He's proficient in Zombie judo and Zombie karate. He also plays the Melodica."
+  },
+  {
+    "name": "Mini-Ninja",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/19/Mini-NinjaH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "flavour": "His motto: Walk softly and carry a big nunchuck."
+  },
+  {
+    "name": "Smoke Bomb",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7f/Smoke_BombH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Zombie. It gets +1{{Strength}}.",
+    "flavour": "Good for eluding the enemy. Bad for the lungs"
+  },
+  {
+    "name": "Fishy Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/94/Fishy_ImpH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "Throws the *best* pool parties."
+  },
+  {
+    "name": "Smelly Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Smelly_ZombieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\n{{Deadly}}<b>Deadly</b>",
+    "flavour": "Casual acquaintances don't understand where his pets are. They don't realize that stinkflies can be such tender little friends."
+  },
+  {
+    "name": "Headstone Carver",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/Headstone_CarverH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Mustache"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 3,
+    "abilities": "When a Zombie is revealed from a Gravestone, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "His epitaphs have been published on headstones around the world."
+  },
+  {
+    "name": "Zombie Chicken",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a4/Zombie_ChickenH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "This moves to a random lane when a Plant is played here.",
+    "flavour": "Question: Which came first, the Chicken or the egg? Answer: The Zombie!"
+  },
+  {
+    "name": "Hot Dog Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Hot_Dog_ImpH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Gourmet",
+      "Imp"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
+    "flavour": "He was THIS close to wearing the chicken costume, but darn it, Team Mascot Imp called it first."
+  },
+  {
+    "name": "Swashbuckler Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2f/Swashbuckler_ZombieH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\nWhen a Pirate hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Buckles his swash like no other."
+  },
+  {
+    "name": "Backyard Bounce",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Backyard_BounceH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Party",
+      "Sports"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a Plant.",
+    "flavour": "Zombies love trampolines. Not everyone knows that."
+  },
+  {
+    "name": "Stealthy Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Stealthy_ImpH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n{{Anti-Hero}}<b>Anti-Hero 4</b>",
+    "flavour": "Don't look, but there's one behind you right now!"
+  },
+  {
+    "name": "Firefighter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/FirefighterH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Professional"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 5,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> <b>Bounce</b> another Zombie.",
+    "flavour": "He's a little too eager to rescue kittens from trees."
+  },
+  {
+    "name": "Graveyard",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/GraveyardH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies played here are Gravestones.\nWhen a Zombie is revealed from a Gravestone here, it gets +1{{Strength}}.",
+    "flavour": "Super Brainz always wanted a house with a nice yard."
+  },
+  {
+    "name": "Ice Pirate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ca/Ice_PirateH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed in an Environment:</b> {{Frozen}}<b>Freeze</b> a Plant.",
+    "flavour": "You wouldn't believe how many brains a chunk of space ice goes for on a black market. Let's just say, she's rolling in gray matter."
+  },
+  {
+    "name": "Frosty Mustache",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6d/Frosty_MustacheH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Mustache"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "{{Frozen}}<b>Freeze</b> a Plant.\n<b>Conjure</b> a Mustache.",
+    "flavour": "So stylish! So cool!"
+  },
+  {
+    "name": "Swabbie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f5/SwabbieH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pirate"
+    ],
+    "cost": 0,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "When he's not fighting Plants, you'll find him swabbing the Zombot Plank Walker's poop deck."
+  },
+  {
+    "name": "Barrel of Barrels",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c4/Barrel_of_BarrelsH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Barrel"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie becomes {{Deadly}}<b>Deadly</b>.\n<b>Conjure</b> a Barrel.",
+    "flavour": "If you put a container in another container, you'll have twice the storage space!"
+  },
+  {
+    "name": "Monkey Smuggler",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bd/Monkey_SmugglerH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Steal 2 sections from the Plant Hero's Super-Block Meter.",
+    "flavour": "Piracy is serious monkey business."
+  },
+  {
+    "name": "Imp Commander",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Imp_CommanderH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "When an Imp hurts the Plant Hero, draw a card.",
+    "flavour": "He's got a bit of a Napoleon Complex. Obviously."
+  },
+  {
+    "name": "Barrel Roller Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/21/Barrel_Roller_ZombieH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Barrel"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When destroyed:</b> Make 1{{Strength}}/1{{Heart}}Swabbies with <b>Amphibious</b> next door.",
+    "flavour": "The second-most affordable way to transport Imps."
+  },
+  {
+    "name": "Surprise Gargantuar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/90/Surprise_GargantuarH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Gargantuar",
+      "Party"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 6,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Move this Zombie.",
+    "flavour": "Surprise! It's a brains-eating monster at your party!"
+  },
+  {
+    "name": "Walrus Rider",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Walrus_RiderH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pet"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "flavour": "A walrus seemed the obvious choice. After all, horses don't go on land *and* water."
+  },
+  {
+    "name": "Zombot Stomp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Zombot_StompH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Science",
+      "Gargantuar"
+    ],
+    "cost": 7,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> all Plants on the Ground.",
+    "flavour": "Don't make him put his foot down!"
+  },
+  {
+    "name": "Space Pirate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/Space_PirateH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Pirate"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 2</b>\nThis moves to a random lane when a Plant is played here.",
+    "flavour": "At first he just dabbled in space piracy, but then he got hooked."
+  },
+  {
+    "name": "Cosmic Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Cosmic_ImpH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an Imp, and it gets {{Deadly}}<b>Deadly</b>.",
+    "flavour": "When he gazes out at the stars, he feels small. Because he's an Imp."
+  },
+  {
+    "name": "Blowgun Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Blowgun_ImpH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing",
+      "Imp"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 3,
+    "abilities": "{{Deadly}}<b>Deadly</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>Zombie Evolution</b>: Bounce a Plant.",
+    "flavour": "Much more successful than his cousin, the Inhalegun Imp."
+  },
+  {
+    "name": "Buried Treasure",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e1/Buried_TreasureH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Barrel"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Fusion:</b> <b>Conjure</b> a Legendary card, and it costs 1{{Brain}} less.",
+    "flavour": "Neptuna knew only one way to motivate an army of invading zombie pirates. Tell them about the secret treasure."
+  },
+  {
+    "name": "Toxic Waste Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/27/Toxic_Waste_ImpH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Barrel",
+      "Imp"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\nAll Imps are {{Deadly}}<b>Deadly</b>.",
+    "flavour": "All the radioactive glow... none of the super powers."
+  },
+  {
+    "name": "Line Dancing Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/Line_Dancing_ZombieH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Dancing"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When revealed:</b> Move this Zombie.",
+    "flavour": "In her opinion, there's no better song to line dance to than the \"Zombie Shuffle.\""
+  },
+  {
+    "name": "Pogo Bouncer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Pogo_BouncerH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Sports"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> <b>Bounce</b> a Plant.",
+    "flavour": "Not the most efficient mode of transportation, but definitely the most fun."
+  },
+  {
+    "name": "Tomb Raiser Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/31/Tomb_Raiser_ZombieH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "History"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, make a random <b>Gravestone</b> in a random lane.",
+    "flavour": "He's good at making friends."
+  },
+  {
+    "name": "Ducky Tube Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Ducky_Tube_ZombieH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Party",
+      "Pet"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\nThis gets +1{{Strength}}/+1{{Heart}} when it hurts the Plant Hero.",
+    "flavour": "Zombie Ducky, joy of joys. When it squeezes, you make noise!"
+  },
+  {
+    "name": "Dr. Spacetime",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9f/Dr._SpacetimeH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "History"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 5,
+    "abilities": "Cards you <b>Conjure</b> cost 1{{Brain}} less.\nWhen this hurts the Plant Hero, <b>Conjure</b> a Galactic Gardens card.",
+    "flavour": "He insists it's more than a screwdriver. Much more."
+  },
+  {
+    "name": "Laser Base Alpha",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/74/Laser_Base_AlphaH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Environment",
+    "tribes": [
+      "Science"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get {{Deadly}}<b>Deadly</b> and {{Strikethrough}}<b>Strikethrough</b>.",
+    "flavour": "Zombies with LASERS. What could possibly go wrong?"
+  },
+  {
+    "name": "Cursed Gargolith",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/57/Cursed_GargolithH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Monster",
+      "Gargantuar"
+    ],
+    "cost": 6,
+    "strength": 7,
+    "health": 6,
+    "abilities": "<b>End of Turn</b>: All Gargantuars hide in Gravestones.",
+    "flavour": "The lost temples of Hollow Earth were mysterious and inviting. Until they started to move."
+  },
+  {
+    "name": "Excavator Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/Excavator_ZombieH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Mustache"
+    ],
+    "cost": 3,
+    "strength": 4,
+    "health": 1,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed</b>: <b>Bounce</b> an Environment and all Plants there.",
+    "flavour": "He loved finding dinosaur fossils, until the dinosaurs started finding him."
+  },
+  {
+    "name": "Unthawed Viking",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ee/Unthawed_VikingH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Freeze all Plants in the Water. <b>Pirate Evolution:</b> Instead, Freeze all Plants.",
+    "flavour": "What's the best way to cross the ocean? Freeze it first. How hard could it be?"
+  },
+  {
+    "name": "Mixed-Up Gravedigger",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Mixed-Up_GravediggerH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Professional",
+      "Mustache"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>When played:</b> Each Zombie hides in a <b>Gravestone</b>. Mix them up randomly.",
+    "flavour": "Digging graves is hard work, but seeing customers rise out of them makes it all worth it."
+  },
+  {
+    "name": "Zombot Sharktronic Sub",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/30/Zombot_Sharktronic_SubH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Pet"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>Amphibious</b>\nWhen a Plant gets hurt, destroy it.\nWhen any Plant is destroyed, this gets +1{{Strength}}.",
+    "flavour": "Ever dream of piloting a giant shark robot? Join Dr. Zomboss now!"
+  },
+  {
+    "name": "Zombot Plank Walker",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3b/Zombot_Plank_WalkerH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pirate",
+      "Science"
+    ],
+    "cost": 8,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random Pirates in random lanes.",
+    "flavour": "Deploying Pirates here, there and everywhere."
+  },
+  {
+    "name": "Space Cowboy",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/Space_CowboyH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp",
+      "Pet"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 5,
+    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\nThis Zombie moves to the right when it hurts the Plant Hero.",
+    "flavour": "Only in the big wide sky will he find Serenity."
+  },
+  {
+    "name": "Cryo-Yeti",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/Cryo-YetiH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Monster"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<p><b>Gravestone &#160;</b>\n</p><p>This gets +2{{Strength}}/+2{{Heart}} when a Plant or Zombie is frozen. <b>When revealed:</b> {{Frozen}}<b>Freeze</b> a Plant.\n</p>",
+    "flavour": "Freezing Plants in the far reaches of Space is not what he'd imagined he'd spend his life doing. But as the old Yeti saying goes, \"When life hands you snow, you make snow cones.\""
+  },
+  {
+    "name": "Zombot Aerostatic Gondola",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bc/Zombot_Aerostatic_GondolaH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Science",
+      "Pirate"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 6,
+    "abilities": "<b>Amphibious</b>\nWhen this hurts the Plant Hero, it moves to a random lane and leaves behind a random Zombie.",
+    "flavour": "These pirates hit hard, then escape at 3 miles per hour."
+  },
+  {
+    "name": "Raiding Raptor",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e0/Raiding_RaptorH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "History",
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a card that costs 2{{Brain}} or less.",
+    "flavour": "Amazomb helmets mostly protect their ears from all the roaring."
+  },
+  {
+    "name": "Imposter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/ImposterH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost Imp. It gains a Mustache.",
+    "flavour": "It's IMPossible to tell who he really is."
+  },
+  {
+    "name": "Fire Rooster",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Fire_RoosterH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 1,
+    "abilities": "This moves to a random lane when a Plant is played here.\n<b>When this enters a lane:</b> Do 1 damage to all Plants here.",
+    "flavour": "According to the Chinese Zodiac, it's the year of the Fire Rooster. Crispy fried Plants for all your Zombies!"
+  },
+  {
+    "name": "Imp-Throwing Imp",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Imp-Throwing_ImpH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 3,
+    "abilities": "<b>When hurt</b>: Make a random Imp that costs 2{{Brain}} or less in a random lane.",
+    "flavour": "But where is the Imp-Throwing-Imp-Throwing-Imp?? We have to go deeper..."
+  },
+  {
+    "name": "Captain Flameface",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d1/Captain_FlamefaceH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Pirate"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>&#160; &#160; Gravestone&#160; &#160; &#160; &#160;</b>All Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
+    "flavour": "You get your beard caught in the toaster ONE time, and it's all anyone can talk about..."
+  },
+  {
+    "name": "Zombie High Diver",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Zombie_High_DiverH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Mustache",
+      "Sports"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed on Heights:</b> This moves to the Water and gets +1{{Strength}}/+1{{Heart}}",
+    "flavour": "He used to be afraid of heights... and water. True story."
+  },
+  {
+    "name": "Trapper Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a4/Trapper_ZombieH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet",
+      "Mustache"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a Trapper Territory.",
+    "flavour": "Purveyor of only the finest banana peel coats."
+  },
+  {
+    "name": "Impfinity Clone",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Impfinity_CloneH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Imp"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "An IMPerfect copy, but it'll do."
+  },
+  {
+    "name": "Octo-Pet",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "sneaky",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "It's slimy, beady-eyed, and it leaves ink splotches wherever it goes. Neptuna loves it all the same."
+  },
+  {
+    "name": "Dolphinado",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/DolphinadoH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Pet",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a random Plant.",
+    "flavour": "Weather report calls for afternoon tornados with a 75% chance of sea mammals."
+  },
+  {
+    "name": "In-Crypted",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/In-CryptedH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie hides in a <b>Gravestone</b>.\nDraw a card.",
+    "flavour": "Requires eight characters, one upper case, a number, and the letter Z."
+  },
+  {
+    "name": "Super Stench",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Super_StenchH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies get {{Deadly}}<b>Deadly</b>.\nDraw a card.",
+    "flavour": "That's the smell of victory!"
+  },
+  {
+    "name": "Ice Moon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/09/Ice_MoonH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "sneaky",
+    "type": "Environment",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get {{Strikethrough}}<b>Strikethrough</b>.\n<b>When played</b>: {{Frozen}}<b>Freeze</b> all Plants here.",
+    "flavour": "Be sure to pack a warm sweater."
+  },
+  {
+    "name": "Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/ZombieH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "removed",
+    "type": "Zombie",
+    "tribes": [
+      "Professional"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Owns a closet full of brown coats. And one plaid coat."
+  },
+  {
+    "name": "Returned Octo Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Octo_ZombieH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "removed",
+    "type": "Zombie",
+    "tribes": [
+      "Pet"
+    ],
+    "cost": 8,
+    "strength": 8,
+    "health": 8,
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>",
+    "flavour": "-"
+  },
+  {
+    "name": "Flick-a-Plant",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7a/Flick-a-PlantH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 1 damage.",
+    "flavour": "Annoying AND effective!"
+  },
+  {
+    "name": "Get Well",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Get_WellH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Heal 2.",
+    "flavour": "Helps with the boo-boos."
+  },
+  {
+    "name": "Motivate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/MotivateH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Ask not what the Zombies can do for you. Ask what you can do for the Zombies!"
+  }
+]

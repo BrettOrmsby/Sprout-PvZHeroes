@@ -1,0 +1,4462 @@
+[
+  {
+    "name": "Small-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/20/Small-NutH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "A violin virtuoso, Small-Nut began taking lessons when he was still in the shell."
+  },
+  {
+    "name": "Sting Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/53/Sting_BeanH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Pea"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n{{Truestrike}}<b>Bullseye</b>",
+    "flavour": "\"I try to warn them, \"This is going to sting.\" But the Zombies, they never listen.\""
+  },
+  {
+    "name": "Wall-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/00/Wall-NutH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 6,
+    "abilities": "<b>Team-Up</b>",
+    "flavour": "Works well with others. Says so, right there on his resume."
+  },
+  {
+    "name": "Pismashio",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/PismashioH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "",
+    "flavour": "\"I'm a kind of ice cream! Sort of!\""
+  },
+  {
+    "name": "Spineapple",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/25/SpineappleH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>When played:</b> Plants with no Strength get +2{{Strength}}.",
+    "flavour": "Don't let his gruff exterior fool you, he is always looking out for the little guy."
+  },
+  {
+    "name": "Potato Mine",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Potato_MineH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When destroyed:</b> Do 2 damage to a Zombie here.",
+    "flavour": "\"I'm starchy and explosive!\""
+  },
+  {
+    "name": "Cactus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/CactusH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Cactus",
+      "Flower"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 5,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>",
+    "flavour": "\"It's true. I'm prickly on the outside but spongy on the inside.\""
+  },
+  {
+    "name": "Gardening Gloves",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/Gardening_GlovesH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Plant.\nDraw a card.",
+    "flavour": "Made of the softest fabric for that gentle Plant touch."
+  },
+  {
+    "name": "Sea-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Sea-ShroomH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "Teaches swimming lessons to disadvantaged Plants in his spare time."
+  },
+  {
+    "name": "Water Chestnut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ce/Water_ChestnutH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Nut"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 8,
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>",
+    "flavour": "\"300 laps a day, every day. That's how I do it.\""
+  },
+  {
+    "name": "Pea-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2c/Pea-NutH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Pea",
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Team-Up</b>",
+    "flavour": "\"Mom was a Peashooter. Dad was a nut. Everyone said it wouldn't work, but they were wrong.\""
+  },
+  {
+    "name": "Steel Magnolia",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ea/Steel_MagnoliaH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> Plants here and next door get +2{{Heart}}.",
+    "flavour": "She's got nerves of steel... and everything else of steel!"
+  },
+  {
+    "name": "Photosynthesizer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/08/PhotosynthesizerH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a Galactic Gardens card.",
+    "flavour": "\"The galaxy is one beautiful melody, so play!\""
+  },
+  {
+    "name": "Spikeweed Sector",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/79/Spikeweed_SectorH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Environment",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Before combat here:</b> Do 2 damage to a Zombie here.",
+    "flavour": "Quite similar to the region known as Pokey Province."
+  },
+  {
+    "name": "Plantern",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7d/PlanternH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Tree",
+      "Root"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>While in an Environment:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "flavour": "Past job experience includes: Shooing away creepy fog."
+  },
+  {
+    "name": "Grape Responsibility",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0e/Grape_ResponsibilityH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Double a Plant's {{Heart}}.",
+    "flavour": "When you think of responsibility, think of grapes."
+  },
+  {
+    "name": "Primal Potato Mine",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5a/Primal_Potato_MineH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>When destroyed</b>: Do 3 damage to a Zombie here.",
+    "flavour": "Hidden long ago in Hollow Earth, Dinosaurs ran rampant in The Land Before Mine."
+  },
+  {
+    "name": "Grizzly Pear",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f2/Grizzly_PearH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit",
+      "Animal"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "It's true what they say, \"Never get between a Grizzly Pear and her cub.\" Doubly true for Zombies."
+  },
+  {
+    "name": "Grave Buster",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c9/Grave_BusterH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Gravestone.",
+    "flavour": "\"MUST. DESTROY. GRAVES.\""
+  },
+  {
+    "name": "Hibernating Beary",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1e/Hibernating_BearyH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Animal",
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 8,
+    "abilities": "<b>When hurt:</b> This gets +4{{Strength}}.",
+    "flavour": "Don't poke the beary."
+  },
+  {
+    "name": "Prickly Pear",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Prickly_PearH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Cactus",
+      "Fruit"
+    ],
+    "cost": 4,
+    "strength": 0,
+    "health": 4,
+    "abilities": "<b>Team-Up</b>\n<b>When hurt:</b> Do 4 damage to a Zombie here.",
+    "flavour": "\"You hurt me, I hurt you. That's how this works.\""
+  },
+  {
+    "name": "Smackadamia",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/SmackadamiaH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your Nuts get +2{{Heart}}.",
+    "flavour": "Smackadamia wasn't born with smack smarts. He studied hard. He's a smackademic."
+  },
+  {
+    "name": "Tough Beets",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/15/Tough_BeetsH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 5,
+    "strength": 6,
+    "health": 1,
+    "abilities": "{{Armored}}<b>Armored 1</b>\n<b>When played:</b> This gets +1{{Heart}} for each Plant and Zombie.",
+    "flavour": "He grew up on the wrong side of the garden."
+  },
+  {
+    "name": "Cosmic Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Cosmic_NutH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> <b>Conjure</b> a Nut, and its {{Strength}} becomes 3{{Strength}}.",
+    "flavour": "A staunch believer in numerology, he'll go on at length about the significance of the number 3 if you let him."
+  },
+  {
+    "name": "Starch-Lord",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0f/Starch-LordH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 4,
+    "abilities": "When you play another Root, that Root gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a Root.",
+    "flavour": "His destiny is written in the starch."
+  },
+  {
+    "name": "Blockbuster",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cd/BlockbusterH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Plant Evolution</b>: Destroy all Gravestones here and next door.",
+    "flavour": "They call it a graveyard. She calls it a buffet."
+  },
+  {
+    "name": "Pumpkin Shell",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Pumpkin_ShellH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Fusion:</b> A Plant played on this gets +2{{Strength}}/+4{{Heart}}.",
+    "flavour": "\"Build your house on a solid foundation,\" they said. \"Build your house on pumpkin.\""
+  },
+  {
+    "name": "Jugger-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/38/Jugger-NutH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Truestrike}}<b>Bullseye</b>",
+    "flavour": "What's better than a Wall-Nut? A Wall-Nut in a suit of armor, that's what."
+  },
+  {
+    "name": "Guacodile",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1e/GuacodileH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit",
+      "Animal"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Do 4 damage to a Zombie here.",
+    "flavour": "\"Technically I'm a food, not a Plant.\""
+  },
+  {
+    "name": "Mirror-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Mirror-NutH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 4,
+    "strength": 0,
+    "health": 8,
+    "abilities": "<b>Team-Up</b>\nWhen your Nuts get hurt, do 2 damage to the Zombie Hero.",
+    "flavour": "Dressed up as a mirrorball for a disco-themed party. Never looked back."
+  },
+  {
+    "name": "Doom-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/Doom-ShroomH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy all Plants and Zombies with 4{{Strength}} or more.",
+    "flavour": "\"I could destroy everything you hold dear. It wouldn't be hard.\""
+  },
+  {
+    "name": "Galacta-Cactus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Galacta-CactusH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Cactus",
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When destroyed:</b> Do 1 damage to everything.",
+    "flavour": "\"I take pity on no one. For I am Galacta-Cactus!\""
+  },
+  {
+    "name": "Force Field",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/Force_FieldH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants here can't be hurt.",
+    "flavour": "It's a force of nature."
+  },
+  {
+    "name": "Gravitree",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GravitreeH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit",
+      "Tree"
+    ],
+    "cost": 6,
+    "strength": 7,
+    "health": 7,
+    "abilities": "{{Armored}}<b>Armored 1</b>\nWhen a Zombie is played, move it here.",
+    "flavour": "The apple doesn't fall far from the tree. Neither does anything else."
+  },
+  {
+    "name": "Three-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2e/Three-NutH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Pea",
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When a Plant is played</b>: That plant's {{Strength}} becomes 3{{Strength}}.",
+    "flavour": "They say two heads are better than one. Three-Nut just took the next evolutionary step."
+  },
+  {
+    "name": "Primal Wall-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/81/Primal_Wall-NutH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 9,
+    "abilities": "<b>Team-Up</b>\n{{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a card that costs 4{{Sun}} or more.",
+    "flavour": "You can't be destroyed by a Rolling Stone when you basically are a Rolling Stone."
+  },
+  {
+    "name": "Marine Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Marine_BeanH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Animal"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: This gets +1{{Strength}}/+1{{Heart}} for each other Amphibious Plant.",
+    "flavour": "Of course beans evolved gills. How else would they breathe underwater?"
+  },
+  {
+    "name": "Poppin' Poppies",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Poppin%27_PoppiesH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played:</b> Make Lil' Buddies here and next door.",
+    "flavour": "Makes friends wherever she goes."
+  },
+  {
+    "name": "Soul Patch",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Soul_PatchH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Root"
+    ],
+    "cost": 7,
+    "strength": 5,
+    "health": 10,
+    "abilities": "{{Armored}}<b>Armored 1</b>\nIf your Hero would get hurt, this gets hurt instead.",
+    "flavour": "Has been gently encouraging Cherry Bomb and Sour Grapes to attend his meditation class."
+  },
+  {
+    "name": "Wall-Nut Bowling",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/63/Wall-Nut_BowlingH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 9,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a Wall-Nut in each Ground lane.\nAttack for 6 damage in those lanes.",
+    "flavour": "<p>Ugly shoes not required!\n</p>"
+  },
+  {
+    "name": "Body-Gourd",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Body-GourdH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 6,
+    "abilities": "<b>Team-Up</b>\n<b>Amphibious</b>\n<b>When played:</b> Fill your Super-Block Meter to full.",
+    "flavour": "He moonlights as a decorative center piece during the fall."
+  },
+  {
+    "name": "Pecanolith",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/PecanolithH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 5,
+    "strength": 0,
+    "health": 7,
+    "abilities": "All Plants and Zombies attack using their {{Heart}} instead of their {{Strength}}.",
+    "flavour": "No one knows where he came from. He just appeared one day. But everyone who comes in contact with him feels... changed somehow."
+  },
+  {
+    "name": "Tricarrotops",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/15/TricarrotopsH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Animal"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 3,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Beta-Carrotina tracked Huge-Gigantacus all the way down the Meteor-Z-carved tunnel to Hollow Earth. Carrots there had evolved in a very different direction."
+  },
+  {
+    "name": "Loco Coco",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/89/Loco_CocoH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit",
+      "Nut"
+    ],
+    "cost": 6,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>When played</b>: Make Wall-Nuts next door.\n<b>Nut Evolution</b>: All Plants with no {{Strength}} get +3{{Strength}}.",
+    "flavour": "He crowned himself King of All Hollow Earth. No one had the heart to tell him it was actually a parliamentary democracy."
+  },
+  {
+    "name": "Forget-Me-Nuts",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4f/Forget-Me-NutsH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Nut"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "Zombie Tricks cost 1{{Brain}} more.",
+    "flavour": "\"I'd forget my own flower if it wasn't stuck to my head. Wait, what were we talking about?\""
+  },
+  {
+    "name": "Garlic",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2f/GarlicH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>Team-Up</b>\nWhen a Zombie hurts this, move that Zombie to the left. If it's a Vimpire, destroy it.",
+    "flavour": "\"Vimpires. They're the worst. I don't like to use the word \"hate\" but yeah, I hate 'em.\""
+  },
+  {
+    "name": "Corn Dog",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b7/Corn_DogH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Corn",
+      "Animal"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b> <b>Hunt</b>",
+    "flavour": "\"Who's a good vegetable? You are! Yes, you are!\""
+  },
+  {
+    "name": "Hot Date",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Hot_DateH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>When played:</b> Move a Zombie to this lane.\n<b>When destroyed:</b> Do 3 damage to a Zombie here.",
+    "flavour": "He's a hot commodity on dating sites such as eGardening, Thatch.com, and OKTulip."
+  },
+  {
+    "name": "Health-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8a/Health-NutH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 4,
+    "abilities": "This attacks using its {{Heart}} instead of its {{Strength}}.",
+    "flavour": "He always skips leg day."
+  },
+  {
+    "name": "Pear Cub",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bd/Pear_CubH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Fruit",
+      "Animal"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a Grizzly Pear here.",
+    "flavour": "So cute and cuddly and ... wait, what's that growling sound?"
+  },
+  {
+    "name": "Shamrocket",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/ShamrocketH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Leafy",
+      "Pinecone"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie with 4{{Strength}} or more.",
+    "flavour": "The bigger they are, the harder they go boom."
+  },
+  {
+    "name": "Red Stinger",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/Red_StingerH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 7,
+    "abilities": "<b>Team-Up</b>\n<b>When played behind a Plant:</b> This becomes 7{{Strength}}/2{{Heart}}.",
+    "flavour": "\"I do stretching exercises every morning,\" he says. \"It's important to stay physically and mentally nimble.\""
+  },
+  {
+    "name": "Hothead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f9/HotheadH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When destroyed:</b> Do 6 damage to a Zombie here.",
+    "flavour": "Sure, he has an explosive temper. But for the most part, he's pretty even peeled."
+  },
+  {
+    "name": "Bubble Up",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/39/Bubble_UpH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Plant. It gets +4{{Heart}}.",
+    "flavour": "Who doesn't like bubbles? Zombies...that's who."
+  },
+  {
+    "name": "Nut Signal",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fe/Nut_SignalH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Nut",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a Wall-Nut.\nDraw a card.",
+    "flavour": "Call on Wall-Nut any time. His schedule is wide open."
+  },
+  {
+    "name": "Root Wall",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/37/Root_WallH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Trick",
+    "tribes": [
+      "Root",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +2{{Heart}} and can't be hurt this turn.",
+    "flavour": "A good way to root for the Plants."
+  },
+  {
+    "name": "Ensign Uproot",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6a/Ensign_UprootH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Guardian",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played</b>: Move another Plant or Zombie.",
+    "flavour": "His mighty tractor beam is straight off the farm and out of this world."
+  },
+  {
+    "name": "Button Mushroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/77/Button_MushroomH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Everyone's always telling her, \"You're cute as a button!\" But she's not just cute. She's smart and funny too."
+  },
+  {
+    "name": "Berry Blast",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Berry_BlastH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage.",
+    "flavour": "Vicious AND nutritious."
+  },
+  {
+    "name": "Buff-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1d/Buff-ShroomH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played:</b> All Mushrooms get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "You might know him from his wildly popular series of workout videos called \"30 Days to a Buff-Shroom Body.\""
+  },
+  {
+    "name": "Seedling",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/ff/SeedlingH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Seed"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Start of Turn:</b> This transforms into a random Plant that costs 6{{Sun}} or less.",
+    "flavour": "t's the tiny seed of a... nobody actually knows."
+  },
+  {
+    "name": "Zapricot",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/ZapricotH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 3,
+    "strength": 4,
+    "health": 2,
+    "abilities": "",
+    "flavour": "\"Some say that Zombies aren't easily shocked. I beg to differ.\""
+  },
+  {
+    "name": "Poison Mushroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/Poison_MushroomH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 2</b>",
+    "flavour": "\"Zombie Heroes. Don't like 'em. Not one bit. Don't care who knows it, either.\""
+  },
+  {
+    "name": "Berry Angry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Berry_AngryH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "All Plants get +2{{Strength}}.",
+    "flavour": "\"Now you've done it! That's the last straw! I'm gonna berry you!\""
+  },
+  {
+    "name": "Mushroom Ringleader",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/54/Mushroom_RingleaderH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>When played:</b> This gets +2{{Strength}} for each other Plant.",
+    "flavour": "Leadership comes with a lot of responsibility, but he knew what he signed up for."
+  },
+  {
+    "name": "Poison Ivy",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/15/Poison_IvyH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 3,
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 4</b>",
+    "flavour": "\"Guess who's itching for a fight? This guy right here!\""
+  },
+  {
+    "name": "Pair of Pears",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Pair_of_PearsH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> Make a Pear Pal here.",
+    "flavour": "It's cute how they're always completing each other's sentences."
+  },
+  {
+    "name": "Bluesberry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/BluesberryH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> Do 2 damage.",
+    "flavour": "Loves to make Zombies sing the blues."
+  },
+  {
+    "name": "Sizzle",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/SizzleH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 5 damage to a Zombie.",
+    "flavour": "Incredibly hot and full of electricity. So much ouch."
+  },
+  {
+    "name": "Banana Bomb",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/Banana_BombH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 2 damage to a Zombie.",
+    "flavour": "Beware fruity vengeance from above."
+  },
+  {
+    "name": "Mushroom Grotto",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9d/Mushroom_GrottoH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Environment",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "When you play a Plant here, make a Puff-Shroom in another random lane.",
+    "flavour": "Sometimes beautiful things grow out of the darkest places. Ponder that for a few moments."
+  },
+  {
+    "name": "Invasive Species",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/89/Invasive_SpeciesH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}",
+    "flavour": "\"Call me a 'weed.' Go on. I consider it a compliment.\""
+  },
+  {
+    "name": "Puff-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ed/Puff-ShroomH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 0,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>",
+    "flavour": "He huffs and puffs and, occasionally, blows a Zombie down."
+  },
+  {
+    "name": "Hot Lava",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/93/Hot_LavaH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Before combat here:</b> Do 1 damage to each Plant and Zombie here.",
+    "flavour": "Lava has no loyalty. It's just hot. It just IS."
+  },
+  {
+    "name": "Veloci-Radish Hatchling",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/00/Veloci-Radish_HatchlingH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Animal"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 2,
+    "abilities": "<b>Dino-Roar:</b> This gets +1{{Strength}}.",
+    "flavour": "The root of all primeval."
+  },
+  {
+    "name": "Shroom for Two",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/49/Shroom_for_TwoH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played:</b> Make a Puff-Shroom here.",
+    "flavour": "Shrooms, bless their hearts, always wanting to cuddle up cuddly-like."
+  },
+  {
+    "name": "Wild Berry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a3/Wild_BerryH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 2,
+    "strength": 4,
+    "health": 1,
+    "abilities": "<b>When played:</b> This moves to a random lane.",
+    "flavour": "What one word best describes Wild Berry? \"Unpredictable.\""
+  },
+  {
+    "name": "Petal-Morphosis",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/61/Petal-MorphosisH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Transform a Plant into a random Plant.\nDraw a card.",
+    "flavour": "For when it's time to turn over a new leaf."
+  },
+  {
+    "name": "Sour Grapes",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/02/Sour_GrapesH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> Do 1 damage to each Zombie.",
+    "flavour": "Sour. Bitter. Resentful. It's all true. But he's got his reasons."
+  },
+  {
+    "name": "Poison Oak",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Poison_OakH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Tree"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 5,
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 5</b>",
+    "flavour": "Gets lunch with Poison Ivy and Poison Mushroom every week. They have a lot to talk about."
+  },
+  {
+    "name": "Cosmic Mushroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/Cosmic_MushroomH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> <b>Conjure</b> a Mushroom, and it gets +2{{Strength}}.",
+    "flavour": "He's far out all right. Like, waaaay far out."
+  },
+  {
+    "name": "Lava Guava",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Lava_GuavaH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 2 damage to each Zombie here and next door.\nIf played on the Ground, make Hot Lava here.",
+    "flavour": "\"'I try to stay cool, I really do. But Zombies! Man, they make me blow my top!\""
+  },
+  {
+    "name": "Cro-Magnolia",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Cro-MagnoliaH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 4,
+    "abilities": "<b>Plant Evolution</b>: Plants here and next door get +2{{Strength}}.",
+    "flavour": "In the secret groves of Hollow Earth, Magnolias evolved to shun steely stoicism, boasting blunt barbarity."
+  },
+  {
+    "name": "Shelf Mushroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a1/Shelf_MushroomH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom",
+      "Berry"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Fusion:</b> Do 2 damage.",
+    "flavour": "Legends of Hollow Earth whisper that if you stack up enough Shelf Mushrooms, you'll eventually reach the Surface World."
+  },
+  {
+    "name": "Punish-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/Punish-ShroomH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When a Mushroom is destroyed, do 2 damage to a random Zombie or Zombie Hero.",
+    "flavour": "Believes revenge is best served. Period."
+  },
+  {
+    "name": "Sergeant Strongberry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Sergeant_StrongberryH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "When another Berry hurts a Zombie or Zombie Hero, Sergeant Strongberry does 2 more damage to it.",
+    "flavour": "He's intense, sure. But he just wants the berries to be all they can be."
+  },
+  {
+    "name": "Cherry Bomb",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3b/Cherry_BombH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 6,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 4 damage to each Zombie here and next door.",
+    "flavour": "Explode? Detonate? ... Explodonate!"
+  },
+  {
+    "name": "Grapes of Wrath",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/36/Grapes_of_WrathH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 7,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>When destroyed:</b> Do 6 damage to the Zombie Hero.",
+    "flavour": "\"Everyone's always asking, 'Why so angry?' Because ZOMBIES! Sheesh. Obviously.\""
+  },
+  {
+    "name": "Astro-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c8/Astro-ShroomH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen you play another Plant, do 1 damage to the Zombie Hero.",
+    "flavour": "He's had good meetings with a lot of smaller asteroids. They really made an impression."
+  },
+  {
+    "name": "Banana Launcher",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Banana_LauncherH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>Start of turn:</b> Gain a Banana Bomb.",
+    "flavour": "He only knows one word. But it's a good one."
+  },
+  {
+    "name": "Pair Pearadise",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/91/Pair_PearadiseH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Environment",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "When you play a Plant here, make a copy of that Plant with <b>Team-Up</b> here.",
+    "flavour": "Peter Piper's Planet precociously picked a pair of pickled peppered pairs."
+  },
+  {
+    "name": "Fireweed",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/FireweedH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Root"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played on the Ground</b>: Make Hot Lava here.",
+    "flavour": "Don't touch the floor. The floor is lava."
+  },
+  {
+    "name": "Imitater",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ce/ImitaterH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Mime"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 4,
+    "abilities": "When you play a Plant, this transforms into a copy of that Plant.",
+    "flavour": "When asked the secret to fighting zombies, Imitater replied: \"....\" Truly a master of his craft."
+  },
+  {
+    "name": "Strawberrian",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f9/StrawberrianH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "When you play a Berry, do 1 damage to Zombies next door. <b>Berry Evolution:</b> Gain a Berry Blast.",
+    "flavour": "When it's time to fight, he gets pretty juiced."
+  },
+  {
+    "name": "Pineclone",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/88/PinecloneH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Pinecone"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> Transform all Plants into Pineclones.",
+    "flavour": "It's nothing personal; she just prefers the company of other Pineclones."
+  },
+  {
+    "name": "Dandy Lion King",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/Dandy_Lion_KingH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Animal"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played:</b> Damage the Zombie Hero for <b>half</b> their Health.",
+    "flavour": "He's developed a taste for Zombie Heroes."
+  },
+  {
+    "name": "Kernel Corn",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/Kernel_CornH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Corn"
+    ],
+    "cost": 8,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>When played:</b> Do 4 damage to each Zombie.",
+    "flavour": "What he lacks in a sense of humor, he makes up with attitude... and dual Cob Busters."
+  },
+  {
+    "name": "Reincarnation",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4e/ReincarnationH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>While in your hand:</b> At end of turn, this transforms into a random Plant with +1{{Strength}}/+1{{Heart}}. It keeps this ability.",
+    "flavour": "\"You never know what the next life has in store for you,\" she says. \"So get the most out of this one while you can.\""
+  },
+  {
+    "name": "Molekale",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2a/MolekaleH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played:</b> Each other Plant transforms into a random Plant that costs 1{{Sun}} more.",
+    "flavour": "\"And you thought spinach made you strong. Please. I am spinach times infinity.\""
+  },
+  {
+    "name": "Gloom-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fe/Gloom-ShroomH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Mushroom Evolution</b>: Do 3 damage to Zombies here and next door.",
+    "flavour": "Some see him as depressed, but he's got a lot of sides."
+  },
+  {
+    "name": "Veloci-Radish Hunter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Veloci-Radish_HunterH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Animal"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 3,
+    "abilities": "<b>When played:</b> Make a copy of this with <b>Team-Up</b> here.\n<b>Dino-Roar:</b> This gets +1{{Strength}}.",
+    "flavour": "Dedicated pack hunters, one roars a distraction while the other strikes from the side."
+  },
+  {
+    "name": "Blooming Heart",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Blooming_HeartH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When this does damage, it gets +1{{Strength}}.",
+    "flavour": "Sometimes we hurt the ones we love. Blooming Heart knows this all too well."
+  },
+  {
+    "name": "High-Voltage Currant",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/13/High-Voltage_CurrantH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "This gets +1{{Strength}} when another Berry does damage.\n<b>When played: Conjure</b> a Berry.",
+    "flavour": "These trouble makers are just asking to get grounded."
+  },
+  {
+    "name": "Sonic Bloom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Sonic_BloomH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 1,
+    "abilities": "<b>When played:</b> Do 1 damage the Zombie Hero for each Plant.",
+    "flavour": "Victory faster than the speed of sound."
+  },
+  {
+    "name": "Transfiguration",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4c/TransfigurationH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Fruit"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 7,
+    "abilities": "Whenever a Plant is hurt and survives, transform it into a random Plant.",
+    "flavour": "\"By Heisenberg's Uncertainty Principle, if you look at a Plant too closely, you actually change what that Plant is...\""
+  },
+  {
+    "name": "Atomic Bombegranate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/af/Atomic_BombegranateH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 2,
+    "abilities": "<b>When destroyed</b>: Make Seedlings next door.",
+    "flavour": "Remember: Never ever EVER split a fruit. Oh, hold on, actually fruits are ok, just never split an atom."
+  },
+  {
+    "name": "Electric Blueberry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/af/Electric_BlueberryH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 5,
+    "strength": 0,
+    "health": 5,
+    "abilities": "<b>After combat here:</b> Do 6 damage to a random Zombie or the Zombie Hero.",
+    "flavour": "Does she strike a \"random\" Zombie with her lightning? Really? Or is she settling an old, unspoken score?"
+  },
+  {
+    "name": "Hothead",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f9/HotheadH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "Kabloom",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When destroyed:</b> Do 6 damage to a Zombie here.",
+    "flavour": "Sure, he has an explosive temper. But for the most part, he's pretty even peeled."
+  },
+  {
+    "name": "Meteor Strike",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/Meteor_StrikeH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage to a Zombie.",
+    "flavour": "You would think this would be especially effective against Zombies riding dinosaurs..."
+  },
+  {
+    "name": "More Spore",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d3/More_SporeH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Mushroom",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make two Button Mushrooms in random lanes.",
+    "flavour": "One good mushroom deserves another."
+  },
+  {
+    "name": "Storm Front",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/38/Storm_FrontH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Kabloom",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "All Plants get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Bad for your picnic. Good for your plants."
+  },
+  {
+    "name": "Peashooter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/22/PeashooterH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Started fighting Zombies in 2009... and never stopped."
+  },
+  {
+    "name": "Torchwood",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/54/TorchwoodH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Tree"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>Team-Up</b>\nPeas behind this get +2{{Strength}}.",
+    "flavour": "\"Feel the burn, I COMMAND YOU!\""
+  },
+  {
+    "name": "Cabbage-Pult",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-PultH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 3,
+    "abilities": "<b>When played on Heights:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "\"Coleslaw from above!\""
+  },
+  {
+    "name": "Fertilize",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/FertilizeH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +3{{Strength}}/+3{{Heart}}.",
+    "flavour": "Stinky, sure, but powerful stuff. Ask any Plant."
+  },
+  {
+    "name": "Flourish",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/FlourishH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw two cards.",
+    "flavour": "Call it a growth spurt."
+  },
+  {
+    "name": "Grow-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4b/Grow-ShroomH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played:</b> Another Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "She's always bringing out the best in others."
+  },
+  {
+    "name": "Repeater",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/RepeaterH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>",
+    "flavour": "<p>\"Yes! Yes! Let's do this! Let's do this!\"\n</p>"
+  },
+  {
+    "name": "Bonk Choy",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Bonk_ChoyH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played:</b> This gets +1{{Strength}} this turn.",
+    "flavour": "Little known fact: He used to have two teeth."
+  },
+  {
+    "name": "Pea Pod",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/07/Pea_PodH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Start of Turn:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Sometimes they squabble, but they usually get along like five peas in a pod."
+  },
+  {
+    "name": "Sweet Potato",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/Sweet_PotatoH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> Move a Zombie to this lane.",
+    "flavour": "Loves unicorns and rainbows... and watching cats on the Internet."
+  },
+  {
+    "name": "Fire Peashooter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Fire_PeashooterH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "",
+    "flavour": "\"Is it getting hot in here or is it just me?\""
+  },
+  {
+    "name": "Skyshooter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/SkyshooterH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played on Heights:</b> This gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "The youngest Peashooter ever to earn a pilot's license. Also the only Peashooter ever to earn a pilot's license."
+  },
+  {
+    "name": "Vegetation Mutation",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Vegetation_MutationH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "All Plants on Heights and Environments get +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Environmentalism at its finest."
+  },
+  {
+    "name": "Sweet Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/20/Sweet_PeaH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>When played:</b> Move a Zombie to this lane.",
+    "flavour": "Zombies may only have four teeth left, but one of them's a sweet tooth."
+  },
+  {
+    "name": "Coffee Grounds",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/Coffee_GroundsH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Environment",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants here get {{DoubleStrikeAlt}}<b>Double Strike</b>.",
+    "flavour": "Nothing wakes you up in the morning like extra attacks on zombies. Well OK, coffee does."
+  },
+  {
+    "name": "Umbrella Leaf",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/05/Umbrella_LeafH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\nOther Plants here and next door are {{Untrickable}}<b>Untrickable</b>.",
+    "flavour": "She's not very frond of getting wet."
+  },
+  {
+    "name": "Half-Banana",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Half-BananaH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When destroyed</b>: All Bananas in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "\"Have you met my better half? She's around here somewhere.\""
+  },
+  {
+    "name": "Typical Beanstalk",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Typical_BeanstalkH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Bean"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played next to a Leafy Plant</b>: Conjure a Leafy card.",
+    "flavour": "\"Everyone's magic in their own special way. Everyone except me.\""
+  },
+  {
+    "name": "The Podfather",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/The_PodfatherH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When you play another Pea, that Pea gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "\"It ain't easy keeping the peas in this family.\""
+  },
+  {
+    "name": "Plant Food",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4c/Plant_FoodH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +1{{Strength}}/+1{{Heart}} then does a Bonus Attack.",
+    "flavour": "The most important meal of the day."
+  },
+  {
+    "name": "Re-Peat Moss",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cb/Re-Peat_MossH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Moss"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 3,
+    "abilities": "When you play a Trick, this does a Bonus Attack.",
+    "flavour": "\"To do what I do... it's TRICKY. I'll leave it at that.\""
+  },
+  {
+    "name": "Whipvine",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/26/WhipvineH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>When played:</b> Move a Zombie.",
+    "flavour": "\"Get along, little Zombie.\""
+  },
+  {
+    "name": "Super-Phat Beets",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7a/Super-Phat_BeetsH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 6,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} for each other Plant and Zombie.",
+    "flavour": "When he drops the beet, everyone feels it. Especially the Zombies."
+  },
+  {
+    "name": "Banana Peel",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/da/Banana_PeelH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Zombie.\n<b>Conjure</b> a Banana.",
+    "flavour": "A slapstick comedy staple that, somehow, the Zombies never see coming."
+  },
+  {
+    "name": "Cosmic Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/14/Cosmic_PeaH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 1,
+    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a Pea, and it gets {{DoubleStrikeAlt}}<b>Double Strike</b>.",
+    "flavour": "\"The cosmos is so big and a pea is so small. The juxtaposition just really makes me think, you know?\""
+  },
+  {
+    "name": "Bamboozle",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9f/BamboozleH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Root"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 6,
+    "abilities": "<b>Plant Evolution</b>: Draw two cards.",
+    "flavour": "Only among the hyper-evolved Plants of Hollow Earth can you be outwitted by a tree."
+  },
+  {
+    "name": "Pea Patch",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/Pea_PatchH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Fusion:</b> A Plant played on this gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Don't let the Dog Walker anywhere near it."
+  },
+  {
+    "name": "Party Thyme",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/96/Party_ThymeH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When a Plant does a Bonus Attack, draw a card.",
+    "flavour": "A real extrovert, this one."
+  },
+  {
+    "name": "Black-Eyed Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Black-Eyed_PeaH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 3,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Zombie Trick is played.",
+    "flavour": "\"You shoulda seen the other guy!\""
+  },
+  {
+    "name": "Potted Powerhouse",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/04/Potted_PowerhouseH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>While in your hand:</b> This gets +1{{Strength}}/+1{{Heart}} when a Plant gains Strength or Health.",
+    "flavour": "She loves living out of a pot. It's not for every Plant. But to her, it's home."
+  },
+  {
+    "name": "Espresso Fiesta",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d3/Espresso_FiestaH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 8,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant does three Bonus Attacks.",
+    "flavour": "Don't consume after 5 p.m. You'll be up all night."
+  },
+  {
+    "name": "Moonbean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a5/MoonbeanH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 5,
+    "abilities": "When this does damage, shuffle two Magic Beanstalks into your deck.",
+    "flavour": "She and Sunflower are besties. It's just too bad their schedules make it hard for them to get together."
+  },
+  {
+    "name": "The Red Plant-It",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/The_Red_Plant-ItH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Environment",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants here get +5{{Strength}}/+5{{Heart}}.",
+    "flavour": "It may seem an inhospitable place for Plants, but with a little TLC and some patience, it'll grow more than just potatoes. Much more."
+  },
+  {
+    "name": "Pod Fighter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/91/Pod_FighterH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "This does a Bonus Attack when you play a Plant here or next door.",
+    "flavour": "They're just trying to create peas in our time."
+  },
+  {
+    "name": "Split Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a2/Split_PeaH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 4,
+    "health": 1,
+    "abilities": "<b>Before combat here:</b> This does 1 damage to the Plant Hero.",
+    "flavour": "\"All I wanted in life was to get ahead. But it kinda grew on me. How to face the future? I'm of two minds.\""
+  },
+  {
+    "name": "Grape Power",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Grape_PowerH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Double a Plant's {{Strength}}.\nGain a Grape Responsibility.",
+    "flavour": "A dinosaur's favorite primordial snack."
+  },
+  {
+    "name": "Savage Spinach",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a5/Savage_SpinachH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 6,
+    "abilities": "<b>Leafy Evolution</b>: All Plants in all lanes and your hand get +2{{Strength}}.",
+    "flavour": "Neptuna planned her Triassic Invasion perfectly. But like so many conquerors before her, she underestimated the Spinach."
+  },
+  {
+    "name": "Doubled Mint",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/38/Doubled_MintH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 2,
+    "abilities": "<b>Start of Turn:</b> Double this Plant's Strength and Health.",
+    "flavour": "He'll grow on you. Just give him time."
+  },
+  {
+    "name": "Muscle Sprout",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Muscle_SproutH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Plant.",
+    "flavour": "\"Can you spot me, bro?\""
+  },
+  {
+    "name": "Bananasaurus Rex",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9e/Bananasaurus_RexH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Banana",
+      "Animal"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "She's a banana first and a dinosaur second. But it's a close second."
+  },
+  {
+    "name": "Captain Cucumber",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a3/Captain_CucumberH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 4,
+    "abilities": "Cards you <b>Conjure</b> cost 1{{Sun}} less.\nWhen this does damage, <b>Conjure</b> a Legendary card.",
+    "flavour": "He's steered his crew through many a pickle."
+  },
+  {
+    "name": "Onion Rings",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cb/Onion_RingsH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played:</b> Each Plant in your hand becomes 4{{Strength}}/4{{Heart}}.",
+    "flavour": "So powerful it makes you cry."
+  },
+  {
+    "name": "Gatling Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Gatling_PeaH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 4,
+    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>Pea Evolution</b>: This does a Bonus Attack.",
+    "flavour": "There is no problem that cannot be solved by more peas."
+  },
+  {
+    "name": "Apotatosaurus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5c/ApotatosaurusH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Animal"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 5,
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a Root.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Some potatoes are sweet. Others are dinosaurs."
+  },
+  {
+    "name": "Clique Peas",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Clique_PeasH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Pea"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played:</b> Shuffle two Clique Peas into your deck. For the rest of the game, all Clique Peas get +1{{Strength}}/+1{{Heart}} and cost +1{{Sun}}.",
+    "flavour": "On Wednesdays we wear sunglasses."
+  },
+  {
+    "name": "Lily of the Valley",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d7/Lily_of_the_ValleyH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 2,
+    "abilities": "When you play another Plant on the Heights, that Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "She's always trying to elevate her friends. She's good like that."
+  },
+  {
+    "name": "Banana Split",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Banana_SplitH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When destroyed:</b> Make two Half-Bananas next door.",
+    "flavour": "\"I don't want to brag, but hanging out in a tub full of ice-cream all day ... not a bad gig if you can get it.\""
+  },
+  {
+    "name": "Plucky Clover",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/75/Plucky_CloverH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Mega-Grow",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 5,
+    "strength": 1,
+    "health": 5,
+    "abilities": "<b>When played: Conjure</b> an Event card. Plucky Clover gets +{{Strength}} equal to that card's cost.",
+    "flavour": "She's a giver, no doubt. But she feels like she gets a lot out of it too."
+  },
+  {
+    "name": "Embiggen",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/14/EmbiggenH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "flavour": "Livin' large, oh yeah."
+  },
+  {
+    "name": "Holo-Flora",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/98/Holo-FloraH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Draw two cards.",
+    "flavour": "You got Plants!"
+  },
+  {
+    "name": "Time to Shine",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c8/Time_to_ShineH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Mega-Grow",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant does a Bonus Attack.",
+    "flavour": "Makes you feel all warm, glowy, and like kickin' Zombie butt."
+  },
+  {
+    "name": "Snowdrop",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/82/SnowdropH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 2,
+    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Zombie is frozen.",
+    "flavour": "Zombies are always looking at her with a frozen expression."
+  },
+  {
+    "name": "Weenie Beanie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Weenie_BeanieH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "Prefers to be called \"Vertically Challenged Beanie.\""
+  },
+  {
+    "name": "Snow Pea",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/Snow_PeaH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When this hurts a Zombie, {{Frozen}}<b>Freeze</b> that Zombie.",
+    "flavour": "Learned everything he knows during the Great Freeze Tag Wars of '08."
+  },
+  {
+    "name": "Cattail",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9e/CattailH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Animal"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>",
+    "flavour": "\"My secret weapon? It's my cute little hat!\""
+  },
+  {
+    "name": "Smoosh-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Smoosh-ShroomH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 4,
+    "abilities": "",
+    "flavour": "\"If I had a hammer... Wait a sec... I AM a hammer!\""
+  },
+  {
+    "name": "Threepeater",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/13/ThreepeaterH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 5,
+    "strength": 1,
+    "health": 5,
+    "abilities": "Attacks here and next door.",
+    "flavour": "\"My favorite number is 5.\""
+  },
+  {
+    "name": "Iceberg Lettuce",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/39/Iceberg_LettuceH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "{{Frozen}}<b>Freeze</b> a Zombie.",
+    "flavour": "\"FREEZE! Ha, just kidding. Little Iceberg humor there.\""
+  },
+  {
+    "name": "Shellery",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/ShelleryH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>",
+    "flavour": "Ordinance is most effective with peanut butter and raisins."
+  },
+  {
+    "name": "Rescue Radish",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9a/Rescue_RadishH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>When played:</b> <b>Bounce</b> another Plant.",
+    "flavour": "He puts the rad in radish"
+  },
+  {
+    "name": "Spring Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bc/Spring_BeanH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a Zombie.",
+    "flavour": "His favorite season is Fall."
+  },
+  {
+    "name": "Vanilla",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fd/VanillaH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "",
+    "flavour": "\"I'm sorry, it's just... I have nothing interesting to say.\""
+  },
+  {
+    "name": "Carrotillery",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/94/CarrotilleryH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 4,
+    "strength": 5,
+    "health": 2,
+    "abilities": "<b>Team-Up </b>",
+    "flavour": "His artillery is a rich source of vitamin A and beta-carotene - a fact the Zombies do not seem to appreciate."
+  },
+  {
+    "name": "Mars Flytrap",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Mars_FlytrapH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flytrap"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When this hurts the Zombie Hero, steal a section from their Super-Block Meter.",
+    "flavour": "He loves Venus Flytrap, but sometimes they see things SO differently!"
+  },
+  {
+    "name": "Planet of the Grapes",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/Planet_of_The_GrapesH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Environment",
+    "tribes": [
+      "Berry"
+    ],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "When a Plant here hurts the Zombie Hero, draw a card.",
+    "flavour": "How this planet came to be? It's another of life's grape mysteries."
+  },
+  {
+    "name": "Leaf Blower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Leaf_BlowerH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Amphibious</b>\n<b>When played in an Environment: Bounce</b> a Zombie.",
+    "flavour": "\"You wanna keep your lawn tidy? Tired of lookin' at those unsightly Zombies? Then I'M your guy.\""
+  },
+  {
+    "name": "Grave Mistake",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Grave_MistakeH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a Gravestone.\nDraw a card.",
+    "flavour": "Warning: Don't flick gravestones in real life."
+  },
+  {
+    "name": "Pear Pal",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5a/Pear_PalH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>",
+    "flavour": "Has codependency issues, but he's working on it."
+  },
+  {
+    "name": "Primal Peashooter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/07/Primal_PeashooterH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Pea"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When this hurts a Zombie, <b>Bounce</b> that Zombie.",
+    "flavour": "Found in groups of 3, 5, 7, 11, and 31."
+  },
+  {
+    "name": "Admiral Navy Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1d/Admiral_Navy_BeanH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play another Bean, do 2 damage to the Zombie Hero.",
+    "flavour": "\"Heavy is the weight of my command. And my cap. Heavy is the cap.\""
+  },
+  {
+    "name": "Lightning Reed",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Lightning_ReedH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>Splash Damage 1</b>",
+    "flavour": "\"I do it for the shock value.\""
+  },
+  {
+    "name": "Chilly Pepper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/69/Chilly_PepperH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played:</b> {{Frozen}}<b>Freeze</b> a Zombie.",
+    "flavour": "\"It's not easy being both hot *and* cold. A comfortable lukewarm might be nice for a change.\""
+  },
+  {
+    "name": "Navy Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/96/Navy_BeanH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\n<b>When played:</b> All <b>Amphibious</b> Plants get +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "Was *this* close to becoming an Army Bean."
+  },
+  {
+    "name": "Jumping Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6c/Jumping_BeanH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played:</b> <b>Bounce</b> a Zombie.",
+    "flavour": "\"I'm more than just a jumper... I can also leap and vault!"
+  },
+  {
+    "name": "Cosmic Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/01/Cosmic_BeanH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 2,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> <b>Conjure</b> a Bean, and it gets <b>Team-Up</b>.",
+    "flavour": "It IS a magical fruit!"
+  },
+  {
+    "name": "Melon-Pult",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Melon-PultH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Splash Damage 3</b>",
+    "flavour": "People who live in grass houses shouldn't throw stones. But melons, sure, why not?"
+  },
+  {
+    "name": "Tricorn",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f9/TricornH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 6,
+    "strength": 2,
+    "health": 6,
+    "abilities": "Attacks here and next door.\n<b>Plant Evolution</b>: This gets +2{{Strength}}.",
+    "flavour": "\"Labor to keep alive in your breast that little spark of celestial fire called conscience.\" -Gourd Squashington"
+  },
+  {
+    "name": "Lily Pad",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1e/Lily_PadH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Plant played on this gets <b>Amphibious</b>. <b>Conjure</b> a Leafy card.",
+    "flavour": "When Neptuna's Triassic Invasion flooded Hollow Earth with vast new oceans, Plants quickly evolved to survive."
+  },
+  {
+    "name": "Sow Magic Beans",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/36/Sow_Magic_BeansH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "Shuffle four Magic Beanstalks into your deck.",
+    "flavour": "Totally worth the cow."
+  },
+  {
+    "name": "Bean Counter",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Bean_CounterH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Bean.\n<b>When played:</b> Gain two Weenie Beanies.",
+    "flavour": "\"Every bean is accounted for. I assure you, they all add up.\""
+  },
+  {
+    "name": "Snapdragon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/SnapdragonH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Dragon",
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>Splash Damage 3</b>",
+    "flavour": "\"I'm a dragon; I'm a Plant... I'm a mystery!\""
+  },
+  {
+    "name": "Winter Squash",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c9/Winter_SquashH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 6,
+    "abilities": "When a Zombie or Gravestone becomes frozen, destroy it.",
+    "flavour": "\"My complexion is more of a summer.\""
+  },
+  {
+    "name": "Laser Cattail",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Laser_CattailH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Animal"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a Plant here.",
+    "flavour": "He's really good at entertaining himself."
+  },
+  {
+    "name": "Cool Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Cool_BeanH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "<b>When played:</b> {{Frozen}}<b>Freeze</b> all Gravestones.",
+    "flavour": "\"Chance of meeting Gravestones? Never tell me the odds!\""
+  },
+  {
+    "name": "Bog of Enlightenment",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/35/Bog_of_EnlightenmentH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Amphibious</b> Plants here get +2{{Strength}}. Non-<b>Amphibious</b> Zombies here get -2{{Strength}}.",
+    "flavour": "Good for Plants, it is. Good for Zombies, it is not!"
+  },
+  {
+    "name": "Jelly Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/17/Jelly_BeanH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 3,
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when anything is bounced.\n<b>Bean Evolution</b>: <b>Bounce</b> a Zombie.",
+    "flavour": "\"It's not how hard the Zombies knock you down. It's how hard you bounce back.\""
+  },
+  {
+    "name": "Rotobaga",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7f/RotobagaH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Root"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\nThis attacks both lanes next door instead of this lane.",
+    "flavour": "Without flying roots, how would we get Sky-Trees??"
+  },
+  {
+    "name": "Shrinking Violet",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6c/Shrinking_VioletH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie and Zombies next door get -2{{Strength}}. Then destroy any of those Zombies that have 0{{Strength}}.",
+    "flavour": "Is she cute or terrifying? Yes."
+  },
+  {
+    "name": "Brainana",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/BrainanaH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Banana"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 3,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> The Zombie Hero loses their Brains.",
+    "flavour": "<p>In this case, \"brain drain\" is a good thing.\n</p>"
+  },
+  {
+    "name": "Winter Melon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3a/Winter_MelonH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 5,
+    "abilities": "<b>Splash Damage 4</b>\nWhen this hurts a Zombie, {{Frozen}}<b>Freeze</b> that Zombie.",
+    "flavour": "Perfect for your winter picnics."
+  },
+  {
+    "name": "The Great Zucchini",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/The_Great_ZucchiniH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 9,
+    "strength": 7,
+    "health": 7,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Transform all Zombies into 1{{Strength}}/1{{Heart}} Zombies with no abilities",
+    "flavour": "\"Presto change-o! Now you see a powerful Zombie. Now you don't!\""
+  },
+  {
+    "name": "Shooting Starfruit",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/Shooting_StarfruitH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 5,
+    "strength": 2,
+    "health": 2,
+    "abilities": "This attacks in all five lanes.",
+    "flavour": "When you see a Shooting Starfruit, make a wish, any wish! Any wish that involves takin' down Zombies, that is."
+  },
+  {
+    "name": "Dark Matter Dragonfruit",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/eb/Dark_Matter_DragonfruitH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Dragon",
+      "Fruit"
+    ],
+    "cost": 8,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>Amphibious</b>\n<b>Splash Damage 6</b>\nZombie Tricks cost 6{{Brain}} more.",
+    "flavour": "Their ancestors were hunted to the depths of space. Now their descendants are back for cold, fruity vengeance."
+  },
+  {
+    "name": "Lima-Pleurodon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/Lima-PleurodonH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean",
+      "Animal"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: Shuffle a Magic Beanstalk into your deck.",
+    "flavour": "Sometimes one Plant provides both the Army and the Navy."
+  },
+  {
+    "name": "Bird of Paradise",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b7/Bird_of_ParadiseH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Animal"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 5,
+    "abilities": "<b>Amphibious</b>\n<b>Start of turn:</b> Conjure a Superpower.",
+    "flavour": "Her beautiful melodies are echoed by the roars of dinosaurs."
+  },
+  {
+    "name": "Spyris",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/SpyrisH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Root"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\nYou can tap Gravestones to see which Zombies are hiding in them.",
+    "flavour": "You can't hide anything from her. Don't even try. She'll get inside your HEAD."
+  },
+  {
+    "name": "Go-Nuts",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/64/Go-NutsH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>Team-Up</b>\nWhen you play a <b>Team-Up </b> Plant, all <b>Team-Up</b> Plants get +1{{Strength}}.",
+    "flavour": "\"GROW-Nuts! THROW-Nuts! When we get big we GO-Nuts! Goooooooo PLANTS!\""
+  },
+  {
+    "name": "Mayflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/MayflowerH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "<b>Amphibious</b>\nWhen this hurts the Zombie Hero, <b>Conjure</b> a Corn, Squash, or Bean.",
+    "flavour": "Do April showers bring Mayflowers? My goodness, isn't that a personal question!"
+  },
+  {
+    "name": "Sportacus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/SportacusH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom",
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 3,
+    "health": 3,
+    "abilities": "When a Zombie Trick is played, do 2 damage to the Zombie Hero.",
+    "flavour": "\"I am Sportacus!\""
+  },
+  {
+    "name": "Snake Grass",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e0/Snake_GrassH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Animal"
+    ],
+    "cost": 4,
+    "strength": 4,
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\n<b>Start of Turn:</b> Make another Snake Grass in the lane to the right.",
+    "flavour": "\"Snakes. Why'd it have to be snakes?\""
+  },
+  {
+    "name": "Witch Hazel",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/Witch_HazelH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>End of Turn</b>: Destroy a random Zombie and make a Puff-Shroom there.",
+    "flavour": "Zombies are always trying to build a bridge out of her."
+  },
+  {
+    "name": "Jolly Holly",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7c/Jolly_HollyH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Berry"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> {{Frozen}}<b>Freeze</b> Zombies next door.",
+    "flavour": "No exaggeration, she is ALWAYS in a great mood. Even when fighting Zombies. \"What's not to love about saving the world?\" she says."
+  },
+  {
+    "name": "Sap-Fling",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c9/Sap-FlingH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Pinecone",
+      "Tree"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 3,
+    "abilities": "<b>When played:</b> Make a Sappy Place Environment.",
+    "flavour": "He dates a lot of different branches, but nothing ever sticks."
+  },
+  {
+    "name": "Magic Beanstalk",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6d/Magic_BeanstalkH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 1,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played:</b> Draw a card.",
+    "flavour": "Giant not included."
+  },
+  {
+    "name": "Sappy Place",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/13/Sappy_PlaceH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "Smarty",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Zombies here get -3{{Strength}}",
+    "flavour": "Zombies just hate a sappy ending."
+  },
+  {
+    "name": "Big Chill",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a9/Big_ChillH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "{{Frozen}}<b>Freeze</b> a Zombie.\nDraw a card.",
+    "flavour": "Discerning Plants agree: Zombies are best served on ice."
+  },
+  {
+    "name": "Transmogrify",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/TransmogrifyH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Transform a Zombie into a random Zombie that costs 1{{Brain}}.",
+    "flavour": "It's a life-changing experience. Actually, it's an everything-changing experience."
+  },
+  {
+    "name": "Whirlwind",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/WhirlwindH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Bounce</b> a random Zombie.",
+    "flavour": "There's no place like home. There's no place like home."
+  },
+  {
+    "name": "Lieutenant Carrotron",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1e/Lieutenant_CarrotronH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Plant",
+    "tribes": [
+      "Root",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a Root.",
+    "flavour": "Beta-Carrotina knows she can always count on him to get to the root of the problem."
+  },
+  {
+    "name": "Lightspeed Seed",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/Lightspeed_SeedH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Smarty",
+    "type": "Trick",
+    "tribes": [
+      "Seed",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> two Tricks.",
+    "flavour": "Make the jump to light seed."
+  },
+  {
+    "name": "Bellflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/61/BellflowerH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "",
+    "flavour": "She wants to be friends with Snowdrop soooo badly, but she feels like she's always getting the cold shoulder."
+  },
+  {
+    "name": "Sunflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/28/SunflowerH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn.",
+    "flavour": "\"Not to brag, but I'm pretty much your basic franchise-founding superstar.\""
+  },
+  {
+    "name": "Mixed Nuts",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Mixed_NutsH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Nut"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> This gets +2{{Strength}}/+2{{Heart}} if there's a Plant with <b>Team-Up</b> here.",
+    "flavour": "They work hard but they also like to party. That's them in a nutshell."
+  },
+  {
+    "name": "Squash",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/SquashH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 5,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie.",
+    "flavour": "Has a bad case of Resting Squash Face."
+  },
+  {
+    "name": "Smashing Pumpkin",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/Smashing_PumpkinH.png",
+    "set": "basic",
+    "rarity": "common",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 5,
+    "abilities": "",
+    "flavour": "Sure, he and Squash are pals. But there's always an undercurrent of competition between them."
+  },
+  {
+    "name": "Morning Glory",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Morning_GloryH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} if you made at least 6{{Sun}} this turn.",
+    "flavour": "Just don't talk to her before she's had her Coffee Bean."
+  },
+  {
+    "name": "Fume-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/70/Fume-ShroomH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
+    "flavour": "\"I'm like the wind. Near a hog farm.\""
+  },
+  {
+    "name": "Pepper M.D.",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Pepper_M.D.H.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 2,
+    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Plant or your Hero is healed.",
+    "flavour": "\"A toast to your health... and mine!\""
+  },
+  {
+    "name": "Water Balloons",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Water_BalloonsH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 2,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets -1{{Strength}}/-1{{Heart}}. If you made at least 6{{Sun}} this turn, it gets -2{{Strength}}/-2{{Heart}} instead.",
+    "flavour": "You're gonna need a towel for this one."
+  },
+  {
+    "name": "Venus Flytrap",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/74/Venus_FlytrapH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flytrap"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When this does damage, heal your Hero for that much.",
+    "flavour": "\"Mom always said, 'If you leave your trap open like that, you'll catch Zombies.' So I did.\""
+  },
+  {
+    "name": "Bloomerang",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/BloomerangH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 3,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
+    "flavour": "\"Magnets? Gravity? Crikey, I don't have a clue why they come back.\""
+  },
+  {
+    "name": "Metal Petal Sunflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Metal_Petal_SunflowerH.png",
+    "set": "premium",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "<b>Start of Turn:</b> You gain +1{{Sun}} this turn.",
+    "flavour": "\"Time to put the metal to the petal, baby!\""
+  },
+  {
+    "name": "Cosmoss",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9f/CosmossH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Moss"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 2,
+    "abilities": "When an Environment is played, this gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "He's Peel deGrass Lichen's biggest fan."
+  },
+  {
+    "name": "Apple-Saucer",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c5/Apple-SaucerH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 2,
+    "strength": 3,
+    "health": 2,
+    "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, this gets {{Strikethrough}}<b>Strikethrough</b>.",
+    "flavour": "Watchful Quasar Wizards sometimes spot an Unidentified Fruiting Object."
+  },
+  {
+    "name": "Venus Flytraplanet",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/db/Venus_FlytraplanetH.png",
+    "set": "galactic",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Environment",
+    "tribes": [
+      "Flytrap"
+    ],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "When a Plant here does damage and survives, heal your Hero for that much.",
+    "flavour": "Not far from Mars Flytraplanet."
+  },
+  {
+    "name": "Kernel-Pult",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Kernel-PultH.png",
+    "set": "colossal",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Corn"
+    ],
+    "cost": 1,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When played on Heights</b>: A Zombie gets -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "Insert corny joke here."
+  },
+  {
+    "name": "Lil' Buddy",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/47/Lil%27_BuddyH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Seed"
+    ],
+    "cost": 0,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> Heal your Hero for 2.",
+    "flavour": "Wait, you want me to go in *front*?!?"
+  },
+  {
+    "name": "Sunnier-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Sunnier-ShroomH.png",
+    "set": "triassic",
+    "rarity": "uncommon",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 3,
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn: </b>You get +2{{Sun}} this turn.",
+    "flavour": "Compared to his little brother, he's the one with the sunnier disposition."
+  },
+  {
+    "name": "Sage Sage",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e2/Sage_SageH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, draw a card.",
+    "flavour": "Got his start writing messages for fortune cookies."
+  },
+  {
+    "name": "Magnifying Grass",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3a/Magnifying_GrassH-0.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Leafy"
+    ],
+    "cost": 3,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>When played:</b> This gets +1{{Strength}} for each Sun you made this turn.",
+    "flavour": "Zombies may appear closer than they are."
+  },
+  {
+    "name": "Whack-a-Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/Whack-a-ZombieH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie with 3{{Strength}} or less.",
+    "flavour": "It's hammer time. #hadtobesaid"
+  },
+  {
+    "name": "Lawnmower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/LawnmowerH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie on the Ground.",
+    "flavour": "The thing of Zombie nightmares."
+  },
+  {
+    "name": "Power Flower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7d/Power_FlowerH.png",
+    "set": "premium",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 5,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Start of Turn:</b> Heal your Hero for 1 for each Flower.",
+    "flavour": "Dropped out of Kale University to practice natural medicine."
+  },
+  {
+    "name": "Cosmic Flower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/Cosmic_FlowerH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 1,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a Flower, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
+    "flavour": "She enjoys the simple things in life - hanging out with friends, fighting Zombies, and basking in cosmic rays."
+  },
+  {
+    "name": "Heartichoke",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/HeartichokeH.png",
+    "set": "galactic",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Leafy",
+      "Flower"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 4,
+    "abilities": "When a Plant or your Hero is healed, do that much damage to the Zombie Hero.",
+    "flavour": "She's a sweetheart, she really is. But fighting Zombies...it's made her hard."
+  },
+  {
+    "name": "Elderberry",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/ElderberryH.png",
+    "set": "colossal",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Berry"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 4,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Plant Evolution</b>: This gets +3{{Strength}}.",
+    "flavour": "He makes yelling \"Get off my lawn\" into an art form."
+  },
+  {
+    "name": "Eyespore",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cd/EyesporeH.png",
+    "set": "triassic",
+    "rarity": "rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Moss"
+    ],
+    "cost": 2,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Fusion:</b> Destroy a Zombie here.",
+    "flavour": "Really good at staring contests."
+  },
+  {
+    "name": "Twin Sunflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/Twin_SunflowerH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 2,
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +2{{Sun}} this turn.",
+    "flavour": "\"We're actually only fraternal twins.\""
+  },
+  {
+    "name": "2nd-Best Taco of All Time",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c7/2nd-Best_Taco_of_All_TimeH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "Heal 4.\nDraw a card.",
+    "flavour": "Significantly better than the 3rd-Best Taco of All Time."
+  },
+  {
+    "name": "Chomper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/ChomperH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flytrap"
+    ],
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When played:</b> Destroy a Zombie here with 3{{Strength}} or less.",
+    "flavour": "\"A free buffet? How kind! Don't mind if I do!\""
+  },
+  {
+    "name": "Laser Bean",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8a/Laser_BeanH.png",
+    "set": "premium",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Bean"
+    ],
+    "cost": 6,
+    "strength": 5,
+    "health": 7,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
+    "flavour": "\"Physics, baby! I'm emittin' all KINDS of coherent radiation!\""
+  },
+  {
+    "name": "Solar Winds",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/Solar_WindsH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Environment",
+    "tribes": [],
+    "cost": 3,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>End of Turn:</b> If there are no Zombies here, make a Sunflower here.",
+    "flavour": "There's something in the wind. Sunflower seeds, in fact."
+  },
+  {
+    "name": "Wing-Nut",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/27/Wing-NutH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Pea",
+      "Nut"
+    ],
+    "cost": 4,
+    "strength": 3,
+    "health": 7,
+    "abilities": "Zombies can't do Bonus Attacks.",
+    "flavour": "Firmly believes that Elvis is alive, Zombies never walked on the Moon, and that Dr. Zomboss is secretly studying aliens at Area 22. Crazy!"
+  },
+  {
+    "name": "Tactical Cuke",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Tactical_CukeH.png",
+    "set": "galactic",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 6,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy all Plants and Zombies on the Ground.",
+    "flavour": "<p>He comes from a long line of very precise cucumbers.\n</p>"
+  },
+  {
+    "name": "Primal Sunflower",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3e/Primal_SunflowerH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 1,
+    "strength": 2,
+    "health": 1,
+    "abilities": "<b>Start of turn:</b> You get +1{{Sun}}.",
+    "flavour": "Sunflowers are notorious pacifists. But isolated in the center of Hollow Earth, they evolved a new savagery. Sunny, adorable savagery."
+  },
+  {
+    "name": "Sunflower Seed",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Sunflower_SeedH.png",
+    "set": "colossal",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower",
+      "Seed"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 2,
+    "abilities": "<b>When destroyed</b>: Make a Sunflower here.",
+    "flavour": "From every night's end comes the beginning of a new Sunflower's dawn."
+  },
+  {
+    "name": "Sun Strike",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d0/Sun_StrikeH.png",
+    "set": "triassic",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [],
+    "cost": 4,
+    "strength": null,
+    "health": null,
+    "abilities": "All Plants get {{Strikethrough}}<b>Strikethrough</b> this turn. <b>Conjure</b> a Trick.",
+    "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
+  },
+  {
+    "name": "Briar Rose",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Briar_RoseH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flower"
+    ],
+    "cost": 5,
+    "strength": 3,
+    "health": 4,
+    "abilities": "When a Zombie hurts a Flower, destroy that Zombie.",
+    "flavour": "\"You mess with the rose, you get the thorns!\""
+  },
+  {
+    "name": "Three-Headed Chomper",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1e/Three-Headed_ChomperH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Flytrap"
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>End of Turn:</b> Destroy all Zombies here and next door.",
+    "flavour": "\"You know the old saying, 'Three heads are better than one'? Totally true.\""
+  },
+  {
+    "name": "Cornucopia",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/CornucopiaH.png",
+    "set": "premium",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Corn"
+    ],
+    "cost": 10,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>When played:</b> Make a random Plant in each other lane.",
+    "flavour": "Thanksgiving came early this year."
+  },
+  {
+    "name": "Astrocado",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/AstrocadoH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 5,
+    "strength": 5,
+    "health": 3,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When destroyed:</b> Gain an Astrocado Pit.",
+    "flavour": "\"Holy guacamole!\""
+  },
+  {
+    "name": "Astro Vera",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2d/Astro_VeraH.png",
+    "set": "galactic",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Cactus"
+    ],
+    "cost": 8,
+    "strength": 5,
+    "health": 5,
+    "abilities": "<b>When played:</b> Increase your Hero's maximum {{Heart}} by 10. Heal your Hero for 10.",
+    "flavour": "Your Hero will feel out of this world. And so will your skin."
+  },
+  {
+    "name": "Cob Cannon",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Cob_CannonH.png",
+    "set": "colossal",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Corn"
+    ],
+    "cost": 6,
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>When played</b>: Zombies here and next door get -1{{Strength}}/-1{{Heart}}.\n<b>Team-Up Evolution</b>: Destroy a Zombie.",
+    "flavour": "He focuses his fearsome firepower with a single, ringing credo: \"<i>One Team. One Dream.</i>\""
+  },
+  {
+    "name": "Aloesaurus",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/26/AloesaurusH.png",
+    "set": "triassic",
+    "rarity": "legendary",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Cactus",
+      "Animal"
+    ],
+    "cost": 5,
+    "strength": 4,
+    "health": 7,
+    "abilities": "<b>Dino-Roar:</b> Heal all Plants and the Plant Hero for 1.",
+    "flavour": "A roaring force of life. A crushing force of destruction."
+  },
+  {
+    "name": "Haunted Pumpking",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Haunted_PumpkingH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 1,
+    "strength": 4,
+    "health": 2,
+    "abilities": "<b>When played</b>: The Zombie player <b>Conjures</b> a Monster.",
+    "flavour": "For generations, the Pumpkings have kept their realms safe from a terrible curse. Tonight, they finally face their greatest fear."
+  },
+  {
+    "name": "Sun-Shroom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/Sun-ShroomH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom"
+    ],
+    "cost": 2,
+    "strength": 0,
+    "health": 2,
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn and this transforms into a Sunnier-Shroom.",
+    "flavour": "\"Fun in the Sun? That's for other Plants. I just make the stuff. I don't actually like it.\""
+  },
+  {
+    "name": "Jack O' Lantern",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Jack_O%27_LanternH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Squash"
+    ],
+    "cost": 3,
+    "strength": 2,
+    "health": 3,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\nThis gets +1{{Strength}} when it hurts the Zombie Hero.",
+    "flavour": "\"I just love to get Zombies all fired up. If you catch my drift.\""
+  },
+  {
+    "name": "Ketchup Mechanic",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/14/Ketchup_MechanicH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 3,
+    "strength": 1,
+    "health": 1,
+    "abilities": "<b>When played</b>: For each Zombie, this gets +1{{Strength}}/+1{{Heart}} and Heal the Plant Hero for 1.",
+    "flavour": "Catchup mechanics help you get back in a game when you're behind. Ketchup Mechanics fix your fruit."
+  },
+  {
+    "name": "Toadstool",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/ToadstoolH.png",
+    "set": "event",
+    "rarity": "event",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Mushroom",
+      "Animal"
+    ],
+    "cost": 6,
+    "strength": 4,
+    "health": 4,
+    "abilities": "<b>When played:</b> Destroy a Zombie here with 4{{Strength}} or less.\n<b>Start of Turn:</b> You get +1{{Sun}} this turn.",
+    "flavour": "Toadstool can't stand being idle. When there's work to be done, she's always the first to hop to it."
+  },
+  {
+    "name": "Astrocado Pit",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Astrocado_PitH.png",
+    "set": "token",
+    "rarity": "token",
+    "class": "Solar",
+    "type": "Plant",
+    "tribes": [
+      "Fruit"
+    ],
+    "cost": 1,
+    "strength": 0,
+    "health": 1,
+    "abilities": "<b>Start of turn:</b> This transforms into an Astrocado.",
+    "flavour": "Getting defeated is the pits."
+  },
+  {
+    "name": "Geyser",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/GeyserH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Heal your Hero and all Plants for 4.",
+    "flavour": "H2Oh no you didn't!"
+  },
+  {
+    "name": "Scorched Earth",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/56/Scorched_EarthH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "All Zombies on the Ground get -1{{Strength}}/-1{{Heart}}.",
+    "flavour": "Unfortunately the Zombies were all out of SPF 9000."
+  },
+  {
+    "name": "Weed Whack",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1a/Weed_WhackH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Solar",
+    "type": "Trick",
+    "tribes": [
+      "Root",
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Zombie gets -2{{Strength}}/-2{{Heart}}.",
+    "flavour": "Good for weeding out Zombies."
+  },
+  {
+    "name": "Flick-a-Zombie",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/70/Flick-a-ZombieH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 1 damage.",
+    "flavour": "Bad Zombie! BAD Zombie!"
+  },
+  {
+    "name": "Inspire",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/74/InspireH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +1{{Strength}}/+1{{Heart}}.",
+    "flavour": "One small step for Plants. One giant leap for Plant-kind!"
+  },
+  {
+    "name": "Rejuvenate",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/39/RejuvenateH.png",
+    "set": "superpower",
+    "rarity": "super-rare",
+    "class": "Removed",
+    "type": "Trick",
+    "tribes": [
+      "Superpower"
+    ],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Heal 2.",
+    "flavour": "Like a salve for a Plant's soul."
+  }
+]
