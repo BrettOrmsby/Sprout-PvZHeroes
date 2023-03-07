@@ -7,58 +7,6 @@ export default {
 <template>
   <footer class="footer">
     <span>{{ cardsInDeck.length }}/40</span>
-    <span class="type-container">
-      <span class="image-text" v-tooltip.top="'Fighters'">
-        {{ fighter
-        }}<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-        </svg>
-      </span>
-      <span class="image-text" v-tooltip.top="'Tricks'">
-        {{ trick
-        }}<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <circle cx="12" cy="12" r="10"></circle>
-        </svg>
-      </span>
-      <span class="image-text" v-tooltip.top="'Environments'">
-        {{ environment
-        }}<svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path
-            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-          ></path>
-        </svg>
-      </span>
-    </span>
     <span>
       <Badge :value="basics + 'C'" class="common" v-tooltip.top="'Commons'" />
       <Badge
@@ -87,7 +35,7 @@ export default {
         v-tooltip.top="'Events'"
       />
     </span>
-    <span class="image-text">
+    <span class="image-text" v-tooltip.left="'Deck Cost'">
       {{ sparks }}<img src="/images/assets/spark.png" />
     </span>
   </footer>
@@ -112,21 +60,14 @@ const cardsInDeck = computed(() => {
   return deckCards;
 });
 
-const countInDeck = (
-  key: keyof Card,
-  value: number | string | null | string[] | number[]
-) => {
+const countInDeck = (key: keyof Card, value: number | string | null) => {
   const number = cardsInDeck.value.reduce((prev, curr) => {
-    if (
-      (Array.isArray(value) && value.includes(curr[key] as never)) ||
-      curr[key] === value
-    ) {
+    if (curr[key] === value) {
       return 1 + prev;
     } else {
       return prev;
     }
   }, 0);
-  console.log(number);
   return number;
 };
 
@@ -136,10 +77,6 @@ const rares = computed(() => countInDeck("rarity", "rare"));
 const superRares = computed(() => countInDeck("rarity", "super-rare"));
 const legendarys = computed(() => countInDeck("rarity", "legendary"));
 const events = computed(() => countInDeck("rarity", "event"));
-
-const fighter = computed(() => countInDeck("type", ["Plant", "Zombie"]));
-const trick = computed(() => countInDeck("type", "Trick"));
-const environment = computed(() => countInDeck("type", "Environment"));
 
 const sparks = computed(() => {
   return (
@@ -161,12 +98,9 @@ const sparks = computed(() => {
   position: sticky;
   bottom: 0;
   left: 0;
-  background-color: #343e4d;
+  background-color: var(--surface-overlay);
+  border-top: 1px var(--surface-border) solid;
   z-index: 10;
-}
-.footer {
-  background-color: var(--primary);
-  color: var(--primary-color-text);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -179,11 +113,8 @@ const sparks = computed(() => {
   display: flex;
   align-items: center;
 }
-.image-text:not(:last-child) {
-  margin-right: calc(var(--inline-block-spacing) / 2);
-}
 
-.image-text :is(img, svg) {
+.image-text img {
   width: 1em;
   height: 1em;
   display: inline;
