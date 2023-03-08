@@ -6,7 +6,6 @@ export default {
 
 <template>
   <div>
-    <h2>Deck</h2>
     <CardTable :isInDeck="true" :cards="cards" />
   </div>
 </template>

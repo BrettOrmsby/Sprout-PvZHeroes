@@ -17,7 +17,7 @@ import deck from "@/store/deck";
 import heroData from "@/assets/heros.json";
 import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
-import type { Card, Hero } from "@/lib/types";
+import type { Card } from "@/lib/types";
 import CardTable from "./CardTable.vue";
 
 const isPlant = computed(() =>

@@ -6,9 +6,10 @@ export default {
 
 <template>
   <CardModal />
+  <HeroModal />
   <DeckHeader />
+  <DeckHero />
   <div class="container">
-    <DeckHero />
     <DeckCards />
     <AddCards v-if="isUsersDeck" />
   </div>
@@ -26,6 +27,7 @@ import DeckHero from "@/components/deck/DeckHero.vue";
 import DeckCards from "@/components/deck/DeckCards.vue";
 import AddCards from "@/components/deck/AddCards.vue";
 import CardModal from "@/components/deck/CardModal.vue";
+import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
 
 const props = defineProps<{ id: string }>();

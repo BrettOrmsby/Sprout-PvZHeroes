@@ -65,6 +65,13 @@ export default {
           'background-color': headerColor(slotProps.data.class).background,
         }"
       >
+        <img
+          class="class"
+          :src="
+            '/images/classes/' + slotProps.data.class.toLowerCase() + '.png'
+          "
+          :alt="slotProps.data.class"
+        />
         {{ slotProps.data.class }}
       </div>
     </template>
@@ -236,6 +243,12 @@ img {
   padding: var(--content-padding);
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+}
+.class {
+  width: 1em;
+  height: 1em;
 }
 :deep().p-datatable-thead {
   display: none !important;

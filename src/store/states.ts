@@ -6,4 +6,8 @@ export default reactive({
     card: "Peashooter",
     show: false,
   },
+  heroModel: {
+    hero: "Green Shadow",
+    show: false,
+  },
 });
