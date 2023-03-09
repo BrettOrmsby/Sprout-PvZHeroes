@@ -62,7 +62,7 @@ const router = createRouter({
     {
       name: "SignOut",
       path: "/signout",
-      redirect: "/",
+      component: () => null,
       beforeEnter: async () => {
         const { signOut } = useAuthUser();
         await signOut();

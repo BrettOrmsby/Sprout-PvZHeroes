@@ -19,6 +19,14 @@ p {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+    color: var(--primary)
+}
+a:hover {
+    color: var(--primary-hover);
+}
+
 .main-container {
     padding: var(--content-padding)
 }
