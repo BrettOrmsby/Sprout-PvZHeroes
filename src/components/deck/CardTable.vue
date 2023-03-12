@@ -7,54 +7,53 @@ export default {
 <template>
   <DataTable
     :value="cards"
-    rowGroupMode="subheader"
-    groupRowsBy="class"
     :scrollable="true"
     stripedRows
     responsiveLayout="scroll"
     sortMode="single"
     :sortField="getSortOrder"
     :sortOrder="1"
-    :expandableRowGroups="true"
     v-model:expandedRowGroups="expandedRowGroups"
   >
-    <Column
-      :style="{ 'flex-grow': 0, 'min-width': isInDeck ? '175px' : '140px' }"
-    >
+    <Column style="width: 100px">
       <template #body="slotProps">
-        <span class="amount">x{{ numberLeft(slotProps.data.name) }}</span>
-        <span v-if="isUsersDeck" class="p-buttonset">
-          <Button
-            icon="pi pi-minus"
-            aria-label="Remove Card"
-            v-if="isInDeck"
-            @click="removeCard(slotProps.data.name)"
-          />
-          <Button
-            icon="pi pi-plus"
-            aria-label="Add Card"
-            v-if="
-              (isInDeck && numberLeft(slotProps.data.name) < 4) ||
-              (!isInDeck && isValid(slotProps.data))
-            "
-            @click="addCard(slotProps.data.name)"
-          />
-          <Button
-            icon="pi pi-eye"
-            aria-label="View Card"
-            @click="viewCard(slotProps.data.name)"
-          />
-        </span>
+        <div class="column-container">
+          <span class="amount">x{{ numberLeft(slotProps.data.name) }}</span>
+          <span v-if="isUsersDeck" class="p-buttonset">
+            <Button
+              icon="pi pi-minus"
+              aria-label="Remove Card"
+              v-if="isInDeck"
+              @click="removeCard(slotProps.data.name)"
+            />
+            <Button
+              icon="pi pi-plus"
+              aria-label="Add Card"
+              v-if="
+                (isInDeck && numberLeft(slotProps.data.name) < 4) ||
+                (!isInDeck && isValid(slotProps.data))
+              "
+              @click="addCard(slotProps.data.name)"
+            />
+            <Button
+              icon="pi pi-eye"
+              aria-label="View Card"
+              @click="viewCard(slotProps.data.name)"
+            />
+          </span>
+        </div>
       </template>
     </Column>
-    <Column field="name" class="word-break">
+    <Column field="name">
       <template #body="slotProps">
-        <img
-          :src="slotProps.data.image"
-          :alt="slotProps.data.name"
-          :class="{ gray: !isValid(slotProps.data) }"
-        />
-        <span>{{ slotProps.data.name }}</span>
+        <div class="column-container word-break">
+          <img
+            :src="slotProps.data.image"
+            :alt="slotProps.data.name"
+            :class="{ gray: !isValid(slotProps.data) }"
+          />
+          <span>{{ slotProps.data.name }}</span>
+        </div>
       </template>
     </Column>
     <template #groupheader="slotProps">
@@ -211,6 +210,10 @@ const removeCard = async (card: string) => {
 :deep():not(th).word-break {
   word-break: break-word;
 }
+.column-container {
+  display: flex;
+  align-items: center;
+}
 .amount {
   margin-right: var(--inline-spacing);
   width: 20px;
@@ -234,7 +237,7 @@ img {
 
 :deep().p-rowgroup-header {
   top: 0;
-  display: v-bind('isInDeck ? "none" : "flex"') !important;
+  display: v-bind('isInDeck ? "none !important" : ""');
 }
 :deep().p-rowgroup-header td {
   padding: 0 !important;
