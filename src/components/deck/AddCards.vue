@@ -11,7 +11,7 @@ export default {
     <TabView ref="tabview1">
       <TabPanel v-for="(value, key) in cardByClass" :key="key">
         <template #header>
-          <div>
+          <div style="white-space: pre">
             {{ key }}
           </div>
         </template>

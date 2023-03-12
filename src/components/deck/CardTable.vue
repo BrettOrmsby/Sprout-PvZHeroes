@@ -46,7 +46,7 @@ export default {
     </Column>
     <Column field="name">
       <template #body="slotProps">
-        <div class="column-container word-break">
+        <div class="column-container">
           <img
             :src="slotProps.data.image"
             :alt="slotProps.data.name"
@@ -207,9 +207,6 @@ const removeCard = async (card: string) => {
 </script>
 
 <style scoped>
-:deep():not(th).word-break {
-  word-break: break-word;
-}
 .column-container {
   display: flex;
   align-items: center;
