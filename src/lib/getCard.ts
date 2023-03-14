@@ -1,5 +1,5 @@
 import plants from "@/assets/plants.json";
-import zombies from "@/assets/plants.json";
+import zombies from "@/assets/zombies.json";
 import superPowers from "@/assets/superpowers.json";
 import type { Card } from "./types";
 

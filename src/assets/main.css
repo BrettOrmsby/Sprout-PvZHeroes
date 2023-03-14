@@ -4,7 +4,7 @@
     --inline-spacing: 0.5rem;
     --inline-block-spacing: 1rem;
 }
-*:not(.p-tooltip) {
+*:not(.p-tooltip):not(.p-dropdown-panel) {
     transition: 0.15s;
     box-sizing: border-box;
 }

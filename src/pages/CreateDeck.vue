@@ -5,79 +5,117 @@ export default {
 </script>
 
 <template>
-  <h1>Create a Deck</h1>
-  <form @submit.prevent="createDeck()">
-    <span>
+  <div class="container">
+    <h1>Create a Deck</h1>
+    <form @submit.prevent="createDeck()">
       <label for="name">Name</label>
       <InputText
         id="name"
         type="text"
         v-model="deckInfo.name"
-        class="p-invalid"
+        :class="{ 'p-invalid': showNameError }"
+        maxlength="50"
       />
-    </span>
-    <small id="invalidName" class="p-error">Name too long.</small>
+      <small v-if="showNameError" id="invalidName" class="p-error"
+        >Must include a name.</small
+      >
 
-    <span id="heroLabel">Hero</span>
-    <Listbox
-      v-model="deckInfo.hero"
-      :options="heroData.plants"
-      optionLabel="name"
-      aria-labelledby="heroLabel"
-    />
+      <span id="heroLabel">Hero</span>
+      <Dropdown
+        v-model="deckInfo.hero"
+        :options="[...heroData.plants, ...heroData.zombies]"
+        optionLabel="name"
+        optionValue="name"
+        placeholder="Select a Hero"
+      >
+        <template #value="slotProps">
+          <div v-if="slotProps.value" class="hero-select-container">
+            <img
+              :alt="slotProps.value"
+              :src="findHero(slotProps.value).image"
+              class="hero-image"
+            />
+            <div>{{ slotProps.value }}</div>
+          </div>
+          <span v-else>
+            {{ slotProps.placeholder }}
+          </span>
+        </template>
+        <template #option="slotProps">
+          <div class="hero-select-container">
+            <img
+              :alt="slotProps.option.name"
+              :src="slotProps.option.image"
+              class="hero-image"
+            />
+            <div>{{ slotProps.option.name }}</div>
+          </div>
+        </template>
+      </Dropdown>
 
-    <span>
       <label for="description">Description</label>
-      <InputText
+      <Textarea
         id="description"
-        type="text"
+        :autoResize="true"
         v-model="deckInfo.description"
-        class="p-invalid"
+        maxlength="150"
       />
-    </span>
-    <small id="invalidDescription" class="p-error">Description too long.</small>
 
-    <ToggleButton
-      v-model="deckInfo.isPrivate"
-      onLabel="Private"
-      offLabel="Public"
-      onIcon="pi pi-lock"
-      offIcon="pi pi-globe"
-    />
+      <ToggleButton
+        v-model="deckInfo.isPrivate"
+        onLabel="Private"
+        offLabel="Public"
+        onIcon="pi pi-lock"
+        offIcon="pi pi-globe"
+      />
 
-    <Button label="Submit" type="submit" />
-  </form>
+      <Button label="Create Deck" type="submit" :loading="loading" />
+    </form>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import useSupabase from "@/composables/UseSupabase";
 import useAuthUser from "@/composables/UseAuthUser";
+import throwError from "@/lib/thowError";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import heroData from "@/assets/heros.json";
 import InputText from "primevue/inputtext";
+import Textarea from "primevue/textarea";
 import ToggleButton from "primevue/togglebutton";
 import Button from "primevue/button";
-import Listbox from "primevue/listbox";
+import Dropdown from "primevue/dropdown";
+import type { Hero } from "@/lib/types";
 
 const router = useRouter();
 const { supabase } = useSupabase();
 const { id } = useAuthUser();
+
+const showNameError = ref(false);
+const loading = ref(false);
 const deckInfo = ref({
   name: "",
-  hero: "",
+  hero: "Green Shadow",
   description: "",
   isPrivate: false,
 });
+
 const createDeck = async () => {
-  console.log(deckInfo.value.hero);
+  if (deckInfo.value.name.trim() === "") {
+    showNameError.value = true;
+    return;
+  } else {
+    showNameError.value = false;
+  }
+  loading.value = true;
+
   const { error, data } = await supabase
     .from("decks")
     .insert({
       creator: id.value,
       name: deckInfo.value.name,
-      // it thinks `deckInfo.value.hero` is a string for some reason
-      hero: (deckInfo.value.hero as any).name,
+      hero: deckInfo.value.hero,
       description: deckInfo.value.description,
       is_private: deckInfo.value.isPrivate,
       is_complete: false,
@@ -85,19 +123,59 @@ const createDeck = async () => {
     })
     .select("id")
     .single();
-  console.log(data?.id);
+
+  loading.value = false;
+
   if (error) {
-    throw error;
+    throwError(error);
+    return;
   }
   router.push({ name: "ViewDeck", params: { id: data.id } });
 };
+
+const findHero = (name: string) =>
+  [...heroData.plants, ...heroData.zombies].find(
+    (e) => e.name === name
+  ) as Hero;
 </script>
 
 <style scoped>
-label {
-  display: block;
+.container {
+  padding: var(--content-padding);
+  max-width: 500px;
+  margin: 0 auto;
 }
-small {
+
+label,
+#heroLabel {
   display: block;
+  margin-bottom: var(--inline-spacing);
+}
+
+.p-error {
+  position: relative;
+  bottom: var(--inline-spacing);
+}
+
+.hero-image {
+  height: 2em;
+  margin-right: var(--inline-spacing);
+}
+.hero-select-container {
+  display: flex;
+  align-items: center;
+}
+
+:deep():is(.p-inputtext, .p-password, .p-dropdown) {
+  margin-bottom: var(--inline-block-spacing);
+  width: 100%;
+}
+:deep() .p-dropdown-label {
+  margin-bottom: 0;
+}
+:deep() .p-button {
+  margin-bottom: var(--inline-block-spacing);
+  display: block;
+  width: fit-content;
 }
 </style>

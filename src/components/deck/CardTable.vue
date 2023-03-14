@@ -193,7 +193,7 @@ const removeCard = async (card: string) => {
     .update({
       list: newList,
       is_complete:
-        Object.values(newList).reduce((prev, curr) => prev + curr) === 40,
+        Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
     })
     .eq("id", deck.id)
     .select();

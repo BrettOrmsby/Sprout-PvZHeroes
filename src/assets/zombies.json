@@ -4,7 +4,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Skunk_PunkH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -20,7 +20,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b2/Pied_PiperH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -37,7 +37,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/66/ZookeeperH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -54,7 +54,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Dolphin_RiderH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -70,7 +70,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Locust_SwarmH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Pet"
@@ -86,7 +86,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Dog_WalkerH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -102,7 +102,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8a/NibbleH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -118,7 +118,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/13/Snorkel_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Party"
@@ -134,7 +134,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Yeti_LunchboxH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Gourmet",
@@ -151,7 +151,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Haunting_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Monster"
@@ -167,7 +167,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/LoudmouthH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -184,7 +184,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/44/B-flatH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Dancing"
@@ -200,7 +200,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Total_EclipseH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Environment",
     "tribes": [],
     "cost": 2,
@@ -214,7 +214,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/de/Alien_OozeH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Monster"
@@ -230,7 +230,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5d/Surfer_ZombieH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Party",
@@ -247,7 +247,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/77/Haunting_GhostH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Monster"
@@ -263,7 +263,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/GoatH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -279,7 +279,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Vengeful_CyborgH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -295,7 +295,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/16/Squirrel_HerderH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -312,7 +312,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f5/VimpireH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Monster",
@@ -329,7 +329,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/89/Vitamin_ZH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -345,7 +345,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/86/Kangaroo_RiderH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -362,7 +362,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Smashing_GargantuarH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gargantuar"
@@ -378,7 +378,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cf/Biodome_BotanistH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -395,7 +395,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Cosmic_YetiH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -412,7 +412,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/98/Primordial_Cheese_ShoverH.png",
     "set": "colossal",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -429,7 +429,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Killer_WhaleH.png",
     "set": "triassic",
     "rarity": "rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -445,7 +445,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Cat_LadyH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -461,7 +461,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/88/Zombie_YetiH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -478,7 +478,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Deep_Sea_GargantuarH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Monster",
@@ -495,7 +495,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/96/Maniacal_LaughH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [],
     "cost": 6,
@@ -509,7 +509,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a8/Cheese_CutterH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -526,7 +526,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Cyborg_ZombieH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -542,7 +542,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Area_22H.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Environment",
     "tribes": [
       "Science"
@@ -558,7 +558,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fb/Ancient_VimpireH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Monster",
@@ -575,7 +575,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5e/Extinction_EventH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "History"
@@ -591,7 +591,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/db/Hunting_GroundsH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Environment",
     "tribes": [
       "History",
@@ -608,7 +608,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/Nurse_GargantuarH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -625,7 +625,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Octo_ZombieH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -641,7 +641,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Zombot_1000H.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -658,7 +658,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Interstellar_Bounty_HunterH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -675,7 +675,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Supernova_GargantuarH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -692,7 +692,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Mondo_BrontoH.png",
     "set": "colossal",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -709,7 +709,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/Gargantuar-Throwing_GargantuarH.png",
     "set": "triassic",
     "rarity": "legendary",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -726,7 +726,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Fraidy_CatH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -742,7 +742,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Secret_AgentH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Professional"
@@ -758,7 +758,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ce/Energy_Drink_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -775,7 +775,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Synchronized_SwimmerH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -792,7 +792,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a1/Hover-Goat_3000H.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -809,7 +809,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/21/Overstuffed_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -826,7 +826,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3a/Sneezing_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Party"
@@ -842,7 +842,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/King_of_the_GrillH.png",
     "set": "event",
     "rarity": "event",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -859,7 +859,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
     "set": "token",
     "rarity": "token",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -875,7 +875,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Acid_RainH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -891,7 +891,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e6/EvaporateH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -907,7 +907,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/39/GalvanizeH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "beastly",
+    "class": "Beastly",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -923,7 +923,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Cardboard_Robot_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -939,7 +939,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ab/Paparazzi_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -956,7 +956,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/Lurch_for_LunchH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -972,7 +972,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Fun-Dead_RaiserH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Party"
@@ -988,7 +988,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0b/Drum_MajorH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -1005,7 +1005,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3f/Chimney_SweepH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Professional"
@@ -1021,7 +1021,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c6/Beam_Me_UpH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Science"
@@ -1037,7 +1037,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d1/Cell_Phone_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Professional"
@@ -1053,7 +1053,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/Pool_SharkH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1070,7 +1070,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9a/Zombot_Drone_EngineerH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1087,7 +1087,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/16/Brain_VendorH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -1104,7 +1104,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/Mountain_ClimberH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Sports"
@@ -1120,7 +1120,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/de/Cryo-BrainH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Gourmet",
@@ -1137,7 +1137,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/47/Medulla_NebulaH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Environment",
     "tribes": [
       "Gourmet"
@@ -1153,7 +1153,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/28/MoonwalkerH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -1170,7 +1170,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a5/Copter_CommandoH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -1187,7 +1187,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Mustache_WaxerH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -1204,7 +1204,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Pirate%27s_BootyH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Pirate",
@@ -1221,7 +1221,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c1/Gentleman_ZombieH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1238,7 +1238,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Kite_FlyerH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -1255,7 +1255,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Gadget_ScientistH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -1271,7 +1271,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4e/Hail-a-CopterH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Science",
@@ -1288,7 +1288,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Wizard_GargantuarH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1305,7 +1305,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/09/Cosmic_ScientistH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -1321,7 +1321,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/TriplicationH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Imp",
@@ -1338,7 +1338,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/Zom-BlobH.png",
     "set": "colossal",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Monster"
@@ -1354,7 +1354,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Mustache_MonumentH.png",
     "set": "triassic",
     "rarity": "rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1371,7 +1371,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/ElectricianH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1388,7 +1388,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/72/Rocket_ScienceH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Science"
@@ -1404,7 +1404,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Mad_ChemistH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -1420,7 +1420,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/93/Portal_TechnicianH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1437,7 +1437,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/61/Neutron_ImpH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -1454,7 +1454,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Transformation_StationH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Environment",
     "tribes": [
       "Science"
@@ -1470,7 +1470,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Wormhole_GatekeeperH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -1487,7 +1487,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0e/Evolutionary_LeapH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "History"
@@ -1503,7 +1503,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c5/Parasol_ZombieH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Party"
@@ -1519,7 +1519,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/25/DuckstacheH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -1536,7 +1536,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/60/TeleportH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Science"
@@ -1552,7 +1552,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/Shieldcrusher_VikingH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -1569,7 +1569,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/TricksterH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Party"
@@ -1585,7 +1585,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fb/Interdimensional_ZombieH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -1601,7 +1601,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/Teleportation_ZombieH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -1617,7 +1617,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7e/Gargantuar_MimeH.png",
     "set": "colossal",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Gargantuar",
@@ -1634,7 +1634,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/Zombot_Dinotronic_MechasaurH.png",
     "set": "triassic",
     "rarity": "legendary",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [],
     "cost": 7,
@@ -1648,7 +1648,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/00/Leprechaun_ImpH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -1664,7 +1664,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c4/Regifting_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Party",
@@ -1681,7 +1681,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Trick-or-TreaterH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -1698,7 +1698,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Thinking_CapH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -1714,7 +1714,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/95/Kitchen_Sink_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -1731,7 +1731,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2b/Bad_Moon_RisingH.png",
     "set": "event",
     "rarity": "event",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [],
     "cost": 7,
@@ -1745,7 +1745,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/57/Pot_of_GoldH.png",
     "set": "token",
     "rarity": "token",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [],
     "cost": 1,
@@ -1759,7 +1759,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Space_CadetH.png",
     "set": "token",
     "rarity": "token",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -1773,7 +1773,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
     "set": "token",
     "rarity": "token",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -1789,7 +1789,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c6/Cut_Down_to_SizeH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -1805,7 +1805,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2a/SummoningH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -1821,7 +1821,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1f/TelepathyH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -1837,7 +1837,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Iron_BoarderH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Zombie",
     "tribes": [
       "Sports",
@@ -1855,7 +1855,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b1/Teleportation_StationH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "brainy",
+    "class": "Brainy",
     "type": "Environment",
     "tribes": [
       "Science",
@@ -1872,7 +1872,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Backup_DancerH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -1886,7 +1886,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d0/Bungee_PlumberH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Professional",
@@ -1903,7 +1903,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/60/Cuckoo_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -1917,7 +1917,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/41/Disco_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -1931,7 +1931,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Flamenco_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -1945,7 +1945,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Tennis_ChampH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -1959,7 +1959,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e6/Unlife_of_the_PartyH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -1973,7 +1973,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Conga_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -1987,7 +1987,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Newspaper_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2001,7 +2001,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f1/CakesplosionH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Imp",
@@ -2018,7 +2018,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/37/Orchestra_ConductorH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2032,7 +2032,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Foot_Soldier_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2046,7 +2046,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c1/Loose_CannonH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Barrel",
@@ -2063,7 +2063,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9d/Meteor_ZH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Environment",
     "tribes": [],
     "cost": 2,
@@ -2077,7 +2077,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Space_NinjaH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2091,7 +2091,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Mystery_EggH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -2105,7 +2105,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b9/Sugary_TreatH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -2121,7 +2121,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6a/Trapper_TerritoryH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Environment",
     "tribes": [
       "Gourmet"
@@ -2137,7 +2137,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4d/Exploding_ImpH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -2153,7 +2153,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2e/JesterH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2167,7 +2167,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Zombot%27s_WrathH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Science",
@@ -2184,7 +2184,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/The_ChickeningH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "tribes": [
       "Pet"
     ],
@@ -2199,7 +2199,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/88/Imp-Throwing_GargantuarH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2213,7 +2213,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/27/Final_MissionH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Science"
@@ -2229,7 +2229,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/Cosmic_DancerH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2243,7 +2243,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7f/Gizzard_LizardH.png",
     "set": "colossal",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2257,7 +2257,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Disco_Dance_FloorH.png",
     "set": "triassic",
     "rarity": "rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2271,7 +2271,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Aerobics_InstructorH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2285,7 +2285,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/AbracadaverH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2299,7 +2299,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/ba/Fireworks_ZombieH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2313,7 +2313,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fd/Disco-Tron_3000H.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 6,
@@ -2327,7 +2327,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Disco-NautH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Dancing"
@@ -2343,7 +2343,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cf/Moon_Base_ZH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Environment",
     "tribes": [
       "Science"
@@ -2359,7 +2359,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Gas_GiantH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Monster",
@@ -2376,7 +2376,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3e/Quickdraw_Con_ManH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -2393,7 +2393,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/Grave_RobberH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -2407,7 +2407,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Zombie%27s_Best_FriendH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -2423,7 +2423,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/65/Barrel_of_DeadbeardsH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2437,7 +2437,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/eb/ValkyrieH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2451,7 +2451,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/65/Gargantuars%27_FeastH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Gourmet",
@@ -2468,7 +2468,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d7/Quasar_WizardH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2482,7 +2482,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/Binary_StarsH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2496,7 +2496,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/TankylosaurusH.png",
     "set": "colossal",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -2512,7 +2512,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b1/HeadhunterH.png",
     "set": "triassic",
     "rarity": "legendary",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2526,7 +2526,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/33/Exploding_FruitcakeH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Gourmet",
@@ -2543,7 +2543,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a1/Unexpected_GiftsH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Trick",
     "tribes": [
       "Party"
@@ -2559,7 +2559,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Stupid_CupidH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2573,7 +2573,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/FrankentuarH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2587,7 +2587,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Gargantuar-Throwing_ImpH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2601,7 +2601,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Hippity_Hop_GargantuarH.png",
     "set": "event",
     "rarity": "event",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2615,7 +2615,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Impfinity_CloneH.png",
     "set": "token",
     "rarity": "token",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -2629,7 +2629,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Captain_DeadbeardH.png",
     "set": "token",
     "rarity": "token",
-    "class": "crazy",
+    "class": "Crazy",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2643,7 +2643,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Brute_StrengthH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "tribes": [
       "Superpower"
     ],
@@ -2658,7 +2658,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Dance_OffH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "tribes": [
       "Superpower"
     ],
@@ -2673,7 +2673,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/99/ElectroboltH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "crazy",
+    "class": "Crazy",
     "tribes": [
       "Superpower"
     ],
@@ -2688,7 +2688,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Baseball_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -2702,7 +2702,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Rolling_StoneH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [],
     "cost": 1,
@@ -2716,7 +2716,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/ConeheadH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2730,7 +2730,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/Team_MascotH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2744,7 +2744,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/MedicH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2758,7 +2758,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/34/Arm_WrestlerH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -2772,7 +2772,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b0/Camel_CrossingH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [
       "History",
@@ -2789,7 +2789,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Flag_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2803,7 +2803,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ed/TerrifyH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [],
     "cost": 2,
@@ -2817,7 +2817,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/Trash_Can_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2831,7 +2831,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/dc/BucketheadH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2845,7 +2845,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Ra_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 6,
@@ -2859,7 +2859,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/72/Cone_ZoneH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Environment",
     "tribes": [],
     "cost": 2,
@@ -2873,7 +2873,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/95/Celestial_CustodianH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -2887,7 +2887,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fa/Screen_Door_ZombieH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -2901,7 +2901,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Healthy_TreatH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [
       "Gourmet"
@@ -2917,7 +2917,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c3/Zombie_Middle_ManagerH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Professional"
@@ -2933,7 +2933,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/LeftoversH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [
       "Gourmet",
@@ -2950,7 +2950,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Sumo_WrestlerH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -2964,7 +2964,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6c/Zombie_CoachH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -2978,7 +2978,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4b/Monster_MashH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [
       "Dancing",
@@ -2995,7 +2995,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/36/Knight_of_the_Living_DeadH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 7,
@@ -3009,7 +3009,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/02/Rodeo_GargantuarH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 7,
@@ -3023,7 +3023,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Escape_through_TimeH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [
       "History",
@@ -3040,7 +3040,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Cosmic_Sports_StarH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -3054,7 +3054,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/64/Primeval_YetiH.png",
     "set": "colossal",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -3070,7 +3070,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Lost_ColosseumH.png",
     "set": "triassic",
     "rarity": "rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -3084,7 +3084,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/LandscaperH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 3,
@@ -3098,7 +3098,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/80/Weed_SprayH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [],
     "cost": 3,
@@ -3112,7 +3112,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/17/All-Star_ZombieH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 5,
@@ -3126,7 +3126,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/Coffee_ZombieH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 6,
@@ -3140,7 +3140,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/51/Planetary_GladiatorH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -3154,7 +3154,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Genetic_ExperimentH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 1,
@@ -3168,7 +3168,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Black_HoleH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Environment",
     "tribes": [],
     "cost": 1,
@@ -3182,7 +3182,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/Jurassic_FossilheadH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 2,
@@ -3196,7 +3196,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b7/KnockoutH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [],
     "cost": 3,
@@ -3210,7 +3210,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/4e/Turquoise_Skull_ZombieH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -3224,7 +3224,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Zombie_KingH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [],
     "cost": 4,
@@ -3238,7 +3238,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Undying_PharaohH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "History"
@@ -3254,7 +3254,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Wannabe_HeroH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Gargantuar"
@@ -3270,7 +3270,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/Intergalactic_WarlordH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -3287,7 +3287,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Zombot_Battlecruiser_5000H.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -3304,7 +3304,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fc/StompadonH.png",
     "set": "colossal",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -3321,7 +3321,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bb/Chum_ChampionH.png",
     "set": "triassic",
     "rarity": "legendary",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -3338,7 +3338,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Zombology_TeacherH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -3355,7 +3355,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c7/GargologistH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Science"
@@ -3371,7 +3371,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/Turkey_RiderH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -3388,7 +3388,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/97/Going_ViralH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Trick",
     "tribes": [],
     "cost": 3,
@@ -3402,7 +3402,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Bonus_Track_BucketheadH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Dancing"
@@ -3418,7 +3418,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Defensive_EndH.png",
     "set": "event",
     "rarity": "event",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Sports",
@@ -3435,7 +3435,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
     "set": "token",
     "rarity": "token",
-    "class": "hearty",
+    "class": "Hearty",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -3451,7 +3451,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Heroic_HealthH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "tribes": [
       "Superpower"
     ],
@@ -3466,7 +3466,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/PossessedH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "tribes": [
       "Superpower"
     ],
@@ -3481,7 +3481,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1c/Rock_WallH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "hearty",
+    "class": "Hearty",
     "tribes": [
       "Superpower"
     ],
@@ -3496,7 +3496,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/34/ImpH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -3512,7 +3512,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/19/Mini-NinjaH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -3529,7 +3529,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7f/Smoke_BombH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [],
     "cost": 1,
@@ -3543,7 +3543,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/94/Fishy_ImpH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -3560,7 +3560,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Smelly_ZombieH.png",
     "set": "basic",
     "rarity": "common",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -3576,7 +3576,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/Headstone_CarverH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -3593,7 +3593,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a4/Zombie_ChickenH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -3609,7 +3609,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Hot_Dog_ImpH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Gourmet",
@@ -3626,7 +3626,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2f/Swashbuckler_ZombieH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate"
@@ -3642,7 +3642,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Backyard_BounceH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Party",
@@ -3659,7 +3659,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Stealthy_ImpH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -3676,7 +3676,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/FirefighterH.png",
     "set": "premium",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Professional"
@@ -3692,7 +3692,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/GraveyardH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Environment",
     "tribes": [],
     "cost": 1,
@@ -3706,7 +3706,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/ca/Ice_PirateH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate"
@@ -3722,7 +3722,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6d/Frosty_MustacheH.png",
     "set": "galactic",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Mustache"
@@ -3738,7 +3738,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f5/SwabbieH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -3755,7 +3755,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c4/Barrel_of_BarrelsH.png",
     "set": "colossal",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Barrel"
@@ -3771,7 +3771,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bd/Monkey_SmugglerH.png",
     "set": "triassic",
     "rarity": "uncommon",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -3788,7 +3788,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Imp_CommanderH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -3805,7 +3805,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/21/Barrel_Roller_ZombieH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Barrel"
@@ -3821,7 +3821,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/90/Surprise_GargantuarH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Gargantuar",
@@ -3838,7 +3838,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Walrus_RiderH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -3855,7 +3855,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Zombot_StompH.png",
     "set": "premium",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Science",
@@ -3872,7 +3872,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/Space_PirateH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -3889,7 +3889,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Cosmic_ImpH.png",
     "set": "galactic",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -3905,7 +3905,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Blowgun_ImpH.png",
     "set": "colossal",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Dancing",
@@ -3922,7 +3922,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e1/Buried_TreasureH.png",
     "set": "triassic",
     "rarity": "rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -3939,7 +3939,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/27/Toxic_Waste_ImpH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Barrel",
@@ -3956,7 +3956,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/Line_Dancing_ZombieH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Dancing"
@@ -3972,7 +3972,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Pogo_BouncerH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Sports"
@@ -3988,7 +3988,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/31/Tomb_Raiser_ZombieH.png",
     "set": "premium",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "History"
@@ -4004,7 +4004,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Ducky_Tube_ZombieH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Party",
@@ -4021,7 +4021,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9f/Dr._SpacetimeH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -4038,7 +4038,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/74/Laser_Base_AlphaH.png",
     "set": "galactic",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Environment",
     "tribes": [
       "Science"
@@ -4054,7 +4054,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/57/Cursed_GargolithH.png",
     "set": "colossal",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Monster",
@@ -4071,7 +4071,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/Excavator_ZombieH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -4088,7 +4088,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ee/Unthawed_VikingH.png",
     "set": "triassic",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate"
@@ -4104,7 +4104,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/cc/Mixed-Up_GravediggerH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Professional",
@@ -4121,7 +4121,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/30/Zombot_Sharktronic_SubH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -4138,7 +4138,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3b/Zombot_Plank_WalkerH.png",
     "set": "premium",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pirate",
@@ -4155,7 +4155,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/Space_CowboyH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp",
@@ -4172,7 +4172,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6e/Cryo-YetiH.png",
     "set": "galactic",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -4189,7 +4189,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bc/Zombot_Aerostatic_GondolaH.png",
     "set": "colossal",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Science",
@@ -4206,7 +4206,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e0/Raiding_RaptorH.png",
     "set": "triassic",
     "rarity": "legendary",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "History",
@@ -4223,7 +4223,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/ImposterH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -4240,7 +4240,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Fire_RoosterH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -4256,7 +4256,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Imp-Throwing_ImpH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -4272,7 +4272,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d1/Captain_FlamefaceH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -4289,7 +4289,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Zombie_High_DiverH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Mustache",
@@ -4306,7 +4306,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a4/Trapper_ZombieH.png",
     "set": "event",
     "rarity": "event",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet",
@@ -4323,7 +4323,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Impfinity_CloneH.png",
     "set": "token",
     "rarity": "token",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Imp"
@@ -4339,7 +4339,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
     "set": "token",
     "rarity": "token",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -4355,7 +4355,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/DolphinadoH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Pet",
@@ -4372,7 +4372,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/76/In-CryptedH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -4388,7 +4388,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Super_StenchH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -4404,7 +4404,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/09/Ice_MoonH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "sneaky",
+    "class": "Sneaky",
     "type": "Environment",
     "tribes": [
       "Superpower"
@@ -4420,7 +4420,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/ZombieH.png",
     "set": "token",
     "rarity": "token",
-    "class": "removed",
+    "class": "Removed",
     "type": "Zombie",
     "tribes": [
       "Professional"
@@ -4436,7 +4436,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/Octo_ZombieH.png",
     "set": "token",
     "rarity": "token",
-    "class": "removed",
+    "class": "Removed",
     "type": "Zombie",
     "tribes": [
       "Pet"
@@ -4452,7 +4452,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7a/Flick-a-PlantH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "removed",
+    "class": "Removed",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -4468,7 +4468,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Get_WellH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "removed",
+    "class": "Removed",
     "type": "Trick",
     "tribes": [
       "Superpower"
@@ -4484,7 +4484,7 @@
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/MotivateH.png",
     "set": "superpower",
     "rarity": "super-rare",
-    "class": "removed",
+    "class": "Removed",
     "type": "Trick",
     "tribes": [
       "Superpower"
