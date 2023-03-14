@@ -645,7 +645,7 @@
     "strength": null,
     "health": null,
     "abilities": "Make a Wall-Nut in each Ground lane.\nAttack for 6 damage in those lanes.",
-    "flavour": "<p>Ugly shoes not required!\n</p>"
+    "flavour": "Ugly shoes not required!"
   },
   {
     "name": "Body-Gourd",
@@ -1905,8 +1905,8 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>",
-    "flavour": "<p>\"Yes! Yes! Let's do this! Let's do this!\"\n</p>"
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>",
+    "flavour": "\"Yes! Yes! Let's do this! Let's do this!\""
   },
   {
     "name": "Bonk Choy",
@@ -2031,7 +2031,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Plants here get {{DoubleStrikeAlt}}<b>Double Strike</b>.",
+    "abilities": "Plants here get {{DoubleStrike}}<b>Double Strike</b>.",
     "flavour": "Nothing wakes you up in the morning like extra attacks on zombies. Well OK, coffee does."
   },
   {
@@ -2191,7 +2191,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a Pea, and it gets {{DoubleStrikeAlt}}<b>Double Strike</b>.",
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a Pea, and it gets {{DoubleStrike}}<b>Double Strike</b>.",
     "flavour": "\"The cosmos is so big and a pea is so small. The juxtaposition just really makes me think, you know?\""
   },
   {
@@ -2435,7 +2435,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "She's a banana first and a dinosaur second. But it's a close second."
   },
   {
@@ -2483,7 +2483,7 @@
     "cost": 5,
     "strength": 5,
     "health": 4,
-    "abilities": "{{DoubleStrikeAlt}}<b>Double Strike</b>\n<b>Pea Evolution</b>: This does a Bonus Attack.",
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>Pea Evolution</b>: This does a Bonus Attack.",
     "flavour": "There is no problem that cannot be solved by more peas."
   },
   {
@@ -3220,7 +3220,7 @@
     "strength": 4,
     "health": 3,
     "abilities": "<b>Amphibious</b>\n<b>When played:</b> The Zombie Hero loses their Brains.",
-    "flavour": "<p>In this case, \"brain drain\" is a good thing.\n</p>"
+    "flavour": "In this case, \"brain drain\" is a good thing."
   },
   {
     "name": "Winter Melon",
@@ -4103,7 +4103,7 @@
     "strength": null,
     "health": null,
     "abilities": "Destroy all Plants and Zombies on the Ground.",
-    "flavour": "<p>He comes from a long line of very precise cucumbers.\n</p>"
+    "flavour": "He comes from a long line of very precise cucumbers."
   },
   {
     "name": "Primal Sunflower",
@@ -4246,7 +4246,7 @@
     "strength": 6,
     "health": 6,
     "abilities": "<b>When played</b>: Zombies here and next door get -1{{Strength}}/-1{{Heart}}.\n<b>Team-Up Evolution</b>: Destroy a Zombie.",
-    "flavour": "He focuses his fearsome firepower with a single, ringing credo: \"<i>One Team. One Dream.</i>\""
+    "flavour": "He focuses his fearsome firepower with a single, ringing credo: \"One Team. One Dream.\""
   },
   {
     "name": "Aloesaurus",

@@ -551,7 +551,7 @@
     "strength": null,
     "health": null,
     "abilities": "Zombies here get +2 {{Strength}}/+2 {{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
-    "flavour": "<b>\"Zombies from outer space? What an absurd conspiracy theory! Now move along. Nothing to see here.\" - Dr. Zomboss</b>"
+    "flavour": "\"Zombies from outer space? What an absurd conspiracy theory! Now move along. Nothing to see here.\" - Dr. Zomboss"
   },
   {
     "name": "Ancient Vimpire",
@@ -1723,7 +1723,7 @@
     "cost": 6,
     "strength": 3,
     "health": 6,
-    "abilities": "<b>{{Truestrike}}Bullseye</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Armored}}<b>Armored 1</b>\n{{Weird unused  icon}}<b>Overshoot 2</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "abilities": "<b>{{Truestrike}}Bullseye</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Armored}}<b>Armored 1</b>\n{{Overshoot}}<b>Overshoot 2</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
     "flavour": "He's got everything but the - no wait, he's got that too."
   },
   {
@@ -1890,8 +1890,7 @@
     "type": "Trick",
     "tribes": [
       "Professional",
-      "Mustache",
-      ""
+      "Mustache"
     ],
     "cost": 1,
     "strength": null,
@@ -2056,7 +2055,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Weird unused  icon}}<b>Overshoot 2</b>",
+    "abilities": "{{Overshoot}}<b>Overshoot 2</b>",
     "flavour": "His friends keep telling him it's too dangerous, but he never listens. He's having a blast."
   },
   {
@@ -2066,9 +2065,7 @@
     "rarity": "uncommon",
     "class": "crazy",
     "type": "Environment",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2111,8 +2108,7 @@
     "class": "crazy",
     "type": "Trick",
     "tribes": [
-      "Gourmet",
-      ""
+      "Gourmet"
     ],
     "cost": 2,
     "strength": null,
@@ -2128,8 +2124,7 @@
     "class": "crazy",
     "type": "Environment",
     "tribes": [
-      "Gourmet",
-      ""
+      "Gourmet"
     ],
     "cost": 1,
     "strength": null,
@@ -2176,8 +2171,7 @@
     "type": "Trick",
     "tribes": [
       "Science",
-      "Gargantuar",
-      ""
+      "Gargantuar"
     ],
     "cost": 3,
     "strength": null,
@@ -2222,8 +2216,7 @@
     "class": "crazy",
     "type": "Trick",
     "tribes": [
-      "Science",
-      ""
+      "Science"
     ],
     "cost": 2,
     "strength": null,
@@ -2242,7 +2235,7 @@
     "cost": 4,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Weird unused  icon}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a Dancing card, and it gets {{Weird unused  icon}}<b>Overshoot 2</b>.",
+    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a Dancing card, and it gets {{Overshoot}}<b>Overshoot 2</b>.",
     "flavour": "Across the cosmos, the passion for dance is the only universal language."
   },
   {
@@ -2270,7 +2263,7 @@
     "cost": 2,
     "strength": 0,
     "health": 3,
-    "abilities": "{{Weird unused  icon}}<b>Overshoot 3</b>\n<b>Fusion:</b> a Zombie played on this gets {{Weird unused  icon}}<b>Overshoot 3</b>.",
+    "abilities": "{{Overshoot}}<b>Overshoot 3</b>\n<b>Fusion:</b> a Zombie played on this gets {{Overshoot}}<b>Overshoot 3</b>.",
     "flavour": "The Triassic Invasion brought the very best of Zombie culture: Disco."
   },
   {
@@ -2353,13 +2346,12 @@
     "class": "crazy",
     "type": "Environment",
     "tribes": [
-      "Science",
-      ""
+      "Science"
     ],
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here have {{Weird unused  icon}}<b>Overshoot 3</b>.",
+    "abilities": "Zombies here have {{Overshoot}}<b>Overshoot 3</b>.",
     "flavour": "Zombies landed on the Moon? Many believe it's nothing but a conspiracy theory, and yet, here's the proof."
   },
   {
@@ -2463,8 +2455,7 @@
     "type": "Trick",
     "tribes": [
       "Gourmet",
-      "Gargantuar",
-      ""
+      "Gargantuar"
     ],
     "cost": 11,
     "strength": null,
@@ -2539,8 +2530,7 @@
     "type": "Trick",
     "tribes": [
       "Gourmet",
-      "Party",
-      ""
+      "Party"
     ],
     "cost": 2,
     "strength": null,
@@ -2556,8 +2546,7 @@
     "class": "crazy",
     "type": "Trick",
     "tribes": [
-      "Party",
-      ""
+      "Party"
     ],
     "cost": 3,
     "strength": null,
@@ -2715,9 +2704,7 @@
     "rarity": "common",
     "class": "hearty",
     "type": "Trick",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2789,8 +2776,7 @@
     "type": "Trick",
     "tribes": [
       "History",
-      "Pet",
-      ""
+      "Pet"
     ],
     "cost": 1,
     "strength": null,
@@ -2819,9 +2805,7 @@
     "rarity": "uncommon",
     "class": "hearty",
     "type": "Trick",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2877,9 +2861,7 @@
     "rarity": "uncommon",
     "class": "hearty",
     "type": "Environment",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2922,8 +2904,7 @@
     "class": "hearty",
     "type": "Trick",
     "tribes": [
-      "Gourmet",
-      ""
+      "Gourmet"
     ],
     "cost": 1,
     "strength": null,
@@ -2939,8 +2920,7 @@
     "class": "hearty",
     "type": "Zombie",
     "tribes": [
-      "Professional",
-      ""
+      "Professional"
     ],
     "cost": 1,
     "strength": 1,
@@ -2957,8 +2937,7 @@
     "type": "Trick",
     "tribes": [
       "Gourmet",
-      "Pet",
-      ""
+      "Pet"
     ],
     "cost": 2,
     "strength": null,
@@ -3003,8 +2982,7 @@
     "type": "Trick",
     "tribes": [
       "Dancing",
-      "Monster",
-      ""
+      "Monster"
     ],
     "cost": 5,
     "strength": null,
@@ -3049,8 +3027,7 @@
     "type": "Trick",
     "tribes": [
       "History",
-      "Science",
-      ""
+      "Science"
     ],
     "cost": 2,
     "strength": null,
@@ -3123,9 +3100,7 @@
     "rarity": "super-rare",
     "class": "hearty",
     "type": "Trick",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -3195,9 +3170,7 @@
     "rarity": "super-rare",
     "class": "hearty",
     "type": "Environment",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3225,9 +3198,7 @@
     "rarity": "super-rare",
     "class": "hearty",
     "type": "Trick",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -3270,8 +3241,7 @@
     "class": "hearty",
     "type": "Zombie",
     "tribes": [
-      "History",
-      ""
+      "History"
     ],
     "cost": 6,
     "strength": 4,
@@ -3287,8 +3257,7 @@
     "class": "hearty",
     "type": "Zombie",
     "tribes": [
-      "Gargantuar",
-      ""
+      "Gargantuar"
     ],
     "cost": 7,
     "strength": 6,
@@ -3305,8 +3274,7 @@
     "type": "Zombie",
     "tribes": [
       "Mustache",
-      "Pirate",
-      ""
+      "Pirate"
     ],
     "cost": 5,
     "strength": 2,
@@ -3323,8 +3291,7 @@
     "type": "Zombie",
     "tribes": [
       "Science",
-      "Barrel",
-      ""
+      "Barrel"
     ],
     "cost": 6,
     "strength": 6,
@@ -3358,8 +3325,7 @@
     "type": "Zombie",
     "tribes": [
       "History",
-      "Sports",
-      ""
+      "Sports"
     ],
     "cost": 5,
     "strength": 4,
@@ -3376,8 +3342,7 @@
     "type": "Zombie",
     "tribes": [
       "Professional",
-      "Science",
-      ""
+      "Science"
     ],
     "cost": 1,
     "strength": 2,
@@ -3393,8 +3358,7 @@
     "class": "hearty",
     "type": "Zombie",
     "tribes": [
-      "Science",
-      ""
+      "Science"
     ],
     "cost": 2,
     "strength": 2,
@@ -3426,9 +3390,7 @@
     "rarity": "event",
     "class": "hearty",
     "type": "Trick",
-    "tribes": [
-      ""
-    ],
+    "tribes": [],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -3443,8 +3405,7 @@
     "class": "hearty",
     "type": "Zombie",
     "tribes": [
-      "Dancing",
-      ""
+      "Dancing"
     ],
     "cost": 4,
     "strength": 3,
@@ -3461,8 +3422,7 @@
     "type": "Zombie",
     "tribes": [
       "Sports",
-      "Gargantuar",
-      ""
+      "Gargantuar"
     ],
     "cost": 6,
     "strength": 6,

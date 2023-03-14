@@ -8,7 +8,7 @@ export default {
   <Dialog
     :modal="true"
     v-model:visible="states.heroModel.show"
-    style="max-width: 500px; margin: var(--content-padding)"
+    style="max-width: 500px; width: 100%; margin: var(--content-padding)"
   >
     <template #header>
       <div class="header-container p-dialog-title">
