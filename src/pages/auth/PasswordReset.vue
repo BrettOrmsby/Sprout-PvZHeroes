@@ -5,33 +5,61 @@ export default {
 </script>
 
 <template>
-  <template v-if="!isPasswordChanged">
-    <form @submit.prevent="changePassword()">
+  <div class="container">
+    <form v-if="!isPasswordChanged" @submit.prevent="handleSubmit()">
       <h1>Change Password</h1>
-      <label>Password <input v-model="password" type="password" /></label>
-      <button type="submit">Change Password</button>
+      <label for="password">Password</label>
+      <Password id="password" v-model="password" :feedback="true" toggleMask />
+
+      <Button label="Change Password" type="submit" :loading="loading" />
     </form>
-  </template>
-  <h1 v-else>Password Changed</h1>
+    <h1 v-else>Password Changed</h1>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import useAuthUser from "@/composables/UseAuthUser";
 import { ref } from "vue";
+import useAuthUser from "@/composables/UseAuthUser";
+import throwError from "@/lib/thowError";
+import Password from "primevue/password";
+import Button from "primevue/button";
 
 const { update } = useAuthUser();
 
 const password = ref("");
 const isPasswordChanged = ref(false);
+const loading = ref(false);
 
-const changePassword = async () => {
+const handleSubmit = async () => {
+  loading.value = true;
   try {
     await update({ password: password.value });
     isPasswordChanged.value = true;
   } catch (error: any) {
-    alert(error.message);
+    throwError(error);
   }
+  loading.value = false;
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.container {
+  padding: var(--content-padding);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: var(--inline-spacing);
+}
+:deep() :is(.p-inputtext, .p-password) {
+  display: block;
+  margin-bottom: var(--inline-block-spacing);
+  width: 100%;
+}
+:deep() .p-button-link:focus {
+  outline: none;
+  box-shadow: unset !important;
+}
+</style>

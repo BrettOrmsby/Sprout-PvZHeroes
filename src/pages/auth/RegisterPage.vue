@@ -17,7 +17,7 @@ export default {
       <Password
         id="password"
         v-model="form.password"
-        :feedback="false"
+        :feedback="true"
         toggleMask
       />
 
