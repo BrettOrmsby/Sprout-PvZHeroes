@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import useAuthUser from "@/composables/UseAuthUser";
 import HomePage from "@/pages/HomePage.vue";
+import useSupabase from "@/composables/UseSupabase";
+import throwError from "@/lib/thowError";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,7 +21,27 @@ const router = createRouter({
     {
       name: "Me",
       path: "/me",
-      component: () => import("@/pages/ProfilePage.vue"),
+      meta: {
+        requiresAuth: true,
+      },
+      component: () => null,
+      beforeEnter: async () => {
+        const { supabase } = useSupabase();
+        const { id } = useAuthUser();
+        const { data, error } = await supabase
+          .from("profiles")
+          .select("username")
+          .eq("id", id.value)
+          .single();
+
+        if (error) {
+          console.log(data);
+          throwError(error);
+          return { name: "404" };
+        }
+
+        return { name: "Profile", params: { username: data.username } };
+      },
     },
     {
       name: "Profile",

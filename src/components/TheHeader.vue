@@ -26,7 +26,7 @@ const items = computed(() => {
       items: [
         {
           label: "View Decks",
-          to: "/profile/me",
+          to: "/me",
         },
         {
           label: "Create a Deck",

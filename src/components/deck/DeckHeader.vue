@@ -34,7 +34,7 @@ import states from "@/store/states";
 import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/thowError";
-import { ref, computed } from "vue";
+import { ref, computed, onUnmounted } from "vue";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Avatar from "primevue/avatar";
@@ -76,7 +76,8 @@ const timeSinceUpdate = computed(() => {
   return dayjs(deck.last_updated).fromNow();
 });
 
-setInterval(() => ++refreshDateKey.value, 60000);
+const interval = setInterval(() => ++refreshDateKey.value, 60000);
+onUnmounted(() => clearInterval(interval));
 </script>
 
 <style scoped>
