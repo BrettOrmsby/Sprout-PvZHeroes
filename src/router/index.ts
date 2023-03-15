@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import useAuthUser from "@/composables/UseAuthUser";
-import HomePage from "@/pages/HomePage.vue";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/thowError";
 
@@ -15,7 +14,7 @@ const router = createRouter({
     {
       name: "Home",
       path: "/",
-      component: () => HomePage,
+      component: () => import("@/pages/HomePage.vue"),
     },
     //TODO: profile page
     {

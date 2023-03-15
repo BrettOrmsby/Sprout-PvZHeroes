@@ -19,19 +19,20 @@ export default {
       <template #body="slotProps">
         <div class="column-container">
           <span class="amount">x{{ numberLeft(slotProps.data.name) }}</span>
-          <span v-if="isUsersDeck" class="p-buttonset">
+          <span class="p-buttonset">
             <Button
               icon="pi pi-minus"
               aria-label="Remove Card"
-              v-if="isInDeck"
+              v-if="isInDeck && isUsersDeck"
               @click="removeCard(slotProps.data.name)"
             />
             <Button
               icon="pi pi-plus"
               aria-label="Add Card"
               v-if="
-                (isInDeck && numberLeft(slotProps.data.name) < 4) ||
-                (!isInDeck && isValid(slotProps.data))
+                isUsersDeck &&
+                ((isInDeck && numberLeft(slotProps.data.name) < 4) ||
+                  (!isInDeck && isValid(slotProps.data)))
               "
               @click="addCard(slotProps.data.name)"
             />

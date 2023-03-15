@@ -84,6 +84,7 @@ onUnmounted(() => clearInterval(interval));
   height: 100%;
   border: 2px solid transparent;
   color: var(--text-color);
+  overflow: hidden;
 }
 .deck-card:hover {
   border: 2px solid var(--primary-color);
