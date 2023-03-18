@@ -6,7 +6,9 @@ export default {
 
 <template>
   <h2>Deck Data</h2>
-  <Chart type="bar" :data="typeData" :options="typeOptions" />
+  <div class="chart-container">
+    <Chart type="bar" :data="typeData" :options="typeOptions" />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -192,4 +194,9 @@ const typeOptions = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.chart-container {
+  margin: 0 auto;
+  max-width: 700px;
+}
+</style>

@@ -63,7 +63,7 @@ const router = createRouter({
     },
     {
       name: "SignIn",
-      path: "/signin",
+      path: "/sign-in",
       component: () => import("@/pages/auth/SignInPage.vue"),
     },
     {
@@ -73,7 +73,7 @@ const router = createRouter({
     },
     {
       name: "PasswordReset",
-      path: "/passwordreset",
+      path: "/password-reset",
       meta: {
         requiresAuth: true,
       },
@@ -81,7 +81,7 @@ const router = createRouter({
     },
     {
       name: "SignOut",
-      path: "/signout",
+      path: "/sign-out",
       component: () => null,
       beforeEnter: async () => {
         const { signOut } = useAuthUser();
@@ -98,6 +98,11 @@ const router = createRouter({
       name: "404",
       path: "/404",
       component: () => import("@/pages/404Page.vue"),
+    },
+    {
+      name: "NotFoundRedirect",
+      path: "/:pathMatch(.*)*",
+      redirect: { name: "404" },
     },
   ],
 });

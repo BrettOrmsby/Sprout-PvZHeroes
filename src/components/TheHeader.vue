@@ -34,13 +34,13 @@ const items = computed(() => {
         },
         {
           label: "Sign Out",
-          to: "/signout",
+          to: "/sign-out",
         },
       ],
     },
     {
       label: "Sign In",
-      to: "/signin",
+      to: "/sign-in",
       visible: !isSignedIn.value,
     },
     {
