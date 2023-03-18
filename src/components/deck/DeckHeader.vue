@@ -8,8 +8,8 @@ export default {
   <EditModal />
   <header>
     <div class="user-container">
-      <Avatar size="large" shape="circle">
-        <HeroImage :name="profileImage" class="profile-image" />
+      <Avatar size="large" shape="circle" class="profile-image">
+        <HeroImage :name="profileImage" />
       </Avatar>
       <RouterLink
         :to="{ name: 'Profile', params: { username } }"
@@ -95,6 +95,10 @@ h1 {
   color: var(--primary);
   font-size: 1.5em;
   margin-left: var(--inline-spacing);
+}
+
+.profile-image {
+  flex-shrink: 0;
 }
 .username:hover {
   color: var(--primary-hover);

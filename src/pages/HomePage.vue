@@ -25,6 +25,7 @@ const { data: deckData, error } = await supabase
   .select("*")
   .order("created_at", { ascending: false })
   .eq("is_complete", true)
+  .eq("is_private", false)
   .limit(6);
 
 if (error) {

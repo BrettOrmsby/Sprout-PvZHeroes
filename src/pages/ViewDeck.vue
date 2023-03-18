@@ -12,6 +12,7 @@ export default {
   <div class="container">
     <DeckCards />
     <AddCards v-if="isUsersDeck" />
+    <DeckCharts />
   </div>
   <DeckFooter />
 </template>
@@ -29,6 +30,7 @@ import AddCards from "@/components/deck/AddCards.vue";
 import CardModal from "@/components/deck/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
+import DeckCharts from "@/components/deck/DeckCharts.vue";
 
 const props = defineProps<{ id: string }>();
 

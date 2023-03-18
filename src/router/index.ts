@@ -16,7 +16,6 @@ const router = createRouter({
       path: "/",
       component: () => import("@/pages/HomePage.vue"),
     },
-    //TODO: profile page
     {
       name: "Me",
       path: "/me",
