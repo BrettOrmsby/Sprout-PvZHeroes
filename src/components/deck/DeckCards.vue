@@ -5,8 +5,13 @@ export default {
 </script>
 
 <template>
-  <div>
-    <CardTable :isInDeck="true" :cards="cards" />
+  <div class="library-container">
+    <PVZCard
+      v-for="card in cards"
+      :key="card.name"
+      :isInDeck="true"
+      :card="card"
+    />
   </div>
 </template>
 
@@ -14,7 +19,7 @@ export default {
 import { computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck from "@/store/deck";
-import CardTable from "@/components/deck/CardTable.vue";
+import PVZCard from "@/components/deck/PVZCard.vue";
 
 const cards = computed(() =>
   Object.keys(deck.list)
@@ -23,4 +28,13 @@ const cards = computed(() =>
 );
 </script>
 
-<style scoped></style>
+<style scoped>
+.library-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--inline-block-spacing);
+  padding: var(--content-padding);
+  justify-content: space-around;
+}
+</style>

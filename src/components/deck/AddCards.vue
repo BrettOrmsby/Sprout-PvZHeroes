@@ -15,7 +15,14 @@ export default {
             {{ key }}
           </div>
         </template>
-        <CardTable :isInDeck="false" :cards="value" />
+        <div class="library-container">
+          <PVZCard
+            v-for="card in value"
+            :key="card.name"
+            :isInDeck="false"
+            :card="card"
+          />
+        </div>
       </TabPanel>
     </TabView>
   </div>
@@ -28,7 +35,7 @@ import heroData from "@/assets/heros.json";
 import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
 import type { Card } from "@/lib/types";
-import CardTable from "./CardTable.vue";
+import PVZCard from "./PVZCard.vue";
 import TabView from "primevue/tabview";
 import TabPanel from "primevue/tabpanel";
 
@@ -67,5 +74,14 @@ const cardByClass = computed(() => {
 }
 :deep().p-tabview-panels {
   padding: 0;
+}
+
+.library-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--inline-block-spacing);
+  padding: var(--content-padding);
+  justify-content: space-around;
 }
 </style>
