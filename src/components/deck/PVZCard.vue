@@ -164,7 +164,7 @@ const items = computed(() => [
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: var(--inline-block-spacing);
+  gap: var(--inline-spacing);
   padding: calc(var(--content-padding) / 2);
   cursor: pointer;
 }
@@ -174,10 +174,27 @@ const items = computed(() => [
   align-items: center;
   flex-direction: column;
   gap: var(--inline-spacing);
+  width: 3ch;
 }
-.card-image {
-  width: 100px;
+
+@media only screen and (max-width: 600px) {
+  .card-image {
+    width: 60px;
+  }
 }
+
+@media only screen and (min-width: 600px) {
+  .card-image {
+    width: 75px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card-image {
+    width: 100px;
+  }
+}
+
 .gray {
   filter: grayscale(100%);
 }
