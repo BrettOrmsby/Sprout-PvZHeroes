@@ -11,7 +11,6 @@ export type Deck = {
   description: string;
 };
 
-//TODO: better types for class
 export type Hero = {
   name: string;
   image: string;

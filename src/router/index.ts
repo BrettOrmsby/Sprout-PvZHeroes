@@ -110,7 +110,7 @@ const router = createRouter({
 router.beforeEach((to) => {
   const { isSignedIn } = useAuthUser();
   if (
-    !isSignedIn &&
+    !isSignedIn.value &&
     to.meta.requiresAuth &&
     !Object.keys(to.query).includes("fromEmail")
   ) {

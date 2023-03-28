@@ -42,7 +42,6 @@ export default {
 </template>
 
 <script lang="ts" setup>
-//TODO: do the plants vs trick vs environment
 import getCard from "@/lib/getCard";
 import type { Card } from "@/lib/types";
 import deck from "@/store/deck";

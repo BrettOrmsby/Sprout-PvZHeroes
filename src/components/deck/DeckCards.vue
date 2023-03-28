@@ -6,12 +6,16 @@ export default {
 
 <template>
   <div class="library-container">
-    <PVZCard
-      v-for="card in cards"
-      :key="card.name"
-      :isInDeck="true"
-      :card="card"
-    />
+    <Message v-if="cards.length === 0" :severity="'warn'" :closable="false"
+      >Deck Empty</Message
+    >
+    <template v-else>
+      <PVZCard
+        v-for="card in cards"
+        :key="card.name"
+        :isInDeck="true"
+        :card="card"
+    /></template>
   </div>
 </template>
 
@@ -20,6 +24,7 @@ import { computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck from "@/store/deck";
 import PVZCard from "@/components/deck/PVZCard.vue";
+import Message from "primevue/message";
 
 const cards = computed(() =>
   Object.keys(deck.list)

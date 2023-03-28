@@ -35,7 +35,6 @@ export default {
 </template>
 
 <script lang="ts" setup>
-//TODO: the image from the {{type}} in the text
 import states from "@/store/states";
 import getCard from "@/lib/getCard";
 import { computed } from "vue";

@@ -29,6 +29,7 @@ export default {
 </template>
 
 <script lang="ts" setup>
+//TODO: Deleting the deck
 import deck from "@/store/deck";
 import states from "@/store/states";
 import useAuthUser from "@/composables/UseAuthUser";
