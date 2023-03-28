@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <Dialog :modal="true" v-model:visible="states.editModal">
+  <Dialog :modal="true" v-model:visible="states.editModal" @show="updateList">
     <template #header>
       <h2>Editing {{ deck.name }}</h2>
     </template>
@@ -36,6 +36,17 @@ export default {
       </div>
 
       <div class="block">
+        <label for="deckList">Deck List</label>
+        <CardListTextArea
+          id="deckList"
+          v-model:is-error="isCardListError"
+          v-model="newInfo.list"
+          :hero="deck.hero"
+          :key="reloadList"
+        />
+      </div>
+
+      <div class="block">
         <ToggleButton
           v-model="newInfo.is_private"
           onLabel="Private"
@@ -56,11 +67,14 @@ import deck from "@/store/deck";
 import { ref } from "vue";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/thowError";
+import CardListTextArea from "@/components/CardListTextArea.vue";
 import Dialog from "primevue/dialog";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import Button from "primevue/button";
 import ToggleButton from "primevue/togglebutton";
+
+const reloadList = ref(0);
 
 const { supabase } = useSupabase();
 
@@ -68,10 +82,16 @@ const newInfo = ref({
   name: deck.name,
   description: deck.description,
   is_private: deck.is_private,
+  list: deck.list,
 });
 
-const showNameError = ref(false);
+const updateList = () => {
+  newInfo.value.list = deck.list;
+  reloadList.value += 1;
+};
 
+const showNameError = ref(false);
+const isCardListError = ref(false);
 const isLoading = ref(false);
 
 const updateDeck = async () => {
@@ -81,11 +101,21 @@ const updateDeck = async () => {
   } else {
     showNameError.value = false;
   }
+  if (isCardListError.value) {
+    return;
+  }
 
   isLoading.value = true;
   const { data, error } = await supabase
     .from("decks")
-    .update(newInfo.value)
+    .update({
+      ...newInfo.value,
+      is_complete:
+        Object.values(newInfo.value.list).reduce(
+          (prev: number, curr: number) => prev + curr,
+          0
+        ) === 40,
+    })
     .eq("id", deck.id)
     .select();
   if (error) {

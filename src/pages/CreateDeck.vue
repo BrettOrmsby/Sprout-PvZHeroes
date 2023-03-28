@@ -61,6 +61,14 @@ export default {
         maxlength="150"
       />
 
+      <label for="deckList">Deck List (optional)</label>
+      <CardListTextArea
+        id="deckList"
+        v-model:is-error="isCardListError"
+        v-model="deckInfo.list"
+        :hero="deckInfo.hero"
+      />
+
       <ToggleButton
         v-model="deckInfo.isPrivate"
         onLabel="Private"
@@ -81,6 +89,7 @@ import throwError from "@/lib/thowError";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import heroData from "@/assets/heros.json";
+import CardListTextArea from "@/components/CardListTextArea.vue";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import ToggleButton from "primevue/togglebutton";
@@ -93,11 +102,13 @@ const { supabase } = useSupabase();
 const { id } = useAuthUser();
 
 const showNameError = ref(false);
+const isCardListError = ref(false);
 const loading = ref(false);
 const deckInfo = ref({
   name: "",
   hero: "Green Shadow",
   description: "",
+  list: {} as Record<string, number>,
   isPrivate: false,
 });
 
@@ -107,6 +118,9 @@ const createDeck = async () => {
     return;
   } else {
     showNameError.value = false;
+  }
+  if (isCardListError.value) {
+    return;
   }
   loading.value = true;
 
@@ -118,8 +132,12 @@ const createDeck = async () => {
       hero: deckInfo.value.hero,
       description: deckInfo.value.description,
       is_private: deckInfo.value.isPrivate,
-      is_complete: false,
-      list: {},
+      is_complete:
+        Object.values(deckInfo.value.list).reduce(
+          (prev: number, curr: number) => prev + curr,
+          0
+        ) === 40,
+      list: deckInfo.value.list,
     })
     .select("id")
     .single();
