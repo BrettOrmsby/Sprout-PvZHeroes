@@ -40,6 +40,6 @@ const cards = computed(() =>
   align-items: stretch;
   gap: var(--inline-block-spacing);
   padding: var(--content-padding);
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 </style>
