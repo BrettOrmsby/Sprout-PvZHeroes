@@ -9,7 +9,6 @@ import Tooltip from "primevue/tooltip";
 //https://pvzcc.fandom.com/wiki/Page_of_Resources
 /*
 TODO:
-- hover border on card for if the deck is yours
 - delete/ clear deck if deck is yours
 - draw sim
 - official decks

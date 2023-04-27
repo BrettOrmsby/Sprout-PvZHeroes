@@ -6,7 +6,7 @@ export default {
 
 <template>
   <div
-    class="card-container"
+    :class="{ 'card-container': true, 'do-hover': isUsersDeck }"
     @click.prevent="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
@@ -165,10 +165,14 @@ const items = computed(() => [
   align-items: center;
   flex-direction: row;
   gap: var(--inline-spacing);
-  padding: calc(var(--content-padding) / 2);
+  padding: calc(var(--content-padding) / 2 - 2px);
+  border: 2px solid transparent;
   cursor: pointer;
 }
 
+.do-hover:hover {
+  border: 2px solid var(--primary);
+}
 .card-side-bar {
   display: flex;
   align-items: center;
