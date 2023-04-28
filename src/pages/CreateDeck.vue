@@ -85,7 +85,7 @@ export default {
 <script lang="ts" setup>
 import useSupabase from "@/composables/UseSupabase";
 import useAuthUser from "@/composables/UseAuthUser";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import heroData from "@/assets/heros.json";

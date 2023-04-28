@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 
 const router = createRouter({
   history: createWebHistory(),

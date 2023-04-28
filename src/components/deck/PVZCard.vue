@@ -32,7 +32,7 @@ export default {
 </template>
 
 <script lang="ts" setup>
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
 import { ref, computed } from "vue";

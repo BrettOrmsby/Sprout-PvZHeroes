@@ -21,7 +21,7 @@ export default {
 import { ref } from "vue";
 import useAuthUser from "@/composables/UseAuthUser";
 import { useRoute } from "vue-router";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import InputText from "primevue/inputtext";
 import Button from "primevue/button";
 

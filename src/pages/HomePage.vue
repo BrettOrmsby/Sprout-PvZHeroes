@@ -16,7 +16,7 @@ export default {
 
 <script lang="ts" setup>
 import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 const { supabase } = useSupabase();
 

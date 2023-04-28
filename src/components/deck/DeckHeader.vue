@@ -34,7 +34,7 @@ import deck from "@/store/deck";
 import states from "@/store/states";
 import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import { ref, computed, onUnmounted } from "vue";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";

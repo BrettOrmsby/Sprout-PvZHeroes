@@ -20,7 +20,7 @@ export default {
 <script lang="ts" setup>
 import { ref } from "vue";
 import useAuthUser from "@/composables/UseAuthUser";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import Password from "primevue/password";
 import Button from "primevue/button";
 

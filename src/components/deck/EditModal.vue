@@ -66,7 +66,7 @@ import states from "@/store/states";
 import deck from "@/store/deck";
 import { ref } from "vue";
 import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/thowError";
+import throwError from "@/lib/throwError";
 import CardListTextArea from "@/components/CardListTextArea.vue";
 import Dialog from "primevue/dialog";
 import InputText from "primevue/inputtext";
