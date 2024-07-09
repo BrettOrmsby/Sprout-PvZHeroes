@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "CardModal",
-};
-</script>
-
 <template>
   <Dialog
     :modal="true"

@@ -1,8 +1,4 @@
-<script lang="ts">
-export default {
-  name: "DeckHero",
-};
-</script>
+
 
 <template>
   <div class="hero-banner">

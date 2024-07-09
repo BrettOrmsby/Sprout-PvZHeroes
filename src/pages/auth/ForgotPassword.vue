@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "ForgotPassword",
-};
-</script>
-
 <template>
   <div class="container">
     <form v-if="!isEmailSent" @submit.prevent="handleSubmit()">

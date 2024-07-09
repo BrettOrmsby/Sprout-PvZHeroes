@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "PVZCard",
-};
-</script>
-
 <template>
   <div
     :class="{ 'card-container': true, 'do-hover': isUsersDeck }"
@@ -134,11 +128,13 @@ const toggle = (event: Event) => {
 
 const items = computed(() => [
   {
+    // TODO: icon here
     icon: "pi pi-eye",
     label: "View",
     command: viewCard,
   },
   {
+    // TODO: icon here
     icon: "pi pi-plus",
     label: "Add Card",
     visible:
@@ -148,6 +144,7 @@ const items = computed(() => [
     command: addCard,
   },
   {
+    // TODO: icon here
     icon: "pi pi-minus",
     label: "Remove Card",
     visible: props.isInDeck && isUsersDeck.value,

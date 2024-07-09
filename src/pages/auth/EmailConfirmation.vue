@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "EmailConfirmation",
-};
-</script>
-
 <template>
   <div class="main-container">
     <h1>Thanks for registering!</h1>

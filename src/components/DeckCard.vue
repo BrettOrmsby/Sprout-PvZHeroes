@@ -1,10 +1,3 @@
-<script lang="ts">
-export default {
-  name: "DeckCard",
-  components: { HeroImage },
-};
-</script>
-
 <template>
   <RouterLink
     :to="{ name: 'ViewDeck', params: { id: deck.id } }"
@@ -12,17 +5,19 @@ export default {
   >
     <div class="title-container">
       <Avatar size="large" shape="circle" class="hero">
-        <HeroImage :name="deck.hero" />
+        <!-- TODO: hero image here-->
       </Avatar>
       <h2>{{ deck.name }}</h2>
     </div>
     <p class="description">{{ deck.description }}</p>
     <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
     <div style="position: relative">
+      <!-- TODO: icon here-->
       <i
         class="pi pi-lock private-icon"
         v-if="isUsersDeck && deck.is_private"
       ></i>
+      <!-- TODO: icon here-->
       <i
         class="pi pi-globe private-icon"
         v-if="isUsersDeck && !deck.is_private"
@@ -34,7 +29,6 @@ export default {
 <script lang="ts" setup>
 import useAuthUser from "@/composables/UseAuthUser";
 import { computed, ref, onUnmounted } from "vue";
-import HeroImage from "./deck/HeroImage.vue";
 import Avatar from "primevue/avatar";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";

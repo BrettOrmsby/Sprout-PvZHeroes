@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "AddCards",
-};
-</script>
-
 <template>
   <div>
     <h2>Library</h2>

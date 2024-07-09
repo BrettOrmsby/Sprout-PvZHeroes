@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "DeckCharts",
-};
-</script>
-
 <template>
   <h2>Deck Data</h2>
   <div class="chart-container">

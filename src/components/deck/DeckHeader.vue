@@ -1,15 +1,9 @@
-<script lang="ts">
-export default {
-  name: "DeckHeader",
-};
-</script>
-
 <template>
   <EditModal />
   <header>
     <div class="user-container">
       <Avatar size="large" shape="circle" class="profile-image">
-        <HeroImage :name="profileImage" />
+        <!-- hero image here-->
       </Avatar>
       <RouterLink
         :to="{ name: 'Profile', params: { username } }"
@@ -20,6 +14,7 @@ export default {
     <h1>{{ deck.name }}</h1>
     <p>{{ deck.description }}</p>
     <p>Last updated {{ timeSinceUpdate }}</p>
+    <!-- TODO: pen icon here-->
     <Button
       v-if="isUsersDeck"
       icon="pi pi-pencil"
@@ -40,7 +35,6 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Avatar from "primevue/avatar";
 import Button from "primevue/button";
-import HeroImage from "@/components/deck/HeroImage.vue";
 import EditModal from "@/components/deck/EditModal.vue";
 
 dayjs.extend(relativeTime);

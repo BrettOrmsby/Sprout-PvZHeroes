@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "PasswordReset",
-};
-</script>
-
 <template>
   <div class="container">
     <form v-if="!isPasswordChanged" @submit.prevent="handleSubmit()">

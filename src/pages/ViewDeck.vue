@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  name: "ViewDeck",
-};
-</script>
 
 <template>
   <CardModal />

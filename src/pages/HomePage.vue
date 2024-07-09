@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  name: "HomePage",
-};
-</script>
 
 <template>
   <div class="container">

@@ -1,8 +1,4 @@
-<script lang="ts">
-export default {
-  name: "TheHeader",
-};
-</script>
+
 
 <template>
   <Menuebar :model="items" />

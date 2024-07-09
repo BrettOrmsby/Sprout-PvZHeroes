@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  name: "CreateDeck",
-};
-</script>
 
 <template>
   <div class="container">
@@ -69,6 +64,7 @@ export default {
         :hero="deckInfo.hero"
       />
 
+      <!-- TODO: icon here-->
       <ToggleButton
         v-model="deckInfo.isPrivate"
         onLabel="Private"

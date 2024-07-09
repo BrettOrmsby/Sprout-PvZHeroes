@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  name: "404Page",
-};
-</script>
 
 <template>
   <div class="container">

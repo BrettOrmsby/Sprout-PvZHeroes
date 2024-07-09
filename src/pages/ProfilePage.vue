@@ -1,14 +1,11 @@
-<script lang="ts">
-export default {
-  name: "ProfilePage",
-};
-</script>
+
 
 <template>
   <div class="container">
     <header class="profile-container">
       <Avatar size="xlarge" shape="circle" class="profile-image">
-        <HeroImage :name="profileImage" />
+        <!-- TODO: hero image here-->
+        
       </Avatar>
       <h1>{{ username }}</h1>
     </header>
@@ -24,7 +21,6 @@ export default {
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
-import HeroImage from "@/components/deck/HeroImage.vue";
 import Avatar from "primevue/avatar";
 
 const props = defineProps<{ username: string }>();

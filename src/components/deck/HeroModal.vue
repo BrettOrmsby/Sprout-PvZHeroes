@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "HeroModal",
-};
-</script>
-
 <template>
   <Dialog
     :modal="true"

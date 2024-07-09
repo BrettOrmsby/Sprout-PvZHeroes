@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "DeckCards",
-};
-</script>
-
 <template>
   <div class="library-container">
     <Message v-if="cards.length === 0" :severity="'warn'" :closable="false"

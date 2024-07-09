@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "EditModal",
-};
-</script>
-
 <template>
   <Dialog
     :modal="true"
@@ -59,6 +53,7 @@ export default {
           onIcon="pi pi-lock"
           offIcon="pi pi-globe"
         />
+        <!-- TODO: icons here, or make it better-->
       </div>
 
       <Button :loading="isLoading" label="Submit" type="submit" />

@@ -1,8 +1,3 @@
-<script lang="ts">
-export default {
-  name: "SignInPage",
-};
-</script>
 
 <template>
   <div class="container">

@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "DeckFooter",
-};
-</script>
-
 <template>
   <footer class="footer">
     <span>{{ cardsInDeck.length }}/40</span>

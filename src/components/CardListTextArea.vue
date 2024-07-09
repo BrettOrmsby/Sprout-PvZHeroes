@@ -1,9 +1,3 @@
-<script lang="ts">
-export default {
-  name: "CardListTextArea",
-};
-</script>
-
 <template>
   <Textarea
     :placeholder="placeholder"

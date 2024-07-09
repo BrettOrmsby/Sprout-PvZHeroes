@@ -1,8 +1,4 @@
-<script lang="ts">
-export default {
-  name: "RegisterPage",
-};
-</script>
+
 
 <template>
   <div class="container">

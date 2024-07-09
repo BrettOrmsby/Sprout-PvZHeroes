@@ -30,7 +30,6 @@ const specialSparkCosts: Record<string, number> = {
 };
 
 export default function calculateSparkCost(card: Card): number {
-  console.log(card, regularSparkCosts[card.rarity]);
   if (card.name in specialSparkCosts) {
     return specialSparkCosts[card.name];
   }
