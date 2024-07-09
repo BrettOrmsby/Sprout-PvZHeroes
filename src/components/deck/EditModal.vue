@@ -5,7 +5,12 @@ export default {
 </script>
 
 <template>
-  <Dialog :modal="true" v-model:visible="states.editModal" @show="updateList">
+  <Dialog
+    :modal="true"
+    v-model:visible="states.editModal"
+    @show="updateList"
+    :style="{ width: '100%', 'max-width': '500px' }"
+  >
     <template #header>
       <h2>Editing {{ deck.name }}</h2>
     </template>

@@ -42,6 +42,7 @@ export default {
 </template>
 
 <script lang="ts" setup>
+import calculateSparkCost from "@/lib/calculateSparkCost";
 import getCard from "@/lib/getCard";
 import type { Card } from "@/lib/types";
 import deck from "@/store/deck";
@@ -78,14 +79,9 @@ const legendarys = computed(() => countInDeck("rarity", "legendary"));
 const events = computed(() => countInDeck("rarity", "event"));
 
 const sparks = computed(() => {
-  return (
-    basics.value * 25 +
-    uncommons.value * 50 +
-    rares.value * 250 +
-    superRares.value * 1000 +
-    legendarys.value * 4000 +
-    events.value * 2000
-  );
+  return cardsInDeck.value
+    .map((card) => calculateSparkCost(card))
+    .reduce((prev, curr) => prev + curr, 0);
 });
 </script>
 
