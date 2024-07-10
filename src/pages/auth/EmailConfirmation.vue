@@ -1,12 +1,12 @@
 <template>
-  <div class="main-container">
+  <main>
     <h1>Thanks for registering!</h1>
     <p>
       Please confirm your email to finishing registering<span v-if="email"
         >: {{ email }}</span
       ><span v-else>.</span>
     </p>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>

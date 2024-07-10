@@ -1,6 +1,5 @@
-
 <template>
-  <div class="container">
+  <main>
     <h1>Sign In</h1>
     <form @submit.prevent="handleSignIn()">
       <label for="email">Email</label>
@@ -21,7 +20,7 @@
         <Button label="Forgot Password" link />
       </router-link>
     </form>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -56,19 +55,19 @@ const handleSignIn = async () => {
 </script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
+main {
   max-width: 500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
   display: block;
-  margin-bottom: var(--inline-spacing);
+  margin-bottom: var(--inline-space);
 }
 :deep() :is(.p-inputtext, .p-password) {
   display: block;
-  margin-bottom: var(--inline-block-spacing);
+  margin-bottom: var(--block-space);
   width: 100%;
 }
 :deep() .p-button-link:focus {

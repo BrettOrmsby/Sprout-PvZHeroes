@@ -1,55 +1,56 @@
 <template>
-  <Textarea
-    :placeholder="placeholder"
-    rows="6"
-    :class="{ textarea: true, 'p-invalid': isError, error: isError }"
-    v-bind="$attrs"
-    v-model.lazy="textarea"
-    @change="
-      () => {
-        emit('update:modelValue', jsonDeck);
-        emit('update:isError', isError);
-      }
-    "
-  >
-  </Textarea>
-  <small v-if="isError">
-    <span v-if="errors.format.length"
-      >Invalid card formatting on line<span v-if="errors.format.length > 1"
-        >s</span
+  <div class="card-list-textarea">
+    <Textarea
+      :placeholder="placeholder"
+      rows="6"
+      :class="{ textarea: true, 'p-invalid': isError, error: isError }"
+      v-bind="$attrs"
+      v-model.lazy="textarea"
+      @change="
+        () => {
+          emit('update:modelValue', jsonDeck);
+          emit('update:isError', isError);
+        }
+      "
+    >
+    </Textarea>
+    <small v-if="isError">
+      <span v-if="errors.format.length"
+        >Invalid card formatting on line<span v-if="errors.format.length > 1"
+          >s</span
+        >
+        {{ arrayToList(errors.format) }}</span
       >
-      {{ arrayToList(errors.format) }}</span
-    >
-    <span v-if="errors.number.length"
-      >Invalid card amount<span v-if="errors.number.length > 1">s</span> on
-      line<span v-if="errors.number.length > 1">s</span>
-      {{ arrayToList(errors.number) }}</span
-    >
-    <span v-if="errors.cardName.length"
-      >Invalid card name<span v-if="errors.cardName.length > 1">s</span>:
-      {{ arrayToList(errors.cardName) }}</span
-    >
-    <span v-if="errors.duplicate.length"
-      >Duplicate card name<span v-if="errors.duplicate.length > 1">s</span>:
-      {{ arrayToList(errors.duplicate) }}</span
-    >
-    <span v-if="errors.invalidCard.length"
-      >Invalid card<span v-if="errors.duplicate.length > 1">s</span> for a
-      {{ computedHero.name }} deck: {{ arrayToList(errors.invalidCard) }}</span
-    >
-  </small>
+      <span v-if="errors.number.length"
+        >Invalid card amount<span v-if="errors.number.length > 1">s</span> on
+        line<span v-if="errors.number.length > 1">s</span>
+        {{ arrayToList(errors.number) }}</span
+      >
+      <span v-if="errors.cardName.length"
+        >Invalid card name<span v-if="errors.cardName.length > 1">s</span>:
+        {{ arrayToList(errors.cardName) }}</span
+      >
+      <span v-if="errors.duplicate.length"
+        >Duplicate card name<span v-if="errors.duplicate.length > 1">s</span>:
+        {{ arrayToList(errors.duplicate) }}</span
+      >
+      <span v-if="errors.invalidCard.length"
+        >Invalid card<span v-if="errors.duplicate.length > 1">s</span> for a
+        {{ computedHero.name }} deck:
+        {{ arrayToList(errors.invalidCard) }}</span
+      >
+    </small>
+  </div>
 </template>
 
 <script lang="ts" setup>
-//TODO: try to disable transition on margin
 import { ref, computed } from "vue";
 import getCard from "@/lib/getCard";
-import heroData from "@/assets/heros.json";
 import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
-import type { Hero } from "@/lib/types";
+import getHero from "@/lib/getHero";
 import Textarea from "primevue/textarea";
-
+// TODO: small re-write with using new define modal and allowing lower case
 const props = defineProps<{
   modelValue: Record<string, number> | null;
   isError: boolean;
@@ -77,20 +78,14 @@ const errors = ref<CardListErrors>({
 
 const isError = computed(() => Object.values(errors.value).flat().length > 0);
 
-const computedHero = computed(() => {
-  const hero = [...heroData.plants, ...heroData.zombies].find(
-    (e) => e.name === props.hero
-  ) as Hero;
-  // update the value when the the hero changes
-  return hero;
-});
+const computedHero = computed(() => getHero(props.hero));
 
 const placeholder = computed(() => {
   const hero = computedHero.value;
   const card = [...plants, ...zombies].find((e) =>
     hero.class.includes(e.class)
   );
-  return `4x ${card?.name}`;
+  return `4 ${card?.name}`;
 });
 
 const jsonToText = (obj: Record<string, number> | null): string => {
@@ -99,7 +94,7 @@ const jsonToText = (obj: Record<string, number> | null): string => {
   }
   return Object.entries(obj)
     .map(([card, amount]) => {
-      return amount + "x " + card;
+      return amount + " " + card;
     })
     .join("\n");
 };
@@ -124,7 +119,7 @@ const jsonDeck = computed((): Record<string, number> => {
     if (!line) {
       continue;
     }
-    const match = line.match(/^(\d+)x\s*([^$]+)$/);
+    const match = line.match(/^(\d+)\s*([^$]+)$/);
     if (!match) {
       errors.value.format.push(i + 1);
       continue;
@@ -171,18 +166,18 @@ const arrayToList = (array: any[]) =>
   resize: none;
 }
 .error {
-  margin-bottom: var(--inline-spacing) !important;
+  margin-bottom: var(--inline-space) !important;
 }
 
 label {
   display: block;
-  margin-bottom: var(--inline-spacing);
+  margin-bottom: var(--inline-space);
 }
 
 small {
   display: block;
-  margin-bottom: var(--inline-block-spacing);
   white-space: pre-line;
+  color: var(--p-red-300);
 }
 small span {
   display: block;

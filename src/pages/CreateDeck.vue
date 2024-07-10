@@ -1,6 +1,5 @@
-
 <template>
-  <div class="container">
+  <main>
     <h1>Create a Deck</h1>
     <form @submit.prevent="createDeck()">
       <label for="name">Name</label>
@@ -11,12 +10,12 @@
         :class="{ 'p-invalid': showNameError }"
         maxlength="50"
       />
-      <small v-if="showNameError" id="invalidName" class="p-error"
+      <small v-if="showNameError" id="invalidName" class="error"
         >Must include a name.</small
       >
 
       <span id="heroLabel">Hero</span>
-      <Dropdown
+      <Select
         v-model="deckInfo.hero"
         :options="[...heroData.plants, ...heroData.zombies]"
         optionLabel="name"
@@ -27,7 +26,7 @@
           <div v-if="slotProps.value" class="hero-select-container">
             <img
               :alt="slotProps.value"
-              :src="findHero(slotProps.value).image"
+              :src="getHero(slotProps.value).image"
               class="hero-image"
             />
             <div>{{ slotProps.value }}</div>
@@ -46,7 +45,7 @@
             <div>{{ slotProps.option.name }}</div>
           </div>
         </template>
-      </Dropdown>
+      </Select>
 
       <label for="description">Description</label>
       <Textarea
@@ -65,17 +64,12 @@
       />
 
       <!-- TODO: icon here-->
-      <ToggleButton
-        v-model="deckInfo.isPrivate"
-        onLabel="Private"
-        offLabel="Public"
-        onIcon="pi pi-lock"
-        offIcon="pi pi-globe"
-      />
+      <label for="visibility">Make Private</label>
+      <ToggleSwitch inputId="visibility" v-model="deckInfo.isPrivate" />
 
       <Button label="Create Deck" type="submit" :loading="loading" />
     </form>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -88,10 +82,10 @@ import heroData from "@/assets/heros.json";
 import CardListTextArea from "@/components/CardListTextArea.vue";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
-import ToggleButton from "primevue/togglebutton";
+import ToggleSwitch from "primevue/toggleswitch";
 import Button from "primevue/button";
-import Dropdown from "primevue/dropdown";
-import type { Hero } from "@/lib/types";
+import Select from "primevue/select";
+import getHero from "@/lib/getHero";
 
 const router = useRouter();
 const { supabase } = useSupabase();
@@ -146,49 +140,60 @@ const createDeck = async () => {
   }
   router.push({ name: "ViewDeck", params: { id: data.id } });
 };
-
-const findHero = (name: string) =>
-  [...heroData.plants, ...heroData.zombies].find(
-    (e) => e.name === name
-  ) as Hero;
 </script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
+main {
   max-width: 500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label,
 #heroLabel {
   display: block;
-  margin-bottom: var(--inline-spacing);
+  margin-bottom: var(--inline-space);
 }
 
-.p-error {
-  position: relative;
-  bottom: var(--inline-spacing);
+.error {
+  margin-top: var(--inline-space);
+  margin-bottom: var(--block-space);
+  color: var(--p-red-300);
+  display: block;
 }
 
 .hero-image {
   height: 2em;
-  margin-right: var(--inline-spacing);
+  margin-right: var(--inline-space);
 }
+
 .hero-select-container {
   display: flex;
   align-items: center;
 }
 
-:deep():is(.p-inputtext, .p-password, .p-dropdown) {
-  margin-bottom: var(--inline-block-spacing);
+.p-inputtext,
+.p-select,
+.p-textarea,
+.card-list-textarea {
   width: 100%;
 }
-:deep() .p-dropdown-label {
+
+:is(
+    .p-inputtext,
+    .p-select,
+    .p-textarea,
+    .p-toggleswitch,
+    .card-list-textarea
+  ):has(+ :not(small)) {
+  margin-bottom: var(--block-space);
+}
+
+:deep(.p-dropdown-label) {
   margin-bottom: 0;
 }
-:deep() .p-button {
-  margin-bottom: var(--inline-block-spacing);
+:deep(.p-button) {
+  margin-bottom: var(--block-space);
   display: block;
   width: fit-content;
 }

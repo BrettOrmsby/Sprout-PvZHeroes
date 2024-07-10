@@ -1,14 +1,13 @@
-
 <template>
   <CardModal />
   <HeroModal />
   <DeckHeader />
   <DeckHero />
-  <div class="container">
+  <main>
     <DeckCards />
     <AddCards v-if="isUsersDeck" />
     <DeckCharts />
-  </div>
+  </main>
   <DeckFooter />
 </template>
 
@@ -48,7 +47,16 @@ if (data && data[0]) {
 .overflow {
   overflow: scroll;
 }
-.container {
-  padding: var(--content-padding);
+h1,
+h2 {
+  text-align: center;
+}
+
+.deck-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--inline-space);
+  justify-content: center;
+  align-items: stretch;
 }
 </style>

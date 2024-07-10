@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="hero-banner">
     <img

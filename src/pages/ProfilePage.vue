@@ -1,28 +1,36 @@
-
-
 <template>
-  <div class="container">
+  <main>
     <header class="profile-container">
-      <Avatar size="xlarge" shape="circle" class="profile-image">
-        <!-- TODO: hero image here-->
-        
+      <Avatar
+        size="xlarge"
+        shape="circle"
+        class="profile-image"
+        :image="getHero(profileImage).image"
+      >
       </Avatar>
       <h1>{{ username }}</h1>
     </header>
 
     <h2>Decks</h2>
     <div class="deck-container">
-      <DeckCard v-for="deck in deckData" :key="deck.id" :deck="(deck as any)" />
+      <DeckCard
+        v-for="deck in deckData"
+        :key="deck.id"
+        :deck="(deck as any)"
+        showVisibility
+      />
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
+import getHero from "@/lib/getHero";
 import Avatar from "primevue/avatar";
-
+// TODO: loading here too
+// TODO: new deck button
 const props = defineProps<{ username: string }>();
 
 const { supabase } = useSupabase();
@@ -53,23 +61,23 @@ if (error) {
 </script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
-}
-
 .profile-container {
   display: flex;
   align-items: center;
 }
 .profile-image {
-  margin-right: var(--inline-spacing);
+  margin-right: var(--inline-space);
   flex-shrink: 0;
 }
 
+h2 {
+  text-align: center;
+}
 .deck-container {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--inline-block-spacing);
+  gap: var(--inline-space);
   justify-content: center;
+  align-items: stretch;
 }
 </style>

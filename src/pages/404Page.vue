@@ -1,17 +1,15 @@
-
 <template>
-  <div class="container">
+  <main>
     <h1>404</h1>
     <p>Page not found</p>
-  </div>
+  </main>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// TODO: return home link
+</script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
-}
 h1 {
   font-size: 3em;
   text-align: center;

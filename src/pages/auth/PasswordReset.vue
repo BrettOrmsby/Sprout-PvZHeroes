@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main>
     <form v-if="!isPasswordChanged" @submit.prevent="handleSubmit()">
       <h1>Change Password</h1>
       <label for="password">Password</label>
@@ -8,7 +8,7 @@
       <Button label="Change Password" type="submit" :loading="loading" />
     </form>
     <h1 v-else>Password Changed</h1>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -37,19 +37,19 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
+main {
   max-width: 500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
   display: block;
-  margin-bottom: var(--inline-spacing);
+  margin-bottom: var(--inline-space);
 }
 :deep() :is(.p-inputtext, .p-password) {
   display: block;
-  margin-bottom: var(--inline-block-spacing);
+  margin-bottom: var(--block-space);
   width: 100%;
 }
 :deep() .p-button-link:focus {

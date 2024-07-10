@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main>
     <form v-if="!isEmailSent" @submit.prevent="handleSubmit()">
       <h1>Forgot Password</h1>
       <label for="email">Email</label>
@@ -8,7 +8,7 @@
       <Button label="Send Reset Email" type="submit" :loading="loading" />
     </form>
     <h1 v-else>Email Sent</h1>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -39,19 +39,20 @@ const handleSubmit = async () => {
 </script>
 
 <style scoped>
-.container {
-  padding: var(--content-padding);
+main {
   max-width: 500px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 label {
   display: block;
-  margin-bottom: var(--inline-spacing);
+  margin-bottom: var(--inline-space);
 }
-:deep() .p-inputtext {
+
+.p-inputtext {
   display: block;
-  margin-bottom: var(--inline-block-spacing);
+  margin-bottom: var(--block-space);
   width: 100%;
 }
 </style>

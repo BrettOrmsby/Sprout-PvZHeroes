@@ -1,12 +1,12 @@
-
 <template>
-  <div class="container">
+  <main>
     <h1>Name</h1>
 
+    <h2>Latest Decks</h2>
     <div class="deck-container">
       <DeckCard v-for="deck in deckData" :key="deck.id" :deck="(deck as any)" />
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts" setup>
@@ -27,20 +27,20 @@ if (error) {
   throwError(error);
   throw new Error();
 }
+// TODO: show loading. Is there a suspense somewhere????
 </script>
 
 <style scoped>
-h1 {
+h1,
+h2 {
   text-align: center;
 }
 
-.container {
-  padding: var(--content-padding);
-}
 .deck-container {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--inline-block-spacing);
+  gap: var(--inline-space);
   justify-content: center;
+  align-items: stretch;
 }
 </style>
