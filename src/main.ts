@@ -12,7 +12,6 @@ import { definePreset } from "@primevue/themes";
 //https://pvzcc.fandom.com/wiki/Page_of_Resources
 /*
 TODO:
-- two components titled deck card but one plurel
 - draw sim
 - official decks
 - explore decks/users

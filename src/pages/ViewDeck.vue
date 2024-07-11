@@ -13,7 +13,7 @@
         <Cog :class="iconClass.class" />
       </template>
     </Button>
-    <DeckCards />
+    <TheDeck />
     <AddCards v-if="isUsersDeck" />
     <DeckCharts />
   </main>
@@ -27,7 +27,7 @@ import useAuthUser from "@/composables/UseAuthUser";
 import deck from "@/store/deck";
 import { computed } from "vue";
 import DeckHeader from "@/components/deck/DeckHeader.vue";
-import DeckCards from "@/components/deck/DeckCards.vue";
+import TheDeck from "@/components/deck/TheDeck.vue";
 import AddCards from "@/components/deck/AddCards.vue";
 import CardModal from "@/components/deck/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
