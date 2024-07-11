@@ -19,7 +19,6 @@ TODO:
 - export/duplicate deck
 - Keyboard shortcuts for adding/removing card from deck
 - better main page
-- add all and remove all
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
 */

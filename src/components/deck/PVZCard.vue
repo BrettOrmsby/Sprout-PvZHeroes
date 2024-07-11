@@ -24,7 +24,10 @@
         <a v-bind="props.action">
           <Eye v-if="item.label === 'View'" />
           <Plus v-else-if="item.label === 'Add Card'" />
+          <Grid2x2Check v-else-if="item.label === 'Add All'" />
           <Minus v-else-if="item.label === 'Remove Card'" />
+          <Grid2x2X v-else-if="item.label === 'Remove All'" />
+
           <span>{{ item.label }}</span>
         </a>
       </template>
@@ -42,7 +45,7 @@ import deck from "@/store/deck";
 import states from "@/store/states";
 import heroData from "@/assets/heros.json";
 import Menu from "primevue/menu";
-import { Eye, Plus, Minus } from "lucide-vue-next";
+import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from "lucide-vue-next";
 
 const props = defineProps<{ card: Card; isInDeck: boolean }>();
 
@@ -68,49 +71,11 @@ const isValid = computed(
   () => numberLeft.value !== 0 && hero.value.class.includes(props.card.class)
 );
 
-const viewCard = () => {
-  states.cardModal.card = props.card.name;
-  states.cardModal.show = true;
-};
-
 const { id } = useAuthUser();
 
 const isUsersDeck = computed(() => id.value === deck.creator);
 const { supabase } = useSupabase();
-
-const addCard = async () => {
-  const newAmount = deck.list[props.card.name]
-    ? deck.list[props.card.name] + 1
-    : 1;
-  const newList = { ...deck.list };
-  newList[props.card.name] = newAmount;
-
-  const { data, error } = await supabase
-    .from("decks")
-    .update({
-      list: newList,
-      is_complete:
-        Object.values(newList).reduce((prev, curr) => prev + curr) === 40,
-    })
-    .eq("id", deck.id)
-    .select();
-
-  if (error) {
-    throwError(error);
-    return;
-  }
-
-  Object.assign(deck, data[0]);
-};
-
-const removeCard = async () => {
-  const newAmount = deck.list[props.card.name] - 1;
-  const newList = { ...deck.list };
-  newList[props.card.name] = newAmount;
-  if (newList[props.card.name] === 0) {
-    delete newList[props.card.name];
-  }
-
+const updateDeck = async (newList: Record<string, number>) => {
   const { data, error } = await supabase
     .from("decks")
     .update({
@@ -126,6 +91,39 @@ const removeCard = async () => {
     return;
   }
   Object.assign(deck, data[0]);
+};
+
+const addCard = async () => {
+  const newAmount = deck.list[props.card.name]
+    ? deck.list[props.card.name] + 1
+    : 1;
+  const newList = { ...deck.list, [props.card.name]: newAmount };
+  updateDeck(newList);
+};
+
+const addAll = async () => {
+  const newList = { ...deck.list, [props.card.name]: 4 };
+  updateDeck(newList);
+};
+
+const removeCard = async () => {
+  const newAmount = deck.list[props.card.name] - 1;
+  const newList = { ...deck.list, [props.card.name]: newAmount };
+  if (newList[props.card.name] === 0) {
+    delete newList[props.card.name];
+  }
+  updateDeck(newList);
+};
+
+const removeAll = async () => {
+  const newList = { ...deck.list };
+  delete newList[props.card.name];
+  updateDeck(newList);
+};
+
+const viewCard = () => {
+  states.cardModal.card = props.card.name;
+  states.cardModal.show = true;
 };
 // TODO: somehow show loading for commands
 const menu = ref();
@@ -148,10 +146,22 @@ const items = computed(() => [
     command: addCard,
   },
   {
-    icon: "pi pi-minus",
+    label: "Add All",
+    visible:
+      isUsersDeck.value &&
+      ((props.isInDeck && numberLeft.value <= 2) ||
+        (!props.isInDeck && numberLeft.value >= 2)),
+    command: addAll,
+  },
+  {
     label: "Remove Card",
     visible: props.isInDeck && isUsersDeck.value,
     command: removeCard,
+  },
+  {
+    label: "Remove All",
+    visible: props.isInDeck && isUsersDeck.value && numberLeft.value >= 2,
+    command: removeAll,
   },
 ]);
 </script>
