@@ -1,6 +1,16 @@
 <template>
   <header>
     <Menuebar :model="items">
+      <template #start>
+        <div class="p-menubar-item logo-container">
+          <div class="p-menubar-item-content">
+            <RouterLink to="/" class="p-menubar-item-link">
+              <Sprout />
+              <span>Home</span>
+            </RouterLink>
+          </div>
+        </div>
+      </template>
       <template #item="{ item, props, hasSubmenu }">
         <router-link
           v-if="item.route"
@@ -9,7 +19,6 @@
           custom
         >
           <a :href="href" v-bind="props.action" @click="navigate">
-            <Sprout v-if="item.label === 'Home'" />
             <span>{{ item.label }}</span>
           </a>
         </router-link>
@@ -30,11 +39,6 @@ import useAuthUser from "@/composables/UseAuthUser";
 const { isSignedIn } = useAuthUser();
 const items = computed(() => {
   return [
-    {
-      label: "Home",
-      route: "/",
-    },
-
     {
       label: "Profile",
       visible: isSignedIn.value,

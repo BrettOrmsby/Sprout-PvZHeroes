@@ -17,7 +17,6 @@ TODO:
 - sort deck by cost
 - official decks
 - explore decks
-- Nav bar home link should be at the start so it does not collapse
 - user settings
 - sort personal decks by last updated
 - export/duplicate deck
