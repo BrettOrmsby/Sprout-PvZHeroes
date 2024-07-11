@@ -127,7 +127,7 @@ const removeCard = async () => {
   }
   Object.assign(deck, data[0]);
 };
-// TODO: somehow show loading
+// TODO: somehow show loading for commands
 const menu = ref();
 
 const toggle = (event: Event) => {

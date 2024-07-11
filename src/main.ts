@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import PrimeVue from "primevue/config";
 import ToastService from "primevue/toastservice";
+import ConfirmationService from "primevue/confirmationservice";
 import Tooltip from "primevue/tooltip";
 import Aura from "@primevue/themes/aura";
 import { definePreset } from "@primevue/themes";
@@ -12,16 +13,14 @@ import { definePreset } from "@primevue/themes";
 /*
 TODO:
 - two components titled deck card but one plurel
-- delete/ clear deck if deck is yours
 - draw sim
 - sort deck by cost
 - official decks
 - explore decks
-- Nav bar home should be at the start
+- Nav bar home link should be at the start so it does not collapse
 - user settings
-- change tab colours?
 - sort personal decks by last updated
-- export/copy deck
+- export/duplicate deck
 - Keyboard shortcuts for adding/removing card from deck
 - better main page
 - add all and remove all
@@ -35,6 +34,7 @@ const app = createApp(App);
 
 app.use(router);
 app.use(ToastService);
+app.use(ConfirmationService);
 app.directive("tooltip", Tooltip);
 
 app.use(PrimeVue, {

@@ -40,9 +40,31 @@
       />
 
       <label for="visibility">Make Private</label>
-      <ToggleSwitch inputId="visibility" v-model="newInfo.isPrivate" />
+      <ToggleSwitch inputId="visibility" v-model="newInfo.is_private" />
 
-      <Button :loading="isLoading" label="Update" type="submit" />
+      <div class="footer">
+        <Button
+          label="Cancel"
+          @click="() => (states.editModal = false)"
+          severity="secondary"
+          :disabled="isDeleting || isLoading"
+        />
+        <Button
+          :loading="isDeleting"
+          label="Delete"
+          @click="deleteDeck"
+          severity="danger"
+          :aria-expanded="isConfirmVisible"
+          :aria-controls="isConfirmVisible ? 'confirm' : null"
+          :disabled="isLoading"
+        />
+        <Button
+          :loading="isLoading"
+          label="Update"
+          type="submit"
+          :disabled="isDeleting"
+        />
+      </div>
     </form>
   </Dialog>
 </template>
@@ -54,13 +76,14 @@ import { ref } from "vue";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import CardListTextArea from "@/components/CardListTextArea.vue";
+import { useConfirm } from "primevue/useconfirm";
+import { useRouter } from "vue-router";
 import Dialog from "primevue/dialog";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import Button from "primevue/button";
 import ToggleSwitch from "primevue/toggleswitch";
 
-// TODO: here is where the delete button is
 const reloadList = ref(0);
 
 const { supabase } = useSupabase();
@@ -68,7 +91,7 @@ const { supabase } = useSupabase();
 const newInfo = ref({
   name: deck.name,
   description: deck.description,
-  isPrivate: deck.is_private,
+  is_private: deck.is_private,
   list: deck.list,
 });
 
@@ -116,6 +139,44 @@ const updateDeck = async () => {
   isLoading.value = false;
   states.editModal = false;
 };
+
+const router = useRouter();
+const isDeleting = ref(false);
+const confirm = useConfirm();
+const isConfirmVisible = ref(false);
+const deleteDeck = () => {
+  confirm.require({
+    message: `Are you sure you want to delete ${deck.name}? This action cannot be undone.`,
+    header: "Confirm Delete",
+    rejectProps: {
+      label: "Cancel",
+      severity: "secondary",
+    },
+    acceptProps: {
+      label: "Delete",
+      severity: "danger",
+    },
+    async accept() {
+      isDeleting.value = true;
+      const { error } = await supabase.from("decks").delete().eq("id", deck.id);
+
+      if (error) {
+        isDeleting.value = false;
+        throwError(error);
+        return;
+      }
+
+      states.editModal = false;
+      router.push({ name: "Home" });
+    },
+    onShow: () => {
+      isConfirmVisible.value = true;
+    },
+    onHide: () => {
+      isConfirmVisible.value = false;
+    },
+  });
+};
 </script>
 
 <style scoped>
@@ -152,9 +213,10 @@ label,
   margin-bottom: var(--block-space);
 }
 
-:deep(.p-button) {
-  margin-bottom: var(--block-space);
-  display: block;
-  width: fit-content;
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--inline-space);
 }
 </style>
