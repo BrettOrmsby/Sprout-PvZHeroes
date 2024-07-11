@@ -14,6 +14,7 @@ import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 const { supabase } = useSupabase();
+import type { Deck } from "@/lib/types";
 
 const { data: deckData, error } = await supabase
   .from("decks")
@@ -21,7 +22,8 @@ const { data: deckData, error } = await supabase
   .order("created_at", { ascending: false })
   .eq("is_complete", true)
   .eq("is_private", false)
-  .limit(6);
+  .limit(6)
+  .returns<Deck[]>();
 
 if (error) {
   throwError(error);

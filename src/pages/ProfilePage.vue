@@ -14,7 +14,7 @@
     <h2>Decks</h2>
     <div class="deck-container">
       <DeckCard
-        v-for="deck in deckData"
+        v-for="deck in sortedDecks"
         :key="deck.id"
         :deck="(deck as any)"
         showVisibility
@@ -29,6 +29,8 @@ import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 import getHero from "@/lib/getHero";
 import Avatar from "primevue/avatar";
+import { computed } from "vue";
+import type { Deck } from "@/lib/types";
 // TODO: loading here too
 // TODO: new deck button
 const props = defineProps<{ username: string }>();
@@ -52,7 +54,20 @@ const profileImage = query.profile_image;
 const { data: deckData, error } = await supabase
   .from("decks")
   .select("*")
-  .eq("creator", userId);
+  .eq("creator", userId)
+  .returns<Deck[]>();
+
+if (error) {
+  throwError(error);
+  throw new Error();
+}
+
+const sortedDecks = computed(() =>
+  deckData!.sort(
+    (a, b) =>
+      new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
+  )
+);
 
 if (error) {
   throwError(error);

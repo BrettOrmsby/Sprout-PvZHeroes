@@ -36,6 +36,7 @@ import DeckCharts from "@/components/deck/DeckCharts.vue";
 import Button from "primevue/button";
 import { Cog } from "lucide-vue-next";
 import states from "@/store/states";
+import type { Deck } from "@/lib/types";
 // TODO: there should be a tool bar instead of just one button
 
 const props = defineProps<{ id: string }>();
@@ -46,7 +47,11 @@ const router = useRouter();
 
 const isUsersDeck = computed(() => id.value === deck.creator);
 
-const { data } = await supabase.from("decks").select().eq("id", props.id);
+const { data } = await supabase
+  .from("decks")
+  .select()
+  .eq("id", props.id)
+  .returns<Deck[]>();
 
 if (data && data[0]) {
   Object.assign(deck, data[0]);

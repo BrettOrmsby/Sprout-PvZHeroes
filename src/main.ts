@@ -16,9 +16,8 @@ TODO:
 - draw sim
 - sort deck by cost
 - official decks
-- explore decks
+- explore decks/users
 - user settings
-- sort personal decks by last updated
 - export/duplicate deck
 - Keyboard shortcuts for adding/removing card from deck
 - better main page
