@@ -23,7 +23,7 @@ import Message from "primevue/message";
 const cards = computed(() =>
   Object.keys(deck.list)
     .map((e) => getCard(e))
-    .sort((a, b) => (a.class > b.class ? 1 : -1))
+    .sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))
 );
 </script>
 

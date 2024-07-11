@@ -24,7 +24,9 @@
         <TabPanel v-for="(value, key) in cardByClass" :key="key" :value="key">
           <div class="library-container">
             <PVZCard
-              v-for="card in value"
+              v-for="card in value.sort(
+                (a, b) => a.cost - b.cost || a.name.localeCompare(b.name)
+              )"
               :key="card.name"
               :isInDeck="false"
               :card="card"

@@ -14,7 +14,6 @@ import { definePreset } from "@primevue/themes";
 TODO:
 - two components titled deck card but one plurel
 - draw sim
-- sort deck by cost
 - official decks
 - explore decks/users
 - user settings
