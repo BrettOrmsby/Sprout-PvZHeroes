@@ -53,7 +53,7 @@ const replaceImages = (input: string) => {
 }
 .class {
   width: 1em;
-  margin-left: var(--inline-spacing);
+  margin-left: var(--inline-space);
 }
 .main-image {
   display: block;
@@ -61,7 +61,7 @@ const replaceImages = (input: string) => {
   width: 40%;
 }
 .types {
-  color: var(--text-color-secondary);
+  color: var(--p-text-muted-color);
   text-align: center;
 }
 .abilities {
@@ -74,7 +74,7 @@ const replaceImages = (input: string) => {
   vertical-align: middle;
 }
 .flavour {
-  color: var(--text-color-secondary);
+  color: var(--p-text-muted-color);
   text-align: center;
   font-size: 0.8em;
   margin: 0;
@@ -84,7 +84,7 @@ const replaceImages = (input: string) => {
   margin: 0;
   color: #151515;
   font-size: 0.6em;
-  margin-left: var(--inline-spacing);
+  margin-left: var(--inline-space);
   border-radius: 100em;
 }
 

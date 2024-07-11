@@ -7,7 +7,10 @@
 
       <Button label="Send Reset Email" type="submit" :loading="loading" />
     </form>
-    <h1 v-else>Email Sent</h1>
+    <div v-else>
+      <h1>Email Sent</h1>
+      <p>Please view your email to continue the password change procedure.</p>
+    </div>
   </main>
 </template>
 

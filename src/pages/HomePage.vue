@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h1>Name</h1>
+    <h1>Sprout</h1>
 
     <h2>Latest Decks</h2>
     <div class="deck-container">

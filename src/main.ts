@@ -11,14 +11,20 @@ import { definePreset } from "@primevue/themes";
 //https://pvzcc.fandom.com/wiki/Page_of_Resources
 /*
 TODO:
+- two components titled deck card but one plurel
 - delete/ clear deck if deck is yours
 - draw sim
+- sort deck by cost
 - official decks
+- explore decks
+- Nav bar home should be at the start
 - user settings
 - change tab colours?
+- sort personal decks by last updated
 - export/copy deck
+- Keyboard shortcuts for adding/removing card from deck
 - better main page
-- add more and remove all
+- add all and remove all
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
 */

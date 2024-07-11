@@ -12,7 +12,6 @@ import { computed, ref, onMounted } from "vue";
 import Chart from "primevue/chart";
 
 let graphColours = ref({
-  color: "",
   muted: "",
   gridLines: "",
   blue: "",
@@ -26,15 +25,14 @@ let graphColours = ref({
 onMounted(() => {
   const documentStyles = getComputedStyle(document.documentElement);
   Object.assign(graphColours.value, {
-    color: documentStyles.getPropertyValue("--text-color"),
-    muted: documentStyles.getPropertyValue("--text-color-secondary"),
-    gridLines: documentStyles.getPropertyValue("--surface-border"),
-    blue: documentStyles.getPropertyValue("--primary-500"),
-    blueHover: documentStyles.getPropertyValue("--primary-300"),
-    green: documentStyles.getPropertyValue("--teal-500"),
-    greenHover: documentStyles.getPropertyValue("--teal-300"),
-    gray: documentStyles.getPropertyValue("--surface-500"),
-    grayHover: documentStyles.getPropertyValue("--surface-600"),
+    muted: documentStyles.getPropertyValue("--p-text-muted-color"),
+    gridLines: documentStyles.getPropertyValue("--p-content-border-color"),
+    blue: documentStyles.getPropertyValue("--p-blue-400"),
+    blueHover: documentStyles.getPropertyValue("--p-blue-300"),
+    green: documentStyles.getPropertyValue("--p-green-400"),
+    greenHover: documentStyles.getPropertyValue("--p-green-300"),
+    gray: documentStyles.getPropertyValue("--p-gray-400"),
+    grayHover: documentStyles.getPropertyValue("--p-gray-300"),
   });
 });
 
@@ -159,6 +157,9 @@ const typeOptions = computed(() => {
       },
       x: {
         stacked: true,
+        grid: {
+          color: "transparent",
+        },
         title: {
           text: "Card cost",
           display: true,

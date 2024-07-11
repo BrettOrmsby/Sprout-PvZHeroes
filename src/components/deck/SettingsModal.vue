@@ -10,53 +10,39 @@
     </template>
 
     <form @submit.prevent="updateDeck()">
-      <div class="block">
-        <label for="name">Name</label>
-        <InputText
-          id="name"
-          type="text"
-          v-model="newInfo.name"
-          :class="{ 'p-invalid': showNameError }"
-          maxlength="50"
-        />
-        <small v-if="showNameError" id="invalidName" class="p-error"
-          >Must include a name.</small
-        >
-      </div>
+      <label for="name">Name</label>
+      <InputText
+        id="name"
+        type="text"
+        v-model="newInfo.name"
+        :class="{ 'p-invalid': showNameError }"
+        maxlength="50"
+      />
+      <small v-if="showNameError" id="invalidName" class="error"
+        >Must include a name.</small
+      >
 
-      <div class="block">
-        <label for="description">Description</label>
-        <Textarea
-          id="description"
-          :autoResize="true"
-          v-model="newInfo.description"
-          maxlength="150"
-        />
-      </div>
+      <label for="description">Description</label>
+      <Textarea
+        id="description"
+        :autoResize="true"
+        v-model="newInfo.description"
+        maxlength="150"
+      />
 
-      <div class="block">
-        <label for="deckList">Deck List</label>
-        <CardListTextArea
-          id="deckList"
-          v-model:is-error="isCardListError"
-          v-model="newInfo.list"
-          :hero="deck.hero"
-          :key="reloadList"
-        />
-      </div>
+      <label for="deckList">Deck List (optional)</label>
+      <CardListTextArea
+        id="deckList"
+        v-model:is-error="isCardListError"
+        v-model="newInfo.list"
+        :hero="deck.hero"
+        :key="reloadList"
+      />
 
-      <div class="block">
-        <ToggleButton
-          v-model="newInfo.is_private"
-          onLabel="Private"
-          offLabel="Public"
-          onIcon="pi pi-lock"
-          offIcon="pi pi-globe"
-        />
-        <!-- TODO: icons here, or make it better-->
-      </div>
+      <label for="visibility">Make Private</label>
+      <ToggleSwitch inputId="visibility" v-model="newInfo.isPrivate" />
 
-      <Button :loading="isLoading" label="Submit" type="submit" />
+      <Button :loading="isLoading" label="Update" type="submit" />
     </form>
   </Dialog>
 </template>
@@ -72,8 +58,9 @@ import Dialog from "primevue/dialog";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import Button from "primevue/button";
-import ToggleButton from "primevue/togglebutton";
+import ToggleSwitch from "primevue/toggleswitch";
 
+// TODO: here is where the delete button is
 const reloadList = ref(0);
 
 const { supabase } = useSupabase();
@@ -81,7 +68,7 @@ const { supabase } = useSupabase();
 const newInfo = ref({
   name: deck.name,
   description: deck.description,
-  is_private: deck.is_private,
+  isPrivate: deck.is_private,
   list: deck.list,
 });
 
@@ -139,20 +126,35 @@ h2 {
   white-space: nowrap;
   margin: 0;
 }
-small {
-  margin-top: var(--inline-spacing);
+
+label,
+#heroLabel {
   display: block;
-}
-label {
-  margin-bottom: var(--inline-spacing);
-  display: block;
-}
-.block {
-  margin-bottom: var(--inline-block-spacing);
+  margin-bottom: var(--inline-space);
 }
 
-input,
-textarea {
+.error {
+  margin-top: var(--inline-space);
+  margin-bottom: var(--block-space);
+  color: var(--p-red-300);
+  display: block;
+}
+
+.p-inputtext,
+.p-textarea,
+.card-list-textarea {
   width: 100%;
+}
+
+:is(.p-inputtext, .p-textarea, .p-toggleswitch, .card-list-textarea):has(
+    + :not(small)
+  ) {
+  margin-bottom: var(--block-space);
+}
+
+:deep(.p-button) {
+  margin-bottom: var(--block-space);
+  display: block;
+  width: fit-content;
 }
 </style>

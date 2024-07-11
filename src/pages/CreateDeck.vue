@@ -63,7 +63,6 @@
         :hero="deckInfo.hero"
       />
 
-      <!-- TODO: icon here-->
       <label for="visibility">Make Private</label>
       <ToggleSwitch inputId="visibility" v-model="deckInfo.isPrivate" />
 

@@ -1,27 +1,34 @@
 <template>
   <div
-    :class="{ 'card-container': true, 'do-hover': isUsersDeck }"
+    :class="{
+      'card-container': true,
+      'not-valid': !isValid,
+      [card.rarity.toLowerCase()]: true,
+    }"
     @click.prevent="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
   >
-    <div class="card-side-bar">
-      <div :class="['card-rarity', card.rarity.toLowerCase()]"></div>
-      <span>{{ card.set.at(0)?.toUpperCase() }}</span
-      ><b>x{{ numberLeft }}</b>
+    <div class="amount">
+      <strong>{{ numberLeft }}</strong>
     </div>
-    <img
-      :src="card.image"
-      :alt="card.name"
-      :class="{ 'card-image': true, gray: !isValid }"
-    />
+    <img :src="card.image" :alt="card.name" class="card-image" />
     <Menu
       ref="menu"
       id="overlay_menu"
       :model="items"
       :popup="true"
       style="width: auto"
-    />
+    >
+      <template #item="{ item, props }">
+        <a v-bind="props.action">
+          <Eye v-if="item.label === 'View'" />
+          <Plus v-else-if="item.label === 'Add Card'" />
+          <Minus v-else-if="item.label === 'Remove Card'" />
+          <span>{{ item.label }}</span>
+        </a>
+      </template>
+    </Menu>
   </div>
 </template>
 
@@ -35,6 +42,7 @@ import deck from "@/store/deck";
 import states from "@/store/states";
 import heroData from "@/assets/heros.json";
 import Menu from "primevue/menu";
+import { Eye, Plus, Minus } from "lucide-vue-next";
 
 const props = defineProps<{ card: Card; isInDeck: boolean }>();
 
@@ -119,7 +127,7 @@ const removeCard = async () => {
   }
   Object.assign(deck, data[0]);
 };
-
+// TODO: somehow show loading
 const menu = ref();
 
 const toggle = (event: Event) => {
@@ -128,14 +136,10 @@ const toggle = (event: Event) => {
 
 const items = computed(() => [
   {
-    // TODO: icon here
-    icon: "pi pi-eye",
     label: "View",
     command: viewCard,
   },
   {
-    // TODO: icon here
-    icon: "pi pi-plus",
     label: "Add Card",
     visible:
       isUsersDeck.value &&
@@ -144,7 +148,6 @@ const items = computed(() => [
     command: addCard,
   },
   {
-    // TODO: icon here
     icon: "pi pi-minus",
     label: "Remove Card",
     visible: props.isInDeck && isUsersDeck.value,
@@ -155,27 +158,40 @@ const items = computed(() => [
 
 <style scoped>
 .card-container {
-  background-color: var(--bluegray-900);
-  border-radius: var(--border-radius);
+  border-radius: var(--p-border-radius-md);
+  aspect-ratio: 1/1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: var(--inline-spacing);
-  padding: calc(var(--content-padding) / 2 - 2px);
-  border: 2px solid transparent;
+  gap: var(--inline-space);
+  padding: var(--inline-space);
   cursor: pointer;
 }
 
-.do-hover:hover {
-  border: 2px solid var(--primary);
+.card-container:hover {
+  outline: 1px solid var(--p-primary-400);
 }
-.card-side-bar {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: var(--inline-spacing);
-  width: 3ch;
+
+.amount {
+  position: relative;
+  height: 100%;
+}
+.amount strong {
+  position: absolute;
+  font-size: 1.2em;
+  left: calc(var(--inline-space) * -1);
+  bottom: calc(var(--inline-space) * -1);
+  padding: var(--inline-space);
+  background: color-mix(in srgb, var(--p-surface-950) 50%, transparent);
+  border-radius: var(--p-border-radius-md);
+}
+
+.not-valid {
+  opacity: 0.5;
+}
+.not-valid img {
+  filter: grayscale(100%);
 }
 
 @media only screen and (max-width: 600px) {
@@ -196,28 +212,21 @@ const items = computed(() => [
   }
 }
 
-.gray {
-  filter: grayscale(100%);
-}
-
-.card-rarity {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgb(245, 245, 220);
-}
-
 .common {
-  background-color: #f5f5dc;
+  background: #f5f5dc;
 }
 .uncommon {
-  background-color: #959a9d;
+  background: #959a9d;
 }
 .rare {
-  background-color: #ea9c45;
+  background: #ea9c45;
 }
 .super-rare {
-  background-color: #885cd5;
+  background: #885cd5;
+}
+.legendary {
+  position: relative;
+  background: transparent;
 }
 .legendary {
   background: linear-gradient(
@@ -230,6 +239,6 @@ const items = computed(() => [
   );
 }
 .event {
-  background-color: #e66d59;
+  background: #e66d59;
 }
 </style>

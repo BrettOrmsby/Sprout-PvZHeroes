@@ -2,8 +2,17 @@
   <CardModal />
   <HeroModal />
   <DeckHeader />
-  <DeckHero />
   <main>
+    <Button
+      v-if="isUsersDeck"
+      @click="states.editModal = true"
+      severity="secondary"
+      label="Settings"
+    >
+      <template #icon="iconClass">
+        <Cog :class="iconClass.class" />
+      </template>
+    </Button>
     <DeckCards />
     <AddCards v-if="isUsersDeck" />
     <DeckCharts />
@@ -18,13 +27,16 @@ import useAuthUser from "@/composables/UseAuthUser";
 import deck from "@/store/deck";
 import { computed } from "vue";
 import DeckHeader from "@/components/deck/DeckHeader.vue";
-import DeckHero from "@/components/deck/DeckHero.vue";
 import DeckCards from "@/components/deck/DeckCards.vue";
 import AddCards from "@/components/deck/AddCards.vue";
 import CardModal from "@/components/deck/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
+import Button from "primevue/button";
+import { Cog } from "lucide-vue-next";
+import states from "@/store/states";
+// TODO: there should be a tool bar instead of just one button
 
 const props = defineProps<{ id: string }>();
 
@@ -58,5 +70,9 @@ h2 {
   gap: var(--inline-space);
   justify-content: center;
   align-items: stretch;
+}
+
+main {
+  margin-top: 0;
 }
 </style>

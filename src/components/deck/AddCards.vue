@@ -2,23 +2,37 @@
   <div>
     <h2>Library</h2>
 
-    <TabView ref="tabview1">
-      <TabPanel v-for="(value, key) in cardByClass" :key="key">
-        <template #header>
-          <div style="white-space: pre">
-            {{ key }}
-          </div>
-        </template>
-        <div class="library-container">
-          <PVZCard
-            v-for="card in value"
-            :key="card.name"
-            :isInDeck="false"
-            :card="card"
+    <Tabs ref="tabview1" :value="hero.class[0]" scrollable>
+      <TabList>
+        <Tab
+          v-for="(_, key) in cardByClass"
+          :key="key"
+          :value="key"
+          as="div"
+          class="class-container"
+          :class="{ invalidClass: !hero.class.includes(key) }"
+        >
+          <img
+            class="class"
+            :src="'/images/classes/' + key.toLowerCase() + '.png'"
+            :alt="key"
           />
-        </div>
-      </TabPanel>
-    </TabView>
+          <span>{{ key }}</span>
+        </Tab>
+      </TabList>
+      <TabPanels>
+        <TabPanel v-for="(value, key) in cardByClass" :key="key" :value="key">
+          <div class="library-container">
+            <PVZCard
+              v-for="card in value"
+              :key="card.name"
+              :isInDeck="false"
+              :card="card"
+            />
+          </div>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
   </div>
 </template>
 
@@ -28,11 +42,16 @@ import deck from "@/store/deck";
 import heroData from "@/assets/heros.json";
 import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
+import getHero from "@/lib/getHero";
 import type { Card } from "@/lib/types";
 import PVZCard from "./PVZCard.vue";
-import TabView from "primevue/tabview";
+import Tabs from "primevue/tabs";
+import TabList from "primevue/tablist";
+import Tab from "primevue/tab";
+import TabPanels from "primevue/tabpanels";
 import TabPanel from "primevue/tabpanel";
 
+const hero = computed(() => getHero(deck.hero));
 const isPlant = computed(() =>
   heroData.plants.some((e) => e.name === deck.hero)
 );
@@ -59,23 +78,27 @@ const cardByClass = computed(() => {
 </script>
 
 <style scoped>
-:deep() .p-tabview-nav-link {
-  background: var(--primary) !important;
-  color: var(--primary-color-text) !important;
+.invalidClass:not(.p-tab-active) {
+  opacity: var(--p-disabled-opacity);
 }
-:deep():is(.p-tabview-nav-link:hover, .p-highlight a) {
-  background: var(--primary-hover) !important;
+
+.class-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--inline-space);
 }
-:deep().p-tabview-panels {
-  padding: 0;
+.class {
+  height: 1em;
+  width: 1em;
 }
 
 .library-container {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: var(--inline-block-spacing);
-  padding: var(--content-padding);
+  gap: var(--inline-space);
+  padding: var(--block-space);
   justify-content: flex-start;
 }
 </style>

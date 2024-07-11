@@ -1,15 +1,15 @@
 <template>
-  <div class="library-container">
-    <Message v-if="cards.length === 0" :severity="'warn'" :closable="false"
-      >Deck Empty</Message
-    >
-    <template v-else>
-      <PVZCard
-        v-for="card in cards"
-        :key="card.name"
-        :isInDeck="true"
-        :card="card"
-    /></template>
+  <h2>Deck</h2>
+  <Message v-if="cards.length === 0" :severity="'warn'" :closable="false"
+    >The Deck Is Empty</Message
+  >
+  <div v-else class="library-container">
+    <PVZCard
+      v-for="card in cards"
+      :key="card.name"
+      :isInDeck="true"
+      :card="card"
+    />
   </div>
 </template>
 
@@ -32,8 +32,8 @@ const cards = computed(() =>
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: var(--inline-block-spacing);
-  padding: var(--content-padding);
+  gap: var(--inline-space);
+  padding: var(--block-space);
   justify-content: flex-start;
 }
 </style>

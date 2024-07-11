@@ -30,7 +30,7 @@
       />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ sparks }}<img src="/images/assets/spark.png" />
+      {{ sparks.toLocaleString() }}<img src="/images/assets/spark.png" />
     </span>
   </footer>
 </template>
@@ -82,14 +82,14 @@ const sparks = computed(() => {
 <style scoped>
 .footer {
   width: 100%;
-  color: var(--text-color-secondary);
-  padding: var(--content-padding);
+  color: var(--p-text-muted-color);
+  padding: var(--block-space);
   position: sticky;
   bottom: 0;
   left: 0;
-  background-color: var(--surface-overlay);
-  border-top: 1px var(--surface-border) solid;
-  z-index: 10;
+  background-color: var(--p-content-background);
+  border-top: 1px var(--p-content-border-color) solid;
+  z-index: 1004;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,7 +110,7 @@ const sparks = computed(() => {
   margin-left: 0.1em;
 }
 .p-badge {
-  margin-right: calc(var(--inline-block-spacing) / 2);
+  margin-right: var(--inline-space);
   font-size: 0.5em;
   padding: 0 0.25em;
   border-radius: 100em;

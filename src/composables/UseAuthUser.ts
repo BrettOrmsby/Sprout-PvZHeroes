@@ -62,7 +62,7 @@ export default function useAuthUser() {
 
   const sendPasswordRestEmail = async (email: string) => {
     const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/passwordreset?fromEmail=registrationConfirmation`,
+      redirectTo: `${window.location.origin}/password-reset?fromEmail=registrationConfirmation`,
     });
     if (error) throw error;
   };

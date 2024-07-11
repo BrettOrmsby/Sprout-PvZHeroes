@@ -20,7 +20,7 @@
       </div>
     </template>
     <img :src="hero.image" :alt="hero.name" class="hero" />
-    <p>
+    <p class="flavour">
       <em>{{ hero.description }}</em>
     </p>
 
@@ -71,7 +71,7 @@ const openCardModual = (card: string) => {
 }
 .class {
   width: 1em;
-  margin-left: var(--inline-spacing);
+  margin-left: var(--inline-space);
 }
 .header-container {
   display: flex;
@@ -86,5 +86,8 @@ const openCardModual = (card: string) => {
 .super-power {
   width: 20%;
   min-width: 75px;
+}
+.flavour {
+  color: var(--p-text-muted-color);
 }
 </style>
