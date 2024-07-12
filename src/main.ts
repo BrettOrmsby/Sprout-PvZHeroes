@@ -16,9 +16,9 @@ TODO:
 - official decks
 - explore decks/users
 - user settings
+- add/remove from deck depending on owner and where it is. (both will do nothing)
 - rather than check for 404s at the pages, it should check at router
 - what happens when duplicate with a long name
-- export/duplicate deck
 - Keyboard shortcuts for adding/removing card from deck
 - better main page
 - linting duplicate keys error

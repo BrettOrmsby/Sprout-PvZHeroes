@@ -20,7 +20,7 @@ import { computed } from "vue";
 import DeckHeader from "@/components/deck/DeckHeader.vue";
 import TheDeck from "@/components/deck/TheDeck.vue";
 import AddCards from "@/components/deck/AddCards.vue";
-import CardModal from "@/components/deck/CardModal.vue";
+import CardModal from "@/components/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";

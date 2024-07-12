@@ -4,7 +4,7 @@
     >The Deck Is Empty</Message
   >
   <div v-else class="library-container">
-    <PVZCard
+    <PVZCardWithMenu
       v-for="card in cards"
       :key="card.name"
       :isInDeck="true"
@@ -17,7 +17,7 @@
 import { computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck from "@/store/deck";
-import PVZCard from "@/components/deck/PVZCard.vue";
+import PVZCardWithMenu from "@/components/deck/PVZCardWithMenu.vue";
 import Message from "primevue/message";
 
 const cards = computed(() =>

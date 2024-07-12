@@ -23,7 +23,7 @@
       <TabPanels>
         <TabPanel v-for="(value, key) in cardByClass" :key="key" :value="key">
           <div class="library-container">
-            <PVZCard
+            <PVZCardWithMenu
               v-for="card in value.sort(
                 (a, b) => a.cost - b.cost || a.name.localeCompare(b.name)
               )"
@@ -46,7 +46,7 @@ import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
 import getHero from "@/lib/getHero";
 import type { Card } from "@/lib/types";
-import PVZCard from "./PVZCard.vue";
+import PVZCardWithMenu from "./PVZCardWithMenu.vue";
 import Tabs from "primevue/tabs";
 import TabList from "primevue/tablist";
 import Tab from "primevue/tab";

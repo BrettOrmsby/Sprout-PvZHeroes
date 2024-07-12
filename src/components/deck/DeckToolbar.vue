@@ -5,7 +5,7 @@
     style="max-width: 500px; width: 100%; margin: var(--block-space)"
     header="Compare"
   >
-    <CompareInput :id="deck.id" to="" />
+    <CompareInput :id="deck.id" />
   </Dialog>
   <Toolbar>
     <template #start>

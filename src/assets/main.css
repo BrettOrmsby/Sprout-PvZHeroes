@@ -29,3 +29,6 @@ main {
     padding: var(--block-space);
     margin-top: 4em;
 }
+.p-menu {
+    min-width: unset !important;
+}

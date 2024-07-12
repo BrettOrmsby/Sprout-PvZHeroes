@@ -1,38 +1,32 @@
 <template>
-  <div
-    :class="{
-      'card-container': true,
-      'not-valid': !isValid,
-      [card.rarity.toLowerCase()]: true,
-    }"
+  <PVZCard
     @click.prevent="toggle"
     aria-haspopup="true"
     aria-controls="overlay_menu"
+    :amount="numberLeft"
+    :card="card"
+    :isValid="isValid"
+  />
+  <!--This might need to go in that div-->
+  <Menu
+    ref="menu"
+    id="overlay_menu"
+    :model="items"
+    :popup="true"
+    style="width: auto"
   >
-    <div class="amount">
-      <strong>{{ numberLeft }}</strong>
-    </div>
-    <img :src="card.image" :alt="card.name" class="card-image" />
-    <Menu
-      ref="menu"
-      id="overlay_menu"
-      :model="items"
-      :popup="true"
-      style="width: auto"
-    >
-      <template #item="{ item, props }">
-        <a v-bind="props.action">
-          <Eye v-if="item.label === 'View'" />
-          <Plus v-else-if="item.label === 'Add Card'" />
-          <Grid2x2Check v-else-if="item.label === 'Add All'" />
-          <Minus v-else-if="item.label === 'Remove Card'" />
-          <Grid2x2X v-else-if="item.label === 'Remove All'" />
+    <template #item="{ item, props }">
+      <a v-bind="props.action">
+        <Eye v-if="item.label === 'View'" />
+        <Plus v-else-if="item.label === 'Add Card'" />
+        <Grid2x2Check v-else-if="item.label === 'Add All'" />
+        <Minus v-else-if="item.label === 'Remove Card'" />
+        <Grid2x2X v-else-if="item.label === 'Remove All'" />
 
-          <span>{{ item.label }}</span>
-        </a>
-      </template>
-    </Menu>
-  </div>
+        <span>{{ item.label }}</span>
+      </a>
+    </template>
+  </Menu>
 </template>
 
 <script lang="ts" setup>
@@ -41,12 +35,12 @@ import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
 import { ref, computed } from "vue";
 import type { Card, Hero } from "@/lib/types";
-import deck from "@/store/deck";
 import states from "@/store/states";
 import heroData from "@/assets/heros.json";
 import Menu from "primevue/menu";
 import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from "lucide-vue-next";
-
+import deck from "@/store/deck";
+import PVZCard from "@/components/PVZCard.vue";
 const props = defineProps<{ card: Card; isInDeck: boolean }>();
 
 const hero = computed<Hero>(
@@ -175,89 +169,4 @@ const items = computed(() => {
 });
 </script>
 
-<style scoped>
-.card-container {
-  border-radius: var(--p-border-radius-md);
-  aspect-ratio: 1/1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: var(--inline-space);
-  padding: var(--inline-space);
-  cursor: pointer;
-}
-
-.card-container:hover {
-  outline: 1px solid var(--p-primary-400);
-}
-
-.amount {
-  position: relative;
-  height: 100%;
-}
-.amount strong {
-  position: absolute;
-  font-size: 1.2em;
-  left: calc(var(--inline-space) * -1);
-  bottom: calc(var(--inline-space) * -1);
-  padding: var(--inline-space);
-  background: color-mix(in srgb, var(--p-surface-950) 50%, transparent);
-  border-radius: var(--p-border-radius-md);
-}
-
-.not-valid {
-  opacity: 0.5;
-}
-.not-valid img {
-  filter: grayscale(100%);
-}
-
-@media only screen and (max-width: 600px) {
-  .card-image {
-    width: 60px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .card-image {
-    width: 75px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .card-image {
-    width: 100px;
-  }
-}
-
-.common {
-  background: #f5f5dc;
-}
-.uncommon {
-  background: #959a9d;
-}
-.rare {
-  background: #ea9c45;
-}
-.super-rare {
-  background: #885cd5;
-}
-.legendary {
-  position: relative;
-  background: transparent;
-}
-.legendary {
-  background: linear-gradient(
-    to bottom right,
-    #a158dc,
-    #f462f4,
-    #f3ea94,
-    #c5f882,
-    #5ba3f0
-  );
-}
-.event {
-  background: #e66d59;
-}
-</style>
+<style scoped></style>

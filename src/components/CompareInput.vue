@@ -28,7 +28,7 @@ import { useRouter } from "vue-router";
 import useSupabase from "@/composables/UseSupabase";
 
 const props = defineProps<{ id: string }>();
-const to = defineModel<string>({ required: true });
+const to = defineModel<string>({ default: "" });
 
 const { supabase } = useSupabase();
 const router = useRouter();
