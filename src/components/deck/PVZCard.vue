@@ -132,38 +132,47 @@ const toggle = (event: Event) => {
   menu.value.toggle(event);
 };
 
-const items = computed(() => [
-  {
-    label: "View",
-    command: viewCard,
-  },
-  {
-    label: "Add Card",
-    visible:
-      isUsersDeck.value &&
-      ((props.isInDeck && numberLeft.value < 4) ||
-        (!props.isInDeck && isValid.value)),
-    command: addCard,
-  },
-  {
-    label: "Add All",
-    visible:
-      isUsersDeck.value &&
-      ((props.isInDeck && numberLeft.value <= 2) ||
-        (!props.isInDeck && numberLeft.value >= 2)),
-    command: addAll,
-  },
-  {
-    label: "Remove Card",
-    visible: props.isInDeck && isUsersDeck.value,
-    command: removeCard,
-  },
-  {
-    label: "Remove All",
-    visible: props.isInDeck && isUsersDeck.value && numberLeft.value >= 2,
-    command: removeAll,
-  },
-]);
+const items = computed(() => {
+  if (!isUsersDeck.value) {
+    return [
+      {
+        label: "View",
+        command: viewCard,
+      },
+    ];
+  }
+
+  return [
+    {
+      label: "View",
+      command: viewCard,
+    },
+    {
+      label: "Add Card",
+      visible:
+        (props.isInDeck && numberLeft.value < 4) ||
+        (!props.isInDeck && isValid.value),
+      command: addCard,
+    },
+    {
+      label: "Add All",
+      visible:
+        (props.isInDeck && numberLeft.value <= 2) ||
+        (!props.isInDeck && numberLeft.value >= 2),
+      command: addAll,
+    },
+    {
+      label: "Remove Card",
+      visible: props.isInDeck,
+      command: removeCard,
+    },
+    {
+      label: "Remove All",
+      visible: props.isInDeck && numberLeft.value >= 2,
+      command: removeAll,
+    },
+  ];
+});
 </script>
 
 <style scoped>

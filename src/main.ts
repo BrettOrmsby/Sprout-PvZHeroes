@@ -12,13 +12,16 @@ import { definePreset } from "@primevue/themes";
 //https://pvzcc.fandom.com/wiki/Page_of_Resources
 /*
 TODO:
-- draw sim
+- draw sim // you can get a mulligan card back even if it was the one that was dished
 - official decks
 - explore decks/users
 - user settings
+- rather than check for 404s at the pages, it should check at router
+- what happens when duplicate with a long name
 - export/duplicate deck
 - Keyboard shortcuts for adding/removing card from deck
 - better main page
+- linting duplicate keys error
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
 */

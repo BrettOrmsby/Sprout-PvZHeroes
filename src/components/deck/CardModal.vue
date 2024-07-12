@@ -2,7 +2,7 @@
   <Dialog
     :modal="true"
     v-model:visible="states.cardModal.show"
-    style="max-width: 500px; width: 100%; margin: var(--content-padding)"
+    style="max-width: 500px; width: 100%; margin: var(--block-space)"
   >
     <template #header>
       <div class="header-container p-dialog-title">

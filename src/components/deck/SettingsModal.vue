@@ -3,7 +3,7 @@
     :modal="true"
     v-model:visible="states.editModal"
     @show="updateList"
-    :style="{ width: '100%', 'max-width': '500px' }"
+    style="max-width: 500px; width: 100%; margin: var(--block-space)"
   >
     <template #header>
       <h2>Editing {{ deck.name }}</h2>

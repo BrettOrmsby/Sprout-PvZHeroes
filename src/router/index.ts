@@ -62,6 +62,12 @@ const router = createRouter({
       component: () => import("@/pages/ViewDeck.vue"),
     },
     {
+      name: "Compare",
+      path: "/deck/:id/compare/:to",
+      props: true,
+      component: () => import("@/pages/ComparePage.vue"),
+    },
+    {
       name: "SignIn",
       path: "/sign-in",
       component: () => import("@/pages/auth/SignInPage.vue"),

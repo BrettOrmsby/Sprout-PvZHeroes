@@ -11,7 +11,7 @@ import ConfirmDialog from "primevue/confirmdialog";
   <ConfirmDialog style="margin: var(--block-space); max-width: 500px" />
   <TheHeader />
   <Suspense>
-    <RouterView />
+    <RouterView :key="$route.fullPath" />
     <template #fallback>
       <ProgressSpinner />
     </template>

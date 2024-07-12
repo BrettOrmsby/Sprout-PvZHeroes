@@ -3,16 +3,7 @@
   <HeroModal />
   <DeckHeader />
   <main>
-    <Button
-      v-if="isUsersDeck"
-      @click="states.editModal = true"
-      severity="secondary"
-      label="Settings"
-    >
-      <template #icon="iconClass">
-        <Cog :class="iconClass.class" />
-      </template>
-    </Button>
+    <DeckToolbar />
     <TheDeck />
     <AddCards v-if="isUsersDeck" />
     <DeckCharts />
@@ -33,28 +24,25 @@ import CardModal from "@/components/deck/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
-import Button from "primevue/button";
-import { Cog } from "lucide-vue-next";
-import states from "@/store/states";
+import DeckToolbar from "@/components/deck/DeckToolbar.vue";
 import type { Deck } from "@/lib/types";
-// TODO: there should be a tool bar instead of just one button
 
 const props = defineProps<{ id: string }>();
 
 const { supabase } = useSupabase();
 const { id } = useAuthUser();
-const router = useRouter();
-
 const isUsersDeck = computed(() => id.value === deck.creator);
+const router = useRouter();
 
 const { data } = await supabase
   .from("decks")
   .select()
   .eq("id", props.id)
-  .returns<Deck[]>();
+  .returns<Deck[]>()
+  .single();
 
-if (data && data[0]) {
-  Object.assign(deck, data[0]);
+if (data) {
+  Object.assign(deck, data);
 } else {
   router.push({ name: "404" });
 }
