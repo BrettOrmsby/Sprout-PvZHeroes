@@ -27,12 +27,12 @@
           size="medium"
           shape="circle"
           class="profile-image"
-          :image="getHero(profileImage).image"
+          :image="getHero(user.profile_image).image"
         />
         <RouterLink
-          :to="{ name: 'Profile', params: { username } }"
+          :to="{ name: 'Profile', params: { username: user.username } }"
           class="username"
-          >{{ username }}</RouterLink
+          >{{ user.username }}</RouterLink
         >
       </div>
       <h1>{{ deck.name }}</h1>
@@ -45,40 +45,16 @@
 <script lang="ts" setup>
 import deck from "@/store/deck";
 import states from "@/store/states";
-import useAuthUser from "@/composables/UseAuthUser";
-import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/throwError";
 import getHero from "@/lib/getHero";
 import { ref, computed, onUnmounted } from "vue";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import Avatar from "primevue/avatar";
 import SettingsModal from "@/components/deck/SettingsModal.vue";
+import user from "@/store/user";
 
 dayjs.extend(relativeTime);
-
-const { id } = useAuthUser();
-const { supabase } = useSupabase();
-const username = ref("");
-const profileImage = ref("");
-const isUsersDeck = ref(false);
 const refreshDateKey = ref(0);
-
-const { data, error } = await supabase
-  .from("profiles")
-  .select("username, profile_image")
-  .eq("id", deck.creator)
-  .single();
-
-if (error) {
-  throwError(error);
-  username.value = "????";
-  profileImage.value = "Green Shadow";
-} else {
-  username.value = data.username;
-  profileImage.value = data.profile_image;
-  isUsersDeck.value = deck.creator === id.value;
-}
 
 const hero = computed(() => getHero(deck.hero));
 

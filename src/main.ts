@@ -16,8 +16,7 @@ TODO:
 - official decks
 - explore decks/users
 - user settings
-- add/remove from deck depending on owner and where it is. (both will do nothing)
-- rather than check for 404s at the pages, it should check at router
+- add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
 - what happens when duplicate with a long name
 - Keyboard shortcuts for adding/removing card from deck
 - better main page

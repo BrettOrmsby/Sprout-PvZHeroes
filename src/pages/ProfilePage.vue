@@ -5,14 +5,22 @@
         size="xlarge"
         shape="circle"
         class="profile-image"
-        :image="getHero(profileImage).image"
+        :image="getHero(user.profile_image).image"
       >
       </Avatar>
-      <h1>{{ username }}</h1>
+      <h1>{{ user.username }}</h1>
     </header>
 
     <h2>Decks</h2>
-    <div class="deck-container">
+    <div class="deck-container" v-if="isLoading">
+      <Skeleton
+        v-for="index in 6"
+        :key="index"
+        class="deck-skeleton"
+        height="175px"
+      ></Skeleton>
+    </div>
+    <div class="deck-container" v-else>
       <DeckCard
         v-for="deck in sortedDecks"
         :key="deck.id"
@@ -29,50 +37,40 @@ import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 import getHero from "@/lib/getHero";
 import Avatar from "primevue/avatar";
+import Skeleton from "primevue/skeleton";
 import { computed } from "vue";
 import type { Deck } from "@/lib/types";
-// TODO: loading here too
-// TODO: new deck button
-const props = defineProps<{ username: string }>();
+import { onMounted } from "vue";
+import user from "@/store/user";
+import { ref } from "vue";
 
 const { supabase } = useSupabase();
 
-const { data: query, error: userError } = await supabase
-  .from("profiles")
-  .select("username, profile_image, id")
-  .eq("username", props.username)
-  .single();
+const isLoading = ref(true);
+const deckData = ref<Deck[]>([]);
 
-if (userError) {
-  throwError(userError);
-  throw new Error();
-}
+onMounted(async () => {
+  const { data, error } = await supabase
+    .from("decks")
+    .select("*")
+    .eq("creator", user.id)
+    .returns<Deck[]>();
 
-const userId = query.id;
-const profileImage = query.profile_image;
-
-const { data: deckData, error } = await supabase
-  .from("decks")
-  .select("*")
-  .eq("creator", userId)
-  .returns<Deck[]>();
-
-if (error) {
-  throwError(error);
-  throw new Error();
-}
+  if (error) {
+    throwError(error);
+    throw new Error();
+  } else {
+    deckData.value = data;
+    isLoading.value = false;
+  }
+});
 
 const sortedDecks = computed(() =>
-  deckData!.sort(
+  [...deckData.value].sort(
     (a, b) =>
       new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
   )
 );
-
-if (error) {
-  throwError(error);
-  throw new Error();
-}
 </script>
 
 <style scoped>
@@ -83,6 +81,7 @@ if (error) {
 .profile-image {
   margin-right: var(--inline-space);
   flex-shrink: 0;
+  background-color: var(--p-surface-950);
 }
 
 h2 {
@@ -94,5 +93,9 @@ h2 {
   gap: var(--inline-space);
   justify-content: center;
   align-items: stretch;
+}
+.deck-skeleton {
+  max-width: 400px;
+  border-radius: (--p-card-border-radius);
 }
 </style>

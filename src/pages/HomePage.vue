@@ -3,7 +3,15 @@
     <h1>Sprout</h1>
 
     <h2>Latest Decks</h2>
-    <div class="deck-container">
+    <div class="deck-container" v-if="isLoading">
+      <Skeleton
+        v-for="index in 6"
+        :key="index"
+        class="deck-skeleton"
+        height="175px"
+      ></Skeleton>
+    </div>
+    <div class="deck-container" v-else>
       <DeckCard v-for="deck in deckData" :key="deck.id" :deck="(deck as any)" />
     </div>
   </main>
@@ -15,21 +23,29 @@ import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 const { supabase } = useSupabase();
 import type { Deck } from "@/lib/types";
+import { ref, onMounted } from "vue";
+import Skeleton from "primevue/skeleton";
 
-const { data: deckData, error } = await supabase
-  .from("decks")
-  .select("*")
-  .order("created_at", { ascending: false })
-  .eq("is_complete", true)
-  .eq("is_private", false)
-  .limit(6)
-  .returns<Deck[]>();
+const isLoading = ref(true);
+const deckData = ref<Deck[]>([]);
 
-if (error) {
-  throwError(error);
-  throw new Error();
-}
-// TODO: show loading. Is there a suspense somewhere????
+onMounted(async () => {
+  const { data, error } = await supabase
+    .from("decks")
+    .select("*")
+    .order("created_at", { ascending: false })
+    .eq("is_complete", true)
+    .eq("is_private", false)
+    .limit(6)
+    .returns<Deck[]>();
+
+  if (error) {
+    throwError(error);
+  } else {
+    deckData.value = data;
+    isLoading.value = false;
+  }
+});
 </script>
 
 <style scoped>
@@ -44,5 +60,10 @@ h2 {
   gap: var(--inline-space);
   justify-content: center;
   align-items: stretch;
+}
+
+.deck-skeleton {
+  max-width: 400px;
+  border-radius: (--p-card-border-radius);
 }
 </style>

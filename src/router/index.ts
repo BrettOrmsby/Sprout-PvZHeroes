@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import useAuthUser from "@/composables/UseAuthUser";
 import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/throwError";
+import user from "@/store/user";
+import deck, { compareDeck } from "@/store/deck";
+import states from "@/store/states";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -33,8 +35,6 @@ const router = createRouter({
           .single();
 
         if (error) {
-          console.log(data);
-          throwError(error);
           return { name: "404" };
         }
 
@@ -46,6 +46,20 @@ const router = createRouter({
       path: "/profile/:username",
       props: true,
       component: () => import("@/pages/ProfilePage.vue"),
+      beforeEnter: async (to) => {
+        const { supabase } = useSupabase();
+        const { data, error } = await supabase
+          .from("profiles")
+          .select("username, profile_image, id")
+          .eq("username", to.params.username)
+          .single();
+
+        if (error) {
+          return { name: "404" };
+        } else {
+          Object.assign(user, data);
+        }
+      },
     },
     {
       name: "CreateDeck",
@@ -60,12 +74,63 @@ const router = createRouter({
       path: "/deck/:id",
       props: true,
       component: () => import("@/pages/ViewDeck.vue"),
+      beforeEnter: async (to) => {
+        const { supabase } = useSupabase();
+        const { data, error } = await supabase
+          .from("decks")
+          .select()
+          .eq("id", to.params.id)
+          .single();
+
+        if (error) {
+          return { name: "404" };
+        } else {
+          Object.assign(deck, data);
+        }
+
+        const { data: creatorData, error: creatorError } = await supabase
+          .from("profiles")
+          .select("username, profile_image")
+          .eq("id", data.creator)
+          .single();
+        if (creatorError) {
+          return { name: "404" };
+        } else {
+          Object.assign(user, creatorData);
+        }
+      },
     },
     {
       name: "Compare",
       path: "/deck/:id/compare/:to",
       props: true,
       component: () => import("@/pages/ComparePage.vue"),
+      beforeEnter: async (to) => {
+        const { supabase } = useSupabase();
+        const { data, error } = await supabase
+          .from("decks")
+          .select()
+          .eq("id", to.params.id)
+          .single();
+
+        if (error) {
+          return { name: "404" };
+        } else {
+          Object.assign(deck, data);
+        }
+
+        const { data: compare, error: compareError } = await supabase
+          .from("decks")
+          .select()
+          .eq("id", to.params.to)
+          .single();
+
+        if (compareError) {
+          return { name: "404" };
+        } else {
+          Object.assign(compareDeck, compare);
+        }
+      },
     },
     {
       name: "SignIn",
@@ -114,6 +179,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to) => {
+  states.loadingRoute = true;
   const { isSignedIn } = useAuthUser();
   if (
     !isSignedIn.value &&
@@ -123,5 +189,6 @@ router.beforeEach((to) => {
     return { name: "SignIn" };
   }
 });
+router.afterEach(() => (states.loadingRoute = false));
 
 export default router;

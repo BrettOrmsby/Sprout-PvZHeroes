@@ -1,7 +1,7 @@
 <template>
   <CardModal />
   <main>
-    <h1>Comparing {{ firstDeck!.name }}</h1>
+    <h1>Comparing {{ deck.name }}</h1>
     <CompareInput :id="id" v-model="toInput" />
 
     <template v-for="(value, key) in comparison" :key="key">
@@ -36,44 +36,14 @@ import CompareInput from "@/components/CompareInput.vue";
 import Message from "primevue/message";
 import ComparePVZCard from "@/components/ComparePVZCard.vue";
 import CardModal from "@/components/CardModal.vue";
-import { useRouter } from "vue-router";
-import useSupabase from "@/composables/UseSupabase";
-import useAuthUser from "@/composables/UseAuthUser";
-import type { Deck } from "@/lib/types";
 import { ref, computed } from "vue";
 import getCard from "@/lib/getCard";
+import deck, { compareDeck } from "@/store/deck";
 
-const props = defineProps<{ id: string; to: string }>();
+defineProps<{ id: string; to: string }>();
 
-const { supabase } = useSupabase();
-const { id: userId } = useAuthUser();
+const getDeck = (id: string) => (deck.id === id ? deck! : compareDeck!);
 
-const router = useRouter();
-
-const { data: firstDeck } = await supabase
-  .from("decks")
-  .select()
-  .eq("id", props.id)
-  .returns<Deck[]>()
-  .single();
-
-if (!firstDeck) {
-  router.push({ name: "404" });
-}
-
-const { data: secondDeck } = await supabase
-  .from("decks")
-  .select()
-  .eq("id", props.to)
-  .returns<Deck[]>()
-  .single();
-
-if (!secondDeck) {
-  router.push({ name: "404" });
-}
-
-const getDeck = (id: string) =>
-  firstDeck!.id === id ? firstDeck! : secondDeck!;
 const sortList = (list: Record<string, number>) =>
   Object.keys(list)
     .map((e) => getCard(e))
@@ -81,32 +51,32 @@ const sortList = (list: Record<string, number>) =>
 
 const comparison = computed(() => {
   const comparison = {
-    [firstDeck!.id]: {} as Record<string, number>,
-    [secondDeck!.id]: {},
+    [deck.id]: {} as Record<string, number>,
+    [compareDeck.id]: {},
     both: {} as Record<string, number>,
   };
 
-  for (const [name, amount] of Object.entries(firstDeck!.list)) {
-    if (name in secondDeck!.list) {
-      if (secondDeck!.list[name] < amount) {
-        comparison[firstDeck!.id][name] = amount - secondDeck!.list[name];
-        comparison.both[name] = secondDeck!.list[name];
-      } else if (secondDeck!.list[name] === amount) {
-        comparison.both[name] = secondDeck!.list[name];
+  for (const [name, amount] of Object.entries(deck.list)) {
+    if (name in compareDeck.list) {
+      if (compareDeck.list[name] < amount) {
+        comparison[deck.id][name] = amount - compareDeck.list[name];
+        comparison.both[name] = compareDeck.list[name];
+      } else if (compareDeck.list[name] === amount) {
+        comparison.both[name] = compareDeck.list[name];
       }
     } else {
-      comparison[firstDeck!.id][name] = amount;
+      comparison[deck.id][name] = amount;
     }
   }
 
-  for (const [name, amount] of Object.entries(secondDeck!.list)) {
-    if (name in firstDeck!.list) {
-      if (firstDeck!.list[name] < amount) {
-        comparison[secondDeck!.id][name] = amount - firstDeck!.list[name];
-        comparison.both[name] = firstDeck!.list[name];
+  for (const [name, amount] of Object.entries(compareDeck.list)) {
+    if (name in deck.list) {
+      if (deck.list[name] < amount) {
+        comparison[compareDeck.id][name] = amount - deck.list[name];
+        comparison.both[name] = deck.list[name];
       }
     } else {
-      comparison[secondDeck!.id][name] = amount;
+      comparison[compareDeck.id][name] = amount;
     }
   }
 
@@ -114,7 +84,7 @@ const comparison = computed(() => {
 });
 
 // TODO: this real link
-const toInput = ref("http://localhost:5173/deck/" + secondDeck!.id);
+const toInput = ref("http://localhost:5173/deck/" + compareDeck.id);
 </script>
 
 <style scoped>

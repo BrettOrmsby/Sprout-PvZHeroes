@@ -34,3 +34,9 @@ export type Card = {
   abilities: string;
   flavour: string;
 };
+
+export type User = {
+  username: string;
+  profile_image: string;
+  id: string;
+};

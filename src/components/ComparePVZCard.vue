@@ -45,14 +45,12 @@ const toggle = (event: Event) => {
 };
 
 const items = computed(() => {
-  if (true) {
-    return [
-      {
-        label: "View",
-        command: viewCard,
-      },
-    ];
-  }
+  return [
+    {
+      label: "View",
+      command: viewCard,
+    },
+  ];
 });
 </script>
 

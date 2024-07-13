@@ -13,3 +13,16 @@ export default reactive<Deck>({
   last_updated: "",
   description: "",
 });
+
+export const compareDeck = reactive<Deck>({
+  id: "",
+  creator: "",
+  name: "",
+  is_private: false,
+  is_complete: false,
+  hero: "",
+  list: {},
+  created_at: "",
+  last_updated: "",
+  description: "",
+});

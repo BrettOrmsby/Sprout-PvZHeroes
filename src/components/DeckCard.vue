@@ -87,6 +87,7 @@ h3 {
 .hero {
   margin-right: var(--inline-space);
   flex-shrink: 0;
+  background-color: var(--p-surface-950);
 }
 
 .description {
