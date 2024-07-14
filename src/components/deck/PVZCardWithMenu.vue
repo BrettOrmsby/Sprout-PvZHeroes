@@ -6,6 +6,11 @@
     :amount="numberLeft"
     :card="card"
     :isValid="isValid"
+    :data-card-name="card.name"
+    :data-can-add="
+      isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))
+    "
+    :data-can-remove="isUsersDeck && props.isInDeck"
   />
   <!--This might need to go in that div-->
   <Menu
@@ -23,7 +28,10 @@
         <Minus v-else-if="item.label === 'Remove Card'" />
         <Grid2x2X v-else-if="item.label === 'Remove All'" />
 
-        <span>{{ item.label }}</span>
+        <span class="menu-label">{{ item.label }}</span>
+        <kbd v-if="item.shortcut"
+          ><small>{{ item.shortcut }}</small></kbd
+        >
       </a>
     </template>
   </Menu>
@@ -147,6 +155,7 @@ const items = computed(() => {
         (props.isInDeck && numberLeft.value < 4) ||
         (!props.isInDeck && isValid.value),
       command: addCard,
+      shortcut: "Alt + 1",
     },
     {
       label: "Add All",
@@ -159,6 +168,7 @@ const items = computed(() => {
       label: "Remove Card",
       visible: props.isInDeck,
       command: removeCard,
+      shortcut: "Alt + 2",
     },
     {
       label: "Remove All",
@@ -169,4 +179,23 @@ const items = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+kbd {
+  color: var(--p-text-muted-color);
+  background-color: var(--p-surface-700);
+  border-radius: var(--p-border-radius-sm);
+  padding: 0.2em 0.4em;
+  justify-self: flex-end;
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  kbd {
+    display: inline;
+  }
+}
+
+.menu-label {
+  flex-grow: 1;
+}
+</style>

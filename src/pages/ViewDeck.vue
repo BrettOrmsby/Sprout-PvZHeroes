@@ -24,6 +24,54 @@ import DeckFooter from "@/components/deck/DeckFooter.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
 import DeckToolbar from "@/components/deck/DeckToolbar.vue";
 
+import throwError from "@/lib/throwError";
+import useSupabase from "@/composables/UseSupabase";
+import useHoverShortcut from "@/composables/useHoverShortcut";
+
+useHoverShortcut({
+  Digit1: {
+    selector: "[data-card-name][data-can-add=true]",
+    command(element: Element) {
+      const cardName = element.getAttribute("data-card-name")!;
+      const newAmount = deck.list[cardName] ? deck.list[cardName] + 1 : 1;
+      const newList = { ...deck.list, [cardName]: newAmount };
+      updateDeck(newList);
+    },
+  },
+  Digit2: {
+    selector: "[data-card-name][data-can-remove=true]",
+    command(element: Element) {
+      const cardName = element.getAttribute("data-card-name")!;
+
+      const newAmount = deck.list[cardName] - 1;
+      const newList = { ...deck.list, [cardName]: newAmount };
+      if (newList[cardName] === 0) {
+        delete newList[cardName];
+      }
+      updateDeck(newList);
+    },
+  },
+});
+
+const { supabase } = useSupabase();
+const updateDeck = async (newList: Record<string, number>) => {
+  const { data, error } = await supabase
+    .from("decks")
+    .update({
+      list: newList,
+      is_complete:
+        Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+    })
+    .eq("id", deck.id)
+    .select();
+
+  if (error) {
+    throwError(error);
+    return;
+  }
+  Object.assign(deck, data[0]);
+};
+
 const { id } = useAuthUser();
 const isUsersDeck = computed(() => id.value === deck.creator);
 </script>

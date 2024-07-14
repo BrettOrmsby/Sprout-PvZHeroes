@@ -18,8 +18,8 @@ TODO:
 - user settings
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
 - what happens when duplicate with a long name
-- Keyboard shortcuts for adding/removing card from deck
 - better main page
+- some kind of filter or search for the table
 - linting duplicate keys error
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
