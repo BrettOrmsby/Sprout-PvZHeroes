@@ -66,7 +66,7 @@
       <label for="visibility">Make Private</label>
       <ToggleSwitch inputId="visibility" v-model="deckInfo.isPrivate" />
 
-      <Button label="Create Deck" type="submit" :loading="loading" />
+      <Button label="Create" type="submit" :loading="loading" />
     </form>
   </main>
 </template>

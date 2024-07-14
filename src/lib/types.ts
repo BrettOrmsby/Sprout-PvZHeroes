@@ -39,4 +39,5 @@ export type User = {
   username: string;
   profile_image: string;
   id: string;
+  created_at: string;
 };

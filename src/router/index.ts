@@ -50,11 +50,36 @@ const router = createRouter({
         const { supabase } = useSupabase();
         const { data, error } = await supabase
           .from("profiles")
-          .select("username, profile_image, id")
+          .select("*")
           .eq("username", to.params.username)
           .single();
 
         if (error) {
+          return { name: "404" };
+        } else {
+          Object.assign(user, data);
+        }
+      },
+    },
+    {
+      name: "UserSettings",
+      path: "/profile/:username/settings",
+      props: true,
+      // TODO: this, and test if the routing works
+      component: () => import("@/pages/ProfilePage.vue"),
+      meta: {
+        requiresAuth: true,
+      },
+      beforeEnter: async (to) => {
+        const { supabase } = useSupabase();
+        const { id } = useAuthUser();
+        const { data, error } = await supabase
+          .from("profiles")
+          .select("*")
+          .eq("username", to.params.username)
+          .single();
+
+        if (error || id !== data.id) {
           return { name: "404" };
         } else {
           Object.assign(user, data);

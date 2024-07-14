@@ -5,4 +5,5 @@ export default reactive<User>({
   username: "",
   profile_image: "",
   id: "",
+  created_at: "",
 });
