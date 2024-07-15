@@ -15,37 +15,7 @@
       >
 
       <span id="heroLabel">Hero</span>
-      <Select
-        v-model="deckInfo.hero"
-        :options="[...heroData.plants, ...heroData.zombies]"
-        optionLabel="name"
-        optionValue="name"
-        placeholder="Select a Hero"
-      >
-        <template #value="slotProps">
-          <div v-if="slotProps.value" class="hero-select-container">
-            <img
-              :alt="slotProps.value"
-              :src="getHero(slotProps.value).image"
-              class="hero-image"
-            />
-            <div>{{ slotProps.value }}</div>
-          </div>
-          <span v-else>
-            {{ slotProps.placeholder }}
-          </span>
-        </template>
-        <template #option="slotProps">
-          <div class="hero-select-container">
-            <img
-              :alt="slotProps.option.name"
-              :src="slotProps.option.image"
-              class="hero-image"
-            />
-            <div>{{ slotProps.option.name }}</div>
-          </div>
-        </template>
-      </Select>
+      <HeroSelect v-model="deckInfo.hero" aria-labelledby="heroLabel" />
 
       <label for="description">Description</label>
       <Textarea
@@ -77,14 +47,12 @@ import useAuthUser from "@/composables/UseAuthUser";
 import throwError from "@/lib/throwError";
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import heroData from "@/assets/heros.json";
 import CardListTextArea from "@/components/CardListTextArea.vue";
+import HeroSelect from "@/components/HeroSelect.vue";
 import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import ToggleSwitch from "primevue/toggleswitch";
 import Button from "primevue/button";
-import Select from "primevue/select";
-import getHero from "@/lib/getHero";
 
 const router = useRouter();
 const { supabase } = useSupabase();
@@ -159,16 +127,6 @@ label,
   margin-bottom: var(--block-space);
   color: var(--p-red-300);
   display: block;
-}
-
-.hero-image {
-  height: 2em;
-  margin-right: var(--inline-space);
-}
-
-.hero-select-container {
-  display: flex;
-  align-items: center;
 }
 
 .p-inputtext,

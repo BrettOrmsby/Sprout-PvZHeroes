@@ -63,13 +63,14 @@ const updateDeck = async (newList: Record<string, number>) => {
         Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
     })
     .eq("id", deck.id)
-    .select();
+    .select()
+    .single();
 
   if (error) {
     throwError(error);
     return;
   }
-  Object.assign(deck, data[0]);
+  Object.assign(deck, data);
 };
 
 const { id } = useAuthUser();

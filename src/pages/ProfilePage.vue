@@ -1,5 +1,20 @@
 <template>
   <main>
+    <Dialog
+      :modal="true"
+      v-model:visible="isChangeHeroModalOpen"
+      style="max-width: 500px; width: 100%; margin: var(--block-space)"
+      header="Change Hero Profile Image"
+    >
+      <InputGroup>
+        <HeroSelect v-model="selectedHero" aria-label="Hero" />
+        <Button
+          label="Update"
+          @click="updateHeroImage"
+          :loading="isUpdatingProfileImage"
+        />
+      </InputGroup>
+    </Dialog>
     <header>
       <div class="profile-container">
         <Avatar
@@ -7,6 +22,8 @@
           shape="circle"
           class="profile-image"
           :image="getHero(user.profile_image).image"
+          :class="{ 'is-user': user.id === id }"
+          @click="user.id === id && changeHero()"
         >
         </Avatar>
         <div>
@@ -23,27 +40,17 @@
       </div>
     </header>
 
-    <Toolbar>
-      <template #start>
-        <RouterLink :to="{ name: 'CreateDeck' }" style="text-decoration: none">
-          <Button label="New Deck" severity="secondary">
-            <template #icon="iconClass">
-              <Plus :class="iconClass.class" />
-            </template>
-          </Button>
-        </RouterLink>
-        <RouterLink
-          :to="{ name: 'UserSettings', params: { username: user.username } }"
-          style="text-decoration: none"
-        >
-          <Button label="Settings" severity="secondary">
-            <template #icon="iconClass">
-              <Settings :class="iconClass.class" />
-            </template>
-          </Button>
-        </RouterLink>
-      </template>
-    </Toolbar>
+    <RouterLink
+      :to="{ name: 'CreateDeck' }"
+      style="text-decoration: none"
+      v-if="user.id === id"
+    >
+      <Button label="New Deck" severity="secondary">
+        <template #icon="iconClass">
+          <Plus :class="iconClass.class" />
+        </template>
+      </Button>
+    </RouterLink>
 
     <h2>Decks</h2>
     <div class="deck-container" v-if="isLoading">
@@ -69,19 +76,23 @@
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
+import HeroSelect from "@/components/HeroSelect.vue";
 import getHero from "@/lib/getHero";
 import Avatar from "primevue/avatar";
 import Skeleton from "primevue/skeleton";
 import Button from "primevue/button";
-import Toolbar from "primevue/toolbar";
-import { Plus, Settings } from "lucide-vue-next";
+import Dialog from "primevue/dialog";
+import InputGroup from "primevue/inputgroup";
+import { Plus } from "lucide-vue-next";
 import { computed } from "vue";
 import type { Deck } from "@/lib/types";
 import { onMounted } from "vue";
 import user from "@/store/user";
 import { ref } from "vue";
+import useAuthUser from "@/composables/UseAuthUser";
 
 const { supabase } = useSupabase();
+const { id } = useAuthUser();
 
 const isLoading = ref(true);
 const deckData = ref<Deck[]>([]);
@@ -108,6 +119,38 @@ const sortedDecks = computed(() =>
       new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
   )
 );
+
+const isChangeHeroModalOpen = ref(false);
+const selectedHero = ref(user.profile_image);
+const isUpdatingProfileImage = ref(false);
+const changeHero = () => {
+  isChangeHeroModalOpen.value = true;
+};
+
+const updateHeroImage = async () => {
+  if (selectedHero.value === user.profile_image) {
+    isChangeHeroModalOpen.value = false;
+    return;
+  }
+
+  isUpdatingProfileImage.value = true;
+  const { data, error } = await supabase
+    .from("profiles")
+    .update({
+      profile_image: selectedHero.value,
+    })
+    .eq("id", id.value)
+    .select()
+    .single();
+
+  if (error) {
+    throwError(error);
+    return;
+  }
+  Object.assign(user, data);
+  isChangeHeroModalOpen.value = false;
+  isUpdatingProfileImage.value = false;
+};
 </script>
 
 <style scoped>
@@ -120,6 +163,13 @@ const sortedDecks = computed(() =>
   margin-right: var(--inline-space);
   flex-shrink: 0;
   background-color: var(--p-surface-950);
+  transition-duration: 0.25s;
+}
+.is-user {
+  cursor: pointer;
+}
+.is-user:hover {
+  opacity: 0.8;
 }
 h1 {
   margin: 0;
@@ -142,20 +192,5 @@ h2 {
 .deck-skeleton {
   max-width: 400px;
   border-radius: (--p-card-border-radius);
-}
-
-.p-toolbar {
-  margin: 0 auto;
-  width: fit-content;
-}
-:deep(.p-toolbar-start) {
-  display: flex;
-  gap: var(--inline-space);
-  justify-content: center;
-  align-items: center;
-}
-
-:deep(:is(.p-toolbar-center, .p-toolbar-end)) {
-  display: none;
 }
 </style>

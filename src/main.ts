@@ -15,10 +15,10 @@ TODO:
 - draw sim // you can get a mulligan card back even if it was the one that was dished
 - official decks
 - explore decks/users
-- user settings
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
 - what happens when duplicate with a long name
 - better main page
+- highlight cards in decks
 - some kind of filter or search for the table
 - linting duplicate keys error
 - bug: when adding a card if a new row is made, the screen scrolls down
