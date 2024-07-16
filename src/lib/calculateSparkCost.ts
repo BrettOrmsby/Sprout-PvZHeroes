@@ -11,12 +11,7 @@ const regularSparkCosts: Record<string, number> = {
 
 // TODO: this may not be factually correct
 const specialSparkCosts: Record<string, number> = {
-  "Jack O' Lantern": 2000,
-  "Trick-or-Treater": 2000,
-  Mayflower: 2000,
-  "Turkey Rider": 2000,
   "Red Stinger": 2000,
-  "Jolly Holly": 2000,
   "Hot Date": 2000,
   "Leprechaun Imp": 2000,
   "Hippity Hop Gargantuar": 2000,
