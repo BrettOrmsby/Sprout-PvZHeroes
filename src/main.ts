@@ -14,7 +14,6 @@ import { definePreset } from "@primevue/themes";
 TODO:
 - draw sim // you can get a mulligan card back even if it was the one that was dished
 - official decks
-- explore decks/users
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
 - what happens when duplicate with a long name
 - better main page

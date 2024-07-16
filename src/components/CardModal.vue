@@ -1,5 +1,6 @@
 <template>
   <Dialog
+    :draggable="false"
     :modal="true"
     v-model:visible="states.cardModal.show"
     style="max-width: 500px; width: 100%; margin: var(--block-space)"

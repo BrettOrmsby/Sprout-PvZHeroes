@@ -1,6 +1,7 @@
 <template>
   <main>
     <Dialog
+      :draggable="false"
       :modal="true"
       v-model:visible="isChangeHeroModalOpen"
       style="max-width: 500px; width: 100%; margin: var(--block-space)"
@@ -61,6 +62,13 @@
         height="175px"
       ></Skeleton>
     </div>
+    <Message
+      v-else-if="sortedDecks.length === 0"
+      :severity="'warn'"
+      :closable="false"
+    >
+      No Decks
+    </Message>
     <div class="deck-container" v-else>
       <DeckCard
         v-for="deck in sortedDecks"
@@ -82,6 +90,7 @@ import Avatar from "primevue/avatar";
 import Skeleton from "primevue/skeleton";
 import Button from "primevue/button";
 import Dialog from "primevue/dialog";
+import Message from "primevue/message";
 import InputGroup from "primevue/inputgroup";
 import { Plus } from "lucide-vue-next";
 import { computed } from "vue";

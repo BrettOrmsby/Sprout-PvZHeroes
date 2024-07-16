@@ -1,5 +1,6 @@
 <template>
   <Dialog
+    :draggable="false"
     :modal="true"
     v-model:visible="states.editModal"
     @show="updateList"

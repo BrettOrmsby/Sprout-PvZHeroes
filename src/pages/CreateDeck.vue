@@ -146,9 +146,6 @@ label,
   margin-bottom: var(--block-space);
 }
 
-:deep(.p-dropdown-label) {
-  margin-bottom: 0;
-}
 :deep(.p-button) {
   margin-bottom: var(--block-space);
   display: block;

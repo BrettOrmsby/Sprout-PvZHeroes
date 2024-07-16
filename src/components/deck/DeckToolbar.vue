@@ -1,6 +1,7 @@
 <template>
   <Dialog
     :modal="true"
+    :draggable="false"
     v-model:visible="isCompareModalOpen"
     style="max-width: 500px; width: 100%; margin: var(--block-space)"
     header="Compare"

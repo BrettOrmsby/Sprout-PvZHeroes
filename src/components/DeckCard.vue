@@ -3,11 +3,12 @@
     :to="{ name: 'ViewDeck', params: { id: deck.id } }"
     class="deck-card"
   >
+    <!-- TODO: is this class used? -->
     <Card>
       <template #title>
         <div class="title-container">
           <Avatar
-            size="medium"
+            size="normal"
             shape="circle"
             class="hero"
             :image="getHero(deck.hero).image"

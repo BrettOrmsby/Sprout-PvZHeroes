@@ -6,7 +6,10 @@ let shortcuts: Record<
 > = {};
 
 export default function useHoverShortcut(
-  commands: Record<string, { selector: string; command: () => void }>
+  commands: Record<
+    string,
+    { selector: string; command: (element: Element) => void }
+  >
 ) {
   shortcuts = { ...shortcuts, ...commands };
   onMounted(() => window.addEventListener("keydown", keydownListener));

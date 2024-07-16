@@ -19,10 +19,17 @@
           custom
         >
           <a :href="href" v-bind="props.action" @click="navigate">
+            <UserSearch v-if="item.label === 'Users'" />
+            <FileSearch v-else-if="item.label === 'Decks'" />
+            <LayoutGrid v-else-if="item.label === 'Your Decks'" />
+            <Plus v-else-if="item.label === 'Create Deck'" />
+            <LogOut v-else-if="item.label === 'Sign Out'" />
             <span>{{ item.label }}</span>
           </a>
         </router-link>
         <a v-else :href="item.url" :target="item.target" v-bind="props.action">
+          <CircleUserRound v-if="item.label === 'Profile'" />
+          <Search v-if="item.label === 'Search'" />
           <span>{{ item.label }}</span>
           <ChevronDown v-if="hasSubmenu" />
         </a>
@@ -34,11 +41,34 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import Menuebar from "primevue/menubar";
-import { Sprout, ChevronDown } from "lucide-vue-next";
+import {
+  Sprout,
+  ChevronDown,
+  Search,
+  CircleUserRound,
+  UserSearch,
+  FileSearch,
+  Plus,
+  LogOut,
+  LayoutGrid,
+} from "lucide-vue-next";
 import useAuthUser from "@/composables/UseAuthUser";
 const { isSignedIn } = useAuthUser();
 const items = computed(() => {
   return [
+    {
+      label: "Search",
+      items: [
+        {
+          label: "Decks",
+          route: "/search/decks",
+        },
+        {
+          label: "Users",
+          route: "/search/users",
+        },
+      ],
+    },
     {
       label: "Profile",
       visible: isSignedIn.value,
@@ -48,7 +78,7 @@ const items = computed(() => {
           route: "/me",
         },
         {
-          label: "Create a Deck",
+          label: "Create Deck",
           route: "/create",
         },
         {
