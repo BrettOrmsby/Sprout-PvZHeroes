@@ -80,16 +80,14 @@
         severity="secondary"
         @click.prevent="
           () =>
-            Object.assign(
-              form,{
-                name: '',
-                hero: null,
-                showIncomplete: false,
-                cards: [],
-                sort: 'Name',
-                order: 'Ascending',
-              }
-            ) && reloadForm++
+            Object.assign(form, {
+              name: '',
+              hero: null,
+              showIncomplete: false,
+              cards: [],
+              sort: 'Name',
+              order: 'Ascending',
+            }) && reloadForm++
         "
       >
         <template #icon="iconClass">
