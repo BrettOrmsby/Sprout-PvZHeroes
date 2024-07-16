@@ -7,6 +7,7 @@
     <TheDeck />
     <AddCards v-if="isUsersDeck" />
     <DeckCharts />
+    <DrawSimulator />
   </main>
   <DeckFooter />
   <TheFooter />
@@ -22,6 +23,7 @@ import AddCards from "@/components/deck/AddCards.vue";
 import CardModal from "@/components/CardModal.vue";
 import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
+import DrawSimulator from "@/components/deck/DrawSimulator.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
 import DeckToolbar from "@/components/deck/DeckToolbar.vue";
 import TheFooter from "@/components/TheFooter.vue";

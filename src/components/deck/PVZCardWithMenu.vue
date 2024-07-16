@@ -12,7 +12,6 @@
     "
     :data-can-remove="isUsersDeck && props.isInDeck"
   />
-  <!--This might need to go in that div-->
   <Menu
     ref="menu"
     id="overlay_menu"
