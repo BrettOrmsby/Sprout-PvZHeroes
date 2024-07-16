@@ -139,6 +139,7 @@
       No Decks Found
     </Message>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -157,6 +158,7 @@ import Select from "primevue/select";
 import DeckCard from "@/components/DeckCard.vue";
 import Chip from "primevue/chip";
 import HeroSelect from "@/components/HeroSelect.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import { Search, X } from "lucide-vue-next";
 import { watch, onMounted, ref, computed, reactive } from "vue";
 import throwError from "@/lib/throwError";

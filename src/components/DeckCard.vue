@@ -1,9 +1,5 @@
 <template>
-  <RouterLink
-    :to="{ name: 'ViewDeck', params: { id: deck.id } }"
-    class="deck-card"
-  >
-    <!-- TODO: is this class used? -->
+  <RouterLink :to="{ name: 'ViewDeck', params: { id: deck.id } }">
     <Card>
       <template #title>
         <div class="title-container">

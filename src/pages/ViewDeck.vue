@@ -9,6 +9,7 @@
     <DeckCharts />
   </main>
   <DeckFooter />
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -23,6 +24,7 @@ import HeroModal from "@/components/deck/HeroModal.vue";
 import DeckFooter from "@/components/deck/DeckFooter.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
 import DeckToolbar from "@/components/deck/DeckToolbar.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 import throwError from "@/lib/throwError";
 import useSupabase from "@/composables/UseSupabase";

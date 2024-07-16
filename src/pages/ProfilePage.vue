@@ -78,6 +78,7 @@
       />
     </div>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -91,6 +92,7 @@ import Skeleton from "primevue/skeleton";
 import Button from "primevue/button";
 import Dialog from "primevue/dialog";
 import Message from "primevue/message";
+import TheFooter from "@/components/TheFooter.vue";
 import InputGroup from "primevue/inputgroup";
 import { Plus } from "lucide-vue-next";
 import { computed } from "vue";

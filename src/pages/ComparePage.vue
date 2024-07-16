@@ -29,6 +29,7 @@
       </div>
     </template>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -36,6 +37,7 @@ import CompareInput from "@/components/CompareInput.vue";
 import Message from "primevue/message";
 import ComparePVZCard from "@/components/ComparePVZCard.vue";
 import CardModal from "@/components/CardModal.vue";
+import TheFooter from "@/components/TheFooter.vue";
 import { ref, computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck, { compareDeck } from "@/store/deck";

@@ -15,6 +15,7 @@
       <DeckCard v-for="deck in deckData" :key="deck.id" :deck="(deck as any)" />
     </div>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -25,6 +26,7 @@ const { supabase } = useSupabase();
 import type { Deck } from "@/lib/types";
 import { ref, onMounted } from "vue";
 import Skeleton from "primevue/skeleton";
+import TheFooter from "@/components/TheFooter.vue";
 
 const isLoading = ref(true);
 const deckData = ref<Deck[]>([]);

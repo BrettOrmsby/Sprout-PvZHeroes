@@ -39,6 +39,7 @@
       <Button label="Create" type="submit" :loading="loading" />
     </form>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -53,6 +54,7 @@ import InputText from "primevue/inputtext";
 import Textarea from "primevue/textarea";
 import ToggleSwitch from "primevue/toggleswitch";
 import Button from "primevue/button";
+import TheFooter from "@/components/TheFooter.vue";
 
 const router = useRouter();
 const { supabase } = useSupabase();

@@ -28,6 +28,7 @@ svg {
 main {
     padding: var(--block-space);
     margin-top: 4em;
+    min-height: 70vh;
 }
 .p-menu {
     min-width: unset !important;

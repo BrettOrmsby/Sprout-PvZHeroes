@@ -80,6 +80,7 @@
       No Users Found
     </Message>
   </main>
+  <TheFooter />
 </template>
 
 <script lang="ts" setup>
@@ -93,6 +94,7 @@ import Button from "primevue/button";
 import Paginator from "primevue/paginator";
 import Card from "primevue/card";
 import Avatar from "primevue/avatar";
+import TheFooter from "@/components/TheFooter.vue";
 import { Search } from "lucide-vue-next";
 import { watch, onMounted, ref, computed } from "vue";
 import throwError from "@/lib/throwError";
