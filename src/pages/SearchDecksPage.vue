@@ -81,14 +81,14 @@
         @click.prevent="
           () =>
             Object.assign(
-              (form = {
+              form,{
                 name: '',
                 hero: null,
                 showIncomplete: false,
                 cards: [],
                 sort: 'Name',
                 order: 'Ascending',
-              })
+              }
             ) && reloadForm++
         "
       >
