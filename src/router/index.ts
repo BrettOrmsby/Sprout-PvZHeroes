@@ -7,16 +7,29 @@ import states from "@/store/states";
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(_to, _from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
   routes: [
     {
       name: "EmailConfirmation",
       path: "/email-confirmation",
       component: () => import("@/pages/auth/EmailConfirmation.vue"),
+      meta: {
+        title: "Confirm Email • Sprout",
+      },
     },
     {
       name: "Home",
       path: "/",
       component: () => import("@/pages/HomePage.vue"),
+      meta: {
+        title: "Sprout",
+      },
     },
     {
       name: "Me",
@@ -59,6 +72,7 @@ const router = createRouter({
         } else {
           Object.assign(user, data);
         }
+        document.title = `${to.params.username} • Sprout`;
       },
     },
     {
@@ -66,6 +80,7 @@ const router = createRouter({
       path: "/create",
       meta: {
         requiresAuth: true,
+        title: "Create Deck • Sprout",
       },
       component: () => import("@/pages/CreateDeck.vue"),
     },
@@ -97,6 +112,7 @@ const router = createRouter({
           return { name: "404" };
         } else {
           Object.assign(user, creatorData);
+          document.title = `${data.name} • Sprout`;
         }
       },
     },
@@ -130,33 +146,47 @@ const router = createRouter({
         } else {
           Object.assign(compareDeck, compare);
         }
+        document.title = `Compare ${data.name} to ${compare.name} • Sprout`;
       },
     },
     {
       name: "SearchUsers",
       path: "/search/users",
       component: () => import("@/pages/SearchUsersPage.vue"),
+      meta: {
+        title: "Search Users • Sprout",
+      },
     },
     {
       name: "SearchDecks",
       path: "/search/decks",
       component: () => import("@/pages/SearchDecksPage.vue"),
+      meta: {
+        title: "Search Decks • Sprout",
+      },
     },
     {
       name: "SignIn",
       path: "/sign-in",
       component: () => import("@/pages/auth/SignInPage.vue"),
+      meta: {
+        title: "Sign In • Sprout",
+      },
     },
     {
       name: "ForgotPassword",
       path: "/forgotPassword",
       component: () => import("@/pages/auth/ForgotPassword.vue"),
+      meta: {
+        title: "Forgot Password • Sprout",
+      },
     },
     {
       name: "PasswordReset",
       path: "/password-reset",
       meta: {
         requiresAuth: true,
+        title: "Password Reset • Sprout",
       },
       component: () => import("@/pages/auth/PasswordReset.vue"),
     },
@@ -174,11 +204,17 @@ const router = createRouter({
       name: "Register",
       path: "/register",
       component: () => import("@/pages/auth/RegisterPage.vue"),
+      meta: {
+        title: "Register • Sprout",
+      },
     },
     {
       name: "404",
       path: "/404",
       component: () => import("@/pages/404Page.vue"),
+      meta: {
+        title: "404 • Sprout",
+      },
     },
     {
       name: "NotFoundRedirect",
@@ -186,6 +222,13 @@ const router = createRouter({
       redirect: { name: "404" },
     },
   ],
+});
+
+router.beforeEach((to, _, next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title as string;
+  }
+  next();
 });
 
 router.beforeEach((to) => {

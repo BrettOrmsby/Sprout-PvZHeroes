@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Menuebar :model="items">
+    <Menuebar :model="items" breakpoint="450px">
       <template #start>
         <div class="p-menubar-item logo-container">
           <div class="p-menubar-item-content">
@@ -112,5 +112,11 @@ const items = computed(() => {
   left: 0;
   width: 100%;
   z-index: 1004;
+}
+
+@media only screen and (max-width: 450px) {
+  .p-menubar {
+    justify-content: space-between;
+  }
 }
 </style>
