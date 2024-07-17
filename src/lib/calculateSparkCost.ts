@@ -9,7 +9,6 @@ const regularSparkCosts: Record<string, number> = {
   event: 1000,
 };
 
-// TODO: this may not be factually correct
 const specialSparkCosts: Record<string, number> = {
   "Red Stinger": 2000,
   "Hot Date": 2000,

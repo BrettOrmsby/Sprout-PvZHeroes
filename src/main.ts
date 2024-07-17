@@ -14,7 +14,6 @@ import { definePreset } from "@primevue/themes";
 TODO:
 - official decks
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
-- what happens when duplicate with a long name
 - better main page
 - highlight cards in decks
 - some kind of filter or search for the table

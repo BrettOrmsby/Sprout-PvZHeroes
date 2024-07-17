@@ -148,9 +148,8 @@ label,
   margin-bottom: var(--block-space);
 }
 
-:deep(.p-button) {
-  margin-bottom: var(--block-space);
-  display: block;
+.p-button {
+  display: flex;
   width: fit-content;
 }
 </style>

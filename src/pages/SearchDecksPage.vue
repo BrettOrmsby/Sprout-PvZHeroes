@@ -217,7 +217,7 @@ const search = async () => {
       "name",
       `%${(route.query.name || "").toString().replace(/ /g, "%")}%`
     );
-  if (route.query.showIncomplete === "false") {
+  if (!route.query.showIncomplete || route.query.showIncomplete === "false") {
     query = query.eq("is_complete", true);
   }
   if (route.query.hero) {

@@ -33,7 +33,6 @@ const cards = computed(() =>
   flex-wrap: wrap;
   align-items: stretch;
   gap: var(--inline-space);
-  padding: var(--block-space);
   justify-content: flex-start;
 }
 </style>

@@ -86,7 +86,7 @@ const comparison = computed(() => {
 });
 
 // TODO: this real link
-const toInput = ref("http://localhost:5173/deck/" + compareDeck.id);
+const toInput = ref("https://sprout-deckbuider.vercel.app/deck/" + compareDeck.id);
 </script>
 
 <style scoped>
