@@ -69,12 +69,13 @@ import { computed, ref } from "vue";
 import { useToast } from "primevue/usetoast";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 const { id, isSignedIn } = useAuthUser();
 const isUsersDeck = computed(() => id.value === deck.creator);
 const { supabase } = useSupabase();
 const router = useRouter();
+const route = useRoute();
 
 const isCompareModalOpen = ref(false);
 
@@ -108,7 +109,10 @@ const isDuplicationLoading = ref(false);
 const duplicateDeck = async () => {
   isDuplicationLoading.value = true;
   const duplicateDeck = {
-    ...deck,
+    is_complete: deck.is_complete,
+    hero: deck.hero,
+    description: deck.description,
+    list: deck.list,
     creator: id.value,
     is_private: true,
     name: deck.name + " (Duplicate)",
@@ -127,6 +131,9 @@ const duplicateDeck = async () => {
     return;
   }
   router.push({ name: "ViewDeck", params: { id: data.id } });
+  // For some reason, window.location.reload() does not work with either router.push or 
+  // router.replace. So instead, the location must be assigned in order to reload the beforeEnter route condition.
+  window.location.assign(route.fullPath.replace(/\/[^/]+$/, `/${data.id}`));
 };
 </script>
 

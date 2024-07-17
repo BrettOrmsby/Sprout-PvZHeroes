@@ -73,7 +73,7 @@
 <script lang="ts" setup>
 import states from "@/store/states";
 import deck from "@/store/deck";
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import useSupabase from "@/composables/UseSupabase";
 import throwError from "@/lib/throwError";
 import CardListTextArea from "@/components/CardListTextArea.vue";
@@ -178,6 +178,18 @@ const deleteDeck = () => {
     },
   });
 };
+
+watch(
+  () => states.editModal,
+  () => {
+    newInfo.value = {
+      name: deck.name,
+      description: deck.description,
+      is_private: deck.is_private,
+      list: deck.list,
+    };
+  }
+);
 </script>
 
 <style scoped>
