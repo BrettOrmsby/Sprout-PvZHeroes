@@ -6,7 +6,9 @@
     <DeckToolbar />
     <TheDeck />
     <AddCards v-if="isUsersDeck" />
+    <Divider/>
     <DeckCharts />
+    <Divider/>
     <DrawSimulator />
   </main>
   <DeckFooter />
@@ -27,7 +29,7 @@ import DrawSimulator from "@/components/deck/DrawSimulator.vue";
 import DeckCharts from "@/components/deck/DeckCharts.vue";
 import DeckToolbar from "@/components/deck/DeckToolbar.vue";
 import TheFooter from "@/components/TheFooter.vue";
-
+import Divider from 'primevue/divider';
 import throwError from "@/lib/throwError";
 import useSupabase from "@/composables/UseSupabase";
 import useHoverShortcut from "@/composables/useHoverShortcut";

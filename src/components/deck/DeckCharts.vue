@@ -194,4 +194,7 @@ const typeOptions = computed(() => {
   margin: 0 auto;
   max-width: 700px;
 }
+h2 {
+  text-align: center;
+}
 </style>
