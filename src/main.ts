@@ -15,9 +15,6 @@ TODO:
 - official decks
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
 - better main page
-- highlight cards in decks
-- some kind of filter or search for the table
-- linting duplicate keys error
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
 */

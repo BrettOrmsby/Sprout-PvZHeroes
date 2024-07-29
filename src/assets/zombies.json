@@ -2185,6 +2185,7 @@
     "set": "premium",
     "rarity": "rare",
     "class": "Crazy",
+    "type": "Trick",
     "tribes": [
       "Pet"
     ],
@@ -2644,6 +2645,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Crazy",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],
@@ -2659,6 +2661,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Crazy",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],
@@ -2674,6 +2677,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Crazy",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],
@@ -3452,6 +3456,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Hearty",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],
@@ -3467,6 +3472,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Hearty",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],
@@ -3482,6 +3488,7 @@
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Hearty",
+    "type": "Trick",
     "tribes": [
       "Superpower"
     ],

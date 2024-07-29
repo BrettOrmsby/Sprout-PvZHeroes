@@ -12,7 +12,7 @@ import states from "@/store/states";
   <ConfirmDialog style="margin: var(--block-space); max-width: 500px" />
   <ProgressBar v-if="states.loadingRoute" mode="indeterminate"></ProgressBar>
   <TheHeader />
-  <RouterView  />
+  <RouterView />
 </template>
 
 <style scoped>

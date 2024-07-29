@@ -30,6 +30,14 @@
               :key="card.name"
               :isInDeck="false"
               :card="card"
+              :class="`${
+                states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+                'highlighted'
+              } ${
+                states.deckFilter.hideCards &&
+                !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+                'hidden'
+              }`"
             />
           </div>
         </TabPanel>
@@ -41,6 +49,7 @@
 <script lang="ts" setup>
 import { computed } from "vue";
 import deck from "@/store/deck";
+import states from "@/store/states";
 import heroData from "@/assets/heros.json";
 import plants from "@/assets/plants.json";
 import zombies from "@/assets/zombies.json";
@@ -102,5 +111,11 @@ const cardByClass = computed(() => {
   gap: var(--inline-space);
   padding: var(--block-space);
   justify-content: flex-start;
+}
+:deep(.hidden) {
+  display: none;
+}
+:deep(.highlighted) {
+  box-shadow: 0 0 3px 3px var(--p-yellow-400);
 }
 </style>

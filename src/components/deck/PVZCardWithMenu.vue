@@ -11,6 +11,7 @@
       isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))
     "
     :data-can-remove="isUsersDeck && props.isInDeck"
+    :class="class"
   />
   <Menu
     ref="menu"
@@ -48,7 +49,7 @@ import Menu from "primevue/menu";
 import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from "lucide-vue-next";
 import deck from "@/store/deck";
 import PVZCard from "@/components/PVZCard.vue";
-const props = defineProps<{ card: Card; isInDeck: boolean }>();
+const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>();
 
 const hero = computed<Hero>(
   () =>

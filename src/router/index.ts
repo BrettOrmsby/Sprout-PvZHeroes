@@ -114,6 +114,9 @@ const router = createRouter({
           Object.assign(user, creatorData);
           document.title = `${data.name} • Sprout`;
         }
+
+        states.deckFilter.hideCards = false;
+        states.deckFilter.cardsMatchingFilter = [];
       },
     },
     {
@@ -206,6 +209,14 @@ const router = createRouter({
       component: () => import("@/pages/auth/RegisterPage.vue"),
       meta: {
         title: "Register • Sprout",
+      },
+    },
+    {
+      name: "HighlightHelp",
+      path: "/highlight-help",
+      component: () => import("@/pages/HighlightHelpPage.vue"),
+      meta: {
+        title: "Highlight Help • Sprout",
       },
     },
     {

@@ -52,6 +52,21 @@
           <Repeat :class="iconClass.class" />
         </template>
       </Button>
+      <Button
+        @click="(event) => highlighter.toggle(event)"
+        severity="secondary"
+        badgeSeverity="contrast"
+        label="Highlighter"
+        :disabled="isDuplicationLoading"
+        :badge="numberMatchingCardsInDeck"
+      >
+        <template #icon="iconClass">
+          <Highlighter :class="iconClass.class" />
+        </template>
+      </Button>
+      <Popover ref="highlighter">
+        <HighlightPopover />
+      </Popover>
     </template>
   </Toolbar>
 </template>
@@ -60,8 +75,10 @@
 import Button from "primevue/button";
 import Toolbar from "primevue/toolbar";
 import Dialog from "primevue/dialog";
+import Popover from "primevue/popover";
 import CompareInput from "@/components/CompareInput.vue";
-import { Cog, Paperclip, Repeat, Copy } from "lucide-vue-next";
+import HighlightPopover from "@/components/deck/HighlightPopover.vue";
+import { Cog, Paperclip, Repeat, Copy, Highlighter } from "lucide-vue-next";
 import states from "@/store/states";
 import useAuthUser from "@/composables/UseAuthUser";
 import deck from "@/store/deck";
@@ -76,6 +93,17 @@ const isUsersDeck = computed(() => id.value === deck.creator);
 const { supabase } = useSupabase();
 const router = useRouter();
 const route = useRoute();
+
+const highlighter = ref();
+const numberMatchingCardsInDeck = computed(() => {
+  let matchingAmount = 0;
+  for (const [card, amount] of Object.entries(deck.list)) {
+    if (states.deckFilter.cardsMatchingFilter.includes(card)) {
+      matchingAmount += amount;
+    }
+  }
+  return matchingAmount.toString();
+});
 
 const isCompareModalOpen = ref(false);
 
@@ -131,7 +159,7 @@ const duplicateDeck = async () => {
     return;
   }
   router.push({ name: "ViewDeck", params: { id: data.id } });
-  // For some reason, window.location.reload() does not work with either router.push or 
+  // For some reason, window.location.reload() does not work with either router.push or
   // router.replace. So instead, the location must be assigned in order to reload the beforeEnter route condition.
   window.location.assign(route.fullPath.replace(/\/[^/]+$/, `/${data.id}`));
 };
@@ -152,7 +180,7 @@ const duplicateDeck = async () => {
 .p-toolbar :deep(.p-button-label) {
   display: none;
 }
-@media screen and (min-width: 525px) {
+@media screen and (min-width: 750px) {
   .p-toolbar :deep(.p-button-label) {
     display: inline-block;
   }

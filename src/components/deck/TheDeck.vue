@@ -9,6 +9,14 @@
       :key="card.name"
       :isInDeck="true"
       :card="card"
+      :class="`${
+        states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+        'highlighted'
+      } ${
+        states.deckFilter.hideCards &&
+        !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+        'hidden'
+      }`"
     />
   </div>
 </template>
@@ -19,6 +27,7 @@ import getCard from "@/lib/getCard";
 import deck from "@/store/deck";
 import PVZCardWithMenu from "@/components/deck/PVZCardWithMenu.vue";
 import Message from "primevue/message";
+import states from "@/store/states";
 
 const cards = computed(() =>
   Object.keys(deck.list)
@@ -34,5 +43,11 @@ const cards = computed(() =>
   align-items: stretch;
   gap: var(--inline-space);
   justify-content: flex-start;
+}
+:deep(.hidden) {
+  display: none;
+}
+:deep(.highlighted) {
+  box-shadow: 0 0 3px 3px var(--p-yellow-400);
 }
 </style>

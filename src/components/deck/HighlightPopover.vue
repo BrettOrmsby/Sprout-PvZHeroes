@@ -1,0 +1,115 @@
+<template>
+  <div>
+    <h2>Card Highlighter</h2>
+
+    <form @submit.prevent="() => {}">
+      <label for="query">Query</label>
+      <InputText
+        id="query"
+        type="text"
+        :invalid="errors.length > 0"
+        v-model="query"
+        autocapitalize="off"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+      />
+      <div class="errors">
+        <Message
+          severity="error"
+          v-for="(error, index) in errors"
+          :key="index"
+          >{{ error.message }}</Message
+        >
+      </div>
+
+      <label for="hideUnhighlighted">Hide Unhighlighted Cards</label>
+      <ToggleSwitch
+        inputId="hideUnhighlighted"
+        v-model="states.deckFilter.hideCards"
+      />
+    </form>
+    <router-link :to="{ name: 'HighlightHelp' }">
+      <Button label="Highlight Help" link />
+    </router-link>
+  </div>
+</template>
+
+<script lang="ts" setup>
+import states from "@/store/states";
+import { ref, watch } from "vue";
+import InputText from "primevue/inputtext";
+import ToggleSwitch from "primevue/toggleswitch";
+import Message from "primevue/message";
+import Button from "primevue/button";
+
+import generateQuery from "@/lib/parse-query/generateQuery";
+import { type QueryError } from "@/lib/parse-query/scanner";
+import type { Card } from "@/lib/types";
+import zombies from "@/assets/zombies.json";
+import plants from "@/assets/plants.json";
+import doesMatchQuery from "@/lib/matchQuery";
+
+const cards = [...plants, ...zombies] as Card[];
+const query = ref("");
+const errors = ref<QueryError[]>([]);
+
+watch(query, (newVal) => {
+  const result = generateQuery(newVal);
+  errors.value = result.errors;
+  if (newVal.length === 0 || result.query.length === 0) {
+    states.deckFilter.cardsMatchingFilter = [];
+  } else {
+    states.deckFilter.cardsMatchingFilter = cards
+      .filter((e) => doesMatchQuery(e, result.query))
+      .map((e) => e.name);
+  }
+});
+</script>
+
+<style scoped>
+h2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 30ch;
+  white-space: nowrap;
+  margin-bottom: var(--block-space);
+  margin-top: 0;
+}
+
+form {
+  padding: var(--inline-space);
+}
+
+label,
+#heroLabel {
+  display: block;
+  margin-bottom: var(--inline-space);
+}
+
+.errors {
+  margin-top: var(--inline-space);
+  margin-bottom: var(--block-space);
+  display: flex;
+  gap: var(--inline-space);
+  flex-direction: column;
+}
+
+.p-inputtext,
+.p-textarea,
+.card-list-textarea {
+  width: 100%;
+}
+
+.p-inputtext:has(+ :not(.errors)),
+.p-toggleswitch {
+  margin-bottom: var(--block-space);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--inline-space);
+}
+</style>

@@ -41,3 +41,79 @@ export type User = {
   id: string;
   created_at: string;
 };
+
+export type Query = (
+  | {
+      property: "strength" | "s" | "health" | "h" | "cost" | "c";
+      compare: "=" | ":" | "<" | ">" | "<=" | ">=";
+      value: number;
+    }
+  | {
+      property: "tribe" | "t" | "abilities" | "a" | "flavour" | "f" | "name";
+      value: string | number;
+    }
+  | {
+      property: "set";
+      value:
+        | "basic"
+        | "b"
+        | "premium"
+        | "p"
+        | "galactic"
+        | "g"
+        | "colossal"
+        | "c"
+        | "triassic"
+        | "t";
+    }
+  | {
+      property: "rarity" | "r";
+      value:
+        | "common"
+        | "c"
+        | "uncommon"
+        | "u"
+        | "rare"
+        | "r"
+        | "superrare"
+        | "s"
+        | "legendary"
+        | "l"
+        | "event"
+        | "e"
+        | "token"
+        | "t";
+    }
+  | {
+      property: "class";
+      value:
+        | "guardian"
+        | "kabloom"
+        | "megagrow"
+        | "smarty"
+        | "solar"
+        | "removed"
+        | "beastly"
+        | "brainy"
+        | "crazy"
+        | "hearty"
+        | "sneaky";
+    }
+  | {
+      property: "type";
+      value:
+        | "plant"
+        | "trick"
+        | "environment"
+        | "zombie"
+        | "p"
+        | "t"
+        | "e"
+        | "fighter"
+        | "f";
+    }
+  | {
+      property: "or";
+      orSections: Query[];
+    }
+)[];

@@ -11,4 +11,9 @@ export default reactive({
     hero: "Green Shadow",
     show: false,
   },
+  deckFilter: {
+    show: false,
+    hideCards: false,
+    cardsMatchingFilter: [] as string[],
+  },
 });
