@@ -26,7 +26,6 @@ export type Token<T extends TokenType> = {
     : string;
 };
 
-// TODO: negation
 export class Scanner {
   input: string;
   tokens: Token<TokenType>[];
@@ -55,6 +54,11 @@ export class Scanner {
       }
       if (current === ")") {
         this.#addToken("closeParen", "(");
+        this.#increment();
+        continue;
+      }
+      if (current === "-") {
+        this.#addToken("negate", "-");
         this.#increment();
         continue;
       }

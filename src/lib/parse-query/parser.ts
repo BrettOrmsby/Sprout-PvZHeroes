@@ -26,7 +26,6 @@ export type Property = (typeof properties)[number];
 const numberProperties = ["strength", "s", "health", "h", "cost", "c"] as const;
 export type NumberProperty = (typeof numberProperties)[number];
 
-// TODO: negation
 export class Parser {
   tokens: Token<TokenType>[];
   pointer: number;
@@ -52,6 +51,7 @@ export class Parser {
       this.#increment();
     }
 
+    let isNegated = false;
     let root: Query = [];
     let section: { property: "or"; orSections: Query[] } | null = null;
     let target: Query = root;
@@ -60,6 +60,10 @@ export class Parser {
 
       // return the section when hitting a `)` unless in the root witch would be an error
       if ("closeParen" === current.type) {
+        if (isNegated) {
+          target.push({ property: "name", value: "-", isNegated: false });
+          isNegated = false;
+        }
         if (isInRoot) {
           this.errors.push({
             startPos: current.startPos,
@@ -72,6 +76,12 @@ export class Parser {
         }
         this.#increment();
         return root;
+      }
+
+      if (current.type === "negate") {
+        isNegated = !isNegated;
+        this.#increment();
+        continue;
       }
 
       if (
@@ -90,7 +100,9 @@ export class Parser {
               property: propertyName as NumberProperty,
               compare: operator.value as CompareOperator,
               value: this.#peek().value as number,
+              isNegated,
             });
+            isNegated = false;
           } else {
             this.errors.push({
               startPos: this.#peek().startPos,
@@ -248,13 +260,19 @@ export class Parser {
           target.push({
             property: propertyName as any,
             value: valueToken.value,
+            isNegated,
           });
+          isNegated = false;
         }
         this.#increment();
         continue;
       }
 
       if ("or" === current.type) {
+        if (isNegated) {
+          target.push({ property: "name", value: "-", isNegated:false });
+          isNegated = false;
+        }
         if (!section) {
           root = [
             {
@@ -274,6 +292,10 @@ export class Parser {
       }
 
       if ("openParen" === current.type) {
+        if (isNegated) {
+          target.push({ property: "name", value: "-", isNegated: false });
+          isNegated = false;
+        }
         const innerSection = this.#parseSection(false);
         for (const value of innerSection) {
           target.push(value);
@@ -290,9 +312,13 @@ export class Parser {
         continue;
       }
 
-      target.push({ property: "name", value: current.value });
+      target.push({ property: "name", value: current.value, isNegated });
+      isNegated = false;
       this.#increment();
       continue;
+    }
+    if (isNegated) {
+      target.push({ property: "name", value: "-", isNegated: false });
     }
     return root;
   }

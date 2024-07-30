@@ -47,10 +47,12 @@ export type Query = (
       property: "strength" | "s" | "health" | "h" | "cost" | "c";
       compare: "=" | ":" | "<" | ">" | "<=" | ">=";
       value: number;
+      isNegated: boolean;
     }
   | {
       property: "tribe" | "t" | "abilities" | "a" | "flavour" | "f" | "name";
       value: string | number;
+      isNegated: boolean;
     }
   | {
       property: "set";
@@ -65,6 +67,7 @@ export type Query = (
         | "c"
         | "triassic"
         | "t";
+      isNegated: boolean;
     }
   | {
       property: "rarity" | "r";
@@ -83,6 +86,7 @@ export type Query = (
         | "e"
         | "token"
         | "t";
+      isNegated: boolean;
     }
   | {
       property: "class";
@@ -98,6 +102,7 @@ export type Query = (
         | "crazy"
         | "hearty"
         | "sneaky";
+      isNegated: boolean;
     }
   | {
       property: "type";
@@ -111,6 +116,7 @@ export type Query = (
         | "e"
         | "fighter"
         | "f";
+      isNegated: boolean;
     }
   | {
       property: "or";

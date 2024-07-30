@@ -8,7 +8,7 @@
         id="query"
         type="text"
         :invalid="errors.length > 0"
-        v-model="query"
+        v-model="states.deckFilter.textQuery"
         autocapitalize="off"
         autocomplete="off"
         autocorrect="off"
@@ -44,17 +44,16 @@ import Message from "primevue/message";
 import Button from "primevue/button";
 
 import generateQuery from "@/lib/parse-query/generateQuery";
-import { type QueryError } from "@/lib/parse-query/scanner";
+import type { QueryError } from "@/lib/parse-query/scanner";
 import type { Card } from "@/lib/types";
 import zombies from "@/assets/zombies.json";
 import plants from "@/assets/plants.json";
 import doesMatchQuery from "@/lib/matchQuery";
 
 const cards = [...plants, ...zombies] as Card[];
-const query = ref("");
 const errors = ref<QueryError[]>([]);
 
-watch(query, (newVal) => {
+watch(() => states.deckFilter.textQuery, (newVal) => {
   const result = generateQuery(newVal);
   errors.value = result.errors;
   if (newVal.length === 0 || result.query.length === 0) {

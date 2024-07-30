@@ -4,43 +4,45 @@ import type { Card, Query } from "./types";
 export default function doesMatchQuery(card: Card, query: Query): boolean {
   for (const subQuery of query) {
     if (subQuery.property === "or") {
-      const isSomeCorrect = subQuery.orSections.some((orQuery) =>
-        orQuery.length !== 0 && doesMatchQuery(card, orQuery)
+      const isSomeCorrect = subQuery.orSections.some(
+        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery)
       );
       if (!isSomeCorrect) {
         return false;
       }
     } else {
       if (subQuery.property === "name") {
-        if (
-          !card.name
-            .toLowerCase()
-            .includes(subQuery.value.toString().toLowerCase())
-        ) {
+        const doesNameMatch = card.name
+          .toLowerCase()
+          .includes(subQuery.value.toString().toLowerCase());
+        if (doesNameMatch === subQuery.isNegated) {
           return false;
         }
         continue;
       }
       if (subQuery.property === "strength" || subQuery.property === "s") {
-        if (
-          card.strength === null ||
-          !equalityCheck(card.strength, subQuery.compare, subQuery.value)
-        ) {
+        const doesStrengthMatch =
+          card.strength !== null &&
+          equalityCheck(card.strength, subQuery.compare, subQuery.value);
+        if (doesStrengthMatch === subQuery.isNegated) {
           return false;
         }
         continue;
       }
       if (subQuery.property === "health" || subQuery.property === "h") {
-        if (
-          card.health === null ||
-          !equalityCheck(card.health, subQuery.compare, subQuery.value)
-        ) {
+        const doesHealthMatch =
+          card.health !== null &&
+          equalityCheck(card.health, subQuery.compare, subQuery.value);
+        if (doesHealthMatch === subQuery.isNegated) {
           return false;
         }
         continue;
       }
       if (subQuery.property === "cost" || subQuery.property === "c") {
-        if (!equalityCheck(card.cost, subQuery.compare, subQuery.value)) {
+        const doesCostMatch =
+          card.cost !== null &&
+          equalityCheck(card.cost, subQuery.compare, subQuery.value);
+        if (doesCostMatch === subQuery.isNegated) {
           return false;
         }
         continue;
@@ -59,7 +61,8 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
           };
           set = shortFormSets[set as keyof typeof shortFormSets];
         }
-        if (card.set.toLowerCase() !== set) {
+        const doesMatchSet = card.set.toLowerCase() === set;
+        if (doesMatchSet === subQuery.isNegated) {
           return false;
         }
         continue;
@@ -78,13 +81,18 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
           } as const;
           rarity = shortFormRarities[rarity as keyof typeof shortFormRarities];
         }
-        if (card.rarity.toLowerCase().replace("-", "") !== rarity) {
+
+        const doesMatchRarity =
+          card.rarity.toLowerCase().replace("-", "") === rarity;
+        if (doesMatchRarity === subQuery.isNegated) {
           return false;
         }
         continue;
       }
       if (subQuery.property === "class") {
-        if (card.rarity.toLowerCase().replace(/[ -]/g, "") !== subQuery.value) {
+        const doesMatchClass =
+          card.rarity.toLowerCase().replace(/[ -]/g, "") !== subQuery.value;
+        if (doesMatchClass === subQuery.isNegated) {
           return false;
         }
         continue;
@@ -106,45 +114,40 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
             } as const;
             type = shortFormTypes[type as keyof typeof shortFormTypes];
           }
-          if (
-            !(
-              card.type.toLowerCase() === type ||
-              (type === "fighter" &&
-                (card.type.toLowerCase() === "zombie" ||
-                  card.type.toLowerCase() === "plant"))
-            )
-          ) {
+          const doesMatchType =
+            card.type.toLowerCase() === type ||
+            (type === "fighter" &&
+              (card.type.toLowerCase() === "zombie" ||
+                card.type.toLowerCase() === "plant"));
+          if (doesMatchType === subQuery.isNegated) {
             return false;
           }
         } else {
-          if (
-            ![...card.tribes, card.type].some((tribe) =>
-              tribe
-                .toLowerCase()
-                .includes(subQuery.value.toString().toLowerCase())
-            )
-          ) {
+          const doesMatchTribe = [...card.tribes, card.type].some((tribe) =>
+            tribe
+              .toLowerCase()
+              .includes(subQuery.value.toString().toLowerCase())
+          );
+          if (doesMatchTribe === subQuery.isNegated) {
             return false;
           }
         }
         continue;
       }
       if (subQuery.property === "abilities" || subQuery.property === "a") {
-        if (
-          !card.abilities
-            .toLowerCase()
-            .includes(subQuery.value.toString().toLowerCase())
-        ) {
+        const doesMatchAbilities = card.abilities
+          .toLowerCase()
+          .includes(subQuery.value.toString().toLowerCase());
+        if (doesMatchAbilities === subQuery.isNegated) {
           return false;
         }
         continue;
       }
       if (subQuery.property === "flavour" || subQuery.property === "f") {
-        if (
-          !card.flavour
-            .toLowerCase()
-            .includes(subQuery.value.toString().toLowerCase())
-        ) {
+        const doesMatchFlavour = card.flavour
+          .toLowerCase()
+          .includes(subQuery.value.toString().toLowerCase());
+        if (doesMatchFlavour === subQuery.isNegated) {
           return false;
         }
         continue;

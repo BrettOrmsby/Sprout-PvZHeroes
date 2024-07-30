@@ -1,4 +1,4 @@
-import { type Query } from "../types";
+import type { Query } from "../types";
 import { Parser } from "./parser";
 import { type QueryError, Scanner } from "./scanner";
 
