@@ -53,17 +53,20 @@ import doesMatchQuery from "@/lib/matchQuery";
 const cards = [...plants, ...zombies] as Card[];
 const errors = ref<QueryError[]>([]);
 
-watch(() => states.deckFilter.textQuery, (newVal) => {
-  const result = generateQuery(newVal);
-  errors.value = result.errors;
-  if (newVal.length === 0 || result.query.length === 0) {
-    states.deckFilter.cardsMatchingFilter = [];
-  } else {
-    states.deckFilter.cardsMatchingFilter = cards
-      .filter((e) => doesMatchQuery(e, result.query))
-      .map((e) => e.name);
+watch(
+  () => states.deckFilter.textQuery,
+  (newVal) => {
+    const result = generateQuery(newVal);
+    errors.value = result.errors;
+    if (newVal.length === 0 || result.query.length === 0) {
+      states.deckFilter.cardsMatchingFilter = [];
+    } else {
+      states.deckFilter.cardsMatchingFilter = cards
+        .filter((e) => doesMatchQuery(e, result.query))
+        .map((e) => e.name);
+    }
   }
-});
+);
 </script>
 
 <style scoped>

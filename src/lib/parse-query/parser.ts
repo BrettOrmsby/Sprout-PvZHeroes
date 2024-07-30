@@ -270,7 +270,7 @@ export class Parser {
 
       if ("or" === current.type) {
         if (isNegated) {
-          target.push({ property: "name", value: "-", isNegated:false });
+          target.push({ property: "name", value: "-", isNegated: false });
           isNegated = false;
         }
         if (!section) {

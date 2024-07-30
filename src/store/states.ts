@@ -14,7 +14,7 @@ export default reactive({
   deckFilter: {
     show: false,
     hideCards: false,
-    textQuery:"",
+    textQuery: "",
     cardsMatchingFilter: [] as string[],
   },
 });
