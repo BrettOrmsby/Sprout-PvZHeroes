@@ -14,7 +14,6 @@ import { definePreset } from "@primevue/themes";
 TODO:
 - official decks
 - add/remove from deck depending on owner and where it is. (`both` will do nothing) in compare
-- better main page
 - bug: when adding a card if a new row is made, the screen scrolls down
 - SMTP Settings on supabase
 */

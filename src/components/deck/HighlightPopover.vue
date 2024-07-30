@@ -79,10 +79,6 @@ h2 {
   margin-top: 0;
 }
 
-form {
-  padding: var(--inline-space);
-}
-
 label,
 #heroLabel {
   display: block;
@@ -108,10 +104,7 @@ label,
   margin-bottom: var(--block-space);
 }
 
-.footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: var(--inline-space);
+.p-button {
+  padding: 0;
 }
 </style>

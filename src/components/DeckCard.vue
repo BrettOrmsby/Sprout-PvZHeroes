@@ -61,6 +61,7 @@ onUnmounted(() => clearInterval(interval));
 a {
   flex-grow: 1;
   max-width: 400px;
+  width: 100%;
 }
 .p-card {
   width: 100%;
