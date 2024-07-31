@@ -165,6 +165,11 @@ const updateHeroImage = async () => {
 </script>
 
 <style scoped>
+main {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .profile-container {
   display: flex;
   align-items: center;

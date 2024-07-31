@@ -144,6 +144,11 @@ onMounted(search);
 </script>
 
 <style scoped>
+main {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .primary-color {
   color: var(--p-primary-400);
 }
