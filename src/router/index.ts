@@ -7,7 +7,14 @@ import states from "@/store/states";
 
 const router = createRouter({
   history: createWebHistory(),
-  scrollBehavior(_to, _from, savedPosition) {
+  scrollBehavior(to, _from, savedPosition) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+        top: 70,
+      };
+    }
     if (savedPosition) {
       return savedPosition;
     } else {

@@ -91,52 +91,57 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
       }
       if (subQuery.property === "class") {
         const doesMatchClass =
-          card.rarity.toLowerCase().replace(/[ -]/g, "") !== subQuery.value;
+          card.class.toLowerCase().replace(/[ -]/g, "") === subQuery.value;
         if (doesMatchClass === subQuery.isNegated) {
           return false;
         }
         continue;
       }
-      if (
-        subQuery.property === "tribe" ||
-        subQuery.property === "type" ||
-        subQuery.property === "t"
-      ) {
-        if (subQuery.property === "type") {
-          let type = subQuery.value;
-          if (type.length === 1) {
-            const shortFormTypes = {
-              p: "plant",
-              z: "zombie",
-              t: "trick",
-              e: "environment",
-              f: "fighter",
-            } as const;
-            type = shortFormTypes[type as keyof typeof shortFormTypes];
-          }
-          const doesMatchType =
-            card.type.toLowerCase() === type ||
-            (type === "fighter" &&
-              (card.type.toLowerCase() === "zombie" ||
-                card.type.toLowerCase() === "plant"));
-          if (doesMatchType === subQuery.isNegated) {
-            return false;
-          }
-        } else {
-          const doesMatchTribe = [...card.tribes, card.type].some((tribe) =>
-            tribe
-              .toLowerCase()
-              .includes(subQuery.value.toString().toLowerCase())
-          );
-          if (doesMatchTribe === subQuery.isNegated) {
-            return false;
-          }
+      if (subQuery.property === "type") {
+        let type = subQuery.value;
+        if (type.length === 1) {
+          const shortFormTypes = {
+            p: "plant",
+            z: "zombie",
+            t: "trick",
+            e: "environment",
+            f: "fighter",
+          } as const;
+          type = shortFormTypes[type as keyof typeof shortFormTypes];
+        }
+        const doesMatchType =
+          card.type.toLowerCase() === type ||
+          (type === "fighter" &&
+            (card.type.toLowerCase() === "zombie" ||
+              card.type.toLowerCase() === "plant"));
+        if (doesMatchType === subQuery.isNegated) {
+          return false;
         }
         continue;
       }
+      if (subQuery.property === "tribe") {
+        const doesMatchTribe = [...card.tribes].some((tribe) =>
+          tribe.toLowerCase().includes(subQuery.value.toString().toLowerCase())
+        );
+        if (doesMatchTribe === subQuery.isNegated) {
+          return false;
+        }
+        continue;
+      }
+      if (subQuery.property === "t") {
+        const doesMatchT = [...card.tribes, card.type].some((t) =>
+          t.toLowerCase().includes(subQuery.value.toString().toLowerCase())
+        );
+        if (doesMatchT === subQuery.isNegated) {
+          return false;
+        }
+        continue;
+      }
+
       if (subQuery.property === "abilities" || subQuery.property === "a") {
         const doesMatchAbilities = card.abilities
           .toLowerCase()
+          .replace(/<[^>]*?>/g, "")
           .includes(subQuery.value.toString().toLowerCase());
         if (doesMatchAbilities === subQuery.isNegated) {
           return false;

@@ -7,7 +7,7 @@
       <InputText
         id="query"
         type="text"
-        :invalid="errors.length > 0"
+        :invalid="states.deckFilter.errors.length > 0"
         v-model="states.deckFilter.textQuery"
         autocapitalize="off"
         autocomplete="off"
@@ -17,7 +17,7 @@
       <div class="errors">
         <Message
           severity="error"
-          v-for="(error, index) in errors"
+          v-for="(error, index) in states.deckFilter.errors"
           :key="index"
           >{{ error.message }}</Message
         >
@@ -37,27 +37,25 @@
 
 <script lang="ts" setup>
 import states from "@/store/states";
-import { ref, watch } from "vue";
+import { watch } from "vue";
 import InputText from "primevue/inputtext";
 import ToggleSwitch from "primevue/toggleswitch";
 import Message from "primevue/message";
 import Button from "primevue/button";
 
 import generateQuery from "@/lib/parse-query/generateQuery";
-import type { QueryError } from "@/lib/parse-query/scanner";
 import type { Card } from "@/lib/types";
 import zombies from "@/assets/zombies.json";
 import plants from "@/assets/plants.json";
 import doesMatchQuery from "@/lib/matchQuery";
 
 const cards = [...plants, ...zombies] as Card[];
-const errors = ref<QueryError[]>([]);
 
 watch(
   () => states.deckFilter.textQuery,
   (newVal) => {
     const result = generateQuery(newVal);
-    errors.value = result.errors;
+    states.deckFilter.errors = result.errors;
     if (newVal.length === 0 || result.query.length === 0) {
       states.deckFilter.cardsMatchingFilter = [];
     } else {

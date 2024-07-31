@@ -77,21 +77,15 @@ export class Scanner {
         while (!this.#isAtEnd() && this.#peek() !== '"') {
           if (this.#peek() === "\\") {
             this.#increment();
-            if (this.#peek() === "\\") {
-              str += "\\";
-            } else if (this.#peek() === "n") {
+            if (this.#peek() === "n") {
               str += "\n";
-            } else if (this.#peek() === "r") {
-              str += "\r";
-            } else if (this.#peek() === "t") {
-              str += "\t";
             } else if (this.#peek() === '"') {
               str += '"';
             } else {
               this.errors.push({
                 startPos: this.char - 1,
                 endPos: this.char + 1,
-                message: "unknown escape code",
+                message: "Unknown escape code.",
               });
             }
             this.#increment();
@@ -105,7 +99,7 @@ export class Scanner {
           this.errors.push({
             startPos,
             endPos: this.char,
-            message: 'expected an ending string literal `"`',
+            message: 'Expected an ending string literal `"`.',
           });
         }
 
@@ -197,7 +191,7 @@ export class Scanner {
     if (/^\d+$/.test(str)) {
       this.#addToken("int", parseInt(str), startPos);
     } else {
-      if (str === "or") {
+      if (str.toLowerCase() === "or") {
         this.#addToken("or", str, startPos);
       } else if (compareOperator.includes(str as any)) {
         this.#addToken("compareOperator", str as any, startPos);

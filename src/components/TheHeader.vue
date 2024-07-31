@@ -6,7 +6,7 @@
           <div class="p-menubar-item-content">
             <RouterLink to="/" class="p-menubar-item-link">
               <Sprout />
-              <span>Home</span>
+              <span>Sprout</span>
             </RouterLink>
           </div>
         </div>

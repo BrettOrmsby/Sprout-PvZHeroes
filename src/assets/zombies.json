@@ -1640,7 +1640,7 @@
     "cost": 7,
     "strength": 6,
     "health": 7,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>&#160;Make a random History Zombie in a random lane.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>\nMake a random History Zombie in a random lane.",
     "flavour": "What's better than a dinosaur? A gigantic, metal, laser monster that gates in four more dinosaurs."
   },
   {
@@ -2430,7 +2430,7 @@
     "cost": 2,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n<p>4{{Strength}}/3{{Heart}}Captain Deadbeard here.\n</p>",
+    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n4{{Strength}}/3{{Heart}}Captain Deadbeard here.",
     "flavour": "No monkeys, just Zombies."
   },
   {
@@ -4188,7 +4188,7 @@
     "cost": 5,
     "strength": 3,
     "health": 4,
-    "abilities": "<p><b>Gravestone &#160;</b>\n</p><p>This gets +2{{Strength}}/+2{{Heart}} when a Plant or Zombie is frozen. <b>When revealed:</b> {{Frozen}}<b>Freeze</b> a Plant.\n</p>",
+    "abilities": "<b>Gravestone</b>\nThis gets +2{{Strength}}/+2{{Heart}} when a Plant or Zombie is frozen. <b>When revealed:</b> {{Frozen}}<b>Freeze</b> a Plant.\n</p>",
     "flavour": "Freezing Plants in the far reaches of Space is not what he'd imagined he'd spend his life doing. But as the old Yeti saying goes, \"When life hands you snow, you make snow cones.\""
   },
   {
@@ -4288,7 +4288,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>&#160; &#160; Gravestone&#160; &#160; &#160; &#160;</b>All Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "<b>Gravestone</b>\nAll Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "You get your beard caught in the toaster ONE time, and it's all anyone can talk about..."
   },
   {

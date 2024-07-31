@@ -69,7 +69,7 @@ export class Parser {
             startPos: current.startPos,
             endPos: current.endPos,
 
-            message: "unexpected closing parenthesis",
+            message: "Unexpected closing parenthesis.",
           });
           this.#increment();
           continue;
@@ -86,10 +86,10 @@ export class Parser {
 
       if (
         current.type === "identifier" &&
-        properties.includes(current.value as any) &&
+        properties.includes(current.value.toString().toLowerCase() as any) &&
         this.#expect("compareOperator")
       ) {
-        const propertyName = current.value as Property;
+        const propertyName = current.value.toString().toLowerCase() as Property;
         this.#increment();
         const operator = this.#peek();
         this.#increment();
@@ -107,7 +107,7 @@ export class Parser {
             this.errors.push({
               startPos: this.#peek().startPos,
               endPos: this.#peek().endPos,
-              message: `expected a number value for property "${propertyName}"`,
+              message: `Expected a number value for property "${propertyName}".`,
             });
           }
           this.#increment();
@@ -117,7 +117,7 @@ export class Parser {
             this.errors.push({
               startPos: operator.startPos,
               endPos: operator.endPos,
-              message: `expected an "=" or ":" operator for property "${propertyName}"`,
+              message: `Expected an "=" or ":" operator for property "${propertyName}".`,
             });
           }
           if (
@@ -128,7 +128,7 @@ export class Parser {
             this.errors.push({
               startPos: this.#peek().startPos,
               endPos: this.#peek().endPos,
-              message: `expected a non-parenthesis value for property "${propertyName}"`,
+              message: `Expected a non-parenthesis value for property "${propertyName}".`,
             });
             continue;
           }
@@ -158,7 +158,7 @@ export class Parser {
               this.errors.push({
                 startPos: valueToken.startPos,
                 endPos: valueToken.endPos,
-                message: `expected a valid set name or set short form`,
+                message: `Expected a valid set name or set short form.`,
               });
               this.#increment();
               continue;
@@ -192,7 +192,7 @@ export class Parser {
               this.errors.push({
                 startPos: valueToken.startPos,
                 endPos: valueToken.endPos,
-                message: `expected a valid rarity or rarity short form`,
+                message: `Expected a valid rarity or rarity short form.`,
               });
               this.#increment();
               continue;
@@ -223,7 +223,7 @@ export class Parser {
               this.errors.push({
                 startPos: valueToken.startPos,
                 endPos: valueToken.endPos,
-                message: `expected a valid class name`,
+                message: `Expected a valid class name.`,
               });
               this.#increment();
               continue;
@@ -249,7 +249,7 @@ export class Parser {
               this.errors.push({
                 startPos: valueToken.startPos,
                 endPos: valueToken.endPos,
-                message: `expected a valid type name or type short form`,
+                message: `Expected a valid type name or type short form.`,
               });
               this.#increment();
               continue;
@@ -303,19 +303,17 @@ export class Parser {
         continue;
       }
 
-      if (this.#isAtEnd() && !isInRoot) {
-        this.errors.push({
-          startPos: this.#peek().startPos,
-          endPos: this.#peek().endPos,
-          message: "expected an closing parenthesis `)`",
-        });
-        continue;
-      }
-
       target.push({ property: "name", value: current.value, isNegated });
       isNegated = false;
       this.#increment();
       continue;
+    }
+    if (!isInRoot) {
+      this.errors.push({
+        startPos: this.#peek().startPos,
+        endPos: this.#peek().endPos,
+        message: `Expected an closing parenthesis ")".`,
+      });
     }
     if (isNegated) {
       target.push({ property: "name", value: "-", isNegated: false });

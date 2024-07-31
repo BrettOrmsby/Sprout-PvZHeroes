@@ -1,4 +1,5 @@
 import { reactive } from "vue";
+import { type QueryError } from "@/lib/parse-query/scanner";
 
 export default reactive({
   editModal: false,
@@ -15,6 +16,7 @@ export default reactive({
     show: false,
     hideCards: false,
     textQuery: "",
+    errors: [] as QueryError[],
     cardsMatchingFilter: [] as string[],
   },
 });
