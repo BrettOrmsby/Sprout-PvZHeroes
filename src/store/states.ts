@@ -1,5 +1,5 @@
 import { reactive } from "vue";
-import { type QueryError } from "@/lib/parse-query/scanner";
+import type { QueryError } from "@/lib/parse-query/scanner";
 
 export default reactive({
   editModal: false,
