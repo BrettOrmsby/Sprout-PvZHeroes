@@ -20,11 +20,13 @@
         >No Unique Cards</Message
       >
       <div v-else class="card-group">
-        <ComparePVZCard
+        <PVZCard
           v-for="card in sortList(value)"
           :key="card.name"
+          :is-valid="true"
           :card="card"
           :amount="value[card.name]"
+          @click="showCard(card.name)"
         />
       </div>
     </template>
@@ -35,12 +37,13 @@
 <script lang="ts" setup>
 import CompareInput from "@/components/CompareInput.vue";
 import Message from "primevue/message";
-import ComparePVZCard from "@/components/ComparePVZCard.vue";
+import PVZCard from "@/components/PVZCard.vue";
 import CardModal from "@/components/CardModal.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import { ref, computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck, { compareDeck } from "@/store/deck";
+import states from "@/store/states";
 
 defineProps<{ id: string; to: string }>();
 
@@ -84,6 +87,11 @@ const comparison = computed(() => {
 
   return comparison;
 });
+
+const showCard = (card: string) => {
+  states.cardModal.card = card;
+  states.cardModal.show = true;
+};
 
 const toInput = ref(
   "https://sprout-deckbuider.vercel.app/deck/" + compareDeck.id

@@ -4,20 +4,32 @@
     >The Deck Is Empty</Message
   >
   <div v-else class="library-container">
-    <PVZCardWithMenu
-      v-for="card in cards"
-      :key="card.name"
-      :isInDeck="true"
-      :card="card"
-      :class="`${
-        states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-        'highlighted'
-      } ${
-        states.deckFilter.hideCards &&
-        !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-        'hidden'
-      }`"
-    />
+    <template v-if="isUsersDeck">
+      <PVZCardWithMenu
+        v-for="card in cards"
+        :key="card.name"
+        :isInDeck="true"
+        :card="card"
+        :class="`${
+          states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+          'highlighted'
+        } ${
+          states.deckFilter.hideCards &&
+          !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+          'hidden'
+        }`"
+      />
+    </template>
+    <template v-else>
+      <PVZCard
+        v-for="card in cards"
+        :key="card.name"
+        :card="card"
+        :amount="deck.list[card.name]"
+        :isValid="true"
+        @click="showCard(card.name)"
+      />
+    </template>
   </div>
 </template>
 
@@ -26,14 +38,24 @@ import { computed } from "vue";
 import getCard from "@/lib/getCard";
 import deck from "@/store/deck";
 import PVZCardWithMenu from "@/components/deck/PVZCardWithMenu.vue";
+import PVZCard from "@/components/PVZCard.vue";
 import Message from "primevue/message";
 import states from "@/store/states";
+import useAuthUser from "@/composables/UseAuthUser";
+
+const { id } = useAuthUser();
+const isUsersDeck = computed(() => id.value === deck.creator);
 
 const cards = computed(() =>
   Object.keys(deck.list)
     .map((e) => getCard(e))
     .sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))
 );
+
+const showCard = (card: string) => {
+  states.cardModal.card = card;
+  states.cardModal.show = true;
+};
 </script>
 
 <style scoped>
