@@ -30,7 +30,8 @@
       />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ sparks.toLocaleString() }}<img src="/images/assets/spark.png" />
+      {{ sparks.toLocaleString()
+      }}<img src="/images/assets/spark.png" alt="spark" />
     </span>
   </footer>
 </template>

@@ -59,7 +59,7 @@ import useAuthUser from "@/composables/UseAuthUser";
 import throwError from "@/lib/throwError";
 import DeckCard from "@/components/DeckCard.vue";
 import type { Deck } from "@/lib/types";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, watch } from "vue";
 import Skeleton from "primevue/skeleton";
 import Button from "primevue/button";
 import Message from "primevue/message";
@@ -113,6 +113,11 @@ const getPublicDeckData = async () => {
 onMounted(
   async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()])
 );
+watch(isSignedIn, (newVal) => {
+  if (newVal) {
+    getYourDeckData();
+  }
+});
 </script>
 
 <style scoped>
