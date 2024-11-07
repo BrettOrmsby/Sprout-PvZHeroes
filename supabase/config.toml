@@ -92,7 +92,7 @@ enabled = true
 enabled = true
 # The base URL of your website. Used as an allow-list for redirects and for constructing URLs used
 # in emails.
-site_url = "http://127.0.0.1:3000"
+site_url = "http://localhoste:5173/"
 # A list of *exact* URLs that auth providers are permitted to redirect to post authentication.
 additional_redirect_urls = ["https://127.0.0.1:3000"]
 # How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604,800 (1 week).
@@ -254,3 +254,9 @@ s3_region = "env(S3_REGION)"
 s3_access_key = "env(S3_ACCESS_KEY)"
 # Configures AWS_SECRET_ACCESS_KEY for S3 bucket
 s3_secret_key = "env(S3_SECRET_KEY)"
+
+[auth.external.discord]
+enabled = true
+client_id = "env(VITE_SUPABASE_AUTH_DISCORD_CLIENT_ID)"
+secret = "env(VITE_SUPABASE_AUTH_DISCORD_SECRET)"
+redirect_uri = "http://localhost:54321/auth/v1/callback"

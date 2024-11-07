@@ -11,6 +11,24 @@ const supabaseKey = import.meta.env.VITE_SUPABASE_ANON as string;
 // setup client
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+supabase.auth.onAuthStateChange((event, session) => {
+  if (session && session.provider_token) {
+    window.localStorage.setItem("oauth_provider_token", session.provider_token);
+  }
+
+  if (session && session.provider_refresh_token) {
+    window.localStorage.setItem(
+      "oauth_provider_refresh_token",
+      session.provider_refresh_token
+    );
+  }
+
+  if (event === "SIGNED_OUT") {
+    window.localStorage.removeItem("oauth_provider_token");
+    window.localStorage.removeItem("oauth_provider_refresh_token");
+  }
+});
+
 // setup auth state listener
 supabase.auth.onAuthStateChange((event, session) => {
   // the "event" is a string indicating what trigger the state change (ie. SIGN_IN, SIGN_OUT, etc)

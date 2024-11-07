@@ -16,6 +16,22 @@
         />
       </InputGroup>
     </Dialog>
+    <Dialog
+      :draggable="false"
+      :modal="true"
+      v-model:visible="isChangeUsernameModalOpen"
+      style="max-width: 500px; width: 100%; margin: var(--block-space)"
+      header="Change Username"
+    >
+      <InputGroup>
+        <InputText v-model="selectedUsername" aria-label="Hero" />
+        <Button
+          label="Update"
+          @click="updateUsername"
+          :loading="isUpdatingUsername"
+        />
+      </InputGroup>
+    </Dialog>
     <header>
       <div class="profile-container">
         <Avatar
@@ -28,7 +44,12 @@
         >
         </Avatar>
         <div>
-          <h1>{{ user.username }}</h1>
+          <h1
+            :class="{ 'is-clickable': user.id === id }"
+            @click="user.id === id && changeUsername()"
+          >
+            {{ user.username }}
+          </h1>
           <p class="joined">
             Joined
             {{
@@ -101,6 +122,7 @@ import { onMounted } from "vue";
 import user from "@/store/user";
 import { ref } from "vue";
 import useAuthUser from "@/composables/UseAuthUser";
+import InputText from "primevue/inputtext";
 
 const { supabase } = useSupabase();
 const { id } = useAuthUser();
@@ -155,12 +177,46 @@ const updateHeroImage = async () => {
     .single();
 
   if (error) {
+    isUpdatingProfileImage.value = false;
     throwError(error);
     return;
   }
   Object.assign(user, data);
   isChangeHeroModalOpen.value = false;
   isUpdatingProfileImage.value = false;
+};
+
+const isChangeUsernameModalOpen = ref(false);
+const selectedUsername = ref(user.username);
+const isUpdatingUsername = ref(false);
+const changeUsername = () => {
+  isChangeUsernameModalOpen.value = true;
+};
+
+const updateUsername = async () => {
+  if (selectedUsername.value === user.username) {
+    isChangeHeroModalOpen.value = false;
+    return;
+  }
+
+  isUpdatingUsername.value = true;
+  const { data, error } = await supabase
+    .from("profiles")
+    .update({
+      username: selectedUsername.value,
+    })
+    .eq("id", id.value)
+    .select()
+    .single();
+
+  if (error) {
+    isUpdatingUsername.value = false;
+    throwError(error);
+    return;
+  }
+  Object.assign(user, data);
+  isChangeUsernameModalOpen.value = false;
+  isUpdatingUsername.value = false;
 };
 </script>
 
@@ -181,10 +237,12 @@ main {
   background-color: var(--p-surface-950);
   transition-duration: 0.25s;
 }
-.is-user {
+.is-user,
+.is-clickable {
   cursor: pointer;
 }
-.is-user:hover {
+.is-user:hover,
+.is-clickable:hover {
   opacity: 0.8;
 }
 h1 {
