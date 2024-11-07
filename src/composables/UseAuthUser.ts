@@ -9,10 +9,11 @@ const user = ref<null | User>(null);
 export default function useAuthUser() {
   const { supabase } = useSupabase();
 
-  const signIn = async (credentials: { email: string; password: string }) => {
-    const { data, error } = await supabase.auth.signInWithPassword(credentials);
+  const signIn = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "discord",
+    });
     if (error) throw error;
-    return data.user;
   };
 
   const signOut = async () => {

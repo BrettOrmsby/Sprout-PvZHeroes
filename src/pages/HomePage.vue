@@ -2,7 +2,8 @@
   <main>
     <h1><Sprout class="sprout" />Sprout</h1>
     <div class="subtitle">
-      A deck building website for Plants vs. Zombies Heros.
+      <h2>A new login method is being worked on. Sorry for the incontinence.</h2>
+      <!--A deck building website for Plants vs. Zombies Heros.-->
     </div>
 
     <div v-if="isSignedIn">

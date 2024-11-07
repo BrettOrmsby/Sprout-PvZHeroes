@@ -53,7 +53,7 @@ import {
   LayoutGrid,
 } from "lucide-vue-next";
 import useAuthUser from "@/composables/UseAuthUser";
-const { isSignedIn } = useAuthUser();
+const { isSignedIn, signIn } = useAuthUser();
 const items = computed(() => {
   return [
     {
@@ -89,12 +89,7 @@ const items = computed(() => {
     },
     {
       label: "Sign In",
-      route: "/sign-in",
-      visible: !isSignedIn.value,
-    },
-    {
-      label: "Register",
-      route: "/register",
+      command: signIn,
       visible: !isSignedIn.value,
     },
   ];

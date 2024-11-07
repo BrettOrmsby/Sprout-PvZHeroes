@@ -23,14 +23,6 @@ const router = createRouter({
   },
   routes: [
     {
-      name: "EmailConfirmation",
-      path: "/email-confirmation",
-      component: () => import("@/pages/auth/EmailConfirmation.vue"),
-      meta: {
-        title: "Confirm Email • Sprout",
-      },
-    },
-    {
       name: "Home",
       path: "/",
       component: () => import("@/pages/HomePage.vue"),
@@ -176,31 +168,6 @@ const router = createRouter({
       },
     },
     {
-      name: "SignIn",
-      path: "/sign-in",
-      component: () => import("@/pages/auth/SignInPage.vue"),
-      meta: {
-        title: "Sign In • Sprout",
-      },
-    },
-    {
-      name: "ForgotPassword",
-      path: "/forgotPassword",
-      component: () => import("@/pages/auth/ForgotPassword.vue"),
-      meta: {
-        title: "Forgot Password • Sprout",
-      },
-    },
-    {
-      name: "PasswordReset",
-      path: "/password-reset",
-      meta: {
-        requiresAuth: true,
-        title: "Password Reset • Sprout",
-      },
-      component: () => import("@/pages/auth/PasswordReset.vue"),
-    },
-    {
       name: "SignOut",
       path: "/sign-out",
       component: () => null,
@@ -208,14 +175,6 @@ const router = createRouter({
         const { signOut } = useAuthUser();
         await signOut();
         return { name: "Home" };
-      },
-    },
-    {
-      name: "Register",
-      path: "/register",
-      component: () => import("@/pages/auth/RegisterPage.vue"),
-      meta: {
-        title: "Register • Sprout",
       },
     },
     {
