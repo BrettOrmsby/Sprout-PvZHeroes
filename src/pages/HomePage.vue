@@ -4,6 +4,16 @@
     <div class="subtitle">
       A deck building website for Plants vs. Zombies Heros.
     </div>
+    <Message style="margin-top: var(--inline-space)"
+      >Card texts have been changed following the recent update. Images may take
+      longer to be updated. Please report any discrepancies to the
+      <a
+        href="https://github.com/BrettOrmsby/Sprout-PvZHeroes"
+        style="color: inherit; text-decoration: underline"
+        target="_blank"
+        >Github</a
+      >.</Message
+    >
 
     <div v-if="isSignedIn">
       <h2>Your Latest Decks</h2>

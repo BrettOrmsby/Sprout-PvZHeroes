@@ -44,8 +44,8 @@
       "Professional"
     ],
     "cost": 2,
-    "strength": 2,
-    "health": 2,
+    "strength": 1,
+    "health": 3,
     "abilities": "When you play another Pet, all Pets get +1{{Strength}}.",
     "flavour": "Snaaaaake!"
   },
@@ -110,7 +110,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}. Heal your Hero for 2.",
+    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card.",
     "flavour": "Just a quick bite."
   },
   {
@@ -143,7 +143,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a Pet, it gets +2{{Strength}}/+1{{Heart}} instead.",
     "flavour": "What's inside? A peanut butter and brains sandwich... with the crusts cut off."
   },
   {
@@ -189,7 +189,7 @@
     "tribes": [
       "Dancing"
     ],
-    "cost": 4,
+    "cost": 3,
     "strength": null,
     "health": null,
     "abilities": "Destroy a random Plant.",
@@ -222,7 +222,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -2 {{Strength}}/-2 {{Heart}}.\nIf it's on Heights or an Environment, it gets -6 {{Strength}}/-6 {{Heart}} instead.",
+    "abilities": "A Plant gets -3{{Strength}}/-3{{Heart}}.\nIf it's on Heights or an Environment, it gets -6{{Strength}}/-6{{Heart}} instead.",
     "flavour": "Oozin' for a bruisin!"
   },
   {
@@ -286,7 +286,7 @@
     ],
     "cost": 5,
     "strength": 5,
-    "health": 5,
+    "health": 6,
     "abilities": "<b>Hunt</b>",
     "flavour": "His toupee went missing in the heat of battle and he's been furious about it ever since."
   },
@@ -353,7 +353,7 @@
     ],
     "cost": 4,
     "strength": 4,
-    "health": 3,
+    "health": 4,
     "abilities": "<b>When hurt:</b> <b>Bounce</b> this kangaroo.",
     "flavour": "Sure, it's a bumpy ride, but it beats walking. Have you seen an Imp's legs?"
   },
@@ -420,7 +420,7 @@
     ],
     "cost": 4,
     "strength": 4,
-    "health": 3,
+    "health": 4,
     "abilities": "<b>Zombie Evolution</b>: Destroy a Plant.",
     "flavour": "He's wheely cheesy."
   },
@@ -452,7 +452,7 @@
     ],
     "cost": 1,
     "strength": 0,
-    "health": 4,
+    "health": 5,
     "abilities": "This gets +3{{Strength}} this turn when you play another Pet.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
@@ -485,9 +485,9 @@
       "Gargantuar"
     ],
     "cost": 6,
-    "strength": 7,
-    "health": 8,
-    "abilities": "<b>Amphibious</b>",
+    "strength": 6,
+    "health": 6,
+    "abilities": "<b>Amphibious</b>\n<b>Hunt</b>\nWhen any Zombie enters any lane, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Has every single issue of Deep Sea Quarterly, but rarely has time to read them."
   },
   {
@@ -617,7 +617,7 @@
     "cost": 7,
     "strength": 6,
     "health": 6,
-    "abilities": "When this does damage, heal your Hero for that much.",
+    "abilities": "When a Gargantuar does damage, heal your Hero that much.",
     "flavour": "Their bedside manner could use some work."
   },
   {
@@ -633,7 +633,7 @@
     "cost": 8,
     "strength": 8,
     "health": 8,
-    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When destroyed</b>: Gain an Octo Zombie",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b> and {{Frenzy}}<b>Frenzy</b>.\n<b>When destroyed</b>: Gain an Octo Zombie.",
     "flavour": "Is the correct term 'octopuses' or 'octopi'? You'd think he'd have an opinion, but he doesn't."
   },
   {
@@ -650,7 +650,7 @@
     "cost": 9,
     "strength": 9,
     "health": 9,
-    "abilities": "<b>When played:</b> Destroy all Plants.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Destroy all Plants here and next door.",
     "flavour": "The first 999 Zombots are now considered classics."
   },
   {
@@ -783,7 +783,7 @@
     ],
     "cost": 2,
     "strength": 2,
-    "health": 2,
+    "health": 1,
     "abilities": "<b>Amphibious</b>\n<b>When played:</b> This Zombie copies the {{Strength}} and {{Heart}} of another Zombie.",
     "flavour": "It takes a lot of practice for two Zombies' heads to fall off at the exact same time."
   },
@@ -818,7 +818,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "This heals to full and gets +2{{Heart}} when it destroys a Plant.",
+    "abilities": "<b>Hunt</b>.\n When this destroys a Plant and survives, it heals to full and heals your Hero 2.",
     "flavour": "His cholesterol level is off the charts, and yet he seems to be in remarkably good Health."
   },
   {
@@ -851,7 +851,7 @@
     "cost": 6,
     "strength": 6,
     "health": 6,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, <b>Conjure</b> a Gourmet card.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, <b>Conjure</b> a Gargantuar card.",
     "flavour": "Chillin' beside the ol' backyard grill, cookin' up some brains, hangin' with his zombies... that's the good unlife."
   },
   {
@@ -866,8 +866,8 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 1,
-    "abilities": "<b>Amphibious</b>\nWhen this hurts a Plant, draw a Card.",
+    "health": 2,
+    "abilities": "<b>Amphibious</b>\nWhen this hurts a Plant, draw a card.",
     "flavour": "Like Chihuahuas with wings... and fangs... and a taste for Plants."
   },
   {
@@ -1196,24 +1196,24 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a Mustache, this gets +1{{Heart}} and you get +1{{Brain}}.",
+    "abilities": "When you play a Mustache, this gets +2{{Heart}} and you get +1{{Brain}}.",
     "flavour": "Customers have been telling him \"Get a brain\" for years now."
   },
   {
-    "name": "Pirate's Booty",
+    "name": "Quarterly Bonus",
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Pirate%27s_BootyH.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Trick",
     "tribes": [
-      "Pirate",
-      "Barrel"
+      "Barrel",
+      "Professional"
     ],
     "cost": 5,
     "strength": null,
     "health": null,
-    "abilities": "Draw a card for each Zombie.",
+    "abilities": "Strength of a Zombie becomes 4, then it does a Bonus Attack.",
     "flavour": "Zombie Pirates kick a lot of booty. Maybe someday they'll figure how to spend it."
   },
   {
@@ -1228,8 +1228,8 @@
       "Party"
     ],
     "cost": 3,
-    "strength": 2,
-    "health": 2,
+    "strength": 1,
+    "health": 4,
     "abilities": "<b>Gravestone</b>\n<b>Start of Tricks:</b> You get +2{{Brain}} this turn.",
     "flavour": "Life comes and goes, but proper manners are forever."
   },
@@ -1261,7 +1261,7 @@
       "Science"
     ],
     "cost": 5,
-    "strength": 2,
+    "strength": 3,
     "health": 3,
     "abilities": "<b>When played:</b> Each Science Zombie does a Bonus Attack.",
     "flavour": "Wishes the Mad Chemist would stop copying his hair style."
@@ -1297,7 +1297,7 @@
     "cost": 6,
     "strength": 6,
     "health": 7,
-    "abilities": "All Gargantuars have {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "All Gargantuars have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs 1 more.",
     "flavour": "A wizard did it. An enormous, green, Zombie wizard."
   },
   {
@@ -1344,7 +1344,7 @@
       "Monster"
     ],
     "cost": 3,
-    "strength": 1,
+    "strength": 2,
     "health": 5,
     "abilities": "<b>Zombie Evolution</b>: This gets +1{{Strength}} for each {{Brain}} you got this turn.",
     "flavour": "This is why you shouldn't drink primordial soup."
@@ -1379,7 +1379,7 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Zombie does a Bonus Attack.",
     "flavour": "He charges for the full hour."
   },
@@ -1412,7 +1412,7 @@
     "cost": 4,
     "strength": 3,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\nWhen you play your first Trick each turn, <b>Conjure </b>a Trick.",
+    "abilities": "<b>Gravestone</b>\nWhen you play your first Trick each turn, <b>Conjure</b> a Trick, and it costs 1 less.",
     "flavour": "He's not so much \"mad\" as he is \"mildly annoyed.\""
   },
   {
@@ -1427,7 +1427,7 @@
       "Science"
     ],
     "cost": 5,
-    "strength": 4,
+    "strength": 5,
     "health": 4,
     "abilities": "<b>When destroyed:</b> Make a random Zombie here.",
     "flavour": "Soon everyone will own their own portal. But for now, he enjoys being an early adopter."
@@ -1473,13 +1473,12 @@
     "class": "Brainy",
     "type": "Zombie",
     "tribes": [
-      "History",
       "Science"
     ],
     "cost": 3,
     "strength": 2,
     "health": 5,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\nEach player draws an extra card each turn.",
+    "abilities": "Cards either player <b>Conjures</b> cost 1 less.\n<b>Start of turn:</b> Each player <b>Conjures</b> a card.",
     "flavour": "\"Stand here and guard this gate with your unlife,\" she was told. And that's what she's been doing ever since."
   },
   {
@@ -1528,7 +1527,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When this does damage, <b>Conjure</b> a Mustache.\n<b>Mustache Evolution</b>: This gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When this does damage, <b>Conjure</b> a Mustache.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
     "flavour": "Determined to find every Mustache Monument in Hollow Earth, Neptuna brought in the experts."
   },
   {
@@ -1561,7 +1560,7 @@
     "cost": 5,
     "strength": 7,
     "health": 5,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen this hurts the Plant Hero, empty their Block Meter.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen played and When this hurts the Plant Hero, empty their Block Meter.",
     "flavour": "Been crushing shields since the 9th Century. Has gotten pretty darn good at it."
   },
   {
@@ -1626,7 +1625,7 @@
     "cost": 5,
     "strength": 5,
     "health": 7,
-    "abilities": "When a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\nWhen a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
     "flavour": "The Gargantuar Mime groans like any other zombie. He just does it silently, and in French."
   },
   {
@@ -1636,10 +1635,10 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Science", "Pet"],
     "cost": 7,
-    "strength": 6,
-    "health": 7,
+    "strength": 8,
+    "health": 8,
     "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>\nMake a random History Zombie in a random lane.",
     "flavour": "What's better than a dinosaur? A gigantic, metal, laser monster that gates in four more dinosaurs."
   },
@@ -1673,7 +1672,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> Each player draws two cards.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a Zombie, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a Plant, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
     "flavour": "Regifting: Is it really an embarrassing social faux pas? Or is it just good ol' recycling?"
   },
   {
@@ -1689,7 +1688,7 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 3,
+    "health": 4,
     "abilities": "<b>Gravestone</b>When you play your first Trick each turn, <b>Conjure</b> a Treat.",
     "flavour": "Trick or Treat? He is haunted by that question - and by an answer that continues to elude him."
   },
@@ -1761,7 +1760,7 @@
     "rarity": "token",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -1780,7 +1779,7 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>Amphibious </b>When this hurts a Plant, draw a Card.",
     "flavour": "Like Chihuahuas with wings... and fangs... and a taste for Plants."
   },
@@ -1874,7 +1873,7 @@
     "rarity": "common",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1905,7 +1904,7 @@
     "rarity": "common",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pet"],
     "cost": 2,
     "strength": 4,
     "health": 1,
@@ -1919,7 +1918,7 @@
     "rarity": "common",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 3,
     "strength": 3,
     "health": 1,
@@ -1933,10 +1932,10 @@
     "rarity": "common",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 5,
     "strength": 3,
-    "health": 2,
+    "health": 1,
     "abilities": "<b>When played:</b> Do 2 damage to the Plant Hero for each Dancing Zombie.",
     "flavour": "Also enjoys dancing the rumba, tango, and the Hokey Pokey."
   },
@@ -1947,7 +1946,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1961,7 +1960,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Party"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1975,7 +1974,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Barrel"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -1989,7 +1988,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": 1,
     "health": 4,
@@ -2007,7 +2006,7 @@
       "Imp",
       "Party"
     ],
-    "cost": 4,
+    "cost": 3,
     "strength": null,
     "health": null,
     "abilities": "Do 4 damage to a Plant.",
@@ -2020,7 +2019,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "History"],
     "cost": 4,
     "strength": 0,
     "health": 2,
@@ -2034,7 +2033,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -2079,7 +2078,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": 3,
     "health": 2,
@@ -2093,7 +2092,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Gourmet"],
     "cost": 1,
     "strength": 0,
     "health": 2,
@@ -2155,7 +2154,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Party"],
     "cost": 3,
     "strength": 1,
     "health": 5,
@@ -2173,10 +2172,10 @@
       "Science",
       "Gargantuar"
     ],
-    "cost": 3,
+    "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Do 3 damage. If there is a zombie in every lane, this does double damage.",
+    "abilities": "Do damage equal to the number of Zombies.",
     "flavour": "Dr. Zomboss believes that there's no problem that can't be solved by a giant robot."
   },
   {
@@ -2202,7 +2201,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pirate", "Gargantuar"],
     "cost": 5,
     "strength": 5,
     "health": 5,
@@ -2222,7 +2221,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Zombie. Then do 4 damage.",
+    "abilities": "Destroy a Zombie. Then do 4 damage to a Plant.",
     "flavour": "The round-trip ticket is the same price as the one-way."
   },
   {
@@ -2232,7 +2231,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 4,
     "strength": 2,
     "health": 3,
@@ -2246,11 +2245,11 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pet", "Monster"],
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Zombie Evolution</b>: Do 2 damage to each Plant.",
+    "abilities": "<b>Zombie Evolution</b>: Do 3 damage to each Plant.",
     "flavour": "He's the missing skink."
   },
   {
@@ -2260,11 +2259,11 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Science"],
     "cost": 2,
     "strength": 0,
     "health": 3,
-    "abilities": "{{Overshoot}}<b>Overshoot 3</b>\n<b>Fusion:</b> a Zombie played on this gets {{Overshoot}}<b>Overshoot 3</b>.",
+    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>Fusion:</b> a Zombie played on this gets {{Overshoot}}<b>Overshoot 2</b>.",
     "flavour": "The Triassic Invasion brought the very best of Zombie culture: Disco."
   },
   {
@@ -2274,7 +2273,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -2288,10 +2287,10 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pet", "Mustache"],
     "cost": 3,
     "strength": 3,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, do 3 damage to a random Plant.",
     "flavour": "Keeps forgetting that the magic word is \"Please.\""
   },
@@ -2302,7 +2301,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional", "Party"],
     "cost": 3,
     "strength": 3,
     "health": 4,
@@ -2316,10 +2315,10 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Science"],
     "cost": 6,
-    "strength": 4,
-    "health": 4,
+    "strength": 5,
+    "health": 5,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a 3{{Strength}}/1{{Heart}} Disco Zombie that makes a 1{{Strength}}/1{{Heart}} Backup Dancer.",
     "flavour": "A fully weaponized jukebox."
   },
@@ -2347,12 +2346,13 @@
     "class": "Crazy",
     "type": "Environment",
     "tribes": [
-      "Science"
+      "Science",
+      "Barrel"
     ],
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here have {{Overshoot}}<b>Overshoot 3</b>.",
+    "abilities": "Zombies here get {{Overshoot}}<b>Overshoot 3</b>.",
     "flavour": "Zombies landed on the Moon? Many believe it's nothing but a conspiracy theory, and yet, here's the proof."
   },
   {
@@ -2380,7 +2380,6 @@
     "class": "Crazy",
     "type": "Zombie",
     "tribes": [
-      "Pirate",
       "Monster"
     ],
     "cost": 1,
@@ -2396,10 +2395,10 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Mustache", "Pirate"],
     "cost": 1,
     "strength": 2,
-    "health": 2,
+    "health": 1,
     "abilities": "{{Truestrike}}<b>Bullseye</b>\nThis gets +1{{Strength}} when a Zombie is revealed from a Gravestone.",
     "flavour": "Why not rob graves? They're not going to miss it. It's not like the dead are rising up or anything."
   },
@@ -2426,7 +2425,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pirate", "Barrel"],
     "cost": 2,
     "strength": 0,
     "health": 1,
@@ -2440,7 +2439,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "History"],
     "cost": 4,
     "strength": 0,
     "health": 6,
@@ -2471,7 +2470,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Mustache"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2485,7 +2484,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing"],
     "cost": 5,
     "strength": 3,
     "health": 3,
@@ -2509,15 +2508,15 @@
     "flavour": "When not exploring Hollow Earth's jungles, they like to go clubbing."
   },
   {
-    "name": "Headhunter",
+    "name": "Bobblehead",
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b1/HeadhunterH.png",
     "set": "triassic",
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Dancing", "Mustache"],
     "cost": 4,
-    "strength": 3,
+    "strength": 2,
     "health": 4,
     "abilities": "When you play a Dancing card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets +2{{Strength}}/+2{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He offers a special deal: Two of his heads for one of yours. Anyway you slice it, you still come out a head."
@@ -2536,7 +2535,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Do 7 damage to a Plant. The Plant player <b>Conjures</b> a Fruit.",
+    "abilities": "Do 5 damage to a Plant. The Plant player <b>Conjures</b> a Fruit.",
     "flavour": "Once you get past all the dynamite and bombs, fruitcakes actually contain at least 5% Fruit."
   },
   {
@@ -2562,7 +2561,7 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Imp"],
     "cost": 4,
     "strength": 4,
     "health": 2,
@@ -2576,11 +2575,11 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Gargantuar", "Monster"],
     "cost": 5,
     "strength": 5,
     "health": 7,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Zombie is destroyed.",
+    "abilities": "<b>Splash Damage 2</b>\nThis gets +1{{Strength}}/+1{{Heart}} when a Zombie is destroyed.",
     "flavour": "IT'S ALIVE! IT'S ALI-I-I-IVE! Ok, strictly speaking, it's not alive."
   },
   {
@@ -2590,9 +2589,9 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
-    "cost": 5,
-    "strength": 2,
+    "tribes": ["Imp"],
+    "cost": 4,
+    "strength": 1,
     "health": 2,
     "abilities": "<b>When hurt:</b> Make a random Gargantuar that costs 5 in a random lane.",
     "flavour": "When lifting a Gargantuar, always bend at the knees. He learned this the hard way."
@@ -2604,11 +2603,11 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pet", "Gargantuar"],
     "cost": 5,
     "strength": 6,
     "health": 5,
-    "abilities": "<b>When hurt:</b> Make a Mystery Egg in a random lane.",
+    "abilities": "<b>When played</b> and <b>When hurt:</b> Make a Mystery Egg in a random lane.",
     "flavour": "Sometimes, what has been seen... can't be unseen. This is one of those times."
   },
   {
@@ -2618,7 +2617,7 @@
     "rarity": "token",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Imp"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -2632,7 +2631,7 @@
     "rarity": "token",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Pirate"],
     "cost": 3,
     "strength": 4,
     "health": 3,
@@ -2668,7 +2667,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make two Backup Dancers in random lanes.",
+    "abilities": "Make a 1{{Strength}}/1{{Heart}} Backup Dancer in a lane of your choice. Then another appears in a random lane.",
     "flavour": "You put your right foot in! No, wait, you might need that."
   },
   {
@@ -2694,7 +2693,7 @@
     "rarity": "common",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -2722,7 +2721,7 @@
     "rarity": "common",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2736,7 +2735,7 @@
     "rarity": "common",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports", "Imp"],
     "cost": 3,
     "strength": 1,
     "health": 4,
@@ -2750,7 +2749,7 @@
     "rarity": "common",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -2764,7 +2763,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -2795,7 +2794,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": 1,
     "health": 3,
@@ -2813,7 +2812,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant.\nDraw a card.",
+    "abilities": "Move a Plant.\n<b>Conjure</b> a Monster.",
     "flavour": "Just a disembodied Zombie head screaming uncontrollably. Nope. Nothing terrifying about that."
   },
   {
@@ -2823,7 +2822,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional", "Barrel"],
     "cost": 3,
     "strength": 2,
     "health": 3,
@@ -2837,7 +2836,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 4,
     "strength": 3,
     "health": 4,
@@ -2851,8 +2850,8 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
-    "cost": 6,
+    "tribes": ["History", "Pet"],
+    "cost": 5,
     "strength": 3,
     "health": 4,
     "abilities": "<b>When played:</b> The Plant Hero loses 2{{Sun}} this turn.",
@@ -2865,7 +2864,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Environment",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2879,11 +2878,11 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
-    "cost": 3,
+    "tribes": ["Professional", "Mustache"],
+    "cost": 4,
     "strength": 3,
-    "health": 2,
-    "abilities": "<b>When played in an Environment:</b> Destroy a Plant with 2{{Strength}} or less.",
+    "health": 4,
+    "abilities": "<b>When played in an Environment:</b> Destroy a Plant with 3{{Strength}} or less.",
     "flavour": "Don't call him a \"Space Janitor.\" He's a \"Celestial Custodian\" and darn proud of it."
   },
   {
@@ -2893,7 +2892,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional"],
     "cost": 5,
     "strength": 4,
     "health": 4,
@@ -2943,7 +2942,7 @@
       "Gourmet",
       "Pet"
     ],
-    "cost": 2,
+    "cost": 1,
     "strength": null,
     "health": null,
     "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}}.",
@@ -2956,7 +2955,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -2970,7 +2969,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Mustache", "Sports"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -3015,7 +3014,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports", "Gargantuar"],
     "cost": 7,
     "strength": 5,
     "health": 9,
@@ -3046,7 +3045,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -3076,8 +3075,8 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
-    "cost": 3,
+    "tribes": ["History", "Sports"],
+    "cost": 2,
     "strength": 2,
     "health": 3,
     "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Fusion:</b> A Zombie played on this gets +2{{Strength}}/+3{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
@@ -3090,10 +3089,10 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional", "Mustache"],
     "cost": 3,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Plant gets -2{{Strength}}.",
     "flavour": "If barren rock and wilted Plants are what you want, he's the landscaper for the job."
   },
@@ -3118,11 +3117,11 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Sports"],
     "cost": 5,
     "strength": 4,
     "health": 6,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Frenzy}}<b>Frenzy</b>",
+    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Untrickable}}<b>Untrickable</b>",
     "flavour": "Gives 110% on the field. Has no idea what a football is."
   },
   {
@@ -3132,10 +3131,10 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Gourmet","Mustache"],
     "cost": 6,
-    "strength": 4,
-    "health": 3,
+    "strength": 5,
+    "health": 4,
     "abilities": "<b>When played:</b> All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "He's been trying to cut back."
   },
@@ -3146,7 +3145,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Science", "Gargantuar"],
     "cost": 1,
     "strength": 1,
     "health": 3,
@@ -3160,7 +3159,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Science", "Barrel"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -3188,7 +3187,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional", "History"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -3216,11 +3215,11 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Professional", "Mustache"],
     "cost": 4,
     "strength": 2,
     "health": 6,
-    "abilities": "<b>Gravestone</b>\n<b>Start of turn</b>: The Plant Player loses 1{{Sun}}. This gets +1{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\n<b>Start of turn</b>: The Plant Player loses 1{{Sun}}. This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "The mystical Turquoise Skull stole the sun itself, lighting the way to the Mustache Monuments."
   },
   {
@@ -3230,10 +3229,10 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [],
+    "tribes": ["Mustache", "History"],
     "cost": 4,
     "strength": 3,
-    "health": 5,
+    "health": 6,
     "abilities": "<b>End of Turn:</b> Transform another random Zombie into a 5{{Strength}}/5{{Heart}} Knight of the Living Dead with <b>Armored 2</b>{{Armored}}.",
     "flavour": "Contrary to popular opinion, it's just OK to be king."
   },
@@ -3250,7 +3249,7 @@
     "cost": 6,
     "strength": 4,
     "health": 6,
-    "abilities": "Your Hero's Health can't go below 1.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\nYour Hero's Health can't go below 1.",
     "flavour": "If the Plants think they're going to beat the Undying Pharaoh, they're in de-Nile."
   },
   {
@@ -3266,7 +3265,7 @@
     "cost": 7,
     "strength": 6,
     "health": 1,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> This gets +1{{Heart}} for each Health your Hero has.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Heal 3 Then this gets +1{{Heart}} for each Health your Hero has.",
     "flavour": "He has Super Brainz stickers all over his binder."
   },
   {
@@ -3299,7 +3298,7 @@
     ],
     "cost": 6,
     "strength": 6,
-    "health": 5,
+    "health": 6,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Zombies can't be hurt this turn.",
     "flavour": "Not space legal in 35 different galaxies."
   },
@@ -3412,7 +3411,7 @@
       "Dancing"
     ],
     "cost": 4,
-    "strength": 3,
+    "strength": 4,
     "health": 4,
     "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do Bonus Attacks.",
     "flavour": "He put all his favorite songs on that mixtape. If only he could find the right Zombie to give it to."
@@ -3447,7 +3446,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Amphibious</b>",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>",
     "flavour": "It's slimy, beady-eyed, and it leaves ink splotches wherever it goes. Neptuna loves it all the same."
   },
   {
@@ -3526,9 +3525,9 @@
       "Imp"
     ],
     "cost": 1,
-    "strength": 1,
+    "strength": 2,
     "health": 1,
-    "abilities": "{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 2</b>",
     "flavour": "His motto: Walk softly and carry a big nunchuck."
   },
   {
@@ -3689,7 +3688,7 @@
       "Professional"
     ],
     "cost": 4,
-    "strength": 4,
+    "strength": 5,
     "health": 5,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> <b>Bounce</b> another Zombie.",
     "flavour": "He's a little too eager to rescue kittens from trees."
@@ -3787,7 +3786,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Steal 2 sections from the Plant Hero's Super-Block Meter.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Steal 1 section from the Plant Hero's Super-Block Meter.",
     "flavour": "Piracy is serious monkey business."
   },
   {
@@ -3804,7 +3803,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "When an Imp hurts the Plant Hero, draw a card.",
+    "abilities": "<b>Gravestone</b>\nWhen an Imp hurts the Plant Hero, draw a card.",
     "flavour": "He's got a bit of a Napoleon Complex. Obviously."
   },
   {
@@ -3868,7 +3867,7 @@
       "Science",
       "Gargantuar"
     ],
-    "cost": 7,
+    "cost": 6,
     "strength": null,
     "health": null,
     "abilities": "<b>Bounce</b> all Plants on the Ground.",
@@ -3920,7 +3919,7 @@
     ],
     "cost": 5,
     "strength": 3,
-    "health": 3,
+    "health": 4,
     "abilities": "{{Deadly}}<b>Deadly</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>Zombie Evolution</b>: Bounce a Plant.",
     "flavour": "Much more successful than his cousin, the Inhalegun Imp."
   },
@@ -3986,7 +3985,7 @@
     ],
     "cost": 4,
     "strength": 2,
-    "health": 2,
+    "health": 1,
     "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> <b>Bounce</b> a Plant.",
     "flavour": "Not the most efficient mode of transportation, but definitely the most fun."
   },
@@ -4001,8 +4000,8 @@
       "History"
     ],
     "cost": 4,
-    "strength": 3,
-    "health": 4,
+    "strength": 5,
+    "health": 3,
     "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, make a random <b>Gravestone</b> in a random lane.",
     "flavour": "He's good at making friends."
   },
@@ -4019,7 +4018,7 @@
     ],
     "cost": 1,
     "strength": 1,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>Amphibious</b>\nThis gets +1{{Strength}}/+1{{Heart}} when it hurts the Plant Hero.",
     "flavour": "Zombie Ducky, joy of joys. When it squeezes, you make noise!"
   },
@@ -4070,7 +4069,7 @@
     "cost": 6,
     "strength": 7,
     "health": 6,
-    "abilities": "<b>End of Turn</b>: All Gargantuars hide in Gravestones.",
+    "abilities": "<b>Gravestone</b>\n<b>When Revealed:</b> Steal 2 sections from the Plant Hero's Super-Block Meter.\n<b>End of Turn</b>: All Gargantuars hide in Gravestones.",
     "flavour": "The lost temples of Hollow Earth were mysterious and inviting. Until they started to move."
   },
   {
@@ -4102,8 +4101,8 @@
     ],
     "cost": 4,
     "strength": 4,
-    "health": 4,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Freeze all Plants in the Water. <b>Pirate Evolution:</b> Instead, Freeze all Plants.",
+    "health": 3,
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> {{Frozen}}<b>Freeze</b> all Plants here. <b>Pirate Evolution:</b> Instead, this gets +1{{Strength}}/+1{{Heart}} and {{Frozen}}<b>Freeze</b> all Plants in all lanes.",
     "flavour": "What's the best way to cross the ocean? Freeze it first. How hard could it be?"
   },
   {
@@ -4288,7 +4287,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nAll Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "All Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "You get your beard caught in the toaster ONE time, and it's all anyone can talk about..."
   },
   {
@@ -4303,8 +4302,8 @@
       "Sports"
     ],
     "cost": 3,
-    "strength": 2,
-    "health": 3,
+    "strength": 3,
+    "health": 2,
     "abilities": "<b>Gravestone</b>\n<b>When revealed on Heights:</b> This moves to the Water and gets +1{{Strength}}/+1{{Heart}}",
     "flavour": "He used to be afraid of heights... and water. True story."
   },
@@ -4354,7 +4353,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Amphibious</b>",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>",
     "flavour": "It's slimy, beady-eyed, and it leaves ink splotches wherever it goes. Neptuna loves it all the same."
   },
   {

@@ -30,7 +30,7 @@
       "cost": 1,
       "strength": null,
       "health": null,
-      "abilities": "Do 2 damage.\nYou get +1{{Sun}} for the rest of the game.",
+      "abilities": "Do 2 damage.\nYou get +2{{Sun}}.",
       "flavour": "Solar Flare never met a sunscreen strong enough to stop her."
     },
     {
@@ -115,7 +115,7 @@
       "cost": 1,
       "strength": null,
       "health": null,
-      "abilities": "Attack for 2 damage in each Ground lane.",
+      "abilities": "Attack each Zombie on the Ground for 2 damage.",
       "flavour": "\"Knuckle sandwiches for all my enemies!\""
     },
     {
@@ -200,7 +200,7 @@
         "cost": 1,
         "strength": null,
         "health": null,
-        "abilities": "Move a Zombie. Then it does a Bonus Attack.",
+        "abilities": "Move a Zombie. It gets +1{{Strength}}/+1{{Heart}}. Then it does a Bonus Attack.",
         "flavour": "It's just Super Brainz' way of sharing the wonder of flight with his fellow Zombies."
     },
     {
@@ -285,7 +285,7 @@
         "cost": 1,
         "strength": null,
         "health": null,
-        "abilities": "{{Frozen}}<b>Freeze</b> all Plants on the Ground.",
+        "abilities": "{{Frozen}}<b>Freeze</b> all Plants.",
         "flavour": "Brain Freeze has a knack for making the Plants chill out."
     },
     {
@@ -355,7 +355,7 @@
         "cost": 1,
         "strength": null,
         "health": null,
-        "abilities": "Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b>.",
+        "abilities": "Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
         "flavour": "Octopus incoming! Two words a Plant never wants to hear."
     },
     {
@@ -373,7 +373,7 @@
         "cost": 1,
         "strength": null,
         "health": null,
-        "abilities": "<b>Conjure</b> an Environment. All cards in your hand cost 1{{Brain}} less.",
+        "abilities": "<b>Conjure</b> an Environment and a trick. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
         "flavour": "This is Huge-Gigantacus' greatest invention ever. It's also his only invention. But it's best not to point that out to him."
     }
   ]

@@ -12,6 +12,9 @@ export default function useAuthUser() {
   const signIn = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "discord",
+      options: {
+        redirectTo: window.location.origin,
+      },
     });
     if (error) throw error;
   };

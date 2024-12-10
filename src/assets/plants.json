@@ -124,7 +124,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant.\nDraw a card.",
+    "abilities": "Move a Plant.\n<b>Conjure</b> a Trick.",
     "flavour": "Made of the softest fabric for that gentle Plant touch."
   },
   {
@@ -201,7 +201,7 @@
     "class": "Guardian",
     "type": "Trick",
     "tribes": [],
-    "cost": 1,
+    "cost": 2,
     "strength": null,
     "health": null,
     "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a Galactic Gardens card.",
@@ -217,7 +217,7 @@
     "tribes": [
       "Root"
     ],
-    "cost": 2,
+    "cost": 3,
     "strength": null,
     "health": null,
     "abilities": "<b>Before combat here:</b> Do 2 damage to a Zombie here.",
@@ -333,10 +333,10 @@
       "Cactus",
       "Fruit"
     ],
-    "cost": 4,
+    "cost": 5,
     "strength": 0,
-    "health": 4,
-    "abilities": "<b>Team-Up</b>\n<b>When hurt:</b> Do 4 damage to a Zombie here.",
+    "health": 10,
+    "abilities": "<b>Team-Up</b>\n<b>When hurt:</b> Do 2 damage to the Zombie Hero.",
     "flavour": "\"You hurt me, I hurt you. That's how this works.\""
   },
   {
@@ -351,7 +351,7 @@
     ],
     "cost": 5,
     "strength": 4,
-    "health": 4,
+    "health": 5,
     "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your Nuts get +2{{Heart}}.",
     "flavour": "Smackadamia wasn't born with smack smarts. He studied hard. He's a smackademic."
   },
@@ -366,9 +366,9 @@
       "Root"
     ],
     "cost": 5,
-    "strength": 6,
-    "health": 1,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n<b>When played:</b> This gets +1{{Heart}} for each Plant and Zombie.",
+    "strength": 2,
+    "health": 2,
+    "abilities": "{{Armored}}<b>Armored 1</b>\n<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} for each other Plant and Zombie.",
     "flavour": "He grew up on the wrong side of the garden."
   },
   {
@@ -480,8 +480,8 @@
     ],
     "cost": 4,
     "strength": 0,
-    "health": 8,
-    "abilities": "<b>Team-Up</b>\nWhen your Nuts get hurt, do 2 damage to the Zombie Hero.",
+    "health": 11,
+    "abilities": "<b>Team-Up</b>\n{{Truestrike}}<b>Bullseye</b>\nWhen your Nuts get hurt, do 1 damage to the Zombie Hero.",
     "flavour": "Dressed up as a mirrorball for a disco-themed party. Never looked back."
   },
   {
@@ -513,7 +513,7 @@
     ],
     "cost": 1,
     "strength": 2,
-    "health": 2,
+    "health": 1,
     "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When destroyed:</b> Do 1 damage to everything.",
     "flavour": "\"I take pity on no one. For I am Galacta-Cactus!\""
   },
@@ -545,7 +545,7 @@
     "cost": 6,
     "strength": 7,
     "health": 7,
-    "abilities": "{{Armored}}<b>Armored 1</b>\nWhen a Zombie is played, move it here.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\n\n{{Untrickable}}<b>Untrickable</b>\nWhen a Zombie is played, move it here.",
     "flavour": "The apple doesn't fall far from the tree. Neither does anything else."
   },
   {
@@ -577,7 +577,7 @@
     ],
     "cost": 3,
     "strength": 0,
-    "health": 9,
+    "health": 8,
     "abilities": "<b>Team-Up</b>\n{{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a card that costs 4{{Sun}} or more.",
     "flavour": "You can't be destroyed by a Rolling Stone when you basically are a Rolling Stone."
   },
@@ -692,7 +692,7 @@
     ],
     "cost": 2,
     "strength": 1,
-    "health": 3,
+    "health": 2,
     "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Beta-Carrotina tracked Huge-Gigantacus all the way down the Meteor-Z-carved tunnel to Hollow Earth. Carrots there had evolved in a very different direction."
   },
@@ -924,8 +924,8 @@
     ],
     "cost": 1,
     "strength": 2,
-    "health": 2,
-    "abilities": "<b>When played</b>: Move another Plant or Zombie.",
+    "health": 1,
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: Move another Plant or Zombie.",
     "flavour": "His mighty tractor beam is straight off the farm and out of this world."
   },
   {
@@ -988,7 +988,7 @@
     ],
     "cost": 2,
     "strength": 0,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>Start of Turn:</b> This transforms into a random Plant that costs 6{{Sun}} or less.",
     "flavour": "t's the tiny seed of a... nobody actually knows."
   },
@@ -1004,7 +1004,7 @@
     ],
     "cost": 3,
     "strength": 4,
-    "health": 2,
+    "health": 1,
     "abilities": "",
     "flavour": "\"Some say that Zombies aren't easily shocked. I beg to differ.\""
   },
@@ -1113,7 +1113,7 @@
     "class": "Kabloom",
     "type": "Trick",
     "tribes": [],
-    "cost": 5,
+    "cost": 3,
     "strength": null,
     "health": null,
     "abilities": "Do 5 damage to a Zombie.",
@@ -1127,7 +1127,7 @@
     "class": "Kabloom",
     "type": "Trick",
     "tribes": [
-      "Banana"
+      "Fruit"
     ],
     "cost": 1,
     "strength": null,
@@ -1162,10 +1162,10 @@
       "Leafy",
       "Flower"
     ],
-    "cost": 3,
-    "strength": 2,
+    "cost": 2,
+    "strength": 1,
     "health": 4,
-    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}",
+    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}.",
     "flavour": "\"Call me a 'weed.' Go on. I consider it a compliment.\""
   },
   {
@@ -1178,7 +1178,7 @@
     "tribes": [
       "Mushroom"
     ],
-    "cost": 0,
+    "cost": 1,
     "strength": 1,
     "health": 1,
     "abilities": "<b>Team-Up</b>",
@@ -1192,7 +1192,7 @@
     "class": "Kabloom",
     "type": "Environment",
     "tribes": [],
-    "cost": 1,
+    "cost": 0,
     "strength": null,
     "health": null,
     "abilities": "<b>Before combat here:</b> Do 1 damage to each Plant and Zombie here.",
@@ -1244,7 +1244,7 @@
     "cost": 2,
     "strength": 4,
     "health": 1,
-    "abilities": "<b>When played:</b> This moves to a random lane.",
+    "abilities": "{{Anti-Hero}}<b>Anti-Hero 2</b>\n<b>When played:</b> This moves to a random lane.",
     "flavour": "What one word best describes Wild Berry? \"Unpredictable.\""
   },
   {
@@ -1290,8 +1290,8 @@
       "Tree"
     ],
     "cost": 6,
-    "strength": 4,
-    "health": 5,
+    "strength": 5,
+    "health": 6,
     "abilities": "{{Anti-Hero}}<b>Anti-Hero 5</b>",
     "flavour": "Gets lunch with Poison Ivy and Poison Mushroom every week. They have a lot to talk about."
   },
@@ -1321,7 +1321,7 @@
     "tribes": [
       "Fruit"
     ],
-    "cost": 5,
+    "cost": 4,
     "strength": null,
     "health": null,
     "abilities": "Do 2 damage to each Zombie here and next door.\nIf played on the Ground, make Hot Lava here.",
@@ -1448,7 +1448,7 @@
     "class": "Kabloom",
     "type": "Plant",
     "tribes": [
-      "Banana"
+      "Fruit"
     ],
     "cost": 2,
     "strength": 0,
@@ -1620,7 +1620,7 @@
     "flavour": "Some see him as depressed, but he's got a lot of sides."
   },
   {
-    "name": "Veloci-Radish Hunter",
+    "name": "Veloci-Radish Packmate",
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Veloci-Radish_HunterH.png",
     "set": "triassic",
     "rarity": "legendary",
@@ -1648,7 +1648,7 @@
     ],
     "cost": 1,
     "strength": 2,
-    "health": 2,
+    "health": 1,
     "abilities": "When this does damage, it gets +1{{Strength}}.",
     "flavour": "Sometimes we hurt the ones we love. Blooming Heart knows this all too well."
   },
@@ -1698,7 +1698,7 @@
     "cost": 4,
     "strength": 4,
     "health": 7,
-    "abilities": "Whenever a Plant is hurt and survives, transform it into a random Plant.",
+    "abilities": "<b>End of Turn:</b> This transforms into a random Plant that costs 1 more.\nIt keeps this ability.",
     "flavour": "\"By Heisenberg's Uncertainty Principle, if you look at a Plant too closely, you actually change what that Plant is...\""
   },
   {
@@ -1714,7 +1714,7 @@
     "cost": 5,
     "strength": 5,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: Make Seedlings next door.",
+    "abilities": "<b>When destroyed</b>: Make Seedlings here and next door.",
     "flavour": "Remember: Never ever EVER split a fruit. Oh, hold on, actually fruits are ok, just never split an atom."
   },
   {
@@ -1779,7 +1779,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make two Button Mushrooms in random lanes.",
+    "abilities": "Make a 1{{Strength}}/1{{Heart}} Button Mushroom in a lane of your choice. Then another appears in a random lane.",
     "flavour": "One good mushroom deserves another."
   },
   {
@@ -2061,10 +2061,10 @@
     "tribes": [
       "Banana"
     ],
-    "cost": 1,
+    "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: All Bananas in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When destroyed</b>: All Fruits in your hand get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "\"Have you met my better half? She's around here somewhere.\""
   },
   {
@@ -2081,7 +2081,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played next to a Leafy Plant</b>: Conjure a Leafy card.",
+    "abilities": "<b>When played next to a Leafy Plant</b>: This gets +1{{Heart}} and Conjure a Leafy card.",
     "flavour": "\"Everyone's magic in their own special way. Everyone except me.\""
   },
   {
@@ -2096,7 +2096,7 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "When you play another Pea, that Pea gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "\"It ain't easy keeping the peas in this family.\""
   },
@@ -2141,7 +2141,7 @@
       "Root"
     ],
     "cost": 5,
-    "strength": 5,
+    "strength": 6,
     "health": 5,
     "abilities": "<b>When played:</b> Move a Zombie.",
     "flavour": "\"Get along, little Zombie.\""
@@ -2157,8 +2157,8 @@
       "Root"
     ],
     "cost": 6,
-    "strength": 3,
-    "health": 3,
+    "strength": 4,
+    "health": 4,
     "abilities": "<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} for each other Plant and Zombie.",
     "flavour": "When he drops the beet, everyone feels it. Especially the Zombies."
   },
@@ -2170,12 +2170,12 @@
     "class": "Mega-Grow",
     "type": "Trick",
     "tribes": [
-      "Banana"
+      "Fruit"
     ],
-    "cost": 1,
+    "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Zombie.\n<b>Conjure</b> a Banana.",
+    "abilities": "Move a Zombie.\n<b>Conjure</b> a Fruit.",
     "flavour": "A slapstick comedy staple that, somehow, the Zombies never see coming."
   },
   {
@@ -2188,9 +2188,9 @@
     "tribes": [
       "Pea"
     ],
-    "cost": 3,
-    "strength": 1,
-    "health": 1,
+    "cost": 4,
+    "strength": 2,
+    "health": 2,
     "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a Pea, and it gets {{DoubleStrike}}<b>Double Strike</b>.",
     "flavour": "\"The cosmos is so big and a pea is so small. The juxtaposition just really makes me think, you know?\""
   },
@@ -2206,7 +2206,7 @@
       "Root"
     ],
     "cost": 6,
-    "strength": 5,
+    "strength": 6,
     "health": 6,
     "abilities": "<b>Plant Evolution</b>: Draw two cards.",
     "flavour": "Only among the hyper-evolved Plants of Hollow Earth can you be outwitted by a tree."
@@ -2257,7 +2257,7 @@
     ],
     "cost": 2,
     "strength": 2,
-    "health": 3,
+    "health": 2,
     "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Zombie Trick is played.",
     "flavour": "\"You shoulda seen the other guy!\""
   },
@@ -2272,8 +2272,8 @@
       "Leafy"
     ],
     "cost": 5,
-    "strength": 3,
-    "health": 3,
+    "strength": 4,
+    "health": 4,
     "abilities": "<b>While in your hand:</b> This gets +1{{Strength}}/+1{{Heart}} when a Plant gains Strength or Health.",
     "flavour": "She loves living out of a pot. It's not for every Plant. But to her, it's home."
   },
@@ -2429,7 +2429,7 @@
     "class": "Mega-Grow",
     "type": "Plant",
     "tribes": [
-      "Banana",
+      "Fruit",
       "Animal"
     ],
     "cost": 4,
@@ -2544,7 +2544,7 @@
     "class": "Mega-Grow",
     "type": "Plant",
     "tribes": [
-      "Banana"
+      "Fruit"
     ],
     "cost": 4,
     "strength": 4,
@@ -2805,7 +2805,7 @@
     ],
     "cost": 4,
     "strength": 5,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>Team-Up </b>",
     "flavour": "His artillery is a rich source of vitamin A and beta-carotene - a fact the Zombies do not seem to appreciate."
   },
@@ -2854,7 +2854,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\n<b>When played in an Environment: Bounce</b> a Zombie.",
+    "abilities": "<b>Amphibious</b>\n<b>When played in an Environment: Bounce</b> a Zombie or Gravestore.",
     "flavour": "\"You wanna keep your lawn tidy? Tired of lookin' at those unsightly Zombies? Then I'M your guy.\""
   },
   {
@@ -2930,7 +2930,7 @@
       "Leafy"
     ],
     "cost": 2,
-    "strength": 1,
+    "strength": 2,
     "health": 2,
     "abilities": "<b>Amphibious</b>\n<b>Splash Damage 1</b>",
     "flavour": "\"I do it for the shock value.\""
@@ -2962,8 +2962,8 @@
       "Bean"
     ],
     "cost": 4,
-    "strength": 2,
-    "health": 2,
+    "strength": 3,
+    "health": 3,
     "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\n<b>When played:</b> All <b>Amphibious</b> Plants get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Was *this* close to becoming an Army Bean."
   },
@@ -3011,7 +3011,7 @@
     ],
     "cost": 5,
     "strength": 3,
-    "health": 4,
+    "health": 5,
     "abilities": "<b>Splash Damage 3</b>",
     "flavour": "People who live in grass houses shouldn't throw stones. But melons, sure, why not?"
   },
@@ -3060,7 +3060,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Shuffle four Magic Beanstalks into your deck.",
+    "abilities": "Shuffle five Magic Beanstalks into your deck.",
     "flavour": "Totally worth the cow."
   },
   {
@@ -3074,8 +3074,8 @@
       "Bean"
     ],
     "cost": 4,
-    "strength": 2,
-    "health": 2,
+    "strength": 1,
+    "health": 1,
     "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Bean.\n<b>When played:</b> Gain two Weenie Beanies.",
     "flavour": "\"Every bean is accounted for. I assure you, they all add up.\""
   },
@@ -3093,7 +3093,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Splash Damage 3</b>",
+    "abilities": "<b>Amphibious</b>.\n<b>Splash Damage 3</b>",
     "flavour": "\"I'm a dragon; I'm a Plant... I'm a mystery!\""
   },
   {
@@ -3124,7 +3124,7 @@
     ],
     "cost": 2,
     "strength": 2,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a Plant here.",
     "flavour": "He's really good at entertaining himself."
   },
@@ -3235,7 +3235,7 @@
     "cost": 6,
     "strength": 4,
     "health": 5,
-    "abilities": "<b>Splash Damage 4</b>\nWhen this hurts a Zombie, {{Frozen}}<b>Freeze</b> that Zombie.",
+    "abilities": "<b>Splash Damage 4</b>\n<b>When played:</b> {{Frozen}}<b>Freeze</b> a Zombie. When this hurts a Zombie, {{Frozen}}<b>Freeze</b> that Zombie.",
     "flavour": "Perfect for your winter picnics."
   },
   {
@@ -3367,7 +3367,7 @@
     ],
     "cost": 3,
     "strength": 2,
-    "health": 3,
+    "health": 4,
     "abilities": "<b>Amphibious</b>\nWhen this hurts the Zombie Hero, <b>Conjure</b> a Corn, Squash, or Bean.",
     "flavour": "Do April showers bring Mayflowers? My goodness, isn't that a personal question!"
   },
@@ -3706,7 +3706,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets -1{{Strength}}/-1{{Heart}}. If you made at least 6{{Sun}} this turn, it gets -2{{Strength}}/-2{{Heart}} instead.",
+    "abilities": "A non-Amphibious Zombie gets -2{{Strength}}/-2{{Heart}}. If you made at least 6{{Sun}} this turn, it gets -3{{Strength}}/-3{{Heart}} instead.",
     "flavour": "You're gonna need a towel for this one."
   },
   {
@@ -3720,8 +3720,8 @@
       "Flytrap"
     ],
     "cost": 3,
-    "strength": 2,
-    "health": 2,
+    "strength": 3,
+    "health": 1,
     "abilities": "When this does damage, heal your Hero for that much.",
     "flavour": "\"Mom always said, 'If you leave your trap open like that, you'll catch Zombies.' So I did.\""
   },
@@ -3785,7 +3785,7 @@
     ],
     "cost": 2,
     "strength": 3,
-    "health": 2,
+    "health": 1,
     "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, this gets {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "Watchful Quasar Wizards sometimes spot an Unidentified Fruiting Object."
   },
@@ -3882,7 +3882,7 @@
     ],
     "cost": 3,
     "strength": 0,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>When played:</b> This gets +1{{Strength}} for each Sun you made this turn.",
     "flavour": "Zombies may appear closer than they are."
   },
@@ -3976,7 +3976,7 @@
     ],
     "cost": 4,
     "strength": 2,
-    "health": 4,
+    "health": 3,
     "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Plant Evolution</b>: This gets +3{{Strength}}.",
     "flavour": "He makes yelling \"Get off my lawn\" into an art form."
   },
@@ -4053,9 +4053,9 @@
       "Bean"
     ],
     "cost": 6,
-    "strength": 5,
-    "health": 7,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
+    "strength": 0,
+    "health": 5,
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>.\n<b>When played:</b> This gets +1{{Strength}} for each Sun you made this turn.",
     "flavour": "\"Physics, baby! I'm emittin' all KINDS of coherent radiation!\""
   },
   {
@@ -4139,17 +4139,17 @@
     "flavour": "From every night's end comes the beginning of a new Sunflower's dawn."
   },
   {
-    "name": "Sun Strike",
+    "name": "Cross-Pollination",
     "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d0/Sun_StrikeH.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
     "tribes": [],
-    "cost": 4,
+    "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "All Plants get {{Strikethrough}}<b>Strikethrough</b> this turn. <b>Conjure</b> a Trick.",
+    "abilities": "<b>Conjure</b> a Flower. <b>Conjure</b> a Trick.\nThey both cost 1 less.",
     "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
   },
   {
@@ -4243,7 +4243,7 @@
       "Corn"
     ],
     "cost": 6,
-    "strength": 6,
+    "strength": 4,
     "health": 6,
     "abilities": "<b>When played</b>: Zombies here and next door get -1{{Strength}}/-1{{Heart}}.\n<b>Team-Up Evolution</b>: Destroy a Zombie.",
     "flavour": "He focuses his fearsome firepower with a single, ringing credo: \"One Team. One Dream.\""
@@ -4277,7 +4277,7 @@
     ],
     "cost": 1,
     "strength": 4,
-    "health": 2,
+    "health": 1,
     "abilities": "<b>When played</b>: The Zombie player <b>Conjures</b> a Monster.",
     "flavour": "For generations, the Pumpkings have kept their realms safe from a terrible curse. Tonight, they finally face their greatest fear."
   },
