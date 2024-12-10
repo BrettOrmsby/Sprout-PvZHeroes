@@ -1,28 +1,28 @@
-import { reactive } from "vue";
-import type { Deck } from "@/lib/types";
+import { reactive } from 'vue'
+import type { Deck } from '@/lib/types'
 
 export default reactive<Deck>({
-  id: "",
-  creator: "",
-  name: "",
+  id: '',
+  creator: '',
+  name: '',
   is_private: false,
   is_complete: false,
-  hero: "",
+  hero: '',
   list: {},
-  created_at: "",
-  last_updated: "",
-  description: "",
-});
+  created_at: '',
+  last_updated: '',
+  description: '',
+})
 
 export const compareDeck = reactive<Deck>({
-  id: "",
-  creator: "",
-  name: "",
+  id: '',
+  creator: '',
+  name: '',
   is_private: false,
   is_complete: false,
-  hero: "",
+  hero: '',
   list: {},
-  created_at: "",
-  last_updated: "",
-  description: "",
-});
+  created_at: '',
+  last_updated: '',
+  description: '',
+})

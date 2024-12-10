@@ -5,15 +5,9 @@
       <InputText
         type="text"
         v-model="searchTerm"
-        @keydown.enter="
-          router.push({ name: 'SearchUsers', query: { username: searchTerm } })
-        "
+        @keydown.enter="router.push({ name: 'SearchUsers', query: { username: searchTerm } })"
       />
-      <Button
-        @click="
-          router.push({ name: 'SearchUsers', query: { username: searchTerm } })
-        "
-      >
+      <Button @click="router.push({ name: 'SearchUsers', query: { username: searchTerm } })">
         <template #icon="iconClass">
           <Search :class="iconClass.class" />
         </template>
@@ -22,12 +16,7 @@
 
     <h2>Results</h2>
     <div v-if="isSearching" class="users-container">
-      <Skeleton
-        v-for="i in paginatorAmount"
-        :key="i"
-        height="100px"
-        style="max-width: 400px"
-      />
+      <Skeleton v-for="i in paginatorAmount" :key="i" height="100px" style="max-width: 400px" />
     </div>
     <div v-else-if="results.length > 0">
       <div class="users-container">
@@ -52,11 +41,7 @@
             <template #content>
               <p class="joined">
                 Joined
-                {{
-                  new Date(user.created_at)
-                    .toDateString()
-                    .replace(/^\S+\s|\d+\s/g, "")
-                }}
+                {{ new Date(user.created_at).toDateString().replace(/^\S+\s|\d+\s/g, '') }}
               </p>
             </template>
           </Card>
@@ -76,71 +61,66 @@
         template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
       />
     </div>
-    <Message v-else :severity="'warn'" :closable="false">
-      No Users Found
-    </Message>
+    <Message v-else :severity="'warn'" :closable="false"> No Users Found </Message>
   </main>
   <TheFooter />
 </template>
 
 <script lang="ts" setup>
-import { useRoute, useRouter } from "vue-router";
-import useSupabase from "@/composables/UseSupabase";
-import InputGroup from "primevue/inputgroup";
-import InputText from "primevue/inputtext";
-import Message from "primevue/message";
-import Skeleton from "primevue/skeleton";
-import Button from "primevue/button";
-import Paginator from "primevue/paginator";
-import Card from "primevue/card";
-import Avatar from "primevue/avatar";
-import TheFooter from "@/components/TheFooter.vue";
-import { Search } from "lucide-vue-next";
-import { watch, onMounted, ref, computed } from "vue";
-import throwError from "@/lib/throwError";
-import type { User } from "@/lib/types";
-import getHero from "@/lib/getHero";
-const route = useRoute();
-const router = useRouter();
-const { supabase } = useSupabase();
+import { useRoute, useRouter } from 'vue-router'
+import useSupabase from '@/composables/UseSupabase'
+import InputGroup from 'primevue/inputgroup'
+import InputText from 'primevue/inputtext'
+import Message from 'primevue/message'
+import Skeleton from 'primevue/skeleton'
+import Button from 'primevue/button'
+import Paginator from 'primevue/paginator'
+import Card from 'primevue/card'
+import Avatar from 'primevue/avatar'
+import TheFooter from '@/components/TheFooter.vue'
+import { Search } from 'lucide-vue-next'
+import { watch, onMounted, ref, computed } from 'vue'
+import throwError from '@/lib/throwError'
+import type { User } from '@/lib/types'
+import getHero from '@/lib/getHero'
+const route = useRoute()
+const router = useRouter()
+const { supabase } = useSupabase()
 
-const searchTerm = ref((route.query.username || "").toString());
+const searchTerm = ref((route.query.username || '').toString())
 
-const paginatorAmount = 20;
-const isSearching = ref(true);
-const results = ref<User[]>([]);
-const totalRecords = ref(0);
+const paginatorAmount = 20
+const isSearching = ref(true)
+const results = ref<User[]>([])
+const totalRecords = ref(0)
 const firstValue = computed(
-  () => ((parseInt(route.query.page as string) || 1) - 1) * paginatorAmount
-);
+  () => ((parseInt(route.query.page as string) || 1) - 1) * paginatorAmount,
+)
 
 const search = async () => {
-  isSearching.value = true;
+  isSearching.value = true
 
   const { data, error, count } = await supabase
-    .from("profiles")
-    .select("username, profile_image, created_at", { count: "exact" })
-    .ilike(
-      "username",
-      `%${(route.query.username || "").toString().replace(/ /g, "%")}%`
-    )
-    .order("username")
+    .from('profiles')
+    .select('username, profile_image, created_at', { count: 'exact' })
+    .ilike('username', `%${(route.query.username || '').toString().replace(/ /g, '%')}%`)
+    .order('username')
     .range(firstValue.value, firstValue.value + paginatorAmount - 1)
-    .returns<User[]>();
+    .returns<User[]>()
 
   if (error) {
-    throwError(error);
-    isSearching.value = false;
-    throw new Error();
+    throwError(error)
+    isSearching.value = false
+    throw new Error()
   }
 
-  results.value = data;
-  totalRecords.value = count as number;
-  isSearching.value = false;
-};
+  results.value = data
+  totalRecords.value = count as number
+  isSearching.value = false
+}
 
-watch(() => route.query, search);
-onMounted(search);
+watch(() => route.query, search)
+onMounted(search)
 </script>
 
 <style scoped>

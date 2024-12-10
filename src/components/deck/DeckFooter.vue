@@ -3,81 +3,64 @@
     <span>{{ cardsInDeck.length }}/40</span>
     <span>
       <Badge :value="basics + 'C'" class="common" v-tooltip.top="'Commons'" />
-      <Badge
-        :value="uncommons.toString() + 'U'"
-        class="uncommon"
-        v-tooltip.top="'Uncommons'"
-      />
-      <Badge
-        :value="rares.toString() + 'R'"
-        class="rare"
-        v-tooltip.top="'Rares'"
-      />
+      <Badge :value="uncommons.toString() + 'U'" class="uncommon" v-tooltip.top="'Uncommons'" />
+      <Badge :value="rares.toString() + 'R'" class="rare" v-tooltip.top="'Rares'" />
       <Badge
         :value="superRares.toString() + 'S'"
         class="super-rare"
         v-tooltip.top="'Super-Rares'"
       />
-      <Badge
-        :value="legendarys.toString() + 'L'"
-        class="legendary"
-        v-tooltip.top="'Legendarys'"
-      />
-      <Badge
-        :value="events.toString() + 'E'"
-        class="event"
-        v-tooltip.top="'Events'"
-      />
+      <Badge :value="legendarys.toString() + 'L'" class="legendary" v-tooltip.top="'Legendarys'" />
+      <Badge :value="events.toString() + 'E'" class="event" v-tooltip.top="'Events'" />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ sparks.toLocaleString()
-      }}<img src="/images/assets/spark.png" alt="spark" />
+      {{ sparks.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
     </span>
   </footer>
 </template>
 
 <script lang="ts" setup>
-import calculateSparkCost from "@/lib/calculateSparkCost";
-import getCard from "@/lib/getCard";
-import type { Card } from "@/lib/types";
-import deck from "@/store/deck";
-import Badge from "primevue/badge";
-import { computed } from "vue";
+import calculateSparkCost from '@/lib/calculateSparkCost'
+import getCard from '@/lib/getCard'
+import type { Card } from '@/lib/types'
+import deck from '@/store/deck'
+import Badge from 'primevue/badge'
+import { computed } from 'vue'
 
 const cardsInDeck = computed(() => {
-  const deckCards = [];
+  const deckCards = []
   for (const key in deck.list) {
-    const card = getCard(key);
+    const card = getCard(key)
     for (let i = 0; i < deck.list[key]; i++) {
-      deckCards.push(card);
+      deckCards.push(card)
     }
   }
-  return deckCards;
-});
+  return deckCards
+})
 
 const countInDeck = (key: keyof Card, value: number | string | null) => {
   const number = cardsInDeck.value.reduce((prev, curr) => {
     if (curr[key] === value) {
-      return 1 + prev;
+      return 1 + prev
     } else {
-      return prev;
+      return prev
     }
-  }, 0);
-  return number;
-};
+  }, 0)
+  return number
+}
 
-const basics = computed(() => countInDeck("rarity", "common"));
-const uncommons = computed(() => countInDeck("rarity", "uncommon"));
-const rares = computed(() => countInDeck("rarity", "rare"));
-const superRares = computed(() => countInDeck("rarity", "super-rare"));
-const legendarys = computed(() => countInDeck("rarity", "legendary"));
-const events = computed(() => countInDeck("rarity", "event"));
+const basics = computed(() => countInDeck('rarity', 'common'))
+const uncommons = computed(() => countInDeck('rarity', 'uncommon'))
+const rares = computed(() => countInDeck('rarity', 'rare'))
+const superRares = computed(() => countInDeck('rarity', 'super-rare'))
+const legendarys = computed(() => countInDeck('rarity', 'legendary'))
+const events = computed(() => countInDeck('rarity', 'event'))
 
 const sparks = computed(() => {
   return cardsInDeck.value
     .map((card) => calculateSparkCost(card))
-    .reduce((prev, curr) => prev + curr, 0);
-});
+    .reduce((prev, curr) => prev + curr, 0)
+})
 </script>
 
 <style scoped>
@@ -129,14 +112,7 @@ const sparks = computed(() => {
   background-color: #885cd5;
 }
 .legendary {
-  background: linear-gradient(
-    to bottom right,
-    #a158dc,
-    #f462f4,
-    #f3ea94,
-    #c5f882,
-    #5ba3f0
-  );
+  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
 }
 .event {
   background-color: #e66d59;

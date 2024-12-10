@@ -9,11 +9,7 @@
     >
       <InputGroup>
         <HeroSelect v-model="selectedHero" aria-label="Hero" />
-        <Button
-          label="Update"
-          @click="updateHeroImage"
-          :loading="isUpdatingProfileImage"
-        />
+        <Button label="Update" @click="updateHeroImage" :loading="isUpdatingProfileImage" />
       </InputGroup>
     </Dialog>
     <Dialog
@@ -25,11 +21,7 @@
     >
       <InputGroup>
         <InputText v-model="selectedUsername" aria-label="Hero" />
-        <Button
-          label="Update"
-          @click="updateUsername"
-          :loading="isUpdatingUsername"
-        />
+        <Button label="Update" @click="updateUsername" :loading="isUpdatingUsername" />
       </InputGroup>
     </Dialog>
     <header>
@@ -52,21 +44,13 @@
           </h1>
           <p class="joined">
             Joined
-            {{
-              new Date(user.created_at)
-                .toDateString()
-                .replace(/^\S+\s|\d+\s/g, "")
-            }}
+            {{ new Date(user.created_at).toDateString().replace(/^\S+\s|\d+\s/g, '') }}
           </p>
         </div>
       </div>
     </header>
 
-    <RouterLink
-      :to="{ name: 'CreateDeck' }"
-      style="text-decoration: none"
-      v-if="user.id === id"
-    >
+    <RouterLink :to="{ name: 'CreateDeck' }" style="text-decoration: none" v-if="user.id === id">
       <Button label="New Deck" severity="secondary">
         <template #icon="iconClass">
           <Plus :class="iconClass.class" />
@@ -76,148 +60,133 @@
 
     <h2>Decks</h2>
     <div class="deck-container" v-if="isLoading">
-      <Skeleton
-        v-for="index in 6"
-        :key="index"
-        class="deck-skeleton"
-        height="175px"
-      ></Skeleton>
+      <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
-    <Message
-      v-else-if="sortedDecks.length === 0"
-      :severity="'warn'"
-      :closable="false"
-    >
+    <Message v-else-if="sortedDecks.length === 0" :severity="'warn'" :closable="false">
       No Decks
     </Message>
     <div class="deck-container" v-else>
-      <DeckCard
-        v-for="deck in sortedDecks"
-        :key="deck.id"
-        :deck="(deck as any)"
-        showVisibility
-      />
+      <DeckCard v-for="deck in sortedDecks" :key="deck.id" :deck="deck as any" showVisibility />
     </div>
   </main>
   <TheFooter />
 </template>
 
 <script lang="ts" setup>
-import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/throwError";
-import DeckCard from "@/components/DeckCard.vue";
-import HeroSelect from "@/components/HeroSelect.vue";
-import getHero from "@/lib/getHero";
-import Avatar from "primevue/avatar";
-import Skeleton from "primevue/skeleton";
-import Button from "primevue/button";
-import Dialog from "primevue/dialog";
-import Message from "primevue/message";
-import TheFooter from "@/components/TheFooter.vue";
-import InputGroup from "primevue/inputgroup";
-import { Plus } from "lucide-vue-next";
-import { computed } from "vue";
-import type { Deck } from "@/lib/types";
-import { onMounted } from "vue";
-import user from "@/store/user";
-import { ref } from "vue";
-import useAuthUser from "@/composables/UseAuthUser";
-import InputText from "primevue/inputtext";
+import useSupabase from '@/composables/UseSupabase'
+import throwError from '@/lib/throwError'
+import DeckCard from '@/components/DeckCard.vue'
+import HeroSelect from '@/components/HeroSelect.vue'
+import getHero from '@/lib/getHero'
+import Avatar from 'primevue/avatar'
+import Skeleton from 'primevue/skeleton'
+import Button from 'primevue/button'
+import Dialog from 'primevue/dialog'
+import Message from 'primevue/message'
+import TheFooter from '@/components/TheFooter.vue'
+import InputGroup from 'primevue/inputgroup'
+import { Plus } from 'lucide-vue-next'
+import { computed } from 'vue'
+import type { Deck } from '@/lib/types'
+import { onMounted } from 'vue'
+import user from '@/store/user'
+import { ref } from 'vue'
+import useAuthUser from '@/composables/UseAuthUser'
+import InputText from 'primevue/inputtext'
 
-const { supabase } = useSupabase();
-const { id } = useAuthUser();
+const { supabase } = useSupabase()
+const { id } = useAuthUser()
 
-const isLoading = ref(true);
-const deckData = ref<Deck[]>([]);
+const isLoading = ref(true)
+const deckData = ref<Deck[]>([])
 
 onMounted(async () => {
   const { data, error } = await supabase
-    .from("decks")
-    .select("*")
-    .eq("creator", user.id)
-    .returns<Deck[]>();
+    .from('decks')
+    .select('*')
+    .eq('creator', user.id)
+    .returns<Deck[]>()
 
   if (error) {
-    throwError(error);
-    throw new Error();
+    throwError(error)
+    throw new Error()
   } else {
-    deckData.value = data;
-    isLoading.value = false;
+    deckData.value = data
+    isLoading.value = false
   }
-});
+})
 
 const sortedDecks = computed(() =>
   [...deckData.value].sort(
-    (a, b) =>
-      new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime()
-  )
-);
+    (a, b) => new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime(),
+  ),
+)
 
-const isChangeHeroModalOpen = ref(false);
-const selectedHero = ref(user.profile_image);
-const isUpdatingProfileImage = ref(false);
+const isChangeHeroModalOpen = ref(false)
+const selectedHero = ref(user.profile_image)
+const isUpdatingProfileImage = ref(false)
 const changeHero = () => {
-  isChangeHeroModalOpen.value = true;
-};
+  isChangeHeroModalOpen.value = true
+}
 
 const updateHeroImage = async () => {
   if (selectedHero.value === user.profile_image) {
-    isChangeHeroModalOpen.value = false;
-    return;
+    isChangeHeroModalOpen.value = false
+    return
   }
 
-  isUpdatingProfileImage.value = true;
+  isUpdatingProfileImage.value = true
   const { data, error } = await supabase
-    .from("profiles")
+    .from('profiles')
     .update({
       profile_image: selectedHero.value,
     })
-    .eq("id", id.value)
+    .eq('id', id.value)
     .select()
-    .single();
+    .single()
 
   if (error) {
-    isUpdatingProfileImage.value = false;
-    throwError(error);
-    return;
+    isUpdatingProfileImage.value = false
+    throwError(error)
+    return
   }
-  Object.assign(user, data);
-  isChangeHeroModalOpen.value = false;
-  isUpdatingProfileImage.value = false;
-};
+  Object.assign(user, data)
+  isChangeHeroModalOpen.value = false
+  isUpdatingProfileImage.value = false
+}
 
-const isChangeUsernameModalOpen = ref(false);
-const selectedUsername = ref(user.username);
-const isUpdatingUsername = ref(false);
+const isChangeUsernameModalOpen = ref(false)
+const selectedUsername = ref(user.username)
+const isUpdatingUsername = ref(false)
 const changeUsername = () => {
-  isChangeUsernameModalOpen.value = true;
-};
+  isChangeUsernameModalOpen.value = true
+}
 
 const updateUsername = async () => {
   if (selectedUsername.value === user.username) {
-    isChangeHeroModalOpen.value = false;
-    return;
+    isChangeHeroModalOpen.value = false
+    return
   }
 
-  isUpdatingUsername.value = true;
+  isUpdatingUsername.value = true
   const { data, error } = await supabase
-    .from("profiles")
+    .from('profiles')
     .update({
       username: selectedUsername.value,
     })
-    .eq("id", id.value)
+    .eq('id', id.value)
     .select()
-    .single();
+    .single()
 
   if (error) {
-    isUpdatingUsername.value = false;
-    throwError(error);
-    return;
+    isUpdatingUsername.value = false
+    throwError(error)
+    return
   }
-  Object.assign(user, data);
-  isChangeUsernameModalOpen.value = false;
-  isUpdatingUsername.value = false;
-};
+  Object.assign(user, data)
+  isChangeUsernameModalOpen.value = false
+  isUpdatingUsername.value = false
+}
 </script>
 
 <style scoped>

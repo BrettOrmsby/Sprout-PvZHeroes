@@ -12,12 +12,7 @@
         </div>
       </template>
       <template #item="{ item, props, hasSubmenu }">
-        <router-link
-          v-if="item.route"
-          v-slot="{ href, navigate }"
-          :to="item.route"
-          custom
-        >
+        <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
           <a :href="href" v-bind="props.action" @click="navigate">
             <UserSearch v-if="item.label === 'Users'" />
             <FileSearch v-else-if="item.label === 'Decks'" />
@@ -51,8 +46,8 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import Menuebar from "primevue/menubar";
+import { computed } from 'vue'
+import Menuebar from 'primevue/menubar'
 import {
   Sprout,
   ChevronDown,
@@ -63,49 +58,49 @@ import {
   Plus,
   LogOut,
   LayoutGrid,
-} from "lucide-vue-next";
-import useAuthUser from "@/composables/UseAuthUser";
-const { isSignedIn, signIn } = useAuthUser();
+} from 'lucide-vue-next'
+import useAuthUser from '@/composables/UseAuthUser'
+const { isSignedIn, signIn } = useAuthUser()
 const items = computed(() => {
   return [
     {
-      label: "Search",
+      label: 'Search',
       items: [
         {
-          label: "Decks",
-          route: "/search/decks",
+          label: 'Decks',
+          route: '/search/decks',
         },
         {
-          label: "Users",
-          route: "/search/users",
+          label: 'Users',
+          route: '/search/users',
         },
       ],
     },
     {
-      label: "Profile",
+      label: 'Profile',
       visible: isSignedIn.value,
       items: [
         {
-          label: "Your Decks",
-          route: "/me",
+          label: 'Your Decks',
+          route: '/me',
         },
         {
-          label: "Create Deck",
-          route: "/create",
+          label: 'Create Deck',
+          route: '/create',
         },
         {
-          label: "Sign Out",
-          route: "/sign-out",
+          label: 'Sign Out',
+          route: '/sign-out',
         },
       ],
     },
     {
-      label: "Sign In",
+      label: 'Sign In',
       command: signIn,
       visible: !isSignedIn.value,
     },
-  ];
-});
+  ]
+})
 </script>
 
 <style scoped>

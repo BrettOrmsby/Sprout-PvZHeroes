@@ -25,80 +25,78 @@
 </template>
 
 <script lang="ts" setup>
-import deck from "@/store/deck";
-import Button from "primevue/button";
-import PVZCard from "@/components/PVZCard.vue";
-import { Grid2X2, RotateCw } from "lucide-vue-next";
-import { ref, onMounted } from "vue";
-import getCard from "@/lib/getCard";
-import states from "@/store/states";
+import deck from '@/store/deck'
+import Button from 'primevue/button'
+import PVZCard from '@/components/PVZCard.vue'
+import { Grid2X2, RotateCw } from 'lucide-vue-next'
+import { ref, onMounted } from 'vue'
+import getCard from '@/lib/getCard'
+import states from '@/store/states'
 
 const draw = ref<
   {
-    cardName: string;
-    hasMulligan: boolean;
+    cardName: string
+    hasMulligan: boolean
   }[]
->([]);
+>([])
 
-const shuffledDeck = ref<string[]>([]);
+const shuffledDeck = ref<string[]>([])
 const restartDeck = () => {
-  [...document.querySelectorAll(".card-draw-container")].forEach((element) =>
-    element.classList.remove("rotate-scale-down")
-  );
+  ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
+    element.classList.remove('rotate-scale-down'),
+  )
 
   setTimeout(() => {
     const deckCards = Object.entries(deck.list)
       .map(([card, amount]) => Array(amount).fill(card))
-      .flat();
-    shuffle(deckCards);
+      .flat()
+    shuffle(deckCards)
 
-    draw.value = deckCards
-      .splice(0, 4)
-      .map((cardName) => ({ cardName, hasMulligan: true }));
-    shuffledDeck.value = deckCards;
-    [...document.querySelectorAll(".card-draw-container")].forEach((element) =>
-      element.classList.add("rotate-scale-down")
-    );
+    draw.value = deckCards.splice(0, 4).map((cardName) => ({ cardName, hasMulligan: true }))
+    shuffledDeck.value = deckCards
+    ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
+      element.classList.add('rotate-scale-down'),
+    )
 
     setTimeout(() => {
-      [...document.querySelectorAll(".card-draw-container")].forEach(
-        (element) => element.classList.remove("rotate-scale-down")
-      );
-    }, 200);
-  }, 100);
-};
+      ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
+        element.classList.remove('rotate-scale-down'),
+      )
+    }, 200)
+  }, 100)
+}
 
 const mulligan = (index: number) => {
   // You can get the same card back
-  shuffledDeck.value.push(draw.value[index].cardName);
+  shuffledDeck.value.push(draw.value[index].cardName)
 
-  shuffle(shuffledDeck.value);
-  const newCard = shuffledDeck.value.shift() as string;
+  shuffle(shuffledDeck.value)
+  const newCard = shuffledDeck.value.shift() as string
 
-  draw.value[index] = { cardName: newCard, hasMulligan: false };
+  draw.value[index] = { cardName: newCard, hasMulligan: false }
   document
     .querySelector(`.card-draw-container:nth-child(${index + 1})`)
-    ?.classList?.add("rotate-scale-down");
-};
+    ?.classList?.add('rotate-scale-down')
+}
 
-onMounted(restartDeck);
+onMounted(restartDeck)
 
 function shuffle(array: string[]) {
-  var m = array.length,
+  let m = array.length,
     t,
-    i;
+    i
   while (m) {
-    i = Math.floor(Math.random() * m--);
-    t = array[m];
-    array[m] = array[i];
-    array[i] = t;
+    i = Math.floor(Math.random() * m--)
+    t = array[m]
+    array[m] = array[i]
+    array[i] = t
   }
 }
 
 const viewCard = (card: string) => {
-  states.cardModal.card = card;
-  states.cardModal.show = true;
-};
+  states.cardModal.card = card
+  states.cardModal.show = true
+}
 </script>
 
 <style scoped>

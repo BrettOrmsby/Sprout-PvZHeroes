@@ -1,13 +1,11 @@
 <template>
   <footer>
     <p>
-      Sprout is not affiliated with, endorsed, sponsored, or specifically
-      approved by Electronic Arts Inc. Sprout may use the intellectual property
-      of Electronic Arts Inc., which is permitted under their IP Policy. For
-      more information about Electronic Arts Inc. intellectual property policy,
-      please visit their
-      <a
-        href="https://help.ea.com/en/help/faq/how-to-request-permission-for-ea-games-content/"
+      Sprout is not affiliated with, endorsed, sponsored, or specifically approved by Electronic
+      Arts Inc. Sprout may use the intellectual property of Electronic Arts Inc., which is permitted
+      under their IP Policy. For more information about Electronic Arts Inc. intellectual property
+      policy, please visit their
+      <a href="https://help.ea.com/en/help/faq/how-to-request-permission-for-ea-games-content/"
         >website</a
       >.
     </p>

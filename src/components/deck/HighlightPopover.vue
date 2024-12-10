@@ -15,19 +15,13 @@
         spellcheck="false"
       />
       <div class="errors">
-        <Message
-          severity="error"
-          v-for="(error, index) in states.deckFilter.errors"
-          :key="index"
-          >{{ error.message }}</Message
-        >
+        <Message severity="error" v-for="(error, index) in states.deckFilter.errors" :key="index">{{
+          error.message
+        }}</Message>
       </div>
 
       <label for="hideUnhighlighted">Hide Unhighlighted Cards</label>
-      <ToggleSwitch
-        inputId="hideUnhighlighted"
-        v-model="states.deckFilter.hideCards"
-      />
+      <ToggleSwitch inputId="hideUnhighlighted" v-model="states.deckFilter.hideCards" />
     </form>
     <router-link :to="{ name: 'HighlightHelp' }">
       <Button label="Highlight Help" link />
@@ -36,35 +30,35 @@
 </template>
 
 <script lang="ts" setup>
-import states from "@/store/states";
-import { watch } from "vue";
-import InputText from "primevue/inputtext";
-import ToggleSwitch from "primevue/toggleswitch";
-import Message from "primevue/message";
-import Button from "primevue/button";
+import states from '@/store/states'
+import { watch } from 'vue'
+import InputText from 'primevue/inputtext'
+import ToggleSwitch from 'primevue/toggleswitch'
+import Message from 'primevue/message'
+import Button from 'primevue/button'
 
-import generateQuery from "@/lib/parse-query/generateQuery";
-import type { Card } from "@/lib/types";
-import zombies from "@/assets/zombies.json";
-import plants from "@/assets/plants.json";
-import doesMatchQuery from "@/lib/matchQuery";
+import generateQuery from '@/lib/parse-query/generateQuery'
+import type { Card } from '@/lib/types'
+import zombies from '@/assets/zombies.json'
+import plants from '@/assets/plants.json'
+import doesMatchQuery from '@/lib/matchQuery'
 
-const cards = [...plants, ...zombies] as Card[];
+const cards = [...plants, ...zombies] as Card[]
 
 watch(
   () => states.deckFilter.textQuery,
   (newVal) => {
-    const result = generateQuery(newVal);
-    states.deckFilter.errors = result.errors;
+    const result = generateQuery(newVal)
+    states.deckFilter.errors = result.errors
     if (newVal.length === 0 || result.query.length === 0) {
-      states.deckFilter.cardsMatchingFilter = [];
+      states.deckFilter.cardsMatchingFilter = []
     } else {
       states.deckFilter.cardsMatchingFilter = cards
         .filter((e) => doesMatchQuery(e, result.query))
-        .map((e) => e.name);
+        .map((e) => e.name)
     }
-  }
-);
+  },
+)
 </script>
 
 <style scoped>

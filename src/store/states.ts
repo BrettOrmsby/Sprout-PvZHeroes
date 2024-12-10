@@ -1,22 +1,22 @@
-import { reactive } from "vue";
-import type { QueryError } from "@/lib/parse-query/scanner";
+import { reactive } from 'vue'
+import type { QueryError } from '@/lib/parse-query/scanner'
 
 export default reactive({
   editModal: false,
   loadingRoute: false,
   cardModal: {
-    card: "Peashooter",
+    card: 'Peashooter',
     show: false,
   },
   heroModel: {
-    hero: "Green Shadow",
+    hero: 'Green Shadow',
     show: false,
   },
   deckFilter: {
     show: false,
     hideCards: false,
-    textQuery: "",
+    textQuery: '',
     errors: [] as QueryError[],
     cardsMatchingFilter: [] as string[],
   },
-});
+})

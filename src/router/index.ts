@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory } from "vue-router";
-import useAuthUser from "@/composables/UseAuthUser";
-import useSupabase from "@/composables/UseSupabase";
-import user from "@/store/user";
-import deck, { compareDeck } from "@/store/deck";
-import states from "@/store/states";
+import { createRouter, createWebHistory } from 'vue-router'
+import useAuthUser from '@/composables/UseAuthUser'
+import useSupabase from '@/composables/UseSupabase'
+import user from '@/store/user'
+import deck, { compareDeck } from '@/store/deck'
+import states from '@/store/states'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -11,214 +11,210 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: "smooth",
+        behavior: 'smooth',
         top: 70,
-      };
+      }
     }
     if (savedPosition) {
-      return savedPosition;
+      return savedPosition
     } else {
-      return { top: 0 };
+      return { top: 0 }
     }
   },
   routes: [
     {
-      name: "Home",
-      path: "/",
-      component: () => import("@/pages/HomePage.vue"),
+      name: 'Home',
+      path: '/',
+      component: () => import('@/pages/HomePage.vue'),
       meta: {
-        title: "Sprout",
+        title: 'Sprout',
       },
     },
     {
-      name: "Me",
-      path: "/me",
+      name: 'Me',
+      path: '/me',
       meta: {
         requiresAuth: true,
       },
       component: () => null,
       beforeEnter: async () => {
-        const { supabase } = useSupabase();
-        const { id } = useAuthUser();
+        const { supabase } = useSupabase()
+        const { id } = useAuthUser()
         const { data, error } = await supabase
-          .from("profiles")
-          .select("username")
-          .eq("id", id.value)
-          .single();
+          .from('profiles')
+          .select('username')
+          .eq('id', id.value)
+          .single()
 
         if (error) {
-          return { name: "404" };
+          return { name: '404' }
         }
 
-        return { name: "Profile", params: { username: data.username } };
+        return { name: 'Profile', params: { username: data.username } }
       },
     },
     {
-      name: "Profile",
-      path: "/profile/:username",
+      name: 'Profile',
+      path: '/profile/:username',
       props: true,
-      component: () => import("@/pages/ProfilePage.vue"),
+      component: () => import('@/pages/ProfilePage.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase();
+        const { supabase } = useSupabase()
         const { data, error } = await supabase
-          .from("profiles")
-          .select("*")
-          .eq("username", to.params.username)
-          .single();
+          .from('profiles')
+          .select('*')
+          .eq('username', to.params.username)
+          .single()
 
         if (error) {
-          return { name: "404" };
+          return { name: '404' }
         } else {
-          Object.assign(user, data);
+          Object.assign(user, data)
         }
-        document.title = `${to.params.username} • Sprout`;
+        document.title = `${to.params.username} • Sprout`
       },
     },
     {
-      name: "CreateDeck",
-      path: "/create",
+      name: 'CreateDeck',
+      path: '/create',
       meta: {
         requiresAuth: true,
-        title: "Create Deck • Sprout",
+        title: 'Create Deck • Sprout',
       },
-      component: () => import("@/pages/CreateDeck.vue"),
+      component: () => import('@/pages/CreateDeck.vue'),
     },
     {
-      name: "ViewDeck",
-      path: "/deck/:id",
+      name: 'ViewDeck',
+      path: '/deck/:id',
       props: true,
-      component: () => import("@/pages/ViewDeck.vue"),
+      component: () => import('@/pages/ViewDeck.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase();
+        const { supabase } = useSupabase()
         const { data, error } = await supabase
-          .from("decks")
+          .from('decks')
           .select()
-          .eq("id", to.params.id)
-          .single();
+          .eq('id', to.params.id)
+          .single()
 
         if (error) {
-          return { name: "404" };
+          return { name: '404' }
         } else {
-          Object.assign(deck, data);
+          Object.assign(deck, data)
         }
 
         const { data: creatorData, error: creatorError } = await supabase
-          .from("profiles")
-          .select("username, profile_image")
-          .eq("id", data.creator)
-          .single();
+          .from('profiles')
+          .select('username, profile_image')
+          .eq('id', data.creator)
+          .single()
         if (creatorError) {
-          return { name: "404" };
+          return { name: '404' }
         } else {
-          Object.assign(user, creatorData);
-          document.title = `${data.name} • Sprout`;
+          Object.assign(user, creatorData)
+          document.title = `${data.name} • Sprout`
         }
 
-        states.deckFilter.hideCards = false;
-        states.deckFilter.cardsMatchingFilter = [];
+        states.deckFilter.hideCards = false
+        states.deckFilter.cardsMatchingFilter = []
       },
     },
     {
-      name: "Compare",
-      path: "/deck/:id/compare/:to",
+      name: 'Compare',
+      path: '/deck/:id/compare/:to',
       props: true,
-      component: () => import("@/pages/ComparePage.vue"),
+      component: () => import('@/pages/ComparePage.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase();
+        const { supabase } = useSupabase()
         const { data, error } = await supabase
-          .from("decks")
+          .from('decks')
           .select()
-          .eq("id", to.params.id)
-          .single();
+          .eq('id', to.params.id)
+          .single()
 
         if (error) {
-          return { name: "404" };
+          return { name: '404' }
         } else {
-          Object.assign(deck, data);
+          Object.assign(deck, data)
         }
 
         const { data: compare, error: compareError } = await supabase
-          .from("decks")
+          .from('decks')
           .select()
-          .eq("id", to.params.to)
-          .single();
+          .eq('id', to.params.to)
+          .single()
 
         if (compareError) {
-          return { name: "404" };
+          return { name: '404' }
         } else {
-          Object.assign(compareDeck, compare);
+          Object.assign(compareDeck, compare)
         }
-        document.title = `Compare ${data.name} to ${compare.name} • Sprout`;
+        document.title = `Compare ${data.name} to ${compare.name} • Sprout`
       },
     },
     {
-      name: "SearchUsers",
-      path: "/search/users",
-      component: () => import("@/pages/SearchUsersPage.vue"),
+      name: 'SearchUsers',
+      path: '/search/users',
+      component: () => import('@/pages/SearchUsersPage.vue'),
       meta: {
-        title: "Search Users • Sprout",
+        title: 'Search Users • Sprout',
       },
     },
     {
-      name: "SearchDecks",
-      path: "/search/decks",
-      component: () => import("@/pages/SearchDecksPage.vue"),
+      name: 'SearchDecks',
+      path: '/search/decks',
+      component: () => import('@/pages/SearchDecksPage.vue'),
       meta: {
-        title: "Search Decks • Sprout",
+        title: 'Search Decks • Sprout',
       },
     },
     {
-      name: "SignOut",
-      path: "/sign-out",
+      name: 'SignOut',
+      path: '/sign-out',
       component: () => null,
       beforeEnter: async () => {
-        const { signOut } = useAuthUser();
-        await signOut();
-        return { name: "Home" };
+        const { signOut } = useAuthUser()
+        await signOut()
+        return { name: 'Home' }
       },
     },
     {
-      name: "HighlightHelp",
-      path: "/highlight-help",
-      component: () => import("@/pages/HighlightHelpPage.vue"),
+      name: 'HighlightHelp',
+      path: '/highlight-help',
+      component: () => import('@/pages/HighlightHelpPage.vue'),
       meta: {
-        title: "Highlight Help • Sprout",
+        title: 'Highlight Help • Sprout',
       },
     },
     {
-      name: "404",
-      path: "/404",
-      component: () => import("@/pages/404Page.vue"),
+      name: '404',
+      path: '/404',
+      component: () => import('@/pages/404Page.vue'),
       meta: {
-        title: "404 • Sprout",
+        title: '404 • Sprout',
       },
     },
     {
-      name: "NotFoundRedirect",
-      path: "/:pathMatch(.*)*",
-      redirect: { name: "404" },
+      name: 'NotFoundRedirect',
+      path: '/:pathMatch(.*)*',
+      redirect: { name: '404' },
     },
   ],
-});
+})
 
 router.beforeEach((to, _, next) => {
   if (to.meta.title) {
-    document.title = to.meta.title as string;
+    document.title = to.meta.title as string
   }
-  next();
-});
+  next()
+})
 
 router.beforeEach((to) => {
-  states.loadingRoute = true;
-  const { isSignedIn } = useAuthUser();
-  if (
-    !isSignedIn.value &&
-    to.meta.requiresAuth &&
-    !Object.keys(to.query).includes("fromEmail")
-  ) {
-    return { name: "SignIn" };
+  states.loadingRoute = true
+  const { isSignedIn } = useAuthUser()
+  if (!isSignedIn.value && to.meta.requiresAuth && !Object.keys(to.query).includes('fromEmail')) {
+    return { name: 'SignIn' }
   }
-});
-router.afterEach(() => (states.loadingRoute = false));
+})
+router.afterEach(() => (states.loadingRoute = false))
 
-export default router;
+export default router

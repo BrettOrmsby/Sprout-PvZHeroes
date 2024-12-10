@@ -72,70 +72,71 @@
 </template>
 
 <script lang="ts" setup>
-import Button from "primevue/button";
-import Toolbar from "primevue/toolbar";
-import Dialog from "primevue/dialog";
-import Popover from "primevue/popover";
-import CompareInput from "@/components/CompareInput.vue";
-import HighlightPopover from "@/components/deck/HighlightPopover.vue";
-import { Cog, Paperclip, Repeat, Copy, Highlighter } from "lucide-vue-next";
-import states from "@/store/states";
-import useAuthUser from "@/composables/UseAuthUser";
-import deck from "@/store/deck";
-import { computed, ref } from "vue";
-import { useToast } from "primevue/usetoast";
-import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/throwError";
-import { useRouter, useRoute } from "vue-router";
+import Button from 'primevue/button'
+import Toolbar from 'primevue/toolbar'
+import Dialog from 'primevue/dialog'
+import Popover from 'primevue/popover'
+import CompareInput from '@/components/CompareInput.vue'
+import HighlightPopover from '@/components/deck/HighlightPopover.vue'
+import { Cog, Paperclip, Repeat, Copy, Highlighter } from 'lucide-vue-next'
+import states from '@/store/states'
+import useAuthUser from '@/composables/UseAuthUser'
+import deck from '@/store/deck'
+import { computed, ref } from 'vue'
+import { useToast } from 'primevue/usetoast'
+import useSupabase from '@/composables/UseSupabase'
+import throwError from '@/lib/throwError'
+import { useRouter, useRoute } from 'vue-router'
+import type { Deck } from '@/lib/types'
 
-const { id, isSignedIn } = useAuthUser();
-const isUsersDeck = computed(() => id.value === deck.creator);
-const { supabase } = useSupabase();
-const router = useRouter();
-const route = useRoute();
+const { id, isSignedIn } = useAuthUser()
+const isUsersDeck = computed(() => id.value === deck.creator)
+const { supabase } = useSupabase()
+const router = useRouter()
+const route = useRoute()
 
-const highlighter = ref();
+const highlighter = ref()
 const numberMatchingCardsInDeck = computed(() => {
-  let matchingAmount = 0;
+  let matchingAmount = 0
   for (const [card, amount] of Object.entries(deck.list)) {
     if (states.deckFilter.cardsMatchingFilter.includes(card)) {
-      matchingAmount += amount;
+      matchingAmount += amount
     }
   }
-  return matchingAmount.toString();
-});
+  return matchingAmount.toString()
+})
 
-const isCompareModalOpen = ref(false);
+const isCompareModalOpen = ref(false)
 
-const toast = useToast();
+const toast = useToast()
 const copyDeck = async () => {
   try {
     await navigator.clipboard.writeText(
       Object.entries(deck.list)
         .map(([card, amount]) => {
-          return amount + " " + card;
+          return amount + ' ' + card
         })
-        .join("\n")
-    );
+        .join('\n'),
+    )
     toast.add({
-      severity: "success",
-      summary: "Deck Copied",
-      detail: "Your deck has been copied to the clipboard.",
+      severity: 'success',
+      summary: 'Deck Copied',
+      detail: 'Your deck has been copied to the clipboard.',
       life: 3000,
-    });
-  } catch (err) {
+    })
+  } catch (_) {
     toast.add({
-      severity: "error",
-      summary: "Failed to Copy",
-      detail: "Your deck could not be copied to the clipboard.",
+      severity: 'error',
+      summary: 'Failed to Copy',
+      detail: 'Your deck could not be copied to the clipboard.',
       life: 3000,
-    });
+    })
   }
-};
+}
 
-const isDuplicationLoading = ref(false);
+const isDuplicationLoading = ref(false)
 const duplicateDeck = async () => {
-  isDuplicationLoading.value = true;
+  isDuplicationLoading.value = true
   const duplicateDeck = {
     is_complete: deck.is_complete,
     hero: deck.hero,
@@ -143,26 +144,21 @@ const duplicateDeck = async () => {
     list: deck.list,
     creator: id.value,
     is_private: true,
-    name: deck.name + " (Duplicate)",
-  } as any;
-  delete duplicateDeck.id;
+    name: deck.name + ' (Duplicate)',
+  } as Deck
 
-  const { error, data } = await supabase
-    .from("decks")
-    .insert(duplicateDeck)
-    .select("id")
-    .single();
+  const { error, data } = await supabase.from('decks').insert(duplicateDeck).select('id').single()
 
   if (error) {
-    throwError(error);
-    console.log(error);
-    return;
+    throwError(error)
+    console.log(error)
+    return
   }
-  router.push({ name: "ViewDeck", params: { id: data.id } });
+  router.push({ name: 'ViewDeck', params: { id: data.id } })
   // For some reason, window.location.reload() does not work with either router.push or
   // router.replace. So instead, the location must be assigned in order to reload the beforeEnter route condition.
-  window.location.assign(route.fullPath.replace(/\/[^/]+$/, `/${data.id}`));
-};
+  window.location.assign(route.fullPath.replace(/\/[^/]+$/, `/${data.id}`))
+}
 </script>
 
 <style scoped>

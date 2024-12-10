@@ -1,97 +1,93 @@
-export type QueryError = { startPos: number; endPos: number; message: string };
+export type QueryError = { startPos: number; endPos: number; message: string }
 
 export type TokenType =
-  | "int"
-  | "str"
-  | "negate"
-  | "identifier"
-  | "compareOperator"
-  | "openParen"
-  | "closeParen"
-  | "or"
-  | "EOF";
+  | 'int'
+  | 'str'
+  | 'negate'
+  | 'identifier'
+  | 'compareOperator'
+  | 'openParen'
+  | 'closeParen'
+  | 'or'
+  | 'EOF'
 
-const compareOperator = ["=", ":", "<", ">", "<=", ">="] as const;
+const compareOperator = ['=', ':', '<', '>', '<=', '>='] as const
 
-export type CompareOperator = (typeof compareOperator)[number];
+export type CompareOperator = (typeof compareOperator)[number]
 
 export type Token<T extends TokenType> = {
-  type: TokenType;
-  startPos: number;
-  endPos: number;
-  value: T extends "int"
-    ? number
-    : T extends "compareOperator"
-    ? CompareOperator
-    : string;
-};
+  type: TokenType
+  startPos: number
+  endPos: number
+  value: T extends 'int' ? number : T extends 'compareOperator' ? CompareOperator : string
+}
 
 export class Scanner {
-  input: string;
-  tokens: Token<TokenType>[];
-  pointer: number;
-  char: number;
-  errors: QueryError[];
+  input: string
+  tokens: Token<TokenType>[]
+  pointer: number
+  char: number
+  errors: QueryError[]
 
   constructor(input: string) {
-    input = input.trimEnd();
+    input = input.trimEnd()
 
-    this.input = input;
-    this.tokens = [];
-    this.pointer = 0;
-    this.char = 1;
-    this.errors = [];
+    this.input = input
+    this.tokens = []
+    this.pointer = 0
+    this.char = 1
+    this.errors = []
   }
 
   scan(): QueryError[] {
     while (!this.#isAtEnd()) {
-      const current = this.#peek();
+      const current = this.#peek()
 
-      if (current === "(") {
-        this.#addToken("openParen", "(");
-        this.#increment();
-        continue;
+      if (current === '(') {
+        this.#addToken('openParen', '(')
+        this.#increment()
+        continue
       }
-      if (current === ")") {
-        this.#addToken("closeParen", "(");
-        this.#increment();
-        continue;
+      if (current === ')') {
+        this.#addToken('closeParen', '(')
+        this.#increment()
+        continue
       }
-      if (current === "-") {
-        this.#addToken("negate", "-");
-        this.#increment();
-        continue;
+      if (current === '-') {
+        this.#addToken('negate', '-')
+        this.#increment()
+        continue
       }
 
-      if ([" ", "\t", "\r", "\n"].includes(current)) {
-        this.#increment();
-        continue;
+      if ([' ', '\t', '\r', '\n'].includes(current)) {
+        this.#increment()
+        continue
       }
 
       if ('"' === current) {
-        const startPos = this.char;
+        const startPos = this.char
 
-        this.#increment();
-        let str = "";
+        this.#increment()
+        let str = ''
 
         while (!this.#isAtEnd() && this.#peek() !== '"') {
-          if (this.#peek() === "\\") {
-            this.#increment();
-            if (this.#peek() === "n") {
-              str += "\n";
+          if (this.#peek() === '\\') {
+            this.#increment()
+            if (this.#peek() === 'n') {
+              str += '\n'
             } else if (this.#peek() === '"') {
-              str += '"';
+              str += '"'
             } else {
               this.errors.push({
                 startPos: this.char - 1,
                 endPos: this.char + 1,
-                message: "Unknown escape code.",
-              });
+                message: 'Unknown escape code.',
+              })
             }
-            this.#increment();
+            this.#increment()
           } else {
-            str += this.#peek();
-            this.#increment();
+            str += this.#peek()
+            this.#increment()
           }
         }
 
@@ -100,103 +96,89 @@ export class Scanner {
             startPos,
             endPos: this.char,
             message: 'Expected an ending string literal `"`.',
-          });
+          })
         }
 
-        this.#increment();
+        this.#increment()
 
-        this.#addToken("str", str, startPos);
-        continue;
+        this.#addToken('str', str, startPos)
+        continue
       }
 
-      if (["=", ":", "<", ">"].includes(current)) {
-        this.#comparisonOperator();
+      if (['=', ':', '<', '>'].includes(current)) {
+        this.#comparisonOperator()
       } else {
-        this.#identifierOrNumber();
+        this.#identifierOrNumber()
       }
     }
-    this.#increment();
-    this.#addToken("EOF", "");
-    return this.errors;
+    this.#increment()
+    this.#addToken('EOF', '')
+    return this.errors
   }
 
   #addToken<T extends TokenType>(
     type: T,
-    value: Token<T>["value"],
+    value: Token<T>['value'],
     startPos = this.char,
-    endPos: number = this.char
+    endPos: number = this.char,
   ) {
     this.tokens.push({
       type,
       value,
       startPos,
       endPos,
-    });
+    })
   }
 
   #isAtEnd(): boolean {
-    return this.pointer >= this.input.length;
+    return this.pointer >= this.input.length
   }
   #peek(): string {
-    return this.input[this.pointer];
+    return this.input[this.pointer]
   }
   #increment() {
-    this.pointer += 1;
-    this.char += 1;
+    this.pointer += 1
+    this.char += 1
   }
 
   #comparisonOperator() {
-    const startPos = this.char;
-    if (this.#peek() === ":" || this.#peek() === "=") {
-      this.#addToken(
-        "compareOperator",
-        this.#peek() as CompareOperator,
-        startPos
-      );
-      this.#increment();
+    const startPos = this.char
+    if (this.#peek() === ':' || this.#peek() === '=') {
+      this.#addToken('compareOperator', this.#peek() as CompareOperator, startPos)
+      this.#increment()
     } else {
-      const firstPart = this.#peek();
-      this.#increment();
-      if (this.#peek() === "=") {
-        this.#increment();
-        this.#addToken(
-          "compareOperator",
-          (firstPart + "=") as CompareOperator,
-          startPos
-        );
+      const firstPart = this.#peek()
+      this.#increment()
+      if (this.#peek() === '=') {
+        this.#increment()
+        this.#addToken('compareOperator', (firstPart + '=') as CompareOperator, startPos)
       } else {
-        this.#addToken(
-          "compareOperator",
-          firstPart as CompareOperator,
-          startPos
-        );
+        this.#addToken('compareOperator', firstPart as CompareOperator, startPos)
       }
     }
   }
 
   #identifierOrNumber() {
-    const startPos = this.char;
-    let str = "";
+    const startPos = this.char
+    let str = ''
 
     while (
       !this.#isAtEnd() &&
-      ![" ", "\n", "\t", "\r", "(", ")", "=", ":", "<", ">"].includes(
-        this.#peek()
-      )
+      ![' ', '\n', '\t', '\r', '(', ')', '=', ':', '<', '>'].includes(this.#peek())
     ) {
-      str += this.#peek();
-      this.#increment();
+      str += this.#peek()
+      this.#increment()
     }
 
     if (/^\d+$/.test(str)) {
-      this.#addToken("int", parseInt(str), startPos);
+      this.#addToken('int', parseInt(str), startPos)
     } else {
-      if (str.toLowerCase() === "or") {
-        this.#addToken("or", str, startPos);
+      if (str.toLowerCase() === 'or') {
+        this.#addToken('or', str, startPos)
       } else if (compareOperator.includes(str as any)) {
-        this.#addToken("compareOperator", str as any, startPos);
+        this.#addToken('compareOperator', str as any, startPos)
       } else {
-        this.#addToken("identifier", str, startPos);
+        this.#addToken('identifier', str, startPos)
       }
     }
   }

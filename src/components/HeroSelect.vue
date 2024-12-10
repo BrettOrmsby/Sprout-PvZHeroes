@@ -8,11 +8,7 @@
   >
     <template #value="slotProps">
       <div v-if="slotProps.value" class="hero-select-container">
-        <img
-          :alt="slotProps.value"
-          :src="getHero(slotProps.value).image"
-          class="hero-image"
-        />
+        <img :alt="slotProps.value" :src="getHero(slotProps.value).image" class="hero-image" />
         <div>{{ slotProps.value }}</div>
       </div>
       <span v-else>
@@ -21,11 +17,7 @@
     </template>
     <template #option="slotProps">
       <div class="hero-select-container">
-        <img
-          :alt="slotProps.option.name"
-          :src="slotProps.option.image"
-          class="hero-image"
-        />
+        <img :alt="slotProps.option.name" :src="slotProps.option.image" class="hero-image" />
         <div>{{ slotProps.option.name }}</div>
       </div>
     </template>
@@ -33,11 +25,11 @@
 </template>
 
 <script lang="ts" setup>
-import heroData from "@/assets/heros.json";
-import Select from "primevue/select";
-import getHero from "@/lib/getHero";
+import heroData from '@/assets/heros.json'
+import Select from 'primevue/select'
+import getHero from '@/lib/getHero'
 
-const hero = defineModel<string>({ required: true });
+const hero = defineModel<string>({ required: true })
 </script>
 
 <style scoped>

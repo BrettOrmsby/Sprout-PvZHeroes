@@ -12,11 +12,7 @@
           class="class-container"
           :class="{ invalidClass: !hero.class.includes(key) }"
         >
-          <img
-            class="class"
-            :src="'/images/classes/' + key.toLowerCase() + '.png'"
-            :alt="key"
-          />
+          <img class="class" :src="'/images/classes/' + key.toLowerCase() + '.png'" :alt="key" />
           <span>{{ key }}</span>
         </Tab>
       </TabList>
@@ -24,15 +20,12 @@
         <TabPanel v-for="(value, key) in cardByClass" :key="key" :value="key">
           <div class="library-container">
             <PVZCardWithMenu
-              v-for="card in value.sort(
-                (a, b) => a.cost - b.cost || a.name.localeCompare(b.name)
-              )"
+              v-for="card in value.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))"
               :key="card.name"
               :isInDeck="false"
               :card="card"
               :class="`${
-                states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-                'highlighted'
+                states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'
               } ${
                 states.deckFilter.hideCards &&
                 !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
@@ -47,45 +40,42 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import deck from "@/store/deck";
-import states from "@/store/states";
-import heroData from "@/assets/heros.json";
-import plants from "@/assets/plants.json";
-import zombies from "@/assets/zombies.json";
-import getHero from "@/lib/getHero";
-import type { Card } from "@/lib/types";
-import PVZCardWithMenu from "./PVZCardWithMenu.vue";
-import Tabs from "primevue/tabs";
-import TabList from "primevue/tablist";
-import Tab from "primevue/tab";
-import TabPanels from "primevue/tabpanels";
-import TabPanel from "primevue/tabpanel";
+import { computed } from 'vue'
+import deck from '@/store/deck'
+import states from '@/store/states'
+import heroData from '@/assets/heros.json'
+import plants from '@/assets/plants.json'
+import zombies from '@/assets/zombies.json'
+import getHero from '@/lib/getHero'
+import type { Card } from '@/lib/types'
+import PVZCardWithMenu from './PVZCardWithMenu.vue'
+import Tabs from 'primevue/tabs'
+import TabList from 'primevue/tablist'
+import Tab from 'primevue/tab'
+import TabPanels from 'primevue/tabpanels'
+import TabPanel from 'primevue/tabpanel'
 
-const hero = computed(() => getHero(deck.hero));
-const isPlant = computed(() =>
-  heroData.plants.some((e) => e.name === deck.hero)
-);
+const hero = computed(() => getHero(deck.hero))
+const isPlant = computed(() => heroData.plants.some((e) => e.name === deck.hero))
 
 const cards = computed(
   () =>
     (isPlant.value ? plants : zombies).filter(
-      (e) =>
-        e.class !== "Removed" && e.set !== "token" && e.set !== "superpower"
-    ) as Card[]
-);
+      (e) => e.class !== 'Removed' && e.set !== 'token' && e.set !== 'superpower',
+    ) as Card[],
+)
 
 const cardByClass = computed(() => {
-  const cardClassObj: Record<string, Card[]> = {};
+  const cardClassObj: Record<string, Card[]> = {}
   for (const card of cards.value) {
     if (!cardClassObj[card.class]) {
-      cardClassObj[card.class] = [card];
+      cardClassObj[card.class] = [card]
     } else {
-      cardClassObj[card.class].push(card);
+      cardClassObj[card.class].push(card)
     }
   }
-  return cardClassObj;
-});
+  return cardClassObj
+})
 </script>
 
 <style scoped>

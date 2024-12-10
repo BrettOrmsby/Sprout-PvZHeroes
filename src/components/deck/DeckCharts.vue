@@ -6,136 +6,134 @@
 </template>
 
 <script lang="ts" setup>
-import deck from "@/store/deck";
-import getCard from "@/lib/getCard";
-import { computed, ref, onMounted } from "vue";
-import Chart from "primevue/chart";
+import deck from '@/store/deck'
+import getCard from '@/lib/getCard'
+import { computed, ref, onMounted } from 'vue'
+import Chart from 'primevue/chart'
 
-let graphColours = ref({
-  muted: "",
-  gridLines: "",
-  blue: "",
-  blueHover: "",
-  green: "",
-  greenHover: "",
-  gray: "",
-  grayHover: "",
-});
+const graphColours = ref({
+  muted: '',
+  gridLines: '',
+  blue: '',
+  blueHover: '',
+  green: '',
+  greenHover: '',
+  gray: '',
+  grayHover: '',
+})
 
 onMounted(() => {
-  const documentStyles = getComputedStyle(document.documentElement);
+  const documentStyles = getComputedStyle(document.documentElement)
   Object.assign(graphColours.value, {
-    muted: documentStyles.getPropertyValue("--p-text-muted-color"),
-    gridLines: documentStyles.getPropertyValue("--p-content-border-color"),
-    blue: documentStyles.getPropertyValue("--p-blue-400"),
-    blueHover: documentStyles.getPropertyValue("--p-blue-300"),
-    green: documentStyles.getPropertyValue("--p-green-400"),
-    greenHover: documentStyles.getPropertyValue("--p-green-300"),
-    gray: documentStyles.getPropertyValue("--p-gray-400"),
-    grayHover: documentStyles.getPropertyValue("--p-gray-300"),
-  });
-});
+    muted: documentStyles.getPropertyValue('--p-text-muted-color'),
+    gridLines: documentStyles.getPropertyValue('--p-content-border-color'),
+    blue: documentStyles.getPropertyValue('--p-blue-400'),
+    blueHover: documentStyles.getPropertyValue('--p-blue-300'),
+    green: documentStyles.getPropertyValue('--p-green-400'),
+    greenHover: documentStyles.getPropertyValue('--p-green-300'),
+    gray: documentStyles.getPropertyValue('--p-gray-400'),
+    grayHover: documentStyles.getPropertyValue('--p-gray-300'),
+  })
+})
 
 const cardsInDeck = computed(() => {
-  const deckCards = [];
+  const deckCards = []
   for (const key in deck.list) {
-    const card = getCard(key);
+    const card = getCard(key)
     for (let i = 0; i < deck.list[key]; i++) {
-      deckCards.push(card);
+      deckCards.push(card)
     }
   }
-  return deckCards;
-});
+  return deckCards
+})
 
 const cardData = computed(() => {
   const data = {
     fighter: {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
+      '0': 0,
+      '1': 0,
+      '2': 0,
+      '3': 0,
+      '4': 0,
+      '5': 0,
+      '6': 0,
+      '7': 0,
+      '8': 0,
+      '9': 0,
+      '10': 0,
     },
     trick: {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
+      '0': 0,
+      '1': 0,
+      '2': 0,
+      '3': 0,
+      '4': 0,
+      '5': 0,
+      '6': 0,
+      '7': 0,
+      '8': 0,
+      '9': 0,
+      '10': 0,
     },
     environment: {
-      "0": 0,
-      "1": 0,
-      "2": 0,
-      "3": 0,
-      "4": 0,
-      "5": 0,
-      "6": 0,
-      "7": 0,
-      "8": 0,
-      "9": 0,
-      "10": 0,
+      '0': 0,
+      '1': 0,
+      '2': 0,
+      '3': 0,
+      '4': 0,
+      '5': 0,
+      '6': 0,
+      '7': 0,
+      '8': 0,
+      '9': 0,
+      '10': 0,
     },
-  };
+  }
   cardsInDeck.value.forEach((e) => {
-    let type = e.type.toLowerCase();
-    if (type === "plant" || type === "zombie") {
-      type = "fighter";
+    let type = e.type.toLowerCase()
+    if (type === 'plant' || type === 'zombie') {
+      type = 'fighter'
     }
-    data[type as keyof typeof data][
-      e.cost as unknown as keyof typeof data.fighter
-    ] += 1;
-  });
+    data[type as keyof typeof data][e.cost as unknown as keyof typeof data.fighter] += 1
+  })
 
-  return data;
-});
+  return data
+})
 
 const typeData = computed(() => {
   return {
-    labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+    labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
     datasets: [
       {
-        type: "bar",
-        label: "Fighter",
+        type: 'bar',
+        label: 'Fighter',
         data: Object.values(cardData.value.fighter),
         backgroundColor: graphColours.value.blue,
         hoverBackgroundColor: graphColours.value.blueHover,
-        borderColor: "transparent",
+        borderColor: 'transparent',
         borderWidth: 1,
       },
       {
-        type: "bar",
-        label: "Trick",
+        type: 'bar',
+        label: 'Trick',
         data: Object.values(cardData.value.trick),
         backgroundColor: graphColours.value.gray,
         hoverBackgroundColor: graphColours.value.grayHover,
-        borderColor: "transparent",
+        borderColor: 'transparent',
         borderWidth: 1,
       },
       {
-        type: "bar",
-        label: "Environment",
+        type: 'bar',
+        label: 'Environment',
         data: Object.values(cardData.value.environment),
         backgroundColor: graphColours.value.green,
         hoverBackgroundColor: graphColours.value.greenHover,
-        borderColor: "transparent",
+        borderColor: 'transparent',
         borderWidth: 1,
       },
     ],
-  };
-});
+  }
+})
 
 const typeOptions = computed(() => {
   return {
@@ -147,7 +145,7 @@ const typeOptions = computed(() => {
         },
         stacked: true,
         title: {
-          text: "Amount of cards",
+          text: 'Amount of cards',
           display: true,
           color: graphColours.value.muted,
         },
@@ -158,10 +156,10 @@ const typeOptions = computed(() => {
       x: {
         stacked: true,
         grid: {
-          color: "transparent",
+          color: 'transparent',
         },
         title: {
-          text: "Card cost",
+          text: 'Card cost',
           display: true,
           color: graphColours.value.muted,
         },
@@ -172,21 +170,21 @@ const typeOptions = computed(() => {
     },
     plugins: {
       legend: {
-        position: "bottom",
+        position: 'bottom',
         labels: {
           color: graphColours.value.muted,
         },
       },
       title: {
-        text: "Card Amount",
+        text: 'Card Amount',
       },
       tooltips: {
-        mode: "y",
+        mode: 'y',
         intersect: false,
       },
     },
-  };
-});
+  }
+})
 </script>
 
 <style scoped>

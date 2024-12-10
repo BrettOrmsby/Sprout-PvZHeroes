@@ -11,10 +11,10 @@
 </template>
 
 <script lang="ts" setup>
-import Button from "primevue/button";
-import getCard from "@/lib/getCard";
+import Button from 'primevue/button'
+import getCard from '@/lib/getCard'
 
-const janitor = getCard("Celestial Custodian");
+const janitor = getCard('Celestial Custodian')
 </script>
 
 <style scoped>

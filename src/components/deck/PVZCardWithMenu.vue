@@ -7,19 +7,11 @@
     :card="card"
     :isValid="isValid"
     :data-card-name="card.name"
-    :data-can-add="
-      isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))
-    "
+    :data-can-add="isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))"
     :data-can-remove="isUsersDeck && props.isInDeck"
     :class="class"
   />
-  <Menu
-    ref="menu"
-    id="overlay_menu"
-    :model="items"
-    :popup="true"
-    style="width: auto"
-  >
+  <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="width: auto">
     <template #item="{ item, props }">
       <a v-bind="props.action">
         <Eye v-if="item.label === 'View'" />
@@ -38,146 +30,137 @@
 </template>
 
 <script lang="ts" setup>
-import throwError from "@/lib/throwError";
-import useAuthUser from "@/composables/UseAuthUser";
-import useSupabase from "@/composables/UseSupabase";
-import { ref, computed } from "vue";
-import type { Card, Hero } from "@/lib/types";
-import states from "@/store/states";
-import heroData from "@/assets/heros.json";
-import Menu from "primevue/menu";
-import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from "lucide-vue-next";
-import deck from "@/store/deck";
-import PVZCard from "@/components/PVZCard.vue";
-const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>();
+import throwError from '@/lib/throwError'
+import useAuthUser from '@/composables/UseAuthUser'
+import useSupabase from '@/composables/UseSupabase'
+import { ref, computed } from 'vue'
+import type { Card, Hero } from '@/lib/types'
+import states from '@/store/states'
+import heroData from '@/assets/heros.json'
+import Menu from 'primevue/menu'
+import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from 'lucide-vue-next'
+import deck from '@/store/deck'
+import PVZCard from '@/components/PVZCard.vue'
+const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>()
 
 const hero = computed<Hero>(
-  () =>
-    [...heroData.plants, ...heroData.zombies].find(
-      (e) => e.name === deck.hero
-    ) as Hero
-);
+  () => [...heroData.plants, ...heroData.zombies].find((e) => e.name === deck.hero) as Hero,
+)
 
 const numberLeft = computed(() => {
   if (deck.list[props.card.name] !== undefined) {
     if (props.isInDeck) {
-      return deck.list[props.card.name];
+      return deck.list[props.card.name]
     }
-    return 4 - deck.list[props.card.name];
+    return 4 - deck.list[props.card.name]
   } else {
-    return 4;
+    return 4
   }
-});
+})
 
 const isValid = computed(
-  () => numberLeft.value !== 0 && hero.value.class.includes(props.card.class)
-);
+  () => numberLeft.value !== 0 && hero.value.class.includes(props.card.class),
+)
 
-const { id } = useAuthUser();
+const { id } = useAuthUser()
 
-const isUsersDeck = computed(() => id.value === deck.creator);
-const { supabase } = useSupabase();
+const isUsersDeck = computed(() => id.value === deck.creator)
+const { supabase } = useSupabase()
 const updateDeck = async (newList: Record<string, number>) => {
   const { data, error } = await supabase
-    .from("decks")
+    .from('decks')
     .update({
       list: newList,
-      is_complete:
-        Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+      is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
     })
-    .eq("id", deck.id)
+    .eq('id', deck.id)
     .select()
-    .single();
+    .single()
 
   if (error) {
-    throwError(error);
-    return;
+    throwError(error)
+    return
   }
-  Object.assign(deck, data);
-};
+  Object.assign(deck, data)
+}
 
 const addCard = async () => {
-  const newAmount = deck.list[props.card.name]
-    ? deck.list[props.card.name] + 1
-    : 1;
-  const newList = { ...deck.list, [props.card.name]: newAmount };
-  updateDeck(newList);
-};
+  const newAmount = deck.list[props.card.name] ? deck.list[props.card.name] + 1 : 1
+  const newList = { ...deck.list, [props.card.name]: newAmount }
+  updateDeck(newList)
+}
 
 const addAll = async () => {
-  const newList = { ...deck.list, [props.card.name]: 4 };
-  updateDeck(newList);
-};
+  const newList = { ...deck.list, [props.card.name]: 4 }
+  updateDeck(newList)
+}
 
 const removeCard = async () => {
-  const newAmount = deck.list[props.card.name] - 1;
-  const newList = { ...deck.list, [props.card.name]: newAmount };
+  const newAmount = deck.list[props.card.name] - 1
+  const newList = { ...deck.list, [props.card.name]: newAmount }
   if (newList[props.card.name] === 0) {
-    delete newList[props.card.name];
+    delete newList[props.card.name]
   }
-  updateDeck(newList);
-};
+  updateDeck(newList)
+}
 
 const removeAll = async () => {
-  const newList = { ...deck.list };
-  delete newList[props.card.name];
-  updateDeck(newList);
-};
+  const newList = { ...deck.list }
+  delete newList[props.card.name]
+  updateDeck(newList)
+}
 
 const viewCard = () => {
-  states.cardModal.card = props.card.name;
-  states.cardModal.show = true;
-};
+  states.cardModal.card = props.card.name
+  states.cardModal.show = true
+}
 // TODO: somehow show loading for commands
-const menu = ref();
+const menu = ref()
 
 const toggle = (event: Event) => {
-  menu.value.toggle(event);
-};
+  menu.value.toggle(event)
+}
 
 const items = computed(() => {
   if (!isUsersDeck.value) {
     return [
       {
-        label: "View",
+        label: 'View',
         command: viewCard,
       },
-    ];
+    ]
   }
 
   return [
     {
-      label: "View",
+      label: 'View',
       command: viewCard,
     },
     {
-      label: "Add Card",
-      visible:
-        (props.isInDeck && numberLeft.value < 4) ||
-        (!props.isInDeck && isValid.value),
+      label: 'Add Card',
+      visible: (props.isInDeck && numberLeft.value < 4) || (!props.isInDeck && isValid.value),
       command: addCard,
-      shortcut: "Alt + 1",
+      shortcut: 'Alt + 1',
     },
     {
-      label: "Add All",
+      label: 'Add All',
       visible:
-        (props.isInDeck && numberLeft.value <= 2) ||
-        (!props.isInDeck && numberLeft.value >= 2),
+        (props.isInDeck && numberLeft.value <= 2) || (!props.isInDeck && numberLeft.value >= 2),
       command: addAll,
     },
     {
-      label: "Remove Card",
+      label: 'Remove Card',
       visible: props.isInDeck,
       command: removeCard,
-      shortcut: "Alt + 2",
+      shortcut: 'Alt + 2',
     },
     {
-      label: "Remove All",
+      label: 'Remove All',
       visible: props.isInDeck && numberLeft.value >= 2,
       command: removeAll,
     },
-  ];
-});
+  ]
+})
 </script>
 
 <style scoped>

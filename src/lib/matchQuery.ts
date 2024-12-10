@@ -1,175 +1,165 @@
-import type { CompareOperator } from "./parse-query/scanner";
-import type { Card, Query } from "./types";
+import type { CompareOperator } from './parse-query/scanner'
+import type { Card, Query } from './types'
 
 export default function doesMatchQuery(card: Card, query: Query): boolean {
   for (const subQuery of query) {
-    if (subQuery.property === "or") {
+    if (subQuery.property === 'or') {
       const isSomeCorrect = subQuery.orSections.some(
-        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery)
-      );
+        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery),
+      )
       if (!isSomeCorrect) {
-        return false;
+        return false
       }
     } else {
-      if (subQuery.property === "name") {
+      if (subQuery.property === 'name') {
         const doesNameMatch = card.name
           .toLowerCase()
-          .includes(subQuery.value.toString().toLowerCase());
+          .includes(subQuery.value.toString().toLowerCase())
         if (doesNameMatch === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "strength" || subQuery.property === "s") {
+      if (subQuery.property === 'strength' || subQuery.property === 's') {
         const doesStrengthMatch =
-          card.strength !== null &&
-          equalityCheck(card.strength, subQuery.compare, subQuery.value);
+          card.strength !== null && equalityCheck(card.strength, subQuery.compare, subQuery.value)
         if (doesStrengthMatch === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "health" || subQuery.property === "h") {
+      if (subQuery.property === 'health' || subQuery.property === 'h') {
         const doesHealthMatch =
-          card.health !== null &&
-          equalityCheck(card.health, subQuery.compare, subQuery.value);
+          card.health !== null && equalityCheck(card.health, subQuery.compare, subQuery.value)
         if (doesHealthMatch === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "cost" || subQuery.property === "c") {
+      if (subQuery.property === 'cost' || subQuery.property === 'c') {
         const doesCostMatch =
-          card.cost !== null &&
-          equalityCheck(card.cost, subQuery.compare, subQuery.value);
+          card.cost !== null && equalityCheck(card.cost, subQuery.compare, subQuery.value)
         if (doesCostMatch === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "set") {
-        let set = subQuery.value.toLowerCase();
+      if (subQuery.property === 'set') {
+        let set = subQuery.value.toLowerCase()
         if (set.length === 1) {
           const shortFormSets = {
-            b: "basic",
-            p: "premium",
-            g: "galactic",
-            c: "colossal",
-            t: "triassic",
-            e: "event",
-            s: "superpower",
-          };
-          set = shortFormSets[set as keyof typeof shortFormSets];
+            b: 'basic',
+            p: 'premium',
+            g: 'galactic',
+            c: 'colossal',
+            t: 'triassic',
+            e: 'event',
+            s: 'superpower',
+          }
+          set = shortFormSets[set as keyof typeof shortFormSets]
         }
-        const doesMatchSet = card.set.toLowerCase() === set;
+        const doesMatchSet = card.set.toLowerCase() === set
         if (doesMatchSet === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "rarity" || subQuery.property === "r") {
-        let rarity = subQuery.value;
+      if (subQuery.property === 'rarity' || subQuery.property === 'r') {
+        let rarity = subQuery.value
         if (rarity.length === 1) {
           const shortFormRarities = {
-            c: "common",
-            u: "uncommon",
-            r: "rare",
-            s: "superrare",
-            l: "legendary",
-            e: "event",
-            t: "token",
-          } as const;
-          rarity = shortFormRarities[rarity as keyof typeof shortFormRarities];
+            c: 'common',
+            u: 'uncommon',
+            r: 'rare',
+            s: 'superrare',
+            l: 'legendary',
+            e: 'event',
+            t: 'token',
+          } as const
+          rarity = shortFormRarities[rarity as keyof typeof shortFormRarities]
         }
 
-        const doesMatchRarity =
-          card.rarity.toLowerCase().replace("-", "") === rarity;
+        const doesMatchRarity = card.rarity.toLowerCase().replace('-', '') === rarity
         if (doesMatchRarity === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "class") {
-        const doesMatchClass =
-          card.class.toLowerCase().replace(/[ -]/g, "") === subQuery.value;
+      if (subQuery.property === 'class') {
+        const doesMatchClass = card.class.toLowerCase().replace(/[ -]/g, '') === subQuery.value
         if (doesMatchClass === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "type") {
-        let type = subQuery.value;
+      if (subQuery.property === 'type') {
+        let type = subQuery.value
         if (type.length === 1) {
           const shortFormTypes = {
-            p: "plant",
-            z: "zombie",
-            t: "trick",
-            e: "environment",
-            f: "fighter",
-          } as const;
-          type = shortFormTypes[type as keyof typeof shortFormTypes];
+            p: 'plant',
+            z: 'zombie',
+            t: 'trick',
+            e: 'environment',
+            f: 'fighter',
+          } as const
+          type = shortFormTypes[type as keyof typeof shortFormTypes]
         }
         const doesMatchType =
           card.type.toLowerCase() === type ||
-          (type === "fighter" &&
-            (card.type.toLowerCase() === "zombie" ||
-              card.type.toLowerCase() === "plant"));
+          (type === 'fighter' &&
+            (card.type.toLowerCase() === 'zombie' || card.type.toLowerCase() === 'plant'))
         if (doesMatchType === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "tribe") {
+      if (subQuery.property === 'tribe') {
         const doesMatchTribe = [...card.tribes].some((tribe) =>
-          tribe.toLowerCase().includes(subQuery.value.toString().toLowerCase())
-        );
+          tribe.toLowerCase().includes(subQuery.value.toString().toLowerCase()),
+        )
         if (doesMatchTribe === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "t") {
+      if (subQuery.property === 't') {
         const doesMatchT = [...card.tribes, card.type].some((t) =>
-          t.toLowerCase().includes(subQuery.value.toString().toLowerCase())
-        );
+          t.toLowerCase().includes(subQuery.value.toString().toLowerCase()),
+        )
         if (doesMatchT === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
 
-      if (subQuery.property === "abilities" || subQuery.property === "a") {
+      if (subQuery.property === 'abilities' || subQuery.property === 'a') {
         const doesMatchAbilities = card.abilities
           .toLowerCase()
-          .replace(/<[^>]*?>/g, "")
-          .includes(subQuery.value.toString().toLowerCase());
+          .replace(/<[^>]*?>/g, '')
+          .includes(subQuery.value.toString().toLowerCase())
         if (doesMatchAbilities === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
-      if (subQuery.property === "flavour" || subQuery.property === "f") {
+      if (subQuery.property === 'flavour' || subQuery.property === 'f') {
         const doesMatchFlavour = card.flavour
           .toLowerCase()
-          .includes(subQuery.value.toString().toLowerCase());
+          .includes(subQuery.value.toString().toLowerCase())
         if (doesMatchFlavour === subQuery.isNegated) {
-          return false;
+          return false
         }
-        continue;
+        continue
       }
     }
   }
-  return true;
+  return true
 }
 
-function equalityCheck(
-  firstVal: number,
-  op: CompareOperator,
-  secondVal: number
-): boolean {
-  if (op === ":" || op === "=") return firstVal === secondVal;
-  if (op === "<") return firstVal < secondVal;
-  if (op === ">") return firstVal > secondVal;
-  if (op === "<=") return firstVal <= secondVal;
-  return firstVal >= secondVal;
+function equalityCheck(firstVal: number, op: CompareOperator, secondVal: number): boolean {
+  if (op === ':' || op === '=') return firstVal === secondVal
+  if (op === '<') return firstVal < secondVal
+  if (op === '>') return firstVal > secondVal
+  if (op === '<=') return firstVal <= secondVal
+  return firstVal >= secondVal
 }

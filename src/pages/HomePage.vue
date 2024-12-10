@@ -1,12 +1,10 @@
 <template>
   <main>
     <h1><Sprout class="sprout" />Sprout</h1>
-    <div class="subtitle">
-      A deck building website for Plants vs. Zombies Heros.
-    </div>
+    <div class="subtitle">A deck building website for Plants vs. Zombies Heros.</div>
     <Message style="margin-top: var(--inline-space)"
-      >Card texts have been changed following the recent update. Images may take
-      longer to be updated. Please report any discrepancies to the
+      >Card texts have been changed following the recent update. Images may take longer to be
+      updated. Please report any discrepancies to the
       <a
         href="https://github.com/BrettOrmsby/Sprout-PvZHeroes"
         style="color: inherit; text-decoration: underline"
@@ -18,43 +16,28 @@
     <div v-if="isSignedIn">
       <h2>Your Latest Decks</h2>
       <div class="deck-container" v-if="isLoadingYourDecks">
-        <Skeleton
-          v-for="index in 4"
-          :key="index"
-          class="deck-skeleton"
-          height="175px"
-        ></Skeleton>
+        <Skeleton v-for="index in 4" :key="index" class="deck-skeleton" height="175px"></Skeleton>
       </div>
-      <Message v-else-if="yourDeckData.length === 0" severity="warn">
-        You own no decks
-      </Message>
+      <Message v-else-if="yourDeckData.length === 0" severity="warn"> You own no decks </Message>
       <div class="deck-container" v-else>
         <DeckCard
           v-for="deck in yourDeckData"
           :key="deck.id"
-          :deck="(deck as any)"
+          :deck="deck as any"
           :show-visibility="true"
         />
       </div>
-      <router-link
-        to="/me"
-        v-if="isLoadingYourDecks || yourDeckData.length > 0"
-      >
+      <router-link to="/me" v-if="isLoadingYourDecks || yourDeckData.length > 0">
         <Button label="View all personal decks" link />
       </router-link>
     </div>
 
     <h2>Latest Public Decks</h2>
     <div class="deck-container" v-if="isLoading">
-      <Skeleton
-        v-for="index in 6"
-        :key="index"
-        class="deck-skeleton"
-        height="175px"
-      ></Skeleton>
+      <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
     <div class="deck-container" v-else>
-      <DeckCard v-for="deck in deckData" :key="deck.id" :deck="(deck as any)" />
+      <DeckCard v-for="deck in deckData" :key="deck.id" :deck="deck as any" />
     </div>
     <router-link to="/search/decks">
       <Button label="View all public decks" link />
@@ -64,70 +47,68 @@
 </template>
 
 <script lang="ts" setup>
-import useSupabase from "@/composables/UseSupabase";
-import useAuthUser from "@/composables/UseAuthUser";
-import throwError from "@/lib/throwError";
-import DeckCard from "@/components/DeckCard.vue";
-import type { Deck } from "@/lib/types";
-import { ref, onMounted, watch } from "vue";
-import Skeleton from "primevue/skeleton";
-import Button from "primevue/button";
-import Message from "primevue/message";
-import TheFooter from "@/components/TheFooter.vue";
-import { Sprout } from "lucide-vue-next";
+import useSupabase from '@/composables/UseSupabase'
+import useAuthUser from '@/composables/UseAuthUser'
+import throwError from '@/lib/throwError'
+import DeckCard from '@/components/DeckCard.vue'
+import type { Deck } from '@/lib/types'
+import { ref, onMounted, watch } from 'vue'
+import Skeleton from 'primevue/skeleton'
+import Button from 'primevue/button'
+import Message from 'primevue/message'
+import TheFooter from '@/components/TheFooter.vue'
+import { Sprout } from 'lucide-vue-next'
 
-const { supabase } = useSupabase();
+const { supabase } = useSupabase()
 
-const { id, isSignedIn } = useAuthUser();
-const isLoading = ref(true);
-const deckData = ref<Deck[]>([]);
-const isLoadingYourDecks = ref(true);
-const yourDeckData = ref<Deck[]>([]);
+const { id, isSignedIn } = useAuthUser()
+const isLoading = ref(true)
+const deckData = ref<Deck[]>([])
+const isLoadingYourDecks = ref(true)
+const yourDeckData = ref<Deck[]>([])
 
 const getYourDeckData = async () => {
   if (isSignedIn.value) {
     const { data, error } = await supabase
-      .from("decks")
-      .select("*")
-      .order("created_at", { ascending: false })
-      .eq("creator", id.value)
+      .from('decks')
+      .select('*')
+      .order('created_at', { ascending: false })
+      .eq('creator', id.value)
       .limit(4)
-      .returns<Deck[]>();
+      .returns<Deck[]>()
 
     if (error) {
-      throwError(error);
+      throwError(error)
     } else {
-      yourDeckData.value = data;
-      isLoadingYourDecks.value = false;
+      yourDeckData.value = data
+      isLoadingYourDecks.value = false
     }
   }
-};
+}
 
 const getPublicDeckData = async () => {
   const { data, error } = await supabase
-    .from("decks")
-    .select("*")
-    .order("created_at", { ascending: false })
-    .eq("is_complete", true)
-    .eq("is_private", false)
+    .from('decks')
+    .select('*')
+    .order('created_at', { ascending: false })
+    .eq('is_complete', true)
+    .eq('is_private', false)
     .limit(6)
-    .returns<Deck[]>();
+    .returns<Deck[]>()
 
   if (error) {
-    throwError(error);
+    throwError(error)
   } else {
-    deckData.value = data;
-    isLoading.value = false;
+    deckData.value = data
+    isLoading.value = false
   }
-};
-onMounted(
-  async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()])
-);
+}
+onMounted(async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()]))
 watch(isSignedIn, (newVal) => {
   if (newVal) {
-    getYourDeckData();
+    getYourDeckData()
   }
-});
+})
 </script>
 
 <style scoped>

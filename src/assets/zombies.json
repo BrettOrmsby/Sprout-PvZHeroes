@@ -6,9 +6,7 @@
     "rarity": "common",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -22,10 +20,7 @@
     "rarity": "common",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Pet"
-    ],
+    "tribes": ["Dancing", "Pet"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -39,10 +34,7 @@
     "rarity": "common",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Professional"
-    ],
+    "tribes": ["Pet", "Professional"],
     "cost": 2,
     "strength": 1,
     "health": 3,
@@ -56,9 +48,7 @@
     "rarity": "common",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -72,9 +62,7 @@
     "rarity": "common",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -88,9 +76,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -104,9 +90,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -120,9 +104,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -136,10 +118,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Gourmet",
-      "Pet"
-    ],
+    "tribes": ["Gourmet", "Pet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -153,9 +132,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Monster"
-    ],
+    "tribes": ["Monster"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -169,10 +146,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Imp"
-    ],
+    "tribes": ["Dancing", "Imp"],
     "cost": 3,
     "strength": 1,
     "health": 1,
@@ -186,9 +160,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Dancing"
-    ],
+    "tribes": ["Dancing"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -216,9 +188,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Monster"
-    ],
+    "tribes": ["Monster"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -232,10 +202,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Party",
-      "Sports"
-    ],
+    "tribes": ["Party", "Sports"],
     "cost": 4,
     "strength": 4,
     "health": 3,
@@ -249,9 +216,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Monster"
-    ],
+    "tribes": ["Monster"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -265,9 +230,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 0,
     "strength": 1,
     "health": 1,
@@ -281,9 +244,7 @@
     "rarity": "uncommon",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 5,
     "strength": 5,
     "health": 6,
@@ -297,10 +258,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Professional"
-    ],
+    "tribes": ["Pet", "Professional"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -314,10 +272,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Monster",
-      "Imp"
-    ],
+    "tribes": ["Monster", "Imp"],
     "cost": 3,
     "strength": 2,
     "health": 3,
@@ -331,9 +286,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -347,10 +300,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pet"
-    ],
+    "tribes": ["Imp", "Pet"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -364,9 +314,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gargantuar"
-    ],
+    "tribes": ["Gargantuar"],
     "cost": 5,
     "strength": 5,
     "health": 5,
@@ -380,10 +328,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Science"
-    ],
+    "tribes": ["Mustache", "Science"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -397,10 +342,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Monster"
-    ],
+    "tribes": ["Pet", "Monster"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -414,10 +356,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "History"
-    ],
+    "tribes": ["Gourmet", "History"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -431,9 +370,7 @@
     "rarity": "rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -447,9 +384,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 1,
     "strength": 0,
     "health": 5,
@@ -463,10 +398,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Monster"
-    ],
+    "tribes": ["Pet", "Monster"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -480,10 +412,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Monster",
-      "Gargantuar"
-    ],
+    "tribes": ["Monster", "Gargantuar"],
     "cost": 6,
     "strength": 6,
     "health": 6,
@@ -511,10 +440,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Mustache"
-    ],
+    "tribes": ["Gourmet", "Mustache"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -528,9 +454,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": 3,
     "health": 2,
@@ -544,9 +468,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Environment",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -560,10 +482,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Monster",
-      "Imp"
-    ],
+    "tribes": ["Monster", "Imp"],
     "cost": 4,
     "strength": 3,
     "health": 4,
@@ -577,9 +496,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "History"
-    ],
+    "tribes": ["History"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -593,10 +510,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Environment",
-    "tribes": [
-      "History",
-      "Pet"
-    ],
+    "tribes": ["History", "Pet"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -610,10 +524,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Gargantuar"
-    ],
+    "tribes": ["Professional", "Gargantuar"],
     "cost": 7,
     "strength": 6,
     "health": 6,
@@ -627,9 +538,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 8,
     "strength": 8,
     "health": 8,
@@ -643,10 +552,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Gargantuar"
-    ],
+    "tribes": ["Science", "Gargantuar"],
     "cost": 9,
     "strength": 9,
     "health": 9,
@@ -660,10 +566,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Pirate"
-    ],
+    "tribes": ["Science", "Pirate"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -677,10 +580,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Gargantuar"
-    ],
+    "tribes": ["Science", "Gargantuar"],
     "cost": 5,
     "strength": 5,
     "health": 7,
@@ -694,10 +594,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "History",
-      "Pet"
-    ],
+    "tribes": ["History", "Pet"],
     "cost": 5,
     "strength": 5,
     "health": 5,
@@ -711,10 +608,7 @@
     "rarity": "legendary",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Gargantuar"
-    ],
+    "tribes": ["Pirate", "Gargantuar"],
     "cost": 7,
     "strength": 6,
     "health": 6,
@@ -728,9 +622,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -744,9 +636,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -760,10 +650,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Sports"
-    ],
+    "tribes": ["Gourmet", "Sports"],
     "cost": 2,
     "strength": 1,
     "health": 1,
@@ -777,10 +664,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Sports"
-    ],
+    "tribes": ["Dancing", "Sports"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -794,10 +678,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Science"
-    ],
+    "tribes": ["Pet", "Science"],
     "cost": 3,
     "strength": 1,
     "health": 3,
@@ -811,10 +692,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Mustache"
-    ],
+    "tribes": ["Gourmet", "Mustache"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -828,9 +706,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 4,
     "strength": 2,
     "health": 4,
@@ -844,10 +720,7 @@
     "rarity": "event",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Gargantuar"
-    ],
+    "tribes": ["Gourmet", "Gargantuar"],
     "cost": 6,
     "strength": 6,
     "health": 6,
@@ -861,9 +734,7 @@
     "rarity": "token",
     "class": "Beastly",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -877,9 +748,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -893,9 +762,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -909,9 +776,7 @@
     "rarity": "super-rare",
     "class": "Beastly",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -925,9 +790,7 @@
     "rarity": "common",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -941,10 +804,7 @@
     "rarity": "common",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Party"
-    ],
+    "tribes": ["Professional", "Party"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -958,9 +818,7 @@
     "rarity": "common",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -974,9 +832,7 @@
     "rarity": "common",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -990,10 +846,7 @@
     "rarity": "common",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Sports"
-    ],
+    "tribes": ["Dancing", "Sports"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -1007,9 +860,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -1023,9 +874,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -1039,9 +888,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 2,
     "strength": 1,
     "health": 1,
@@ -1055,10 +902,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Sports"
-    ],
+    "tribes": ["Mustache", "Sports"],
     "cost": 2,
     "strength": 3,
     "health": 1,
@@ -1072,10 +916,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Science"
-    ],
+    "tribes": ["Mustache", "Science"],
     "cost": 2,
     "strength": 1,
     "health": 4,
@@ -1089,10 +930,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Sports"
-    ],
+    "tribes": ["Gourmet", "Sports"],
     "cost": 3,
     "strength": 2,
     "health": 1,
@@ -1106,9 +944,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Sports"
-    ],
+    "tribes": ["Sports"],
     "cost": 4,
     "strength": 2,
     "health": 2,
@@ -1122,10 +958,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet",
-      "Science"
-    ],
+    "tribes": ["Gourmet", "Science"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -1139,9 +972,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Environment",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -1155,10 +986,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Science"
-    ],
+    "tribes": ["Dancing", "Science"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -1172,10 +1000,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Imp"
-    ],
+    "tribes": ["Science", "Imp"],
     "cost": 5,
     "strength": 6,
     "health": 5,
@@ -1189,10 +1014,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -1206,10 +1028,7 @@
     "rarity": "uncommon",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Barrel",
-      "Professional"
-    ],
+    "tribes": ["Barrel", "Professional"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -1223,10 +1042,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Party"
-    ],
+    "tribes": ["Mustache", "Party"],
     "cost": 3,
     "strength": 1,
     "health": 4,
@@ -1240,10 +1056,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "History",
-      "Science"
-    ],
+    "tribes": ["History", "Science"],
     "cost": 3,
     "strength": 1,
     "health": 3,
@@ -1257,9 +1070,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 5,
     "strength": 3,
     "health": 3,
@@ -1273,10 +1084,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Science",
-      "Imp"
-    ],
+    "tribes": ["Science", "Imp"],
     "cost": 6,
     "strength": null,
     "health": null,
@@ -1290,10 +1098,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Gargantuar"
-    ],
+    "tribes": ["Mustache", "Gargantuar"],
     "cost": 6,
     "strength": 6,
     "health": 7,
@@ -1307,9 +1112,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": 1,
     "health": 2,
@@ -1323,10 +1126,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Imp",
-      "Gargantuar"
-    ],
+    "tribes": ["Imp", "Gargantuar"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -1340,9 +1140,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Monster"
-    ],
+    "tribes": ["Monster"],
     "cost": 3,
     "strength": 2,
     "health": 5,
@@ -1356,10 +1154,7 @@
     "rarity": "rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "History"
-    ],
+    "tribes": ["Mustache", "History"],
     "cost": 3,
     "strength": 1,
     "health": 5,
@@ -1373,10 +1168,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Science"
-    ],
+    "tribes": ["Mustache", "Science"],
     "cost": 3,
     "strength": 2,
     "health": 3,
@@ -1390,9 +1182,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -1406,9 +1196,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 4,
     "strength": 3,
     "health": 5,
@@ -1422,10 +1210,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Science"
-    ],
+    "tribes": ["Mustache", "Science"],
     "cost": 5,
     "strength": 5,
     "health": 4,
@@ -1439,10 +1224,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Science"
-    ],
+    "tribes": ["Imp", "Science"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -1456,9 +1238,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Environment",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -1472,9 +1252,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 3,
     "strength": 2,
     "health": 5,
@@ -1488,9 +1266,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "History"
-    ],
+    "tribes": ["History"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -1504,9 +1280,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 4,
     "strength": 3,
     "health": 6,
@@ -1520,10 +1294,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Mustache"
-    ],
+    "tribes": ["Pet", "Mustache"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -1537,9 +1308,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1553,10 +1322,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Pirate"
-    ],
+    "tribes": ["Mustache", "Pirate"],
     "cost": 5,
     "strength": 7,
     "health": 5,
@@ -1570,9 +1336,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 10,
     "strength": 6,
     "health": 6,
@@ -1586,9 +1350,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -1602,9 +1364,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": 1,
     "health": 5,
@@ -1618,10 +1378,7 @@
     "rarity": "legendary",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Gargantuar",
-      "Mime"
-    ],
+    "tribes": ["Gargantuar", "Mime"],
     "cost": 5,
     "strength": 5,
     "health": 7,
@@ -1649,9 +1406,7 @@
     "rarity": "event",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -1665,10 +1420,7 @@
     "rarity": "event",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Party",
-      "Pirate"
-    ],
+    "tribes": ["Party", "Pirate"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -1682,10 +1434,7 @@
     "rarity": "event",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Party"
-    ],
+    "tribes": ["Gourmet", "Party"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -1699,9 +1448,7 @@
     "rarity": "event",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -1715,10 +1462,7 @@
     "rarity": "event",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 6,
     "strength": 3,
     "health": 6,
@@ -1774,9 +1518,7 @@
     "rarity": "token",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -1790,9 +1532,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1806,9 +1546,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1822,9 +1560,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1838,11 +1574,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Zombie",
-    "tribes": [
-      "Sports",
-      "Imp",
-      "Superpower"
-    ],
+    "tribes": ["Sports", "Imp", "Superpower"],
     "cost": 1,
     "strength": 2,
     "health": 3,
@@ -1856,10 +1588,7 @@
     "rarity": "super-rare",
     "class": "Brainy",
     "type": "Environment",
-    "tribes": [
-      "Science",
-      "Superpower"
-    ],
+    "tribes": ["Science", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1887,10 +1616,7 @@
     "rarity": "common",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2002,10 +1728,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Imp",
-      "Party"
-    ],
+    "tribes": ["Imp", "Party"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2047,10 +1770,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Barrel",
-      "Imp"
-    ],
+    "tribes": ["Barrel", "Imp"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -2106,9 +1826,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2122,9 +1840,7 @@
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Environment",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2138,9 +1854,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 3,
     "strength": 6,
     "health": 1,
@@ -2168,10 +1882,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Science",
-      "Gargantuar"
-    ],
+    "tribes": ["Science", "Gargantuar"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2185,9 +1896,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -2215,9 +1924,7 @@
     "rarity": "rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2329,9 +2036,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Dancing"
-    ],
+    "tribes": ["Dancing"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -2345,10 +2050,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Environment",
-    "tribes": [
-      "Science",
-      "Barrel"
-    ],
+    "tribes": ["Science", "Barrel"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2362,10 +2064,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Monster",
-      "Gargantuar"
-    ],
+    "tribes": ["Monster", "Gargantuar"],
     "cost": 6,
     "strength": 5,
     "health": 5,
@@ -2379,9 +2078,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Monster"
-    ],
+    "tribes": ["Monster"],
     "cost": 1,
     "strength": 1,
     "health": 3,
@@ -2409,9 +2106,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -2453,10 +2148,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet",
-      "Gargantuar"
-    ],
+    "tribes": ["Gourmet", "Gargantuar"],
     "cost": 11,
     "strength": null,
     "health": null,
@@ -2498,9 +2190,7 @@
     "rarity": "legendary",
     "class": "Crazy",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 4,
     "strength": 2,
     "health": 6,
@@ -2528,10 +2218,7 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Gourmet",
-      "Party"
-    ],
+    "tribes": ["Gourmet", "Party"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2545,9 +2232,7 @@
     "rarity": "event",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Party"
-    ],
+    "tribes": ["Party"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2645,9 +2330,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2661,9 +2344,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2677,9 +2358,7 @@
     "rarity": "super-rare",
     "class": "Crazy",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2777,10 +2456,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "History",
-      "Pet"
-    ],
+    "tribes": ["History", "Pet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2906,9 +2582,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Gourmet"
-    ],
+    "tribes": ["Gourmet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2922,9 +2596,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 1,
     "strength": 1,
     "health": 2,
@@ -2938,10 +2610,7 @@
     "rarity": "uncommon",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Gourmet",
-      "Pet"
-    ],
+    "tribes": ["Gourmet", "Pet"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2983,10 +2652,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Dancing",
-      "Monster"
-    ],
+    "tribes": ["Dancing", "Monster"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -3028,10 +2694,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "History",
-      "Science"
-    ],
+    "tribes": ["History", "Science"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -3059,9 +2722,7 @@
     "rarity": "rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 5,
     "strength": 4,
     "health": 4,
@@ -3131,7 +2792,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": ["Gourmet","Mustache"],
+    "tribes": ["Gourmet", "Mustache"],
     "cost": 6,
     "strength": 5,
     "health": 4,
@@ -3243,9 +2904,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "History"
-    ],
+    "tribes": ["History"],
     "cost": 6,
     "strength": 4,
     "health": 6,
@@ -3259,9 +2918,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Gargantuar"
-    ],
+    "tribes": ["Gargantuar"],
     "cost": 7,
     "strength": 6,
     "health": 1,
@@ -3275,10 +2932,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Pirate"
-    ],
+    "tribes": ["Mustache", "Pirate"],
     "cost": 5,
     "strength": 2,
     "health": 2,
@@ -3292,10 +2946,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Barrel"
-    ],
+    "tribes": ["Science", "Barrel"],
     "cost": 6,
     "strength": 6,
     "health": 6,
@@ -3309,10 +2960,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "History",
-      "Pet"
-    ],
+    "tribes": ["History", "Pet"],
     "cost": 4,
     "strength": 2,
     "health": 4,
@@ -3326,10 +2974,7 @@
     "rarity": "legendary",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "History",
-      "Sports"
-    ],
+    "tribes": ["History", "Sports"],
     "cost": 5,
     "strength": 4,
     "health": 4,
@@ -3343,10 +2988,7 @@
     "rarity": "event",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Science"
-    ],
+    "tribes": ["Professional", "Science"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -3360,9 +3002,7 @@
     "rarity": "event",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -3376,10 +3016,7 @@
     "rarity": "event",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pet"
-    ],
+    "tribes": ["Imp", "Pet"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3407,9 +3044,7 @@
     "rarity": "event",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Dancing"
-    ],
+    "tribes": ["Dancing"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -3423,10 +3058,7 @@
     "rarity": "event",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Sports",
-      "Gargantuar"
-    ],
+    "tribes": ["Sports", "Gargantuar"],
     "cost": 6,
     "strength": 6,
     "health": 5,
@@ -3440,9 +3072,7 @@
     "rarity": "token",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -3456,9 +3086,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3472,9 +3100,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3488,9 +3114,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3504,9 +3128,7 @@
     "rarity": "common",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -3520,10 +3142,7 @@
     "rarity": "common",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Imp"
-    ],
+    "tribes": ["Professional", "Imp"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -3551,10 +3170,7 @@
     "rarity": "common",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pet"
-    ],
+    "tribes": ["Imp", "Pet"],
     "cost": 2,
     "strength": 3,
     "health": 1,
@@ -3568,9 +3184,7 @@
     "rarity": "common",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -3584,10 +3198,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 1,
     "strength": 1,
     "health": 3,
@@ -3601,9 +3212,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -3617,10 +3226,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Gourmet",
-      "Imp"
-    ],
+    "tribes": ["Gourmet", "Imp"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3634,9 +3240,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate"
-    ],
+    "tribes": ["Pirate"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3650,10 +3254,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Party",
-      "Sports"
-    ],
+    "tribes": ["Party", "Sports"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -3667,10 +3268,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Imp"
-    ],
+    "tribes": ["Pirate", "Imp"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -3684,9 +3282,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 4,
     "strength": 5,
     "health": 5,
@@ -3714,9 +3310,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate"
-    ],
+    "tribes": ["Pirate"],
     "cost": 2,
     "strength": 3,
     "health": 1,
@@ -3730,9 +3324,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Mustache"
-    ],
+    "tribes": ["Mustache"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -3746,10 +3338,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pirate"
-    ],
+    "tribes": ["Imp", "Pirate"],
     "cost": 0,
     "strength": 1,
     "health": 1,
@@ -3763,9 +3352,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Barrel"
-    ],
+    "tribes": ["Barrel"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -3779,10 +3366,7 @@
     "rarity": "uncommon",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Pet"
-    ],
+    "tribes": ["Pirate", "Pet"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -3796,10 +3380,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Imp"
-    ],
+    "tribes": ["Pirate", "Imp"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -3813,9 +3394,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Barrel"
-    ],
+    "tribes": ["Barrel"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -3829,10 +3408,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Gargantuar",
-      "Party"
-    ],
+    "tribes": ["Gargantuar", "Party"],
     "cost": 5,
     "strength": 5,
     "health": 6,
@@ -3846,10 +3422,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pet"
-    ],
+    "tribes": ["Imp", "Pet"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -3863,10 +3436,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Science",
-      "Gargantuar"
-    ],
+    "tribes": ["Science", "Gargantuar"],
     "cost": 6,
     "strength": null,
     "health": null,
@@ -3880,10 +3450,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Pirate"
-    ],
+    "tribes": ["Pet", "Pirate"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -3897,9 +3464,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 3,
     "strength": 1,
     "health": 1,
@@ -3913,10 +3478,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Dancing",
-      "Imp"
-    ],
+    "tribes": ["Dancing", "Imp"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -3930,10 +3492,7 @@
     "rarity": "rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Barrel"
-    ],
+    "tribes": ["Pirate", "Barrel"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -3947,10 +3506,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Barrel",
-      "Imp"
-    ],
+    "tribes": ["Barrel", "Imp"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3964,9 +3520,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Dancing"
-    ],
+    "tribes": ["Dancing"],
     "cost": 3,
     "strength": 3,
     "health": 1,
@@ -3980,9 +3534,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Sports"
-    ],
+    "tribes": ["Sports"],
     "cost": 4,
     "strength": 2,
     "health": 1,
@@ -3996,9 +3548,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "History"
-    ],
+    "tribes": ["History"],
     "cost": 4,
     "strength": 5,
     "health": 3,
@@ -4012,10 +3562,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Party",
-      "Pet"
-    ],
+    "tribes": ["Party", "Pet"],
     "cost": 1,
     "strength": 1,
     "health": 2,
@@ -4029,10 +3576,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "History"
-    ],
+    "tribes": ["Science", "History"],
     "cost": 2,
     "strength": 1,
     "health": 5,
@@ -4046,9 +3590,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Environment",
-    "tribes": [
-      "Science"
-    ],
+    "tribes": ["Science"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -4062,10 +3604,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Monster",
-      "Gargantuar"
-    ],
+    "tribes": ["Monster", "Gargantuar"],
     "cost": 6,
     "strength": 7,
     "health": 6,
@@ -4079,10 +3618,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 3,
     "strength": 4,
     "health": 1,
@@ -4096,9 +3632,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate"
-    ],
+    "tribes": ["Pirate"],
     "cost": 4,
     "strength": 4,
     "health": 3,
@@ -4112,10 +3646,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Professional",
-      "Mustache"
-    ],
+    "tribes": ["Professional", "Mustache"],
     "cost": 5,
     "strength": 5,
     "health": 5,
@@ -4129,10 +3660,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Pet"
-    ],
+    "tribes": ["Science", "Pet"],
     "cost": 6,
     "strength": 5,
     "health": 5,
@@ -4146,10 +3674,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pirate",
-      "Science"
-    ],
+    "tribes": ["Pirate", "Science"],
     "cost": 8,
     "strength": 6,
     "health": 6,
@@ -4163,10 +3688,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp",
-      "Pet"
-    ],
+    "tribes": ["Imp", "Pet"],
     "cost": 4,
     "strength": 3,
     "health": 5,
@@ -4180,10 +3702,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Monster"
-    ],
+    "tribes": ["Pet", "Monster"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -4197,10 +3716,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Science",
-      "Pirate"
-    ],
+    "tribes": ["Science", "Pirate"],
     "cost": 6,
     "strength": 5,
     "health": 6,
@@ -4214,10 +3730,7 @@
     "rarity": "legendary",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "History",
-      "Pet"
-    ],
+    "tribes": ["History", "Pet"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -4231,10 +3744,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Imp"
-    ],
+    "tribes": ["Mustache", "Imp"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -4248,9 +3758,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 2,
     "strength": 3,
     "health": 1,
@@ -4264,9 +3772,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 2,
     "strength": 1,
     "health": 3,
@@ -4280,10 +3786,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Pirate"
-    ],
+    "tribes": ["Mustache", "Pirate"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -4297,10 +3800,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Mustache",
-      "Sports"
-    ],
+    "tribes": ["Mustache", "Sports"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -4314,10 +3814,7 @@
     "rarity": "event",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet",
-      "Mustache"
-    ],
+    "tribes": ["Pet", "Mustache"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -4331,9 +3828,7 @@
     "rarity": "token",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Imp"
-    ],
+    "tribes": ["Imp"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -4347,9 +3842,7 @@
     "rarity": "token",
     "class": "Sneaky",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -4363,10 +3856,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Pet",
-      "Superpower"
-    ],
+    "tribes": ["Pet", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4380,9 +3870,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4396,9 +3884,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4412,9 +3898,7 @@
     "rarity": "super-rare",
     "class": "Sneaky",
     "type": "Environment",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4428,9 +3912,7 @@
     "rarity": "token",
     "class": "Removed",
     "type": "Zombie",
-    "tribes": [
-      "Professional"
-    ],
+    "tribes": ["Professional"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -4444,9 +3926,7 @@
     "rarity": "token",
     "class": "Removed",
     "type": "Zombie",
-    "tribes": [
-      "Pet"
-    ],
+    "tribes": ["Pet"],
     "cost": 8,
     "strength": 8,
     "health": 8,
@@ -4460,9 +3940,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4476,9 +3954,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4492,9 +3968,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,

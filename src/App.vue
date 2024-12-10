@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { RouterView } from "vue-router";
-import TheHeader from "@/components/TheHeader.vue";
-import Toast from "primevue/toast";
-import ConfirmDialog from "primevue/confirmdialog";
-import ProgressBar from "primevue/progressbar";
-import states from "@/store/states";
+import { RouterView } from 'vue-router'
+import TheHeader from '@/components/TheHeader.vue'
+import Toast from 'primevue/toast'
+import ConfirmDialog from 'primevue/confirmdialog'
+import ProgressBar from 'primevue/progressbar'
+import states from '@/store/states'
 </script>
 
 <template>

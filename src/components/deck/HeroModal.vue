@@ -39,29 +39,24 @@
 </template>
 
 <script lang="ts" setup>
-import getCard from "@/lib/getCard";
-import heroData from "@/assets/heros.json";
-import states from "@/store/states";
-import { computed } from "vue";
-import Dialog from "primevue/dialog";
-import type { Hero } from "@/lib/types";
+import getCard from '@/lib/getCard'
+import heroData from '@/assets/heros.json'
+import states from '@/store/states'
+import { computed } from 'vue'
+import Dialog from 'primevue/dialog'
+import type { Hero } from '@/lib/types'
 
 const hero = computed<Hero>(
   () =>
-    [...heroData.plants, ...heroData.zombies].find(
-      (e) => e.name === states.heroModel.hero
-    ) as Hero
-);
+    [...heroData.plants, ...heroData.zombies].find((e) => e.name === states.heroModel.hero) as Hero,
+)
 
-const superPowers = computed(() => [
-  hero.value.mainSuperPower,
-  ...hero.value.altSuperPowers,
-]);
+const superPowers = computed(() => [hero.value.mainSuperPower, ...hero.value.altSuperPowers])
 
 const openCardModual = (card: string) => {
-  states.cardModal.card = card;
-  states.cardModal.show = true;
-};
+  states.cardModal.card = card
+  states.cardModal.show = true
+}
 </script>
 
 <style scoped>

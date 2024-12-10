@@ -12,59 +12,53 @@
         />
         <Button :loading="isCompareDeckLoading" label="Compare" type="submit" />
       </InputGroup>
-      <small v-if="isCompareDeckError" class="error">{{
-        compareDeckErrorMessage
-      }}</small>
+      <small v-if="isCompareDeckError" class="error">{{ compareDeckErrorMessage }}</small>
     </form>
   </div>
 </template>
 
 <script lang="ts" setup>
-import InputText from "primevue/inputtext";
-import InputGroup from "primevue/inputgroup";
-import Button from "primevue/button";
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import useSupabase from "@/composables/UseSupabase";
+import InputText from 'primevue/inputtext'
+import InputGroup from 'primevue/inputgroup'
+import Button from 'primevue/button'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import useSupabase from '@/composables/UseSupabase'
 
-const props = defineProps<{ id: string }>();
-const to = defineModel<string>({ default: "" });
+const props = defineProps<{ id: string }>()
+const to = defineModel<string>({ default: '' })
 
-const { supabase } = useSupabase();
-const router = useRouter();
+const { supabase } = useSupabase()
+const router = useRouter()
 
-const compareDeckErrorMessage = ref("");
-const isCompareDeckError = ref(false);
-const isCompareDeckLoading = ref(false);
+const compareDeckErrorMessage = ref('')
+const isCompareDeckError = ref(false)
+const isCompareDeckLoading = ref(false)
 const compareDecks = async () => {
-  const toId = to.value.split("/")[to.value.split("/").length - 1];
+  const toId = to.value.split('/')[to.value.split('/').length - 1]
 
   if (toId === props.id) {
-    isCompareDeckError.value = true;
-    compareDeckErrorMessage.value = "Decks must be different.";
-    return;
+    isCompareDeckError.value = true
+    compareDeckErrorMessage.value = 'Decks must be different.'
+    return
   }
 
-  isCompareDeckLoading.value = true;
+  isCompareDeckLoading.value = true
   try {
-    const { error } = await supabase
-      .from("decks")
-      .select("id")
-      .eq("id", toId)
-      .single();
+    const { error } = await supabase.from('decks').select('id').eq('id', toId).single()
 
     if (error) {
-      throw error;
+      throw error
     }
-    isCompareDeckError.value = false;
-    router.push({ name: "Compare", params: { id: props.id, to: toId } });
-  } catch (e) {
-    isCompareDeckError.value = true;
-    compareDeckErrorMessage.value = "Deck does not exist.";
+    isCompareDeckError.value = false
+    router.push({ name: 'Compare', params: { id: props.id, to: toId } })
+  } catch (_) {
+    isCompareDeckError.value = true
+    compareDeckErrorMessage.value = 'Deck does not exist.'
   } finally {
-    isCompareDeckLoading.value = false;
+    isCompareDeckLoading.value = false
   }
-};
+}
 </script>
 
 <style scoped>

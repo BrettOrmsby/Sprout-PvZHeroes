@@ -10,9 +10,7 @@
         :class="{ 'p-invalid': showNameError }"
         maxlength="50"
       />
-      <small v-if="showNameError" id="invalidName" class="error"
-        >Must include a name.</small
-      >
+      <small v-if="showNameError" id="invalidName" class="error">Must include a name.</small>
 
       <span id="heroLabel">Hero</span>
       <HeroSelect v-model="deckInfo.hero" aria-labelledby="heroLabel" />
@@ -43,48 +41,48 @@
 </template>
 
 <script lang="ts" setup>
-import useSupabase from "@/composables/UseSupabase";
-import useAuthUser from "@/composables/UseAuthUser";
-import throwError from "@/lib/throwError";
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import CardListTextArea from "@/components/CardListTextArea.vue";
-import HeroSelect from "@/components/HeroSelect.vue";
-import InputText from "primevue/inputtext";
-import Textarea from "primevue/textarea";
-import ToggleSwitch from "primevue/toggleswitch";
-import Button from "primevue/button";
-import TheFooter from "@/components/TheFooter.vue";
+import useSupabase from '@/composables/UseSupabase'
+import useAuthUser from '@/composables/UseAuthUser'
+import throwError from '@/lib/throwError'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import CardListTextArea from '@/components/CardListTextArea.vue'
+import HeroSelect from '@/components/HeroSelect.vue'
+import InputText from 'primevue/inputtext'
+import Textarea from 'primevue/textarea'
+import ToggleSwitch from 'primevue/toggleswitch'
+import Button from 'primevue/button'
+import TheFooter from '@/components/TheFooter.vue'
 
-const router = useRouter();
-const { supabase } = useSupabase();
-const { id } = useAuthUser();
+const router = useRouter()
+const { supabase } = useSupabase()
+const { id } = useAuthUser()
 
-const showNameError = ref(false);
-const isCardListError = ref(false);
-const loading = ref(false);
+const showNameError = ref(false)
+const isCardListError = ref(false)
+const loading = ref(false)
 const deckInfo = ref({
-  name: "",
-  hero: "Green Shadow",
-  description: "",
+  name: '',
+  hero: 'Green Shadow',
+  description: '',
   list: {} as Record<string, number>,
   isPrivate: false,
-});
+})
 
 const createDeck = async () => {
-  if (deckInfo.value.name.trim() === "") {
-    showNameError.value = true;
-    return;
+  if (deckInfo.value.name.trim() === '') {
+    showNameError.value = true
+    return
   } else {
-    showNameError.value = false;
+    showNameError.value = false
   }
   if (isCardListError.value) {
-    return;
+    return
   }
-  loading.value = true;
+  loading.value = true
 
   const { error, data } = await supabase
-    .from("decks")
+    .from('decks')
     .insert({
       creator: id.value,
       name: deckInfo.value.name,
@@ -94,21 +92,21 @@ const createDeck = async () => {
       is_complete:
         Object.values(deckInfo.value.list).reduce(
           (prev: number, curr: number) => prev + curr,
-          0
+          0,
         ) === 40,
       list: deckInfo.value.list,
     })
-    .select("id")
-    .single();
+    .select('id')
+    .single()
 
-  loading.value = false;
+  loading.value = false
 
   if (error) {
-    throwError(error);
-    return;
+    throwError(error)
+    return
   }
-  router.push({ name: "ViewDeck", params: { id: data.id } });
-};
+  router.push({ name: 'ViewDeck', params: { id: data.id } })
+}
 </script>
 
 <style scoped>
@@ -138,13 +136,7 @@ label,
   width: 100%;
 }
 
-:is(
-    .p-inputtext,
-    .p-select,
-    .p-textarea,
-    .p-toggleswitch,
-    .card-list-textarea
-  ):has(+ :not(small)) {
+:is(.p-inputtext, .p-select, .p-textarea, .p-toggleswitch, .card-list-textarea):has(+ :not(small)) {
   margin-bottom: var(--block-space);
 }
 

@@ -16,71 +16,70 @@
 </template>
 
 <script lang="ts" setup>
-import useAuthUser from "@/composables/UseAuthUser";
-import deck from "@/store/deck";
-import { computed } from "vue";
-import DeckHeader from "@/components/deck/DeckHeader.vue";
-import TheDeck from "@/components/deck/TheDeck.vue";
-import AddCards from "@/components/deck/AddCards.vue";
-import CardModal from "@/components/CardModal.vue";
-import HeroModal from "@/components/deck/HeroModal.vue";
-import DeckFooter from "@/components/deck/DeckFooter.vue";
-import DrawSimulator from "@/components/deck/DrawSimulator.vue";
-import DeckCharts from "@/components/deck/DeckCharts.vue";
-import DeckToolbar from "@/components/deck/DeckToolbar.vue";
-import TheFooter from "@/components/TheFooter.vue";
-import Divider from "primevue/divider";
-import throwError from "@/lib/throwError";
-import useSupabase from "@/composables/UseSupabase";
-import useHoverShortcut from "@/composables/useHoverShortcut";
+import useAuthUser from '@/composables/UseAuthUser'
+import deck from '@/store/deck'
+import { computed } from 'vue'
+import DeckHeader from '@/components/deck/DeckHeader.vue'
+import TheDeck from '@/components/deck/TheDeck.vue'
+import AddCards from '@/components/deck/AddCards.vue'
+import CardModal from '@/components/CardModal.vue'
+import HeroModal from '@/components/deck/HeroModal.vue'
+import DeckFooter from '@/components/deck/DeckFooter.vue'
+import DrawSimulator from '@/components/deck/DrawSimulator.vue'
+import DeckCharts from '@/components/deck/DeckCharts.vue'
+import DeckToolbar from '@/components/deck/DeckToolbar.vue'
+import TheFooter from '@/components/TheFooter.vue'
+import Divider from 'primevue/divider'
+import throwError from '@/lib/throwError'
+import useSupabase from '@/composables/UseSupabase'
+import useHoverShortcut from '@/composables/useHoverShortcut'
 
 useHoverShortcut({
   Digit1: {
-    selector: "[data-card-name][data-can-add=true]",
+    selector: '[data-card-name][data-can-add=true]',
     command(element: Element) {
-      const cardName = element.getAttribute("data-card-name")!;
-      const newAmount = deck.list[cardName] ? deck.list[cardName] + 1 : 1;
-      const newList = { ...deck.list, [cardName]: newAmount };
-      updateDeck(newList);
+      const cardName = element.getAttribute('data-card-name')!
+      const newAmount = deck.list[cardName] ? deck.list[cardName] + 1 : 1
+      const newList = { ...deck.list, [cardName]: newAmount }
+      updateDeck(newList)
     },
   },
   Digit2: {
-    selector: "[data-card-name][data-can-remove=true]",
+    selector: '[data-card-name][data-can-remove=true]',
     command(element: Element) {
-      const cardName = element.getAttribute("data-card-name")!;
+      const cardName = element.getAttribute('data-card-name')!
 
-      const newAmount = deck.list[cardName] - 1;
-      const newList = { ...deck.list, [cardName]: newAmount };
+      const newAmount = deck.list[cardName] - 1
+      const newList = { ...deck.list, [cardName]: newAmount }
       if (newList[cardName] === 0) {
-        delete newList[cardName];
+        delete newList[cardName]
       }
-      updateDeck(newList);
+      updateDeck(newList)
     },
   },
-});
+})
 
-const { supabase } = useSupabase();
+const { supabase } = useSupabase()
 const updateDeck = async (newList: Record<string, number>) => {
   const { data, error } = await supabase
-    .from("decks")
+    .from('decks')
     .update({
       list: newList,
-      is_complete:
-        Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+      is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
     })
-    .eq("id", deck.id)
+    .eq('id', deck.id)
     .select()
-    .single();
+    .single()
 
   if (error) {
-    throwError(error);
-    return;
+    throwError(error)
+    return
   }
-  Object.assign(deck, data);
-};
+  Object.assign(deck, data)
+}
 
-const { id } = useAuthUser();
-const isUsersDeck = computed(() => id.value === deck.creator);
+const { id } = useAuthUser()
+const isUsersDeck = computed(() => id.value === deck.creator)
 </script>
 
 <style scoped>

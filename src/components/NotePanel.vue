@@ -1,32 +1,30 @@
 <template>
   <Panel :class="type">
     <template #header>
-      <span class="p-panel-title"
-        ><component :is="icons[type]" /> {{ headers[type] }}</span
-      >
+      <span class="p-panel-title"><component :is="icons[type]" /> {{ headers[type] }}</span>
     </template>
     <slot />
   </Panel>
 </template>
 
 <script lang="ts" setup>
-import Panel from "primevue/panel";
-import { Lightbulb, TriangleAlert, Info, CircleX } from "lucide-vue-next";
-defineProps<{ type: "tip" | "note" | "warning" | "error" }>();
+import Panel from 'primevue/panel'
+import { Lightbulb, TriangleAlert, Info, CircleX } from 'lucide-vue-next'
+defineProps<{ type: 'tip' | 'note' | 'warning' | 'error' }>()
 
 const headers = {
-  tip: "Tip",
-  note: "Note",
-  warning: "Warning",
-  error: "Possible Errors",
-};
+  tip: 'Tip',
+  note: 'Note',
+  warning: 'Warning',
+  error: 'Possible Errors',
+}
 
 const icons = {
   tip: Lightbulb,
   note: Info,
   warning: TriangleAlert,
   error: CircleX,
-};
+}
 </script>
 
 <style scoped>

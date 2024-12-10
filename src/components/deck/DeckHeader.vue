@@ -2,12 +2,7 @@
   <SettingsModal />
   <header>
     <div class="hero-container">
-      <Avatar
-        size="xlarge"
-        shape="circle"
-        :image="hero.image"
-        @click="openModal"
-      />
+      <Avatar size="xlarge" shape="circle" :image="hero.image" @click="openModal" />
       <div class="class-container">
         <img
           class="class"
@@ -24,7 +19,7 @@
     <div class="content-container">
       <div class="user-container">
         <Avatar
-          size="medium"
+          size="normal"
           shape="circle"
           class="profile-image"
           :image="getHero(user.profile_image).image"
@@ -43,51 +38,52 @@
 </template>
 
 <script lang="ts" setup>
-import deck from "@/store/deck";
-import states from "@/store/states";
-import getHero from "@/lib/getHero";
-import { ref, computed, onUnmounted } from "vue";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
-import Avatar from "primevue/avatar";
-import SettingsModal from "@/components/deck/SettingsModal.vue";
-import user from "@/store/user";
+import deck from '@/store/deck'
+import states from '@/store/states'
+import getHero from '@/lib/getHero'
+import { ref, computed, onUnmounted } from 'vue'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import Avatar from 'primevue/avatar'
+import SettingsModal from '@/components/deck/SettingsModal.vue'
+import user from '@/store/user'
 
-dayjs.extend(relativeTime);
-const refreshDateKey = ref(0);
+dayjs.extend(relativeTime)
+const refreshDateKey = ref(0)
 
-const hero = computed(() => getHero(deck.hero));
+const hero = computed(() => getHero(deck.hero))
 
 const timeSinceUpdate = computed(() => {
-  refreshDateKey.value;
-  let lastUpdated = dayjs(deck.last_updated).fromNow();
-  if (lastUpdated.startsWith("in")) {
-    return "a few seconds ago";
+  // eslint-disable-next-line
+  refreshDateKey.value
+  const lastUpdated = dayjs(deck.last_updated).fromNow()
+  if (lastUpdated.startsWith('in')) {
+    return 'a few seconds ago'
   }
-  return dayjs(deck.last_updated).fromNow();
-});
+  return dayjs(deck.last_updated).fromNow()
+})
 
-const interval = setInterval(() => ++refreshDateKey.value, 60000);
-onUnmounted(() => clearInterval(interval));
+const interval = setInterval(() => ++refreshDateKey.value, 60000)
+onUnmounted(() => clearInterval(interval))
 
 const colours: Record<string, string> = {
-  Guardian: "#492F1C",
-  Kabloom: "#A03732",
-  "Mega-Grow": "#64A65B",
-  Smarty: "#A3A2A4",
-  Solar: "#D6D848",
+  Guardian: '#492F1C',
+  Kabloom: '#A03732',
+  'Mega-Grow': '#64A65B',
+  Smarty: '#A3A2A4',
+  Solar: '#D6D848',
 
-  Beastly: "#4771A6",
-  Brainy: "#91398D",
-  Crazy: "#6331B9",
-  Hearty: "#9B762C",
-  Sneaky: "#3A3939",
-};
+  Beastly: '#4771A6',
+  Brainy: '#91398D',
+  Crazy: '#6331B9',
+  Hearty: '#9B762C',
+  Sneaky: '#3A3939',
+}
 
 const openModal = () => {
-  states.heroModel.hero = deck.hero;
-  states.heroModel.show = true;
-};
+  states.heroModel.hero = deck.hero
+  states.heroModel.show = true
+}
 </script>
 
 <style scoped>
@@ -108,8 +104,8 @@ header {
   align-items: center;
   background: linear-gradient(
     to right,
-    v-bind("colours[hero.class[0]]") 50%,
-    v-bind("colours[hero.class[1]]") 50%
+    v-bind('colours[hero.class[0]]') 50%,
+    v-bind('colours[hero.class[1]]') 50%
   );
   padding: var(--inline-space);
   gap: var(--inline-space);

@@ -6,9 +6,7 @@
     "rarity": "common",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -22,10 +20,7 @@
     "rarity": "common",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Pea"
-    ],
+    "tribes": ["Bean", "Pea"],
     "cost": 1,
     "strength": 1,
     "health": 2,
@@ -39,9 +34,7 @@
     "rarity": "common",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 1,
     "strength": 0,
     "health": 6,
@@ -55,9 +48,7 @@
     "rarity": "common",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -71,9 +62,7 @@
     "rarity": "common",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": 0,
     "health": 3,
@@ -87,9 +76,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -103,10 +90,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Cactus",
-      "Flower"
-    ],
+    "tribes": ["Cactus", "Flower"],
     "cost": 2,
     "strength": 1,
     "health": 5,
@@ -134,9 +118,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -150,10 +132,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Nut"
-    ],
+    "tribes": ["Root", "Nut"],
     "cost": 2,
     "strength": 0,
     "health": 8,
@@ -167,10 +146,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Pea",
-      "Nut"
-    ],
+    "tribes": ["Pea", "Nut"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -184,9 +160,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -214,9 +188,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Environment",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -230,10 +202,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Tree",
-      "Root"
-    ],
+    "tribes": ["Tree", "Root"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -247,9 +216,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -263,9 +230,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -279,10 +244,7 @@
     "rarity": "uncommon",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Animal"
-    ],
+    "tribes": ["Fruit", "Animal"],
     "cost": 5,
     "strength": 5,
     "health": 4,
@@ -296,9 +258,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -312,10 +272,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Animal",
-      "Berry"
-    ],
+    "tribes": ["Animal", "Berry"],
     "cost": 3,
     "strength": 0,
     "health": 8,
@@ -329,10 +286,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Cactus",
-      "Fruit"
-    ],
+    "tribes": ["Cactus", "Fruit"],
     "cost": 5,
     "strength": 0,
     "health": 10,
@@ -346,9 +300,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 5,
     "strength": 4,
     "health": 5,
@@ -362,9 +314,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 5,
     "strength": 2,
     "health": 2,
@@ -378,9 +328,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -394,9 +342,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 4,
     "strength": 2,
     "health": 4,
@@ -410,9 +356,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -426,9 +370,7 @@
     "rarity": "rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -442,9 +384,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -458,10 +398,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Animal"
-    ],
+    "tribes": ["Fruit", "Animal"],
     "cost": 4,
     "strength": 4,
     "health": 3,
@@ -475,9 +412,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 4,
     "strength": 0,
     "health": 11,
@@ -491,9 +426,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -507,10 +440,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Cactus",
-      "Flower"
-    ],
+    "tribes": ["Cactus", "Flower"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -538,10 +468,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Tree"
-    ],
+    "tribes": ["Fruit", "Tree"],
     "cost": 6,
     "strength": 7,
     "health": 7,
@@ -555,10 +482,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Pea",
-      "Nut"
-    ],
+    "tribes": ["Pea", "Nut"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -572,9 +496,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 3,
     "strength": 0,
     "health": 8,
@@ -588,10 +510,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Animal"
-    ],
+    "tribes": ["Bean", "Animal"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -605,9 +524,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 6,
     "strength": 4,
     "health": 4,
@@ -621,10 +538,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Root"
-    ],
+    "tribes": ["Flower", "Root"],
     "cost": 7,
     "strength": 5,
     "health": 10,
@@ -638,9 +552,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 9,
     "strength": null,
     "health": null,
@@ -654,9 +566,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 5,
     "strength": 3,
     "health": 6,
@@ -670,9 +580,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 5,
     "strength": 0,
     "health": 7,
@@ -686,10 +594,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Animal"
-    ],
+    "tribes": ["Root", "Animal"],
     "cost": 2,
     "strength": 1,
     "health": 2,
@@ -703,10 +608,7 @@
     "rarity": "legendary",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Nut"
-    ],
+    "tribes": ["Fruit", "Nut"],
     "cost": 6,
     "strength": 3,
     "health": 4,
@@ -720,10 +622,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Nut"
-    ],
+    "tribes": ["Flower", "Nut"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -737,9 +636,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 1,
     "strength": 1,
     "health": 5,
@@ -753,10 +650,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Corn",
-      "Animal"
-    ],
+    "tribes": ["Corn", "Animal"],
     "cost": 2,
     "strength": 3,
     "health": 2,
@@ -770,9 +664,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": 0,
     "health": 1,
@@ -786,9 +678,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 3,
     "strength": 0,
     "health": 4,
@@ -802,10 +692,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Animal"
-    ],
+    "tribes": ["Fruit", "Animal"],
     "cost": 3,
     "strength": 1,
     "health": 1,
@@ -819,10 +706,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Leafy",
-      "Pinecone"
-    ],
+    "tribes": ["Leafy", "Pinecone"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -836,9 +720,7 @@
     "rarity": "event",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": 2,
     "health": 7,
@@ -852,9 +734,7 @@
     "rarity": "token",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 3,
     "strength": 0,
     "health": 1,
@@ -868,9 +748,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -884,10 +762,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Nut",
-      "Superpower"
-    ],
+    "tribes": ["Nut", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -901,10 +776,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Trick",
-    "tribes": [
-      "Root",
-      "Superpower"
-    ],
+    "tribes": ["Root", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -918,10 +790,7 @@
     "rarity": "super-rare",
     "class": "Guardian",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Superpower"
-    ],
+    "tribes": ["Root", "Superpower"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -935,9 +804,7 @@
     "rarity": "common",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -951,9 +818,7 @@
     "rarity": "common",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -967,9 +832,7 @@
     "rarity": "common",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 2,
     "strength": 1,
     "health": 1,
@@ -983,9 +846,7 @@
     "rarity": "common",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Seed"
-    ],
+    "tribes": ["Seed"],
     "cost": 2,
     "strength": 0,
     "health": 2,
@@ -999,9 +860,7 @@
     "rarity": "common",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": 4,
     "health": 1,
@@ -1015,9 +874,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1031,9 +888,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -1047,9 +902,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": 0,
     "health": 1,
@@ -1063,10 +916,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Berry"
-    ],
+    "tribes": ["Leafy", "Berry"],
     "cost": 3,
     "strength": 1,
     "health": 3,
@@ -1080,9 +930,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 4,
     "strength": 2,
     "health": 2,
@@ -1096,9 +944,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 5,
     "strength": 3,
     "health": 3,
@@ -1126,9 +972,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1142,9 +986,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Environment",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -1158,10 +1000,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Flower"
-    ],
+    "tribes": ["Leafy", "Flower"],
     "cost": 2,
     "strength": 1,
     "health": 4,
@@ -1175,9 +1014,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1205,10 +1042,7 @@
     "rarity": "uncommon",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Animal"
-    ],
+    "tribes": ["Root", "Animal"],
     "cost": 1,
     "strength": 1,
     "health": 2,
@@ -1222,9 +1056,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1238,9 +1070,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 2,
     "strength": 4,
     "health": 1,
@@ -1254,9 +1084,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -1270,9 +1098,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 4,
     "strength": 2,
     "health": 2,
@@ -1286,9 +1112,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Tree"
-    ],
+    "tribes": ["Tree"],
     "cost": 6,
     "strength": 5,
     "health": 6,
@@ -1302,9 +1126,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -1318,9 +1140,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -1334,9 +1154,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -1350,10 +1168,7 @@
     "rarity": "rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom",
-      "Berry"
-    ],
+    "tribes": ["Mushroom", "Berry"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -1367,9 +1182,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -1383,9 +1196,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 4,
     "strength": 4,
     "health": 3,
@@ -1399,9 +1210,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 6,
     "strength": null,
     "health": null,
@@ -1415,9 +1224,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 7,
     "strength": 6,
     "health": 6,
@@ -1431,9 +1238,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1447,9 +1252,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": 0,
     "health": 3,
@@ -1463,9 +1266,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Environment",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -1479,10 +1280,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Root"
-    ],
+    "tribes": ["Flower", "Root"],
     "cost": 2,
     "strength": 3,
     "health": 2,
@@ -1496,10 +1294,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Mime"
-    ],
+    "tribes": ["Root", "Mime"],
     "cost": 3,
     "strength": 1,
     "health": 4,
@@ -1513,9 +1308,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -1529,9 +1322,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Pinecone"
-    ],
+    "tribes": ["Pinecone"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -1545,10 +1336,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Animal"
-    ],
+    "tribes": ["Flower", "Animal"],
     "cost": 6,
     "strength": 4,
     "health": 4,
@@ -1562,9 +1350,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Corn"
-    ],
+    "tribes": ["Corn"],
     "cost": 8,
     "strength": 6,
     "health": 6,
@@ -1578,9 +1364,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -1594,9 +1378,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 4,
     "strength": 3,
     "health": 2,
@@ -1610,9 +1392,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 5,
     "strength": 5,
     "health": 5,
@@ -1626,10 +1406,7 @@
     "rarity": "legendary",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Animal"
-    ],
+    "tribes": ["Root", "Animal"],
     "cost": 3,
     "strength": 1,
     "health": 3,
@@ -1643,9 +1420,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -1659,9 +1434,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1675,9 +1448,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": 3,
     "health": 1,
@@ -1691,10 +1462,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Fruit"
-    ],
+    "tribes": ["Leafy", "Fruit"],
     "cost": 4,
     "strength": 4,
     "health": 7,
@@ -1708,9 +1476,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 5,
     "strength": 5,
     "health": 2,
@@ -1724,9 +1490,7 @@
     "rarity": "event",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 5,
     "strength": 0,
     "health": 5,
@@ -1740,9 +1504,7 @@
     "rarity": "token",
     "class": "Kabloom",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 3,
     "strength": 0,
     "health": 1,
@@ -1756,9 +1518,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1772,10 +1532,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Mushroom",
-      "Superpower"
-    ],
+    "tribes": ["Mushroom", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1789,9 +1546,7 @@
     "rarity": "super-rare",
     "class": "Kabloom",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -1805,9 +1560,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1821,9 +1574,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Tree"
-    ],
+    "tribes": ["Tree"],
     "cost": 1,
     "strength": 0,
     "health": 3,
@@ -1837,9 +1588,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 2,
     "strength": 1,
     "health": 3,
@@ -1867,9 +1616,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -1883,9 +1630,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": 2,
     "health": 1,
@@ -1899,9 +1644,7 @@
     "rarity": "common",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -1915,9 +1658,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -1931,9 +1672,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -1947,9 +1686,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 1,
     "strength": 0,
     "health": 3,
@@ -1963,9 +1700,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 2,
     "strength": 3,
     "health": 2,
@@ -1979,9 +1714,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 4,
     "strength": 3,
     "health": 2,
@@ -2009,9 +1742,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 2,
     "strength": 2,
     "health": 3,
@@ -2025,9 +1756,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Environment",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2041,10 +1770,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Flower"
-    ],
+    "tribes": ["Leafy", "Flower"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -2058,9 +1784,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Banana"
-    ],
+    "tribes": ["Banana"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2074,10 +1798,7 @@
     "rarity": "uncommon",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Bean"
-    ],
+    "tribes": ["Leafy", "Bean"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -2091,9 +1812,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 3,
     "strength": 2,
     "health": 3,
@@ -2121,9 +1840,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Moss"
-    ],
+    "tribes": ["Moss"],
     "cost": 4,
     "strength": 2,
     "health": 3,
@@ -2137,9 +1854,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 5,
     "strength": 6,
     "health": 5,
@@ -2153,9 +1868,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 6,
     "strength": 4,
     "health": 4,
@@ -2169,9 +1882,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -2185,9 +1896,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 4,
     "strength": 2,
     "health": 2,
@@ -2201,10 +1910,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Root"
-    ],
+    "tribes": ["Leafy", "Root"],
     "cost": 6,
     "strength": 6,
     "health": 6,
@@ -2218,10 +1924,7 @@
     "rarity": "rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Pea"
-    ],
+    "tribes": ["Leafy", "Pea"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2235,9 +1938,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -2251,10 +1952,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Pea"
-    ],
+    "tribes": ["Bean", "Pea"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2268,9 +1966,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 5,
     "strength": 4,
     "health": 4,
@@ -2284,9 +1980,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 8,
     "strength": null,
     "health": null,
@@ -2300,9 +1994,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 3,
     "strength": 2,
     "health": 5,
@@ -2316,9 +2008,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Environment",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -2332,9 +2022,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -2348,9 +2036,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 2,
     "strength": 4,
     "health": 1,
@@ -2364,9 +2050,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2380,9 +2064,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 4,
     "strength": 3,
     "health": 6,
@@ -2396,9 +2078,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 2,
     "strength": 1,
     "health": 2,
@@ -2412,9 +2092,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -2428,10 +2106,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Fruit",
-      "Animal"
-    ],
+    "tribes": ["Fruit", "Animal"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -2445,9 +2120,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": 1,
     "health": 4,
@@ -2461,9 +2134,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 5,
     "strength": 4,
     "health": 4,
@@ -2477,9 +2148,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 5,
     "strength": 5,
     "health": 4,
@@ -2493,10 +2162,7 @@
     "rarity": "legendary",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Animal"
-    ],
+    "tribes": ["Root", "Animal"],
     "cost": 6,
     "strength": 5,
     "health": 5,
@@ -2510,10 +2176,7 @@
     "rarity": "event",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Pea"
-    ],
+    "tribes": ["Bean", "Pea"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -2527,9 +2190,7 @@
     "rarity": "event",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 2,
     "strength": 1,
     "health": 2,
@@ -2543,9 +2204,7 @@
     "rarity": "event",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 4,
     "strength": 4,
     "health": 4,
@@ -2559,9 +2218,7 @@
     "rarity": "event",
     "class": "Mega-Grow",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 5,
     "strength": 1,
     "health": 5,
@@ -2575,9 +2232,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2591,9 +2246,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2607,9 +2260,7 @@
     "rarity": "super-rare",
     "class": "Mega-Grow",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2623,9 +2274,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 1,
     "health": 2,
@@ -2639,9 +2288,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -2655,9 +2302,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2671,9 +2316,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Animal"
-    ],
+    "tribes": ["Animal"],
     "cost": 3,
     "strength": 3,
     "health": 2,
@@ -2687,9 +2330,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 5,
     "strength": 5,
     "health": 4,
@@ -2703,9 +2344,7 @@
     "rarity": "common",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 5,
     "strength": 1,
     "health": 5,
@@ -2719,9 +2358,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -2735,9 +2372,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -2751,9 +2386,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 3,
     "strength": 3,
     "health": 4,
@@ -2767,9 +2400,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2783,10 +2414,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Flower"
-    ],
+    "tribes": ["Bean", "Flower"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -2800,9 +2428,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 4,
     "strength": 5,
     "health": 3,
@@ -2816,9 +2442,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flytrap"
-    ],
+    "tribes": ["Flytrap"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -2832,9 +2456,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Environment",
-    "tribes": [
-      "Berry"
-    ],
+    "tribes": ["Berry"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -2848,9 +2470,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 4,
     "strength": 3,
     "health": 4,
@@ -2878,9 +2498,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2894,9 +2512,7 @@
     "rarity": "uncommon",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Pea"
-    ],
+    "tribes": ["Pea"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -2910,9 +2526,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -2926,9 +2540,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -2942,9 +2554,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": 2,
     "health": 1,
@@ -2958,9 +2568,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -2974,9 +2582,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 5,
     "strength": 3,
     "health": 2,
@@ -2990,9 +2596,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 2,
     "strength": 1,
     "health": 1,
@@ -3006,9 +2610,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 5,
     "strength": 3,
     "health": 5,
@@ -3022,9 +2624,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 6,
     "strength": 2,
     "health": 6,
@@ -3038,9 +2638,7 @@
     "rarity": "rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -3054,9 +2652,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 2,
     "strength": null,
     "health": null,
@@ -3070,9 +2666,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 4,
     "strength": 1,
     "health": 1,
@@ -3086,10 +2680,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Dragon",
-      "Flower"
-    ],
+    "tribes": ["Dragon", "Flower"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -3103,9 +2694,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 4,
     "strength": 2,
     "health": 6,
@@ -3119,9 +2708,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Animal"
-    ],
+    "tribes": ["Animal"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3135,9 +2722,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -3165,9 +2750,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 4,
     "strength": 4,
     "health": 3,
@@ -3181,9 +2764,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Root"
-    ],
+    "tribes": ["Root"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -3197,9 +2778,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -3213,9 +2792,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Banana"
-    ],
+    "tribes": ["Banana"],
     "cost": 6,
     "strength": 4,
     "health": 3,
@@ -3229,9 +2806,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 6,
     "strength": 4,
     "health": 5,
@@ -3245,9 +2820,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 9,
     "strength": 7,
     "health": 7,
@@ -3261,9 +2834,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 5,
     "strength": 2,
     "health": 2,
@@ -3277,10 +2848,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Dragon",
-      "Fruit"
-    ],
+    "tribes": ["Dragon", "Fruit"],
     "cost": 8,
     "strength": 6,
     "health": 6,
@@ -3294,10 +2862,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean",
-      "Animal"
-    ],
+    "tribes": ["Bean", "Animal"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -3311,10 +2876,7 @@
     "rarity": "legendary",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Animal"
-    ],
+    "tribes": ["Flower", "Animal"],
     "cost": 5,
     "strength": 4,
     "health": 5,
@@ -3328,10 +2890,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Root"
-    ],
+    "tribes": ["Flower", "Root"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -3345,10 +2904,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Nut"
-    ],
+    "tribes": ["Flower", "Nut"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -3362,9 +2918,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 3,
     "strength": 2,
     "health": 4,
@@ -3378,10 +2932,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Mushroom",
-      "Nut"
-    ],
+    "tribes": ["Mushroom", "Nut"],
     "cost": 3,
     "strength": 3,
     "health": 3,
@@ -3395,10 +2946,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Animal"
-    ],
+    "tribes": ["Leafy", "Animal"],
     "cost": 4,
     "strength": 4,
     "health": 2,
@@ -3412,9 +2960,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": 0,
     "health": 3,
@@ -3428,10 +2974,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Berry"
-    ],
+    "tribes": ["Leafy", "Berry"],
     "cost": 5,
     "strength": 4,
     "health": 1,
@@ -3445,10 +2988,7 @@
     "rarity": "event",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Pinecone",
-      "Tree"
-    ],
+    "tribes": ["Pinecone", "Tree"],
     "cost": 6,
     "strength": 5,
     "health": 3,
@@ -3462,9 +3002,7 @@
     "rarity": "token",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 1,
     "strength": 4,
     "health": 4,
@@ -3492,9 +3030,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3508,9 +3044,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3524,9 +3058,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3540,10 +3072,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Plant",
-    "tribes": [
-      "Root",
-      "Superpower"
-    ],
+    "tribes": ["Root", "Superpower"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -3557,10 +3086,7 @@
     "rarity": "super-rare",
     "class": "Smarty",
     "type": "Trick",
-    "tribes": [
-      "Seed",
-      "Superpower"
-    ],
+    "tribes": ["Seed", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -3574,9 +3100,7 @@
     "rarity": "common",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -3590,9 +3114,7 @@
     "rarity": "common",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -3606,9 +3128,7 @@
     "rarity": "common",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Nut"
-    ],
+    "tribes": ["Nut"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -3622,9 +3142,7 @@
     "rarity": "common",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 5,
     "strength": null,
     "health": null,
@@ -3638,9 +3156,7 @@
     "rarity": "common",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 6,
     "strength": 6,
     "health": 5,
@@ -3654,9 +3170,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -3670,9 +3184,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -3686,9 +3198,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": 2,
     "health": 2,
@@ -3716,9 +3226,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flytrap"
-    ],
+    "tribes": ["Flytrap"],
     "cost": 3,
     "strength": 3,
     "health": 1,
@@ -3732,9 +3240,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": 3,
     "health": 3,
@@ -3748,9 +3254,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 4,
     "strength": 3,
     "health": 4,
@@ -3764,9 +3268,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Moss"
-    ],
+    "tribes": ["Moss"],
     "cost": 1,
     "strength": 2,
     "health": 2,
@@ -3780,9 +3282,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 2,
     "strength": 3,
     "health": 1,
@@ -3796,9 +3296,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Environment",
-    "tribes": [
-      "Flytrap"
-    ],
+    "tribes": ["Flytrap"],
     "cost": 4,
     "strength": null,
     "health": null,
@@ -3812,9 +3310,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Corn"
-    ],
+    "tribes": ["Corn"],
     "cost": 1,
     "strength": 1,
     "health": 1,
@@ -3828,10 +3324,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Seed"
-    ],
+    "tribes": ["Flower", "Seed"],
     "cost": 0,
     "strength": 0,
     "health": 1,
@@ -3845,9 +3338,7 @@
     "rarity": "uncommon",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 3,
     "strength": 0,
     "health": 3,
@@ -3861,9 +3352,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -3877,9 +3366,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Leafy"
-    ],
+    "tribes": ["Leafy"],
     "cost": 3,
     "strength": 0,
     "health": 2,
@@ -3921,9 +3408,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 5,
     "strength": 3,
     "health": 5,
@@ -3937,9 +3422,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 3,
     "strength": 2,
     "health": 1,
@@ -3953,10 +3436,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Leafy",
-      "Flower"
-    ],
+    "tribes": ["Leafy", "Flower"],
     "cost": 4,
     "strength": 3,
     "health": 4,
@@ -3970,10 +3450,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Berry"
-    ],
+    "tribes": ["Flower", "Berry"],
     "cost": 4,
     "strength": 2,
     "health": 3,
@@ -3987,9 +3464,7 @@
     "rarity": "rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Moss"
-    ],
+    "tribes": ["Moss"],
     "cost": 2,
     "strength": 2,
     "health": 1,
@@ -4003,9 +3478,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 2,
     "strength": 0,
     "health": 2,
@@ -4033,9 +3506,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flytrap"
-    ],
+    "tribes": ["Flytrap"],
     "cost": 4,
     "strength": 2,
     "health": 2,
@@ -4049,9 +3520,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Bean"
-    ],
+    "tribes": ["Bean"],
     "cost": 6,
     "strength": 0,
     "health": 5,
@@ -4079,10 +3548,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Pea",
-      "Nut"
-    ],
+    "tribes": ["Pea", "Nut"],
     "cost": 4,
     "strength": 3,
     "health": 7,
@@ -4096,9 +3562,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 6,
     "strength": null,
     "health": null,
@@ -4112,9 +3576,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 1,
     "strength": 2,
     "health": 1,
@@ -4128,10 +3590,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower",
-      "Seed"
-    ],
+    "tribes": ["Flower", "Seed"],
     "cost": 3,
     "strength": 2,
     "health": 2,
@@ -4159,9 +3618,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flower"
-    ],
+    "tribes": ["Flower"],
     "cost": 5,
     "strength": 3,
     "health": 4,
@@ -4175,9 +3632,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Flytrap"
-    ],
+    "tribes": ["Flytrap"],
     "cost": 6,
     "strength": 6,
     "health": 6,
@@ -4191,9 +3646,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Corn"
-    ],
+    "tribes": ["Corn"],
     "cost": 10,
     "strength": 6,
     "health": 6,
@@ -4207,9 +3660,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 5,
     "strength": 5,
     "health": 3,
@@ -4223,9 +3674,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Cactus"
-    ],
+    "tribes": ["Cactus"],
     "cost": 8,
     "strength": 5,
     "health": 5,
@@ -4239,9 +3688,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Corn"
-    ],
+    "tribes": ["Corn"],
     "cost": 6,
     "strength": 4,
     "health": 6,
@@ -4255,10 +3702,7 @@
     "rarity": "legendary",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Cactus",
-      "Animal"
-    ],
+    "tribes": ["Cactus", "Animal"],
     "cost": 5,
     "strength": 4,
     "health": 7,
@@ -4272,9 +3716,7 @@
     "rarity": "event",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 1,
     "strength": 4,
     "health": 1,
@@ -4288,9 +3730,7 @@
     "rarity": "event",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Mushroom"
-    ],
+    "tribes": ["Mushroom"],
     "cost": 2,
     "strength": 0,
     "health": 2,
@@ -4304,9 +3744,7 @@
     "rarity": "event",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Squash"
-    ],
+    "tribes": ["Squash"],
     "cost": 3,
     "strength": 2,
     "health": 3,
@@ -4320,9 +3758,7 @@
     "rarity": "event",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": 1,
     "health": 1,
@@ -4336,10 +3772,7 @@
     "rarity": "event",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Mushroom",
-      "Animal"
-    ],
+    "tribes": ["Mushroom", "Animal"],
     "cost": 6,
     "strength": 4,
     "health": 4,
@@ -4353,9 +3786,7 @@
     "rarity": "token",
     "class": "Solar",
     "type": "Plant",
-    "tribes": [
-      "Fruit"
-    ],
+    "tribes": ["Fruit"],
     "cost": 1,
     "strength": 0,
     "health": 1,
@@ -4369,9 +3800,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4385,9 +3814,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4401,10 +3828,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [
-      "Root",
-      "Superpower"
-    ],
+    "tribes": ["Root", "Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4418,9 +3842,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4434,9 +3856,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,
@@ -4450,9 +3870,7 @@
     "rarity": "super-rare",
     "class": "Removed",
     "type": "Trick",
-    "tribes": [
-      "Superpower"
-    ],
+    "tribes": ["Superpower"],
     "cost": 1,
     "strength": null,
     "health": null,

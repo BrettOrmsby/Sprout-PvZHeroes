@@ -21,7 +21,7 @@
       </div>
     </template>
     <img :src="card.image" :alt="card.name" class="main-image" />
-    <p class="types">- {{ card.type }} {{ card.tribes.join(" ") }} -</p>
+    <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
     <p class="abilities" v-html="replaceImages(card.abilities)"></p>
     <p class="flavour">
       <em>{{ card.flavour }}</em>
@@ -30,20 +30,20 @@
 </template>
 
 <script lang="ts" setup>
-import states from "@/store/states";
-import getCard from "@/lib/getCard";
-import { computed } from "vue";
-import Dialog from "primevue/dialog";
-import Badge from "primevue/badge";
+import states from '@/store/states'
+import getCard from '@/lib/getCard'
+import { computed } from 'vue'
+import Dialog from 'primevue/dialog'
+import Badge from 'primevue/badge'
 
-const card = computed(() => getCard(states.cardModal.card));
+const card = computed(() => getCard(states.cardModal.card))
 const replaceImages = (input: string) => {
   return input.replace(/\{\{(.+?)\}\}/g, (item) => {
-    const ability = item.slice(2, -2);
+    const ability = item.slice(2, -2)
 
-    return `<img class="abilityIcon" src="/images/abilities/${ability.toLowerCase()}.png" alt="${ability}"/>`;
-  });
-};
+    return `<img class="abilityIcon" src="/images/abilities/${ability.toLowerCase()}.png" alt="${ability}"/>`
+  })
+}
 </script>
 
 <style scoped>
@@ -102,14 +102,7 @@ const replaceImages = (input: string) => {
   background-color: #885cd5;
 }
 .legendary {
-  background: linear-gradient(
-    to bottom right,
-    #a158dc,
-    #f462f4,
-    #f3ea94,
-    #c5f882,
-    #5ba3f0
-  );
+  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
 }
 .event {
   background-color: #e66d59;

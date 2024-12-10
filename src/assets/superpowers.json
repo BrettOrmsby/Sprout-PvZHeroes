@@ -1,379 +1,310 @@
 [
-    {
-      "name": "Precision Blast",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/25/Precision_BlastH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Pea",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Attack for 5 damage in the middle lane.",
-      "flavour": "Green Shadow's approach is right down the middle."
-    },
-    {
-      "name": "Sunburn",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/SunburnH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Flower",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Do 2 damage.\nYou get +2{{Sun}}.",
-      "flavour": "Solar Flare never met a sunscreen strong enough to stop her."
-    },
-    {
-      "name": "Uncrackable",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/UncrackableH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Nut",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Your Hero can't be hurt this turn.\nDraw a card.",
-      "flavour": "Wall-Knight laughs, \"A thousand broken nutcrackers tell the story.\""
-    },
-    {
-      "name": "Devour",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/01/DevourH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Flytrap",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Destroy a Zombie with the lowest Health.",
-      "flavour": "Chompzilla enjoys eating Zombies whole. She does not enjoy the indigestion that follows."
-    },
-    {
-      "name": "Tater Toss",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/Tater_TossH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Root",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Make a Hothead.",
-      "flavour": "Spudow is one tranquil tuber. Still, sometimes he loses his head."
-    },
-    {
-      "name": "Peel Shield",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ea/Peel_ShieldH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Fruit",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Plants can't be hurt this turn.\nDraw a card.",
-      "flavour": "Orange you glad Citron is here to protect you?"
-    },
-    {
-      "name": "Power Pummel",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/Power_PummelH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Leafy",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Attack each Zombie on the Ground for 2 damage.",
-      "flavour": "\"Knuckle sandwiches for all my enemies!\""
-    },
-    {
-      "name": "Mush-Boom",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/Mush-BoomH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Mushroom",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Make a Poison Mushroom.\nDo 2 damage to a Zombie there.",
-      "flavour": "Night Cap and his mushroom friends are not to be truffled with."
-    },
-    {
-      "name": "Goatify",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0e/GoatifyH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Flower",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "Transform a Zombie with the highest Attack into a 1{{Strength}}/1{{Heart}} Goat.",
-      "flavour": "Rose turns Zombies into goats because... GOATS!"
-    },
-    {
-      "name": "Blazing Bark",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b9/Blazing_BarkH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Tree",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "A Plant gets +4{{Strength}}.",
-      "flavour": "Captain Combustible knows how to light a fire under his teammates."
-    },
-    {
-      "name": "Genetic Amplification",
-      "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2b/Genetic_AmplificationH.png",
-      "set": "superpower",
-      "rarity": "legendary",
-      "class": null,
-      "type": "Trick",
-      "tribes": [
-        "Root",
-        "Superpower"
-      ],
-      "cost": 1,
-      "strength": null,
-      "health": null,
-      "abilities": "<b>Conjure</b> a 2{{Sun}}-cost Plant. It gets +1{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
-      "flavour": "The modifications are controversial, sure. But the results are hard to argue with."
-    },
-    {
-        "name": "Carried Away",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/Carried_AwayH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Party",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Move a Zombie. It gets +1{{Strength}}/+1{{Heart}}. Then it does a Bonus Attack.",
-        "flavour": "It's just Super Brainz' way of sharing the wonder of flight with his fellow Zombies."
-    },
-    {
-        "name": "Slammin' Smackdown",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/Slammin%27_SmackdownH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Gargantuar",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Destroy a Plant with 4{{Strength}} or less.",
-        "flavour": "The Smash's wrestling moves are real all right. Too real. Just ask any Plant."
-    },
-    {
-        "name": "Triple Threat",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3e/Triple_ThreatH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Imp",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Make two Impfinity Clones in random lanes.",
-        "flavour": "That's how you get Imps."
-    },
-    {
-        "name": "Shrink Ray",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/92/Shrink_RayH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Science",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "A plant gets -3{{Strength}}.\nDraw a card.",
-        "flavour": "Rustbolt gets a kick out of belittling Plants."
-    },
-    {
-        "name": "Stayin' Alive",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Stayin%27_AliveH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Dancing",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Do 3 damage to a Plant.\nHeal your Hero for 3.",
-        "flavour": "For Electric Boogaloo, \"alive\" is a relative term."
-    },
-    {
-        "name": "Frozen Tundra",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Frozen_TundraH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Pet",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "{{Frozen}}<b>Freeze</b> all Plants.",
-        "flavour": "Brain Freeze has a knack for making the Plants chill out."
-    },
-    {
-        "name": "Eureka",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d3/EurekaH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Mustache",
-        "Science",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "<b>Conjure</b> any three cards.",
-        "flavour": "Professor Brainstorm's ideas are brilliant... totally random, but brilliant."
-    },
-    {
-        "name": "Witch's Familiar",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Witch%27s_FamiliarH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Pet",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Make Zom-Bats.",
-        "flavour": "Immorticia was cleaning her belfry when, lo and behold, she found bats in there."
-    },
-    {
-        "name": "Missile Madness",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/Missile_MadnessH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Science",
-        "Imp",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Do 3 damage to a Plant and 1 damage to all other Plants.",
-        "flavour": "For Z-Mech, any target is a good target."
-    },
-    {
-        "name": "Octo-Pult",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Octo-PultH.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Pet",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
-        "flavour": "Octopus incoming! Two words a Plant never wants to hear."
-    },
-    {
-        "name": "Terror-Former 10,000",
-        "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/62/Terror-Former_10%2C000H.png",
-        "set": "superpower",
-        "rarity": "legendary",
-        "class": null,
-        "type": "Trick",
-        "tribes": [
-        "Science",
-        "Imp",
-        "Superpower"
-        ],
-        "cost": 1,
-        "strength": null,
-        "health": null,
-        "abilities": "<b>Conjure</b> an Environment and a trick. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
-        "flavour": "This is Huge-Gigantacus' greatest invention ever. It's also his only invention. But it's best not to point that out to him."
-    }
-  ]
+  {
+    "name": "Precision Blast",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/25/Precision_BlastH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Pea", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Attack for 5 damage in the middle lane.",
+    "flavour": "Green Shadow's approach is right down the middle."
+  },
+  {
+    "name": "Sunburn",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/SunburnH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Flower", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 2 damage.\nYou get +2{{Sun}}.",
+    "flavour": "Solar Flare never met a sunscreen strong enough to stop her."
+  },
+  {
+    "name": "Uncrackable",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/UncrackableH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Nut", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Your Hero can't be hurt this turn.\nDraw a card.",
+    "flavour": "Wall-Knight laughs, \"A thousand broken nutcrackers tell the story.\""
+  },
+  {
+    "name": "Devour",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/01/DevourH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Flytrap", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Zombie with the lowest Health.",
+    "flavour": "Chompzilla enjoys eating Zombies whole. She does not enjoy the indigestion that follows."
+  },
+  {
+    "name": "Tater Toss",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/Tater_TossH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Root", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a Hothead.",
+    "flavour": "Spudow is one tranquil tuber. Still, sometimes he loses his head."
+  },
+  {
+    "name": "Peel Shield",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ea/Peel_ShieldH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Fruit", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Plants can't be hurt this turn.\nDraw a card.",
+    "flavour": "Orange you glad Citron is here to protect you?"
+  },
+  {
+    "name": "Power Pummel",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ec/Power_PummelH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Leafy", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Attack each Zombie on the Ground for 2 damage.",
+    "flavour": "\"Knuckle sandwiches for all my enemies!\""
+  },
+  {
+    "name": "Mush-Boom",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/Mush-BoomH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Mushroom", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a Poison Mushroom.\nDo 2 damage to a Zombie there.",
+    "flavour": "Night Cap and his mushroom friends are not to be truffled with."
+  },
+  {
+    "name": "Goatify",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0e/GoatifyH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Flower", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Transform a Zombie with the highest Attack into a 1{{Strength}}/1{{Heart}} Goat.",
+    "flavour": "Rose turns Zombies into goats because... GOATS!"
+  },
+  {
+    "name": "Blazing Bark",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b9/Blazing_BarkH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Tree", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A Plant gets +4{{Strength}}.",
+    "flavour": "Captain Combustible knows how to light a fire under his teammates."
+  },
+  {
+    "name": "Genetic Amplification",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/2b/Genetic_AmplificationH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Root", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost Plant. It gets +1{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
+    "flavour": "The modifications are controversial, sure. But the results are hard to argue with."
+  },
+  {
+    "name": "Carried Away",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/Carried_AwayH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Party", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Move a Zombie. It gets +1{{Strength}}/+1{{Heart}}. Then it does a Bonus Attack.",
+    "flavour": "It's just Super Brainz' way of sharing the wonder of flight with his fellow Zombies."
+  },
+  {
+    "name": "Slammin' Smackdown",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d5/Slammin%27_SmackdownH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Gargantuar", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Destroy a Plant with 4{{Strength}} or less.",
+    "flavour": "The Smash's wrestling moves are real all right. Too real. Just ask any Plant."
+  },
+  {
+    "name": "Triple Threat",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3e/Triple_ThreatH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Imp", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make two Impfinity Clones in random lanes.",
+    "flavour": "That's how you get Imps."
+  },
+  {
+    "name": "Shrink Ray",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/92/Shrink_RayH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Science", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "A plant gets -3{{Strength}}.\nDraw a card.",
+    "flavour": "Rustbolt gets a kick out of belittling Plants."
+  },
+  {
+    "name": "Stayin' Alive",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/71/Stayin%27_AliveH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Dancing", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage to a Plant.\nHeal your Hero for 3.",
+    "flavour": "For Electric Boogaloo, \"alive\" is a relative term."
+  },
+  {
+    "name": "Frozen Tundra",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/11/Frozen_TundraH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Pet", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "{{Frozen}}<b>Freeze</b> all Plants.",
+    "flavour": "Brain Freeze has a knack for making the Plants chill out."
+  },
+  {
+    "name": "Eureka",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d3/EurekaH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Mustache", "Science", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> any three cards.",
+    "flavour": "Professor Brainstorm's ideas are brilliant... totally random, but brilliant."
+  },
+  {
+    "name": "Witch's Familiar",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Witch%27s_FamiliarH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Pet", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make Zom-Bats.",
+    "flavour": "Immorticia was cleaning her belfry when, lo and behold, she found bats in there."
+  },
+  {
+    "name": "Missile Madness",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/Missile_MadnessH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Science", "Imp", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Do 3 damage to a Plant and 1 damage to all other Plants.",
+    "flavour": "For Z-Mech, any target is a good target."
+  },
+  {
+    "name": "Octo-Pult",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Octo-PultH.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Pet", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
+    "flavour": "Octopus incoming! Two words a Plant never wants to hear."
+  },
+  {
+    "name": "Terror-Former 10,000",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/62/Terror-Former_10%2C000H.png",
+    "set": "superpower",
+    "rarity": "legendary",
+    "class": null,
+    "type": "Trick",
+    "tribes": ["Science", "Imp", "Superpower"],
+    "cost": 1,
+    "strength": null,
+    "health": null,
+    "abilities": "<b>Conjure</b> an Environment and a trick. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
+    "flavour": "This is Huge-Gigantacus' greatest invention ever. It's also his only invention. But it's best not to point that out to him."
+  }
+]

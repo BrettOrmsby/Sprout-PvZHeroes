@@ -19,17 +19,10 @@
         :class="{ 'p-invalid': showNameError }"
         maxlength="50"
       />
-      <small v-if="showNameError" id="invalidName" class="error"
-        >Must include a name.</small
-      >
+      <small v-if="showNameError" id="invalidName" class="error">Must include a name.</small>
 
       <label for="description">Description</label>
-      <Textarea
-        id="description"
-        :autoResize="true"
-        v-model="newInfo.description"
-        maxlength="150"
-      />
+      <Textarea id="description" :autoResize="true" v-model="newInfo.description" maxlength="150" />
 
       <label for="deckList">Deck List (optional)</label>
       <CardListTextArea
@@ -59,125 +52,118 @@
           :aria-controls="isConfirmVisible ? 'confirm' : null"
           :disabled="isLoading"
         />
-        <Button
-          :loading="isLoading"
-          label="Update"
-          type="submit"
-          :disabled="isDeleting"
-        />
+        <Button :loading="isLoading" label="Update" type="submit" :disabled="isDeleting" />
       </div>
     </form>
   </Dialog>
 </template>
 
 <script lang="ts" setup>
-import states from "@/store/states";
-import deck from "@/store/deck";
-import { ref, watch } from "vue";
-import useSupabase from "@/composables/UseSupabase";
-import throwError from "@/lib/throwError";
-import CardListTextArea from "@/components/CardListTextArea.vue";
-import { useConfirm } from "primevue/useconfirm";
-import { useRouter } from "vue-router";
-import Dialog from "primevue/dialog";
-import InputText from "primevue/inputtext";
-import Textarea from "primevue/textarea";
-import Button from "primevue/button";
-import ToggleSwitch from "primevue/toggleswitch";
+import states from '@/store/states'
+import deck from '@/store/deck'
+import { ref, watch } from 'vue'
+import useSupabase from '@/composables/UseSupabase'
+import throwError from '@/lib/throwError'
+import CardListTextArea from '@/components/CardListTextArea.vue'
+import { useConfirm } from 'primevue/useconfirm'
+import { useRouter } from 'vue-router'
+import Dialog from 'primevue/dialog'
+import InputText from 'primevue/inputtext'
+import Textarea from 'primevue/textarea'
+import Button from 'primevue/button'
+import ToggleSwitch from 'primevue/toggleswitch'
 
-const reloadList = ref(0);
+const reloadList = ref(0)
 
-const { supabase } = useSupabase();
+const { supabase } = useSupabase()
 
 const newInfo = ref({
   name: deck.name,
   description: deck.description,
   is_private: deck.is_private,
   list: deck.list,
-});
+})
 
 const updateList = () => {
-  newInfo.value.list = deck.list;
-  reloadList.value += 1;
-};
+  newInfo.value.list = deck.list
+  reloadList.value += 1
+}
 
-const showNameError = ref(false);
-const isCardListError = ref(false);
-const isLoading = ref(false);
+const showNameError = ref(false)
+const isCardListError = ref(false)
+const isLoading = ref(false)
 
 const updateDeck = async () => {
-  if (newInfo.value.name.trim() === "") {
-    showNameError.value = true;
-    return;
+  if (newInfo.value.name.trim() === '') {
+    showNameError.value = true
+    return
   } else {
-    showNameError.value = false;
+    showNameError.value = false
   }
   if (isCardListError.value) {
-    return;
+    return
   }
 
-  isLoading.value = true;
+  isLoading.value = true
   const { data, error } = await supabase
-    .from("decks")
+    .from('decks')
     .update({
       ...newInfo.value,
       is_complete:
-        Object.values(newInfo.value.list).reduce(
-          (prev: number, curr: number) => prev + curr,
-          0
-        ) === 40,
+        Object.values(newInfo.value.list).reduce((prev: number, curr: number) => prev + curr, 0) ===
+        40,
     })
-    .eq("id", deck.id)
-    .select();
+    .eq('id', deck.id)
+    .select()
   if (error) {
-    isLoading.value = false;
-    throwError(error);
-    return;
+    isLoading.value = false
+    throwError(error)
+    return
   }
 
-  Object.assign(deck, data[0]);
+  Object.assign(deck, data[0])
 
-  isLoading.value = false;
-  states.editModal = false;
-};
+  isLoading.value = false
+  states.editModal = false
+}
 
-const router = useRouter();
-const isDeleting = ref(false);
-const confirm = useConfirm();
-const isConfirmVisible = ref(false);
+const router = useRouter()
+const isDeleting = ref(false)
+const confirm = useConfirm()
+const isConfirmVisible = ref(false)
 const deleteDeck = () => {
   confirm.require({
     message: `Are you sure you want to delete ${deck.name}? This action cannot be undone.`,
-    header: "Confirm Delete",
+    header: 'Confirm Delete',
     rejectProps: {
-      label: "Cancel",
-      severity: "secondary",
+      label: 'Cancel',
+      severity: 'secondary',
     },
     acceptProps: {
-      label: "Delete",
-      severity: "danger",
+      label: 'Delete',
+      severity: 'danger',
     },
     async accept() {
-      isDeleting.value = true;
-      const { error } = await supabase.from("decks").delete().eq("id", deck.id);
+      isDeleting.value = true
+      const { error } = await supabase.from('decks').delete().eq('id', deck.id)
 
       if (error) {
-        isDeleting.value = false;
-        throwError(error);
-        return;
+        isDeleting.value = false
+        throwError(error)
+        return
       }
 
-      states.editModal = false;
-      router.push({ name: "Home" });
+      states.editModal = false
+      router.push({ name: 'Home' })
     },
     onShow: () => {
-      isConfirmVisible.value = true;
+      isConfirmVisible.value = true
     },
     onHide: () => {
-      isConfirmVisible.value = false;
+      isConfirmVisible.value = false
     },
-  });
-};
+  })
+}
 
 watch(
   () => states.editModal,
@@ -187,9 +173,9 @@ watch(
       description: deck.description,
       is_private: deck.is_private,
       list: deck.list,
-    };
-  }
-);
+    }
+  },
+)
 </script>
 
 <style scoped>
@@ -220,9 +206,7 @@ label,
   width: 100%;
 }
 
-:is(.p-inputtext, .p-textarea, .p-toggleswitch, .card-list-textarea):has(
-    + :not(small)
-  ) {
+:is(.p-inputtext, .p-textarea, .p-toggleswitch, .card-list-textarea):has(+ :not(small)) {
   margin-bottom: var(--block-space);
 }
 

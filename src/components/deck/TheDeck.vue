@@ -10,10 +10,7 @@
         :key="card.name"
         :isInDeck="true"
         :card="card"
-        :class="`${
-          states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-          'highlighted'
-        } ${
+        :class="`${states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'} ${
           states.deckFilter.hideCards &&
           !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
           'hidden'
@@ -34,28 +31,28 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import getCard from "@/lib/getCard";
-import deck from "@/store/deck";
-import PVZCardWithMenu from "@/components/deck/PVZCardWithMenu.vue";
-import PVZCard from "@/components/PVZCard.vue";
-import Message from "primevue/message";
-import states from "@/store/states";
-import useAuthUser from "@/composables/UseAuthUser";
+import { computed } from 'vue'
+import getCard from '@/lib/getCard'
+import deck from '@/store/deck'
+import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
+import PVZCard from '@/components/PVZCard.vue'
+import Message from 'primevue/message'
+import states from '@/store/states'
+import useAuthUser from '@/composables/UseAuthUser'
 
-const { id } = useAuthUser();
-const isUsersDeck = computed(() => id.value === deck.creator);
+const { id } = useAuthUser()
+const isUsersDeck = computed(() => id.value === deck.creator)
 
 const cards = computed(() =>
   Object.keys(deck.list)
     .map((e) => getCard(e))
-    .sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))
-);
+    .sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name)),
+)
 
 const showCard = (card: string) => {
-  states.cardModal.card = card;
-  states.cardModal.show = true;
-};
+  states.cardModal.card = card
+  states.cardModal.show = true
+}
 </script>
 
 <style scoped>

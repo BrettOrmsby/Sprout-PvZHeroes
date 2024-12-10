@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts" setup>
-import type { Card } from "@/lib/types";
-defineProps<{ card: Card; amount: number; isValid: boolean }>();
+import type { Card } from '@/lib/types'
+defineProps<{ card: Card; amount: number; isValid: boolean }>()
 </script>
 
 <style scoped>
@@ -91,14 +91,7 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>();
   background: transparent;
 }
 .legendary {
-  background: linear-gradient(
-    to bottom right,
-    #a158dc,
-    #f462f4,
-    #f3ea94,
-    #c5f882,
-    #5ba3f0
-  );
+  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
 }
 .event {
   background: #e66d59;
