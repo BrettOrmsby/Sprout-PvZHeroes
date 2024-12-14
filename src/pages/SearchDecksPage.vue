@@ -51,6 +51,9 @@
           />
         </template>
       </AutoComplete>
+      <router-link :to="{ name: 'HighlightHelp' }" class="help-message">
+        <Button label="Search Syntax Help" link />
+      </router-link>
       <label for="show-incomplete">Show Incomplete Decks</label>
       <ToggleSwitch inputId="show-incomplete" v-model="form.showIncomplete" />
 
@@ -139,6 +142,8 @@ import type { Deck, Card } from '@/lib/types'
 import plants from '@/assets/plants.json'
 import zombies from '@/assets/zombies.json'
 import getCard from '@/lib/getCard'
+import generateQuery from '@/lib/parse-query/generateQuery'
+import doesMatchQuery from '@/lib/matchQuery'
 const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()
@@ -165,9 +170,14 @@ const searchCards = (event: AutoCompleteCompleteEvent) => {
   if (!event.query.trim().length) {
     cardSuggestions.value = [...cards]
   } else {
+    const { query } = generateQuery(event.query)
     cardSuggestions.value = cards.filter((card) => {
       return (
-        card.name.toLowerCase().includes(event.query.toLowerCase()) && !form.cards.includes(card)
+        card.class !== 'Removed' &&
+        card.set !== 'token' &&
+        card.set !== 'superpower' &&
+        doesMatchQuery(card, query) &&
+        !form.cards.includes(card)
       )
     })
   }
@@ -281,7 +291,7 @@ label,
     .hero-picker,
     .card-list-textarea,
     .p-toggleswitch
-  ):has(+ :not(small)) {
+  ):has(+ :not(:is(small, .help-message))) {
   margin-bottom: var(--block-space);
 }
 
@@ -297,6 +307,7 @@ label,
 
 .autocomplete-item {
   display: flex;
+  align-items: center;
   gap: var(--inline-space);
 }
 .autocomplete-item img {
@@ -304,6 +315,11 @@ label,
   height: 100%;
 }
 
+.help-message .p-button {
+  padding: 0;
+  margin-top: var(--inline-space);
+  margin-bottom: var(--block-space);
+}
 .deck-container {
   display: flex;
   flex-wrap: wrap;
