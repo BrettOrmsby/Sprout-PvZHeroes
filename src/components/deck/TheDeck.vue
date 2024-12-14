@@ -33,12 +33,15 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import getCard from '@/lib/getCard'
-import deck from '@/store/deck'
 import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import Message from 'primevue/message'
 import states from '@/store/states'
+import deck from '@/store/deck'
+import user from '@/store/user'
 import useAuthUser from '@/composables/UseAuthUser'
+import { onBeforeRouteUpdate } from 'vue-router'
+import useSupabase from '@/composables/UseSupabase'
 
 const { id } = useAuthUser()
 const isUsersDeck = computed(() => id.value === deck.creator)
@@ -53,6 +56,32 @@ const showCard = (card: string) => {
   states.cardModal.card = card
   states.cardModal.show = true
 }
+
+onBeforeRouteUpdate(async (to) => {
+  const { supabase } = useSupabase()
+  const { data, error } = await supabase.from('decks').select().eq('id', to.params.id).single()
+
+  if (error) {
+    return { name: '404' }
+  } else {
+    Object.assign(deck, data)
+  }
+
+  const { data: creatorData, error: creatorError } = await supabase
+    .from('profiles')
+    .select('username, profile_image')
+    .eq('id', data.creator)
+    .single()
+  if (creatorError) {
+    return { name: '404' }
+  } else {
+    Object.assign(user, creatorData)
+    document.title = `${data.name} • Sprout`
+  }
+
+  states.deckFilter.hideCards = false
+  states.deckFilter.cardsMatchingFilter = []
+})
 </script>
 
 <style scoped>

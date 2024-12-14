@@ -154,10 +154,8 @@ const duplicateDeck = async () => {
     console.log(error)
     return
   }
+  isDuplicationLoading.value = false
   router.push({ name: 'ViewDeck', params: { id: data.id } })
-  // For some reason, window.location.reload() does not work with either router.push or
-  // router.replace. So instead, the location must be assigned in order to reload the beforeEnter route condition.
-  window.location.assign(route.fullPath.replace(/\/[^/]+$/, `/${data.id}`))
 }
 </script>
 
