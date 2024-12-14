@@ -2,7 +2,13 @@
   <SettingsModal />
   <header>
     <div class="hero-container">
-      <Avatar size="xlarge" shape="circle" :image="hero.image" @click="openModal" />
+      <Avatar
+        size="xlarge"
+        shape="circle"
+        :image="hero.image"
+        @click="openModal"
+        class="clickable"
+      />
       <div class="class-container">
         <img
           class="class"
@@ -30,8 +36,12 @@
           >{{ user.username }}</RouterLink
         >
       </div>
-      <h1>{{ deck.name }}</h1>
-      <p>{{ deck.description }}</p>
+      <h1 @click="() => isUsersDeck && openSettings()" :class="{ clickable: isUsersDeck }">
+        {{ deck.name }}
+      </h1>
+      <p @click="() => isUsersDeck && openSettings()" :class="{ clickable: isUsersDeck }">
+        {{ deck.description }}
+      </p>
       <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
     </div>
   </header>
@@ -47,11 +57,14 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import Avatar from 'primevue/avatar'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
 import user from '@/store/user'
+import useAuthUser from '@/composables/UseAuthUser'
 
 dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)
 
+const { id } = useAuthUser()
 const hero = computed(() => getHero(deck.hero))
+const isUsersDeck = computed(() => id.value === deck.creator)
 
 const timeSinceUpdate = computed(() => {
   // eslint-disable-next-line
@@ -83,6 +96,10 @@ const colours: Record<string, string> = {
 const openModal = () => {
   states.heroModel.hero = deck.hero
   states.heroModel.show = true
+}
+
+const openSettings = () => {
+  states.editModal = true
 }
 </script>
 
@@ -150,5 +167,9 @@ h1 {
 .last-updated {
   color: var(--p-text-muted-color);
   margin-bottom: 0;
+}
+
+.clickable {
+  cursor: pointer;
 }
 </style>

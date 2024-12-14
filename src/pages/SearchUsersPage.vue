@@ -174,6 +174,13 @@ a {
   flex-shrink: 0;
   background-color: var(--p-surface-950);
 }
+h3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
 
 h3 {
   margin: 0;

@@ -49,7 +49,6 @@ import plants from '@/assets/plants.json'
 import zombies from '@/assets/zombies.json'
 import getHero from '@/lib/getHero'
 import Textarea from 'primevue/textarea'
-// TODO: small re-write with using new define modal and allowing lower case
 const props = defineProps<{
   modelValue: Record<string, number> | null
   isError: boolean

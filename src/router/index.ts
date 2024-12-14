@@ -211,8 +211,9 @@ router.beforeEach((to, _, next) => {
 router.beforeEach((to) => {
   states.loadingRoute = true
   const { isSignedIn } = useAuthUser()
-  if (!isSignedIn.value && to.meta.requiresAuth && !Object.keys(to.query).includes('fromEmail')) {
-    return { name: 'SignIn' }
+  // TODO: this does not wait for auth to be checked if starting on the page (like the create deck page) so it will navigate home instead
+  if (!isSignedIn.value && to.meta.requiresAuth) {
+    return { name: 'Home' }
   }
 })
 router.afterEach(() => (states.loadingRoute = false))

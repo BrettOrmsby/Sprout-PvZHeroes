@@ -6,7 +6,13 @@
 
     <template v-for="(value, key) in comparison" :key="key">
       <h2>
-        {{ key === 'both' ? 'Shared in Both Decks' : `Unique to ${getDeck(key as string).name}` }}
+        <span v-if="key === 'both'">Shared in Both Decks</span
+        ><span v-else
+          >Unique to
+          <RouterLink :to="{ name: 'ViewDeck', params: { id: key } }">{{
+            getDeck(key as string).name
+          }}</RouterLink></span
+        >
         ({{ Object.values(value).reduce((prev, curr) => prev + curr, 0) }})
       </h2>
       <Message v-if="Object.values(value).length === 0" :severity="'warn'" :closable="false"
@@ -90,6 +96,11 @@ const toInput = ref('https://sprout-deckbuider.vercel.app/deck/' + compareDeck.i
 </script>
 
 <style scoped>
+main {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
 h1,
 h2 {
   text-align: center;
@@ -98,8 +109,17 @@ h2 {
 .card-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--inline-space);
+  gap: var(--block-space);
   justify-content: center;
   align-items: stretch;
+}
+
+a {
+  color: var(--p-primary-color);
+  transition: var(--p-form-field-transition-duration);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--p-primary-hover-color);
 }
 </style>

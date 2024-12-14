@@ -98,7 +98,7 @@ const cardByClass = computed(() => {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  gap: var(--inline-space);
+  gap: var(--block-space);
   padding: var(--block-space);
   justify-content: flex-start;
 }
@@ -106,6 +106,7 @@ const cardByClass = computed(() => {
   display: none;
 }
 :deep(.highlighted) {
-  box-shadow: 0 0 3px 3px var(--p-yellow-400);
+  outline-offset: 4px;
+  outline: 2px solid var(--p-yellow-400);
 }
 </style>
