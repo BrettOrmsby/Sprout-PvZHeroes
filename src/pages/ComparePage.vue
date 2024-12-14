@@ -43,6 +43,8 @@ import { ref, computed } from 'vue'
 import getCard from '@/lib/getCard'
 import deck, { compareDeck } from '@/store/deck'
 import states from '@/store/states'
+import { onBeforeRouteUpdate } from 'vue-router'
+import useSupabase from '@/composables/UseSupabase'
 
 defineProps<{ id: string; to: string }>()
 
@@ -93,6 +95,30 @@ const showCard = (card: string) => {
 }
 
 const toInput = ref('https://sprout-deckbuider.vercel.app/deck/' + compareDeck.id)
+
+onBeforeRouteUpdate(async (to) => {
+  const { supabase } = useSupabase()
+  const { data, error } = await supabase.from('decks').select().eq('id', to.params.id).single()
+
+  if (error) {
+    return { name: '404' }
+  } else {
+    Object.assign(deck, data)
+  }
+
+  const { data: compare, error: compareError } = await supabase
+    .from('decks')
+    .select()
+    .eq('id', to.params.to)
+    .single()
+
+  if (compareError) {
+    return { name: '404' }
+  } else {
+    Object.assign(compareDeck, compare)
+  }
+  document.title = `Compare ${data.name} to ${compare.name} • Sprout`
+})
 </script>
 
 <style scoped>
