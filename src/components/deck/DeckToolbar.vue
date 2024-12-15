@@ -77,7 +77,7 @@ import Toolbar from 'primevue/toolbar'
 import Dialog from 'primevue/dialog'
 import Popover from 'primevue/popover'
 import CompareInput from '@/components/CompareInput.vue'
-import HighlightPopover from '@/components/deck/HighlightPopover.vue'
+import HighlightPopover from '@/components/HighlightPopover.vue'
 import { Cog, Paperclip, Repeat, Copy, Highlighter } from 'lucide-vue-next'
 import states from '@/store/states'
 import useAuthUser from '@/composables/UseAuthUser'
@@ -93,7 +93,6 @@ const { id, isSignedIn } = useAuthUser()
 const isUsersDeck = computed(() => id.value === deck.creator)
 const { supabase } = useSupabase()
 const router = useRouter()
-const route = useRoute()
 
 const highlighter = ref()
 const numberMatchingCardsInDeck = computed(() => {

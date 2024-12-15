@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Card Highlighter</h2>
+    <h2 v-if="isTitleVisible">Card Highlighter</h2>
 
     <form @submit.prevent="() => {}">
       <label for="query">Query</label>
@@ -42,6 +42,8 @@ import type { Card } from '@/lib/types'
 import zombies from '@/assets/zombies.json'
 import plants from '@/assets/plants.json'
 import doesMatchQuery from '@/lib/matchQuery'
+
+const { isTitleVisible } = defineProps<{ isTitleVisible?: boolean }>()
 
 const cards = [...plants, ...zombies] as Card[]
 

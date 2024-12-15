@@ -124,7 +124,7 @@ const compareDecks = async () => {
 
   isCompareDeckLoading.value = true
   try {
-    const { error, data } = await supabase.from('decks').select('id').eq('id', toId).single()
+    const { error } = await supabase.from('decks').select('id').eq('id', toId).single()
 
     if (error) {
       throw error

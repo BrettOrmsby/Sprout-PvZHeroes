@@ -31,6 +31,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'Gallery',
+      path: '/gallery',
+      component: () => import('@/pages/GalleryPage.vue'),
+      meta: {
+        title: 'Gallery • Sprout',
+      },
+    },
+    {
       name: 'Me',
       path: '/me',
       meta: {

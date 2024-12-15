@@ -14,6 +14,7 @@
       <template #item="{ item, props, hasSubmenu }">
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
           <a :href="href" v-bind="props.action" @click="navigate">
+            <Grid2x2 v-if="item.label === 'Gallery'" />
             <UserSearch v-if="item.label === 'Users'" />
             <FileSearch v-else-if="item.label === 'Decks'" />
             <LayoutGrid v-else-if="item.label === 'Your Decks'" />
@@ -58,11 +59,16 @@ import {
   Plus,
   LogOut,
   LayoutGrid,
+  Grid2x2,
 } from 'lucide-vue-next'
 import useAuthUser from '@/composables/UseAuthUser'
 const { isSignedIn, signIn } = useAuthUser()
 const items = computed(() => {
   return [
+    {
+      label: 'Gallery',
+      route: '/gallery',
+    },
     {
       label: 'Search',
       items: [
