@@ -29,7 +29,7 @@
   },
   {
     "name": "Zookeeper",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/66/ZookeeperH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734356352/zookeeper.png",
     "set": "basic",
     "rarity": "common",
     "class": "Beastly",
@@ -155,7 +155,7 @@
   },
   {
     "name": "B-flat",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/44/B-flatH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734356975/b-flat.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Beastly",
@@ -239,7 +239,7 @@
   },
   {
     "name": "Vengeful Cyborg",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7b/Vengeful_CyborgH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357089/vengeful_cyborg.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Beastly",
@@ -295,7 +295,7 @@
   },
   {
     "name": "Kangaroo Rider",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/86/Kangaroo_RiderH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357186/kangaroo_rider.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Beastly",
@@ -351,7 +351,7 @@
   },
   {
     "name": "Primordial Cheese Shover",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/98/Primordial_Cheese_ShoverH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357320/primordial_cheese_shover.png",
     "set": "colossal",
     "rarity": "rare",
     "class": "Beastly",
@@ -379,7 +379,7 @@
   },
   {
     "name": "Cat Lady",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Cat_LadyH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357392/cat_lady.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Beastly",
@@ -407,7 +407,7 @@
   },
   {
     "name": "Deep Sea Gargantuar",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Deep_Sea_GargantuarH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357461/deep_sea_gargantuar.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Beastly",
@@ -659,7 +659,7 @@
   },
   {
     "name": "Synchronized Swimmer",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Synchronized_SwimmerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357570/synchronized_swimmer.png",
     "set": "event",
     "rarity": "event",
     "class": "Beastly",
@@ -729,7 +729,7 @@
   },
   {
     "name": "Zom-Bats",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357655/zom-bats.png",
     "set": "token",
     "rarity": "token",
     "class": "Beastly",
@@ -1023,7 +1023,7 @@
   },
   {
     "name": "Quarterly Bonus",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ae/Pirate%27s_BootyH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378735/quarterly_bonus.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Brainy",
@@ -1037,7 +1037,7 @@
   },
   {
     "name": "Gentleman Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c1/Gentleman_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358060/gentleman_zombie.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Brainy",
@@ -1065,7 +1065,7 @@
   },
   {
     "name": "Gadget Scientist",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Gadget_ScientistH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358129/gadget_scientist.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Brainy",
@@ -1135,7 +1135,7 @@
   },
   {
     "name": "Zom-Blob",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/Zom-BlobH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358240/zom-blob.png",
     "set": "colossal",
     "rarity": "rare",
     "class": "Brainy",
@@ -1163,7 +1163,7 @@
   },
   {
     "name": "Electrician",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e4/ElectricianH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358289/electrician.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Brainy",
@@ -1205,7 +1205,7 @@
   },
   {
     "name": "Portal Technician",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/93/Portal_TechnicianH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358443/portal_technician.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Brainy",
@@ -1247,7 +1247,7 @@
   },
   {
     "name": "Wormhole Gatekeeper",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Wormhole_GatekeeperH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358543/wormhole_gatekeeper.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Brainy",
@@ -1373,7 +1373,7 @@
   },
   {
     "name": "Gargantuar Mime",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7e/Gargantuar_MimeH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358628/gargantuar_mime.png",
     "set": "colossal",
     "rarity": "legendary",
     "class": "Brainy",
@@ -1387,7 +1387,7 @@
   },
   {
     "name": "Zombot Dinotronic Mechasaur",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a0/Zombot_Dinotronic_MechasaurH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358693/zombot_dinotronic_mechasaur.png",
     "set": "triassic",
     "rarity": "legendary",
     "class": "Brainy",
@@ -1429,7 +1429,7 @@
   },
   {
     "name": "Trick-or-Treater",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/84/Trick-or-TreaterH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734358769/trick-or-treater.png",
     "set": "event",
     "rarity": "event",
     "class": "Brainy",
@@ -1513,7 +1513,7 @@
   },
   {
     "name": "Zom-Bats",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/be/Zom-BatsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734357655/zom-bats.png",
     "set": "token",
     "rarity": "token",
     "class": "Brainy",
@@ -2521,7 +2521,7 @@
   },
   {
     "name": "Ra Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/42/Ra_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734370121/ra_zombie.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Hearty",
@@ -2549,7 +2549,7 @@
   },
   {
     "name": "Celestial Custodian",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/95/Celestial_CustodianH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734370212/celestial_custodian.png",
     "set": "galactic",
     "rarity": "uncommon",
     "class": "Hearty",
@@ -2605,7 +2605,7 @@
   },
   {
     "name": "Leftovers",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/LeftoversH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734377692/leftovers.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Hearty",
@@ -2731,7 +2731,7 @@
   },
   {
     "name": "Lost Colosseum",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8c/Lost_ColosseumH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734377808/lost_colosseum-2.png",
     "set": "triassic",
     "rarity": "rare",
     "class": "Hearty",
@@ -2745,7 +2745,7 @@
   },
   {
     "name": "Landscaper",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/LandscaperH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378087/landscaper.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Hearty",
@@ -2773,7 +2773,7 @@
   },
   {
     "name": "All-Star Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/17/All-Star_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378150/all-star_zombie.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Hearty",
@@ -2787,7 +2787,7 @@
   },
   {
     "name": "Coffee Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8f/Coffee_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378208/coffee_zombie.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Hearty",
@@ -2885,7 +2885,7 @@
   },
   {
     "name": "Zombie King",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/23/Zombie_KingH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378277/zombie_king.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Hearty",
@@ -2899,7 +2899,7 @@
   },
   {
     "name": "Undying Pharaoh",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8e/Undying_PharaohH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378349/undying_pharaoh.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Hearty",
@@ -2941,7 +2941,7 @@
   },
   {
     "name": "Zombot Battlecruiser 5000",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/Zombot_Battlecruiser_5000H.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378414/zombot_battlecruiser_5000.png",
     "set": "galactic",
     "rarity": "legendary",
     "class": "Hearty",
@@ -3039,7 +3039,7 @@
   },
   {
     "name": "Bonus Track Buckethead",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/73/Bonus_Track_BucketheadH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378478/bonus_track_buckethead.png",
     "set": "event",
     "rarity": "event",
     "class": "Hearty",
@@ -3067,7 +3067,7 @@
   },
   {
     "name": "Octo-Pet",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378539/octo-pet.png",
     "set": "token",
     "rarity": "token",
     "class": "Hearty",
@@ -3837,7 +3837,7 @@
   },
   {
     "name": "Octo-Pet",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8d/Octo-PetH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734378539/octo-pet.png",
     "set": "token",
     "rarity": "token",
     "class": "Sneaky",

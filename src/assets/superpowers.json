@@ -150,7 +150,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost Plant. It gets +1{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
+    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost Plant. It gets +2{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
     "flavour": "The modifications are controversial, sure. But the results are hard to argue with."
   },
   {
