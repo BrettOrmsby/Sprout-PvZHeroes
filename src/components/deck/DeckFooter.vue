@@ -73,7 +73,7 @@ const sparks = computed(() => {
   left: 0;
   background-color: var(--p-content-background);
   border-top: 1px var(--p-content-border-color) solid;
-  z-index: 1004;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;

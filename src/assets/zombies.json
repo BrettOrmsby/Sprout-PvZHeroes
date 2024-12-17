@@ -1100,8 +1100,8 @@
     "type": "Zombie",
     "tribes": ["Mustache", "Gargantuar"],
     "cost": 6,
-    "strength": 6,
-    "health": 7,
+    "strength": 5,
+    "health": 6,
     "abilities": "All Gargantuars have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs 1 more.",
     "flavour": "A wizard did it. An enormous, green, Zombie wizard."
   },
@@ -1653,7 +1653,7 @@
   },
   {
     "name": "Flamenco Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Flamenco_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453239/flamenco_zombie.png",
     "set": "basic",
     "rarity": "common",
     "class": "Crazy",
@@ -1723,7 +1723,7 @@
   },
   {
     "name": "Cakesplosion",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f1/CakesplosionH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453360/cakesplosion.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Crazy",
@@ -1877,7 +1877,7 @@
   },
   {
     "name": "Zombot's Wrath",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ef/Zombot%27s_WrathH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453427/zombots_wrath.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Crazy",
@@ -1989,7 +1989,7 @@
   },
   {
     "name": "Abracadaver",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9c/AbracadaverH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453485/abracadaver.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Crazy",
@@ -2017,7 +2017,7 @@
   },
   {
     "name": "Disco-Tron 3000",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/fd/Disco-Tron_3000H.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453539/disco-tron_3000.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Crazy",
@@ -2087,7 +2087,7 @@
   },
   {
     "name": "Grave Robber",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/Grave_RobberH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453584/grave_robber.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Crazy",
@@ -2269,7 +2269,7 @@
   },
   {
     "name": "Gargantuar-Throwing Imp",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3d/Gargantuar-Throwing_ImpH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453669/gargantuar-throwing_imp.png",
     "set": "event",
     "rarity": "event",
     "class": "Crazy",

@@ -86,7 +86,7 @@ import { computed, ref } from 'vue'
 import { useToast } from 'primevue/usetoast'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
 import type { Deck } from '@/lib/types'
 
 const { id, isSignedIn } = useAuthUser()
