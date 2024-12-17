@@ -3,9 +3,14 @@
   <HeroModal />
   <DeckHeader />
   <main>
-    <DeckToolbar />
-    <TheDeck />
-    <AddCards v-if="isUsersDeck" />
+    <div class="side-deck-container">
+      <SideBar />
+      <div class="main-content">
+        <DeckToolbar />
+        <TheDeck />
+        <AddCards v-if="isUsersDeck" />
+      </div>
+    </div>
     <Divider />
     <DeckCharts />
     <Divider />
@@ -18,7 +23,8 @@
 <script lang="ts" setup>
 import useAuthUser from '@/composables/UseAuthUser'
 import deck from '@/store/deck'
-import { computed } from 'vue'
+import { computed, onMounted, watch } from 'vue'
+import SideBar from '@/components/SideBar.vue'
 import DeckHeader from '@/components/deck/DeckHeader.vue'
 import TheDeck from '@/components/deck/TheDeck.vue'
 import AddCards from '@/components/deck/AddCards.vue'
@@ -84,7 +90,7 @@ const isUsersDeck = computed(() => id.value === deck.creator)
 
 <style scoped>
 main {
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -97,6 +103,23 @@ h2 {
   text-align: center;
 }
 
+.side-deck-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.side-deck-container .main-content {
+  flex-shrink: 1;
+  min-width: 0;
+}
+@media screen and (max-width: 700px) {
+  .side-deck-container {
+    display: block;
+  }
+  .side-deck-container :deep(.side-bar) {
+    display: none;
+  }
+}
 .deck-container {
   display: flex;
   flex-wrap: wrap;

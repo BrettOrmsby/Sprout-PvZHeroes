@@ -173,7 +173,7 @@ const duplicateDeck = async () => {
 .p-toolbar :deep(.p-button-label) {
   display: none;
 }
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 950px) {
   .p-toolbar :deep(.p-button-label) {
     display: inline-block;
   }

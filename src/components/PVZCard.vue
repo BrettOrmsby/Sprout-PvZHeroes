@@ -1,5 +1,6 @@
 <template>
   <div
+    @mouseover="() => (states.cardHover = card.name)"
     :class="{
       'card-container': true,
       'not-valid': !isValid,
@@ -15,6 +16,7 @@
 
 <script lang="ts" setup>
 import type { Card } from '@/lib/types'
+import states from '@/store/states'
 defineProps<{ card: Card; amount: number; isValid: boolean }>()
 </script>
 

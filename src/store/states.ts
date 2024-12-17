@@ -4,6 +4,7 @@ import type { QueryError } from '@/lib/parse-query/scanner'
 export default reactive({
   editModal: false,
   loadingRoute: false,
+  cardHover: 'Peashooter',
   cardModal: {
     card: 'Peashooter',
     show: false,

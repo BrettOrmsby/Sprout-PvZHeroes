@@ -14,15 +14,12 @@
           :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
           :alt="card.class"
         />
-        <Badge class="set" :class="'set ' + card.rarity"
-          >{{ card.set.charAt(0).toUpperCase() + card.set.slice(1) }} -
-          {{ card.rarity.charAt(0).toUpperCase() }}</Badge
-        >
+        <SetPill :card="card" />
       </div>
     </template>
     <img :src="card.image" :alt="card.name" class="main-image" />
     <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
-    <p class="abilities" v-html="replaceImages(card.abilities)"></p>
+    <p class="abilities" v-html="replaceCardText(card.abilities)"></p>
     <p class="flavour">
       <em>{{ card.flavour }}</em>
     </p>
@@ -34,16 +31,10 @@ import states from '@/store/states'
 import getCard from '@/lib/getCard'
 import { computed } from 'vue'
 import Dialog from 'primevue/dialog'
-import Badge from 'primevue/badge'
+import SetPill from './deck/SetPill.vue'
+import replaceCardText from '@/lib/replaceCardText'
 
 const card = computed(() => getCard(states.cardModal.card))
-const replaceImages = (input: string) => {
-  return input.replace(/\{\{(.+?)\}\}/g, (item) => {
-    const ability = item.slice(2, -2)
-
-    return `<img class="abilityIcon" src="/images/abilities/${ability.toLowerCase()}.png" alt="${ability}"/>`
-  })
-}
 </script>
 
 <style scoped>
@@ -51,11 +42,12 @@ const replaceImages = (input: string) => {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: var(--inline-space);
 }
 .class {
   width: 1em;
-  margin-left: var(--inline-space);
 }
+
 .main-image {
   display: block;
   margin: 0 auto;
@@ -69,7 +61,7 @@ const replaceImages = (input: string) => {
   white-space: pre-wrap;
   text-align: center;
 }
-:deep().abilityIcon {
+:deep(.abilityIcon) {
   height: 1em;
   display: inline;
   vertical-align: middle;
@@ -79,32 +71,5 @@ const replaceImages = (input: string) => {
   text-align: center;
   font-size: 0.8em;
   margin: 0;
-}
-
-.p-badge {
-  margin: 0;
-  color: #151515;
-  font-size: 0.6em;
-  margin-left: var(--inline-space);
-  border-radius: 100em;
-}
-
-.common {
-  background-color: #f5f5dc;
-}
-.uncommon {
-  background-color: #959a9d;
-}
-.rare {
-  background-color: #ea9c45;
-}
-.super-rare {
-  background-color: #885cd5;
-}
-.legendary {
-  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
-}
-.event {
-  background-color: #e66d59;
 }
 </style>
