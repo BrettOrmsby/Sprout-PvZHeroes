@@ -49,7 +49,7 @@
           @click="deleteDeck"
           severity="danger"
           :aria-expanded="isConfirmVisible"
-          :aria-controls="isConfirmVisible ? 'confirm' : null"
+          :aria-controls="isConfirmVisible ? 'confirm' : undefined"
           :disabled="isLoading"
         />
         <Button :loading="isLoading" label="Update" type="submit" :disabled="isDeleting" />

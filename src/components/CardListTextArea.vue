@@ -45,8 +45,8 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import getCard from '@/lib/getCard'
-import plants from '@/assets/plants.json'
-import zombies from '@/assets/zombies.json'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
 import getHero from '@/lib/getHero'
 import Textarea from 'primevue/textarea'
 const props = defineProps<{

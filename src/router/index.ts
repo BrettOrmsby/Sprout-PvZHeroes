@@ -64,7 +64,6 @@ const router = createRouter({
     {
       name: 'Profile',
       path: '/profile/:username',
-      props: true,
       component: () => import('@/pages/ProfilePage.vue'),
       beforeEnter: async (to) => {
         const { supabase } = useSupabase()
@@ -94,7 +93,6 @@ const router = createRouter({
     {
       name: 'ViewDeck',
       path: '/deck/:id',
-      props: true,
       component: () => import('@/pages/ViewDeck.vue'),
       beforeEnter: async (to) => {
         const { supabase } = useSupabase()

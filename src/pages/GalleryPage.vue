@@ -68,14 +68,13 @@
               <span>{{ key }}</span>
             </h2>
             <div class="card-group">
-              <DeferredContent
+              <div
                 v-for="card in value.sort(
                   (a, b) => a.cost - b.cost || a.name.localeCompare(b.name),
                 )"
                 :key="card.name"
               >
                 <PVZCard
-                  :key="card.name"
                   :is-valid="true"
                   :card="card"
                   :amount="4"
@@ -87,7 +86,7 @@
                       !states.deckFilter.cardsMatchingFilter.includes(card.name),
                   }"
                 />
-              </DeferredContent>
+              </div>
             </div>
           </template>
         </div>
@@ -106,9 +105,9 @@ import TheFooter from '@/components/TheFooter.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
 import SideBar from '@/components/SideBar.vue'
 import states from '@/store/states'
-import heroData from '@/assets/heros.json'
-import plants from '@/assets/plants.json'
-import zombies from '@/assets/zombies.json'
+import heroData from '@/content/heros.json'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
 import { computed, ref } from 'vue'
 import type { Card } from '@/lib/types'
 import Avatar from 'primevue/avatar'

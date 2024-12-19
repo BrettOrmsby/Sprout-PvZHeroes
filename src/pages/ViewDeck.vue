@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import useAuthUser from '@/composables/UseAuthUser'
 import deck from '@/store/deck'
-import { computed, onMounted, watch } from 'vue'
+import { computed } from 'vue'
 import SideBar from '@/components/SideBar.vue'
 import DeckHeader from '@/components/deck/DeckHeader.vue'
 import TheDeck from '@/components/deck/TheDeck.vue'

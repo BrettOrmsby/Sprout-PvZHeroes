@@ -39,8 +39,8 @@ import Button from 'primevue/button'
 
 import generateQuery from '@/lib/parse-query/generateQuery'
 import type { Card } from '@/lib/types'
-import zombies from '@/assets/zombies.json'
-import plants from '@/assets/plants.json'
+import zombies from '@/content/zombies.json'
+import plants from '@/content/plants.json'
 import doesMatchQuery from '@/lib/matchQuery'
 
 const { isTitleVisible } = defineProps<{ isTitleVisible?: boolean }>()

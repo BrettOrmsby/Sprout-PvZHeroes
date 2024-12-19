@@ -1,6 +1,6 @@
-import plants from '@/assets/plants.json'
-import zombies from '@/assets/zombies.json'
-import superPowers from '@/assets/superpowers.json'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
+import superPowers from '@/content/superpowers.json'
 import type { Card } from './types'
 
 export default function getCard(name: string) {

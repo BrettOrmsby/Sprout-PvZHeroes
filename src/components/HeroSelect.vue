@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import heroData from '@/assets/heros.json'
+import heroData from '@/content/heros.json'
 import Select from 'primevue/select'
 import getHero from '@/lib/getHero'
 

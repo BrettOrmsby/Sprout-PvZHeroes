@@ -40,7 +40,7 @@
 
 <script lang="ts" setup>
 import getCard from '@/lib/getCard'
-import heroData from '@/assets/heros.json'
+import heroData from '@/content/heros.json'
 import states from '@/store/states'
 import { computed } from 'vue'
 import Dialog from 'primevue/dialog'

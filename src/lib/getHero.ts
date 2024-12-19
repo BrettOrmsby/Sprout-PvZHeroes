@@ -1,4 +1,4 @@
-import heros from '@/assets/heros.json'
+import heros from '@/content/heros.json'
 import type { Hero } from './types'
 
 export default function getHero(name: string) {
