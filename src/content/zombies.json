@@ -94,7 +94,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card.",
+    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card that costs 3{{Brain}} or less.",
     "flavour": "Just a quick bite."
   },
   {
@@ -387,7 +387,7 @@
     "tribes": ["Pet"],
     "cost": 1,
     "strength": 0,
-    "health": 5,
+    "health": 3,
     "abilities": "This gets +3{{Strength}} this turn when you play another Pet.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
@@ -1381,8 +1381,8 @@
     "tribes": ["Gargantuar", "Mime"],
     "cost": 5,
     "strength": 5,
-    "health": 7,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\nWhen a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
+    "health": 6,
+    "abilities": "When a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
     "flavour": "The Gargantuar Mime groans like any other zombie. He just does it silently, and in French."
   },
   {
@@ -1723,13 +1723,13 @@
   },
   {
     "name": "Cakesplosion",
-    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734453360/cakesplosion.png",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f1/CakesplosionH.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Crazy",
     "type": "Trick",
     "tribes": ["Imp", "Party"],
-    "cost": 3,
+    "cost": 4,
     "strength": null,
     "health": null,
     "abilities": "Do 4 damage to a Plant.",

@@ -24,7 +24,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Do 2 damage.\nYou get +2{{Sun}}.",
+    "abilities": "Do 2 damage.\nYou get +1{{Sun}} for the rest of the game.",
     "flavour": "Solar Flare never met a sunscreen strong enough to stop her."
   },
   {

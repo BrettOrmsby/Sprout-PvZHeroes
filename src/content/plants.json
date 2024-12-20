@@ -175,7 +175,7 @@
     "class": "Guardian",
     "type": "Trick",
     "tribes": [],
-    "cost": 2,
+    "cost": 1,
     "strength": null,
     "health": null,
     "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a Galactic Gardens card.",
