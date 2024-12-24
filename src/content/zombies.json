@@ -94,7 +94,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card that costs 3{{Brain}} or less.",
+    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card.",
     "flavour": "Just a quick bite."
   },
   {
@@ -3137,7 +3137,7 @@
   },
   {
     "name": "Mini-Ninja",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/19/Mini-NinjaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789246/mini-ninja.png",
     "set": "basic",
     "rarity": "common",
     "class": "Sneaky",
@@ -3277,7 +3277,7 @@
   },
   {
     "name": "Firefighter",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/FirefighterH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789363/firefighter.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Sneaky",
@@ -3431,7 +3431,7 @@
   },
   {
     "name": "Zombot Stomp",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Zombot_StompH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789441/zombot_stomp.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Sneaky",
@@ -3473,7 +3473,7 @@
   },
   {
     "name": "Blowgun Imp",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/85/Blowgun_ImpH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789490/blowgun_imp.png",
     "set": "colossal",
     "rarity": "rare",
     "class": "Sneaky",
@@ -3529,7 +3529,7 @@
   },
   {
     "name": "Pogo Bouncer",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Pogo_BouncerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789536/pogo_bouncer.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Sneaky",
@@ -3543,7 +3543,7 @@
   },
   {
     "name": "Tomb Raiser Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/31/Tomb_Raiser_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789593/tomb_raiser_zombie.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Sneaky",
@@ -3557,7 +3557,7 @@
   },
   {
     "name": "Ducky Tube Zombie",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/06/Ducky_Tube_ZombieH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789641/ducky_tube_zombie.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Sneaky",
@@ -3795,7 +3795,7 @@
   },
   {
     "name": "Zombie High Diver",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Zombie_High_DiverH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1734789812/zombie_high_diver.png",
     "set": "event",
     "rarity": "event",
     "class": "Sneaky",
