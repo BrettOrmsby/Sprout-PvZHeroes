@@ -11,7 +11,7 @@
   <Toolbar>
     <template #start>
       <Button
-        v-if="isUsersDeck"
+        v-if="deck.isUsersDeck"
         @click="states.editModal = true"
         severity="secondary"
         label="Settings"
@@ -92,7 +92,6 @@ import type { Deck } from '@/lib/types'
 const deck = useDeckStore()
 
 const { id, isSignedIn } = useAuthUser()
-const isUsersDeck = computed(() => id.value === deck.creator)
 const { supabase } = useSupabase()
 const router = useRouter()
 

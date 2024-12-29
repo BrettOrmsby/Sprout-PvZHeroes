@@ -4,7 +4,7 @@
     >The Deck Is Empty</Message
   >
   <div v-else class="library-container">
-    <template v-if="isUsersDeck">
+    <template v-if="deck.isUsersDeck">
       <PVZCardWithMenu
         v-for="card in cards"
         :key="card.name"
@@ -39,13 +39,10 @@ import Message from 'primevue/message'
 import states from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 import { useUserStore } from '@/store/user'
-import useAuthUser from '@/composables/UseAuthUser'
 import { onBeforeRouteUpdate } from 'vue-router'
 
 const user = useUserStore()
 const deck = useDeckStore()
-const { id } = useAuthUser()
-const isUsersDeck = computed(() => id.value === deck.creator)
 
 const cards = computed(() =>
   Object.keys(deck.list)

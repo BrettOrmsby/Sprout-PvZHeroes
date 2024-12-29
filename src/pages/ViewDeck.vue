@@ -8,7 +8,7 @@
       <div class="main-content">
         <DeckToolbar />
         <TheDeck />
-        <AddCards v-if="isUsersDeck" />
+        <AddCards v-if="deck.isUsersDeck" />
       </div>
     </div>
     <Divider />
@@ -21,9 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import useAuthUser from '@/composables/UseAuthUser'
 import { useDeckStore } from '@/store/deck'
-import { computed } from 'vue'
 import SideBar from '@/components/SideBar.vue'
 import DeckHeader from '@/components/deck/DeckHeader.vue'
 import TheDeck from '@/components/deck/TheDeck.vue'
@@ -36,8 +34,6 @@ import DeckCharts from '@/components/deck/DeckCharts.vue'
 import DeckToolbar from '@/components/deck/DeckToolbar.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import Divider from 'primevue/divider'
-import throwError from '@/lib/throwError'
-import useSupabase from '@/composables/UseSupabase'
 import useHoverShortcut from '@/composables/useHoverShortcut'
 
 const deck = useDeckStore()
@@ -72,9 +68,6 @@ useHoverShortcut({
     },
   },
 })
-
-const { id } = useAuthUser()
-const isUsersDeck = computed(() => id.value === deck.creator)
 </script>
 
 <style scoped>

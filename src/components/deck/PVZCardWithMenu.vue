@@ -7,8 +7,8 @@
     :card="card"
     :isValid="isValid"
     :data-card-name="card.name"
-    :data-can-add="isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))"
-    :data-can-remove="isUsersDeck && props.isInDeck"
+    :data-can-add="deck.isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))"
+    :data-can-remove="deck.isUsersDeck && props.isInDeck"
     :class="class"
   />
   <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="width: auto">
@@ -30,7 +30,6 @@
 </template>
 
 <script lang="ts" setup>
-import useAuthUser from '@/composables/UseAuthUser'
 import { ref, computed } from 'vue'
 import type { Card, Hero } from '@/lib/types'
 import states from '@/store/states'
@@ -61,9 +60,6 @@ const isValid = computed(
   () => numberLeft.value !== 0 && hero.value.class.includes(props.card.class),
 )
 
-const { id } = useAuthUser()
-
-const isUsersDeck = computed(() => id.value === deck.creator)
 const updateDeck = async (newList: Record<string, number>) => {
   await deck.update({
     list: newList,
@@ -109,7 +105,7 @@ const toggle = (event: Event) => {
 }
 
 const items = computed(() => {
-  if (!isUsersDeck.value) {
+  if (!deck.isUsersDeck) {
     return [
       {
         label: 'View',

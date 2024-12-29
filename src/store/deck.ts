@@ -1,9 +1,11 @@
+import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import type { Deck } from '@/lib/types'
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 const { supabase } = useSupabase()
+const { id: authId } = useAuthUser()
 
 function generateDeckStore(identifier: string) {
   return defineStore(identifier, () => {
@@ -16,6 +18,8 @@ function generateDeckStore(identifier: string) {
     const list = ref<Record<string, number>>({})
     const last_updated = ref('')
     const description = ref('')
+
+    const isUsersDeck = computed(() => authId.value === creator.value)
 
     function set(data: Deck) {
       id.value = data.id
@@ -69,6 +73,7 @@ function generateDeckStore(identifier: string) {
       list,
       last_updated,
       description,
+      isUsersDeck,
       loadId,
       update,
     }

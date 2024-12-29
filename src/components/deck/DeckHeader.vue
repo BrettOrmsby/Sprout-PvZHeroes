@@ -36,10 +36,13 @@
           >{{ user.username }}</RouterLink
         >
       </div>
-      <h1 @click="() => isUsersDeck && openSettings()" :class="{ clickable: isUsersDeck }">
+      <h1
+        @click="() => deck.isUsersDeck && openSettings()"
+        :class="{ clickable: deck.isUsersDeck }"
+      >
         {{ deck.name }}
       </h1>
-      <p @click="() => isUsersDeck && openSettings()" :class="{ clickable: isUsersDeck }">
+      <p @click="() => deck.isUsersDeck && openSettings()" :class="{ clickable: deck.isUsersDeck }">
         {{ deck.description }}
       </p>
       <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
@@ -57,7 +60,6 @@ import relativeTime from 'dayjs/plugin/relativeTime'
 import Avatar from 'primevue/avatar'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
 import { useUserStore } from '@/store/user'
-import useAuthUser from '@/composables/UseAuthUser'
 
 const user = useUserStore()
 const deck = useDeckStore()
@@ -65,9 +67,7 @@ const deck = useDeckStore()
 dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)
 
-const { id } = useAuthUser()
 const hero = computed(() => getHero(deck.hero))
-const isUsersDeck = computed(() => id.value === deck.creator)
 
 const timeSinceUpdate = computed(() => {
   // eslint-disable-next-line
