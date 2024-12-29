@@ -841,7 +841,7 @@
   },
   {
     "name": "Seedling",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/ff/SeedlingH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1735050035/seedling.png",
     "set": "basic",
     "rarity": "common",
     "class": "Kabloom",
@@ -2605,7 +2605,7 @@
   },
   {
     "name": "Melon-Pult",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/18/Melon-PultH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1735050169/melon-pult.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Smarty",
