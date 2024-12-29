@@ -48,7 +48,7 @@
 </template>
 
 <script lang="ts" setup>
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 import getHero from '@/lib/getHero'
 import { ref, computed, onUnmounted } from 'vue'
@@ -58,6 +58,8 @@ import Avatar from 'primevue/avatar'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
 import user from '@/store/user'
 import useAuthUser from '@/composables/UseAuthUser'
+
+const deck = useDeckStore()
 
 dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)

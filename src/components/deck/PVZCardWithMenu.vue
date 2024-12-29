@@ -39,10 +39,11 @@ import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import Menu from 'primevue/menu'
 import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from 'lucide-vue-next'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import PVZCard from '@/components/PVZCard.vue'
 const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>()
 
+const deck = useDeckStore()
 const hero = computed<Hero>(
   () => [...heroData.plants, ...heroData.zombies].find((e) => e.name === deck.hero) as Hero,
 )
@@ -65,23 +66,11 @@ const isValid = computed(
 const { id } = useAuthUser()
 
 const isUsersDeck = computed(() => id.value === deck.creator)
-const { supabase } = useSupabase()
 const updateDeck = async (newList: Record<string, number>) => {
-  const { data, error } = await supabase
-    .from('decks')
-    .update({
-      list: newList,
-      is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
-    })
-    .eq('id', deck.id)
-    .select()
-    .single()
-
-  if (error) {
-    throwError(error)
-    return
-  }
-  Object.assign(deck, data)
+  await deck.update({
+    list: newList,
+    is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+  })
 }
 
 const addCard = async () => {

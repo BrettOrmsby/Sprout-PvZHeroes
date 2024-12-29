@@ -113,7 +113,6 @@ const compareDeckErrorMessage = ref('')
 const isCompareDeckError = ref(false)
 const isCompareDeckLoading = ref(false)
 const compareDecks = async () => {
-  console.log(to)
   const toId = to.value.split('/')[to.value.split('/').length - 1]
 
   if (toId === props.id) {

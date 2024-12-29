@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import user from '@/store/user'
-import deck, { compareDeck } from '@/store/deck'
+import { useDeckStore, useCompareStore } from '@/store/deck'
 import states from '@/store/states'
 
 const router = createRouter({
@@ -95,29 +95,23 @@ const router = createRouter({
       path: '/deck/:id',
       component: () => import('@/pages/ViewDeck.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase()
-        const { data, error } = await supabase
-          .from('decks')
-          .select()
-          .eq('id', to.params.id)
-          .single()
-
-        if (error) {
+        const deck = useDeckStore()
+        const isLoadDeckError = await deck.loadId(to.params.id.toString())
+        if (isLoadDeckError) {
           return { name: '404' }
-        } else {
-          Object.assign(deck, data)
         }
 
+        const { supabase } = useSupabase()
         const { data: creatorData, error: creatorError } = await supabase
           .from('profiles')
           .select('username, profile_image')
-          .eq('id', data.creator)
+          .eq('id', deck.creator)
           .single()
         if (creatorError) {
           return { name: '404' }
         } else {
           Object.assign(user, creatorData)
-          document.title = `${data.name} • Sprout`
+          document.title = `${deck.name} • Sprout`
         }
 
         states.deckFilter.hideCards = false
@@ -130,31 +124,18 @@ const router = createRouter({
       props: true,
       component: () => import('@/pages/ComparePage.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase()
-        const { data, error } = await supabase
-          .from('decks')
-          .select()
-          .eq('id', to.params.id)
-          .single()
-
-        if (error) {
+        const deck = useDeckStore()
+        const isLoadDeckError = await deck.loadId(to.params.id.toString())
+        if (isLoadDeckError) {
           return { name: '404' }
-        } else {
-          Object.assign(deck, data)
         }
 
-        const { data: compare, error: compareError } = await supabase
-          .from('decks')
-          .select()
-          .eq('id', to.params.to)
-          .single()
-
-        if (compareError) {
+        const compareDeck = useCompareStore()
+        const isLoadCompareDeckError = await compareDeck.loadId(to.params.to.toString())
+        if (isLoadCompareDeckError) {
           return { name: '404' }
-        } else {
-          Object.assign(compareDeck, compare)
         }
-        document.title = `Compare ${data.name} to ${compare.name} • Sprout`
+        document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
       },
     },
     {

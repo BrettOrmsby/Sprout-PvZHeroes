@@ -23,7 +23,7 @@
 
 <script lang="ts" setup>
 import states from '@/store/states'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import getCard from '@/lib/getCard'
 import { computed, onMounted } from 'vue'
 import SetPill from '@/components/deck/SetPill.vue'
@@ -32,6 +32,8 @@ import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import getHero from '@/lib/getHero'
 import { useRoute } from 'vue-router'
+
+const deck = useDeckStore()
 
 const card = computed(() => getCard(states.cardHover))
 
@@ -54,6 +56,7 @@ onMounted(() => {
         card.health === 1,
     )!.name
   } else {
+    // Get the first card in the deck
     states.cardHover = Object.keys(deck.list)
       .map((name) => getCard(name))
       .sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))[0].name

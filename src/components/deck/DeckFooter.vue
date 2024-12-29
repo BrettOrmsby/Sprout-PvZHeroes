@@ -23,9 +23,11 @@
 import calculateSparkCost from '@/lib/calculateSparkCost'
 import getCard from '@/lib/getCard'
 import type { Card } from '@/lib/types'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import Badge from 'primevue/badge'
 import { computed } from 'vue'
+
+const deck = useDeckStore()
 
 const cardsInDeck = computed(() => {
   const deckCards = []

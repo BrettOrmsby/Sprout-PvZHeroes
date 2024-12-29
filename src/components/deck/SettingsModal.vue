@@ -60,7 +60,7 @@
 
 <script lang="ts" setup>
 import states from '@/store/states'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import { ref, watch } from 'vue'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
@@ -72,6 +72,8 @@ import InputText from 'primevue/inputtext'
 import Textarea from 'primevue/textarea'
 import Button from 'primevue/button'
 import ToggleSwitch from 'primevue/toggleswitch'
+
+const deck = useDeckStore()
 
 const reloadList = ref(0)
 
@@ -105,23 +107,12 @@ const updateDeck = async () => {
   }
 
   isLoading.value = true
-  const { data, error } = await supabase
-    .from('decks')
-    .update({
-      ...newInfo.value,
-      is_complete:
-        Object.values(newInfo.value.list).reduce((prev: number, curr: number) => prev + curr, 0) ===
-        40,
-    })
-    .eq('id', deck.id)
-    .select()
-  if (error) {
-    isLoading.value = false
-    throwError(error)
-    return
-  }
-
-  Object.assign(deck, data[0])
+  await deck.update({
+    ...newInfo.value,
+    is_complete:
+      Object.values(newInfo.value.list).reduce((prev: number, curr: number) => prev + curr, 0) ===
+      40,
+  })
 
   isLoading.value = false
   states.editModal = false

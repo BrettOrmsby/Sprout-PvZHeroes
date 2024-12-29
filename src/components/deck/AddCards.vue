@@ -41,7 +41,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import plants from '@/content/plants.json'
@@ -54,6 +54,8 @@ import TabList from 'primevue/tablist'
 import Tab from 'primevue/tab'
 import TabPanels from 'primevue/tabpanels'
 import TabPanel from 'primevue/tabpanel'
+
+const deck = useDeckStore()
 
 const hero = computed(() => getHero(deck.hero))
 const isPlant = computed(() => heroData.plants.some((e) => e.name === deck.hero))

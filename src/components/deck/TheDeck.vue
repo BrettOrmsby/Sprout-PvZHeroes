@@ -37,12 +37,13 @@ import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import Message from 'primevue/message'
 import states from '@/store/states'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import user from '@/store/user'
 import useAuthUser from '@/composables/UseAuthUser'
 import { onBeforeRouteUpdate } from 'vue-router'
 import useSupabase from '@/composables/UseSupabase'
 
+const deck = useDeckStore()
 const { id } = useAuthUser()
 const isUsersDeck = computed(() => id.value === deck.creator)
 
@@ -58,25 +59,24 @@ const showCard = (card: string) => {
 }
 
 onBeforeRouteUpdate(async (to) => {
-  const { supabase } = useSupabase()
-  const { data, error } = await supabase.from('decks').select().eq('id', to.params.id).single()
-
-  if (error) {
+  const deck = useDeckStore()
+  const isLoadDeckError = await deck.loadId(to.params.id.toString())
+  if (isLoadDeckError) {
     return { name: '404' }
-  } else {
-    Object.assign(deck, data)
   }
+
+  const { supabase } = useSupabase()
 
   const { data: creatorData, error: creatorError } = await supabase
     .from('profiles')
     .select('username, profile_image')
-    .eq('id', data.creator)
+    .eq('id', deck.creator)
     .single()
   if (creatorError) {
     return { name: '404' }
   } else {
     Object.assign(user, creatorData)
-    document.title = `${data.name} • Sprout`
+    document.title = `${deck.name} • Sprout`
   }
 
   states.deckFilter.hideCards = false

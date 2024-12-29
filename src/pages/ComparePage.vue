@@ -46,14 +46,16 @@ import CardModal from '@/components/CardModal.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import { ref, computed } from 'vue'
 import getCard from '@/lib/getCard'
-import deck, { compareDeck } from '@/store/deck'
+import { useDeckStore, useCompareStore } from '@/store/deck'
 import states from '@/store/states'
 import { onBeforeRouteUpdate } from 'vue-router'
-import useSupabase from '@/composables/UseSupabase'
 
 defineProps<{ id: string; to: string }>()
 
-const getDeck = (id: string) => (deck.id === id ? deck! : compareDeck!)
+const deck = useDeckStore()
+const compareDeck = useCompareStore()
+
+const getDeck = (id: string) => (deck.id === id ? deck : compareDeck)
 
 const sortList = (list: Record<string, number>) =>
   Object.keys(list)
@@ -102,27 +104,18 @@ const showCard = (card: string) => {
 const toInput = ref('https://sprout-deckbuider.vercel.app/deck/' + compareDeck.id)
 
 onBeforeRouteUpdate(async (to) => {
-  const { supabase } = useSupabase()
-  const { data, error } = await supabase.from('decks').select().eq('id', to.params.id).single()
-
-  if (error) {
+  const deck = useDeckStore()
+  const isLoadDeckError = await deck.loadId(to.params.id.toString())
+  if (isLoadDeckError) {
     return { name: '404' }
-  } else {
-    Object.assign(deck, data)
   }
 
-  const { data: compare, error: compareError } = await supabase
-    .from('decks')
-    .select()
-    .eq('id', to.params.to)
-    .single()
-
-  if (compareError) {
+  const compareDeck = useCompareStore()
+  const isLoadCompareDeckError = await compareDeck.loadId(to.params.to.toString())
+  if (isLoadCompareDeckError) {
     return { name: '404' }
-  } else {
-    Object.assign(compareDeck, compare)
   }
-  document.title = `Compare ${data.name} to ${compare.name} • Sprout`
+  document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
 })
 </script>
 

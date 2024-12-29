@@ -6,10 +6,12 @@
 </template>
 
 <script lang="ts" setup>
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import getCard from '@/lib/getCard'
 import { computed, ref, onMounted } from 'vue'
 import Chart from 'primevue/chart'
+
+const deck = useDeckStore()
 
 const graphColours = ref({
   muted: '',

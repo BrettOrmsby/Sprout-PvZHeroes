@@ -81,13 +81,15 @@ import HighlightPopover from '@/components/HighlightPopover.vue'
 import { Cog, Paperclip, Repeat, Copy, Highlighter } from 'lucide-vue-next'
 import states from '@/store/states'
 import useAuthUser from '@/composables/UseAuthUser'
-import deck from '@/store/deck'
+import { useDeckStore } from '@/store/deck'
 import { computed, ref } from 'vue'
 import { useToast } from 'primevue/usetoast'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import { useRouter } from 'vue-router'
 import type { Deck } from '@/lib/types'
+
+const deck = useDeckStore()
 
 const { id, isSignedIn } = useAuthUser()
 const isUsersDeck = computed(() => id.value === deck.creator)
@@ -150,7 +152,6 @@ const duplicateDeck = async () => {
 
   if (error) {
     throwError(error)
-    console.log(error)
     return
   }
   isDuplicationLoading.value = false
