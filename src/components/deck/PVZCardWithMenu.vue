@@ -30,9 +30,7 @@
 </template>
 
 <script lang="ts" setup>
-import throwError from '@/lib/throwError'
 import useAuthUser from '@/composables/UseAuthUser'
-import useSupabase from '@/composables/UseSupabase'
 import { ref, computed } from 'vue'
 import type { Card, Hero } from '@/lib/types'
 import states from '@/store/states'

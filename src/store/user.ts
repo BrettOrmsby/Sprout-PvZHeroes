@@ -1,9 +1,70 @@
-import { reactive } from 'vue'
+import useSupabase from '@/composables/UseSupabase'
+import throwError from '@/lib/throwError'
 import type { User } from '@/lib/types'
+import { defineStore, acceptHMRUpdate } from 'pinia'
+import { ref } from 'vue'
 
-export default reactive<User>({
-  username: '',
-  profile_image: '',
-  id: '',
-  created_at: '',
+const { supabase } = useSupabase()
+
+export const useUserStore = defineStore('user', () => {
+  const username = ref('')
+  const profile_image = ref('')
+  const id = ref('')
+  const created_at = ref('')
+
+  function set(data: User) {
+    username.value = data.username
+    profile_image.value = data.profile_image
+    id.value = data.id
+    created_at.value = data.created_at
+  }
+
+  async function loadFromUsername(username: string) {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('username', username)
+      .returns<User[]>()
+      .single()
+
+    if (!error) {
+      set(data)
+    }
+    return error
+  }
+  async function loadFromId(id: string) {
+    const { data, error } = await supabase
+      .from('profiles')
+      .select('*')
+      .eq('id', id)
+      .returns<User[]>()
+      .single()
+
+    if (!error) {
+      set(data)
+    }
+    return error
+  }
+
+  async function update(data: Partial<User>) {
+    const { data: newData, error } = await supabase
+      .from('decks')
+      .update(data)
+      .eq('username', username.value)
+      .returns<User[]>()
+      .select()
+      .single()
+
+    if (error) {
+      throwError(error)
+      return error
+    }
+    set(newData)
+  }
+
+  return { username, profile_image, id, created_at, loadFromUsername, loadFromId, update }
 })
+
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useUserStore, import.meta.hot))
+}

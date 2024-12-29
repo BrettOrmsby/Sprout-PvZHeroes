@@ -56,9 +56,10 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import Avatar from 'primevue/avatar'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
-import user from '@/store/user'
+import { useUserStore } from '@/store/user'
 import useAuthUser from '@/composables/UseAuthUser'
 
+const user = useUserStore()
 const deck = useDeckStore()
 
 dayjs.extend(relativeTime)

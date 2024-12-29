@@ -2,7 +2,7 @@ import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import type { Deck } from '@/lib/types'
 import { defineStore, acceptHMRUpdate } from 'pinia'
-import { ref, type Ref } from 'vue'
+import { ref } from 'vue'
 const { supabase } = useSupabase()
 
 function generateDeckStore(identifier: string) {

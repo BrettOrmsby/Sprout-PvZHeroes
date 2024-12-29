@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
-import user from '@/store/user'
+import { useUserStore } from '@/store/user'
 import { useDeckStore, useCompareStore } from '@/store/deck'
 import states from '@/store/states'
 
@@ -66,17 +66,10 @@ const router = createRouter({
       path: '/profile/:username',
       component: () => import('@/pages/ProfilePage.vue'),
       beforeEnter: async (to) => {
-        const { supabase } = useSupabase()
-        const { data, error } = await supabase
-          .from('profiles')
-          .select('*')
-          .eq('username', to.params.username)
-          .single()
-
-        if (error) {
+        const user = useUserStore()
+        const isLoadError = await user.loadFromUsername(to.params.username.toString())
+        if (isLoadError) {
           return { name: '404' }
-        } else {
-          Object.assign(user, data)
         }
         document.title = `${to.params.username} • Sprout`
       },
@@ -101,19 +94,13 @@ const router = createRouter({
           return { name: '404' }
         }
 
-        const { supabase } = useSupabase()
-        const { data: creatorData, error: creatorError } = await supabase
-          .from('profiles')
-          .select('username, profile_image')
-          .eq('id', deck.creator)
-          .single()
-        if (creatorError) {
+        const user = useUserStore()
+        const isUserLoadError = await user.loadFromId(deck.creator)
+        if (isUserLoadError) {
           return { name: '404' }
-        } else {
-          Object.assign(user, creatorData)
-          document.title = `${deck.name} • Sprout`
         }
 
+        document.title = `${deck.name} • Sprout`
         states.deckFilter.hideCards = false
         states.deckFilter.cardsMatchingFilter = []
       },

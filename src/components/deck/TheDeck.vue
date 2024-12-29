@@ -38,11 +38,11 @@ import PVZCard from '@/components/PVZCard.vue'
 import Message from 'primevue/message'
 import states from '@/store/states'
 import { useDeckStore } from '@/store/deck'
-import user from '@/store/user'
+import { useUserStore } from '@/store/user'
 import useAuthUser from '@/composables/UseAuthUser'
 import { onBeforeRouteUpdate } from 'vue-router'
-import useSupabase from '@/composables/UseSupabase'
 
+const user = useUserStore()
 const deck = useDeckStore()
 const { id } = useAuthUser()
 const isUsersDeck = computed(() => id.value === deck.creator)
@@ -65,20 +65,12 @@ onBeforeRouteUpdate(async (to) => {
     return { name: '404' }
   }
 
-  const { supabase } = useSupabase()
-
-  const { data: creatorData, error: creatorError } = await supabase
-    .from('profiles')
-    .select('username, profile_image')
-    .eq('id', deck.creator)
-    .single()
-  if (creatorError) {
+  const isUserLoadError = await user.loadFromId(deck.creator)
+  if (isUserLoadError) {
     return { name: '404' }
-  } else {
-    Object.assign(user, creatorData)
-    document.title = `${deck.name} • Sprout`
   }
 
+  document.title = `${deck.name} • Sprout`
   states.deckFilter.hideCards = false
   states.deckFilter.cardsMatchingFilter = []
 })

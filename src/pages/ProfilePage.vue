@@ -89,11 +89,12 @@ import { Plus } from 'lucide-vue-next'
 import { computed } from 'vue'
 import type { Deck } from '@/lib/types'
 import { onMounted } from 'vue'
-import user from '@/store/user'
+import { useUserStore } from '@/store/user'
 import { ref } from 'vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import InputText from 'primevue/inputtext'
 
+const user = useUserStore()
 const { supabase } = useSupabase()
 const { id } = useAuthUser()
 
@@ -136,23 +137,13 @@ const updateHeroImage = async () => {
   }
 
   isUpdatingProfileImage.value = true
-  const { data, error } = await supabase
-    .from('profiles')
-    .update({
-      profile_image: selectedHero.value,
-    })
-    .eq('id', id.value)
-    .select()
-    .single()
-
-  if (error) {
-    isUpdatingProfileImage.value = false
-    throwError(error)
-    return
-  }
-  Object.assign(user, data)
-  isChangeHeroModalOpen.value = false
+  const error = user.update({
+    profile_image: selectedHero.value,
+  })
   isUpdatingProfileImage.value = false
+  if (!error) {
+    isChangeHeroModalOpen.value = false
+  }
 }
 
 const isChangeUsernameModalOpen = ref(false)
@@ -169,23 +160,13 @@ const updateUsername = async () => {
   }
 
   isUpdatingUsername.value = true
-  const { data, error } = await supabase
-    .from('profiles')
-    .update({
-      username: selectedUsername.value,
-    })
-    .eq('id', id.value)
-    .select()
-    .single()
-
-  if (error) {
-    isUpdatingUsername.value = false
-    throwError(error)
-    return
-  }
-  Object.assign(user, data)
-  isChangeUsernameModalOpen.value = false
+  const error = user.update({
+    username: selectedUsername.value,
+  })
   isUpdatingUsername.value = false
+  if (!error) {
+    isChangeUsernameModalOpen.value = false
+  }
 }
 </script>
 
