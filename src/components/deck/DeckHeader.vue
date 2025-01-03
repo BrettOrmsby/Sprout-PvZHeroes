@@ -54,7 +54,7 @@
 import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 import getHero from '@/lib/getHero'
-import { ref, computed, onUnmounted } from 'vue'
+import { computed, onUnmounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import Avatar from 'primevue/avatar'

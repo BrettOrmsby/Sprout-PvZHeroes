@@ -232,16 +232,19 @@ h2 {
   justify-content: center;
   align-items: stretch;
 }
+:deep(.amount) {
+  display: none;
+}
 :deep(.card-container) {
   width: 100%;
   height: 100%;
 }
-deferredcontent:has(.hidden),
-:deep(.hidden) {
-  display: none;
-}
 :deep(.highlighted) {
   outline-offset: 4px;
   outline: 2px solid var(--p-yellow-400);
+}
+:deep(.hidden),
+:deep(div:has(> .hidden)) {
+  display: none;
 }
 </style>

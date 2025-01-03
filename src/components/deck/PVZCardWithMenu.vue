@@ -30,12 +30,12 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import type { Card, Hero } from '@/lib/types'
 import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import Menu from 'primevue/menu'
-import { Eye, Plus, Minus, Grid2x2Check, Grid2x2X } from 'lucide-vue-next'
+import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from 'lucide-vue-next'
 import { useDeckStore } from '@/store/deck'
 import PVZCard from '@/components/PVZCard.vue'
 const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>()

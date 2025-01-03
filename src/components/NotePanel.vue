@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import Panel from 'primevue/panel'
-import { Lightbulb, TriangleAlert, Info, CircleX } from 'lucide-vue-next'
+import { CircleX, Info, Lightbulb, TriangleAlert } from 'lucide-vue-next'
 defineProps<{ type: 'tip' | 'note' | 'warning' | 'error' }>()
 
 const headers = {

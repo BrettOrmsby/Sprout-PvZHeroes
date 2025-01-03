@@ -8,7 +8,7 @@
 <script lang="ts" setup>
 import { useDeckStore } from '@/store/deck'
 import getCard from '@/lib/getCard'
-import { computed, ref, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import Chart from 'primevue/chart'
 
 const deck = useDeckStore()

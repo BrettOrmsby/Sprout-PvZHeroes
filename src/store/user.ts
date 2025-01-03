@@ -1,7 +1,7 @@
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import type { User } from '@/lib/types'
-import { defineStore, acceptHMRUpdate } from 'pinia'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
 
 const { supabase } = useSupabase()

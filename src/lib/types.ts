@@ -96,7 +96,6 @@ export type Query = (
         | 'megagrow'
         | 'smarty'
         | 'solar'
-        | 'removed'
         | 'beastly'
         | 'brainy'
         | 'crazy'
@@ -108,6 +107,15 @@ export type Query = (
       property: 'type'
       value: 'plant' | 'trick' | 'environment' | 'zombie' | 'p' | 't' | 'e' | 'fighter' | 'f'
       isNegated: boolean
+    }
+  | {
+      property: 'is'
+      value: 'plant' | 'p' | 'zombie' | 'z'
+      isNegated: boolean
+    }
+  | {
+      property: 'include' | 'i'
+      value: 'token' | 't' | 'removed' | 'r' | 'all' | 'a'
     }
   | {
       property: 'or'

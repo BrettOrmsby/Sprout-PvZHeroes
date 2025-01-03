@@ -1,4 +1,4 @@
-import type { TokenType, Token, QueryError, CompareOperator } from './scanner'
+import type { CompareOperator, QueryError, Token, TokenType } from './scanner'
 import type { Query } from '@/lib/types'
 
 const properties = [
@@ -19,6 +19,9 @@ const properties = [
   'a',
   'flavour',
   'f',
+  'is', // no short form
+  'include',
+  'i',
 ] as const
 
 export type Property = (typeof properties)[number]
@@ -206,7 +209,6 @@ export class Parser {
                 'megagrow',
                 'smarty',
                 'solar',
-                'removed',
                 'beastly',
                 'brainy',
                 'crazy',
@@ -244,6 +246,38 @@ export class Parser {
                 startPos: valueToken.startPos,
                 endPos: valueToken.endPos,
                 message: `Expected a valid type name or type short form.`,
+              })
+              this.#increment()
+              continue
+            }
+            valueToken.value = valueToken.value.toString().toLowerCase()
+          }
+
+          if (propertyName === 'is') {
+            if (
+              !['plant', 'zombie', 'p', 'z'].includes((valueToken.value as string).toLowerCase())
+            ) {
+              this.errors.push({
+                startPos: valueToken.startPos,
+                endPos: valueToken.endPos,
+                message: `Expected a valid is value.`,
+              })
+              this.#increment()
+              continue
+            }
+            valueToken.value = valueToken.value.toString().toLowerCase()
+          }
+
+          if (propertyName === 'include' || propertyName === 'i') {
+            if (
+              !['token', 't', 'removed', 'r', 'all', 'a'].includes(
+                (valueToken.value as string).toLowerCase(),
+              )
+            ) {
+              this.errors.push({
+                startPos: valueToken.startPos,
+                endPos: valueToken.endPos,
+                message: `Expected a valid include value.`,
               })
               this.#increment()
               continue

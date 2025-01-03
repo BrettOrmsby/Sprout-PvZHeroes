@@ -23,15 +23,15 @@
       <label for="hideUnhighlighted">Hide Unhighlighted Cards</label>
       <ToggleSwitch inputId="hideUnhighlighted" v-model="states.deckFilter.hideCards" />
     </form>
-    <router-link :to="{ name: 'HighlightHelp' }">
-      <Button label="Highlight Help" link />
+    <router-link :to="{ name: 'QueryHelp' }">
+      <Button label="Query Help" link />
     </router-link>
   </div>
 </template>
 
 <script lang="ts" setup>
 import states from '@/store/states'
-import { watch } from 'vue'
+import { onMounted, watch } from 'vue'
 import InputText from 'primevue/inputtext'
 import ToggleSwitch from 'primevue/toggleswitch'
 import Message from 'primevue/message'
@@ -47,20 +47,20 @@ const { isTitleVisible } = defineProps<{ isTitleVisible?: boolean }>()
 
 const cards = [...plants, ...zombies] as Card[]
 
-watch(
-  () => states.deckFilter.textQuery,
-  (newVal) => {
-    const result = generateQuery(newVal)
-    states.deckFilter.errors = result.errors
-    if (newVal.length === 0 || result.query.length === 0) {
-      states.deckFilter.cardsMatchingFilter = []
-    } else {
-      states.deckFilter.cardsMatchingFilter = cards
-        .filter((e) => doesMatchQuery(e, result.query))
-        .map((e) => e.name)
-    }
-  },
-)
+onMounted(() => update(states.deckFilter.textQuery))
+watch(() => states.deckFilter.textQuery, update)
+
+function update(newVal: string) {
+  const result = generateQuery(newVal)
+  states.deckFilter.errors = result.errors
+  if (newVal.length === 0 || result.query.length === 0) {
+    states.deckFilter.cardsMatchingFilter = []
+  } else {
+    states.deckFilter.cardsMatchingFilter = cards
+      .filter((e) => doesMatchQuery(e, result.query))
+      .map((e) => e.name)
+  }
+}
 </script>
 
 <style scoped>

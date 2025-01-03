@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import { useUserStore } from '@/store/user'
-import { useDeckStore, useCompareStore } from '@/store/deck'
+import { useCompareStore, useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 
 const router = createRouter({
@@ -142,6 +142,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'SearchCards',
+      path: '/search/cards',
+      component: () => import('@/pages/SearchCardsPage.vue'),
+      meta: {
+        title: 'Search Cards • Sprout',
+      },
+    },
+    {
       name: 'SignOut',
       path: '/sign-out',
       component: () => null,
@@ -152,11 +160,11 @@ const router = createRouter({
       },
     },
     {
-      name: 'HighlightHelp',
-      path: '/highlight-help',
+      name: 'QueryHelp',
+      path: '/query-help',
       component: () => import('@/pages/HighlightHelpPage.vue'),
       meta: {
-        title: 'Highlight Help • Sprout',
+        title: 'Query Help • Sprout',
       },
     },
     {

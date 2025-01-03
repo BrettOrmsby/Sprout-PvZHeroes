@@ -1,7 +1,7 @@
 <template>
   <main>
-    <h1><Highlighter />Highlight Help</h1>
-    <p class="center">A variety of search parameters can be used to find and highlight cards.</p>
+    <h1><Search />Query Help</h1>
+    <p class="center">A variety of search parameters can be used to find cards.</p>
     <div class="topic-container">
       <RouterLink
         v-for="(icon, name) in categories"
@@ -18,24 +18,24 @@
     <Divider />
     <h2 id="name"><component :is="categories.Name" />Name</h2>
     <p>
-      Type the card name or parts of a card name to highlight those cards. Each word is evaluated
+      Type the card name or parts of a card name to find those cards. Each word is evaluated
       separately and is case insensitive. For example,
       <code>Sun flower</code> and <code>Flower sun</code> will produce the same results, cards
       containing the word <strong>Sun</strong> and the word <strong>Flower</strong>.
     </p>
     <p>
-      To restrict the highlighter to highlight cards that contain a phrase including the spaces, the
-      name can be put within double quotes ("). For example, <code>"ing zombie"</code> will exclude
-      the <strong>Zombie King</strong> because it does not contain the exact phrase.
+      To restrict the search to cards that contain a phrase including the spaces, the name can be
+      put within double quotes ("). For example, <code>"ing zombie"</code> will exclude the
+      <strong>Zombie King</strong> because it does not contain the exact phrase.
     </p>
     <NotePanel type="error">
       <p>
         If a phrase is used but there is no ending double quote, the phrase will contain everything
         up until the end of the query. For example,
-        <code>"ing zombie</code> will still work to highlight all cards with the phrase
+        <code>"ing zombie</code> will still work to find all cards with the phrase
         <strong>ing zombie</strong> in their name. However, if you accidentally left out a double
         quote but have another property after it, the query will likely not work as intended. For
-        example, <code>"ing zombie haunting</code> will not highlight the
+        example, <code>"ing zombie haunting</code> will not find the
         <strong>Haunting Zombie</strong> but <code>"ing zombie" haunting</code> will.
       </p></NotePanel
     >
@@ -43,7 +43,7 @@
 
     <h2 id="cost"><component :is="categories.Cost" />Cost</h2>
     <p>
-      To highlight cards that cost a certain amount to play, you can type
+      To find cards that cost a certain amount to play, you can type
       <code>cost:3</code> or <code>cost=3</code>. Alternatively, you can use
       <code>cost&lt;3</code> for all cards that cost less than 3, <code>cost&gt;3</code> for all
       cards that cost greater than 3, <code>cost&lt;=3</code> for all cards that cost less than or
@@ -57,8 +57,8 @@
     </NotePanel>
     <NotePanel type="tip">
       <p>
-        To combine highlight criteria, you can join the terms with a space between them. For
-        example, to highlight all cards with
+        To combine criteria, you can join the terms with a space between them. For example, to find
+        all cards with
         <strong>nut</strong> in their name and that cost over 2, you can use
         <code>nut cost>2</code>.
       </p>
@@ -70,7 +70,7 @@
 
     <h2 id="strength"><component :is="categories.Strength" />Strength</h2>
     <p>
-      To highlight cards that match a strength, you can type
+      To find cards that match a strength, you can type
       <code>strength:3</code> or <code>strength=3</code>. Alternatively, you can use
       <code>strength&lt;3</code> for all cards that are weaker than 3,
       <code>strength&gt;3</code> for all cards that are stronger than 3,
@@ -87,7 +87,7 @@
     <NotePanel type="note">
       <p>
         If the <code>strength</code> parameter is present, even for <code>strength:0</code>, no
-        tricks or environments will be highlighted.
+        tricks or environments will be found.
       </p>
     </NotePanel>
     <NotePanel type="error">
@@ -99,7 +99,7 @@
 
     <h2 id="health"><component :is="categories.Health" />Health</h2>
     <p>
-      To highlight cards that match a health, you can type
+      To find cards that match a health, you can type
       <code>health:3</code> or <code>health=3</code>. Alternatively, you can use
       <code>health&lt;3</code> for all cards that have a less health than 3,
       <code>health&gt;3</code> for all cards that have greater health than 3,
@@ -115,7 +115,7 @@
     <NotePanel type="note">
       <p>
         If the <code>health</code> parameter is present, even for <code>health:0</code>, no tricks
-        or environments will be highlighted.
+        or environments will be found.
       </p>
     </NotePanel>
     <NotePanel type="error">
@@ -123,9 +123,28 @@
     </NotePanel>
     <Divider />
 
+    <h2 id="is"><component :is="categories.Is" />Is</h2>
+    <p>
+      To find cards that are plants, you can use
+      <code>is:plant</code>. The valid values for the <code>is</code> parameter can be used
+      case-insensitively and include the following with their short forms:
+    </p>
+    <DataTable :value="isValues" size="small" stripedRows>
+      <Column field="regular" header="Regular"></Column>
+      <Column field="short" header="Short Form"></Column>
+    </DataTable>
+    <p>
+      Short forms are used the same way as the regular forms. For example,
+      <code>is:zombie</code> is the same as <code>is:z</code>.
+    </p>
+    <NotePanel type="error">
+      <p>If the value of the <code>is</code> parameter is not valid, it will be ignored.</p>
+    </NotePanel>
+    <Divider />
+
     <h2 id="set"><component :is="categories.Set" />Set</h2>
     <p>
-      To highlight cards that were released in a set, you can use
+      To find cards that were released in a set, you can use
       <code>set:premium</code>. The valid values for the <code>set</code> parameter can be used
       case-insensitively and include the following with their short forms:
     </p>
@@ -144,7 +163,7 @@
 
     <h2 id="rarity"><component :is="categories.Rarity" />Rarity</h2>
     <p>
-      To highlight cards of a rarity, you can use
+      To find cards of a rarity, you can use
       <code>rarity:rare</code>. The valid values for the <code>rarity</code> parameter can be used
       case-insensitively and include the following with their short forms:
     </p>
@@ -175,7 +194,7 @@
 
     <h2 id="class"><component :is="categories.Class" />Class</h2>
     <p>
-      To highlight cards of a class, you can use
+      To find cards of a class, you can use
       <code>class:solar</code>. The valid values for the <code>class</code> parameter can be used
       case-insensitively and include the following:
     </p>
@@ -195,7 +214,7 @@
 
     <h2 id="type"><component :is="categories.Type" />Type</h2>
     <p>
-      To highlight cards of a type, you can use
+      To find cards of a type, you can use
       <code>type:trick</code>. The valid values for the <code>type</code> parameter can be used
       case-insensitively and include the following with their short forms:
     </p>
@@ -216,26 +235,26 @@
 
     <h2 id="tribe"><component :is="categories.Tribe" />Tribe</h2>
     <p>
-      To highlight cards of a tribe, you can use
+      To find cards of a tribe, you can use
       <code>tribe:clock</code>.
     </p>
 
     <NotePanel type="tip">
       <p>
         The parameter <code>t</code> is the short form for both the <code>tribe</code> and
-        <code>type</code> parameters. For example, <code>t:berry t:plant</code> will highlight all
+        <code>type</code> parameters. For example, <code>t:berry t:plant</code> will find all
         berries that are plants. However, unlike for the <code>type</code> parameter,
-        <code>t:tric</code> will highlight all tricks because <code>t</code> only checks to see if
-        the card contains the phrase in its types or tribes rather than matching it exactly. For
-        similar reasons, type short forms will not expand to the full form, and the
-        <code>fighter</code> type will not highlight all plants and zombies.
+        <code>t:tric</code> will find all tricks because <code>t</code> only checks to see if the
+        card contains the phrase in its types or tribes rather than matching it exactly. For similar
+        reasons, type short forms will not expand to the full form, and the
+        <code>fighter</code> type will not find all plants and zombies.
       </p>
     </NotePanel>
     <Divider />
 
     <h2 id="abilities"><component :is="categories.Abilities" />Abilities</h2>
     <p>
-      To highlight cards that have certain card abilities, you can use
+      To find cards that have certain card abilities, you can use
       <code>abilities:gravestone</code> case-insensitively. Additionally, you can use a phrase to
       include spaces in the ability: <code>abilities:"when played"</code>.
     </p>
@@ -296,7 +315,7 @@
     <h2 id="flavour"><component :is="categories.Flavour" />Flavour</h2>
 
     <p>
-      To highlight cards that have a certain flavour text, you can use
+      To find cards that have a certain flavour text, you can use
       <code>flavour:fun</code> case-insensitively. Additionally, you can use a phrase to include
       spaces in the flavour text: <code>flavour:"miss it"</code>.
     </p>
@@ -316,8 +335,8 @@
 
     <h2 id="or"><component :is="categories.Or" />Or</h2>
     <p>
-      Ors can be used to highlight cards that are matching one of many conditions. For example, to
-      find cards that have abilities when they are played or revealed, the query could be:
+      Ors can be used to find cards that are matching one of many conditions. For example, to find
+      cards that have abilities when they are played or revealed, the query could be:
       <code>a:"when played" or a:"when revealed"</code>. There can be any number of alternate
       conditions separated by ors: <code>c:1 or c:3 or c:5 or c:7 or c:9</code>.
     </p>
@@ -325,7 +344,7 @@
       Groups can be made by nesting terms in round brackets to make some terms required and others
       part of the or:
       <code>a:when (a:played or a:revealed)</code>. Further, ors can have more ors within them, like
-      the following which highlights all tricks and zombies with play or reveal abilities:
+      the following which finds all tricks and zombies with play or reveal abilities:
       <code>t:trick or t:zombie a:when (a:played or a:revealed)</code>. Groups can be nestled any
       amount of times: <code>(Queen or (Jester s:1 or (cost:3 or cost:5))) or King</code>.
     </p>
@@ -343,14 +362,53 @@
     <h2 id="negation"><component :is="categories.Negation" />Negation</h2>
     <p>
       To negate a term, a hyphen (or minus sign) can prepend the parameter. For example, the
-      following query will highlight all cards not costing 3:
+      following query will find all cards not costing 3:
       <code>-cost:3</code>. To negate a name, the hyphen can prepend the name: <code>-king</code>.
     </p>
     <NotePanel type="tip">
       <p>
-        To highlight names with a value begining with a hyphen, a phrase can be used:
+        To find names with a value beginning with a hyphen, a phrase can be used:
         <code>"-nut"</code>.
       </p>
+    </NotePanel>
+
+    <Divider />
+    <h2 id="include"><component :is="categories.Include" />Include</h2>
+    <p>
+      To include cards that cannot be put in decks, you can use
+      <code>include:all</code>. The valid values for the <code>include</code> parameter can be used
+      case-insensitively and include the following with their short forms:
+    </p>
+    <DataTable :value="includeValues" size="small" stripedRows>
+      <Column field="regular" header="Regular"></Column>
+      <Column field="short" header="Short Form"></Column>
+    </DataTable>
+    <p>
+      Short forms are used the same way as the regular forms. For example,
+      <code>include:all</code> is the same as <code>include:a</code>.
+    </p>
+    <NotePanel type="tip">
+      <p>
+        The short form for the <code>include</code> parameter is <code>i</code>, so the following
+        terms are equivalent: <code>include:token</code> and <code>i:token</code>.
+      </p>
+    </NotePanel>
+    <NotePanel type="note">
+      <p>
+        Tokens and removed cards are not included by default, so negating the
+        <code>include:all</code> will do nothing.
+      </p>
+    </NotePanel>
+    <NotePanel type="note">
+      <p>
+        If multiple include parameters are in the query, they will not overwrite the previous
+        values. For example, <code>include:all</code> is the same as
+        <code>include:token include:removed</code> and <code>include:removed include:all</code>.
+      </p>
+    </NotePanel>
+
+    <NotePanel type="error">
+      <p>If the value of the <code>include</code> parameter is not valid, it will be ignored.</p>
     </NotePanel>
     <ScrollTop />
   </main>
@@ -358,21 +416,23 @@
 
 <script lang="ts" setup>
 import {
-  Highlighter,
-  Signature,
-  Brain,
-  Sun,
-  BicepsFlexed,
-  Heart,
-  Grid2X2,
-  Star,
-  ShieldQuestion,
-  Shapes,
   AlarmClock,
-  Text,
-  MessageSquareQuote,
+  BicepsFlexed,
   Blend,
+  Brain,
+  CirclePlus,
+  Grid2X2,
+  Heart,
+  Leaf,
+  Search,
+  MessageSquareQuote,
   MinusCircle,
+  Shapes,
+  ShieldQuestion,
+  Signature,
+  Star,
+  Sun,
+  Text,
 } from 'lucide-vue-next'
 import ScrollTop from 'primevue/scrolltop'
 import Divider from 'primevue/divider'
@@ -386,6 +446,7 @@ const categories = {
   Cost: Math.random() < 0.5 ? Brain : Sun,
   Strength: BicepsFlexed,
   Health: Heart,
+  Is: Leaf,
   Set: Grid2X2,
   Rarity: Star,
   Class: ShieldQuestion,
@@ -395,7 +456,34 @@ const categories = {
   Flavour: MessageSquareQuote,
   Or: Blend,
   Negation: MinusCircle,
+  Include: CirclePlus,
 }
+
+const isValues = [
+  {
+    regular: 'plant',
+    short: 'p',
+  },
+  {
+    regular: 'zombie',
+    short: 'z',
+  },
+]
+
+const includeValues = [
+  {
+    regular: 'token',
+    short: 't',
+  },
+  {
+    regular: 'removed',
+    short: 'r',
+  },
+  {
+    regular: 'all',
+    short: 'a',
+  },
+]
 
 const setValues = [
   {
@@ -474,9 +562,6 @@ const classValues = [
   },
   {
     regular: 'solar',
-  },
-  {
-    regular: 'removed',
   },
   {
     regular: 'beastly',

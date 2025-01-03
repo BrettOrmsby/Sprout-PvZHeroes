@@ -4,16 +4,41 @@
       <div class="header-container">
         <strong>{{ card.name }}</strong>
         <img
-          v-if="card.class"
+          v-if="card.name === 'Zom-Bats'"
+          class="class"
+          src="/images/classes/brainy.png"
+          alt="Brainy"
+        />
+        <img
+          v-if="card.name === 'Impfinity Clone'"
+          class="class"
+          src="/images/classes/sneaky.png"
+          alt="Sneaky"
+        />
+        <img
+          v-if="card.name === 'Hothead'"
+          class="class"
+          src="/images/classes/kabloom.png"
+          alt="Kabloom"
+        />
+        <span v-if="card.class === 'Removed'" style="color: var(--p-primary-400)">Removed</span>
+        <img
+          v-else-if="card.class"
           class="class"
           :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
           :alt="card.class"
+        />
+        <img
+          v-if="card.name === 'Octo-Pet'"
+          class="class"
+          src="/images/classes/sneaky.png"
+          alt="Sneaky"
         />
       </div>
       <SetPill :card="card" />
       <img :src="card.image" :alt="card.name" class="main-image" />
       <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
-      <p class="abilities" v-html="replaceCardText(card.abilities)"></p>
+      <p class="abilities"><ReplaceCardText :text="card.abilities" /></p>
       <p class="flavour">
         <em>{{ card.flavour }}</em>
       </p>
@@ -27,7 +52,7 @@ import { useDeckStore } from '@/store/deck'
 import getCard from '@/lib/getCard'
 import { computed, onMounted } from 'vue'
 import SetPill from '@/components/deck/SetPill.vue'
-import replaceCardText from '@/lib/replaceCardText'
+import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import getHero from '@/lib/getHero'
@@ -41,6 +66,9 @@ const route = useRoute()
 onMounted(() => {
   if (route.name === 'Gallery') {
     states.cardHover = 'Forget-Me-Nuts'
+    return
+  }
+  if (route.name === 'SearchCards') {
     return
   }
   if (Object.keys(deck.list).length === 0) {

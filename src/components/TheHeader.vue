@@ -16,7 +16,8 @@
           <a :href="href" v-bind="props.action" @click="navigate">
             <Grid2x2 v-if="item.label === 'Gallery'" />
             <UserSearch v-if="item.label === 'Users'" />
-            <FileSearch v-else-if="item.label === 'Decks'" />
+            <FolderSearch v-else-if="item.label === 'Decks'" />
+            <FileSearch v-if="item.label === 'Cards'" />
             <LayoutGrid v-else-if="item.label === 'Your Decks'" />
             <Plus v-else-if="item.label === 'Create Deck'" />
             <LogOut v-else-if="item.label === 'Sign Out'" />
@@ -50,16 +51,17 @@
 import { computed } from 'vue'
 import Menuebar from 'primevue/menubar'
 import {
-  Sprout,
   ChevronDown,
-  Search,
   CircleUserRound,
-  UserSearch,
   FileSearch,
-  Plus,
-  LogOut,
-  LayoutGrid,
+  FolderSearch,
   Grid2x2,
+  LayoutGrid,
+  LogOut,
+  Plus,
+  Search,
+  Sprout,
+  UserSearch,
 } from 'lucide-vue-next'
 import useAuthUser from '@/composables/UseAuthUser'
 const { isSignedIn, signIn } = useAuthUser()
@@ -75,6 +77,10 @@ const items = computed(() => {
         {
           label: 'Decks',
           route: '/search/decks',
+        },
+        {
+          label: 'Cards',
+          route: '/search/cards',
         },
         {
           label: 'Users',

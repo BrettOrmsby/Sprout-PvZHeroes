@@ -9,17 +9,42 @@
       <div class="header-container p-dialog-title">
         {{ card.name }}
         <img
-          v-if="card.class"
+          v-if="card.name === 'Zom-Bats'"
+          class="class"
+          src="/images/classes/brainy.png"
+          alt="Brainy"
+        />
+        <img
+          v-if="card.name === 'Impfinity Clone'"
+          class="class"
+          src="/images/classes/sneaky.png"
+          alt="Sneaky"
+        />
+        <img
+          v-if="card.name === 'Hothead'"
+          class="class"
+          src="/images/classes/kabloom.png"
+          alt="Kabloom"
+        />
+        <span v-if="card.class === 'Removed'" style="color: var(--p-primary-400)">Removed</span>
+        <img
+          v-else-if="card.class"
           class="class"
           :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
           :alt="card.class"
+        />
+        <img
+          v-if="card.name === 'Octo-Pet'"
+          class="class"
+          src="/images/classes/sneaky.png"
+          alt="Sneaky"
         />
         <SetPill :card="card" />
       </div>
     </template>
     <img :src="card.image" :alt="card.name" class="main-image" />
     <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
-    <p class="abilities" v-html="replaceCardText(card.abilities)"></p>
+    <p class="abilities"><ReplaceCardText :text="card.abilities" /></p>
     <p class="flavour">
       <em>{{ card.flavour }}</em>
     </p>
@@ -32,7 +57,7 @@ import getCard from '@/lib/getCard'
 import { computed } from 'vue'
 import Dialog from 'primevue/dialog'
 import SetPill from './deck/SetPill.vue'
-import replaceCardText from '@/lib/replaceCardText'
+import ReplaceCardText from '@/components/ReplaceCardText.vue'
 
 const card = computed(() => getCard(states.cardModal.card))
 </script>

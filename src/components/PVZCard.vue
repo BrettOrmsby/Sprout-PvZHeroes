@@ -7,9 +7,13 @@
       [card.rarity.toLowerCase()]: true,
     }"
   >
+    <div class="invisible">
+      {{ card.name }}
+    </div>
     <div class="amount">
       <strong>{{ amount }}</strong>
     </div>
+
     <img :src="card.image" :alt="card.name" class="card-image" />
   </div>
 </template>
@@ -35,6 +39,21 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
 
 .card-container:hover {
   outline: 1px solid var(--p-primary-400);
+}
+
+.invisible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 5px 5px 0;
+  color: rgba(0, 0, 0, 0);
+  font-size: 12px;
+  font-family: sans-serif;
+  text-align: left;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .amount {
@@ -97,5 +116,8 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
 }
 .event {
   background: #e66d59;
+}
+.token {
+  background: var(--p-surface-800);
 }
 </style>

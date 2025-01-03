@@ -1,11 +1,17 @@
 import type { CompareOperator } from './parse-query/scanner'
 import type { Card, Query } from './types'
 
-export default function doesMatchQuery(card: Card, query: Query): boolean {
+export default function doesMatchQuery(
+  card: Card,
+  query: Query,
+  includeTokens = false,
+  includeRemoved = false,
+): boolean {
   for (const subQuery of query) {
     if (subQuery.property === 'or') {
       const isSomeCorrect = subQuery.orSections.some(
-        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery),
+        (orQuery) =>
+          orQuery.length !== 0 && doesMatchQuery(card, orQuery, includeTokens, includeRemoved),
       )
       if (!isSomeCorrect) {
         return false
@@ -113,6 +119,25 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
         }
         continue
       }
+      if (subQuery.property === 'is') {
+        let value = subQuery.value
+        if (value.length === 1) {
+          const shortFormValues = {
+            p: 'plant',
+            z: 'zombie',
+          } as const
+          value = shortFormValues[value as keyof typeof shortFormValues]
+        }
+        const doesMatchType =
+          (value === 'plant' &&
+            ['Guardian', 'Kabloom', 'Mega-Grow', 'Smarty', 'Solar'].includes(card.class)) ||
+          (value === 'zombie' &&
+            ['Beastly', 'Brainy', 'Crazy', 'Hearty', 'Sneaky'].includes(card.class))
+        if (doesMatchType === subQuery.isNegated) {
+          return false
+        }
+        continue
+      }
       if (subQuery.property === 'tribe') {
         const doesMatchTribe = [...card.tribes].some((tribe) =>
           tribe.toLowerCase().includes(subQuery.value.toString().toLowerCase()),
@@ -136,6 +161,7 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
         const doesMatchAbilities = card.abilities
           .toLowerCase()
           .replace(/<[^>]*?>/g, '')
+          .replace(/{{([^:]+):[^}]+}}/, '$1')
           .includes(subQuery.value.toString().toLowerCase())
         if (doesMatchAbilities === subQuery.isNegated) {
           return false
@@ -151,7 +177,24 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
         }
         continue
       }
+      if (subQuery.property === 'include' || subQuery.property === 'i') {
+        const value = subQuery.value
+        if (value === 'token' || value === 't' || value === 'a' || value === 'all') {
+          includeTokens = true
+        }
+        if (value === 'removed' || value === 'r' || value === 'a' || value === 'all') {
+          includeRemoved = true
+        }
+        continue
+      }
     }
+  }
+
+  if (!includeRemoved && card.class === 'Removed') {
+    return false
+  }
+  if (!includeTokens && card.set === 'token') {
+    return false
   }
   return true
 }

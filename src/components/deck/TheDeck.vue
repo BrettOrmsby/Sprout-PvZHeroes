@@ -24,6 +24,11 @@
         :card="card"
         :amount="deck.list[card.name]"
         :isValid="true"
+        :class="`${states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'} ${
+          states.deckFilter.hideCards &&
+          !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
+          'hidden'
+        }`"
         @click="showCard(card.name)"
       />
     </template>

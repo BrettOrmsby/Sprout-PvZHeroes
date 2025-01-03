@@ -108,7 +108,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant.\n<b>Conjure</b> a Trick.",
+    "abilities": "Move a Plant.\n<b>Conjure</b> a {{Trick:is:plant type:trick -t:superpower}}.",
     "flavour": "Made of the softest fabric for that gentle Plant touch."
   },
   {
@@ -3599,7 +3599,7 @@
   },
   {
     "name": "Cross-Pollination",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d0/Sun_StrikeH.png",
+    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/Cross-PollinationH.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Solar",

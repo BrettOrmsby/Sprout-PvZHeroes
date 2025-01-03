@@ -29,7 +29,7 @@ import { useDeckStore } from '@/store/deck'
 import Button from 'primevue/button'
 import PVZCard from '@/components/PVZCard.vue'
 import { Grid2X2, RotateCw } from 'lucide-vue-next'
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import getCard from '@/lib/getCard'
 import states from '@/store/states'
 

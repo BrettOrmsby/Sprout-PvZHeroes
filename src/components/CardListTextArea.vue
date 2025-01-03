@@ -43,7 +43,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import getCard from '@/lib/getCard'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'

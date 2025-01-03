@@ -51,8 +51,8 @@
           />
         </template>
       </AutoComplete>
-      <router-link :to="{ name: 'HighlightHelp' }" class="help-message">
-        <Button label="Search Syntax Help" link />
+      <router-link :to="{ name: 'QueryHelp' }" class="help-message">
+        <Button label="Query Help" link />
       </router-link>
       <label for="show-incomplete">Show Incomplete Decks</label>
       <ToggleSwitch inputId="show-incomplete" v-model="form.showIncomplete" />
@@ -136,9 +136,9 @@ import Chip from 'primevue/chip'
 import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import { Search, X } from 'lucide-vue-next'
-import { watch, onMounted, ref, computed, reactive } from 'vue'
+import { computed, onMounted, reactive, ref, watch } from 'vue'
 import throwError from '@/lib/throwError'
-import type { Deck, Card } from '@/lib/types'
+import type { Card, Deck } from '@/lib/types'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import getCard from '@/lib/getCard'

@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, onUnmounted } from 'vue'
+import { computed, onUnmounted, ref } from 'vue'
 import type { Deck } from '@/lib/types'
 import getHero from '@/lib/getHero'
 import Avatar from 'primevue/avatar'
