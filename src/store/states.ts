@@ -13,10 +13,6 @@ export default reactive({
     hero: 'Green Shadow',
     show: false,
   },
-  queryModal: {
-    query: '',
-    show: false,
-  },
   deckFilter: {
     show: false,
     hideCards: false,

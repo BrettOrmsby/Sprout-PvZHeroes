@@ -178,7 +178,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a Galactic Gardens card.",
+    "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a {{Galactic Gardens:is:plant set:g}} card.",
     "flavour": "\"The galaxy is one beautiful melody, so play!\""
   },
   {
@@ -206,7 +206,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>While in an Environment:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "<b>While in an {{Environment:is:plant type:e}}:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "Past job experience includes: Shooing away creepy fog."
   },
   {
@@ -304,7 +304,7 @@
     "cost": 5,
     "strength": 4,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your Nuts get +2{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your {{Nuts:tribe:nut type:f}} get +2{{Heart}}.",
     "flavour": "Smackadamia wasn't born with smack smarts. He studied hard. He's a smackademic."
   },
   {
@@ -332,7 +332,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a Nut, and its {{Strength}} becomes 3{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut -tribe:superpower}}, and its {{Strength}} becomes 3{{Strength}}.",
     "flavour": "A staunch believer in numerology, he'll go on at length about the significance of the number 3 if you let him."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play another Root, that Root gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a Root.",
+    "abilities": "When you play another {{Root:tribe:root type:f}}, that {{Root:tribe:root type:f}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root -t:superpower}}.",
     "flavour": "His destiny is written in the starch."
   },
   {
@@ -407,7 +407,7 @@
   },
   {
     "name": "Mirror-Nut",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f7/Mirror-NutH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1736000458/mirror-nut.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -416,7 +416,7 @@
     "cost": 4,
     "strength": 0,
     "health": 11,
-    "abilities": "<b>Team-Up</b>\n{{Truestrike}}<b>Bullseye</b>\nWhen your Nuts get hurt, do 1 damage to the Zombie Hero.",
+    "abilities": "<b>Team-Up</b>\n{{Truestrike}}<b>Bullseye</b>\nWhen your {{Nuts:tribe:nut type:f}} get hurt, do 1 damage to the Zombie Hero.",
     "flavour": "Dressed up as a mirrorball for a disco-themed party. Never looked back."
   },
   {
@@ -435,7 +435,7 @@
   },
   {
     "name": "Galacta-Cactus",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a7/Galacta-CactusH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1736000399/galacta-cactus.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -500,7 +500,7 @@
     "cost": 3,
     "strength": 0,
     "health": 8,
-    "abilities": "<b>Team-Up</b>\n{{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a card that costs 4{{Sun}} or more.",
+    "abilities": "<b>Team-Up</b>\n{{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a {{card: is:plant c>=4}} that costs 4{{Sun}} or more.",
     "flavour": "You can't be destroyed by a Rolling Stone when you basically are a Rolling Stone."
   },
   {
@@ -514,7 +514,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>When played</b>: This gets +1{{Strength}}/+1{{Heart}} for each other Amphibious Plant.",
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: This gets +1{{Strength}}/+1{{Heart}} for each other {{Amphibious:is:plant a:amphibious type:p}} Plant.",
     "flavour": "Of course beans evolved gills. How else would they breathe underwater?"
   },
   {
@@ -528,7 +528,7 @@
     "cost": 6,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When played:</b> Make Lil' Buddies here and next door.",
+    "abilities": "<b>When played:</b> Make {{Lil' Buddies:Lil' Buddy}} here and next door.",
     "flavour": "Makes friends wherever she goes."
   },
   {
@@ -556,7 +556,7 @@
     "cost": 9,
     "strength": null,
     "health": null,
-    "abilities": "Make a Wall-Nut in each Ground lane.\nAttack for 6 damage in those lanes.",
+    "abilities": "Make a {{Wall-Nut:Wall-Nut c:1}} in each Ground lane.\nAttack for 6 damage in those lanes.",
     "flavour": "Ugly shoes not required!"
   },
   {
@@ -589,7 +589,7 @@
   },
   {
     "name": "Tricarrotops",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/15/TricarrotopsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1736000525/tricarrotops.png",
     "set": "colossal",
     "rarity": "legendary",
     "class": "Guardian",
@@ -612,7 +612,7 @@
     "cost": 6,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>When played</b>: Make Wall-Nuts next door.\n<b>Nut Evolution</b>: All Plants with no {{Strength}} get +3{{Strength}}.",
+    "abilities": "<b>When played</b>: Make {{Wall-Nuts:Wall-Nut c:1}} next door.\n<b>Nut Evolution</b>: All Plants with no {{Strength}} get +3{{Strength}}.",
     "flavour": "He crowned himself King of All Hollow Earth. No one had the heart to tell him it was actually a parliamentary democracy."
   },
   {
@@ -640,7 +640,7 @@
     "cost": 1,
     "strength": 1,
     "health": 5,
-    "abilities": "<b>Team-Up</b>\nWhen a Zombie hurts this, move that Zombie to the left. If it's a Vimpire, destroy it.",
+    "abilities": "<b>Team-Up</b>\nWhen a Zombie hurts this, move that Zombie to the left. If it's a {{Vimpire:Vimpire}}, destroy it.",
     "flavour": "\"Vimpires. They're the worst. I don't like to use the word \"hate\" but yeah, I hate 'em.\""
   },
   {
@@ -696,7 +696,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a Grizzly Pear here.",
+    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a {{Grizzly Pear:Grizzly Pear}} here.",
     "flavour": "So cute and cuddly and ... wait, what's that growling sound?"
   },
   {
@@ -836,7 +836,7 @@
     "cost": 2,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> All Mushrooms get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When played:</b> All {{Mushrooms:tribe:mushroom type:f}} get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "You might know him from his wildly popular series of workout videos called \"30 Days to a Buff-Shroom Body.\""
   },
   {
@@ -850,7 +850,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Turn:</b> This transforms into a random Plant that costs 6{{Sun}} or less.",
+    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6 -tribe:superpower}} that costs 6{{Sun}} or less.",
     "flavour": "t's the tiny seed of a... nobody actually knows."
   },
   {
@@ -934,7 +934,7 @@
     "cost": 4,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> Make a Pear Pal here.",
+    "abilities": "<b>When played:</b> Make a {{Pear Pal:Pear Pal}} here.",
     "flavour": "It's cute how they're always completing each other's sentences."
   },
   {
@@ -990,7 +990,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "When you play a Plant here, make a Puff-Shroom in another random lane.",
+    "abilities": "When you play a Plant here, make a {{Puff-Shroom:Puff-Shroom}} in another random lane.",
     "flavour": "Sometimes beautiful things grow out of the darkest places. Ponder that for a few moments."
   },
   {
@@ -1004,7 +1004,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}.",
+    "abilities": "<b>While in an {{Environment: is:plant type:e}}:</b> This gets +3{{Strength}}.",
     "flavour": "\"Call me a 'weed.' Go on. I consider it a compliment.\""
   },
   {
@@ -1060,7 +1060,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> Make a Puff-Shroom here.",
+    "abilities": "<b>When played:</b> Make a {{Puff-Shroom:Puff-Shroom}} here.",
     "flavour": "Shrooms, bless their hearts, always wanting to cuddle up cuddly-like."
   },
   {
@@ -1088,7 +1088,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Plant into a random Plant.\nDraw a card.",
+    "abilities": "Transform a Plant into a random {{Plant:is:plant type:f}}.\nDraw a card.",
     "flavour": "For when it's time to turn over a new leaf."
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a Mushroom, and it gets +2{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Mushroom:tribe:mushroom -t:superpower}}, and it gets +2{{Strength}}.",
     "flavour": "He's far out all right. Like, waaaay far out."
   },
   {
@@ -1144,7 +1144,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "Do 2 damage to each Zombie here and next door.\nIf played on the Ground, make Hot Lava here.",
+    "abilities": "Do 2 damage to each Zombie here and next door.\nIf played on the Ground, make {{Hot Lava:Hot Lava}} here.",
     "flavour": "\"'I try to stay cool, I really do. But Zombies! Man, they make me blow my top!\""
   },
   {
@@ -1186,7 +1186,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "When a Mushroom is destroyed, do 2 damage to a random Zombie or Zombie Hero.",
+    "abilities": "When a {{Mushroom:tribe:mushroom -t:superpower}} is destroyed, do 2 damage to a random Zombie or Zombie Hero.",
     "flavour": "Believes revenge is best served. Period."
   },
   {
@@ -1200,7 +1200,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "When another Berry hurts a Zombie or Zombie Hero, Sergeant Strongberry does 2 more damage to it.",
+    "abilities": "When another {{Berry:tribe:berry (type:f or a:do a:damage)}} hurts a Zombie or Zombie Hero, Sergeant Strongberry does 2 more damage to it.",
     "flavour": "He's intense, sure. But he just wants the berries to be all they can be."
   },
   {
@@ -1256,7 +1256,7 @@
     "cost": 2,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Start of turn:</b> Gain a Banana Bomb.",
+    "abilities": "<b>Start of turn:</b> Gain a {{Banana Bomb:Banana Bomb}}.",
     "flavour": "He only knows one word. But it's a good one."
   },
   {
@@ -1284,7 +1284,7 @@
     "cost": 2,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played on the Ground</b>: Make Hot Lava here.",
+    "abilities": "<b>When played on the Ground</b>: Make {{Hot Lava:Hot Lava}} here.",
     "flavour": "Don't touch the floor. The floor is lava."
   },
   {
@@ -1312,7 +1312,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When you play a Berry, do 1 damage to Zombies next door. <b>Berry Evolution:</b> Gain a Berry Blast.",
+    "abilities": "When you play a {{Berry:tribe:berry}}, do 1 damage to Zombies next door. <b>Berry Evolution:</b> Gain a {{Berry Blast:Berry Blast}}.",
     "flavour": "When it's time to fight, he gets pretty juiced."
   },
   {
@@ -1438,7 +1438,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}} when another Berry does damage.\n<b>When played: Conjure</b> a Berry.",
+    "abilities": "This gets +1{{Strength}} when another Berry does damage.\n<b>When played: Conjure</b> a {{Berry:tribe:berry}}.",
     "flavour": "These trouble makers are just asking to get grounded."
   },
   {
@@ -1480,7 +1480,7 @@
     "cost": 5,
     "strength": 5,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: Make Seedlings here and next door.",
+    "abilities": "<b>When destroyed</b>: Make {{Seedlings:Seedling}} here and next door.",
     "flavour": "Remember: Never ever EVER split a fruit. Oh, hold on, actually fruits are ok, just never split an atom."
   },
   {
@@ -1578,7 +1578,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Team-Up</b>\nPeas behind this get +2{{Strength}}.",
+    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}}.",
     "flavour": "\"Feel the burn, I COMMAND YOU!\""
   },
   {
@@ -1788,7 +1788,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: All Fruits in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When destroyed</b>: All {{Fruit:t:Fruit type:f}} in your hand get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "\"Have you met my better half? She's around here somewhere.\""
   },
   {
@@ -1802,7 +1802,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played next to a Leafy Plant</b>: This gets +1{{Heart}} and Conjure a Leafy card.",
+    "abilities": "<b>When played next to a {{Leafy:tribe:leafy type:f}} Plant</b>: This gets +1{{Heart}} and Conjure a {{Leafy:t:leafy}} card.",
     "flavour": "\"Everyone's magic in their own special way. Everyone except me.\""
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "When you play another Pea, that Pea gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When you play another {{Pea:tribe:pea type:f}}, that Pea gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "\"It ain't easy keeping the peas in this family.\""
   },
   {
@@ -1886,7 +1886,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Zombie.\n<b>Conjure</b> a Fruit.",
+    "abilities": "Move a Zombie.\n<b>Conjure</b> a {{Fruit:t:Fruit}}.",
     "flavour": "A slapstick comedy staple that, somehow, the Zombies never see coming."
   },
   {
@@ -1900,7 +1900,7 @@
     "cost": 4,
     "strength": 2,
     "health": 2,
-    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a Pea, and it gets {{DoubleStrike}}<b>Double Strike</b>.",
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>When played:</b> <b>Conjure</b> a {{Pea:t:pea}}, and it gets {{DoubleStrike}}<b>Double Strike</b>.",
     "flavour": "\"The cosmos is so big and a pea is so small. The juxtaposition just really makes me think, you know?\""
   },
   {
@@ -1998,7 +1998,7 @@
     "cost": 3,
     "strength": 2,
     "health": 5,
-    "abilities": "When this does damage, shuffle two Magic Beanstalks into your deck.",
+    "abilities": "When this does damage, shuffle two {{Magic Beanstalks:Magic Beanstalk include:token}} into your deck.",
     "flavour": "She and Sunflower are besties. It's just too bad their schedules make it hard for them to get together."
   },
   {
@@ -2054,7 +2054,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Double a Plant's {{Strength}}.\nGain a Grape Responsibility.",
+    "abilities": "Double a Plant's {{Strength}}.\nGain a {{Grape Responsibility:Grape Responsibility}}.",
     "flavour": "A dinosaur's favorite primordial snack."
   },
   {
@@ -2124,7 +2124,7 @@
     "cost": 3,
     "strength": 1,
     "health": 4,
-    "abilities": "Cards you <b>Conjure</b> cost 1{{Sun}} less.\nWhen this does damage, <b>Conjure</b> a Legendary card.",
+    "abilities": "Cards you <b>Conjure</b> cost 1{{Sun}} less.\nWhen this does damage, <b>Conjure</b> a {{Legendary:is:plant r:l}} card.",
     "flavour": "He's steered his crew through many a pickle."
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a Root.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root -t:superpower}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Some potatoes are sweet. Others are dinosaurs."
   },
   {
@@ -2180,7 +2180,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> Shuffle two Clique Peas into your deck. For the rest of the game, all Clique Peas get +1{{Strength}}/+1{{Heart}} and cost +1{{Sun}}.",
+    "abilities": "<b>When played:</b> Shuffle two {{Clique Peas:Clique Peas}} into your deck. For the rest of the game, all Clique Peas get +1{{Strength}}/+1{{Heart}} and cost +1{{Sun}}.",
     "flavour": "On Wednesdays we wear sunglasses."
   },
   {
@@ -2208,7 +2208,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When destroyed:</b> Make two Half-Bananas next door.",
+    "abilities": "<b>When destroyed:</b> Make two {{Half-Bananas:Half-Banana}} next door.",
     "flavour": "\"I don't want to brag, but hanging out in a tub full of ice-cream all day ... not a bad gig if you can get it.\""
   },
   {
@@ -2222,7 +2222,7 @@
     "cost": 5,
     "strength": 1,
     "health": 5,
-    "abilities": "<b>When played: Conjure</b> an Event card. Plucky Clover gets +{{Strength}} equal to that card's cost.",
+    "abilities": "<b>When played: Conjure</b> an {{Event:is:plant r:e}} card. Plucky Clover gets +{{Strength}} equal to that card's cost.",
     "flavour": "She's a giver, no doubt. But she feels like she gets a lot out of it too."
   },
   {
@@ -2278,7 +2278,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Zombie is frozen.",
+    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Zombie is {{frozen:is:plant a:freeze}}.",
     "flavour": "Zombies are always looking at her with a frozen expression."
   },
   {
@@ -2474,7 +2474,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\n<b>When played in an Environment: Bounce</b> a Zombie or Gravestore.",
+    "abilities": "<b>Amphibious</b>\n<b>When played in an {{Environment:is:plant type:e}}: Bounce</b> a Zombie or Gravestore.",
     "flavour": "\"You wanna keep your lawn tidy? Tired of lookin' at those unsightly Zombies? Then I'M your guy.\""
   },
   {
@@ -2530,7 +2530,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play another Bean, do 2 damage to the Zombie Hero.",
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play another {{Bean:t:bean}}, do 2 damage to the Zombie Hero.",
     "flavour": "\"Heavy is the weight of my command. And my cap. Heavy is the cap.\""
   },
   {
@@ -2572,7 +2572,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\n<b>When played:</b> All <b>Amphibious</b> Plants get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\n<b>When played:</b> All <b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Was *this* close to becoming an Army Bean."
   },
   {
@@ -2600,7 +2600,7 @@
     "cost": 2,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played:</b> <b>Conjure</b> a Bean, and it gets <b>Team-Up</b>.",
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> <b>Conjure</b> a {{Bean:t:bean}}, and it gets <b>Team-Up</b>.",
     "flavour": "It IS a magical fruit!"
   },
   {
@@ -2642,7 +2642,7 @@
     "cost": 1,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Plant played on this gets <b>Amphibious</b>. <b>Conjure</b> a Leafy card.",
+    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Plant played on this gets <b>Amphibious</b>. <b>Conjure</b> a {{Leafy:t:leafy}} card.",
     "flavour": "When Neptuna's Triassic Invasion flooded Hollow Earth with vast new oceans, Plants quickly evolved to survive."
   },
   {
@@ -2656,7 +2656,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Shuffle five Magic Beanstalks into your deck.",
+    "abilities": "Shuffle five {{Magic Beanstalks:Magic Beanstalk include:token}} into your deck.",
     "flavour": "Totally worth the cow."
   },
   {
@@ -2670,7 +2670,7 @@
     "cost": 4,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play another Bean.\n<b>When played:</b> Gain two Weenie Beanies.",
+    "abilities": "<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play another {{Bean:t:bean}}.\n<b>When played:</b> Gain two {{Weenie Beanies:Weenie Beanie}}.",
     "flavour": "\"Every bean is accounted for. I assure you, they all add up.\""
   },
   {
@@ -2698,7 +2698,7 @@
     "cost": 4,
     "strength": 2,
     "health": 6,
-    "abilities": "When a Zombie or Gravestone becomes frozen, destroy it.",
+    "abilities": "When a Zombie or Gravestone becomes {{frozen:is:plant a:freeze}}, destroy it.",
     "flavour": "\"My complexion is more of a summer.\""
   },
   {
@@ -2740,7 +2740,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "<b>Amphibious</b> Plants here get +2{{Strength}}. Non-<b>Amphibious</b> Zombies here get -2{{Strength}}.",
+    "abilities": "<b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants here get +2{{Strength}}. Non-<b>Amphibious</b> Zombies here get -2{{Strength}}.",
     "flavour": "Good for Plants, it is. Good for Zombies, it is not!"
   },
   {
@@ -2824,7 +2824,7 @@
     "cost": 9,
     "strength": 7,
     "health": 7,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Transform all Zombies into 1{{Strength}}/1{{Heart}} Zombies with no abilities",
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Transform all Zombies into 1{{Strength}}/1{{Heart}} {{Zombies:is:zombie s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities",
     "flavour": "\"Presto change-o! Now you see a powerful Zombie. Now you don't!\""
   },
   {
@@ -2866,7 +2866,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: Shuffle a Magic Beanstalk into your deck.",
+    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: Shuffle a {{Magic Beanstalk:Magic Beanstalk include:token}} into your deck.",
     "flavour": "Sometimes one Plant provides both the Army and the Navy."
   },
   {
@@ -2908,7 +2908,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Team-Up</b>\nWhen you play a <b>Team-Up </b> Plant, all <b>Team-Up</b> Plants get +1{{Strength}}.",
+    "abilities": "<b>Team-Up</b>\nWhen you play a <b>{{Team-Up:a:team-up type:f}}</b> Plant, all <b>Team-Up</b> Plants get +1{{Strength}}.",
     "flavour": "\"GROW-Nuts! THROW-Nuts! When we get big we GO-Nuts! Goooooooo PLANTS!\""
   },
   {
@@ -2922,7 +2922,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\nWhen this hurts the Zombie Hero, <b>Conjure</b> a Corn, Squash, or Bean.",
+    "abilities": "<b>Amphibious</b>\nWhen this hurts the Zombie Hero, <b>Conjure</b> a {{Corn:t:corn}}, {{Squash:t:squash}}, or {{Bean:t:bean}}.",
     "flavour": "Do April showers bring Mayflowers? My goodness, isn't that a personal question!"
   },
   {
@@ -2950,7 +2950,7 @@
     "cost": 4,
     "strength": 4,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>Start of Turn:</b> Make another Snake Grass in the lane to the right.",
+    "abilities": "<b>Amphibious</b>\n<b>Start of Turn:</b> Make another {{Snake Grass:Snake Grass}} in the lane to the right.",
     "flavour": "\"Snakes. Why'd it have to be snakes?\""
   },
   {
@@ -2964,7 +2964,7 @@
     "cost": 4,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>End of Turn</b>: Destroy a random Zombie and make a Puff-Shroom there.",
+    "abilities": "<b>End of Turn</b>: Destroy a random Zombie and make a {{Puff-Shroom:Puff-Shroom}} there.",
     "flavour": "Zombies are always trying to build a bridge out of her."
   },
   {
@@ -2992,7 +2992,7 @@
     "cost": 6,
     "strength": 5,
     "health": 3,
-    "abilities": "<b>When played:</b> Make a Sappy Place Environment.",
+    "abilities": "<b>When played:</b> Make a {{Sappy Place:Sappy Place include:token}} Environment.",
     "flavour": "He dates a lot of different branches, but nothing ever sticks."
   },
   {
@@ -3132,7 +3132,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> This gets +2{{Strength}}/+2{{Heart}} if there's a Plant with <b>Team-Up</b> here.",
+    "abilities": "<b>When played:</b> This gets +2{{Strength}}/+2{{Heart}} if there's a Plant with <b>{{Team-Up:a:team-up type:f}}</b> here.",
     "flavour": "They work hard but they also like to party. That's them in a nutshell."
   },
   {
@@ -3272,7 +3272,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When an Environment is played, this gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "When an {{Environment:type:e}} is played, this gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "He's Peel deGrass Lichen's biggest fan."
   },
   {
@@ -3412,7 +3412,7 @@
     "cost": 5,
     "strength": 3,
     "health": 5,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Start of Turn:</b> Heal your Hero for 1 for each Flower.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Start of Turn:</b> Heal your Hero for 1 for each {{Flower:t:flower -type:t}}.",
     "flavour": "Dropped out of Kale University to practice natural medicine."
   },
   {
@@ -3426,7 +3426,7 @@
     "cost": 3,
     "strength": 2,
     "health": 1,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a Flower, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a {{Flower:t:flower -t:superpower}}, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "She enjoys the simple things in life - hanging out with friends, fighting Zombies, and basking in cosmic rays."
   },
   {
@@ -3538,7 +3538,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>End of Turn:</b> If there are no Zombies here, make a Sunflower here.",
+    "abilities": "<b>End of Turn:</b> If there are no Zombies here, make a {{Sunflower:Sunflower c:1 s:0}} here.",
     "flavour": "There's something in the wind. Sunflower seeds, in fact."
   },
   {
@@ -3552,7 +3552,7 @@
     "cost": 4,
     "strength": 3,
     "health": 7,
-    "abilities": "Zombies can't do Bonus Attacks.",
+    "abilities": "Zombies can't do {{Bonus Attacks:is:zombie a:\"bonus attack\" -bucket}}.",
     "flavour": "Firmly believes that Elvis is alive, Zombies never walked on the Moon, and that Dr. Zomboss is secretly studying aliens at Area 22. Crazy!"
   },
   {
@@ -3594,7 +3594,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: Make a Sunflower here.",
+    "abilities": "<b>When destroyed</b>: Make a {{Sunflower:Sunflower c:1 s:0}} here.",
     "flavour": "From every night's end comes the beginning of a new Sunflower's dawn."
   },
   {
@@ -3608,7 +3608,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a Flower. <b>Conjure</b> a Trick.\nThey both cost 1 less.",
+    "abilities": "<b>Conjure</b> a {{Flower:t:flower -t:superpower}}. <b>Conjure</b> a {{Trick:is:plant type:t -t:superpower}}.\nThey both cost 1 less.",
     "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
   },
   {
@@ -3622,7 +3622,7 @@
     "cost": 5,
     "strength": 3,
     "health": 4,
-    "abilities": "When a Zombie hurts a Flower, destroy that Zombie.",
+    "abilities": "When a Zombie hurts a {{Flower:t:flower type:f}}, destroy that Zombie.",
     "flavour": "\"You mess with the rose, you get the thorns!\""
   },
   {
@@ -3664,7 +3664,7 @@
     "cost": 5,
     "strength": 5,
     "health": 3,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When destroyed:</b> Gain an Astrocado Pit.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When destroyed:</b> Gain an {{Astrocado Pit:Astrocado Pit include:token}}.",
     "flavour": "\"Holy guacamole!\""
   },
   {
@@ -3720,7 +3720,7 @@
     "cost": 1,
     "strength": 4,
     "health": 1,
-    "abilities": "<b>When played</b>: The Zombie player <b>Conjures</b> a Monster.",
+    "abilities": "<b>When played</b>: The Zombie player <b>Conjures</b> a {{Monster:t:monster}}.",
     "flavour": "For generations, the Pumpkings have kept their realms safe from a terrible curse. Tonight, they finally face their greatest fear."
   },
   {
