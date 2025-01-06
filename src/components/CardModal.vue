@@ -42,7 +42,11 @@
         <SetPill :card="card" />
       </div>
     </template>
-    <img :src="card.image" :alt="card.name" class="main-image" />
+    <img
+      :src="card.image"
+      :alt="`${card.name}, ${card.cost}-cost, ${card.strength}/${card.health}`"
+      class="main-image"
+    />
     <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
     <p class="abilities"><ReplaceCardText :text="card.abilities" /></p>
     <p class="flavour">

@@ -206,7 +206,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>While in an {{Environment:is:plant type:e}}:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "<b>While in an Environment:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "Past job experience includes: Shooing away creepy fog."
   },
   {
@@ -766,7 +766,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a Wall-Nut.\nDraw a card.",
+    "abilities": "Make a {{Wall-Nut:Wall-Nut c:1}}.\nDraw a card.",
     "flavour": "Call on Wall-Nut any time. His schedule is wide open."
   },
   {
@@ -1004,7 +1004,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>While in an {{Environment: is:plant type:e}}:</b> This gets +3{{Strength}}.",
+    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}.",
     "flavour": "\"Call me a 'weed.' Go on. I consider it a compliment.\""
   },
   {
@@ -1536,7 +1536,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 1{{Strength}}/1{{Heart}} Button Mushroom in a lane of your choice. Then another appears in a random lane.",
+    "abilities": "Make a 1{{Strength}}/1{{Heart}} {{Button Mushroom:Button Mushroom}} in a lane of your choice. Then another appears in a random lane.",
     "flavour": "One good mushroom deserves another."
   },
   {
@@ -2474,7 +2474,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\n<b>When played in an {{Environment:is:plant type:e}}: Bounce</b> a Zombie or Gravestore.",
+    "abilities": "<b>Amphibious</b>\n<b>When played in an Environment: Bounce</b> a Zombie or Gravestore.",
     "flavour": "\"You wanna keep your lawn tidy? Tired of lookin' at those unsightly Zombies? Then I'M your guy.\""
   },
   {
@@ -3048,7 +3048,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie into a random Zombie that costs 1{{Brain}}.",
+    "abilities": "Transform a Zombie into a random {{Zombie:is:zombie type:f c:1}} that costs 1{{Brain}}.",
     "flavour": "It's a life-changing experience. Actually, it's an everything-changing experience."
   },
   {
@@ -3076,7 +3076,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a Root.",
+    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a {{Root:t:root -t:superpower}}.",
     "flavour": "Beta-Carrotina knows she can always count on him to get to the root of the problem."
   },
   {
@@ -3090,7 +3090,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> two Tricks.",
+    "abilities": "<b>Conjure</b> two {{Tricks:is:plant type:t -t:superpower}}.",
     "flavour": "Make the jump to light seed."
   },
   {
@@ -3272,7 +3272,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When an {{Environment:type:e}} is played, this gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "When an Environment is played, this gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "He's Peel deGrass Lichen's biggest fan."
   },
   {

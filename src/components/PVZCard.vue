@@ -14,7 +14,11 @@
       <strong>{{ amount }}</strong>
     </div>
 
-    <img :src="card.image" :alt="card.name" class="card-image" />
+    <img
+      :src="card.image"
+      :alt="`${card.name}, ${card.cost}-cost, ${card.strength}/${card.health}`"
+      class="card-image"
+    />
   </div>
 </template>
 
@@ -35,6 +39,7 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   gap: var(--inline-space);
   padding: var(--inline-space);
   cursor: pointer;
+  color: var(--p-surface-900);
 }
 
 .card-container:hover {

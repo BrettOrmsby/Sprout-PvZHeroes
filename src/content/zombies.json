@@ -38,7 +38,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "When you play another Pet, all Pets get +1{{Strength}}.",
+    "abilities": "When you play another {{Pet:t:pet}}, all {{Pets:t:pet type:f}} get +1{{Strength}}.",
     "flavour": "Snaaaaake!"
   },
   {
@@ -94,7 +94,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a Gourmet card.",
+    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a {{Gourmet:t:gourmet}} card.",
     "flavour": "Just a quick bite."
   },
   {
@@ -122,7 +122,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a Pet, it gets +2{{Strength}}/+1{{Heart}} instead.",
+    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a {{Pet:t:pet type:f}}, it gets +2{{Strength}}/+1{{Heart}} instead.",
     "flavour": "What's inside? A peanut butter and brains sandwich... with the crusts cut off."
   },
   {
@@ -136,7 +136,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When destroyed</b>: Gain a Haunting Ghost.",
+    "abilities": "<b>When destroyed</b>: Gain a {{Haunting Ghost:Haunting Ghost}}.",
     "flavour": "He doesn't realize he would look even scarier without the spooky ghost costume..."
   },
   {
@@ -234,7 +234,7 @@
     "cost": 0,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when any kind of Goat is hurt.",
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when any kind of {{Goat:goat}} is hurt.",
     "flavour": "Hungry... Smelly... A lot like a Zombie but with 100% more goat."
   },
   {
@@ -262,7 +262,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Destroy one of their Nuts or Berries.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Destroy one of their {{Nuts:t:nut -type:t}} or {{Berries:t:berry -type:t}}.",
     "flavour": "The only thing more difficult than herding cats."
   },
   {
@@ -318,7 +318,7 @@
     "cost": 5,
     "strength": 5,
     "health": 5,
-    "abilities": "All Gargantuars have {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "All {{Gargantuars:t:gargantuar type:t}} have {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "When he phones home, it means something completely different."
   },
   {
@@ -332,7 +332,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>When played:</b> Make a 1 {{Strength}}/1 {{Heart}} Plant with no abilities.",
+    "abilities": "<b>When played:</b> Make a 1 {{Strength}}/1 {{Heart}} {{Plant:is:plant s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities.",
     "flavour": "Growing Plants in Space? Some of his fellow Zombies think he's crazy, but others appreciate the effort."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a Pet, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet -t:superpower}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
     "flavour": "He's hoping they name a constellation after him. \"The Big Yeti\" does have a ring to it."
   },
   {
@@ -388,7 +388,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "This gets +3{{Strength}} this turn when you play another Pet.",
+    "abilities": "This gets +3{{Strength}} this turn when you play another {{Pet:t:pet}}.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
   {
@@ -402,7 +402,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> Gain a Yeti Lunchbox.\n<b>End of Turn:</b> <b>Bounce</b> this Yeti.",
+    "abilities": "<b>When played:</b> Gain a {{Yeti Lunchbox:Yeti Lunchbox}}.\n<b>End of Turn:</b> <b>Bounce</b> this Yeti.",
     "flavour": "Enjoys warm hugs."
   },
   {
@@ -444,7 +444,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When this hurts the Plant Hero</b>: <b>Conjure</b> a Gourmet card, and it costs 1 {{Brain}} less.",
+    "abilities": "<b>When this hurts the Plant Hero</b>: <b>Conjure</b> a {{Gourmet:t:gourmet}} card, and it costs 1 {{Brain}} less.",
     "flavour": "Is that the exquisite scent of an aged Camembert, or just rotting flesh?"
   },
   {
@@ -458,7 +458,7 @@
     "cost": 2,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Hunt</b>\n<b>When destroyed:</b> Gain a Vengeful Cyborg.",
+    "abilities": "<b>Hunt</b>\n<b>When destroyed:</b> Gain a {{Vengeful Cyborg:Vengeful Cyborg}}.",
     "flavour": "He'll be back."
   },
   {
@@ -528,7 +528,7 @@
     "cost": 7,
     "strength": 6,
     "health": 6,
-    "abilities": "When a Gargantuar does damage, heal your Hero that much.",
+    "abilities": "When a {{Gargantuar:t:gargantuar (type:f or Zombot's Wrath)}} does damage, heal your Hero that much.",
     "flavour": "Their bedside manner could use some work."
   },
   {
@@ -542,7 +542,7 @@
     "cost": 8,
     "strength": 8,
     "health": 8,
-    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b> and {{Frenzy}}<b>Frenzy</b>.\n<b>When destroyed</b>: Gain an Octo Zombie.",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Make a 3{{Strength}}/2{{Heart}} {{Octo-Pet:Octo-Pet include:token}} with <b>Amphibious</b> and {{Frenzy}}<b>Frenzy</b>.\n<b>When destroyed</b>: Gain an {{Octo Zombie:Octo Zombie}}.",
     "flavour": "Is the correct term 'octopuses' or 'octopi'? You'd think he'd have an opinion, but he doesn't."
   },
   {
@@ -584,7 +584,7 @@
     "cost": 5,
     "strength": 5,
     "health": 7,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, destroy all copies of that Plant.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a {{Gargantuar:t:gargantuar (type:f or Zombot's Wrath)}} destroys a Plant, destroy all copies of that Plant.",
     "flavour": "This one's got a real temper on him. When he decides to take out a Plant...it's brutal. Just brutal."
   },
   {
@@ -612,7 +612,7 @@
     "cost": 7,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>When hurt</b>: Make a random Gargantuar in a random lane.",
+    "abilities": "<b>When hurt</b>: Make a random {{Gargantuar:t:gargantuar type:f}} in a random lane.",
     "flavour": "The ultimate, epic, last, absolutely final conclusion to the Zombie-throwing Zombie saga. ...or is it?"
   },
   {
@@ -724,7 +724,7 @@
     "cost": 6,
     "strength": 6,
     "health": 6,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a Gargantuar destroys a Plant, <b>Conjure</b> a Gargantuar card.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nWhen a {{Gargantuar:t:gargantuar (type:f or Zombot's Wrath)}} destroys a Plant, <b>Conjure</b> a {{Gargantuar:t:gargantuar}} card.",
     "flavour": "Chillin' beside the ol' backyard grill, cookin' up some brains, hangin' with his zombies... that's the good unlife."
   },
   {
@@ -878,7 +878,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Make a 2{{Strength}}/3{{Heart}} Space Cadet Zombie.",
+    "abilities": "Make a 2{{Strength}}/3{{Heart}} {{Space Cadet:Space Cadet include:token}} Zombie.",
     "flavour": "A sure way to get Space Cadet's attention."
   },
   {
@@ -920,7 +920,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nWhen a Science Zombie does damage, that Zombie gets +1{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Science:t:science type:f}} Zombie does damage, that Zombie gets +1{{Strength}}.",
     "flavour": "He's not entirely sure how to fly this thing."
   },
   {
@@ -1018,7 +1018,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a Mustache, this gets +2{{Heart}} and you get +1{{Brain}}.",
+    "abilities": "When you play a {{Mustache:t:mustache}}, this gets +2{{Heart}} and you get +1{{Brain}}.",
     "flavour": "Customers have been telling him \"Get a brain\" for years now."
   },
   {
@@ -1074,7 +1074,7 @@
     "cost": 5,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> Each Science Zombie does a Bonus Attack.",
+    "abilities": "<b>When played:</b> Each {{Science:t:science type:f}} Zombie does a Bonus Attack.",
     "flavour": "Wishes the Mad Chemist would stop copying his hair style."
   },
   {
@@ -1088,7 +1088,7 @@
     "cost": 6,
     "strength": null,
     "health": null,
-    "abilities": "Make a 6{{Strength}}/5{{Heart}} Copter Commando Imp.",
+    "abilities": "Make a 6{{Strength}}/5{{Heart}} {{Copter Commando:Copter Commando}} Imp.",
     "flavour": "Refuses to fly over water due to a severe case of aquaphobia."
   },
   {
@@ -1102,7 +1102,7 @@
     "cost": 6,
     "strength": 5,
     "health": 6,
-    "abilities": "All Gargantuars have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs 1 more.",
+    "abilities": "All {{Gargantuars:t:gargantuar (type:f or Zombot's Wrath)}} have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs 1 more.",
     "flavour": "A wizard did it. An enormous, green, Zombie wizard."
   },
   {
@@ -1116,7 +1116,7 @@
     "cost": 2,
     "strength": 1,
     "health": 2,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a Science card, and it gets {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a {{Science:t:science -t:superpower}} card, and it gets {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He has no idea what's in the beakers. He just likes to mix them together until they go BOOM!"
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> an Imp, a Zombie, and a Gargantuar.",
+    "abilities": "<b>Conjure</b> an {{Imp:t:imp -t:superpower}}, a {{Zombie:is:zombie type:f}}, and a {{Gargantuar:t:gargantuar}}.",
     "flavour": "An Imp, a Zombie, and Gargantuar walk into a bar..."
   },
   {
@@ -1200,7 +1200,7 @@
     "cost": 4,
     "strength": 3,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\nWhen you play your first Trick each turn, <b>Conjure</b> a Trick, and it costs 1 less.",
+    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Trick:is:zombie type:t -t:superpower}}, and it costs 1 less.",
     "flavour": "He's not so much \"mad\" as he is \"mildly annoyed.\""
   },
   {
@@ -1228,7 +1228,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play an Environment, this does a Bonus Attack.",
+    "abilities": "When you play an {{Environment:type:e is:zombie}}, this does a Bonus Attack.",
     "flavour": "He's not small, he's just very compact."
   },
   {
@@ -1298,7 +1298,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When this does damage, <b>Conjure</b> a Mustache.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "When this does damage, <b>Conjure</b> a {{Mustache:t:mustache -t:superpower}}.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
     "flavour": "Determined to find every Mustache Monument in Hollow Earth, Neptuna brought in the experts."
   },
   {
@@ -1340,7 +1340,7 @@
     "cost": 10,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>While in your hand:</b> This costs 1{{Brain}} less when you play a Trick.\n<b>When played:</b> This does a Bonus Attack.",
+    "abilities": "<b>While in your hand:</b> This costs 1{{Brain}} less when you play a {{Trick:type:t is:zombie}}.\n<b>When played:</b> This does a Bonus Attack.",
     "flavour": "Never gets tired of the rubber chicken gag."
   },
   {
@@ -1354,7 +1354,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a Science card, this transforms into a Zombie that costs 3{{Brain}}.",
+    "abilities": "When you play a {{Science:t:science}} card, this transforms into a {{Zombie:is:zombie c:3 type:f}} that costs 3{{Brain}}.",
     "flavour": "In a parallel dimension, this zombie is a Space Pirate. In another he's a Trash Can Zombie. Turns out, little choices in life can make a big difference."
   },
   {
@@ -1382,7 +1382,7 @@
     "cost": 5,
     "strength": 5,
     "health": 6,
-    "abilities": "When a non-Mime Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
+    "abilities": "When a non-{{Mime:t:mime}} Plant or Zombie does a Bonus Attack, this does a Bonus Attack.",
     "flavour": "The Gargantuar Mime groans like any other zombie. He just does it silently, and in French."
   },
   {
@@ -1396,7 +1396,7 @@
     "cost": 7,
     "strength": 8,
     "health": 8,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>\nMake a random History Zombie in a random lane.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b>\nMake a random {{History:t:history type:f}} Zombie in a random lane.",
     "flavour": "What's better than a dinosaur? A gigantic, metal, laser monster that gates in four more dinosaurs."
   },
   {
@@ -1410,7 +1410,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> Shuffle a Pot of Gold into your deck.",
+    "abilities": "<b>When played:</b> Shuffle a {{Pot of Gold:Pot of Gold include:token}} into your deck.",
     "flavour": "When he offers to grant you a wish, do not wish for infinite wishes. It just doesn't work like that."
   },
   {
@@ -1424,7 +1424,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a Zombie, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a Plant, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Zombie:type:f is:zombie -t:superpower}}, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a {{Plant:is:plant type:f -t:superpower}}, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
     "flavour": "Regifting: Is it really an embarrassing social faux pas? Or is it just good ol' recycling?"
   },
   {
@@ -1438,7 +1438,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Gravestone</b>When you play your first Trick each turn, <b>Conjure</b> a Treat.",
+    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Treat:Treat type:t}}.",
     "flavour": "Trick or Treat? He is haunted by that question - and by an answer that continues to elude him."
   },
   {
@@ -1480,7 +1480,7 @@
     "cost": 7,
     "strength": null,
     "health": null,
-    "abilities": "Transform every Zombie into random Zombies that costs 5{{Brain}} or more.",
+    "abilities": "Transform every Zombie into random {{Zombies:is:zombie c>=5}} that costs 5{{Brain}} or more.",
     "flavour": "Sometimes a full moon turns bad dreams into horrible nightmares."
   },
   {
@@ -1550,7 +1550,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a random Zombie that costs 2{{Brain}} or less.",
+    "abilities": "Make a random {{Zombie:is:zombie type:f c<=2}} that costs 2{{Brain}} or less.",
     "flavour": "It's like a blind date... but with Zombies... and fighting."
   },
   {
@@ -1592,7 +1592,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Start of turn</b>: If there's a Zombie here, gain a Teleport.",
+    "abilities": "<b>Start of turn</b>: If there's a Zombie here, gain a {{Teleport:Teleport type:t}}.",
     "flavour": "Teleportation is a relatively new technology. Has a few kinks that need ironing out. So yeah, sometimes things get a little...mixed up."
   },
   {
@@ -1648,7 +1648,7 @@
     "cost": 3,
     "strength": 3,
     "health": 1,
-    "abilities": "<b>When played:</b> Make a 1{{Strength}}/1{{Heart}} Backup Dancer.",
+    "abilities": "<b>When played:</b> Make a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}}.",
     "flavour": "Disco is undead."
   },
   {
@@ -1662,7 +1662,7 @@
     "cost": 5,
     "strength": 3,
     "health": 1,
-    "abilities": "<b>When played:</b> Do 2 damage to the Plant Hero for each Dancing Zombie.",
+    "abilities": "<b>When played:</b> Do 2 damage to the Plant Hero for each {{Dancing:t:dancing type:f}} Zombie.",
     "flavour": "Also enjoys dancing the rumba, tango, and the Hokey Pokey."
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 1,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Tricks:</b> Transform this into a random zombie that costs 2{{Brain}} or less.",
+    "abilities": "<b>Start of Tricks:</b> Transform this into a random {{zombie:is:zombie type:f c<=2}} that costs 2{{Brain}} or less.",
     "flavour": "\"Mommy, where do little Zombies come from?\" Asked and answered."
   },
   {
@@ -1914,7 +1914,7 @@
     "cost": 5,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>When hurt:</b> Make a 1{{Strength}}/1{{Heart}}Swabbie with <b>Amphibious </b>in a random lane.",
+    "abilities": "<b>When hurt:</b> Make a 1{{Strength}}/1{{Heart}}{{Swabbie:Swabbie}} with <b>Amphibious </b>in a random lane.",
     "flavour": "Seems like a better idea than a Gargantuar-Throwing Imp."
   },
   {
@@ -1942,7 +1942,7 @@
     "cost": 4,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a Dancing card, and it gets {{Overshoot}}<b>Overshoot 2</b>.",
+    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a {{Dancing:t:dancing -t:superpower}} card, and it gets {{Overshoot}}<b>Overshoot 2</b>.",
     "flavour": "Across the cosmos, the passion for dance is the only universal language."
   },
   {
@@ -1984,7 +1984,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Start of Turn:</b> All Dancing Zombies get +2{{Strength}}.",
+    "abilities": "<b>Start of Turn:</b> All {{Dancing:t:dancing type:f}} Zombies get +2{{Strength}}.",
     "flavour": "Aerobics really bring the dead to life."
   },
   {
@@ -2026,7 +2026,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a 3{{Strength}}/1{{Heart}} Disco Zombie that makes a 1{{Strength}}/1{{Heart}} Backup Dancer.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a 3{{Strength}}/1{{Heart}} {{Disco Zombie:Disco Zombie}} that makes a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}}.",
     "flavour": "A fully weaponized jukebox."
   },
   {
@@ -2110,7 +2110,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played next to a Zombie</b>: Make a random Zombie that costs 1{{Brain}}.",
+    "abilities": "<b>When played next to a Zombie</b>: Make a random {{Zombie:is:zombie c=1 type:f}} that costs 1{{Brain}}.",
     "flavour": "\"What counts is not necessarily the size of the dog in the fight; it's the size of the fight in the dog.\" - Wight Z. Diesenhower"
   },
   {
@@ -2124,7 +2124,7 @@
     "cost": 2,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n4{{Strength}}/3{{Heart}}Captain Deadbeard here.",
+    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n4{{Strength}}/3{{Heart}} {{Captain Deadbeard:Captain Deadbeard include:token}} here.",
     "flavour": "No monkeys, just Zombies."
   },
   {
@@ -2152,7 +2152,7 @@
     "cost": 11,
     "strength": null,
     "health": null,
-    "abilities": "Make 3 random Gargantuars in random Lanes.",
+    "abilities": "Make 3 random {{Gargantuars:t:gargantuar type:f}} in random Lanes.",
     "flavour": "This party doesn't make reservations."
   },
   {
@@ -2208,7 +2208,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play a Dancing card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets +2{{Strength}}/+2{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "When you play a {{Dancing:t:dancing}} card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets +2{{Strength}}/+2{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He offers a special deal: Two of his heads for one of yours. Anyway you slice it, you still come out a head."
   },
   {
@@ -2222,7 +2222,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Do 5 damage to a Plant. The Plant player <b>Conjures</b> a Fruit.",
+    "abilities": "Do 5 damage to a Plant. The Plant player <b>Conjures</b> a {{Fruit:t:fruit -t:superpower}}.",
     "flavour": "Once you get past all the dynamite and bombs, fruitcakes actually contain at least 5% Fruit."
   },
   {
@@ -2236,7 +2236,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> three Event cards. Then the Plant player <b>Conjures</b> an Event card.",
+    "abilities": "<b>Conjure</b> three {{Event:r:e is:zombie}} cards. Then the Plant player <b>Conjures</b> an {{Event:r:e is:plant}} card.",
     "flavour": "\"For the 4th day of Feastivus, my true love gave to me: 1 Fire Rooster, 1 Sneezing Zombie, 1 Bad Moon Rising, and a partridge in a Pear Tree!\""
   },
   {
@@ -2278,7 +2278,7 @@
     "cost": 4,
     "strength": 1,
     "health": 2,
-    "abilities": "<b>When hurt:</b> Make a random Gargantuar that costs 5 in a random lane.",
+    "abilities": "<b>When hurt:</b> Make a random {{Gargantuar:t:gargantuar c:5 type:f}} that costs 5 in a random lane.",
     "flavour": "When lifting a Gargantuar, always bend at the knees. He learned this the hard way."
   },
   {
@@ -2292,7 +2292,7 @@
     "cost": 5,
     "strength": 6,
     "health": 5,
-    "abilities": "<b>When played</b> and <b>When hurt:</b> Make a Mystery Egg in a random lane.",
+    "abilities": "<b>When played</b> and <b>When hurt:</b> Make a {{Mystery Egg:Mystery Egg}} in a random lane.",
     "flavour": "Sometimes, what has been seen... can't be unseen. This is one of those times."
   },
   {
@@ -2348,7 +2348,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 1{{Strength}}/1{{Heart}} Backup Dancer in a lane of your choice. Then another appears in a random lane.",
+    "abilities": "Make a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}} in a lane of your choice. Then another appears in a random lane.",
     "flavour": "You put your right foot in! No, wait, you might need that."
   },
   {
@@ -2418,7 +2418,7 @@
     "cost": 3,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Start of Turn:</b> All Sports Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Start of Turn:</b> All {{Sports:t:sport type:f}} Zombies get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Say what you will about the costume - Zombie morale has never been better."
   },
   {
@@ -2488,7 +2488,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant.\n<b>Conjure</b> a Monster.",
+    "abilities": "Move a Plant.\n<b>Conjure</b> a {{Monster:t:monster}}.",
     "flavour": "Just a disembodied Zombie head screaming uncontrollably. Nope. Nothing terrifying about that."
   },
   {
@@ -2600,7 +2600,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "This gets +1{{Strength}} when another Professional gets hurt.\n<b>When played</b>: <b>Conjure</b> a Professional.",
+    "abilities": "This gets +1{{Strength}} when another {{Professional:t:professional type:f}} gets hurt.\n<b>When played</b>: <b>Conjure</b> a {{Professional:t:professional}}.",
     "flavour": "Like most managers, bringing pain to his employees gives him strength."
   },
   {
@@ -2642,7 +2642,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played</b>: All Sports Zombies can't be hurt this turn.",
+    "abilities": "<b>When played</b>: All {{Sports:t:sports type:f}} Zombies can't be hurt this turn.",
     "flavour": "There's no \"i\" in Zombee!"
   },
   {
@@ -2698,7 +2698,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie can't be hurt this turn.\n<b>Conjure</b> a History card.",
+    "abilities": "A Zombie can't be hurt this turn.\n<b>Conjure</b> a {{History:t:history}} card.",
     "flavour": "Possible side effects include: the creation of a temporal paradox, the unraveling of the fabric of reality, erasing your entire existence, a mild foot rash."
   },
   {
@@ -2712,7 +2712,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a Sports card, and it costs 2{{Brain}} less.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Sports:t:sports -t:superpower}} card, and it costs 2{{Brain}} less.",
     "flavour": "He's been named Most Valuable Zombie of the Galaxy two years in a row!"
   },
   {
@@ -2806,7 +2806,7 @@
     "rarity": "super-rare",
     "class": "Hearty",
     "type": "Zombie",
-    "tribes": ["Science", "Gargantuar"],
+    "tribes": ["Sports", "Professional"],
     "cost": 1,
     "strength": 1,
     "health": 3,
@@ -2894,7 +2894,7 @@
     "cost": 4,
     "strength": 3,
     "health": 6,
-    "abilities": "<b>End of Turn:</b> Transform another random Zombie into a 5{{Strength}}/5{{Heart}} Knight of the Living Dead with <b>Armored 2</b>{{Armored}}.",
+    "abilities": "<b>End of Turn:</b> Transform another random Zombie into a 5{{Strength}}/5{{Heart}} {{Knight of the Living Dead:Knight of the Living Dead}} with <b>Armored 2</b>{{Armored}}.",
     "flavour": "Contrary to popular opinion, it's just OK to be king."
   },
   {
@@ -3006,7 +3006,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "Gargantuars cost 2{{Brain}} less.",
+    "abilities": "{{Gargantuars:t:gargantuar}} cost 2{{Brain}} less.",
     "flavour": "After years of studying Gargantuars in the wild, she's dedicated herself to telling the world they're just misunderstood gentle giants. So far, nobody's buying it."
   },
   {
@@ -3020,7 +3020,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed:</b> Gain a Leftovers.",
+    "abilities": "<b>When destroyed:</b> Gain a {{Leftovers:Leftovers}}.",
     "flavour": "He insists that, as far as modes of transportation go, turkeys outperform dolphins, walruses, and kangaroos any day."
   },
   {
@@ -3034,7 +3034,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.\nShuffle three Going Viral cards into your deck.\nDraw a card.",
+    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.\nShuffle three {{Going Viral:Going Viral}} cards into your deck.\nDraw a card.",
     "flavour": "Though Zombies can't get ill, this plague is totally sick."
   },
   {
@@ -3048,7 +3048,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do Bonus Attacks.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do {{Bonus Attacks:is:plant a:bonus a:attack -\"Party Thyme\" -\"Wing-Nut\"}}.",
     "flavour": "He put all his favorite songs on that mixtape. If only he could find the right Zombie to give it to."
   },
   {
@@ -3244,7 +3244,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\nWhen a Pirate hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Pirate:t:pirate type:f}} hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Buckles his swash like no other."
   },
   {
@@ -3328,7 +3328,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "{{Frozen}}<b>Freeze</b> a Plant.\n<b>Conjure</b> a Mustache.",
+    "abilities": "{{Frozen}}<b>Freeze</b> a Plant.\n<b>Conjure</b> a {{Mustache:t:mustache -t:superpower}}.",
     "flavour": "So stylish! So cool!"
   },
   {
@@ -3356,7 +3356,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie becomes {{Deadly}}<b>Deadly</b>.\n<b>Conjure</b> a Barrel.",
+    "abilities": "A Zombie becomes {{Deadly}}<b>Deadly</b>.\n<b>Conjure</b> a {{Barrel:t:barrel}}.",
     "flavour": "If you put a container in another container, you'll have twice the storage space!"
   },
   {
@@ -3384,7 +3384,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nWhen an Imp hurts the Plant Hero, draw a card.",
+    "abilities": "<b>Gravestone</b>\nWhen an {{Imp:t:imp type:f}} hurts the Plant Hero, draw a card.",
     "flavour": "He's got a bit of a Napoleon Complex. Obviously."
   },
   {
@@ -3398,7 +3398,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When destroyed:</b> Make 1{{Strength}}/1{{Heart}}Swabbies with <b>Amphibious</b> next door.",
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When destroyed:</b> Make 1{{Strength}}/1{{Heart}} {{Swabbies:Swabbie}} with <b>Amphibious</b> next door.",
     "flavour": "The second-most affordable way to transport Imps."
   },
   {
@@ -3468,7 +3468,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an Imp, and it gets {{Deadly}}<b>Deadly</b>.",
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an {{Imp:t:imp -t:superpower}}, and it gets {{Deadly}}<b>Deadly</b>.",
     "flavour": "When he gazes out at the stars, he feels small. Because he's an Imp."
   },
   {
@@ -3496,7 +3496,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Fusion:</b> <b>Conjure</b> a Legendary card, and it costs 1{{Brain}} less.",
+    "abilities": "<b>Fusion:</b> <b>Conjure</b> a {{Legendary:r:l is:zombie}} card, and it costs 1{{Brain}} less.",
     "flavour": "Neptuna knew only one way to motivate an army of invading zombie pirates. Tell them about the secret treasure."
   },
   {
@@ -3510,7 +3510,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\nAll Imps are {{Deadly}}<b>Deadly</b>.",
+    "abilities": "<b>Amphibious</b>\nAll {{Imps:t:imp (type:f or Cakesplosion)}} are {{Deadly}}<b>Deadly</b>.",
     "flavour": "All the radioactive glow... none of the super powers."
   },
   {
@@ -3552,7 +3552,7 @@
     "cost": 4,
     "strength": 5,
     "health": 3,
-    "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, make a random <b>Gravestone</b> in a random lane.",
+    "abilities": "<b>Gravestone</b>\nWhen this hurts the Plant Hero, make a random <b>{{Gravestone:a:gravestone type:f is:zombie -\"Headstone Carver\" - \"Grave Robber\" -\"Mixed-Up Gravedigger\"}}</b> in a random lane.",
     "flavour": "He's good at making friends."
   },
   {
@@ -3580,7 +3580,7 @@
     "cost": 2,
     "strength": 1,
     "health": 5,
-    "abilities": "Cards you <b>Conjure</b> cost 1{{Brain}} less.\nWhen this hurts the Plant Hero, <b>Conjure</b> a Galactic Gardens card.",
+    "abilities": "Cards you <b>Conjure</b> cost 1{{Brain}} less.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{Galactic Gardens:is:zombie set:g}} card.",
     "flavour": "He insists it's more than a screwdriver. Much more."
   },
   {
@@ -3608,7 +3608,7 @@
     "cost": 6,
     "strength": 7,
     "health": 6,
-    "abilities": "<b>Gravestone</b>\n<b>When Revealed:</b> Steal 2 sections from the Plant Hero's Super-Block Meter.\n<b>End of Turn</b>: All Gargantuars hide in Gravestones.",
+    "abilities": "<b>Gravestone</b>\n<b>When Revealed:</b> Steal 2 sections from the Plant Hero's Super-Block Meter.\n<b>End of Turn</b>: All {{Gargantuars:t:gargantuar type:f}} hide in Gravestones.",
     "flavour": "The lost temples of Hollow Earth were mysterious and inviting. Until they started to move."
   },
   {
@@ -3678,7 +3678,7 @@
     "cost": 8,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random Pirates in random lanes.",
+    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random {{Pirates:t:pirate type:f -\"Zombot Plank Walker\"}} in random lanes.",
     "flavour": "Deploying Pirates here, there and everywhere."
   },
   {
@@ -3720,7 +3720,7 @@
     "cost": 6,
     "strength": 5,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\nWhen this hurts the Plant Hero, it moves to a random lane and leaves behind a random Zombie.",
+    "abilities": "<b>Amphibious</b>\nWhen this hurts the Plant Hero, it moves to a random lane and leaves behind a random {{Zombie:is:zombie t:f -t:superpower}}.",
     "flavour": "These pirates hit hard, then escape at 3 miles per hour."
   },
   {
@@ -3734,7 +3734,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a card that costs 2{{Brain}} or less.",
+    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{card:is:zombie c<=2 -t:superpower}} that costs 2{{Brain}} or less.",
     "flavour": "Amazomb helmets mostly protect their ears from all the roaring."
   },
   {
@@ -3748,7 +3748,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost Imp. It gains a Mustache.",
+    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1 -t:superpower}}. It gains a Mustache.",
     "flavour": "It's IMPossible to tell who he really is."
   },
   {
@@ -3776,7 +3776,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "<b>When hurt</b>: Make a random Imp that costs 2{{Brain}} or less in a random lane.",
+    "abilities": "<b>When hurt</b>: Make a random {{Imp:t:imp type:f c<=2}} that costs 2{{Brain}} or less in a random lane.",
     "flavour": "But where is the Imp-Throwing-Imp-Throwing-Imp?? We have to go deeper..."
   },
   {
@@ -3790,7 +3790,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "All Pirates have {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "All {{Pirates:t:pirate type:f}} have {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "You get your beard caught in the toaster ONE time, and it's all anyone can talk about..."
   },
   {
@@ -3818,7 +3818,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a Trapper Territory.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a {{Trapper Territory:Trapper Territory include:token}}.",
     "flavour": "Purveyor of only the finest banana peel coats."
   },
   {
