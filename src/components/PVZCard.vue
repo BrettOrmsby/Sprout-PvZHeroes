@@ -39,7 +39,6 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   gap: var(--inline-space);
   padding: var(--inline-space);
   cursor: pointer;
-  color: var(--p-surface-900);
 }
 
 .card-container:hover {
@@ -75,6 +74,9 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   border-radius: var(--p-border-radius-md);
 }
 
+.card-image {
+  color: var(--p-surface-900);
+}
 .not-valid {
   opacity: 0.5;
 }
