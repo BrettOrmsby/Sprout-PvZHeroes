@@ -33,6 +33,15 @@
           :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
           :alt="card.class"
         />
+        <template v-else>
+          <img
+            v-for="cardClass of getMainSuperClasses(card)"
+            :key="cardClass"
+            class="class"
+            :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
+            :alt="card.class"
+          />
+        </template>
         <img
           v-if="card.name === 'Octo-Pet'"
           class="class"
@@ -56,14 +65,22 @@
 </template>
 
 <script lang="ts" setup>
+import heros from '@/content/heros.json'
 import states from '@/store/states'
 import getCard from '@/lib/getCard'
 import { computed } from 'vue'
 import Dialog from 'primevue/dialog'
 import SetPill from './deck/SetPill.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
+import type { Card } from '@/lib/types'
 
 const card = computed(() => getCard(states.cardModal.card))
+
+const getMainSuperClasses = (superpower: Card) => {
+  return [...heros.plants, ...heros.zombies].find(
+    (hero) => hero.mainSuperPower === superpower.name,
+  )!.class
+}
 </script>
 
 <style scoped>

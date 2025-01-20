@@ -47,6 +47,8 @@ import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
+import superpowers from '@/content/superpowers.json'
+import heros from '@/content/heros.json'
 import Toolbar from 'primevue/toolbar'
 import InputText from 'primevue/inputtext'
 import Message from 'primevue/message'
@@ -60,6 +62,19 @@ import CardModal from '@/components/CardModal.vue'
 const route = useRoute()
 const router = useRouter()
 
+const allCards: Card[] = [
+  ...plants,
+  ...zombies,
+  ...superpowers.reduce((prev, curr) => {
+    const hero = [...heros.plants, ...heros.zombies].find(
+      (hero) => hero.mainSuperPower === curr.name,
+    )!
+    prev.push({ ...curr, class: hero.class[0] })
+    prev.push({ ...curr, class: hero.class[1] })
+    return prev
+  }, [] as Card[]),
+]
+
 const query = computed({
   get() {
     return route.query.query?.toString() || ''
@@ -71,22 +86,28 @@ const query = computed({
 const parsedQuery = computed(() => generateQuery(query.value))
 const matchingCards = computed(() => {
   // Manage duplicate cards with two classes
-  const duplicates = {
+  const duplicates: Record<string, boolean> = {
     'Octo-Pet': false,
     'Zom-Bats': false,
     'Impfinity Clone': false,
     Hothead: false,
   }
+  for (const superpower of superpowers) {
+    duplicates[superpower.name] = false
+  }
   const duplicateNames = Object.keys(duplicates)
   return (
-    [...plants, ...zombies].filter((card) => {
+    allCards.filter((card) => {
+      if (!doesMatchQuery(card, parsedQuery.value.query)) {
+        return false
+      }
       if (duplicateNames.includes(card.name)) {
         if (duplicates[card.name as keyof typeof duplicates]) {
           return false
         }
         duplicates[card.name as keyof typeof duplicates] = true
       }
-      return doesMatchQuery(card, parsedQuery.value.query)
+      return true
     }) as Card[]
   ).sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))
 })

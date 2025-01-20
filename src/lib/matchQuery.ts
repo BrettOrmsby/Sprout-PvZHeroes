@@ -4,14 +4,12 @@ import type { Card, Query } from './types'
 export default function doesMatchQuery(
   card: Card,
   query: Query,
-  includeTokens = false,
-  includeRemoved = false,
+  include = { tokens: false, removed: false, superpowers: false },
 ): boolean {
   for (const subQuery of query) {
     if (subQuery.property === 'or') {
       const isSomeCorrect = subQuery.orSections.some(
-        (orQuery) =>
-          orQuery.length !== 0 && doesMatchQuery(card, orQuery, includeTokens, includeRemoved),
+        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery, include),
       )
       if (!isSomeCorrect) {
         return false
@@ -180,20 +178,26 @@ export default function doesMatchQuery(
       if (subQuery.property === 'include' || subQuery.property === 'i') {
         const value = subQuery.value
         if (value === 'token' || value === 't' || value === 'a' || value === 'all') {
-          includeTokens = true
+          include = { ...include, tokens: true }
         }
         if (value === 'removed' || value === 'r' || value === 'a' || value === 'all') {
-          includeRemoved = true
+          include = { ...include, removed: true }
+        }
+        if (value === 'superpower' || value === 's' || value === 'a' || value === 'all') {
+          include = { ...include, superpowers: true }
         }
         continue
       }
     }
   }
 
-  if (!includeRemoved && card.class === 'Removed') {
+  if (!include.removed && card.class === 'Removed') {
     return false
   }
-  if (!includeTokens && card.set === 'token') {
+  if (!include.tokens && card.set === 'token') {
+    return false
+  }
+  if (!include.superpowers && card.tribes.includes('Superpower')) {
     return false
   }
   return true

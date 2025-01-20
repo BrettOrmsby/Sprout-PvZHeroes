@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Menuebar :model="items" breakpoint="450px">
+    <Menuebar :model="items" breakpoint="500px">
       <template #start>
         <div class="p-menubar-item logo-container">
           <div class="p-menubar-item-content">
@@ -18,6 +18,7 @@
             <UserSearch v-if="item.label === 'Users'" />
             <FolderSearch v-else-if="item.label === 'Decks'" />
             <FileSearch v-if="item.label === 'Cards'" />
+            <SearchCode v-if="item.label === 'Query Help'" />
             <LayoutGrid v-else-if="item.label === 'Your Decks'" />
             <Plus v-else-if="item.label === 'Create Deck'" />
             <LogOut v-else-if="item.label === 'Sign Out'" />
@@ -60,6 +61,7 @@ import {
   LogOut,
   Plus,
   Search,
+  SearchCode,
   Sprout,
   UserSearch,
 } from 'lucide-vue-next'
@@ -85,6 +87,10 @@ const items = computed(() => {
         {
           label: 'Users',
           route: '/search/users',
+        },
+        {
+          label: 'Query Help',
+          route: '/query-help',
         },
       ],
     },

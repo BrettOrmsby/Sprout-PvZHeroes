@@ -207,6 +207,16 @@
         <code>class:"mega grow"</code>, or hyphen, <code>class:mega-grow</code>.
       </p>
     </NotePanel>
+    <NotePanel type="warning">
+      <p>
+        If there are multiple classes specified, <code>class:solar class:smarty</code>, cards with
+        multiple classes like
+        <RouterLink target="_blank" :to="{ name: 'SearchCards', query: { query: 'Goatify' } }"
+          >Goatify</RouterLink
+        >
+        (Rose's signature) still will not be found.
+      </p>
+    </NotePanel>
     <NotePanel type="error">
       <p>If the value of the <code>class</code> parameter is not valid, it will be ignored.</p>
     </NotePanel>
@@ -395,7 +405,7 @@
     </NotePanel>
     <NotePanel type="note">
       <p>
-        Tokens and removed cards are not included by default, so negating the
+        Tokens, removed cards, and superpowers are not included by default, so negating the
         <code>include:all</code> will do nothing.
       </p>
     </NotePanel>
@@ -478,6 +488,10 @@ const includeValues = [
   {
     regular: 'removed',
     short: 'r',
+  },
+  {
+    regular: 'superpower',
+    short: 's',
   },
   {
     regular: 'all',
@@ -643,6 +657,15 @@ h2 {
 
 .p-datatable {
   margin-bottom: var(--block-space);
+}
+
+a {
+  color: var(--p-primary-color);
+  transition: var(--p-form-field-transition-duration);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--p-primary-hover-color);
 }
 
 p,

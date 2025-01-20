@@ -270,7 +270,7 @@ export class Parser {
 
           if (propertyName === 'include' || propertyName === 'i') {
             if (
-              !['token', 't', 'removed', 'r', 'all', 'a'].includes(
+              !['token', 't', 'removed', 'r', 'all', 'superpower', 's', 'a'].includes(
                 (valueToken.value as string).toLowerCase(),
               )
             ) {

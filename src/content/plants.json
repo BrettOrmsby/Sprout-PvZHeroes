@@ -108,7 +108,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant.\n<b>Conjure</b> a {{Trick:is:plant type:trick -t:superpower}}.",
+    "abilities": "Move a Plant.\n<b>Conjure</b> a {{Trick:is:plant type:trick}}.",
     "flavour": "Made of the softest fabric for that gentle Plant touch."
   },
   {
@@ -332,7 +332,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut -tribe:superpower}}, and its {{Strength}} becomes 3{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut}}, and its {{Strength}} becomes 3{{Strength}}.",
     "flavour": "A staunch believer in numerology, he'll go on at length about the significance of the number 3 if you let him."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play another {{Root:tribe:root type:f}}, that {{Root:tribe:root type:f}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root -t:superpower}}.",
+    "abilities": "When you play another {{Root:tribe:root type:f}}, that {{Root:tribe:root type:f}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root}}.",
     "flavour": "His destiny is written in the starch."
   },
   {
@@ -850,7 +850,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6 -tribe:superpower}} that costs 6{{Sun}} or less.",
+    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6}} that costs 6{{Sun}} or less.",
     "flavour": "t's the tiny seed of a... nobody actually knows."
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Mushroom:tribe:mushroom -t:superpower}}, and it gets +2{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Mushroom:tribe:mushroom}}, and it gets +2{{Strength}}.",
     "flavour": "He's far out all right. Like, waaaay far out."
   },
   {
@@ -1186,7 +1186,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "When a {{Mushroom:tribe:mushroom -t:superpower}} is destroyed, do 2 damage to a random Zombie or Zombie Hero.",
+    "abilities": "When a {{Mushroom:tribe:mushroom}} is destroyed, do 2 damage to a random Zombie or Zombie Hero.",
     "flavour": "Believes revenge is best served. Period."
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root -t:superpower}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Some potatoes are sweet. Others are dinosaurs."
   },
   {
@@ -2880,7 +2880,7 @@
     "cost": 5,
     "strength": 4,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\n<b>Start of turn:</b> Conjure a Superpower.",
+    "abilities": "<b>Amphibious</b>\n<b>Start of turn:</b> Conjure a {{Superpower: is:plant t:superpower include:superpower}}.",
     "flavour": "Her beautiful melodies are echoed by the roars of dinosaurs."
   },
   {
@@ -3076,7 +3076,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a {{Root:t:root -t:superpower}}.",
+    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a {{Root:t:root}}.",
     "flavour": "Beta-Carrotina knows she can always count on him to get to the root of the problem."
   },
   {
@@ -3090,7 +3090,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> two {{Tricks:is:plant type:t -t:superpower}}.",
+    "abilities": "<b>Conjure</b> two {{Tricks:is:plant type:t}}.",
     "flavour": "Make the jump to light seed."
   },
   {
@@ -3426,7 +3426,7 @@
     "cost": 3,
     "strength": 2,
     "health": 1,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a {{Flower:t:flower -t:superpower}}, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a {{Flower:t:flower}}, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "She enjoys the simple things in life - hanging out with friends, fighting Zombies, and basking in cosmic rays."
   },
   {
@@ -3608,7 +3608,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a {{Flower:t:flower -t:superpower}}. <b>Conjure</b> a {{Trick:is:plant type:t -t:superpower}}.\nThey both cost 1 less.",
+    "abilities": "<b>Conjure</b> a {{Flower:t:flower}}. <b>Conjure</b> a {{Trick:is:plant type:t}}.\nThey both cost 1 less.",
     "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
   },
   {

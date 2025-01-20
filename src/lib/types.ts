@@ -115,7 +115,7 @@ export type Query = (
     }
   | {
       property: 'include' | 'i'
-      value: 'token' | 't' | 'removed' | 'r' | 'all' | 'a'
+      value: 'token' | 't' | 'removed' | 'r' | 'superpower' | 's' | 'all' | 'a'
     }
   | {
       property: 'or'

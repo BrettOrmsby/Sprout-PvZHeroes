@@ -28,6 +28,15 @@
           :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
           :alt="card.class"
         />
+        <template v-else>
+          <img
+            v-for="cardClass of getMainSuperClasses(card)"
+            :key="cardClass"
+            class="class"
+            :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
+            :alt="card.class"
+          />
+        </template>
         <img
           v-if="card.name === 'Octo-Pet'"
           class="class"
@@ -59,12 +68,20 @@ import SetPill from '@/components/deck/SetPill.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
+import heros from '@/content/heros.json'
 import getHero from '@/lib/getHero'
 import { useRoute } from 'vue-router'
+import type { Card } from '@/lib/types'
 
 const deck = useDeckStore()
 
 const card = computed(() => getCard(states.cardHover))
+
+const getMainSuperClasses = (superpower: Card) => {
+  return [...heros.plants, ...heros.zombies].find(
+    (hero) => hero.mainSuperPower === superpower.name,
+  )!.class
+}
 
 const route = useRoute()
 onMounted(() => {

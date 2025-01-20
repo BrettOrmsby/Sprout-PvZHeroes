@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet -t:superpower}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
     "flavour": "He's hoping they name a constellation after him. \"The Big Yeti\" does have a ring to it."
   },
   {
@@ -1116,7 +1116,7 @@
     "cost": 2,
     "strength": 1,
     "health": 2,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a {{Science:t:science -t:superpower}} card, and it gets {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a {{Science:t:science}} card, and it gets {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He has no idea what's in the beakers. He just likes to mix them together until they go BOOM!"
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> an {{Imp:t:imp -t:superpower}}, a {{Zombie:is:zombie type:f}}, and a {{Gargantuar:t:gargantuar}}.",
+    "abilities": "<b>Conjure</b> an {{Imp:t:imp}}, a {{Zombie:is:zombie type:f}}, and a {{Gargantuar:t:gargantuar}}.",
     "flavour": "An Imp, a Zombie, and Gargantuar walk into a bar..."
   },
   {
@@ -1200,7 +1200,7 @@
     "cost": 4,
     "strength": 3,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Trick:is:zombie type:t -t:superpower}}, and it costs 1 less.",
+    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Trick:is:zombie type:t}}, and it costs 1 less.",
     "flavour": "He's not so much \"mad\" as he is \"mildly annoyed.\""
   },
   {
@@ -1298,7 +1298,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When this does damage, <b>Conjure</b> a {{Mustache:t:mustache -t:superpower}}.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "When this does damage, <b>Conjure</b> a {{Mustache:t:mustache}}.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
     "flavour": "Determined to find every Mustache Monument in Hollow Earth, Neptuna brought in the experts."
   },
   {
@@ -1424,7 +1424,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Zombie:type:f is:zombie -t:superpower}}, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a {{Plant:is:plant type:f -t:superpower}}, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Zombie:type:f is:zombie}}, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a {{Plant:is:plant type:f}}, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
     "flavour": "Regifting: Is it really an embarrassing social faux pas? Or is it just good ol' recycling?"
   },
   {
@@ -1452,7 +1452,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> two Superpowers.",
+    "abilities": "<b>Conjure</b> two {{Superpowers:is:zombie t:superpower include:superpower}}.",
     "flavour": "Only the best and the brainiest University Zombies graduate to using full-fledged Superpowers."
   },
   {
@@ -1942,7 +1942,7 @@
     "cost": 4,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a {{Dancing:t:dancing -t:superpower}} card, and it gets {{Overshoot}}<b>Overshoot 2</b>.",
+    "abilities": "{{Overshoot}}<b>Overshoot 2</b>\n<b>When played:</b> <b>Conjure</b> a {{Dancing:t:dancing}} card, and it gets {{Overshoot}}<b>Overshoot 2</b>.",
     "flavour": "Across the cosmos, the passion for dance is the only universal language."
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> If there is a Zombie next door, <b>Conjure</b> a Superpower.",
+    "abilities": "<b>When played:</b> If there is a Zombie next door, <b>Conjure</b> a {{Superpower:is:zombie t:superpower include:superpower}}.",
     "flavour": "You can call him Quazard for short."
   },
   {
@@ -2222,7 +2222,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Do 5 damage to a Plant. The Plant player <b>Conjures</b> a {{Fruit:t:fruit -t:superpower}}.",
+    "abilities": "Do 5 damage to a Plant. The Plant player <b>Conjures</b> a {{Fruit:t:fruit}}.",
     "flavour": "Once you get past all the dynamite and bombs, fruitcakes actually contain at least 5% Fruit."
   },
   {
@@ -2712,7 +2712,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Sports:t:sports -t:superpower}} card, and it costs 2{{Brain}} less.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Sports:t:sports}} card, and it costs 2{{Brain}} less.",
     "flavour": "He's been named Most Valuable Zombie of the Galaxy two years in a row!"
   },
   {
@@ -3328,7 +3328,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "{{Frozen}}<b>Freeze</b> a Plant.\n<b>Conjure</b> a {{Mustache:t:mustache -t:superpower}}.",
+    "abilities": "{{Frozen}}<b>Freeze</b> a Plant.\n<b>Conjure</b> a {{Mustache:t:mustache}}.",
     "flavour": "So stylish! So cool!"
   },
   {
@@ -3468,7 +3468,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an {{Imp:t:imp -t:superpower}}, and it gets {{Deadly}}<b>Deadly</b>.",
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an {{Imp:t:imp}}, and it gets {{Deadly}}<b>Deadly</b>.",
     "flavour": "When he gazes out at the stars, he feels small. Because he's an Imp."
   },
   {
@@ -3720,7 +3720,7 @@
     "cost": 6,
     "strength": 5,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\nWhen this hurts the Plant Hero, it moves to a random lane and leaves behind a random {{Zombie:is:zombie t:f -t:superpower}}.",
+    "abilities": "<b>Amphibious</b>\nWhen this hurts the Plant Hero, it moves to a random lane and leaves behind a random {{Zombie:is:zombie t:f}}.",
     "flavour": "These pirates hit hard, then escape at 3 miles per hour."
   },
   {
@@ -3734,7 +3734,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{card:is:zombie c<=2 -t:superpower}} that costs 2{{Brain}} or less.",
+    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{card:is:zombie c<=2}} that costs 2{{Brain}} or less.",
     "flavour": "Amazomb helmets mostly protect their ears from all the roaring."
   },
   {
@@ -3748,7 +3748,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1 -t:superpower}}. It gains a Mustache.",
+    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1}}. It gains a Mustache.",
     "flavour": "It's IMPossible to tell who he really is."
   },
   {
