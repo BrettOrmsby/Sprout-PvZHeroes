@@ -8,46 +8,7 @@
     <template #header>
       <div class="header-container p-dialog-title">
         {{ card.name }}
-        <img
-          v-if="card.name === 'Zom-Bats'"
-          class="class"
-          src="/images/classes/brainy.png"
-          alt="Brainy"
-        />
-        <img
-          v-if="card.name === 'Impfinity Clone'"
-          class="class"
-          src="/images/classes/sneaky.png"
-          alt="Sneaky"
-        />
-        <img
-          v-if="card.name === 'Hothead'"
-          class="class"
-          src="/images/classes/kabloom.png"
-          alt="Kabloom"
-        />
-        <span v-if="card.class === 'Removed'" style="color: var(--p-primary-400)">Removed</span>
-        <img
-          v-else-if="card.class"
-          class="class"
-          :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
-          :alt="card.class"
-        />
-        <template v-else>
-          <img
-            v-for="cardClass of getMainSuperClasses(card)"
-            :key="cardClass"
-            class="class"
-            :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
-            :alt="card.class"
-          />
-        </template>
-        <img
-          v-if="card.name === 'Octo-Pet'"
-          class="class"
-          src="/images/classes/sneaky.png"
-          alt="Sneaky"
-        />
+        <CardClassImage :card="card" />
         <SetPill :card="card" />
       </div>
     </template>
@@ -65,22 +26,15 @@
 </template>
 
 <script lang="ts" setup>
-import heros from '@/content/heros.json'
 import states from '@/store/states'
 import getCard from '@/lib/getCard'
 import { computed } from 'vue'
 import Dialog from 'primevue/dialog'
 import SetPill from './deck/SetPill.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
-import type { Card } from '@/lib/types'
+import CardClassImage from './CardClassImage.vue'
 
 const card = computed(() => getCard(states.cardModal.card))
-
-const getMainSuperClasses = (superpower: Card) => {
-  return [...heros.plants, ...heros.zombies].find(
-    (hero) => hero.mainSuperPower === superpower.name,
-  )!.class
-}
 </script>
 
 <style scoped>
@@ -90,10 +44,6 @@ const getMainSuperClasses = (superpower: Card) => {
   flex-wrap: wrap;
   gap: var(--inline-space);
 }
-.class {
-  width: 1em;
-}
-
 .main-image {
   display: block;
   margin: 0 auto;

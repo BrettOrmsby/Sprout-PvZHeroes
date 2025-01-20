@@ -3,46 +3,7 @@
     <div class="sticky">
       <div class="header-container">
         <strong>{{ card.name }}</strong>
-        <img
-          v-if="card.name === 'Zom-Bats'"
-          class="class"
-          src="/images/classes/brainy.png"
-          alt="Brainy"
-        />
-        <img
-          v-if="card.name === 'Impfinity Clone'"
-          class="class"
-          src="/images/classes/sneaky.png"
-          alt="Sneaky"
-        />
-        <img
-          v-if="card.name === 'Hothead'"
-          class="class"
-          src="/images/classes/kabloom.png"
-          alt="Kabloom"
-        />
-        <span v-if="card.class === 'Removed'" style="color: var(--p-primary-400)">Removed</span>
-        <img
-          v-else-if="card.class"
-          class="class"
-          :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
-          :alt="card.class"
-        />
-        <template v-else>
-          <img
-            v-for="cardClass of getMainSuperClasses(card)"
-            :key="cardClass"
-            class="class"
-            :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
-            :alt="card.class"
-          />
-        </template>
-        <img
-          v-if="card.name === 'Octo-Pet'"
-          class="class"
-          src="/images/classes/sneaky.png"
-          alt="Sneaky"
-        />
+        <CardClassImage :card="card" />
       </div>
       <SetPill :card="card" />
       <img
@@ -65,23 +26,16 @@ import { useDeckStore } from '@/store/deck'
 import getCard from '@/lib/getCard'
 import { computed, onMounted } from 'vue'
 import SetPill from '@/components/deck/SetPill.vue'
+import CardClassImage from '@/components/CardClassImage.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
-import heros from '@/content/heros.json'
 import getHero from '@/lib/getHero'
 import { useRoute } from 'vue-router'
-import type { Card } from '@/lib/types'
 
 const deck = useDeckStore()
 
 const card = computed(() => getCard(states.cardHover))
-
-const getMainSuperClasses = (superpower: Card) => {
-  return [...heros.plants, ...heros.zombies].find(
-    (hero) => hero.mainSuperPower === superpower.name,
-  )!.class
-}
 
 const route = useRoute()
 onMounted(() => {
@@ -132,9 +86,6 @@ onMounted(() => {
   align-items: center;
   flex-wrap: wrap;
   gap: var(--inline-space);
-}
-.class {
-  width: 1em;
 }
 .p-badge {
   margin-top: var(--inline-space);
