@@ -42,7 +42,14 @@ export type User = {
   created_at: string
 }
 
-export type Query = (
+export type Query = {
+  includeTokens: boolean
+  includeRemoved: boolean
+  includeSuperpowers: boolean
+  query: SubQuery
+}
+
+export type SubQuery = (
   | {
       property: 'strength' | 's' | 'health' | 'h' | 'cost' | 'c'
       compare: '=' | ':' | '<' | '>' | '<=' | '>='
@@ -114,11 +121,7 @@ export type Query = (
       isNegated: boolean
     }
   | {
-      property: 'include' | 'i'
-      value: 'token' | 't' | 'removed' | 'r' | 'superpower' | 's' | 'all' | 'a'
-    }
-  | {
       property: 'or'
-      orSections: Query[]
+      orSections: SubQuery[]
     }
 )[]

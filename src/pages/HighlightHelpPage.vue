@@ -405,7 +405,7 @@
     </NotePanel>
     <NotePanel type="note">
       <p>
-        Tokens, removed cards, and superpowers are not included by default, so negating the
+        Tokens, removed cards, and superpowers are not included by default, so negating
         <code>include:all</code> will do nothing.
       </p>
     </NotePanel>
@@ -416,7 +416,13 @@
         <code>include:token include:removed</code> and <code>include:removed include:all</code>.
       </p>
     </NotePanel>
-
+    <NotePanel type="note">
+      <p>
+        Include statements affect the entire query. For example,
+        <code>class:brainy or (class:sneaky include:token)</code> will find all brainy cards and all
+        sneaky cards, including tokens for both classes.
+      </p>
+    </NotePanel>
     <NotePanel type="error">
       <p>If the value of the <code>include</code> parameter is not valid, it will be ignored.</p>
     </NotePanel>

@@ -53,7 +53,7 @@ watch(() => states.deckFilter.textQuery, update)
 function update(newVal: string) {
   const result = generateQuery(newVal)
   states.deckFilter.errors = result.errors
-  if (newVal.length === 0 || result.query.length === 0) {
+  if (newVal.length === 0 || result.query.query.length === 0) {
     states.deckFilter.cardsMatchingFilter = []
   } else {
     states.deckFilter.cardsMatchingFilter = cards

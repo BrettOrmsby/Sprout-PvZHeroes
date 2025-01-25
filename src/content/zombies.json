@@ -3510,7 +3510,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\nAll {{include:token Imps:t:imp (type:f or Cakesplosion)}} are {{Deadly}}<b>Deadly</b>.",
+    "abilities": "<b>Amphibious</b>\nAll {{Imps:include:token t:imp (type:f or Cakesplosion)}} are {{Deadly}}<b>Deadly</b>.",
     "flavour": "All the radioactive glow... none of the super powers."
   },
   {

@@ -1,5 +1,5 @@
 import type { CompareOperator, QueryError, Token, TokenType } from './scanner'
-import type { Query } from '@/lib/types'
+import type { Query, SubQuery } from '@/lib/types'
 
 const properties = [
   'strength',
@@ -38,26 +38,31 @@ export class Parser {
   constructor(tokens: Token<TokenType>[]) {
     this.tokens = tokens
     this.pointer = 0
-    this.query = []
+    this.query = {
+      query: [],
+      includeRemoved: false,
+      includeSuperpowers: false,
+      includeTokens: false,
+    }
     this.errors = []
   }
   parse(): QueryError[] {
     const result = this.#parseSection(true)
-    this.query = result
+    this.query.query = result
 
     return this.errors
   }
 
-  #parseSection(isInRoot: boolean): Query {
+  #parseSection(isInRoot: boolean): SubQuery {
     // increment past the `(` character
     if (!isInRoot && this.#peek().type === 'openParen') {
       this.#increment()
     }
 
     let isNegated = false
-    let root: Query = []
-    let section: { property: 'or'; orSections: Query[] } | null = null
-    let target: Query = root
+    let root: SubQuery = []
+    let section: { property: 'or'; orSections: SubQuery[] } | null = null
+    let target: SubQuery = root
     while (!this.#isAtEnd()) {
       const current = this.#peek()
 
@@ -282,14 +287,23 @@ export class Parser {
               this.#increment()
               continue
             }
-            valueToken.value = valueToken.value.toString().toLowerCase()
+            const value = valueToken.value.toString().toLowerCase()
+            if (['a', 'all', 'token', 't'].includes(value)) {
+              this.query.includeTokens = true
+            }
+            if (['a', 'all', 'removed', 'r'].includes(value)) {
+              this.query.includeRemoved = true
+            }
+            if (['a', 'all', 'superpower', 's'].includes(value)) {
+              this.query.includeSuperpowers = true
+            }
+          } else {
+            target.push({
+              property: propertyName as any,
+              value: valueToken.value,
+              isNegated,
+            })
           }
-
-          target.push({
-            property: propertyName as any,
-            value: valueToken.value,
-            isNegated,
-          })
           isNegated = false
         }
         this.#increment()

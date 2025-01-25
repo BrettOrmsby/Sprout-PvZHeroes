@@ -1,15 +1,11 @@
 import type { CompareOperator } from './parse-query/scanner'
 import type { Card, Query } from './types'
 
-export default function doesMatchQuery(
-  card: Card,
-  query: Query,
-  include = { tokens: false, removed: false, superpowers: false },
-): boolean {
-  for (const subQuery of query) {
+export default function doesMatchQuery(card: Card, query: Query): boolean {
+  for (const subQuery of query.query) {
     if (subQuery.property === 'or') {
       const isSomeCorrect = subQuery.orSections.some(
-        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, orQuery, include),
+        (orQuery) => orQuery.length !== 0 && doesMatchQuery(card, { ...query, query: orQuery }),
       )
       if (!isSomeCorrect) {
         return false
@@ -176,29 +172,16 @@ export default function doesMatchQuery(
         }
         continue
       }
-      if (subQuery.property === 'include' || subQuery.property === 'i') {
-        const value = subQuery.value
-        if (value === 'token' || value === 't' || value === 'a' || value === 'all') {
-          include = { ...include, tokens: true }
-        }
-        if (value === 'removed' || value === 'r' || value === 'a' || value === 'all') {
-          include = { ...include, removed: true }
-        }
-        if (value === 'superpower' || value === 's' || value === 'a' || value === 'all') {
-          include = { ...include, superpowers: true }
-        }
-        continue
-      }
     }
   }
 
-  if (!include.removed && card.class === 'Removed') {
+  if (!query.includeRemoved && card.class === 'Removed') {
     return false
   }
-  if (!include.tokens && card.set === 'token') {
+  if (!query.includeTokens && card.set === 'token') {
     return false
   }
-  if (!include.superpowers && card.tribes.includes('Superpower')) {
+  if (!query.includeTokens && card.tribes.includes('Superpower')) {
     return false
   }
   return true
