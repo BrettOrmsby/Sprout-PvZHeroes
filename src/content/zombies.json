@@ -38,7 +38,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "When you play another {{Pet:t:pet}}, all {{Pets:t:pet type:f}} get +1{{Strength}}.",
+    "abilities": "When you play another {{Pet:t:pet include:token}}, all {{Pets:t:pet type:f include:token}} get +1{{Strength}}.",
     "flavour": "Snaaaaake!"
   },
   {
@@ -122,7 +122,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a {{Pet:t:pet type:f}}, it gets +2{{Strength}}/+1{{Heart}} instead.",
+    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a {{Pet:t:pet type:f include:token}}, it gets +2{{Strength}}/+1{{Heart}} instead.",
     "flavour": "What's inside? A peanut butter and brains sandwich... with the crusts cut off."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet include:token}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
     "flavour": "He's hoping they name a constellation after him. \"The Big Yeti\" does have a ring to it."
   },
   {
@@ -388,7 +388,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "This gets +3{{Strength}} this turn when you play another {{Pet:t:pet}}.",
+    "abilities": "This gets +3{{Strength}} this turn when you play another {{Pet:t:pet include:token}}.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
   {
@@ -920,7 +920,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nWhen a {{Science:t:science type:f}} Zombie does damage, that Zombie gets +1{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Science:t:science type:f include:token}} Zombie does damage, that Zombie gets +1{{Strength}}.",
     "flavour": "He's not entirely sure how to fly this thing."
   },
   {
@@ -1074,7 +1074,7 @@
     "cost": 5,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> Each {{Science:t:science type:f}} Zombie does a Bonus Attack.",
+    "abilities": "<b>When played:</b> Each {{Science:t:science type:f include:token}} Zombie does a Bonus Attack.",
     "flavour": "Wishes the Mad Chemist would stop copying his hair style."
   },
   {
@@ -1116,7 +1116,7 @@
     "cost": 2,
     "strength": 1,
     "health": 2,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a {{Science:t:science}} card, and it gets {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played:</b> <b>Conjure</b> a {{Science:t:science include:token}} card, and it gets {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He has no idea what's in the beakers. He just likes to mix them together until they go BOOM!"
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> an {{Imp:t:imp}}, a {{Zombie:is:zombie type:f}}, and a {{Gargantuar:t:gargantuar}}.",
+    "abilities": "<b>Conjure</b> an {{Imp:t:imp include:token}}, a {{Zombie:is:zombie type:f}}, and a {{Gargantuar:t:gargantuar}}.",
     "flavour": "An Imp, a Zombie, and Gargantuar walk into a bar..."
   },
   {
@@ -1354,7 +1354,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a {{Science:t:science}} card, this transforms into a {{Zombie:is:zombie c:3 type:f}} that costs 3{{Brain}}.",
+    "abilities": "When you play a {{Science:t:science}} card, this transforms into a {{Zombie:is:zombie c:3 type:f include:token}} that costs 3{{Brain}}.",
     "flavour": "In a parallel dimension, this zombie is a Space Pirate. In another he's a Trash Can Zombie. Turns out, little choices in life can make a big difference."
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 1,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Tricks:</b> Transform this into a random {{zombie:is:zombie type:f c<=2}} that costs 2{{Brain}} or less.",
+    "abilities": "<b>Start of Tricks:</b> Transform this into a random {{zombie:is:zombie type:f c<=2 include:token}} that costs 2{{Brain}} or less.",
     "flavour": "\"Mommy, where do little Zombies come from?\" Asked and answered."
   },
   {
@@ -3244,7 +3244,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\nWhen a {{Pirate:t:pirate type:f}} hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Pirate:t:pirate type:f include:token}} hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Buckles his swash like no other."
   },
   {
@@ -3384,7 +3384,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nWhen an {{Imp:t:imp type:f}} hurts the Plant Hero, draw a card.",
+    "abilities": "<b>Gravestone</b>\nWhen an {{Imp:t:imp type:f include:token}} hurts the Plant Hero, draw a card.",
     "flavour": "He's got a bit of a Napoleon Complex. Obviously."
   },
   {
@@ -3468,7 +3468,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an {{Imp:t:imp}}, and it gets {{Deadly}}<b>Deadly</b>.",
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When played:</b> <b>Conjure</b> an {{Imp:t:imp include:token}}, and it gets {{Deadly}}<b>Deadly</b>.",
     "flavour": "When he gazes out at the stars, he feels small. Because he's an Imp."
   },
   {
@@ -3510,7 +3510,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\nAll {{Imps:t:imp (type:f or Cakesplosion)}} are {{Deadly}}<b>Deadly</b>.",
+    "abilities": "<b>Amphibious</b>\nAll {{include:token Imps:t:imp (type:f or Cakesplosion)}} are {{Deadly}}<b>Deadly</b>.",
     "flavour": "All the radioactive glow... none of the super powers."
   },
   {
@@ -3678,7 +3678,7 @@
     "cost": 8,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random {{Pirates:t:pirate type:f -\"Zombot Plank Walker\"}} in random lanes.",
+    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random {{Pirates:t:pirate type:f -\"Zombot Plank Walker\" include:token}} in random lanes.",
     "flavour": "Deploying Pirates here, there and everywhere."
   },
   {
@@ -3748,7 +3748,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1}}. It gains a Mustache.",
+    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1 include:token}}. It gains a Mustache.",
     "flavour": "It's IMPossible to tell who he really is."
   },
   {
@@ -3776,7 +3776,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "<b>When hurt</b>: Make a random {{Imp:t:imp type:f c<=2}} that costs 2{{Brain}} or less in a random lane.",
+    "abilities": "<b>When hurt</b>: Make a random {{Imp:t:imp type:f c<=2 include:token}} that costs 2{{Brain}} or less in a random lane.",
     "flavour": "But where is the Imp-Throwing-Imp-Throwing-Imp?? We have to go deeper..."
   },
   {
@@ -3790,7 +3790,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "All {{Pirates:t:pirate type:f}} have {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "All {{Pirates:t:pirate type:f include:token}} have {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "You get your beard caught in the toaster ONE time, and it's all anyone can talk about..."
   },
   {

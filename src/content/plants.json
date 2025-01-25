@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play another {{Root:tribe:root type:f}}, that {{Root:tribe:root type:f}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root}}.",
+    "abilities": "When you play another {{Root:tribe:root type:f include:token}}, that {{Root:tribe:root type:f include:token}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root include:token}}.",
     "flavour": "His destiny is written in the starch."
   },
   {
@@ -850,7 +850,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6}} that costs 6{{Sun}} or less.",
+    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6 include:token -\"Magic Beanstalk\"}} that costs 6{{Sun}} or less.",
     "flavour": "t's the tiny seed of a... nobody actually knows."
   },
   {
@@ -1088,7 +1088,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Plant into a random {{Plant:is:plant type:f}}.\nDraw a card.",
+    "abilities": "Transform a Plant into a random {{Plant:is:plant type:f include:token -\"Magic Beanstalk\"}}.\nDraw a card.",
     "flavour": "For when it's time to turn over a new leaf."
   },
   {
@@ -1788,7 +1788,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: All {{Fruit:t:Fruit type:f}} in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When destroyed</b>: All {{Fruit:t:Fruit type:f include:token}} in your hand get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "\"Have you met my better half? She's around here somewhere.\""
   },
   {
@@ -1886,7 +1886,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Move a Zombie.\n<b>Conjure</b> a {{Fruit:t:Fruit}}.",
+    "abilities": "Move a Zombie.\n<b>Conjure</b> a {{Fruit:t:Fruit include:token}}.",
     "flavour": "A slapstick comedy staple that, somehow, the Zombies never see coming."
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root include:token}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Some potatoes are sweet. Others are dinosaurs."
   },
   {
@@ -3048,7 +3048,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie into a random {{Zombie:is:zombie type:f c:1}} that costs 1{{Brain}}.",
+    "abilities": "Transform a Zombie into a random {{Zombie:is:zombie type:f c:1 include:token}} that costs 1{{Brain}}.",
     "flavour": "It's a life-changing experience. Actually, it's an everything-changing experience."
   },
   {
@@ -3076,7 +3076,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a {{Root:t:root}}.",
+    "abilities": "<b>Team-Up</b>\n<b>When played</b>: <b>Conjure</b> a {{Root:t:root include:token}}.",
     "flavour": "Beta-Carrotina knows she can always count on him to get to the root of the problem."
   },
   {
@@ -3604,7 +3604,7 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": [],
+    "tribes": ["Fruit"],
     "cost": 3,
     "strength": null,
     "health": null,
@@ -3734,7 +3734,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn and this transforms into a Sunnier-Shroom.",
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn and this transforms into a {{Sunnier-Shroom:Sunnier-Shroom}}.",
     "flavour": "\"Fun in the Sun? That's for other Plants. I just make the stuff. I don't actually like it.\""
   },
   {
