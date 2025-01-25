@@ -320,6 +320,11 @@ label,
   margin-top: var(--inline-space);
   margin-bottom: var(--block-space);
 }
+
+.p-message {
+  margin: 0 auto;
+  width: fit-content;
+}
 .deck-container {
   display: flex;
   flex-wrap: wrap;

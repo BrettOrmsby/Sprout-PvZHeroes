@@ -192,6 +192,11 @@ h3 {
   font-size: 0.8em;
 }
 
+.p-message {
+  margin: 0 auto;
+  width: fit-content;
+}
+
 :deep(.p-paginator) {
   margin-top: var(--block-space);
 }

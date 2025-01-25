@@ -206,6 +206,10 @@ h1 {
 h2 {
   text-align: center;
 }
+.p-message {
+  margin: 0 auto;
+  width: fit-content;
+}
 .deck-container {
   display: flex;
   flex-wrap: wrap;
