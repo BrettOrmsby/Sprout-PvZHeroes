@@ -50,6 +50,10 @@
       </div>
     </header>
 
+    <Message v-if="user.id === id && user.username.startsWith('user_')"
+      >To change your username or profile picture, click them above.</Message
+    >
+
     <RouterLink :to="{ name: 'CreateDeck' }" style="text-decoration: none" v-if="user.id === id">
       <Button label="New Deck" severity="secondary">
         <template #icon="iconClass">
@@ -66,7 +70,7 @@
       No Decks
     </Message>
     <div class="deck-container" v-else>
-      <DeckCard v-for="deck in sortedDecks" :key="deck.id" :deck="deck as any" showVisibility />
+      <DeckCard v-for="deck in sortedDecks" :key="deck.id" :deck="deck" showVisibility />
     </div>
   </main>
   <TheFooter />
@@ -206,9 +210,12 @@ h1 {
 h2 {
   text-align: center;
 }
-.p-message {
+.p-message:not(.p-message-info) {
   margin: 0 auto;
   width: fit-content;
+}
+.p-message-info {
+  margin-bottom: var(--block-space);
 }
 .deck-container {
   display: flex;
