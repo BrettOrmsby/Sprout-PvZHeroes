@@ -1,25 +1,28 @@
 <template>
   <h2>Draw Simulator</h2>
-  <div class="restart-container">
-    <Button label="Restart" @click="restartDeck">
-      <template #icon="iconClass">
-        <Grid2X2 :class="iconClass.class" />
-      </template>
-    </Button>
-  </div>
-  <div class="draw-container">
-    <div class="card-draw-container" v-for="(card, index) of draw" :key="index">
-      <PVZCard
-        :card="getCard(card.cardName)"
-        :is-valid="true"
-        :amount="0"
-        @click="viewCard(card.cardName)"
-      />
-      <Button :disabled="!card.hasMulligan" @click="mulligan(index)">
+  <Message v-if="cardsInDeck < 8"> Your deck must have at least eight cards to begin. </Message>
+  <div v-else>
+    <div class="restart-container">
+      <Button label="Restart" @click="restartDeck">
         <template #icon="iconClass">
-          <RotateCw :class="iconClass.class" />
+          <Grid2X2 :class="iconClass.class" />
         </template>
       </Button>
+    </div>
+    <div class="draw-container">
+      <div class="card-draw-container" v-for="(card, index) of draw" :key="index">
+        <PVZCard
+          :card="getCard(card.cardName)"
+          :is-valid="true"
+          :amount="0"
+          @click="viewCard(card.cardName)"
+        />
+        <Button :disabled="!card.hasMulligan" @click="mulligan(index)">
+          <template #icon="iconClass">
+            <RotateCw :class="iconClass.class" />
+          </template>
+        </Button>
+      </div>
     </div>
   </div>
 </template>
@@ -27,13 +30,15 @@
 <script lang="ts" setup>
 import { useDeckStore } from '@/store/deck'
 import Button from 'primevue/button'
+import Message from 'primevue/message'
 import PVZCard from '@/components/PVZCard.vue'
 import { Grid2X2, RotateCw } from 'lucide-vue-next'
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import getCard from '@/lib/getCard'
 import states from '@/store/states'
 
 const deck = useDeckStore()
+const shuffledDeck = ref<string[]>([])
 const draw = ref<
   {
     cardName: string
@@ -41,7 +46,8 @@ const draw = ref<
   }[]
 >([])
 
-const shuffledDeck = ref<string[]>([])
+const cardsInDeck = computed(() => Object.values(deck.list).reduce((prev, curr) => prev + curr, 0))
+
 const restartDeck = () => {
   ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
     element.classList.remove('rotate-scale-down'),
@@ -68,8 +74,9 @@ const restartDeck = () => {
 }
 
 const mulligan = (index: number) => {
-  // You can get the same card back
-  shuffledDeck.value.push(draw.value[index].cardName)
+  // You cannot get the same card back
+  // the following adds the card back to deck
+  // shuffledDeck.value.push(draw.value[index].cardName)
 
   shuffle(shuffledDeck.value)
   const newCard = shuffledDeck.value.shift() as string
@@ -81,6 +88,7 @@ const mulligan = (index: number) => {
 }
 
 onMounted(restartDeck)
+watch(() => deck.list, restartDeck)
 
 function shuffle(array: string[]) {
   let m = array.length,
@@ -101,6 +109,10 @@ const viewCard = (card: string) => {
 </script>
 
 <style scoped>
+.p-message {
+  margin: 0 auto;
+  width: fit-content;
+}
 :deep(.amount) {
   display: none;
 }
