@@ -159,7 +159,8 @@ export default function doesMatchQuery(
         const doesMatchAbilities = card.abilities
           .toLowerCase()
           .replace(/<[^>]*?>/g, '')
-          .replace(/{{([^:]+):[^}]+}}/, '$1')
+          .replace(/{{[^:}]+}}/g, '')
+          .replace(/{{([^:}]+):[^}]+?}}/g, '$1')
           .includes(subQuery.value.toString().toLowerCase())
         if (doesMatchAbilities === subQuery.isNegated) {
           return false
