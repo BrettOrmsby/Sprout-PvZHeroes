@@ -44,11 +44,12 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
+import { Textarea } from 'primevue'
 import getCard from '@/lib/getCard'
+import getHero from '@/lib/getHero'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
-import getHero from '@/lib/getHero'
-import Textarea from 'primevue/textarea'
+
 const props = defineProps<{
   modelValue: Record<string, number> | null
   isError: boolean

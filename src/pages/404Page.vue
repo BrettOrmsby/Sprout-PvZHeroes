@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import Button from 'primevue/button'
+import { Button } from 'primevue'
 import getCard from '@/lib/getCard'
 
 const janitor = getCard('Celestial Custodian')

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Menuebar :model="items" breakpoint="500px">
+    <Menubar :model="items" breakpoint="500px">
       <template #start>
         <div class="p-menubar-item logo-container">
           <div class="p-menubar-item-content">
@@ -44,13 +44,13 @@
           <ChevronDown v-if="hasSubmenu" />
         </a>
       </template>
-    </Menuebar>
+    </Menubar>
   </header>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import Menuebar from 'primevue/menubar'
+import { Menubar } from 'primevue'
 import {
   ChevronDown,
   CircleUserRound,
@@ -66,6 +66,7 @@ import {
   UserSearch,
 } from 'lucide-vue-next'
 import useAuthUser from '@/composables/UseAuthUser'
+
 const { isSignedIn, signIn } = useAuthUser()
 const items = computed(() => {
   return [

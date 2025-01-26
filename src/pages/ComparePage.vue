@@ -38,17 +38,17 @@
 </template>
 
 <script lang="ts" setup>
-import CompareInput from '@/components/CompareInput.vue'
-import Message from 'primevue/message'
+import { computed, ref } from 'vue'
+import { onBeforeRouteUpdate } from 'vue-router'
+import { Message } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
 import SideBar from '@/components/SideBar.vue'
 import CardModal from '@/components/CardModal.vue'
+import CompareInput from '@/components/CompareInput.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import { computed, ref } from 'vue'
 import getCard from '@/lib/getCard'
 import { useCompareStore, useDeckStore } from '@/store/deck'
 import states from '@/store/states'
-import { onBeforeRouteUpdate } from 'vue-router'
 
 defineProps<{ id: string; to: string }>()
 

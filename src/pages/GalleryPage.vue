@@ -98,6 +98,9 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, ref } from 'vue'
+import { Avatar, Button, Dialog, ScrollTop, Toolbar } from 'primevue'
+import { Highlighter } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
 import CardModal from '@/components/CardModal.vue'
 import HeroModal from '@/components/HeroModal.vue'
@@ -108,14 +111,7 @@ import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
-import { computed, ref } from 'vue'
 import type { Card } from '@/lib/types'
-import Avatar from 'primevue/avatar'
-import Dialog from 'primevue/dialog'
-import Toolbar from 'primevue/toolbar'
-import Button from 'primevue/button'
-import ScrollTop from 'primevue/scrolltop'
-import { Highlighter } from 'lucide-vue-next'
 
 const isHighlighterVisible = ref(false)
 

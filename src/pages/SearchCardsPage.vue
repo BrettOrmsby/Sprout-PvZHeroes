@@ -40,25 +40,22 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute, useRouter } from 'vue-router'
 import { computed, onMounted, watch } from 'vue'
-import type { Card } from '@/lib/types'
-import generateQuery from '@/lib/parse-query/generateQuery'
-import doesMatchQuery from '@/lib/matchQuery'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
-import superpowers from '@/content/superpowers.json'
-import heros from '@/content/heros.json'
-import Toolbar from 'primevue/toolbar'
-import InputText from 'primevue/inputtext'
-import Message from 'primevue/message'
-import ScrollTop from 'primevue/scrolltop'
-import Tag from 'primevue/tag'
+import { useRoute, useRouter } from 'vue-router'
+import { InputText, Message, ScrollTop, Tag, Toolbar } from 'primevue'
 import SideBar from '@/components/SideBar.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import states from '@/store/states'
 import CardModal from '@/components/CardModal.vue'
+import generateQuery from '@/lib/parse-query/generateQuery'
+import doesMatchQuery from '@/lib/matchQuery'
+import states from '@/store/states'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
+import superpowers from '@/content/superpowers.json'
+import heroData from '@/content/heros.json'
+import type { Card } from '@/lib/types'
+
 const route = useRoute()
 const router = useRouter()
 
@@ -66,7 +63,7 @@ const allCards: Card[] = [
   ...plants,
   ...zombies,
   ...superpowers.reduce((prev, curr) => {
-    const hero = [...heros.plants, ...heros.zombies].find(
+    const hero = [...heroData.plants, ...heroData.zombies].find(
       (hero) => hero.mainSuperPower === curr.name,
     )!
     prev.push({ ...curr, class: hero.class[0] })

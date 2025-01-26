@@ -39,11 +39,11 @@
 </template>
 
 <script lang="ts" setup>
-import getCard from '@/lib/getCard'
-import heroData from '@/content/heros.json'
-import states from '@/store/states'
 import { computed } from 'vue'
-import Dialog from 'primevue/dialog'
+import { Dialog } from 'primevue'
+import getCard from '@/lib/getCard'
+import states from '@/store/states'
+import heroData from '@/content/heros.json'
 import type { Hero } from '@/lib/types'
 
 const hero = computed<Hero>(

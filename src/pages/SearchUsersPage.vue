@@ -67,22 +67,16 @@
 </template>
 
 <script lang="ts" setup>
-import { useRoute, useRouter } from 'vue-router'
-import useSupabase from '@/composables/UseSupabase'
-import InputGroup from 'primevue/inputgroup'
-import InputText from 'primevue/inputtext'
-import Message from 'primevue/message'
-import Skeleton from 'primevue/skeleton'
-import Button from 'primevue/button'
-import Paginator from 'primevue/paginator'
-import Card from 'primevue/card'
-import Avatar from 'primevue/avatar'
-import TheFooter from '@/components/TheFooter.vue'
-import { Search } from 'lucide-vue-next'
 import { computed, onMounted, ref, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { Avatar, Button, Card, InputGroup, InputText, Message, Paginator, Skeleton } from 'primevue'
+import { Search } from 'lucide-vue-next'
+import TheFooter from '@/components/TheFooter.vue'
+import useSupabase from '@/composables/UseSupabase'
+import getHero from '@/lib/getHero'
 import throwError from '@/lib/throwError'
 import type { User } from '@/lib/types'
-import getHero from '@/lib/getHero'
+
 const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()

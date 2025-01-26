@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useDeckStore } from '@/store/deck'
+import { Divider } from 'primevue'
 import SideBar from '@/components/SideBar.vue'
 import DeckHeader from '@/components/deck/DeckHeader.vue'
 import TheDeck from '@/components/deck/TheDeck.vue'
@@ -33,8 +33,8 @@ import DrawSimulator from '@/components/deck/DrawSimulator.vue'
 import DeckCharts from '@/components/deck/DeckCharts.vue'
 import DeckToolbar from '@/components/deck/DeckToolbar.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import Divider from 'primevue/divider'
 import useHoverShortcut from '@/composables/useHoverShortcut'
+import { useDeckStore } from '@/store/deck'
 
 const deck = useDeckStore()
 

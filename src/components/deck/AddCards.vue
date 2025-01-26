@@ -41,19 +41,15 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from 'primevue'
+import PVZCardWithMenu from './PVZCardWithMenu.vue'
+import getHero from '@/lib/getHero'
 import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
-import getHero from '@/lib/getHero'
 import type { Card } from '@/lib/types'
-import PVZCardWithMenu from './PVZCardWithMenu.vue'
-import Tabs from 'primevue/tabs'
-import TabList from 'primevue/tablist'
-import Tab from 'primevue/tab'
-import TabPanels from 'primevue/tabpanels'
-import TabPanel from 'primevue/tabpanel'
 
 const deck = useDeckStore()
 

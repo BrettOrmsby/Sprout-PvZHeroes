@@ -23,13 +23,12 @@
 
 <script lang="ts" setup>
 import { computed, onUnmounted, ref } from 'vue'
-import type { Deck } from '@/lib/types'
-import getHero from '@/lib/getHero'
-import Avatar from 'primevue/avatar'
-import Card from 'primevue/card'
-import Tag from 'primevue/tag'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import { Avatar, Card, Tag } from 'primevue'
+import getHero from '@/lib/getHero'
+import type { Deck } from '@/lib/types'
+
 dayjs.extend(relativeTime)
 
 const props = defineProps<{

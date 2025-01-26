@@ -6,8 +6,8 @@
 </template>
 
 <script lang="ts" setup>
+import { Badge } from 'primevue'
 import { type Card } from '@/lib/types'
-import Badge from 'primevue/badge'
 defineProps<{ card: Card }>()
 </script>
 

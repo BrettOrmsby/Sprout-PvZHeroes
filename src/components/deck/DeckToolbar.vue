@@ -72,21 +72,18 @@
 </template>
 
 <script lang="ts" setup>
-import Button from 'primevue/button'
-import Toolbar from 'primevue/toolbar'
-import Dialog from 'primevue/dialog'
-import Popover from 'primevue/popover'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { Button, Dialog, Popover, Toolbar } from 'primevue'
+import { Cog, Copy, Highlighter, Paperclip, Repeat } from 'lucide-vue-next'
 import CompareInput from '@/components/CompareInput.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
-import { Cog, Copy, Highlighter, Paperclip, Repeat } from 'lucide-vue-next'
-import states from '@/store/states'
 import useAuthUser from '@/composables/UseAuthUser'
-import { useDeckStore } from '@/store/deck'
-import { computed, ref } from 'vue'
-import { useToast } from 'primevue/usetoast'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
-import { useRouter } from 'vue-router'
+import { useDeckStore } from '@/store/deck'
+import { useToast } from 'primevue/usetoast'
+import states from '@/store/states'
 import type { Deck } from '@/lib/types'
 
 const deck = useDeckStore()

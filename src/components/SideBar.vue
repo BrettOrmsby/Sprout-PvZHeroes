@@ -21,17 +21,17 @@
 </template>
 
 <script lang="ts" setup>
-import states from '@/store/states'
-import { useDeckStore } from '@/store/deck'
-import getCard from '@/lib/getCard'
 import { computed, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import SetPill from '@/components/deck/SetPill.vue'
 import CardClassImage from '@/components/CardClassImage.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
+import getCard from '@/lib/getCard'
+import getHero from '@/lib/getHero'
+import states from '@/store/states'
+import { useDeckStore } from '@/store/deck'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
-import getHero from '@/lib/getHero'
-import { useRoute } from 'vue-router'
 
 const deck = useDeckStore()
 

@@ -30,18 +30,14 @@
 </template>
 
 <script lang="ts" setup>
-import states from '@/store/states'
 import { onMounted, watch } from 'vue'
-import InputText from 'primevue/inputtext'
-import ToggleSwitch from 'primevue/toggleswitch'
-import Message from 'primevue/message'
-import Button from 'primevue/button'
-
+import { Button, InputText, Message, ToggleSwitch } from 'primevue'
 import generateQuery from '@/lib/parse-query/generateQuery'
-import type { Card } from '@/lib/types'
+import doesMatchQuery from '@/lib/matchQuery'
+import states from '@/store/states'
 import zombies from '@/content/zombies.json'
 import plants from '@/content/plants.json'
-import doesMatchQuery from '@/lib/matchQuery'
+import type { Card } from '@/lib/types'
 
 const { isTitleVisible } = defineProps<{ isTitleVisible?: boolean }>()
 

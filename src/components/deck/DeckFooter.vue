@@ -20,12 +20,12 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
+import { Badge } from 'primevue'
 import calculateSparkCost from '@/lib/calculateSparkCost'
 import getCard from '@/lib/getCard'
-import type { Card } from '@/lib/types'
 import { useDeckStore } from '@/store/deck'
-import Badge from 'primevue/badge'
-import { computed } from 'vue'
+import type { Card } from '@/lib/types'
 
 const deck = useDeckStore()
 

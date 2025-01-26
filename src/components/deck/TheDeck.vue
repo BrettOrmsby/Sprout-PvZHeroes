@@ -37,14 +37,14 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import getCard from '@/lib/getCard'
+import { onBeforeRouteUpdate } from 'vue-router'
+import { Message } from 'primevue'
 import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
-import Message from 'primevue/message'
+import getCard from '@/lib/getCard'
 import states from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 import { useUserStore } from '@/store/user'
-import { onBeforeRouteUpdate } from 'vue-router'
 
 const user = useUserStore()
 const deck = useDeckStore()

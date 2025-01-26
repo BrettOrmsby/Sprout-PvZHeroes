@@ -59,19 +59,14 @@
 </template>
 
 <script lang="ts" setup>
-import states from '@/store/states'
-import { useDeckStore } from '@/store/deck'
 import { ref, watch } from 'vue'
+import { useRouter } from 'vue-router'
+import { Button, Dialog, InputText, Textarea, ToggleSwitch, useConfirm } from 'primevue'
+import CardListTextArea from '@/components/CardListTextArea.vue'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
-import CardListTextArea from '@/components/CardListTextArea.vue'
-import { useConfirm } from 'primevue/useconfirm'
-import { useRouter } from 'vue-router'
-import Dialog from 'primevue/dialog'
-import InputText from 'primevue/inputtext'
-import Textarea from 'primevue/textarea'
-import Button from 'primevue/button'
-import ToggleSwitch from 'primevue/toggleswitch'
+import states from '@/store/states'
+import { useDeckStore } from '@/store/deck'
 
 const deck = useDeckStore()
 

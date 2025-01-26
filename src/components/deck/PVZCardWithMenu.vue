@@ -31,13 +31,14 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import type { Card, Hero } from '@/lib/types'
+import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from 'lucide-vue-next'
+import { Menu } from 'primevue'
+import PVZCard from '@/components/PVZCard.vue'
+import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 import heroData from '@/content/heros.json'
-import Menu from 'primevue/menu'
-import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from 'lucide-vue-next'
-import { useDeckStore } from '@/store/deck'
-import PVZCard from '@/components/PVZCard.vue'
+import type { Card, Hero } from '@/lib/types'
+
 const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>()
 
 const deck = useDeckStore()

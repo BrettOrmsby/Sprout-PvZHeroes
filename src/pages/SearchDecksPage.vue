@@ -121,29 +121,33 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import useSupabase from '@/composables/UseSupabase'
-import ToggleSwitch from 'primevue/toggleswitch'
-import InputText from 'primevue/inputtext'
-import AutoComplete, { type AutoCompleteCompleteEvent } from 'primevue/autocomplete'
-import Message from 'primevue/message'
-import Skeleton from 'primevue/skeleton'
-import Button from 'primevue/button'
-import Paginator from 'primevue/paginator'
-import Select from 'primevue/select'
+import {
+  AutoComplete,
+  type AutoCompleteCompleteEvent,
+  Button,
+  Chip,
+  InputText,
+  Message,
+  Paginator,
+  Select,
+  Skeleton,
+  ToggleSwitch,
+} from 'primevue'
+import { Search, X } from 'lucide-vue-next'
 import DeckCard from '@/components/DeckCard.vue'
-import Chip from 'primevue/chip'
 import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import { Search, X } from 'lucide-vue-next'
-import { computed, onMounted, reactive, ref, watch } from 'vue'
-import throwError from '@/lib/throwError'
-import type { Card, Deck } from '@/lib/types'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
+import useSupabase from '@/composables/UseSupabase'
 import getCard from '@/lib/getCard'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
+import throwError from '@/lib/throwError'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
+import type { Card, Deck } from '@/lib/types'
+
 const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()

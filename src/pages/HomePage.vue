@@ -47,17 +47,15 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted, ref, watch } from 'vue'
+import { Button, Message, Skeleton } from 'primevue'
+import { Sprout } from 'lucide-vue-next'
 import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
-import throwError from '@/lib/throwError'
 import DeckCard from '@/components/DeckCard.vue'
-import type { Deck } from '@/lib/types'
-import { onMounted, ref, watch } from 'vue'
-import Skeleton from 'primevue/skeleton'
-import Button from 'primevue/button'
-import Message from 'primevue/message'
 import TheFooter from '@/components/TheFooter.vue'
-import { Sprout } from 'lucide-vue-next'
+import throwError from '@/lib/throwError'
+import type { Deck } from '@/lib/types'
 
 const { supabase } = useSupabase()
 

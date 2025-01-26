@@ -440,9 +440,9 @@ import {
   Grid2X2,
   Heart,
   Leaf,
-  Search,
   MessageSquareQuote,
   MinusCircle,
+  Search,
   Shapes,
   ShieldQuestion,
   Signature,
@@ -450,12 +450,8 @@ import {
   Sun,
   Text,
 } from 'lucide-vue-next'
-import ScrollTop from 'primevue/scrolltop'
-import Divider from 'primevue/divider'
-import Button from 'primevue/button'
+import { Button, Column, DataTable, Divider, ScrollTop } from 'primevue'
 import NotePanel from '@/components/NotePanel.vue'
-import DataTable from 'primevue/datatable'
-import Column from 'primevue/column'
 
 const categories = {
   Name: Signature,

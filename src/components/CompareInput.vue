@@ -41,17 +41,20 @@
 </template>
 
 <script lang="ts" setup>
-import InputText from 'primevue/inputtext'
-import InputGroup from 'primevue/inputgroup'
-import AutoComplete, { type AutoCompleteCompleteEvent } from 'primevue/autocomplete'
-import Button from 'primevue/button'
 import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
+import {
+  AutoComplete,
+  type AutoCompleteCompleteEvent,
+  Button,
+  InputGroup,
+  InputText,
+} from 'primevue'
+import throwError from '@/lib/throwError'
+import getHero from '@/lib/getHero'
 import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
 import type { Deck } from '@/lib/types'
-import throwError from '@/lib/throwError'
-import getHero from '@/lib/getHero'
 
 const props = defineProps<{ id: string }>()
 const to = defineModel<string>({ default: '' })

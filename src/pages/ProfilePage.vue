@@ -77,26 +77,18 @@
 </template>
 
 <script lang="ts" setup>
-import useSupabase from '@/composables/UseSupabase'
-import throwError from '@/lib/throwError'
+import { computed, onMounted, ref } from 'vue'
+import { Plus } from 'lucide-vue-next'
+import {Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton} from "primevue"
 import DeckCard from '@/components/DeckCard.vue'
 import HeroSelect from '@/components/HeroSelect.vue'
-import getHero from '@/lib/getHero'
-import Avatar from 'primevue/avatar'
-import Skeleton from 'primevue/skeleton'
-import Button from 'primevue/button'
-import Dialog from 'primevue/dialog'
-import Message from 'primevue/message'
 import TheFooter from '@/components/TheFooter.vue'
-import InputGroup from 'primevue/inputgroup'
-import { Plus } from 'lucide-vue-next'
-import { computed } from 'vue'
-import type { Deck } from '@/lib/types'
-import { onMounted } from 'vue'
-import { useUserStore } from '@/store/user'
-import { ref } from 'vue'
+import getHero from '@/lib/getHero'
+import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
-import InputText from 'primevue/inputtext'
+import throwError from '@/lib/throwError'
+import { useUserStore } from '@/store/user'
+import type { Deck } from '@/lib/types'
 
 const user = useUserStore()
 const { supabase } = useSupabase()

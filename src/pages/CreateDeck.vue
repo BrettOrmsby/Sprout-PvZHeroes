@@ -41,18 +41,15 @@
 </template>
 
 <script lang="ts" setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { Button, InputText, Textarea, ToggleSwitch } from 'primevue'
+import CardListTextArea from '@/components/CardListTextArea.vue'
+import HeroSelect from '@/components/HeroSelect.vue'
+import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
 import throwError from '@/lib/throwError'
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-import CardListTextArea from '@/components/CardListTextArea.vue'
-import HeroSelect from '@/components/HeroSelect.vue'
-import InputText from 'primevue/inputtext'
-import Textarea from 'primevue/textarea'
-import ToggleSwitch from 'primevue/toggleswitch'
-import Button from 'primevue/button'
-import TheFooter from '@/components/TheFooter.vue'
 
 const router = useRouter()
 const { supabase } = useSupabase()

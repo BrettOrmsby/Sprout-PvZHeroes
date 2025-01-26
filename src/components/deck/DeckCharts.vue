@@ -6,10 +6,10 @@
 </template>
 
 <script lang="ts" setup>
-import { useDeckStore } from '@/store/deck'
-import getCard from '@/lib/getCard'
 import { computed, onMounted, ref } from 'vue'
 import Chart from 'primevue/chart'
+import getCard from '@/lib/getCard'
+import { useDeckStore } from '@/store/deck'
 
 const deck = useDeckStore()
 

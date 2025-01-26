@@ -25,9 +25,9 @@
 </template>
 
 <script lang="ts" setup>
-import heroData from '@/content/heros.json'
-import Select from 'primevue/select'
+import { Select } from 'primevue'
 import getHero from '@/lib/getHero'
+import heroData from '@/content/heros.json'
 
 const hero = defineModel<string>({ required: true })
 </script>

@@ -23,8 +23,9 @@
 </template>
 
 <script lang="ts" setup>
-import type { Card } from '@/lib/types'
 import states from '@/store/states'
+import type { Card } from '@/lib/types'
+
 defineProps<{ card: Card; amount: number; isValid: boolean }>()
 </script>
 

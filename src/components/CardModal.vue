@@ -26,13 +26,13 @@
 </template>
 
 <script lang="ts" setup>
-import states from '@/store/states'
-import getCard from '@/lib/getCard'
 import { computed } from 'vue'
-import Dialog from 'primevue/dialog'
+import { Dialog } from 'primevue'
 import SetPill from './deck/SetPill.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import CardClassImage from './CardClassImage.vue'
+import getCard from '@/lib/getCard'
+import states from '@/store/states'
 
 const card = computed(() => getCard(states.cardModal.card))
 </script>
