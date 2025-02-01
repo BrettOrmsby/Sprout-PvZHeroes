@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Menubar :model="items" breakpoint="500px">
+    <Menubar :model="items" breakpoint="620px">
       <template #start>
         <div class="p-menubar-item logo-container">
           <div class="p-menubar-item-content">
@@ -15,6 +15,7 @@
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
           <a :href="href" v-bind="props.action" @click="navigate">
             <Grid2x2 v-if="item.label === 'Gallery'" />
+            <ShieldQuestion v-if="item.label === 'Block Meter Probability'" />
             <UserSearch v-if="item.label === 'Users'" />
             <FolderSearch v-else-if="item.label === 'Decks'" />
             <FileSearch v-if="item.label === 'Cards'" />
@@ -28,6 +29,7 @@
         <a v-else :href="item.url" :target="item.target" v-bind="props.action">
           <CircleUserRound v-if="item.label === 'Profile'" />
           <Search v-if="item.label === 'Search'" />
+          <Hammer v-if="item.label === 'Tools'" />
           <svg
             v-else-if="item.label === 'Sign In'"
             role="img"
@@ -57,11 +59,13 @@ import {
   FileSearch,
   FolderSearch,
   Grid2x2,
+  Hammer,
   LayoutGrid,
   LogOut,
   Plus,
   Search,
   SearchCode,
+  ShieldQuestion,
   Sprout,
   UserSearch,
 } from 'lucide-vue-next'
@@ -92,6 +96,15 @@ const items = computed(() => {
         {
           label: 'Query Help',
           route: '/query-help',
+        },
+      ],
+    },
+    {
+      label: 'Tools',
+      items: [
+        {
+          label: 'Block Meter Probability',
+          route: '/tools/blockmeter',
         },
       ],
     },
@@ -135,7 +148,7 @@ const items = computed(() => {
   z-index: 1004;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 620px) {
   .p-menubar {
     justify-content: space-between;
   }

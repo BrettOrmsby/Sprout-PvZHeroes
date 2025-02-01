@@ -641,6 +641,7 @@ h2 {
   color: var(--p-primary-400);
   width: 1em;
   height: 1em;
+  flex-shrink: 0;
 }
 
 .center {

@@ -2,9 +2,11 @@
   --inline-space: 0.5rem;
   --block-space: 1rem;
 }
+
 * {
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
@@ -30,8 +32,9 @@ svg {
 main {
   padding: var(--block-space);
   margin-top: 4em;
-  min-height: 70vh;
+  min-height: 75vh;
 }
+
 .p-menu {
   min-width: unset !important;
 }

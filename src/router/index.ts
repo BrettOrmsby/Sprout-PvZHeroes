@@ -168,6 +168,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'BlockMeter',
+      path: '/tools/blockmeter',
+      component: () => import('@/pages/tools/BlockMeterPage.vue'),
+      meta: {
+        title: 'Block Meter Probability • Sprout',
+      },
+    },
+    {
       name: '404',
       path: '/404',
       component: () => import('@/pages/404Page.vue'),

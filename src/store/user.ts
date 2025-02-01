@@ -48,7 +48,7 @@ export const useUserStore = defineStore('user', () => {
 
   async function update(data: Partial<User>) {
     const { data: newData, error } = await supabase
-      .from('decks')
+      .from('profiles')
       .update(data)
       .eq('username', username.value)
       .returns<User[]>()
