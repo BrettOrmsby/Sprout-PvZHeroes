@@ -258,5 +258,6 @@ pre {
   font-weight: normal;
   color: rgb(201, 209, 217);
   background-color: rgb(13, 17, 23);
+  overflow-x: scroll;
 }
 </style>
