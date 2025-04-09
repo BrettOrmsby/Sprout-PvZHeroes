@@ -16,6 +16,7 @@
         severity="secondary"
         label="Settings"
         :disabled="isDuplicationLoading"
+        v-tooltip.bottom="{ value: 'Settings', showDelay: 1000, hideDelay: 300 }"
       >
         <template #icon="iconClass">
           <Cog :class="iconClass.class" />
@@ -24,8 +25,9 @@
       <Button
         @click="copyDeck"
         severity="secondary"
-        label="Export"
+        label="Copy"
         :disabled="isDuplicationLoading"
+        v-tooltip.bottom="{ value: 'Copy Deck', showDelay: 1000, hideDelay: 300 }"
       >
         <template #icon="iconClass">
           <Paperclip :class="iconClass.class" />
@@ -37,6 +39,7 @@
         severity="secondary"
         label="Duplicate"
         :loading="isDuplicationLoading"
+        v-tooltip.bottom="{ value: 'Duplicate Deck', showDelay: 1000, hideDelay: 300 }"
       >
         <template #icon="iconClass">
           <Copy :class="iconClass.class" />
@@ -47,6 +50,7 @@
         label="Compare"
         @click="() => (isCompareModalOpen = true)"
         :disabled="isDuplicationLoading"
+        v-tooltip.bottom="{ value: 'Compare Deck', showDelay: 1000, hideDelay: 300 }"
       >
         <template #icon="iconClass">
           <Repeat :class="iconClass.class" />
@@ -59,6 +63,7 @@
         label="Highlighter"
         :disabled="isDuplicationLoading"
         :badge="numberMatchingCardsInDeck"
+        v-tooltip.bottom="{ value: 'Highlighter', showDelay: 1000, hideDelay: 300 }"
       >
         <template #icon="iconClass">
           <Highlighter :class="iconClass.class" />
