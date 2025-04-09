@@ -97,6 +97,7 @@ const sparks = computed(() => {
 }
 .p-badge {
   margin-right: var(--inline-space);
+  color: black;
   font-size: 0.5em;
   padding: 0 0.25em;
   border-radius: 100em;

@@ -79,7 +79,7 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { Plus } from 'lucide-vue-next'
-import {Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton} from "primevue"
+import { Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
 import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'

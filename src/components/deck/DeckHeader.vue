@@ -114,7 +114,7 @@ header {
   align-items: stretch;
   justify-content: flex-start;
   margin-bottom: var(--block-space);
-  background-color: var(--p-surface-950);
+  background-color: light-dark(var(--p-surface-50), var(--p-surface-950));
 }
 
 .hero-container {

@@ -71,6 +71,7 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   left: calc(var(--inline-space) * -1);
   bottom: calc(var(--inline-space) * -1);
   padding: var(--inline-space);
+  color: white;
   background: color-mix(in srgb, var(--p-surface-950) 50%, transparent);
   border-radius: var(--p-border-radius-md);
 }

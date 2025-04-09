@@ -1,6 +1,7 @@
 :root {
   --inline-space: 0.5rem;
   --block-space: 1rem;
+  color-scheme: light dark;
 }
 
 * {

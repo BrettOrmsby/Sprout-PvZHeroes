@@ -681,8 +681,11 @@ code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--p-primary-500), transparent 84%);
-  color: var(--p-primary-300);
+  background: light-dark(
+    var(--p-primary-100),
+    color-mix(in srgb, var(--p-primary-500), transparent 84%)
+  );
+  color: light-dark(var(--p-primary-700), var(--p-primary-300));
   font-size: 0.875rem;
   font-weight: 700;
   padding: 0.1rem 0.5rem;
