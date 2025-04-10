@@ -146,7 +146,7 @@ const duplicateDeck = async () => {
     list: deck.list,
     creator: id.value,
     is_private: true,
-    name: deck.name + ' (Duplicate)',
+    name: (deck.name + ' (Duplicate)').substring(0, 50),
   } as Deck
 
   const { error, data } = await supabase.from('decks').insert(duplicateDeck).select('id').single()
