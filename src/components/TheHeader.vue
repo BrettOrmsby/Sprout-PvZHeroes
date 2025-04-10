@@ -1,6 +1,6 @@
 <template>
   <header>
-    <Menubar :model="items" breakpoint="620px">
+    <Menubar :model="items" breakpoint="720px">
       <template #start>
         <div class="p-menubar-item logo-container">
           <div class="p-menubar-item-content">
@@ -137,6 +137,8 @@ const items = computed(() => {
 
 <style scoped>
 .p-menubar {
+  padding-left: calc(var(--block-space) * 4);
+  padding-right: calc(var(--block-space) * 4);
   border-radius: 0;
   border-left: 0;
   border-right: 0;
@@ -146,11 +148,14 @@ const items = computed(() => {
   left: 0;
   width: 100%;
   z-index: 1004;
+  justify-content: space-between;
 }
-
-@media only screen and (max-width: 620px) {
+:deep(.p-menubar-submenu) {
+  min-width: unset;
+}
+@media only screen and (max-width: 720px) {
   .p-menubar {
-    justify-content: space-between;
+    padding: var(--p-menubar-padding);
   }
 }
 </style>
