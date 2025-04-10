@@ -78,6 +78,7 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
+import { onBeforeRouteUpdate } from 'vue-router'
 import { Plus } from 'lucide-vue-next'
 import { Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
@@ -97,12 +98,13 @@ const { id } = useAuthUser()
 const isLoading = ref(true)
 const deckData = ref<Deck[]>([])
 
-onMounted(async () => {
+const loadDecks = async () => {
+  isLoading.value = true
   const { data, error } = await supabase
     .from('decks')
     .select('*')
     .eq('creator', user.id)
-    .returns<Deck[]>()
+    .overrideTypes<Deck[]>()
 
   if (error) {
     throwError(error)
@@ -111,7 +113,9 @@ onMounted(async () => {
     deckData.value = data
     isLoading.value = false
   }
-})
+}
+
+onMounted(loadDecks)
 
 const sortedDecks = computed(() =>
   [...deckData.value].sort(
@@ -164,6 +168,16 @@ const updateUsername = async () => {
     isChangeUsernameModalOpen.value = false
   }
 }
+
+onBeforeRouteUpdate(async (to) => {
+  const user = useUserStore()
+  const isLoadError = await user.loadFromUsername(to.params.username.toString())
+  if (isLoadError) {
+    return { name: '404' }
+  }
+  document.title = `${to.params.username} • Sprout`
+  loadDecks()
+})
 </script>
 
 <style scoped>
