@@ -5,7 +5,7 @@
       :modal="true"
       v-model:visible="isChangeHeroModalOpen"
       style="max-width: 500px; width: 100%; margin: var(--block-space)"
-      header="Change Hero Profile Image"
+      header="Change Profile Image"
     >
       <InputGroup>
         <HeroSelect v-model="selectedHero" aria-label="Hero" />
@@ -20,7 +20,12 @@
       header="Change Username"
     >
       <InputGroup>
-        <InputText v-model="selectedUsername" aria-label="Hero" />
+        <InputText
+          v-model="selectedUsername"
+          aria-label="Hero"
+          @keyup.enter="updateUsername"
+          autofocus
+        />
         <Button label="Update" @click="updateUsername" :loading="isUpdatingUsername" />
       </InputGroup>
     </Dialog>
@@ -50,17 +55,25 @@
       </div>
     </header>
 
-    <Message v-if="user.id === id && user.username.startsWith('user_')"
-      >To change your username or profile picture, click them above.</Message
-    >
-
-    <RouterLink :to="{ name: 'CreateDeck' }" style="text-decoration: none" v-if="user.id === id">
-      <Button label="New Deck" severity="secondary">
+    <div v-if="user.id === id" class="user-buttons">
+      <RouterLink :to="{ name: 'CreateDeck' }" style="text-decoration: none">
+        <Button label="New Deck">
+          <template #icon="iconClass">
+            <Plus :class="iconClass.class" />
+          </template>
+        </Button>
+      </RouterLink>
+      <Button label="Change Username" severity="secondary" @click="changeUsername">
         <template #icon="iconClass">
-          <Plus :class="iconClass.class" />
+          <UserPen :class="iconClass.class" />
         </template>
       </Button>
-    </RouterLink>
+      <Button label="Change Profile Image" severity="secondary" @click="changeHero">
+        <template #icon="iconClass">
+          <CircleUser :class="iconClass.class" />
+        </template>
+      </Button>
+    </div>
 
     <h2>Decks</h2>
     <div class="deck-container" v-if="isLoading">
@@ -79,7 +92,7 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
-import { Plus } from 'lucide-vue-next'
+import { CircleUser, Plus, UserPen } from 'lucide-vue-next'
 import { Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
 import HeroSelect from '@/components/HeroSelect.vue'
@@ -137,7 +150,7 @@ const updateHeroImage = async () => {
   }
 
   isUpdatingProfileImage.value = true
-  const error = user.update({
+  const error = await user.update({
     profile_image: selectedHero.value,
   })
   isUpdatingProfileImage.value = false
@@ -160,7 +173,7 @@ const updateUsername = async () => {
   }
 
   isUpdatingUsername.value = true
-  const error = user.update({
+  const error = await user.update({
     username: selectedUsername.value,
   })
   isUpdatingUsername.value = false
@@ -216,13 +229,18 @@ h1 {
 h2 {
   text-align: center;
 }
-.p-message:not(.p-message-info) {
+.p-message {
   margin: 0 auto;
   width: fit-content;
 }
-.p-message-info {
-  margin-bottom: var(--block-space);
+
+.user-buttons {
+  display: flex;
+  gap: var(--inline-space);
+  align-items: center;
+  flex-wrap: wrap;
 }
+
 .deck-container {
   display: flex;
   flex-wrap: wrap;
