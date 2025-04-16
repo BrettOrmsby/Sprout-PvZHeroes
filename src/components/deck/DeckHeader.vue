@@ -45,7 +45,29 @@
       <p @click="() => deck.isUsersDeck && openSettings()" :class="{ clickable: deck.isUsersDeck }">
         {{ deck.description }}
       </p>
-      <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
+      <div class="extras-container">
+        <div class="hearts">
+          <Button
+            class="heart-button"
+            :class="{ fill: hearts.hearts.includes(deck.id) }"
+            variant="text"
+            rounded
+            aria-label="Likes"
+            :disabled="deck.isUsersDeck || !isSignedIn"
+            @click="hearts.updateLike(deck.id)"
+            v-tooltip.bottom="{
+              value: heartToolTip,
+              showDelay: 1000,
+              hideDelay: 300,
+            }"
+          >
+            <template #icon="iconClass">
+              <Heart :class="iconClass.class" />
+            </template> </Button
+          >{{ deck.hearts }}
+        </div>
+        <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
+      </div>
     </div>
   </header>
 </template>
@@ -54,15 +76,20 @@
 import { computed, onUnmounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { Avatar } from 'primevue'
+import { Avatar, Button } from 'primevue'
+import { Heart } from 'lucide-vue-next'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
 import getHero from '@/lib/getHero'
+import useAuthUser from '@/composables/UseAuthUser'
 import { useUserStore } from '@/store/user'
+import { useHeartStore } from '@/store/hearts'
 import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
 
 const user = useUserStore()
 const deck = useDeckStore()
+const hearts = useHeartStore()
+const { isSignedIn } = useAuthUser()
 
 dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)
@@ -104,6 +131,16 @@ const openModal = () => {
 const openSettings = () => {
   states.editModal = true
 }
+
+const heartToolTip = computed(() => {
+  if (!isSignedIn.value || deck.isUsersDeck) {
+    return 'Likes'
+  }
+  if (hearts.hearts.includes(deck.id)) {
+    return 'Unlike'
+  }
+  return 'Like'
+})
 </script>
 
 <style scoped>
@@ -167,9 +204,31 @@ h1 {
   align-items: center;
 }
 
+.extras-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--block-space);
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Keep disabled buttons the same colour */
+  --p-disabled-opacity: 1;
+}
+.heart-button:not(:disabled):hover {
+  background-color: light-dark(var(--p-primary-100), var(--p-primary-950));
+}
+
+:deep(.fill svg) {
+  fill: currentColor;
+}
+
 .last-updated {
   color: var(--p-text-muted-color);
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .clickable {

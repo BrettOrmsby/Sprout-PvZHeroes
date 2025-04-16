@@ -115,15 +115,19 @@ const loadDecks = async () => {
   isLoading.value = true
   const { data, error } = await supabase
     .from('decks')
-    .select('*')
+    .select('*, hearts(count)')
     .eq('creator', user.id)
-    .overrideTypes<Deck[]>()
+    .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
 
   if (error) {
     throwError(error)
     throw new Error()
   } else {
-    deckData.value = data
+    const decksWithHearts: Deck[] = data.map((deck) => ({
+      ...deck,
+      hearts: deck.hearts?.[0]?.count || 0,
+    }))
+    deckData.value = decksWithHearts
     isLoading.value = false
   }
 }

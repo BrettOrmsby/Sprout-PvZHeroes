@@ -18,10 +18,12 @@ function generateDeckStore(identifier: string) {
     const list = ref<Record<string, number>>({})
     const last_updated = ref('')
     const description = ref('')
+    const hearts = ref(0)
 
     const isUsersDeck = computed(() => authId.value === creator.value)
 
-    function set(data: Deck) {
+    type Optional<T, K extends keyof T> = Partial<Pick<T, K>> & Omit<T, K>
+    function set(data: Optional<Deck, 'hearts'>) {
       id.value = data.id
       creator.value = data.creator
       name.value = data.name
@@ -31,30 +33,35 @@ function generateDeckStore(identifier: string) {
       list.value = data.list
       last_updated.value = data.last_updated
       description.value = data.description
+      if (data.hearts) {
+        hearts.value = data.hearts
+      }
     }
 
     async function loadId(identity: string) {
       const { data, error } = await supabase
         .from('decks')
-        .select()
+        .select('*, hearts(count)')
         .eq('id', identity)
-        .returns<Deck[]>()
-        .single()
+        .single<Deck & { hearts: { count: number }[] }>()
 
-      if (!error) {
-        set(data)
+      if (!error && data) {
+        const hearts = data.hearts?.[0]?.count || 0
+        set({ ...data, hearts })
+      } else {
+        hearts.value = 0
       }
       return error
     }
 
     async function update(data: Partial<Deck>) {
+      // Note: we do not recheck the number of hearts
       const { data: newData, error } = await supabase
         .from('decks')
         .update(data)
         .eq('id', id.value)
-        .returns<Deck[]>()
         .select()
-        .single()
+        .single<Omit<Deck, 'hearts'>>()
 
       if (error) {
         throwError(error)
@@ -73,6 +80,7 @@ function generateDeckStore(identifier: string) {
       list,
       last_updated,
       description,
+      hearts,
       isUsersDeck,
       loadId,
       update,

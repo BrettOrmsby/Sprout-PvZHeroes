@@ -1,10 +1,20 @@
 <script setup lang="ts">
+import { watch } from 'vue'
 import { RouterView } from 'vue-router'
+import { ConfirmDialog, ProgressBar, Toast } from 'primevue'
 import TheHeader from '@/components/TheHeader.vue'
-import Toast from 'primevue/toast'
-import ConfirmDialog from 'primevue/confirmdialog'
-import ProgressBar from 'primevue/progressbar'
+import useAuthUser from '@/composables/UseAuthUser'
+import { useHeartStore } from '@/store/hearts'
 import states from '@/store/states'
+const { isSignedIn } = useAuthUser()
+const hearts = useHeartStore()
+watch(isSignedIn, (newVal) => {
+  if (newVal) {
+    hearts.load()
+  } else {
+    hearts.hearts = []
+  }
+})
 </script>
 
 <template>

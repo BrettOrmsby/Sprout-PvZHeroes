@@ -56,10 +56,15 @@
       </router-link>
       <label for="show-incomplete">Show Incomplete Decks</label>
       <ToggleSwitch inputId="show-incomplete" v-model="form.showIncomplete" />
-
+      <label for="search">Search</label>
+      <SelectButton
+        inputId="search"
+        v-model="form.search"
+        :options="['All', 'Your Decks', 'Liked Decks']"
+      />
       <span id="sort">Sort</span>
       <div class="order-container">
-        <Select :options="['Name', 'Recently Edited', 'Created']" v-model="form.sort" />
+        <Select :options="['Name', 'Recently Edited', 'Created', 'Likes']" v-model="form.sort" />
         <Select :options="['Ascending', 'Descending']" v-model="form.order" />
       </div>
       <Button type="submit" label="Search">
@@ -132,6 +137,7 @@ import {
   Message,
   Paginator,
   Select,
+  SelectButton,
   Skeleton,
   ToggleSwitch,
 } from 'primevue'
@@ -140,10 +146,12 @@ import DeckCard from '@/components/DeckCard.vue'
 import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
+import useAuthUser from '@/composables/UseAuthUser'
 import getCard from '@/lib/getCard'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
 import throwError from '@/lib/throwError'
+import { useHeartStore } from '@/store/hearts'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card, Deck } from '@/lib/types'
@@ -151,6 +159,7 @@ import type { Card, Deck } from '@/lib/types'
 const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()
+const { id, isSignedIn } = useAuthUser()
 const reloadForm = ref(0)
 
 const form = reactive({
@@ -164,6 +173,7 @@ const form = reactive({
   ).map((card) => getCard(card)) as Card[],
   sort: route.query.sort?.toString() || 'Name',
   order: route.query.order?.toString() || 'Ascending',
+  search: route.query.search?.toString() || 'All',
 })
 const cardSuggestions = ref<Card[]>([])
 const cards = [
@@ -199,8 +209,7 @@ const search = async () => {
   isSearching.value = true
 
   let query = supabase
-    .from('decks')
-    .select('*', { count: 'exact' })
+    .rpc('get_decks_with_heart_counts')
     .ilike('name', `%${(route.query.name || '').toString().replace(/ /g, '%')}%`)
   if (!route.query.showIncomplete || route.query.showIncomplete === 'false') {
     query = query.eq('is_complete', true)
@@ -220,6 +229,21 @@ const search = async () => {
     Name: 'name',
     'Recently Edited': 'last_updated',
     Created: 'created_at',
+    Likes: 'hearts',
+  }
+
+  if (route.query.search === 'Your Decks') {
+    if (isSignedIn.value) {
+      query = query.eq('creator', id.value)
+    } else {
+      results.value = []
+      totalRecords.value = 0
+      isSearching.value = false
+      return
+    }
+  } else if (route.query.search === 'Liked Decks') {
+    const hearts = useHeartStore()
+    query = query.in('id', hearts.hearts)
   }
 
   const { data, error, count } = await query
@@ -227,7 +251,6 @@ const search = async () => {
       ascending: route.query.order ? route.query.order === 'Ascending' : true,
     })
     .range(firstValue.value, firstValue.value + paginatorAmount - 1)
-    .returns<Deck[]>()
 
   if (error) {
     throwError(error)
@@ -236,7 +259,7 @@ const search = async () => {
     throw new Error()
   }
 
-  results.value = data
+  results.value = data as Deck[]
   totalRecords.value = count as number
   isSearching.value = false
 }
@@ -294,7 +317,8 @@ label,
     .p-autocomplete,
     .hero-picker,
     .card-list-textarea,
-    .p-toggleswitch
+    .p-toggleswitch,
+    .p-selectbutton
   ):has(+ :not(:is(small, .help-message))) {
   margin-bottom: var(--block-space);
 }

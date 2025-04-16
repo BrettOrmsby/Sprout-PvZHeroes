@@ -9,6 +9,7 @@ export type Deck = {
   created_at: string
   last_updated: string
   description: string
+  hearts: number
 }
 
 export type Hero = {
@@ -40,6 +41,7 @@ export type User = {
   profile_image: string
   id: string
   created_at: string
+  hearts: string[]
 }
 
 export type Query = {

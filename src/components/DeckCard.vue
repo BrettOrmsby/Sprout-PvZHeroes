@@ -12,8 +12,9 @@
         <p class="description">{{ deck.description }}</p>
         <div class="footer-container">
           <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
-          <div class="visibility" v-if="showVisibility">
-            <Tag v-if="deck.is_private" value="Private" severity="secondary" />
+          <div class="hearts"><Heart /> {{ deck.hearts }}</div>
+          <div class="visibility" v-if="showVisibility && deck.is_private">
+            <Tag value="Private" severity="secondary" />
           </div>
         </div>
       </template>
@@ -25,6 +26,7 @@
 import { computed, onUnmounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import { Heart } from 'lucide-vue-next'
 import { Avatar, Card, Tag } from 'primevue'
 import getHero from '@/lib/getHero'
 import type { Deck } from '@/lib/types'
@@ -96,13 +98,26 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--inline-space);
+  flex-wrap: wrap;
+  gap: var(--block-space);
   margin-top: var(--inline-space);
+  font-size: 0.8em;
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: calc(var(--inline-space) / 2);
+}
+.hearts svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 .last-updated {
   color: var(--p-text-muted-color);
   margin: 0;
-  font-size: 0.8em;
 }
 </style>

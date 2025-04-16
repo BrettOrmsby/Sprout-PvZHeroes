@@ -24,23 +24,17 @@ export const useUserStore = defineStore('user', () => {
       .from('profiles')
       .select('*')
       .eq('username', username)
-      .returns<User[]>()
-      .single()
+      .single<User>()
 
-    if (!error) {
+    if (!error && data) {
       set(data)
     }
     return error
   }
   async function loadFromId(id: string) {
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('id', id)
-      .returns<User[]>()
-      .single()
+    const { data, error } = await supabase.from('profiles').select('*').eq('id', id).single<User>()
 
-    if (!error) {
+    if (!error && data) {
       set(data)
     }
     return error
@@ -51,9 +45,8 @@ export const useUserStore = defineStore('user', () => {
       .from('profiles')
       .update(data)
       .eq('username', username.value)
-      .returns<User[]>()
       .select()
-      .single()
+      .single<User>()
 
     if (error) {
       throwError(error)

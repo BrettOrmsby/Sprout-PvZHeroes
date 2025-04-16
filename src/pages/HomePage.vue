@@ -69,16 +69,20 @@ const getYourDeckData = async () => {
   if (isSignedIn.value) {
     const { data, error } = await supabase
       .from('decks')
-      .select('*')
+      .select('*, hearts(count)')
       .order('created_at', { ascending: false })
       .eq('creator', id.value)
       .limit(4)
-      .returns<Deck[]>()
+      .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
 
     if (error) {
       throwError(error)
     } else {
-      yourDeckData.value = data
+      const decksWithHearts: Deck[] = data.map((deck) => ({
+        ...deck,
+        hearts: deck.hearts?.[0]?.count || 0,
+      }))
+      yourDeckData.value = decksWithHearts
       isLoadingYourDecks.value = false
     }
   }
@@ -87,17 +91,21 @@ const getYourDeckData = async () => {
 const getPublicDeckData = async () => {
   const { data, error } = await supabase
     .from('decks')
-    .select('*')
+    .select('*, hearts(count)')
     .order('created_at', { ascending: false })
     .eq('is_complete', true)
     .eq('is_private', false)
     .limit(6)
-    .returns<Deck[]>()
+    .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
 
   if (error) {
     throwError(error)
   } else {
-    deckData.value = data
+    const decksWithHearts: Deck[] = data.map((deck) => ({
+      ...deck,
+      hearts: deck.hearts?.[0]?.count || 0,
+    }))
+    deckData.value = decksWithHearts
     isLoading.value = false
   }
 }
