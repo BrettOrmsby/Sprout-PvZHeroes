@@ -5,14 +5,19 @@ import { ConfirmDialog, ProgressBar, Toast } from 'primevue'
 import TheHeader from '@/components/TheHeader.vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import { useHeartStore } from '@/store/hearts'
+import { useNotificationsStore } from '@/store/notifications'
 import states from '@/store/states'
+
 const { isSignedIn } = useAuthUser()
 const hearts = useHeartStore()
+const notifications = useNotificationsStore()
 watch(isSignedIn, (newVal) => {
   if (newVal) {
     hearts.load()
+    notifications.loadUnreadCount()
   } else {
     hearts.hearts = []
+    notifications.unreadNotificationsCount = 0
   }
 })
 </script>

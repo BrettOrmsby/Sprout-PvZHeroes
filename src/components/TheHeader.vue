@@ -22,6 +22,12 @@
             <SearchCode v-if="item.label === 'Query Help'" />
             <LayoutGrid v-else-if="item.label === 'Your Decks'" />
             <Plus v-else-if="item.label === 'Create Deck'" />
+            <template v-else-if="item.label === 'Notifications'">
+              <OverlayBadge v-if="notifications.unreadNotificationsCount > 0">
+                <Bell />
+              </OverlayBadge>
+              <Bell v-else />
+            </template>
             <LogOut v-else-if="item.label === 'Sign Out'" />
             <span>{{ item.label }}</span>
           </a>
@@ -52,10 +58,11 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { Menubar } from 'primevue'
+import { Menubar, OverlayBadge } from 'primevue'
 import {
   ChevronDown,
   CircleUserRound,
+  Bell,
   FileSearch,
   FolderSearch,
   Grid2x2,
@@ -70,7 +77,9 @@ import {
   UserSearch,
 } from 'lucide-vue-next'
 import useAuthUser from '@/composables/UseAuthUser'
+import { useNotificationsStore } from '@/store/notifications'
 
+const notifications = useNotificationsStore()
 const { isSignedIn, signIn } = useAuthUser()
 const items = computed(() => {
   return [
@@ -121,6 +130,10 @@ const items = computed(() => {
           route: '/create',
         },
         {
+          label: 'Notifications',
+          route: '/notifications',
+        },
+        {
           label: 'Sign Out',
           route: '/sign-out',
         },
@@ -157,5 +170,12 @@ const items = computed(() => {
   .p-menubar {
     padding: var(--p-menubar-padding);
   }
+}
+
+:deep(.p-badge) {
+  transition: outline-color var(--p-menubar-transition-duration);
+}
+:deep(.p-menubar-item:not(.p-disabled) > .p-menubar-item-content:hover .p-overlaybadge .p-badge) {
+  --p-overlaybadge-outline-color: var(--p-menubar-item-focus-background);
 }
 </style>

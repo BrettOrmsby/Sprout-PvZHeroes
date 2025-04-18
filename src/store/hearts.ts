@@ -4,12 +4,14 @@ import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import { useDeckStore } from './deck'
+import { useNotificationsStore } from './notifications'
 
 const { supabase } = useSupabase()
 const { id } = useAuthUser()
 
 export const useHeartStore = defineStore('hearts', () => {
   const deck = useDeckStore()
+  const notifications = useNotificationsStore()
   const hearts = ref<string[]>([])
 
   async function load() {
@@ -23,7 +25,7 @@ export const useHeartStore = defineStore('hearts', () => {
   }
 
   let isUpdatingLike = false
-  async function updateLike(deck_id: string) {
+  async function updateLike(deck_id: string, user: string) {
     if (isUpdatingLike) {
       return
     }
@@ -67,7 +69,10 @@ export const useHeartStore = defineStore('hearts', () => {
       // If there was an error, it probably was not synced
       throwError({ message: 'Failed to Add Like', hint: 'Attempting to resync likes.' })
       await load()
+      isUpdatingLike = false
     }
+
+    notifications.sendLikeNotification(deck_id, user)
     isUpdatingLike = false
   }
 

@@ -54,7 +54,7 @@
             rounded
             aria-label="Likes"
             :disabled="deck.isUsersDeck || !isSignedIn"
-            @click="hearts.updateLike(deck.id)"
+            @click="hearts.updateLike(deck.id, deck.creator)"
             v-tooltip.bottom="{
               value: heartToolTip,
               showDelay: 1000,

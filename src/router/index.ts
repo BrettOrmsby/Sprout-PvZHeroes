@@ -75,6 +75,15 @@ const router = createRouter({
       },
     },
     {
+      name: 'Notifications',
+      path: '/notifications',
+      component: () => import('@/pages/NotificationPage.vue'),
+      meta: {
+        requiresAuth: true,
+        title: 'Notifications • Sprout',
+      },
+    },
+    {
       name: 'CreateDeck',
       path: '/create',
       meta: {
@@ -198,12 +207,16 @@ router.beforeEach((to, _, next) => {
   next()
 })
 
-router.beforeEach((to) => {
+router.beforeEach(async (to) => {
   states.loadingRoute = true
-  const { isSignedIn } = useAuthUser()
-  // TODO: this does not wait for auth to be checked if starting on the page (like the create deck page) so it will navigate home instead
-  if (!isSignedIn.value && to.meta.requiresAuth) {
-    return { name: 'Home' }
+
+  if (to.meta.requiresAuth) {
+    const { isSignedIn } = useAuthUser()
+    const { forceLoadSession } = useSupabase()
+    await forceLoadSession()
+    if (!isSignedIn.value) {
+      return { name: 'Home' }
+    }
   }
 })
 router.afterEach(() => (states.loadingRoute = false))

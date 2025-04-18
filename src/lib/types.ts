@@ -44,6 +44,18 @@ export type User = {
   hearts: string[]
 }
 
+export type Notification = {
+  id: string
+  is_read: boolean
+  recipient_id: string
+  actor_id: string
+  actor_name: string
+  deck_id: string
+  deck_name: string
+  created_at: string
+  type: 'heart'
+}
+
 export type Query = {
   includeTokens: boolean
   includeRemoved: boolean

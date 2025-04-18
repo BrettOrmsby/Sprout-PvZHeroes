@@ -26,6 +26,14 @@ supabase.auth.onAuthStateChange((event, session) => {
   user.value = session?.user || null
 })
 
+async function forceLoadSession() {
+  const { user } = useAuthUser()
+  if (!user.value) {
+    const { data } = await supabase.auth.getSession()
+    user.value = data.session?.user || null
+  }
+}
+
 export default function useSupabase() {
-  return { supabase }
+  return { supabase, forceLoadSession }
 }

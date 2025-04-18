@@ -664,7 +664,7 @@ h2 {
 
 a {
   color: var(--p-primary-color);
-  transition: var(--p-form-field-transition-duration);
+  transition: var(--p-transition-duration);
   text-decoration: none;
 }
 a:hover {

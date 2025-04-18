@@ -164,6 +164,6 @@ h2,
 
 .deck-skeleton {
   max-width: 400px;
-  border-radius: (--p-card-border-radius);
+  border-radius: var(--p-card-border-radius);
 }
 </style>
