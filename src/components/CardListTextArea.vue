@@ -52,7 +52,6 @@ import zombies from '@/content/zombies.json'
 
 const props = defineProps<{
   modelValue: Record<string, number> | null
-  isError: boolean
   hero: string
   id?: string
 }>()
@@ -153,7 +152,8 @@ const jsonDeck = computed((): Record<string, number> => {
   return json
 })
 
-const arrayToList = (array: any[]) => array.join(', ').replace(/, ((?:.(?!, ))+)$/, ' and $1')
+const arrayToList = (array: (string | number)[]) =>
+  array.join(', ').replace(/, ((?:.(?!, ))+)$/, ' and $1')
 </script>
 
 <style scoped>

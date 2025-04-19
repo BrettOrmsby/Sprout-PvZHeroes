@@ -9,7 +9,7 @@
     :data-card-name="card.name"
     :data-can-add="deck.isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))"
     :data-can-remove="deck.isUsersDeck && props.isInDeck"
-    :class="class"
+    :class="props.class"
   />
   <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="width: auto">
     <template #item="{ item, props }">

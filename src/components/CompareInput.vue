@@ -60,7 +60,7 @@ const props = defineProps<{ id: string }>()
 const to = defineModel<string>({ default: '' })
 
 const { supabase } = useSupabase()
-const { isSignedIn, id } = useAuthUser()
+const { isSignedIn, id: userId } = useAuthUser()
 const router = useRouter()
 
 const filteredDecks = ref()
@@ -80,7 +80,6 @@ const toAutoComplete = computed({
   },
 })
 
-toAutoComplete.value
 const isDeckLoadAttempted = ref(false)
 const search = (event: AutoCompleteCompleteEvent) => {
   if (!isDeckLoadAttempted.value) {
@@ -101,9 +100,9 @@ const loadDecks = async () => {
     .from('decks')
     .select('*')
     .order('created_at', { ascending: false })
-    .eq('creator', id.value)
+    .eq('creator', userId.value)
     .limit(4)
-    .returns<Deck[]>()
+    .overrideTypes<Deck[]>()
 
   if (error) {
     throwError(error)
@@ -133,7 +132,7 @@ const compareDecks = async () => {
     }
     isCompareDeckError.value = false
     router.push({ name: 'Compare', params: { id: props.id, to: toId } })
-  } catch (_) {
+  } catch {
     isCompareDeckError.value = true
     compareDeckErrorMessage.value = 'Deck does not exist.'
   } finally {

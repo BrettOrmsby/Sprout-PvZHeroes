@@ -175,8 +175,8 @@ export class Scanner {
     } else {
       if (str.toLowerCase() === 'or') {
         this.#addToken('or', str, startPos)
-      } else if (compareOperator.includes(str as any)) {
-        this.#addToken('compareOperator', str as any, startPos)
+      } else if (compareOperator.includes(str as (typeof compareOperator)[number])) {
+        this.#addToken('compareOperator', str as (typeof compareOperator)[number], startPos)
       } else {
         this.#addToken('identifier', str, startPos)
       }

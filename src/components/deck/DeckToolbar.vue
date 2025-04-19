@@ -126,7 +126,7 @@ const copyDeck = async () => {
       detail: 'Your deck has been copied to the clipboard.',
       life: 3000,
     })
-  } catch (_) {
+  } catch {
     toast.add({
       severity: 'error',
       summary: 'Failed to Copy',

@@ -94,7 +94,9 @@ export class Parser {
 
       if (
         current.type === 'identifier' &&
-        properties.includes(current.value.toString().toLowerCase() as any) &&
+        properties.includes(
+          current.value.toString().toLowerCase() as (typeof properties)[number],
+        ) &&
         this.#expect('compareOperator')
       ) {
         const propertyName = current.value.toString().toLowerCase() as Property
@@ -102,7 +104,7 @@ export class Parser {
         const operator = this.#peek()
         this.#increment()
 
-        if (numberProperties.includes(propertyName as any)) {
+        if (numberProperties.includes(propertyName as (typeof numberProperties)[number])) {
           if (this.#peek().type === 'int') {
             target.push({
               property: propertyName as NumberProperty,
@@ -299,10 +301,10 @@ export class Parser {
             }
           } else {
             target.push({
-              property: propertyName as any,
+              property: propertyName,
               value: valueToken.value,
               isNegated,
-            })
+            } as SubQuery[number])
           }
           isNegated = false
         }
@@ -323,7 +325,10 @@ export class Parser {
             },
           ]
           target = []
-          section = root[0] as any
+          section = root[0] as {
+            property: 'or'
+            orSections: SubQuery[]
+          }
           section!.orSections.push(target)
         } else {
           target = []
