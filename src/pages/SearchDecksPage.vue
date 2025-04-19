@@ -254,9 +254,8 @@ const search = async () => {
 
   if (error) {
     throwError(error)
-    console.log(error)
     isSearching.value = false
-    throw new Error()
+    return
   }
 
   results.value = data as Deck[]

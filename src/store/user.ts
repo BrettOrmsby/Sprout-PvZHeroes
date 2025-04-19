@@ -1,5 +1,4 @@
 import useSupabase from '@/composables/UseSupabase'
-import throwError from '@/lib/throwError'
 import type { User } from '@/lib/types'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
@@ -49,7 +48,6 @@ export const useUserStore = defineStore('user', () => {
       .single<User>()
 
     if (error) {
-      throwError(error)
       return error
     }
     set(newData)

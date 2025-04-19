@@ -121,7 +121,6 @@ const loadDecks = async () => {
 
   if (error) {
     throwError(error)
-    throw new Error()
   } else {
     const decksWithHearts: Deck[] = data.map((deck) => ({
       ...deck,
@@ -158,7 +157,9 @@ const updateHeroImage = async () => {
     profile_image: selectedHero.value,
   })
   isUpdatingProfileImage.value = false
-  if (!error) {
+  if (error) {
+    throwError(error)
+  } else {
     isChangeHeroModalOpen.value = false
   }
 }
@@ -181,7 +182,13 @@ const updateUsername = async () => {
     username: selectedUsername.value,
   })
   isUpdatingUsername.value = false
-  if (!error) {
+  if (error) {
+    if (error.code === '23505') {
+      throwError({ message: 'Non-unique Username', hint: 'Username must be unique.' })
+    } else {
+      throwError(error)
+    }
+  } else {
     isChangeUsernameModalOpen.value = false
   }
 }
