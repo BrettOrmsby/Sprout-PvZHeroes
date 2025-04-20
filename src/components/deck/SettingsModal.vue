@@ -3,7 +3,6 @@
     :draggable="false"
     :modal="true"
     v-model:visible="states.editModal"
-    @show="updateList"
     style="max-width: 500px; width: 100%; margin: var(--block-space)"
   >
     <template #header>
@@ -18,6 +17,8 @@
         v-model="newInfo.name"
         :class="{ 'p-invalid': showNameError }"
         maxlength="50"
+        autofocus
+        @blur="checkNameError"
       />
       <small v-if="showNameError" id="invalidName" class="error">Must include a name.</small>
 
@@ -38,7 +39,7 @@
       <div class="footer">
         <Button
           label="Cancel"
-          @click="() => (states.editModal = false)"
+          @click="closeModal"
           severity="secondary"
           :disabled="isDeleting || isLoading"
         />
@@ -58,7 +59,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { Button, Dialog, InputText, Textarea, ToggleSwitch, useConfirm } from 'primevue'
 import CardListTextArea from '@/components/CardListTextArea.vue'
@@ -71,27 +72,31 @@ const deck = useDeckStore()
 
 const { supabase } = useSupabase()
 
-const newInfo = ref({
-  name: deck.name,
-  description: deck.description,
-  is_private: deck.is_private,
-  list: deck.list,
+const newInfo = reactive({
+  name: '',
+  description: '',
+  is_private: false,
+  list: {} as Record<string, number>,
 })
-
-const updateList = () => {
-  newInfo.value.list = deck.list
-}
 
 const showNameError = ref(false)
 const isCardListError = ref(false)
 const isLoading = ref(false)
 
-const updateDeck = async () => {
-  if (newInfo.value.name.trim() === '') {
+const closeModal = () => (states.editModal = false)
+
+const checkNameError = () => {
+  if (newInfo.name.trim() === '') {
     showNameError.value = true
+    return true
+  }
+  showNameError.value = false
+  return false
+}
+
+const updateDeck = async () => {
+  if (checkNameError()) {
     return
-  } else {
-    showNameError.value = false
   }
   if (isCardListError.value) {
     return
@@ -99,10 +104,9 @@ const updateDeck = async () => {
 
   isLoading.value = true
   await deck.update({
-    ...newInfo.value,
+    ...newInfo,
     is_complete:
-      Object.values(newInfo.value.list).reduce((prev: number, curr: number) => prev + curr, 0) ===
-      40,
+      Object.values(newInfo.list).reduce((prev: number, curr: number) => prev + curr, 0) === 40,
   })
 
   isLoading.value = false
@@ -150,12 +154,14 @@ const deleteDeck = () => {
 watch(
   () => states.editModal,
   () => {
-    newInfo.value = {
+    Object.assign(newInfo, {
       name: deck.name,
       description: deck.description,
       is_private: deck.is_private,
-      list: deck.list,
-    }
+      list: { ...deck.list },
+    })
+    showNameError.value = false
+    isCardListError.value = false
   },
 )
 </script>

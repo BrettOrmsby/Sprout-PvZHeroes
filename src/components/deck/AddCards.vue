@@ -5,32 +5,35 @@
     <Tabs ref="tabview1" :value="hero.class[0]" scrollable>
       <TabList>
         <Tab
-          v-for="(_, key) in cardByClass"
-          :key="key"
-          :value="key"
+          v-for="(_, className) in cardsByClass"
+          :key="className"
+          :value="className"
           as="div"
           class="class-container"
-          :class="{ invalidClass: !hero.class.includes(key) }"
+          :class="{ invalidClass: !hero.class.includes(className) }"
         >
-          <img class="class" :src="'/images/classes/' + key.toLowerCase() + '.png'" :alt="key" />
-          <span>{{ key }}</span>
+          <img
+            class="class"
+            :src="'/images/classes/' + className.toLowerCase() + '.png'"
+            :alt="className"
+          />
+          <span>{{ className }}</span>
         </Tab>
       </TabList>
       <TabPanels>
-        <TabPanel v-for="(value, key) in cardByClass" :key="key" :value="key">
+        <TabPanel v-for="(cards, className) in cardsByClass" :key="className" :value="className">
           <div class="library-container">
             <PVZCardWithMenu
-              v-for="card in value.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name))"
+              v-for="card in cards"
               :key="card.name"
               :isInDeck="false"
               :card="card"
-              :class="`${
-                states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'
-              } ${
-                states.deckFilter.hideCards &&
-                !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-                'hidden'
-              }`"
+              :class="{
+                highlighted: states.deckFilter.cardsMatchingFilter.includes(card.name),
+                hidden:
+                  states.deckFilter.hideCards &&
+                  !states.deckFilter.cardsMatchingFilter.includes(card.name),
+              }"
             />
           </div>
         </TabPanel>
@@ -63,7 +66,7 @@ const cards = computed(
     ) as Card[],
 )
 
-const cardByClass = computed(() => {
+const cardsByClass = computed(() => {
   const cardClassObj: Record<string, Card[]> = {}
   for (const card of cards.value) {
     if (!cardClassObj[card.class]) {
@@ -71,6 +74,12 @@ const cardByClass = computed(() => {
     } else {
       cardClassObj[card.class].push(card)
     }
+  }
+  // Now sort the cards by cost then name
+  for (const key in cardClassObj) {
+    cardClassObj[key] = cardClassObj[key].sort(
+      (a, b) => a.cost - b.cost || a.name.localeCompare(b.name),
+    )
   }
   return cardClassObj
 })

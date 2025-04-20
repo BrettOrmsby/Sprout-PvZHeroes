@@ -9,21 +9,25 @@
         </template>
       </Button>
     </div>
-    <div class="draw-container">
-      <div class="card-draw-container" v-for="(card, index) of draw" :key="index">
+    <TransitionGroup name="card" tag="div" class="draw-container">
+      <div v-for="(card, index) of draw" :key="card.identifier" class="card-draw-container">
         <PVZCard
           :card="getCard(card.cardName)"
           :is-valid="true"
           :amount="0"
           @click="viewCard(card.cardName)"
         />
-        <Button :disabled="!card.hasMulligan" @click="mulligan(index)">
+        <Button
+          :disabled="!card.hasMulligan"
+          @click="mulligan(index)"
+          :aria-label="`Mulligan card ${index + 1}`"
+        >
           <template #icon="iconClass">
             <RotateCw :class="iconClass.class" />
           </template>
         </Button>
       </div>
-    </div>
+    </TransitionGroup>
   </div>
 </template>
 
@@ -36,40 +40,27 @@ import getCard from '@/lib/getCard'
 import states from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 
+type DrawCard = {
+  cardName: string
+  identifier: number
+}
+type MulliganCard = DrawCard & { hasMulligan: boolean }
+
 const deck = useDeckStore()
-const shuffledDeck = ref<string[]>([])
-const draw = ref<
-  {
-    cardName: string
-    hasMulligan: boolean
-  }[]
->([])
+const shuffledDeck = ref<DrawCard[]>([])
+const draw = ref<MulliganCard[]>([])
 
 const cardsInDeck = computed(() => Object.values(deck.list).reduce((prev, curr) => prev + curr, 0))
 
+let uniqueIndexCount = 0
 const restartDeck = () => {
-  ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
-    element.classList.remove('rotate-scale-down'),
-  )
+  const deckCards = Object.entries(deck.list)
+    .flatMap(([card, amount]) => Array(amount).fill(card))
+    .map((cardName) => ({ cardName, identifier: uniqueIndexCount++ }))
+  shuffle(deckCards)
 
-  setTimeout(() => {
-    const deckCards = Object.entries(deck.list)
-      .map(([card, amount]) => Array(amount).fill(card))
-      .flat()
-    shuffle(deckCards)
-
-    draw.value = deckCards.splice(0, 4).map((cardName) => ({ cardName, hasMulligan: true }))
-    shuffledDeck.value = deckCards
-    ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
-      element.classList.add('rotate-scale-down'),
-    )
-
-    setTimeout(() => {
-      ;[...document.querySelectorAll('.card-draw-container')].forEach((element) =>
-        element.classList.remove('rotate-scale-down'),
-      )
-    }, 200)
-  }, 100)
+  draw.value = deckCards.splice(0, 4).map((card) => ({ ...card, hasMulligan: true }))
+  shuffledDeck.value = deckCards
 }
 
 const mulligan = (index: number) => {
@@ -78,18 +69,15 @@ const mulligan = (index: number) => {
   // shuffledDeck.value.push(draw.value[index].cardName)
 
   shuffle(shuffledDeck.value)
-  const newCard = shuffledDeck.value.shift() as string
+  const newCard = shuffledDeck.value.shift()!
 
-  draw.value[index] = { cardName: newCard, hasMulligan: false }
-  document
-    .querySelector(`.card-draw-container:nth-child(${index + 1})`)
-    ?.classList?.add('rotate-scale-down')
+  draw.value[index] = { ...newCard, hasMulligan: false }
 }
 
 onMounted(restartDeck)
 watch(() => deck.list, restartDeck)
 
-function shuffle(array: string[]) {
+function shuffle(array: DrawCard[]) {
   let m = array.length,
     t,
     i
@@ -149,7 +137,13 @@ h2,
   width: fit-content;
 }
 
-.rotate-scale-down {
+.card-leave-active,
+.card-leave-to {
+  display: none;
+}
+
+.card-enter-active,
+.card-enter-from {
   -webkit-animation: rotate-scale-down 0.2s linear both;
   animation: rotate-scale-down 0.2s linear both;
 }

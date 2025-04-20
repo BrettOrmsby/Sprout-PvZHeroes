@@ -9,7 +9,7 @@
     :data-card-name="card.name"
     :data-can-add="deck.isUsersDeck && ((isInDeck && numberLeft < 4) || (!isInDeck && isValid))"
     :data-can-remove="deck.isUsersDeck && props.isInDeck"
-    :class="props.class"
+    v-bind="$attrs"
   />
   <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="width: auto">
     <template #item="{ item, props }">
@@ -39,7 +39,7 @@ import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import type { Card, Hero } from '@/lib/types'
 
-const props = defineProps<{ card: Card; isInDeck: boolean; class?: string }>()
+const props = defineProps<{ card: Card; isInDeck: boolean }>()
 
 const deck = useDeckStore()
 const hero = computed<Hero>(

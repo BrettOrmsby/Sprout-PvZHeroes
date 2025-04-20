@@ -10,11 +10,12 @@
         :key="card.name"
         :isInDeck="true"
         :card="card"
-        :class="`${states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'} ${
-          states.deckFilter.hideCards &&
-          !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-          'hidden'
-        }`"
+        :class="{
+          highlighted: states.deckFilter.cardsMatchingFilter.includes(card.name),
+          hidden:
+            states.deckFilter.hideCards &&
+            !states.deckFilter.cardsMatchingFilter.includes(card.name),
+        }"
       />
     </template>
     <template v-else>
@@ -24,11 +25,12 @@
         :card="card"
         :amount="deck.list[card.name]"
         :isValid="true"
-        :class="`${states.deckFilter.cardsMatchingFilter.includes(card.name) && 'highlighted'} ${
-          states.deckFilter.hideCards &&
-          !states.deckFilter.cardsMatchingFilter.includes(card.name) &&
-          'hidden'
-        }`"
+        :class="{
+          highlighted: states.deckFilter.cardsMatchingFilter.includes(card.name),
+          hidden:
+            states.deckFilter.hideCards &&
+            !states.deckFilter.cardsMatchingFilter.includes(card.name),
+        }"
         @click="showCard(card.name)"
       />
     </template>

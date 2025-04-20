@@ -40,3 +40,27 @@ main {
 .p-menu {
   min-width: unset !important;
 }
+
+.common {
+  --rarity-background: #f5f5dc;
+}
+
+.uncommon {
+  --rarity-background: #959a9d;
+}
+
+.rare {
+  --rarity-background: #ea9c45;
+}
+
+.super-rare {
+  --rarity-background: #885cd5;
+}
+
+.legendary {
+  --rarity-background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
+}
+
+.event {
+  --rarity-background: #e66d59;
+}

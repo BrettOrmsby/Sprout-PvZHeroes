@@ -10,65 +10,22 @@
   </Dialog>
   <Toolbar>
     <template #start>
-      <Button
-        v-if="deck.isUsersDeck"
-        @click="states.editModal = true"
-        severity="secondary"
-        label="Settings"
-        :disabled="isDuplicationLoading"
-        v-tooltip.bottom="{ value: 'Settings', showDelay: 1000, hideDelay: 300 }"
-      >
-        <template #icon="iconClass">
-          <Cog :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button
-        @click="copyDeck"
-        severity="secondary"
-        label="Copy"
-        :disabled="isDuplicationLoading"
-        v-tooltip.bottom="{ value: 'Copy Deck', showDelay: 1000, hideDelay: 300 }"
-      >
-        <template #icon="iconClass">
-          <Paperclip :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button
-        v-if="isSignedIn"
-        @click="duplicateDeck"
-        severity="secondary"
-        label="Duplicate"
-        :loading="isDuplicationLoading"
-        v-tooltip.bottom="{ value: 'Duplicate Deck', showDelay: 1000, hideDelay: 300 }"
-      >
-        <template #icon="iconClass">
-          <Copy :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button
-        severity="secondary"
-        label="Compare"
-        @click="() => (isCompareModalOpen = true)"
-        :disabled="isDuplicationLoading"
-        v-tooltip.bottom="{ value: 'Compare Deck', showDelay: 1000, hideDelay: 300 }"
-      >
-        <template #icon="iconClass">
-          <Repeat :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button
-        @click="(event) => highlighter.toggle(event)"
-        severity="secondary"
-        badgeSeverity="contrast"
-        label="Highlighter"
-        :disabled="isDuplicationLoading"
-        :badge="numberMatchingCardsInDeck"
-        v-tooltip.bottom="{ value: 'Highlighter', showDelay: 1000, hideDelay: 300 }"
-      >
-        <template #icon="iconClass">
-          <Highlighter :class="iconClass.class" />
-        </template>
-      </Button>
+      <template v-for="action in actions" :key="action.label">
+        <Button
+          v-if="action?.show?.() ?? true"
+          :label="action.label"
+          :loading="action.label === 'Duplicate' && isDuplicationLoading"
+          :disabled="action.label !== 'Duplicate' && isDuplicationLoading"
+          :aria-label="action.label"
+          :badge="action.badge?.()"
+          :badgeSeverity="action.badgeSeverity"
+          @click="action.onClick"
+          v-tooltip.bottom="{ value: action.tooltip, showDelay: 1000, hideDelay: 300 }"
+          severity="secondary"
+        >
+          <template #icon="icon"><component :is="action.icon" :class="icon.class" /></template>
+        </Button>
+      </template>
       <Popover ref="highlighter">
         <HighlightPopover />
       </Popover>
@@ -158,6 +115,43 @@ const duplicateDeck = async () => {
   isDuplicationLoading.value = false
   router.push({ name: 'ViewDeck', params: { id: data.id } })
 }
+
+const actions = [
+  {
+    show: () => deck.isUsersDeck,
+    label: 'Settings',
+    icon: Cog,
+    onClick: () => (states.editModal = true),
+    tooltip: 'Settings',
+  },
+  {
+    label: 'Copy',
+    icon: Paperclip,
+    onClick: copyDeck,
+    tooltip: 'Copy Deck',
+  },
+  {
+    show: () => isSignedIn.value,
+    label: 'Duplicate',
+    icon: Copy,
+    onClick: duplicateDeck,
+    tooltip: 'Duplicate Deck',
+  },
+  {
+    label: 'Compare',
+    icon: Repeat,
+    onClick: () => (isCompareModalOpen.value = true),
+    tooltip: 'Compare Deck',
+  },
+  {
+    label: 'Highlighter',
+    icon: Highlighter,
+    onClick: (event: MouseEvent) => highlighter.value.toggle(event),
+    tooltip: 'Highlighter',
+    badgeSeverity: 'contrast',
+    badge: () => numberMatchingCardsInDeck.value,
+  },
+]
 </script>
 
 <style scoped>

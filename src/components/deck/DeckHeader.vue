@@ -1,7 +1,16 @@
 <template>
   <SettingsModal />
   <header>
-    <div class="hero-container">
+    <div
+      class="hero-container"
+      :style="{
+        background: `linear-gradient(
+      to right,
+      ${colours[hero.class[0]]} 50%,
+      ${colours[hero.class[1]]} 50%
+    )`,
+      }"
+    >
       <Avatar
         size="xlarge"
         shape="circle"
@@ -11,14 +20,11 @@
       />
       <div class="class-container">
         <img
+          v-for="className in hero.class"
+          :key="className"
           class="class"
-          :src="'/images/classes/' + hero.class[0].toLowerCase() + '.png'"
-          :alt="hero.class[0]"
-        />
-        <img
-          class="class"
-          :src="'/images/classes/' + hero.class[1].toLowerCase() + '.png'"
-          :alt="hero.class[1]"
+          :src="'/images/classes/' + className.toLowerCase() + '.png'"
+          :alt="className"
         />
       </div>
     </div>
@@ -36,13 +42,10 @@
           >{{ user.username }}</RouterLink
         >
       </div>
-      <h1
-        @click="() => deck.isUsersDeck && openSettings()"
-        :class="{ clickable: deck.isUsersDeck }"
-      >
+      <h1 @click="deck.isUsersDeck && openSettings()" :class="{ clickable: deck.isUsersDeck }">
         {{ deck.name }}
       </h1>
-      <p @click="() => deck.isUsersDeck && openSettings()" :class="{ clickable: deck.isUsersDeck }">
+      <p @click="deck.isUsersDeck && openSettings()" :class="{ clickable: deck.isUsersDeck }">
         {{ deck.description }}
       </p>
       <div class="extras-container">
@@ -52,7 +55,7 @@
             :class="{ fill: hearts.hearts.includes(deck.id) }"
             variant="text"
             rounded
-            aria-label="Likes"
+            :aria-label="heartToolTip"
             :disabled="deck.isUsersDeck || !isSignedIn"
             @click="hearts.updateLike(deck.id, deck.creator)"
             v-tooltip.bottom="{
@@ -100,10 +103,7 @@ const timeSinceUpdate = computed(() => {
   // eslint-disable-next-line
   refreshDateKey.value
   const lastUpdated = dayjs(deck.last_updated).fromNow()
-  if (lastUpdated.startsWith('in')) {
-    return 'a few seconds ago'
-  }
-  return dayjs(deck.last_updated).fromNow()
+  return lastUpdated.startsWith('in') ? 'a few seconds ago' : lastUpdated
 })
 
 const interval = setInterval(() => ++refreshDateKey.value, 60000)
@@ -159,11 +159,6 @@ header {
   justify-content: center;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    to right,
-    v-bind('colours[hero.class[0]]') 50%,
-    v-bind('colours[hero.class[1]]') 50%
-  );
   padding: var(--inline-space);
   gap: var(--inline-space);
 }

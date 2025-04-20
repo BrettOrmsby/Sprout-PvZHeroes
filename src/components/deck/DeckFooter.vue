@@ -1,20 +1,17 @@
 <template>
   <footer class="footer">
-    <span>{{ cardsInDeck.length }}/40</span>
+    <span>{{ summary.totalCards }}/40</span>
     <span>
-      <Badge :value="basics + 'C'" class="common" v-tooltip.top="'Commons'" />
-      <Badge :value="uncommons.toString() + 'U'" class="uncommon" v-tooltip.top="'Uncommons'" />
-      <Badge :value="rares.toString() + 'R'" class="rare" v-tooltip.top="'Rares'" />
       <Badge
-        :value="superRares.toString() + 'S'"
-        class="super-rare"
-        v-tooltip.top="'Super-Rares'"
+        v-for="badge in badgeMeta"
+        :key="badge.key"
+        :value="summary.counts[badge.key] + badge.label"
+        :class="badge.cssClass"
+        v-tooltip.top="badge.tooltip"
       />
-      <Badge :value="legendarys.toString() + 'L'" class="legendary" v-tooltip.top="'Legendarys'" />
-      <Badge :value="events.toString() + 'E'" class="event" v-tooltip.top="'Events'" />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ sparks.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
+      {{ summary.totalCost.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
     </span>
   </footer>
 </template>
@@ -25,44 +22,39 @@ import { Badge } from 'primevue'
 import calculateSparkCost from '@/lib/calculateSparkCost'
 import getCard from '@/lib/getCard'
 import { useDeckStore } from '@/store/deck'
-import type { Card } from '@/lib/types'
 
 const deck = useDeckStore()
 
-const cardsInDeck = computed(() => {
-  const deckCards = []
-  for (const key in deck.list) {
-    const card = getCard(key)
-    for (let i = 0; i < deck.list[key]; i++) {
-      deckCards.push(card)
-    }
+const summary = computed(() => {
+  const counts: Record<string, number> = {
+    common: 0,
+    uncommon: 0,
+    rare: 0,
+    'super-rare': 0,
+    legendary: 0,
+    event: 0,
   }
-  return deckCards
+  let totalCost = 0
+  let totalCards = 0
+
+  for (const [name, quantity] of Object.entries(deck.list)) {
+    const card = getCard(name)
+    counts[card.rarity] += quantity
+    totalCost += quantity * calculateSparkCost(card)
+    totalCards += quantity
+  }
+
+  return { counts, totalCost, totalCards }
 })
 
-const countInDeck = (key: keyof Card, value: number | string | null) => {
-  const number = cardsInDeck.value.reduce((prev, curr) => {
-    if (curr[key] === value) {
-      return 1 + prev
-    } else {
-      return prev
-    }
-  }, 0)
-  return number
-}
-
-const basics = computed(() => countInDeck('rarity', 'common'))
-const uncommons = computed(() => countInDeck('rarity', 'uncommon'))
-const rares = computed(() => countInDeck('rarity', 'rare'))
-const superRares = computed(() => countInDeck('rarity', 'super-rare'))
-const legendarys = computed(() => countInDeck('rarity', 'legendary'))
-const events = computed(() => countInDeck('rarity', 'event'))
-
-const sparks = computed(() => {
-  return cardsInDeck.value
-    .map((card) => calculateSparkCost(card))
-    .reduce((prev, curr) => prev + curr, 0)
-})
+const badgeMeta = [
+  { key: 'common', label: 'C', cssClass: 'common', tooltip: 'Commons' },
+  { key: 'uncommon', label: 'U', cssClass: 'uncommon', tooltip: 'Uncommons' },
+  { key: 'rare', label: 'R', cssClass: 'rare', tooltip: 'Rares' },
+  { key: 'super-rare', label: 'S', cssClass: 'super-rare', tooltip: 'Super-Rares' },
+  { key: 'legendary', label: 'L', cssClass: 'legendary', tooltip: 'Legendaries' },
+  { key: 'event', label: 'E', cssClass: 'event', tooltip: 'Events' },
+]
 </script>
 
 <style scoped>
@@ -81,9 +73,6 @@ const sparks = computed(() => {
   justify-content: space-between;
 }
 
-.type-container {
-  display: flex;
-}
 .image-text {
   display: flex;
   align-items: center;
@@ -101,23 +90,6 @@ const sparks = computed(() => {
   font-size: 0.5em;
   padding: 0 0.25em;
   border-radius: 100em;
-}
-.common {
-  background-color: #f5f5dc;
-}
-.uncommon {
-  background-color: #959a9d;
-}
-.rare {
-  background-color: #ea9c45;
-}
-.super-rare {
-  background-color: #885cd5;
-}
-.legendary {
-  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
-}
-.event {
-  background-color: #e66d59;
+  background: var(--rarity-background);
 }
 </style>

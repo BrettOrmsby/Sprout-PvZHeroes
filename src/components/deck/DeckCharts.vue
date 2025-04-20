@@ -10,6 +10,7 @@ import { computed, onMounted, ref } from 'vue'
 import Chart from 'primevue/chart'
 import getCard from '@/lib/getCard'
 import { useDeckStore } from '@/store/deck'
+import type { Card } from '@/lib/types'
 
 const deck = useDeckStore()
 
@@ -38,73 +39,42 @@ onMounted(() => {
   })
 })
 
-const cardsInDeck = computed(() => {
-  const deckCards = []
-  for (const key in deck.list) {
-    const card = getCard(key)
-    for (let i = 0; i < deck.list[key]; i++) {
-      deckCards.push(card)
-    }
-  }
-  return deckCards
-})
-
 const cardData = computed(() => {
-  const data = {
-    fighter: {
-      '0': 0,
-      '1': 0,
-      '2': 0,
-      '3': 0,
-      '4': 0,
-      '5': 0,
-      '6': 0,
-      '7': 0,
-      '8': 0,
-      '9': 0,
-      '10': 0,
-    },
-    trick: {
-      '0': 0,
-      '1': 0,
-      '2': 0,
-      '3': 0,
-      '4': 0,
-      '5': 0,
-      '6': 0,
-      '7': 0,
-      '8': 0,
-      '9': 0,
-      '10': 0,
-    },
-    environment: {
-      '0': 0,
-      '1': 0,
-      '2': 0,
-      '3': 0,
-      '4': 0,
-      '5': 0,
-      '6': 0,
-      '7': 0,
-      '8': 0,
-      '9': 0,
-      '10': 0,
-    },
+  const barSections = {
+    '0': 0,
+    '1': 0,
+    '2': 0,
+    '3': 0,
+    '4': 0,
+    '5': 0,
+    '6': 0,
+    '7': 0,
+    '8': 0,
+    '9': 0,
+    '10': 0,
   }
-  cardsInDeck.value.forEach((e) => {
-    let type = e.type.toLowerCase()
-    if (type === 'plant' || type === 'zombie') {
-      type = 'fighter'
-    }
-    data[type as keyof typeof data][e.cost as unknown as keyof typeof data.fighter] += 1
+  const data = {
+    fighter: { ...barSections },
+    trick: { ...barSections },
+    environment: { ...barSections },
+  }
+  Object.entries(deck.list).forEach(([cardName, quantity]) => {
+    const card = getCard(cardName)
+    const type = getCardChartSection(card)
+    data[type][card.cost as unknown as keyof typeof barSections] += quantity
   })
 
   return data
 })
 
+const getCardChartSection = (card: Card): 'fighter' | 'trick' | 'environment' => {
+  if (['plant', 'zombie'].includes(card.type.toLowerCase())) return 'fighter'
+  return card.type.toLowerCase() as 'trick' | 'environment'
+}
+
 const typeData = computed(() => {
   return {
-    labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    labels: Object.keys(cardData.value.fighter),
     datasets: [
       {
         type: 'bar',
@@ -147,7 +117,7 @@ const typeOptions = computed(() => {
         },
         stacked: true,
         title: {
-          text: 'Amount of cards',
+          text: 'Amount of Cards',
           display: true,
           color: graphColours.value.muted,
         },
@@ -161,7 +131,7 @@ const typeOptions = computed(() => {
           color: 'transparent',
         },
         title: {
-          text: 'Card cost',
+          text: 'Card Cost',
           display: true,
           color: graphColours.value.muted,
         },
