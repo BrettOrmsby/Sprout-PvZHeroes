@@ -1,43 +1,21 @@
 <template>
   <div class="card-list-textarea">
+    <!--Need onchange because the .lazy modifier is not supported-->
     <Textarea
       :placeholder="placeholder"
       rows="6"
       :class="{ textarea: true, 'p-invalid': isError, error: isError }"
       v-bind="$attrs"
-      v-model.lazy="textarea"
-      @change="
-        () => {
-          emit('update:modelValue', jsonDeck)
-          emit('update:isError', isError)
-        }
-      "
+      v-model="rawText"
+      @change="onChange"
     >
     </Textarea>
     <small v-if="isError">
-      <span v-if="errors.format.length"
-        >Invalid card formatting on line<span v-if="errors.format.length > 1">s</span>
-        {{ arrayToList(errors.format) }}</span
-      >
-      <span v-if="errors.number.length"
-        >Invalid card amount<span v-if="errors.number.length > 1">s</span> on line<span
-          v-if="errors.number.length > 1"
-          >s</span
-        >
-        {{ arrayToList(errors.number) }}</span
-      >
-      <span v-if="errors.cardName.length"
-        >Invalid card name<span v-if="errors.cardName.length > 1">s</span>:
-        {{ arrayToList(errors.cardName) }}</span
-      >
-      <span v-if="errors.duplicate.length"
-        >Duplicate card name<span v-if="errors.duplicate.length > 1">s</span>:
-        {{ arrayToList(errors.duplicate) }}</span
-      >
-      <span v-if="errors.invalidCard.length"
-        >Invalid card<span v-if="errors.duplicate.length > 1">s</span> for a
-        {{ computedHero.name }} deck: {{ arrayToList(errors.invalidCard) }}</span
-      >
+      <template v-for="(list, key) in errors" :key="key">
+        <span v-if="list.length">
+          {{ formatErrorMessage(key, list) }}
+        </span>
+      </template>
     </small>
   </div>
 </template>
@@ -73,11 +51,9 @@ const errors = ref<CardListErrors>({
   number: [],
   duplicate: [],
 })
-
 const isError = computed(() => Object.values(errors.value).flat().length > 0)
 
 const computedHero = computed(() => getHero(props.hero))
-
 const placeholder = computed(() => {
   const hero = computedHero.value
   const card = [...plants, ...zombies].find((e) => hero.class.includes(e.class))
@@ -94,12 +70,11 @@ const jsonToText = (obj: Record<string, number> | null): string => {
     })
     .join('\n')
 }
+const rawText = ref(jsonToText(props.modelValue))
 
-const textarea = ref(jsonToText(props.modelValue))
-
-const jsonDeck = computed((): Record<string, number> => {
-  /* eslint-disable vue/no-side-effects-in-computed-properties */
-  const json: Record<string, number> = {}
+const json = ref<Record<string, number>>({})
+const parseDeck = () => {
+  const parsed: Record<string, number> = {}
   errors.value = {
     format: [],
     cardName: [],
@@ -107,50 +82,60 @@ const jsonDeck = computed((): Record<string, number> => {
     invalidCard: [],
     duplicate: [],
   }
-  const lines = textarea.value.split('\n')
+
+  const lines = rawText.value.split('\n')
   const hero = computedHero.value
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim()
-    if (!line) {
-      continue
-    }
-    const match = line.match(/^(\d+)\s*([^$]+)$/)
-    if (!match) {
-      errors.value.format.push(i + 1)
-      continue
-    }
-    const number = parseInt(match[1])
-    if (number > 4 || number < 0) {
-      errors.value.number.push(i + 1)
-      continue
-    }
+  lines.forEach((line, i) => {
+    const trimmed = line.trim()
+    if (!trimmed) return
 
+    const match = trimmed.match(/^(\d+)\s*([^$]+)$/)
+    if (!match) return errors.value.format.push(i + 1)
+
+    const number = parseInt(match[1])
     const name = match[2]
     const card = getCard(name)
-    if (!card) {
-      errors.value.cardName.push(name)
-      continue
-    } else {
-      if (
-        !hero.class.includes(card.class) ||
-        card.class === 'Removed' ||
-        card.set === 'token' ||
-        card.set === 'superpower'
-      ) {
-        errors.value.invalidCard.push(name)
-        continue
-      }
-      if (json[name]) {
-        errors.value.duplicate.push(name)
-        continue
-      }
-    }
 
-    json[name] = number
+    if (number < 1 || number > 4) return errors.value.number.push(i + 1)
+    if (!card) return errors.value.cardName.push(name)
+    if (
+      !hero.class.includes(card.class) ||
+      card.class === 'Removed' ||
+      ['token', 'superpower'].includes(card.set)
+    )
+      return errors.value.invalidCard.push(name)
+    if (parsed[name]) return errors.value.duplicate.push(name)
+
+    parsed[card.name] = number
+  })
+
+  json.value = parsed
+}
+
+const onChange = () => {
+  parseDeck()
+  emit('update:modelValue', json.value)
+  emit('update:isError', isError.value)
+}
+
+const formatErrorMessage = (key: keyof CardListErrors, list: (string | number)[]) => {
+  const plural = list.length > 1 ? 's' : ''
+  switch (key) {
+    case 'format':
+      return `Invalid card formatting on line${plural} ${arrayToList(list)}`
+    case 'number':
+      return `Invalid card amount${plural} on line${plural} ${arrayToList(list)}`
+    case 'cardName':
+      return `Invalid card name${plural}: ${arrayToList(list)}`
+    case 'duplicate':
+      return `Duplicate card name${plural}: ${arrayToList(list)}`
+    case 'invalidCard':
+      return `Invalid card${plural} for a ${computedHero.value.name} deck: ${arrayToList(list)}`
+    default:
+      return ''
   }
-  return json
-})
+}
 
 const arrayToList = (array: (string | number)[]) =>
   array.join(', ').replace(/, ((?:.(?!, ))+)$/, ' and $1')

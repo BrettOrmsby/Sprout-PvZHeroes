@@ -24,13 +24,12 @@
       <label for="description">Description</label>
       <Textarea id="description" :autoResize="true" v-model="newInfo.description" maxlength="150" />
 
-      <label for="deckList">Deck List (optional)</label>
+      <label for="deckList">Deck List</label>
       <CardListTextArea
         id="deckList"
         v-model:is-error="isCardListError"
         v-model="newInfo.list"
         :hero="deck.hero"
-        :key="reloadList"
       />
 
       <label for="visibility">Make Private</label>
@@ -70,8 +69,6 @@ import { useDeckStore } from '@/store/deck'
 
 const deck = useDeckStore()
 
-const reloadList = ref(0)
-
 const { supabase } = useSupabase()
 
 const newInfo = ref({
@@ -83,7 +80,6 @@ const newInfo = ref({
 
 const updateList = () => {
   newInfo.value.list = deck.list
-  reloadList.value += 1
 }
 
 const showNameError = ref(false)
