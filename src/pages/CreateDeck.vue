@@ -8,7 +8,10 @@
         type="text"
         v-model="deckInfo.name"
         :class="{ 'p-invalid': showNameError }"
+        :aria-invalid="showNameError"
+        aria-describedby="invalidName"
         maxlength="50"
+        @blur="checkNameError"
       />
       <small v-if="showNameError" id="invalidName" class="error">Must include a name.</small>
 
@@ -41,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { Button, InputText, Textarea, ToggleSwitch } from 'primevue'
 import CardListTextArea from '@/components/CardListTextArea.vue'
@@ -58,22 +61,33 @@ const { id } = useAuthUser()
 const showNameError = ref(false)
 const isCardListError = ref(false)
 const loading = ref(false)
-const deckInfo = ref({
+
+interface DeckInfo {
+  name: string
+  hero: string
+  description: string
+  list: Record<string, number>
+  isPrivate: boolean
+}
+const deckInfo = reactive<DeckInfo>({
   name: '',
   hero: 'Green Shadow',
   description: '',
-  list: {} as Record<string, number>,
+  list: {},
   isPrivate: false,
 })
 
-const createDeck = async () => {
-  if (deckInfo.value.name.trim() === '') {
+const checkNameError = () => {
+  if (deckInfo.name.trim() === '') {
     showNameError.value = true
-    return
-  } else {
-    showNameError.value = false
+    return true
   }
-  if (isCardListError.value) {
+  showNameError.value = false
+  return false
+}
+
+const createDeck = async () => {
+  if (checkNameError() || isCardListError.value) {
     return
   }
   loading.value = true
@@ -82,16 +96,13 @@ const createDeck = async () => {
     .from('decks')
     .insert({
       creator: id.value,
-      name: deckInfo.value.name,
-      hero: deckInfo.value.hero,
-      description: deckInfo.value.description,
-      is_private: deckInfo.value.isPrivate,
+      name: deckInfo.name,
+      hero: deckInfo.hero,
+      description: deckInfo.description,
+      is_private: deckInfo.isPrivate,
       is_complete:
-        Object.values(deckInfo.value.list).reduce(
-          (prev: number, curr: number) => prev + curr,
-          0,
-        ) === 40,
-      list: deckInfo.value.list,
+        Object.values(deckInfo.list).reduce((prev: number, curr: number) => prev + curr, 0) === 40,
+      list: deckInfo.list,
     })
     .select('id')
     .single()

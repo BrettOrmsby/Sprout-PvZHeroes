@@ -2,12 +2,8 @@
   <main>
     <h1>Search <span class="primary-color">Users</span></h1>
     <InputGroup>
-      <InputText
-        type="text"
-        v-model="searchTerm"
-        @keydown.enter="router.push({ name: 'SearchUsers', query: { username: searchTerm } })"
-      />
-      <Button @click="router.push({ name: 'SearchUsers', query: { username: searchTerm } })">
+      <InputText type="text" v-model="searchTerm" @keydown.enter="updateQuery" />
+      <Button @click="updateQuery">
         <template #icon="iconClass">
           <Search :class="iconClass.class" />
         </template>
@@ -41,7 +37,7 @@
             <template #content>
               <p class="joined">
                 Joined
-                {{ new Date(user.created_at).toDateString().replace(/^\S+\s|\d+\s/g, '') }}
+                {{ joined(user) }}
               </p>
             </template>
           </Card>
@@ -49,13 +45,7 @@
       </div>
       <Paginator
         :first="firstValue"
-        @page="
-          (pageState) =>
-            router.push({
-              name: 'SearchUsers',
-              query: { username: searchTerm, page: pageState.page + 1 },
-            })
-        "
+        @page="paginate"
         :rows="paginatorAmount"
         :totalRecords="totalRecords"
         template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
@@ -69,7 +59,17 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { Avatar, Button, Card, InputGroup, InputText, Message, Paginator, Skeleton } from 'primevue'
+import {
+  Avatar,
+  Button,
+  Card,
+  InputGroup,
+  InputText,
+  Message,
+  Paginator,
+  Skeleton,
+  type PageState,
+} from 'primevue'
 import { Search } from 'lucide-vue-next'
 import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
@@ -81,7 +81,12 @@ const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()
 
+const joined = (user: User) =>
+  new Date(user.created_at).toLocaleDateString('en', { month: 'long', year: 'numeric' })
+
 const searchTerm = ref((route.query.username || '').toString())
+const updateQuery = () =>
+  router.push({ name: 'SearchUsers', query: { username: searchTerm.value } })
 
 const paginatorAmount = 20
 const isSearching = ref(true)
@@ -90,6 +95,12 @@ const totalRecords = ref(0)
 const firstValue = computed(
   () => ((parseInt(route.query.page as string) || 1) - 1) * paginatorAmount,
 )
+
+const paginate = (pageState: PageState) =>
+  router.push({
+    name: 'SearchUsers',
+    query: { username: searchTerm.value, page: pageState.page + 1 },
+  })
 
 const search = async () => {
   isSearching.value = true
@@ -100,7 +111,7 @@ const search = async () => {
     .ilike('username', `%${(route.query.username || '').toString().replace(/ /g, '%')}%`)
     .order('username')
     .range(firstValue.value, firstValue.value + paginatorAmount - 1)
-    .returns<User[]>()
+    .overrideTypes<User[]>()
 
   if (error) {
     throwError(error)
@@ -153,6 +164,7 @@ a {
   width: 100%;
   height: 100%;
   border: 1px solid var(--p-content-border-color);
+  transition-duration: var(--p-transition-duration);
 }
 
 .p-card:hover {

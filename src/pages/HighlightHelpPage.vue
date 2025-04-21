@@ -2,7 +2,7 @@
   <main>
     <h1><Search />Query Help</h1>
     <p class="center">A variety of search parameters can be used to find cards.</p>
-    <div class="topic-container">
+    <nav class="topic-container">
       <RouterLink
         v-for="(icon, name) in categories"
         :key="name"
@@ -14,7 +14,7 @@
           </template>
         </Button>
       </RouterLink>
-    </div>
+    </nav>
     <Divider />
     <h2 id="name"><component :is="categories.Name" />Name</h2>
     <p>

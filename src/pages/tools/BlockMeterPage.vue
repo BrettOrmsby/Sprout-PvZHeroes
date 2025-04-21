@@ -16,7 +16,7 @@
             <template #body="slotProps">
               <div
                 :class="{
-                  'is-max': isMaxValue(slotProps.data, slotProps.data[slotProps.field]),
+                  'is-max': isMaxValue(slotProps.data, slotProps.data[slotProps.field as string]),
                   'is-blank': formatPercentage(slotProps.data[number]) === 0,
                 }"
               >
@@ -87,18 +87,8 @@ import { ShieldQuestion } from 'lucide-vue-next'
 import TheFooter from '@/components/TheFooter.vue'
 
 const isMaxValue = (rowData: (typeof table)[number], number: number) => {
-  return (
-    Math.max(
-      rowData[1],
-      rowData[2],
-      rowData[3],
-      rowData[4],
-      rowData[5],
-      rowData[6],
-      rowData[7],
-      rowData[8],
-    ) === number
-  )
+  const values = Object.values(rowData).slice(0, 8)
+  return Math.max(...values) === number
 }
 const formatPercentage = (number: number) => {
   return Number((number * 100).toFixed(2))

@@ -65,6 +65,11 @@ const deckData = ref<Deck[]>([])
 const isLoadingYourDecks = ref(true)
 const yourDeckData = ref<Deck[]>([])
 
+type HeartDeckResult = Omit<Deck, 'hearts'> & { hearts: { count: number }[] }
+
+const mapHearts = (deckRows: HeartDeckResult[]): Deck[] =>
+  deckRows.map((deckRow) => ({ ...deckRow, hearts: deckRow.hearts?.[0]?.count || 0 }))
+
 const getYourDeckData = async () => {
   if (isSignedIn.value) {
     const { data, error } = await supabase
@@ -73,16 +78,12 @@ const getYourDeckData = async () => {
       .order('created_at', { ascending: false })
       .eq('creator', id.value)
       .limit(4)
-      .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
+      .overrideTypes<HeartDeckResult[]>()
 
     if (error) {
       throwError(error)
     } else {
-      const decksWithHearts: Deck[] = data.map((deck) => ({
-        ...deck,
-        hearts: deck.hearts?.[0]?.count || 0,
-      }))
-      yourDeckData.value = decksWithHearts
+      yourDeckData.value = mapHearts(data)
       isLoadingYourDecks.value = false
     }
   }
@@ -96,19 +97,16 @@ const getPublicDeckData = async () => {
     .eq('is_complete', true)
     .eq('is_private', false)
     .limit(6)
-    .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
+    .overrideTypes<HeartDeckResult[]>()
 
   if (error) {
     throwError(error)
   } else {
-    const decksWithHearts: Deck[] = data.map((deck) => ({
-      ...deck,
-      hearts: deck.hearts?.[0]?.count || 0,
-    }))
-    deckData.value = decksWithHearts
+    deckData.value = mapHearts(data)
     isLoading.value = false
   }
 }
+
 onMounted(async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()]))
 watch(isSignedIn, (newVal) => {
   if (newVal) {

@@ -121,17 +121,21 @@ const router = createRouter({
       component: () => import('@/pages/ComparePage.vue'),
       beforeEnter: async (to) => {
         const deck = useDeckStore()
-        const isLoadDeckError = await deck.loadId(to.params.id.toString())
-        if (isLoadDeckError) {
-          return { name: '404' }
-        }
-
         const compareDeck = useCompareStore()
-        const isLoadCompareDeckError = await compareDeck.loadId(to.params.to.toString())
-        if (isLoadCompareDeckError) {
+
+        try {
+          const [deckError, compareError] = await Promise.all([
+            deck.loadId(to.params.id.toString()),
+            compareDeck.loadId(to.params.to.toString()),
+          ])
+          if (deckError || compareError) {
+            throw new Error()
+          }
+
+          document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
+        } catch {
           return { name: '404' }
         }
-        document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
       },
     },
     {

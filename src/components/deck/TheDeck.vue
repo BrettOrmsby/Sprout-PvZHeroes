@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
+import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { Message } from 'primevue'
 import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
@@ -66,12 +66,14 @@ onBeforeRouteUpdate(async (to) => {
   const deck = useDeckStore()
   const isLoadDeckError = await deck.loadId(to.params.id.toString())
   if (isLoadDeckError) {
-    return { name: '404' }
+    const router = useRouter()
+    router.replace({ name: '404' })
   }
 
   const isUserLoadError = await user.loadFromId(deck.creator)
   if (isUserLoadError) {
-    return { name: '404' }
+    const router = useRouter()
+    router.replace({ name: '404' })
   }
 
   document.title = `${deck.name} • Sprout`

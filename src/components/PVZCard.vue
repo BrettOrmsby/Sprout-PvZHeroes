@@ -40,6 +40,7 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   gap: var(--inline-space);
   padding: var(--inline-space);
   cursor: pointer;
+  background: var(--rarity-background);
 }
 
 .card-container:hover {
@@ -102,31 +103,5 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   .card-image {
     width: 100px;
   }
-}
-
-.common {
-  background: #f5f5dc;
-}
-.uncommon {
-  background: #959a9d;
-}
-.rare {
-  background: #ea9c45;
-}
-.super-rare {
-  background: #885cd5;
-}
-.legendary {
-  position: relative;
-  background: transparent;
-}
-.legendary {
-  background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
-}
-.event {
-  background: #e66d59;
-}
-.token {
-  background: var(--p-surface-800);
 }
 </style>

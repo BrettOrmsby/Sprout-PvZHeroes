@@ -49,7 +49,7 @@
           </h1>
           <p class="joined">
             Joined
-            {{ new Date(user.created_at).toDateString().replace(/^\S+\s|\d+\s/g, '') }}
+            {{ joined }}
           </p>
         </div>
       </div>
@@ -91,7 +91,7 @@
 
 <script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
+import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { CircleUser, Plus, UserPen } from 'lucide-vue-next'
 import { Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
@@ -139,6 +139,10 @@ const sortedDecks = computed(() =>
   ),
 )
 
+const joined = computed(() =>
+  new Date(user.created_at).toLocaleDateString('en', { month: 'long', year: 'numeric' }),
+)
+
 const isChangeHeroModalOpen = ref(false)
 const selectedHero = ref(user.profile_image)
 const isUpdatingProfileImage = ref(false)
@@ -184,7 +188,7 @@ const updateUsername = async () => {
   isUpdatingUsername.value = false
   if (error) {
     if (error.code === '23505') {
-      throwError({ message: 'Non-unique Username', hint: 'Username must be unique.' })
+      throwError({ message: 'Username Taken', hint: 'Username must be unique.' })
     } else {
       throwError(error)
     }
@@ -197,7 +201,8 @@ onBeforeRouteUpdate(async (to) => {
   const user = useUserStore()
   const isLoadError = await user.loadFromUsername(to.params.username.toString())
   if (isLoadError) {
-    return { name: '404' }
+    const router = useRouter()
+    router.replace({ name: '404' })
   }
   document.title = `${to.params.username} • Sprout`
   loadDecks()

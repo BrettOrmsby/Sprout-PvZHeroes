@@ -64,6 +64,7 @@ a {
   width: 100%;
   height: 100%;
   border: 1px solid var(--p-content-border-color);
+  transition-duration: var(--p-transition-duration);
 }
 
 .p-card:hover {

@@ -5,14 +5,16 @@
       Arts Inc. Sprout may use the intellectual property of Electronic Arts Inc., which is permitted
       under their IP Policy. For more information about Electronic Arts Inc. intellectual property
       policy, please visit their
-      <a href="https://help.ea.com/en/help/faq/how-to-request-permission-for-ea-games-content/"
+      <a
+        href="https://help.ea.com/en/help/faq/how-to-request-permission-for-ea-games-content/"
+        rel="noopener noreferrer"
         >website</a
       >.
     </p>
     <p>Sprout is a demo website and not intended for extreme use.</p>
     <p>
       All other content © 2024 Brett Ormsby • View source on
-      <a href="https://github.com/BrettOrmsby/Sprout-PvZHeroes"
+      <a href="https://github.com/BrettOrmsby/Sprout-PvZHeroes" rel="noopener noreferrer"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -40,7 +42,6 @@
 <style scoped>
 footer {
   padding: var(--block-space);
-  background-color: var(--p-surface-800);
   background-color: var(--p-form-field-filled-background);
   border-top: 1px solid var(--p-content-border-color);
 }

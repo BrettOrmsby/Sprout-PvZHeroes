@@ -95,10 +95,7 @@ const checkNameError = () => {
 }
 
 const updateDeck = async () => {
-  if (checkNameError()) {
-    return
-  }
-  if (isCardListError.value) {
+  if (checkNameError() || isCardListError.value) {
     return
   }
 

@@ -1,60 +1,62 @@
 <template>
-  <img
-    v-if="card.name === 'Zom-Bats'"
-    class="class"
-    src="/images/classes/brainy.png"
-    alt="Brainy"
-  />
-  <img
-    v-if="card.name === 'Impfinity Clone'"
-    class="class"
-    src="/images/classes/sneaky.png"
-    alt="Sneaky"
-  />
-  <img
-    v-if="card.name === 'Hothead'"
-    class="class"
-    src="/images/classes/kabloom.png"
-    alt="Kabloom"
-  />
-  <span v-if="card.class === 'Removed'" style="color: var(--p-primary-400)">Removed</span>
-  <img
-    v-else-if="card.class"
-    class="class"
-    :src="'/images/classes/' + card.class.toLowerCase() + '.png'"
-    :alt="card.class"
-  />
-  <template v-else>
-    <img
-      v-for="cardClass of getMainSuperClasses(card)"
-      :key="cardClass"
-      class="class"
-      :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
-      :alt="card.class"
-    />
-  </template>
-  <img
-    v-if="card.name === 'Octo-Pet'"
-    class="class"
-    src="/images/classes/sneaky.png"
-    alt="Sneaky"
-  />
+  <div class="icon-container">
+    <span v-if="card.class === 'Removed'">Removed</span>
+    <template v-else>
+      <img
+        v-for="className in classImages"
+        :key="className"
+        class="class-icon"
+        :src="`/images/classes/${className.toLowerCase()}.png`"
+        :alt="className"
+      />
+    </template>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import heros from '@/content/heros.json'
 import type { Card } from '@/lib/types'
+import { computed } from 'vue'
 
-defineProps<{ card: Card }>()
-const getMainSuperClasses = (superpower: Card) => {
-  return [...heros.plants, ...heros.zombies].find(
-    (hero) => hero.mainSuperPower === superpower.name,
-  )!.class
+const props = defineProps<{ card: Card }>()
+
+const startOverrides = {
+  'Zom-Bats': 'brainy',
+  'Impfinity Clone': 'sneaky',
+  Hothead: 'kabloom',
 }
+
+const endOverrides = { 'Octo-Pet': 'sneaky' }
+
+const classImages = computed(() => {
+  if (props.card.class === 'Removed') {
+    return []
+  }
+  if (props.card.class) {
+    const images = [props.card.class]
+    if (props.card.name in startOverrides) {
+      images.unshift(startOverrides[props.card.name as keyof typeof startOverrides])
+    }
+    if (props.card.name in endOverrides) {
+      images.push(endOverrides[props.card.name as keyof typeof endOverrides])
+    }
+    return images
+  }
+  return getMainSuperClasses(props.card)
+})
+
+const getMainSuperClasses = (superpower: Card) =>
+  [...heros.plants, ...heros.zombies].find((hero) => hero.mainSuperPower === superpower.name)!.class
 </script>
 
 <style scoped>
-.class {
+.icon-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inline-space);
+}
+.class-icon {
   width: 1em;
 }
 </style>

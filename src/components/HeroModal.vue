@@ -9,14 +9,11 @@
       <div class="header-container p-dialog-title">
         {{ hero.name }}
         <img
+          v-for="className in hero.class"
+          :key="className"
           class="class"
-          :src="'/images/classes/' + hero.class[0].toLowerCase() + '.png'"
-          :alt="hero.class[0]"
-        />
-        <img
-          class="class"
-          :src="'/images/classes/' + hero.class[1].toLowerCase() + '.png'"
-          :alt="hero.class[1]"
+          :src="`/images/classes/${className.toLowerCase()}.png`"
+          :alt="className"
         />
       </div>
     </template>
@@ -31,7 +28,7 @@
         :key="name"
         :alt="name"
         :src="getCard(name).image"
-        @click="openCardModual(name)"
+        @click="openCardModal(name)"
         class="super-power"
       />
     </div>
@@ -53,7 +50,7 @@ const hero = computed<Hero>(
 
 const superPowers = computed(() => [hero.value.mainSuperPower, ...hero.value.altSuperPowers])
 
-const openCardModual = (card: string) => {
+const openCardModal = (card: string) => {
   states.cardModal.card = card
   states.cardModal.show = true
 }
@@ -82,6 +79,12 @@ const openCardModual = (card: string) => {
 .super-power {
   width: 20%;
   min-width: 75px;
+  cursor: pointer;
+  transition: transform var(--p-transition-duration) ease;
+}
+.super-power:hover,
+.super-power:focus {
+  transform: scale(1.05);
 }
 .flavour {
   color: var(--p-text-muted-color);

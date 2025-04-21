@@ -28,7 +28,7 @@
           <Toolbar>
             <template #start>
               <Button
-                @click="() => (isHighlighterVisible = !isHighlighterVisible)"
+                @click="toggleHighlighter"
                 severity="secondary"
                 badgeSeverity="contrast"
                 label="Highlighter"
@@ -51,7 +51,7 @@
                   <img
                     class="class"
                     :class="iconClass.class"
-                    :src="'/images/classes/' + cardClass.toLowerCase() + '.png'"
+                    :src="`/images/classes/${cardClass.toLowerCase()}.png`"
                     :alt="cardClass"
                   />
                 </template>
@@ -60,20 +60,11 @@
           </Toolbar>
           <template v-for="(value, key) in cardByClass" :key="key">
             <h2 :id="`title-${key}`">
-              <img
-                class="class"
-                :src="'/images/classes/' + key.toLowerCase() + '.png'"
-                :alt="key"
-              />
+              <img class="class" :src="`/images/classes/${key.toLowerCase()}.png`" :alt="key" />
               <span>{{ key }}</span>
             </h2>
             <div class="card-group">
-              <div
-                v-for="card in value.sort(
-                  (a, b) => a.cost - b.cost || a.name.localeCompare(b.name),
-                )"
-                :key="card.name"
-              >
+              <div v-for="card in value" :key="card.name">
                 <PVZCard
                   :is-valid="true"
                   :card="card"
@@ -98,7 +89,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { Avatar, Button, Dialog, ScrollTop, Toolbar } from 'primevue'
 import { Highlighter } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
@@ -113,28 +104,35 @@ import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'
 
-const isHighlighterVisible = ref(false)
-
-const cards = computed(
-  () =>
-    [...plants, ...zombies].filter(
-      (e) => e.class !== 'Removed' && e.set !== 'token' && e.set !== 'superpower',
-    ) as Card[],
+const cards: Card[] = [...plants, ...zombies].filter(
+  (e) => e.class !== 'Removed' && e.set !== 'token' && e.set !== 'superpower',
 )
-const cardByClass = computed(() => {
+const createCardsByClasses = () => {
   const cardClassObj: Record<string, Card[]> = {}
-  for (const card of cards.value) {
+  for (const card of cards) {
     if (!cardClassObj[card.class]) {
       cardClassObj[card.class] = [card]
     } else {
       cardClassObj[card.class].push(card)
     }
   }
+  // Now sort the cards by cost then name
+  for (const key in cardClassObj) {
+    cardClassObj[key] = cardClassObj[key].sort(
+      (a, b) => a.cost - b.cost || a.name.localeCompare(b.name),
+    )
+  }
   return cardClassObj
-})
+}
+const cardByClass = createCardsByClasses()
 
 const scrollTo = (cardClass: string) => {
   document.getElementById(`title-${cardClass}`)?.scrollIntoView({ behavior: 'smooth' })
+}
+
+const isHighlighterVisible = ref(false)
+const toggleHighlighter = () => {
+  isHighlighterVisible.value = !isHighlighterVisible.value
 }
 
 const showCard = (card: string) => {

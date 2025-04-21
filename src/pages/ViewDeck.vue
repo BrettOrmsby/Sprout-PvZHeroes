@@ -38,6 +38,8 @@ import { useDeckStore } from '@/store/deck'
 
 const deck = useDeckStore()
 
+const isComplete = (list: Record<string, number>) =>
+  Object.values(list).reduce((prev, curr) => prev + curr, 0) === 40
 useHoverShortcut({
   Digit1: {
     selector: '[data-card-name][data-can-add=true]',
@@ -47,7 +49,7 @@ useHoverShortcut({
       const newList = { ...deck.list, [cardName]: newAmount }
       deck.update({
         list: newList,
-        is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+        is_complete: isComplete(newList),
       })
     },
   },
@@ -63,7 +65,7 @@ useHoverShortcut({
       }
       deck.update({
         list: newList,
-        is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
+        is_complete: isComplete(newList),
       })
     },
   },

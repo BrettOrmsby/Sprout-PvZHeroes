@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { InputText, Message, ScrollTop, Tag, Toolbar } from 'primevue'
 import SideBar from '@/components/SideBar.vue'
@@ -59,27 +59,22 @@ import type { Card } from '@/lib/types'
 const route = useRoute()
 const router = useRouter()
 
+const query = ref(route.query.query?.toString() || '')
+
 const allCards: Card[] = [
   ...plants,
   ...zombies,
-  ...superpowers.reduce((prev, curr) => {
+  ...superpowers.flatMap((superPower) => {
     const hero = [...heroData.plants, ...heroData.zombies].find(
-      (hero) => hero.mainSuperPower === curr.name,
+      (hero) => hero.mainSuperPower === superPower.name,
     )!
-    prev.push({ ...curr, class: hero.class[0] })
-    prev.push({ ...curr, class: hero.class[1] })
-    return prev
-  }, [] as Card[]),
+    return [
+      { ...superPower, class: hero.class[0] },
+      { ...superPower, class: hero.class[1] },
+    ]
+  }),
 ]
 
-const query = computed({
-  get() {
-    return route.query.query?.toString() || ''
-  },
-  set(value) {
-    router.push({ name: 'SearchCards', query: { query: value } })
-  },
-})
 const parsedQuery = computed(() => generateQuery(query.value))
 const matchingCards = computed(() => {
   // Manage duplicate cards with two classes
@@ -116,6 +111,7 @@ watch(matchingCards, (newVal) => {
 })
 watch(query, (newVal) => {
   document.title = (newVal || 'Search Cards') + ' • Sprout'
+  router.push({ name: 'SearchCards', query: { query: newVal } })
 })
 onMounted(() => {
   if (matchingCards.value.length > 0) {

@@ -21,6 +21,7 @@
 </template>
 
 <script lang="ts" setup>
+// Note: this does not re-update if the modelValue changes from the parent
 import { computed, ref } from 'vue'
 import { Textarea } from 'primevue'
 import getCard from '@/lib/getCard'

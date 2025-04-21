@@ -1,19 +1,7 @@
 <template>
   <main>
     <h1>Search <span class="primary-color">Decks</span></h1>
-    <form
-      :key="reloadForm"
-      @submit.prevent="
-        router.push({
-          name: 'SearchDecks',
-          query: {
-            ...form,
-            showIncomplete: form.showIncomplete.toString(),
-            cards: form.cards.map((e) => e.name),
-          },
-        })
-      "
-    >
+    <form @submit.prevent="submit">
       <label for="deckName">Deck Name</label>
       <InputText id="deckName" type="text" placeholder="Heal Midrose" v-model="form.name" />
       <span id="heroLabel">Hero</span>
@@ -45,9 +33,7 @@
             :label="slotProps.value.name"
             :image="slotProps.value.image"
             removable
-            @remove="
-              () => (form.cards = form.cards.filter((card) => card.name !== slotProps.value.name))
-            "
+            @remove="removeCard(slotProps.value.name)"
           />
         </template>
       </AutoComplete>
@@ -72,21 +58,7 @@
           <Search :class="iconClass.class" />
         </template>
       </Button>
-      <Button
-        label="Clear"
-        severity="secondary"
-        @click.prevent="
-          () =>
-            Object.assign(form, {
-              name: '',
-              hero: null,
-              showIncomplete: false,
-              cards: [],
-              sort: 'Name',
-              order: 'Ascending',
-            }) && reloadForm++
-        "
-      >
+      <Button label="Clear" severity="secondary" @click.prevent="clear">
         <template #icon="iconClass">
           <X :class="iconClass.class" />
         </template>
@@ -103,18 +75,7 @@
       </div>
       <Paginator
         :first="firstValue"
-        @page="
-          (pageState) =>
-            router.push({
-              name: 'SearchDecks',
-              query: {
-                ...form,
-                showIncomplete: form.showIncomplete.toString(),
-                cards: form.cards.map((e) => e.name),
-                page: pageState.page + 1,
-              },
-            })
-        "
+        @page="paginate"
         :rows="paginatorAmount"
         :totalRecords="totalRecords"
         template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
@@ -135,6 +96,7 @@ import {
   Chip,
   InputText,
   Message,
+  type PageState,
   Paginator,
   Select,
   SelectButton,
@@ -160,7 +122,6 @@ const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()
 const { id, isSignedIn } = useAuthUser()
-const reloadForm = ref(0)
 
 const form = reactive({
   name: route.query.name?.toString() || '',
@@ -175,6 +136,31 @@ const form = reactive({
   order: route.query.order?.toString() || 'Ascending',
   search: route.query.search?.toString() || 'All',
 })
+
+const submit = () =>
+  router.push({
+    name: 'SearchDecks',
+    query: {
+      ...form,
+      showIncomplete: form.showIncomplete.toString(),
+      cards: form.cards.map((e) => e.name),
+    },
+  })
+const clear = () => {
+  Object.assign(form, {
+    name: '',
+    hero: null,
+    showIncomplete: false,
+    cards: [],
+    sort: 'Name',
+    order: 'Ascending',
+    search: 'All',
+  })
+}
+const removeCard = (cardName: string) => {
+  form.cards = form.cards.filter((card) => card.name !== cardName)
+}
+
 const cardSuggestions = ref<Card[]>([])
 const cards = [
   ...plants.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name)),
@@ -204,6 +190,17 @@ const totalRecords = ref(0)
 const firstValue = computed(
   () => ((parseInt(route.query.page as string) || 1) - 1) * paginatorAmount,
 )
+
+const paginate = (pageState: PageState) =>
+  router.push({
+    name: 'SearchDecks',
+    query: {
+      ...form,
+      showIncomplete: form.showIncomplete.toString(),
+      cards: form.cards.map((e) => e.name),
+      page: pageState.page + 1,
+    },
+  })
 
 const search = async () => {
   isSearching.value = true

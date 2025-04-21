@@ -15,7 +15,7 @@
                 getDeck(key as string).name
               }}</RouterLink></span
             >
-            ({{ Object.values(value).reduce((prev, curr) => prev + curr, 0) }})
+            ({{ getListCount(value) }})
           </h2>
           <Message v-if="Object.values(value).length === 0" :severity="'warn'" :closable="false"
             >No Unique Cards</Message
@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { onBeforeRouteUpdate } from 'vue-router'
+import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { Message } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
 import SideBar from '@/components/SideBar.vue'
@@ -56,7 +56,8 @@ const deck = useDeckStore()
 const compareDeck = useCompareStore()
 
 const getDeck = (id: string) => (deck.id === id ? deck : compareDeck)
-
+const getListCount = (list: Record<string, number>) =>
+  Object.values(list).reduce((a, b) => a + b, 0)
 const sortList = (list: Record<string, number>) =>
   Object.keys(list)
     .map((e) => getCard(e))
@@ -65,7 +66,7 @@ const sortList = (list: Record<string, number>) =>
 const comparison = computed(() => {
   const comparison = {
     [deck.id]: {} as Record<string, number>,
-    [compareDeck.id]: {},
+    [compareDeck.id]: {} as Record<string, number>,
     both: {} as Record<string, number>,
   }
 
@@ -104,18 +105,22 @@ const showCard = (card: string) => {
 const toInput = ref('https://sprout-deckbuider.vercel.app/deck/' + compareDeck.id)
 
 onBeforeRouteUpdate(async (to) => {
+  const router = useRouter()
   const deck = useDeckStore()
-  const isLoadDeckError = await deck.loadId(to.params.id.toString())
-  if (isLoadDeckError) {
-    return { name: '404' }
-  }
-
   const compareDeck = useCompareStore()
-  const isLoadCompareDeckError = await compareDeck.loadId(to.params.to.toString())
-  if (isLoadCompareDeckError) {
-    return { name: '404' }
+
+  try {
+    const [deckError, compareError] = await Promise.all([
+      deck.loadId(to.params.id.toString()),
+      compareDeck.loadId(to.params.to.toString()),
+    ])
+    if (deckError || compareError) {
+      throw new Error()
+    }
+    document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
+  } catch {
+    router.replace({ name: '404' })
   }
-  document.title = `Compare ${deck.name} to ${compareDeck.name} • Sprout`
 })
 </script>
 
