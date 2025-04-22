@@ -18,11 +18,6 @@ supabase.auth.onAuthStateChange((event, session) => {
   user.value = session?.user ?? null
 })
 
-const {
-  data: { session },
-} = await supabase.auth.getSession()
-user.value = session?.user ?? null
-
 export default function useAuthUser() {
   const signIn = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
@@ -39,6 +34,14 @@ export default function useAuthUser() {
     if (error) throw error
   }
 
+  async function forceLoadUser() {
+    const { user } = useAuthUser()
+    if (!user.value) {
+      const { data } = await supabase.auth.getSession()
+      user.value = data.session?.user ?? null
+    }
+  }
+
   const isSignedIn = computed(() => !!user.value)
   const id = computed(() => user.value?.id)
 
@@ -46,6 +49,7 @@ export default function useAuthUser() {
     user,
     id,
     signIn,
+    forceLoadUser,
     isSignedIn,
     signOut,
   }

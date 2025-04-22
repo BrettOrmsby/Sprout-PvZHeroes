@@ -215,7 +215,8 @@ router.beforeEach(async (to) => {
   states.loadingRoute = true
 
   if (to.meta.requiresAuth) {
-    const { isSignedIn } = useAuthUser()
+    const { isSignedIn, forceLoadUser } = useAuthUser()
+    await forceLoadUser()
     if (!isSignedIn.value) {
       return { name: 'Home' }
     }
