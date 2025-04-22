@@ -141,8 +141,8 @@ const showCard = (card: string) => {
 }
 
 const showHero = (hero: string) => {
-  states.heroModel.hero = hero
-  states.heroModel.show = true
+  states.heroModal.hero = hero
+  states.heroModal.show = true
 }
 </script>
 

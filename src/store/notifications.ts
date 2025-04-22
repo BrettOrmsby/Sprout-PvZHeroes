@@ -42,7 +42,7 @@ export const useNotificationsStore = defineStore('notifications', () => {
 
   async function markRead(identity: string) {
     const notification = notifications.value.find((element) => element.id === identity)
-    if (notification) {
+    if (notification && !notification.is_read) {
       notification.is_read = true
       unreadNotificationsCount.value -= 1
       const { error } = await supabase

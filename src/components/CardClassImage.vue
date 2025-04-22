@@ -21,12 +21,10 @@ import { computed } from 'vue'
 const props = defineProps<{ card: Card }>()
 
 const startOverrides = {
-  'Zom-Bats': 'brainy',
-  'Impfinity Clone': 'sneaky',
-  Hothead: 'kabloom',
+  'Octo-Pet': 'Hearty',
 }
 
-const endOverrides = { 'Octo-Pet': 'sneaky' }
+const endOverrides = { 'Impfinity Clone': 'Crazy', Hothead: 'Guardian', 'Zom-Bats': 'Beastly' }
 
 const classImages = computed(() => {
   if (props.card.class === 'Removed') {

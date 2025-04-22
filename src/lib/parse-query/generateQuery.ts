@@ -7,13 +7,13 @@ export default function generateQuery(input: string): {
   query: Query
 } {
   const scanner = new Scanner(input)
-  let errors = scanner.scan()
+  const scannerErrors = scanner.scan()
   const tokens = scanner.tokens
   const parser = new Parser(tokens)
-  errors = [...errors, ...parser.parse()]
+  const parserErrors = parser.parse()
 
   return {
-    errors,
+    errors: [...scannerErrors, ...parserErrors],
     query: parser.query,
   }
 }

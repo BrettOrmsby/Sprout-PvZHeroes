@@ -9,7 +9,7 @@ export default reactive({
     card: 'Peashooter',
     show: false,
   },
-  heroModel: {
+  heroModal: {
     hero: 'Green Shadow',
     show: false,
   },

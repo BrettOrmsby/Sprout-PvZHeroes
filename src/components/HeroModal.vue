@@ -2,7 +2,7 @@
   <Dialog
     :draggable="false"
     :modal="true"
-    v-model:visible="states.heroModel.show"
+    v-model:visible="states.heroModal.show"
     style="max-width: 500px; width: 100%; margin: var(--block-space)"
   >
     <template #header>
@@ -45,7 +45,7 @@ import type { Hero } from '@/lib/types'
 
 const hero = computed<Hero>(
   () =>
-    [...heroData.plants, ...heroData.zombies].find((e) => e.name === states.heroModel.hero) as Hero,
+    [...heroData.plants, ...heroData.zombies].find((e) => e.name === states.heroModal.hero) as Hero,
 )
 
 const superPowers = computed(() => [hero.value.mainSuperPower, ...hero.value.altSuperPowers])

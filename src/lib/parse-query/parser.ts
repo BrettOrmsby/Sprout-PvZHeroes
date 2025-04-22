@@ -28,14 +28,15 @@ export type Property = (typeof properties)[number]
 
 const numberProperties = ['strength', 's', 'health', 'h', 'cost', 'c'] as const
 export type NumberProperty = (typeof numberProperties)[number]
+export type NumberPropertyNormalized = Exclude<NumberProperty, 's' | 'h' | 'c'>
 
 export class Parser {
-  tokens: Token<TokenType>[]
+  tokens: Token[]
   pointer: number
   query: Query
   errors: QueryError[]
 
-  constructor(tokens: Token<TokenType>[]) {
+  constructor(tokens: Token[]) {
     this.tokens = tokens
     this.pointer = 0
     this.query = {
@@ -92,31 +93,32 @@ export class Parser {
         continue
       }
 
+      const propertyName = this.#normalizeProperty(
+        current.value.toString().toLowerCase() as Property,
+      )
       if (
         current.type === 'identifier' &&
-        properties.includes(
-          current.value.toString().toLowerCase() as (typeof properties)[number],
-        ) &&
+        properties.includes(propertyName) &&
         this.#expect('compareOperator')
       ) {
-        const propertyName = current.value.toString().toLowerCase() as Property
         this.#increment()
         const operator = this.#peek()
         this.#increment()
 
-        if (numberProperties.includes(propertyName as (typeof numberProperties)[number])) {
-          if (this.#peek().type === 'int') {
+        if (numberProperties.includes(propertyName as NumberProperty)) {
+          const next = this.#peek()
+          if (next.type === 'int') {
             target.push({
-              property: propertyName as NumberProperty,
+              property: propertyName as NumberPropertyNormalized,
               compare: operator.value as CompareOperator,
-              value: this.#peek().value as number,
+              value: next.value,
               isNegated,
             })
             isNegated = false
           } else {
             this.errors.push({
-              startPos: this.#peek().startPos,
-              endPos: this.#peek().endPos,
+              startPos: next.startPos,
+              endPos: next.endPos,
               message: `Expected a number value for property "${propertyName}".`,
             })
           }
@@ -144,165 +146,62 @@ export class Parser {
           }
 
           const valueToken = this.#peek()
+          const value = this.#normalizeValue(propertyName, valueToken.value.toString())
 
-          if (propertyName === 'set') {
-            if (
-              ![
-                'basic',
-                'b',
-                'premium',
-                'p',
-                'galactic',
-                'g',
-                'colossal',
-                'c',
-                'triassic',
-                't',
-                'event',
-                'e',
-                'token',
-                'superpower',
-                's',
-              ].includes((valueToken.value as string).toLowerCase())
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid set name or set short form.`,
-              })
-              this.#increment()
-              continue
-            }
-            valueToken.value = valueToken.value.toString().toLowerCase()
+          const validValues: Record<string, string[]> = {
+            set: [
+              'basic',
+              'premium',
+              'galactic',
+              'colossal',
+              'triassic',
+              'event',
+              'token',
+              'superpower',
+            ],
+            rarity: ['common', 'uncommon', 'rare', 'superrare', 'legendary', 'event', 'token'],
+            class: [
+              'guardian',
+              'kabloom',
+              'megagrow',
+              'smarty',
+              'solar',
+              'beastly',
+              'brainy',
+              'crazy',
+              'hearty',
+              'sneaky',
+            ],
+            type: ['plant', 'trick', 'environment', 'zombie', 'fighter'],
+            is: ['plant', 'zombie'],
+            include: ['token', 'removed', 'all', 'superpower'],
           }
 
-          if (propertyName === 'rarity' || propertyName === 'r') {
-            const normalizedRarity = valueToken.value.toString().toLowerCase().replace(/[ -]/g, '')
-            if (
-              ![
-                'common',
-                'c',
-                'uncommon',
-                'u',
-                'rare',
-                'r',
-                'superrare',
-                's',
-                'legendary',
-                'l',
-                'event',
-                'e',
-                'token',
-                't',
-              ].includes(normalizedRarity)
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid rarity or rarity short form.`,
-              })
-              this.#increment()
-              continue
-            }
-            valueToken.value = normalizedRarity
+          if (validValues[propertyName] && !validValues[propertyName].includes(value)) {
+            console.log(value)
+            this.errors.push({
+              startPos: valueToken.startPos,
+              endPos: valueToken.endPos,
+              message: `Expected a valid ${propertyName} value.`,
+            })
+            this.#increment()
+            continue
           }
 
-          if (propertyName === 'class') {
-            const normalizedClass = valueToken.value.toString().toLowerCase().replace(/[ -]/g, '')
-            if (
-              ![
-                'guardian',
-                'kabloom',
-                'megagrow',
-                'smarty',
-                'solar',
-                'beastly',
-                'brainy',
-                'crazy',
-                'hearty',
-                'sneaky',
-              ].includes(normalizedClass)
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid class name.`,
-              })
-              this.#increment()
-              continue
-            }
-            valueToken.value = normalizedClass
-          }
-
-          if (propertyName === 'type') {
-            if (
-              ![
-                'plant',
-                'trick',
-                'environment',
-                'zombie',
-                'p',
-                'z',
-                't',
-                'e',
-                'fighter',
-                'f',
-              ].includes((valueToken.value as string).toLowerCase())
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid type name or type short form.`,
-              })
-              this.#increment()
-              continue
-            }
-            valueToken.value = valueToken.value.toString().toLowerCase()
-          }
-
-          if (propertyName === 'is') {
-            if (
-              !['plant', 'zombie', 'p', 'z'].includes((valueToken.value as string).toLowerCase())
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid is value.`,
-              })
-              this.#increment()
-              continue
-            }
-            valueToken.value = valueToken.value.toString().toLowerCase()
-          }
-
-          if (propertyName === 'include' || propertyName === 'i') {
-            if (
-              !['token', 't', 'removed', 'r', 'all', 'superpower', 's', 'a'].includes(
-                (valueToken.value as string).toLowerCase(),
-              )
-            ) {
-              this.errors.push({
-                startPos: valueToken.startPos,
-                endPos: valueToken.endPos,
-                message: `Expected a valid include value.`,
-              })
-              this.#increment()
-              continue
-            }
-            const value = valueToken.value.toString().toLowerCase()
-            if (['a', 'all', 'token', 't'].includes(value)) {
+          if (propertyName === 'include') {
+            if (['all', 'token'].includes(value)) {
               this.query.includeTokens = true
             }
-            if (['a', 'all', 'removed', 'r'].includes(value)) {
+            if (['all', 'removed'].includes(value)) {
               this.query.includeRemoved = true
             }
-            if (['a', 'all', 'superpower', 's'].includes(value)) {
+            if (['all', 'superpower'].includes(value)) {
               this.query.includeSuperpowers = true
             }
           } else {
             target.push({
               property: propertyName,
-              value: valueToken.value,
+              value: value,
               isNegated,
             } as SubQuery[number])
           }
@@ -350,7 +249,7 @@ export class Parser {
         continue
       }
 
-      target.push({ property: 'name', value: current.value, isNegated })
+      target.push({ property: 'name', value: current.value as string, isNegated })
       isNegated = false
       this.#increment()
       continue
@@ -371,7 +270,7 @@ export class Parser {
   #isAtEnd(): boolean {
     return this.pointer >= this.tokens.length || this.tokens[this.pointer].type === 'EOF'
   }
-  #peek(): Token<TokenType> {
+  #peek(): Token {
     if (this.#isAtEnd()) {
       return this.tokens[this.tokens.length - 1]
     }
@@ -393,5 +292,88 @@ export class Parser {
       this.#peek().type === type && (!value || (value && value === this.#peek().value))
     this.#decrement()
     return isExpected as boolean
+  }
+  #normalizeProperty(property: Property): Property {
+    // Note: t is not really a short form, it is queried differently
+    const shortForms: Record<string, Property> = {
+      s: 'strength',
+      h: 'health',
+      c: 'cost',
+      a: 'abilities',
+      i: 'include',
+      f: 'flavour',
+      r: 'rarity',
+    }
+    return shortForms[property] || property
+  }
+  #normalizeValue(property: Property, value: string): string {
+    const v = value.toLowerCase()
+
+    switch (property) {
+      case 'set':
+        return (
+          {
+            b: 'basic',
+            p: 'premium',
+            g: 'galactic',
+            c: 'colossal',
+            t: 'triassic',
+            e: 'event',
+            s: 'superpower',
+          }[v] || v
+        )
+
+      case 'rarity':
+      case 'r':
+        const deHyphen = v.replace(/[ -]/g, '')
+        return (
+          {
+            c: 'common',
+            u: 'uncommon',
+            r: 'rare',
+            s: 'superrare',
+            l: 'legendary',
+            e: 'event',
+            t: 'token',
+          }[deHyphen] || deHyphen
+        )
+
+      case 'type':
+      case 't':
+        return (
+          {
+            p: 'plant',
+            z: 'zombie',
+            t: 'trick',
+            e: 'environment',
+            f: 'fighter',
+          }[v] || v
+        )
+
+      case 'is':
+        return (
+          {
+            p: 'plant',
+            z: 'zombie',
+          }[v] || v
+        )
+
+      case 'include':
+      case 'i':
+        return (
+          {
+            t: 'token',
+            r: 'removed',
+            s: 'superpower',
+            a: 'all',
+          }[v] || v
+        )
+
+      case 'class':
+        return v.replace(/[ -]/g, '')
+
+      default:
+        return v
+    }
   }
 }

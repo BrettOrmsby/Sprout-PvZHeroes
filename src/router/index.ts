@@ -216,8 +216,6 @@ router.beforeEach(async (to) => {
 
   if (to.meta.requiresAuth) {
     const { isSignedIn } = useAuthUser()
-    const { forceLoadSession } = useSupabase()
-    await forceLoadSession()
     if (!isSignedIn.value) {
       return { name: 'Home' }
     }

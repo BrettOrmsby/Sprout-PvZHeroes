@@ -15,16 +15,29 @@ const compareOperator = ['=', ':', '<', '>', '<=', '>='] as const
 
 export type CompareOperator = (typeof compareOperator)[number]
 
-export type Token<T extends TokenType> = {
-  type: TokenType
-  startPos: number
-  endPos: number
-  value: T extends 'int' ? number : T extends 'compareOperator' ? CompareOperator : string
-}
+export type Token =
+  | {
+      type: 'int'
+      startPos: number
+      endPos: number
+      value: number
+    }
+  | {
+      type: 'compareOperator'
+      startPos: number
+      endPos: number
+      value: CompareOperator
+    }
+  | {
+      type: Exclude<TokenType, 'int' | 'compareOperator'>
+      startPos: number
+      endPos: number
+      value: string
+    }
 
 export class Scanner {
   input: string
-  tokens: Token<TokenType>[]
+  tokens: Token[]
   pointer: number
   char: number
   errors: QueryError[]
@@ -49,7 +62,7 @@ export class Scanner {
         continue
       }
       if (current === ')') {
-        this.#addToken('closeParen', '(')
+        this.#addToken('closeParen', ')')
         this.#increment()
         continue
       }
@@ -59,7 +72,7 @@ export class Scanner {
         continue
       }
 
-      if ([' ', '\t', '\r', '\n'].includes(current)) {
+      if (/\s/.test(current)) {
         this.#increment()
         continue
       }
@@ -118,7 +131,7 @@ export class Scanner {
 
   #addToken<T extends TokenType>(
     type: T,
-    value: Token<T>['value'],
+    value: T extends 'int' ? number : T extends 'compareOperator' ? CompareOperator : string,
     startPos = this.char,
     endPos: number = this.char,
   ) {
@@ -127,7 +140,7 @@ export class Scanner {
       value,
       startPos,
       endPos,
-    })
+    } as Token)
   }
 
   #isAtEnd(): boolean {
@@ -175,8 +188,8 @@ export class Scanner {
     } else {
       if (str.toLowerCase() === 'or') {
         this.#addToken('or', str, startPos)
-      } else if (compareOperator.includes(str as (typeof compareOperator)[number])) {
-        this.#addToken('compareOperator', str as (typeof compareOperator)[number], startPos)
+      } else if (compareOperator.includes(str as CompareOperator)) {
+        this.#addToken('compareOperator', str as CompareOperator, startPos)
       } else {
         this.#addToken('identifier', str, startPos)
       }

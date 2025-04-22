@@ -8,7 +8,7 @@ export default function useHoverShortcut(
   shortcuts = { ...shortcuts, ...commands }
   onMounted(() => window.addEventListener('keydown', keydownListener))
   onUnmounted(() => {
-    window.addEventListener('keydown', keydownListener)
+    window.removeEventListener('keydown', keydownListener)
     shortcuts = {}
   })
 }

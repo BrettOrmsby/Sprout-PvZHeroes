@@ -46,7 +46,7 @@ function generateDeckStore(identifier: string) {
         .single<Deck & { hearts: { count: number }[] }>()
 
       if (!error && data) {
-        const hearts = data.hearts?.[0]?.count || 0
+        const hearts = data.hearts?.[0]?.count ?? 0
         set({ ...data, hearts })
       } else {
         hearts.value = 0

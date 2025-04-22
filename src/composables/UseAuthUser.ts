@@ -2,10 +2,26 @@ import useSupabase from '@/composables/UseSupabase'
 import type { User } from '@supabase/supabase-js'
 import { computed, ref } from 'vue'
 
-// user is set outside of the useAuthUser function
-// so that it will act as global state and always refer to a single user
 const user = ref<null | User>(null)
 const { supabase } = useSupabase()
+
+supabase.auth.onAuthStateChange((event, session) => {
+  const { provider_token, provider_refresh_token } = session ?? {}
+  if (provider_token) window.localStorage.setItem('oauth_provider_token', provider_token)
+  if (provider_refresh_token)
+    window.localStorage.setItem('oauth_provider_refresh_token', provider_refresh_token)
+  if (event === 'SIGNED_OUT') {
+    window.localStorage.removeItem('oauth_provider_token')
+    window.localStorage.removeItem('oauth_provider_refresh_token')
+  }
+
+  user.value = session?.user ?? null
+})
+
+const {
+  data: { session },
+} = await supabase.auth.getSession()
+user.value = session?.user ?? null
 
 export default function useAuthUser() {
   const signIn = async () => {

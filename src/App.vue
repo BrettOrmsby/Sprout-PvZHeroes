@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { onMounted, watch } from 'vue'
 import { RouterView } from 'vue-router'
 import { ConfirmDialog, ProgressBar, Toast } from 'primevue'
 import TheHeader from '@/components/TheHeader.vue'
@@ -11,15 +11,18 @@ import states from '@/store/states'
 const { isSignedIn } = useAuthUser()
 const hearts = useHeartStore()
 const notifications = useNotificationsStore()
-watch(isSignedIn, (newVal) => {
-  if (newVal) {
+
+const loadUserData = (isSignedIn: boolean) => {
+  if (isSignedIn) {
     hearts.load()
     notifications.loadUnreadCount()
   } else {
     hearts.hearts = []
     notifications.unreadNotificationsCount = 0
   }
-})
+}
+watch(isSignedIn, (newVal) => loadUserData(newVal))
+onMounted(() => loadUserData(isSignedIn.value))
 </script>
 
 <template>

@@ -15,7 +15,7 @@ export const useHeartStore = defineStore('hearts', () => {
   const hearts = ref<string[]>([])
 
   async function load() {
-    const { data, error } = await supabase.from('hearts').select('*').eq('user_id', id.value)
+    const { data, error } = await supabase.from('hearts').select('deck_id').eq('user_id', id.value)
 
     if (error) {
       throwError(error)

@@ -65,48 +65,26 @@ export type Query = {
 
 export type SubQuery = (
   | {
-      property: 'strength' | 's' | 'health' | 'h' | 'cost' | 'c'
+      property: 'strength' | 'health' | 'cost'
       compare: '=' | ':' | '<' | '>' | '<=' | '>='
       value: number
       isNegated: boolean
     }
   | {
-      property: 'tribe' | 't' | 'abilities' | 'a' | 'flavour' | 'f' | 'name'
-      value: string | number
+      property: 'tribe' | 't' | 'abilities' | 'flavour' | 'name'
+      value: string
       isNegated: boolean
     }
   | {
       property: 'set'
-      value:
-        | 'basic'
-        | 'b'
-        | 'premium'
-        | 'p'
-        | 'galactic'
-        | 'g'
-        | 'colossal'
-        | 'c'
-        | 'triassic'
-        | 't'
+      value: 'basic' | 'premium' | 'galactic' | 'colossal' | 'triassic'
+
       isNegated: boolean
     }
   | {
-      property: 'rarity' | 'r'
-      value:
-        | 'common'
-        | 'c'
-        | 'uncommon'
-        | 'u'
-        | 'rare'
-        | 'r'
-        | 'superrare'
-        | 's'
-        | 'legendary'
-        | 'l'
-        | 'event'
-        | 'e'
-        | 'token'
-        | 't'
+      property: 'rarity'
+      value: 'common' | 'uncommon' | 'rare' | 'superrare' | 'legendary' | 'event' | 'token'
+
       isNegated: boolean
     }
   | {
@@ -126,12 +104,12 @@ export type SubQuery = (
     }
   | {
       property: 'type'
-      value: 'plant' | 'trick' | 'environment' | 'zombie' | 'p' | 't' | 'e' | 'fighter' | 'f'
+      value: 'plant' | 'trick' | 'environment' | 'zombie' | 'fighter'
       isNegated: boolean
     }
   | {
       property: 'is'
-      value: 'plant' | 'p' | 'zombie' | 'z'
+      value: 'plant' | 'zombie'
       isNegated: boolean
     }
   | {

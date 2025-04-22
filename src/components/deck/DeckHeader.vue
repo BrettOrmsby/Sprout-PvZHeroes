@@ -124,8 +124,8 @@ const colours: Record<string, string> = {
 }
 
 const openModal = () => {
-  states.heroModel.hero = deck.hero
-  states.heroModel.show = true
+  states.heroModal.hero = deck.hero
+  states.heroModal.show = true
 }
 
 const openSettings = () => {

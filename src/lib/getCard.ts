@@ -3,8 +3,12 @@ import zombies from '@/content/zombies.json'
 import superPowers from '@/content/superpowers.json'
 import type { Card } from './types'
 
-export default function getCard(name: string) {
-  return [...plants, ...zombies, ...superPowers].find(
-    (e) => e.name.toLowerCase() === name.toLowerCase(),
-  ) as Card
+const cardMap = new Map<string, Card>()
+
+for (const card of [...plants, ...zombies, ...superPowers]) {
+  cardMap.set(card.name.toLowerCase(), card as Card)
+}
+
+export default function getCard(name: string): Card {
+  return cardMap.get(name.toLowerCase())!
 }
