@@ -14,12 +14,7 @@
   <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="width: auto">
     <template #item="{ item, props }">
       <a v-bind="props.action">
-        <Eye v-if="item.label === 'View'" />
-        <Plus v-else-if="item.label === 'Add Card'" />
-        <Grid2x2Check v-else-if="item.label === 'Add All'" />
-        <Minus v-else-if="item.label === 'Remove Card'" />
-        <Grid2x2X v-else-if="item.label === 'Remove All'" />
-
+        <component :is="item.iconComponent" />
         <span class="menu-label">{{ item.label }}</span>
         <kbd v-if="item.shortcut"
           ><small>{{ item.shortcut }}</small></kbd
@@ -119,29 +114,35 @@ const items = computed(() => {
     {
       label: 'View',
       command: viewCard,
+      iconComponent: Eye,
     },
     {
       label: 'Add Card',
       visible: (props.isInDeck && numberLeft.value < 4) || (!props.isInDeck && isValid.value),
       command: addCard,
       shortcut: 'Alt + 1',
+      iconComponent: Plus,
     },
     {
       label: 'Add All',
       visible:
-        (props.isInDeck && numberLeft.value <= 2) || (!props.isInDeck && numberLeft.value >= 2),
+        (props.isInDeck && numberLeft.value <= 2) ||
+        (!props.isInDeck && isValid.value && numberLeft.value >= 2),
       command: addAll,
+      iconComponent: Grid2x2Check,
     },
     {
       label: 'Remove Card',
       visible: props.isInDeck,
       command: removeCard,
       shortcut: 'Alt + 2',
+      iconComponent: Minus,
     },
     {
       label: 'Remove All',
       visible: props.isInDeck && numberLeft.value >= 2,
       command: removeAll,
+      iconComponent: Grid2x2X,
     },
   ]
 })
