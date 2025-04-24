@@ -79,6 +79,7 @@
     <div class="deck-container" v-if="isLoading">
       <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
+    <Message v-else-if="isLoadError" severity="error"> Failed to load decks. </Message>
     <Message v-else-if="sortedDecks.length === 0" :severity="'warn'" :closable="false">
       No Decks
     </Message>
@@ -110,9 +111,10 @@ const { id } = useAuthUser()
 
 const isLoading = ref(true)
 const deckData = ref<Deck[]>([])
-
+const isLoadError = ref(false)
 const loadDecks = async () => {
   isLoading.value = true
+  isLoadError.value = false
   const { data, error } = await supabase
     .from('decks')
     .select('*, hearts(count)')
@@ -120,6 +122,7 @@ const loadDecks = async () => {
     .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
 
   if (error) {
+    isLoadError.value = true
     throwError(error)
   } else {
     const decksWithHearts: Deck[] = data.map((deck) => ({
@@ -127,8 +130,8 @@ const loadDecks = async () => {
       hearts: deck.hearts?.[0]?.count || 0,
     }))
     deckData.value = decksWithHearts
-    isLoading.value = false
   }
+  isLoading.value = false
 }
 
 onMounted(loadDecks)

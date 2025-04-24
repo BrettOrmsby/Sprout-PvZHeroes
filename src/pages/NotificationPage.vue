@@ -5,6 +5,7 @@
       <template v-if="isLoading">
         <Skeleton v-for="index in 3" :key="index" class="notification-skeleton"></Skeleton>
       </template>
+      <Message v-else-if="isLoadError" severity="error"> Failed to load notifications. </Message>
       <Message v-else-if="notifications.notifications.length < 1" severity="warn"
         >No Notifications Found</Message
       >
@@ -14,7 +15,7 @@
           v-for="notification in notifications.notifications"
           :key="notification.id"
           :class="{ unread: !notification.is_read }"
-          @click="markUnread(notification)"
+          @click="notifications.markRead(notification.id)"
         >
           <template #content>
             <Heart v-if="notification.type === 'heart'" class="icon" />
@@ -44,25 +45,21 @@ import { Bell, Heart } from 'lucide-vue-next'
 import { useNotificationsStore } from '@/store/notifications'
 import TheFooter from '@/components/TheFooter.vue'
 import throwError from '@/lib/throwError'
-import type { Notification } from '@/lib/types'
 
 const notifications = useNotificationsStore()
 
 const isLoading = ref(true)
+const isLoadError = ref(false)
 
 const loadNotifications = async () => {
   isLoading.value = true
+  isLoadError.value = false
   const error = await notifications.load()
   if (error) {
+    isLoadError.value = true
     throwError(error)
   }
   isLoading.value = false
-}
-
-const markUnread = async (notification: Notification) => {
-  if (!notification.is_read) {
-    notifications.markRead(notification.id)
-  }
 }
 
 onMounted(loadNotifications)

@@ -18,7 +18,8 @@
       <div class="deck-container" v-if="isLoadingYourDecks">
         <Skeleton v-for="index in 4" :key="index" class="deck-skeleton" height="175px"></Skeleton>
       </div>
-      <Message v-else-if="yourDeckData.length === 0" severity="warn"> You own no decks </Message>
+      <Message v-else-if="isLoadYourDecksError" severity="error"> Failed to load decks. </Message>
+      <Message v-else-if="yourDeckData.length === 0" severity="warn"> You own no decks. </Message>
       <div class="deck-container" v-else>
         <DeckCard
           v-for="deck in yourDeckData"
@@ -36,6 +37,7 @@
     <div class="deck-container" v-if="isLoading">
       <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
+    <Message v-else-if="isLoadDecksError" severity="error"> Failed to load decks. </Message>
     <div class="deck-container" v-else>
       <DeckCard v-for="deck in deckData" :key="deck.id" :deck="deck as any" />
     </div>
@@ -61,8 +63,10 @@ const { supabase } = useSupabase()
 
 const { id, isSignedIn } = useAuthUser()
 const isLoading = ref(true)
+const isLoadDecksError = ref(false)
 const deckData = ref<Deck[]>([])
 const isLoadingYourDecks = ref(true)
+const isLoadYourDecksError = ref(false)
 const yourDeckData = ref<Deck[]>([])
 
 type HeartDeckResult = Omit<Deck, 'hearts'> & { hearts: { count: number }[] }
@@ -72,6 +76,8 @@ const mapHearts = (deckRows: HeartDeckResult[]): Deck[] =>
 
 const getYourDeckData = async () => {
   if (isSignedIn.value) {
+    isLoadYourDecksError.value = false
+    isLoadingYourDecks.value = true
     const { data, error } = await supabase
       .from('decks')
       .select('*, hearts(count)')
@@ -81,15 +87,18 @@ const getYourDeckData = async () => {
       .overrideTypes<HeartDeckResult[]>()
 
     if (error) {
+      isLoadYourDecksError.value = true
       throwError(error)
     } else {
       yourDeckData.value = mapHearts(data)
-      isLoadingYourDecks.value = false
     }
+    isLoadingYourDecks.value = false
   }
 }
 
 const getPublicDeckData = async () => {
+  isLoadDecksError.value = false
+  isLoading.value = true
   const { data, error } = await supabase
     .from('decks')
     .select('*, hearts(count)')
@@ -100,11 +109,12 @@ const getPublicDeckData = async () => {
     .overrideTypes<HeartDeckResult[]>()
 
   if (error) {
+    isLoadDecksError.value = true
     throwError(error)
   } else {
     deckData.value = mapHearts(data)
-    isLoading.value = false
   }
+  isLoading.value = false
 }
 
 onMounted(async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()]))

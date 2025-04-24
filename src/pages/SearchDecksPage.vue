@@ -69,7 +69,9 @@
     <div v-if="isSearching" class="deck-container">
       <Skeleton v-for="i in paginatorAmount" :key="i" height="175px" class="deck-skeleton" />
     </div>
-    <div v-else-if="results.length > 0">
+    <Message v-else-if="isSearchError" severity="error"> Failed to load decks. </Message>
+    <Message v-else-if="results.length < 1" severity="warn"> No Decks Found </Message>
+    <div v-else>
       <div class="deck-container">
         <DeckCard v-for="deck of results" :key="deck.name" :deck="deck" showVisibility />
       </div>
@@ -81,7 +83,6 @@
         template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
       />
     </div>
-    <Message v-else :severity="'warn'" :closable="false"> No Decks Found </Message>
   </main>
   <TheFooter />
 </template>
@@ -185,6 +186,7 @@ const searchCards = (event: AutoCompleteCompleteEvent) => {
 
 const paginatorAmount = 20
 const isSearching = ref(true)
+const isSearchError = ref(false)
 const results = ref<Deck[]>([])
 const totalRecords = ref(0)
 const firstValue = computed(
@@ -204,6 +206,7 @@ const paginate = (pageState: PageState) =>
 
 const search = async () => {
   isSearching.value = true
+  isSearchError.value = false
 
   let query = supabase
     .rpc('get_decks_with_heart_counts')
@@ -251,6 +254,7 @@ const search = async () => {
 
   if (error) {
     throwError(error)
+    isSearchError.value = true
     isSearching.value = false
     return
   }

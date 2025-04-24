@@ -14,7 +14,9 @@
     <div v-if="isSearching" class="users-container">
       <Skeleton v-for="i in paginatorAmount" :key="i" height="100px" style="max-width: 400px" />
     </div>
-    <div v-else-if="results.length > 0">
+    <Message v-else-if="isSearchError" severity="error"> Failed to load users. </Message>
+    <Message v-else-if="results.length < 1" severity="warn"> No Users Found </Message>
+    <div v-else>
       <div class="users-container">
         <RouterLink
           v-for="user of results"
@@ -51,7 +53,6 @@
         template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
       />
     </div>
-    <Message v-else :severity="'warn'" :closable="false"> No Users Found </Message>
   </main>
   <TheFooter />
 </template>
@@ -90,6 +91,7 @@ const updateQuery = () =>
 
 const paginatorAmount = 20
 const isSearching = ref(true)
+const isSearchError = ref(false)
 const results = ref<User[]>([])
 const totalRecords = ref(0)
 const firstValue = computed(
@@ -104,6 +106,7 @@ const paginate = (pageState: PageState) =>
 
 const search = async () => {
   isSearching.value = true
+  isSearchError.value = false
 
   const { data, error, count } = await supabase
     .from('profiles')
@@ -116,6 +119,7 @@ const search = async () => {
   if (error) {
     throwError(error)
     isSearching.value = false
+    isSearchError.value = true
     return
   }
 
