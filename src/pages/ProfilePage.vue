@@ -1,34 +1,7 @@
 <template>
   <main>
-    <Dialog
-      :draggable="false"
-      :modal="true"
-      v-model:visible="isChangeHeroModalOpen"
-      style="max-width: 500px; width: 100%; margin: var(--block-space)"
-      header="Change Profile Image"
-    >
-      <InputGroup>
-        <HeroSelect v-model="selectedHero" aria-label="Hero" />
-        <Button label="Update" @click="updateHeroImage" :loading="isUpdatingProfileImage" />
-      </InputGroup>
-    </Dialog>
-    <Dialog
-      :draggable="false"
-      :modal="true"
-      v-model:visible="isChangeUsernameModalOpen"
-      style="max-width: 500px; width: 100%; margin: var(--block-space)"
-      header="Change Username"
-    >
-      <InputGroup>
-        <InputText
-          v-model="selectedUsername"
-          aria-label="Hero"
-          @keyup.enter="updateUsername"
-          autofocus
-        />
-        <Button label="Update" @click="updateUsername" :loading="isUpdatingUsername" />
-      </InputGroup>
-    </Dialog>
+    <ChangeHeroModal v-model:open="isChangeHeroModalOpen" />
+    <ChangeUsernameModal v-model:open="isChangeUsernameModalOpen" />
     <header>
       <div class="profile-container">
         <Avatar
@@ -79,136 +52,61 @@
     <div class="deck-container" v-if="isLoading">
       <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
-    <Message v-else-if="isLoadError" severity="error"> Failed to load decks. </Message>
-    <Message v-else-if="sortedDecks.length === 0" :severity="'warn'" :closable="false">
+    <Message v-else-if="isError" severity="error"> Failed to load decks. </Message>
+    <Message v-else-if="decks.length === 0" :severity="'warn'" :closable="false">
       No Decks
     </Message>
     <div class="deck-container" v-else>
-      <DeckCard v-for="deck in sortedDecks" :key="deck.id" :deck="deck" showVisibility />
+      <DeckCard v-for="deck in decks" :key="deck.id" :deck="deck" showVisibility />
     </div>
   </main>
   <TheFooter />
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, ref } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { CircleUser, Plus, UserPen } from 'lucide-vue-next'
-import { Avatar, Button, Dialog, InputGroup, InputText, Message, Skeleton } from 'primevue'
+import { Avatar, Button, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
-import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'
+import ChangeHeroModal from '@/components/profile/ChangeHeroModal.vue'
+import ChangeUsernameModal from '@/components/profile/ChangeUsernameModal.vue'
 import getHero from '@/lib/getHero'
-import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
-import throwError from '@/lib/throwError'
 import { useUserStore } from '@/store/user'
-import type { Deck } from '@/lib/types'
+import { useUserDecks } from '@/composables/useUserDecks'
 
+const { decks, isLoading, isError, loadDecks } = useUserDecks()
 const user = useUserStore()
-const { supabase } = useSupabase()
 const { id } = useAuthUser()
-
-const isLoading = ref(true)
-const deckData = ref<Deck[]>([])
-const isLoadError = ref(false)
-const loadDecks = async () => {
-  isLoading.value = true
-  isLoadError.value = false
-  const { data, error } = await supabase
-    .from('decks')
-    .select('*, hearts(count)')
-    .eq('creator', user.id)
-    .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
-
-  if (error) {
-    isLoadError.value = true
-    throwError(error)
-  } else {
-    const decksWithHearts: Deck[] = data.map((deck) => ({
-      ...deck,
-      hearts: deck.hearts?.[0]?.count || 0,
-    }))
-    deckData.value = decksWithHearts
-  }
-  isLoading.value = false
-}
-
-onMounted(loadDecks)
-
-const sortedDecks = computed(() =>
-  [...deckData.value].sort(
-    (a, b) => new Date(b.last_updated).getTime() - new Date(a.last_updated).getTime(),
-  ),
-)
 
 const joined = computed(() =>
   new Date(user.created_at).toLocaleDateString('en', { month: 'long', year: 'numeric' }),
 )
 
 const isChangeHeroModalOpen = ref(false)
-const selectedHero = ref(user.profile_image)
-const isUpdatingProfileImage = ref(false)
 const changeHero = () => {
   isChangeHeroModalOpen.value = true
 }
 
-const updateHeroImage = async () => {
-  if (selectedHero.value === user.profile_image) {
-    isChangeHeroModalOpen.value = false
-    return
-  }
-
-  isUpdatingProfileImage.value = true
-  const error = await user.update({
-    profile_image: selectedHero.value,
-  })
-  isUpdatingProfileImage.value = false
-  if (error) {
-    throwError(error)
-  } else {
-    isChangeHeroModalOpen.value = false
-  }
-}
-
 const isChangeUsernameModalOpen = ref(false)
-const selectedUsername = ref(user.username)
-const isUpdatingUsername = ref(false)
 const changeUsername = () => {
   isChangeUsernameModalOpen.value = true
 }
 
-const updateUsername = async () => {
-  if (selectedUsername.value === user.username) {
-    isChangeHeroModalOpen.value = false
-    return
-  }
-
-  isUpdatingUsername.value = true
-  const error = await user.update({
-    username: selectedUsername.value,
-  })
-  isUpdatingUsername.value = false
-  if (error) {
-    if (error.code === '23505') {
-      throwError({ message: 'Username Taken', hint: 'Username must be unique.' })
-    } else {
-      throwError(error)
-    }
-  } else {
-    isChangeUsernameModalOpen.value = false
-  }
-}
-
 onBeforeRouteUpdate(async (to) => {
   const user = useUserStore()
+  const prevId = user.id
   const isLoadError = await user.loadFromUsername(to.params.username.toString())
   if (isLoadError) {
     const router = useRouter()
     router.replace({ name: '404' })
   }
   document.title = `${to.params.username} • Sprout`
-  loadDecks()
+  if (user.id !== prevId) {
+    loadDecks()
+  }
 })
 </script>
 
