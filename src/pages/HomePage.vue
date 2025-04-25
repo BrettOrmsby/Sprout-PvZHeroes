@@ -18,17 +18,12 @@
       <div class="deck-container" v-if="isLoadingYourDecks">
         <Skeleton v-for="index in 4" :key="index" class="deck-skeleton" height="175px"></Skeleton>
       </div>
-      <Message v-else-if="isLoadYourDecksError" severity="error"> Failed to load decks. </Message>
-      <Message v-else-if="yourDeckData.length === 0" severity="warn"> You own no decks. </Message>
+      <Message v-else-if="isErrorYourDecks" severity="error"> Failed to load decks. </Message>
+      <Message v-else-if="yourDecks.length === 0" severity="warn"> You own no decks. </Message>
       <div class="deck-container" v-else>
-        <DeckCard
-          v-for="deck in yourDeckData"
-          :key="deck.id"
-          :deck="deck as any"
-          :show-visibility="true"
-        />
+        <DeckCard v-for="deck in yourDecks" :key="deck.id" :deck="deck" :show-visibility="true" />
       </div>
-      <router-link to="/me" v-if="isLoadingYourDecks || yourDeckData.length > 0">
+      <router-link to="/me" v-if="isLoadingYourDecks || yourDecks.length > 0">
         <Button label="View all personal decks" link />
       </router-link>
     </div>
@@ -37,9 +32,9 @@
     <div class="deck-container" v-if="isLoading">
       <Skeleton v-for="index in 6" :key="index" class="deck-skeleton" height="175px"></Skeleton>
     </div>
-    <Message v-else-if="isLoadDecksError" severity="error"> Failed to load decks. </Message>
+    <Message v-else-if="isError" severity="error"> Failed to load decks. </Message>
     <div class="deck-container" v-else>
-      <DeckCard v-for="deck in deckData" :key="deck.id" :deck="deck as any" />
+      <DeckCard v-for="deck in decks" :key="deck.id" :deck="deck" />
     </div>
     <router-link to="/search/decks">
       <Button label="View all public decks" link />
@@ -49,80 +44,22 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref, watch } from 'vue'
 import { Button, Message, Skeleton } from 'primevue'
 import { Sprout } from 'lucide-vue-next'
-import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
 import DeckCard from '@/components/DeckCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import throwError from '@/lib/throwError'
-import type { Deck } from '@/lib/types'
-
-const { supabase } = useSupabase()
+import { useUserDecks } from '@/composables/useUserDecks'
+import { useCompleteDecks } from '@/composables/home/UseCompleteDecks'
 
 const { id, isSignedIn } = useAuthUser()
-const isLoading = ref(true)
-const isLoadDecksError = ref(false)
-const deckData = ref<Deck[]>([])
-const isLoadingYourDecks = ref(true)
-const isLoadYourDecksError = ref(false)
-const yourDeckData = ref<Deck[]>([])
 
-type HeartDeckResult = Omit<Deck, 'hearts'> & { hearts: { count: number }[] }
-
-const mapHearts = (deckRows: HeartDeckResult[]): Deck[] =>
-  deckRows.map((deckRow) => ({ ...deckRow, hearts: deckRow.hearts?.[0]?.count || 0 }))
-
-const getYourDeckData = async () => {
-  if (isSignedIn.value) {
-    isLoadYourDecksError.value = false
-    isLoadingYourDecks.value = true
-    const { data, error } = await supabase
-      .from('decks')
-      .select('*, hearts(count)')
-      .order('created_at', { ascending: false })
-      .eq('creator', id.value)
-      .limit(4)
-      .overrideTypes<HeartDeckResult[]>()
-
-    if (error) {
-      isLoadYourDecksError.value = true
-      throwError(error)
-    } else {
-      yourDeckData.value = mapHearts(data)
-    }
-    isLoadingYourDecks.value = false
-  }
-}
-
-const getPublicDeckData = async () => {
-  isLoadDecksError.value = false
-  isLoading.value = true
-  const { data, error } = await supabase
-    .from('decks')
-    .select('*, hearts(count)')
-    .order('created_at', { ascending: false })
-    .eq('is_complete', true)
-    .eq('is_private', false)
-    .limit(6)
-    .overrideTypes<HeartDeckResult[]>()
-
-  if (error) {
-    isLoadDecksError.value = true
-    throwError(error)
-  } else {
-    deckData.value = mapHearts(data)
-  }
-  isLoading.value = false
-}
-
-onMounted(async () => await Promise.allSettled([getYourDeckData(), getPublicDeckData()]))
-watch(isSignedIn, (newVal) => {
-  if (newVal) {
-    getYourDeckData()
-  }
-})
+const { decks, isLoading, isError } = useCompleteDecks()
+const {
+  decks: yourDecks,
+  isLoading: isLoadingYourDecks,
+  isError: isErrorYourDecks,
+} = useUserDecks(id, 'created_at', 4)
 </script>
 
 <style scoped>

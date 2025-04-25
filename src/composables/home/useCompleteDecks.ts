@@ -1,13 +1,9 @@
-import { ref, watchEffect, toValue, type MaybeRef } from 'vue'
+import { onMounted, ref } from 'vue'
 import throwError from '@/lib/throwError'
 import useSupabase from '@/composables/UseSupabase'
 import type { Deck } from '@/lib/types'
 
-export function useUserDecks(
-  userId: MaybeRef<string | undefined>,
-  sort: 'created_at' | 'last_updated' = 'last_updated',
-  limit?: number,
-) {
+export function useCompleteDecks() {
   const { supabase } = useSupabase()
 
   const isLoading = ref(true)
@@ -15,28 +11,17 @@ export function useUserDecks(
   const isError = ref(false)
 
   const loadDecks = async () => {
-    const user = toValue(userId)
-    if (!user) {
-      decks.value = []
-      isLoading.value = false
-      isError.value = false
-      return
-    }
-
     isLoading.value = true
     isError.value = false
 
-    const query = supabase
+    const { data, error } = await supabase
       .from('decks')
       .select('*, hearts(count)')
-      .eq('creator', user)
-      .order(sort, { ascending: false })
-
-    if (limit !== undefined) {
-      query.limit(limit)
-    }
-    const { data, error } =
-      await query.overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
+      .order('created_at', { ascending: false })
+      .eq('is_complete', true)
+      .eq('is_private', false)
+      .limit(6)
+      .overrideTypes<(Omit<Deck, 'hearts'> & { hearts: { count: number }[] })[]>()
 
     if (error) {
       isError.value = true
@@ -51,7 +36,7 @@ export function useUserDecks(
     isLoading.value = false
   }
 
-  watchEffect(loadDecks)
+  onMounted(loadDecks)
 
   return { decks, isLoading, isError }
 }

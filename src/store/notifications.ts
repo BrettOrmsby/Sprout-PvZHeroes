@@ -11,16 +11,23 @@ const { id } = useAuthUser()
 export const useNotificationsStore = defineStore('notifications', () => {
   const notifications = ref<Notification[]>([])
   const unreadNotificationsCount = ref(0)
+  const isLoading = ref(false)
+  const isLoadError = ref(false)
 
   async function load() {
+    isLoading.value = true
+    isLoadError.value = false
     const { data, error } = await supabase
       .rpc('get_notifications')
       .eq('recipient_id', id.value)
       .order('created_at', { ascending: false })
     if (error) {
-      return error
+      isLoadError.value = true
+      throwError(error)
+    } else {
+      notifications.value = data as Notification[]
     }
-    notifications.value = data as Notification[]
+    isLoading.value = false
   }
 
   async function loadUnreadCount() {
@@ -67,6 +74,8 @@ export const useNotificationsStore = defineStore('notifications', () => {
   }
 
   return {
+    isLoading,
+    isLoadError,
     notifications,
     unreadNotificationsCount,
     load,

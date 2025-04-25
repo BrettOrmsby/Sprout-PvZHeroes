@@ -21,68 +21,63 @@
         :key="hero.name"
       />
     </div>
-    <div>
-      <div class="side-cards-container">
-        <SideBar />
-        <div class="main-content">
-          <Toolbar>
-            <template #start>
-              <Button
-                @click="toggleHighlighter"
-                severity="secondary"
-                badgeSeverity="contrast"
-                label="Highlighter"
-                :badge="states.deckFilter.cardsMatchingFilter.length.toString()"
-              >
-                <template #icon="iconClass">
-                  <Highlighter :class="iconClass.class" />
-                </template>
-              </Button>
+    <SideBarLayout>
+      <Toolbar>
+        <template #start>
+          <Button
+            @click="toggleHighlighter"
+            severity="secondary"
+            badgeSeverity="contrast"
+            label="Highlighter"
+            :badge="states.deckFilter.cardsMatchingFilter.length.toString()"
+          >
+            <template #icon="iconClass">
+              <Highlighter :class="iconClass.class" />
             </template>
-            <template #end>
-              <Button
-                v-for="cardClass in Object.keys(cardByClass)"
-                severity="secondary"
-                :aria-label="cardClass"
-                :key="cardClass"
-                @click="() => scrollTo(cardClass)"
-              >
-                <template #icon="iconClass">
-                  <img
-                    class="class"
-                    :class="iconClass.class"
-                    :src="`/images/classes/${cardClass.toLowerCase()}.png`"
-                    :alt="cardClass"
-                  />
-                </template>
-              </Button>
+          </Button>
+        </template>
+        <template #end>
+          <Button
+            v-for="cardClass in Object.keys(cardByClass)"
+            severity="secondary"
+            :aria-label="cardClass"
+            :key="cardClass"
+            @click="() => scrollTo(cardClass)"
+          >
+            <template #icon="iconClass">
+              <img
+                class="class"
+                :class="iconClass.class"
+                :src="`/images/classes/${cardClass.toLowerCase()}.png`"
+                :alt="cardClass"
+              />
             </template>
-          </Toolbar>
-          <template v-for="(value, key) in cardByClass" :key="key">
-            <h2 :id="`title-${key}`">
-              <img class="class" :src="`/images/classes/${key.toLowerCase()}.png`" :alt="key" />
-              <span>{{ key }}</span>
-            </h2>
-            <div class="card-group">
-              <div v-for="card in value" :key="card.name">
-                <PVZCard
-                  :is-valid="true"
-                  :card="card"
-                  :amount="4"
-                  @click="showCard(card.name)"
-                  :class="{
-                    highlighted: states.deckFilter.cardsMatchingFilter.includes(card.name),
-                    hidden:
-                      states.deckFilter.hideCards &&
-                      !states.deckFilter.cardsMatchingFilter.includes(card.name),
-                  }"
-                />
-              </div>
-            </div>
-          </template>
+          </Button>
+        </template>
+      </Toolbar>
+      <template v-for="(value, key) in cardByClass" :key="key">
+        <h2 :id="`title-${key}`">
+          <img class="class" :src="`/images/classes/${key.toLowerCase()}.png`" :alt="key" />
+          <span>{{ key }}</span>
+        </h2>
+        <div class="card-group">
+          <div v-for="card in value" :key="card.name">
+            <PVZCard
+              :is-valid="true"
+              :card="card"
+              :amount="4"
+              @click="showCard(card.name)"
+              :class="{
+                highlighted: states.deckFilter.cardsMatchingFilter.includes(card.name),
+                hidden:
+                  states.deckFilter.hideCards &&
+                  !states.deckFilter.cardsMatchingFilter.includes(card.name),
+              }"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      </template>
+    </SideBarLayout>
     <ScrollTop />
   </main>
   <TheFooter />
@@ -97,7 +92,7 @@ import CardModal from '@/components/CardModal.vue'
 import HeroModal from '@/components/HeroModal.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
-import SideBar from '@/components/SideBar.vue'
+import SideBarLayout from '@/components/SideBarLayout.vue'
 import states from '@/store/states'
 import heroData from '@/content/heros.json'
 import plants from '@/content/plants.json'
@@ -185,24 +180,6 @@ h1 {
   align-items: center;
   overflow: scroll;
   flex-shrink: 0;
-}
-
-.side-cards-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.side-cards-container .main-content {
-  flex-shrink: 1;
-  min-width: 0;
-}
-@media screen and (max-width: 650px) {
-  .side-cards-container {
-    display: block;
-  }
-  .side-cards-container :deep(.side-bar) {
-    display: none;
-  }
 }
 
 h2 {

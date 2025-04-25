@@ -3,36 +3,33 @@
   <main>
     <h1>Comparing {{ deck.name }}</h1>
     <CompareInput :id="id" v-model="toInput" />
-    <div class="side-deck-container">
-      <SideBar />
-      <div class="main-content">
-        <template v-for="(value, key) in comparison" :key="key">
-          <h2>
-            <span v-if="key === 'both'">Shared in Both Decks</span
-            ><span v-else
-              >Unique to
-              <RouterLink :to="{ name: 'ViewDeck', params: { id: key } }">{{
-                getDeck(key as string).name
-              }}</RouterLink></span
-            >
-            ({{ getListCount(value) }})
-          </h2>
-          <Message v-if="Object.values(value).length === 0" :severity="'warn'" :closable="false"
-            >No Unique Cards</Message
+    <SideBarLayout>
+      <template v-for="(value, key) in comparison" :key="key">
+        <h2>
+          <span v-if="key === 'both'">Shared in Both Decks</span
+          ><span v-else
+            >Unique to
+            <RouterLink :to="{ name: 'ViewDeck', params: { id: key } }">{{
+              getDeck(key as string).name
+            }}</RouterLink></span
           >
-          <div v-else class="card-group">
-            <PVZCard
-              v-for="card in sortList(value)"
-              :key="card.name"
-              :is-valid="true"
-              :card="card"
-              :amount="value[card.name]"
-              @click="showCard(card.name)"
-            />
-          </div>
-        </template>
-      </div>
-    </div>
+          ({{ getListCount(value) }})
+        </h2>
+        <Message v-if="Object.values(value).length === 0" :severity="'warn'" :closable="false"
+          >No Unique Cards</Message
+        >
+        <div v-else class="card-group">
+          <PVZCard
+            v-for="card in sortList(value)"
+            :key="card.name"
+            :is-valid="true"
+            :card="card"
+            :amount="value[card.name]"
+            @click="showCard(card.name)"
+          />
+        </div>
+      </template>
+    </SideBarLayout>
   </main>
   <TheFooter />
 </template>
@@ -42,10 +39,10 @@ import { computed, ref } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { Message } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
-import SideBar from '@/components/SideBar.vue'
 import CardModal from '@/components/CardModal.vue'
 import CompareInput from '@/components/CompareInput.vue'
 import TheFooter from '@/components/TheFooter.vue'
+import SideBarLayout from '@/components/SideBarLayout.vue'
 import getCard from '@/lib/getCard'
 import { useCompareStore, useDeckStore } from '@/store/deck'
 import states from '@/store/states'
@@ -137,23 +134,6 @@ h2 {
 .p-message {
   margin: 0 auto;
   width: fit-content;
-}
-.side-deck-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.side-deck-container .main-content {
-  flex-shrink: 1;
-  min-width: 0;
-}
-@media screen and (max-width: 650px) {
-  .side-deck-container {
-    display: block;
-  }
-  .side-deck-container :deep(.side-bar) {
-    display: none;
-  }
 }
 
 .card-group {

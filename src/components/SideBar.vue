@@ -1,5 +1,5 @@
 <template>
-  <div class="side-bar">
+  <aside class="side-bar">
     <div class="sticky">
       <div class="header-container">
         <strong>{{ card.name }}</strong>
@@ -17,7 +17,7 @@
         <em>{{ card.flavour }}</em>
       </p>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script lang="ts" setup>

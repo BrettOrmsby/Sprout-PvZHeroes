@@ -3,14 +3,11 @@
   <HeroModal />
   <DeckHeader />
   <main>
-    <div class="side-deck-container">
-      <SideBar />
-      <div class="main-content">
-        <DeckToolbar />
-        <TheDeck />
-        <AddCards v-if="deck.isUsersDeck" />
-      </div>
-    </div>
+    <SideBarLayout>
+      <DeckToolbar />
+      <TheDeck />
+      <AddCards v-if="deck.isUsersDeck" />
+    </SideBarLayout>
     <Divider />
     <DeckCharts />
     <Divider />
@@ -22,8 +19,8 @@
 
 <script lang="ts" setup>
 import { Divider } from 'primevue'
-import SideBar from '@/components/SideBar.vue'
 import DeckHeader from '@/components/deck/DeckHeader.vue'
+import SideBarLayout from '@/components/SideBarLayout.vue'
 import TheDeck from '@/components/deck/TheDeck.vue'
 import AddCards from '@/components/deck/AddCards.vue'
 import CardModal from '@/components/CardModal.vue'
@@ -87,23 +84,6 @@ h2 {
   text-align: center;
 }
 
-.side-deck-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.side-deck-container .main-content {
-  flex-shrink: 1;
-  min-width: 0;
-}
-@media screen and (max-width: 700px) {
-  .side-deck-container {
-    display: block;
-  }
-  .side-deck-container :deep(.side-bar) {
-    display: none;
-  }
-}
 .deck-container {
   display: flex;
   flex-wrap: wrap;

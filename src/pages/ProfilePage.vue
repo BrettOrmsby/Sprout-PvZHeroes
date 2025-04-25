@@ -77,9 +77,11 @@ import useAuthUser from '@/composables/UseAuthUser'
 import { useUserStore } from '@/store/user'
 import { useUserDecks } from '@/composables/useUserDecks'
 
-const { decks, isLoading, isError, loadDecks } = useUserDecks()
 const user = useUserStore()
 const { id } = useAuthUser()
+
+const userId = computed(() => user.id)
+const { decks, isLoading, isError } = useUserDecks(userId, 'last_updated')
 
 const joined = computed(() =>
   new Date(user.created_at).toLocaleDateString('en', { month: 'long', year: 'numeric' }),
@@ -97,16 +99,12 @@ const changeUsername = () => {
 
 onBeforeRouteUpdate(async (to) => {
   const user = useUserStore()
-  const prevId = user.id
   const isLoadError = await user.loadFromUsername(to.params.username.toString())
   if (isLoadError) {
     const router = useRouter()
     router.replace({ name: '404' })
   }
   document.title = `${to.params.username} • Sprout`
-  if (user.id !== prevId) {
-    loadDecks()
-  }
 })
 </script>
 

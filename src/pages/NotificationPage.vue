@@ -2,10 +2,12 @@
   <main>
     <h1><Bell />Notifications</h1>
     <div class="notification-container">
-      <template v-if="isLoading">
+      <template v-if="notifications.isLoading">
         <Skeleton v-for="index in 3" :key="index" class="notification-skeleton"></Skeleton>
       </template>
-      <Message v-else-if="isLoadError" severity="error"> Failed to load notifications. </Message>
+      <Message v-else-if="notifications.isLoadError" severity="error">
+        Failed to load notifications.
+      </Message>
       <Message v-else-if="notifications.notifications.length < 1" severity="warn"
         >No Notifications Found</Message
       >
@@ -39,30 +41,15 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 import { Card, Message, Skeleton } from 'primevue'
 import { Bell, Heart } from 'lucide-vue-next'
 import { useNotificationsStore } from '@/store/notifications'
 import TheFooter from '@/components/TheFooter.vue'
-import throwError from '@/lib/throwError'
 
 const notifications = useNotificationsStore()
 
-const isLoading = ref(true)
-const isLoadError = ref(false)
-
-const loadNotifications = async () => {
-  isLoading.value = true
-  isLoadError.value = false
-  const error = await notifications.load()
-  if (error) {
-    isLoadError.value = true
-    throwError(error)
-  }
-  isLoading.value = false
-}
-
-onMounted(loadNotifications)
+onMounted(notifications.load)
 </script>
 
 <style scoped>

@@ -2,38 +2,35 @@
   <CardModal />
   <main>
     <h1>Search <span class="primary-color">Cards</span></h1>
-    <div class="side-cards-container">
-      <SideBar />
-      <div class="main-content">
-        <Toolbar>
-          <template #center>
-            <InputText type="text" v-model="query" placeholder="Search Query" />
-          </template>
-          <template #end>
-            <Tag value="Primary"
-              ><span
-                >{{ matchingCards.length }}&nbsp;Card<span v-if="matchingCards.length > 1"
-                  >s</span
-                ></span
-              ></Tag
-            >
-          </template>
-        </Toolbar>
-        <div class="errors" v-if="parsedQuery.errors.length > 0">
-          <Message severity="error" v-for="(error, index) in parsedQuery.errors" :key="index">{{
-            error.message
-          }}</Message>
-        </div>
-        <Message v-else-if="matchingCards.length === 0" :severity="'warn'" :closable="false">
-          No Cards Found
-        </Message>
-        <div v-else class="card-group">
-          <div v-for="card in matchingCards" :key="card.name">
-            <PVZCard :is-valid="true" :card="card" :amount="4" @click="showCard(card.name)" />
-          </div>
+    <SideBarLayout>
+      <Toolbar>
+        <template #center>
+          <InputText type="text" v-model="query" placeholder="Search Query" />
+        </template>
+        <template #end>
+          <Tag value="Primary"
+            ><span
+              >{{ matchingCards.length }}&nbsp;Card<span v-if="matchingCards.length > 1"
+                >s</span
+              ></span
+            ></Tag
+          >
+        </template>
+      </Toolbar>
+      <div class="errors" v-if="parsedQuery.errors.length > 0">
+        <Message severity="error" v-for="(error, index) in parsedQuery.errors" :key="index">{{
+          error.message
+        }}</Message>
+      </div>
+      <Message v-else-if="matchingCards.length === 0" :severity="'warn'" :closable="false">
+        No Cards Found
+      </Message>
+      <div v-else class="card-group">
+        <div v-for="card in matchingCards" :key="card.name">
+          <PVZCard :is-valid="true" :card="card" :amount="4" @click="showCard(card.name)" />
         </div>
       </div>
-    </div>
+    </SideBarLayout>
     <ScrollTop />
   </main>
   <TheFooter />
@@ -43,10 +40,10 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { InputText, Message, ScrollTop, Tag, Toolbar } from 'primevue'
-import SideBar from '@/components/SideBar.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import CardModal from '@/components/CardModal.vue'
+import SideBarLayout from '@/components/SideBarLayout.vue'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
 import states from '@/store/states'
@@ -152,25 +149,6 @@ h1 {
 
 :deep(:is(.p-inputtext, .p-toolbar-center)) {
   width: 100%;
-}
-
-.side-cards-container {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-.side-cards-container .main-content {
-  flex-shrink: 1;
-  min-width: 0;
-  width: 100%;
-}
-@media screen and (max-width: 650px) {
-  .side-cards-container {
-    display: block;
-  }
-  .side-cards-container :deep(.side-bar) {
-    display: none;
-  }
 }
 
 .p-message {
