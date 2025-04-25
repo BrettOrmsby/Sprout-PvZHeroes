@@ -50,7 +50,7 @@ import useAuthUser from '@/composables/UseAuthUser'
 import DeckCard from '@/components/DeckCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import { useUserDecks } from '@/composables/useUserDecks'
-import { useCompleteDecks } from '@/composables/home/UseCompleteDecks'
+import { useCompleteDecks } from '@/composables/home/useCompleteDecks'
 
 const { id, isSignedIn } = useAuthUser()
 
