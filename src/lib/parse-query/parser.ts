@@ -178,7 +178,6 @@ export class Parser {
           }
 
           if (validValues[propertyName] && !validValues[propertyName].includes(value)) {
-            console.log(value)
             this.errors.push({
               startPos: valueToken.startPos,
               endPos: valueToken.endPos,
@@ -249,7 +248,7 @@ export class Parser {
         continue
       }
 
-      target.push({ property: 'name', value: current.value as string, isNegated })
+      target.push({ property: 'name', value: (current.value as string).toLowerCase(), isNegated })
       isNegated = false
       this.#increment()
       continue

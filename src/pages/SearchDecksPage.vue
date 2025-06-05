@@ -1,13 +1,6 @@
 <template>
   <main>
     <FilterModal />
-    <!--
-    <SelectButton
-        inputId="search"
-        v-model="form.search"
-        :options="['All', 'Your Decks', 'Liked Decks']"
-      />
-    -->
     <h1>Search <span class="primary-color">Decks</span></h1>
     <div class="search-bar">
       <div class="left">
@@ -123,6 +116,7 @@ import useAuthUser from '@/composables/UseAuthUser'
 import throwError from '@/lib/throwError'
 import { useDeckFilters } from '@/store/deckFilters'
 import { useHeartStore } from '@/store/hearts'
+import heroData from '@/content/heros.json'
 import type { Deck } from '@/lib/types'
 
 const route = useRoute()
@@ -175,8 +169,10 @@ const search = async () => {
     .rpc('get_decks_with_heart_counts')
     .ilike('name', `%${deckFilters.name.replace(/ /g, '%')}%`)
   if (deckFilters.searchTerm) {
+    const searchTerm = deckFilters.searchTerm.replace(/ /g, '%')
     query.or(
-      `name.ilike.%${deckFilters.searchTerm.replace(/ /g, '%')}%,hero.ilike.%${deckFilters.searchTerm.replace(/ /g, '%') || ''}%,list->>${deckFilters.searchTerm}.gte.1`,
+      ['name', 'hero', 'description'].map((column) => `${column}.ilike.%${searchTerm}%`).join(',') +
+        `,list->>${deckFilters.searchTerm}.gte.1`,
     )
   }
   if (deckFilters.show === 'Complete Decks') {
@@ -184,6 +180,19 @@ const search = async () => {
   }
   if (deckFilters.hero) {
     query.eq('hero', deckFilters.hero)
+  }
+  if (deckFilters.heroClass) {
+    const heroesMatchingClass = [...heroData.plants, ...heroData.zombies]
+      .filter((hero) => hero.class.includes(deckFilters.heroClass!))
+      .map((hero) => hero.name)
+    // No decks will appear if class and hero are conflicting
+    if (deckFilters.hero && !heroesMatchingClass.includes(deckFilters.hero)) {
+      results.value = []
+      totalRecords.value = 0
+      isSearching.value = false
+      return
+    }
+    query.in('hero', heroesMatchingClass)
   }
 
   for (const card of deckFilters.cards) {

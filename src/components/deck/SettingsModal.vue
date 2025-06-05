@@ -33,8 +33,14 @@
         :hero="deck.hero"
       />
 
-      <label for="visibility">Make Private</label>
-      <ToggleSwitch inputId="visibility" v-model="newInfo.is_private" />
+      <span id="visibility">Visibility</span>
+      <Select
+        aria-labelledby="visibility"
+        v-model="newInfo.is_private"
+        :options="visibilityOptions"
+        option-label="label"
+        option-value="value"
+      />
 
       <div class="footer">
         <Button
@@ -61,13 +67,17 @@
 <script lang="ts" setup>
 import { reactive, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { Button, Dialog, InputText, Textarea, ToggleSwitch, useConfirm } from 'primevue'
+import { Button, Dialog, InputText, Select, Textarea, useConfirm } from 'primevue'
 import CardListTextArea from '@/components/CardListTextArea.vue'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import states from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 
+const visibilityOptions = [
+  { label: 'Public', value: false },
+  { label: 'Private', value: true },
+]
 const deck = useDeckStore()
 
 const { supabase } = useSupabase()
@@ -173,7 +183,7 @@ h2 {
 }
 
 label,
-#heroLabel {
+span:has(+ .p-select) {
   display: block;
   margin-bottom: var(--inline-space);
 }
@@ -187,11 +197,12 @@ label,
 
 .p-inputtext,
 .p-textarea,
-.card-list-textarea {
+.card-list-textarea,
+.p-select {
   width: 100%;
 }
 
-:is(.p-inputtext, .p-textarea, .p-toggleswitch, .card-list-textarea):has(+ :not(small)) {
+:is(.p-inputtext, .p-textarea, .card-list-textarea, .p-select):has(+ :not(small)) {
   margin-bottom: var(--block-space);
 }
 

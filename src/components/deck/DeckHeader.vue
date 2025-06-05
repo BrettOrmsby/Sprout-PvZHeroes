@@ -69,6 +69,13 @@
             </template> </Button
           >{{ deck.hearts }}
         </div>
+        <Tag
+          v-if="deck.is_private"
+          value="Private"
+          severity="secondary"
+          @click="deck.isUsersDeck && openSettings()"
+          :class="{ clickable: deck.isUsersDeck }"
+        />
         <p class="last-updated">Last updated {{ timeSinceUpdate }}</p>
       </div>
     </div>
@@ -79,7 +86,7 @@
 import { computed, onUnmounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { Avatar, Button } from 'primevue'
+import { Avatar, Button, Tag } from 'primevue'
 import { Heart } from 'lucide-vue-next'
 import SettingsModal from '@/components/deck/SettingsModal.vue'
 import getHero from '@/lib/getHero'

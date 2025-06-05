@@ -2,12 +2,26 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import getCard from '@/lib/getCard'
+import heroData from '@/content/heros.json'
 import type { Card } from '@/lib/types'
 
 const sortOrderOptions = ['Name', 'Recently Edited', 'Created', 'Likes']
 const sortDirectionOptions = ['Ascending', 'Descending']
 const targetOptions = ['All Decks', 'Your Decks', 'Liked Decks']
 const showOptions = ['Complete Decks', 'All Decks']
+const classOptions = [
+  'Guardian',
+  'Kabloom',
+  'Mega-Grow',
+  'Smarty',
+  'Solar',
+  'Beastly',
+  'Brainy',
+  'Crazy',
+  'Hearty',
+  'Sneaky',
+]
+const heroOptions = [...heroData.plants, ...heroData.zombies].map((hero) => hero.name)
 
 export const useDeckFilters = defineStore('deckFilters', () => {
   const route = useRoute()
@@ -20,12 +34,14 @@ export const useDeckFilters = defineStore('deckFilters', () => {
 
   const name = ref('')
   const hero = ref<string | null>('')
+  const heroClass = ref<string | null>('')
   const show = ref('')
   const cards = ref<Card[]>([])
 
   type FormValue = {
     name: string
     hero: string | null
+    heroClass: string | null
     show: string
     cards: Card[]
   }
@@ -33,6 +49,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     return {
       name: name.value,
       hero: hero.value,
+      heroClass: heroClass.value,
       show: show.value,
       cards: cards.value,
     }
@@ -42,6 +59,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
   const setFormValues = (form: FormValue) => {
     name.value = form.name
     hero.value = form.hero
+    heroClass.value = form.heroClass
     show.value = form.show
     cards.value = form.cards
     router.push({
@@ -54,6 +72,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
   const reset = () => {
     name.value = ''
     hero.value = null
+    heroClass.value = null
     show.value = "Complete Decks'"
     cards.value = []
     router.push({
@@ -70,6 +89,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     order: sortDirection.value,
     name: name.value,
     hero: hero.value,
+    heroClass: heroClass.value,
     show: show.value,
     cards: cards.value.map((e) => e.name),
   }))
@@ -80,7 +100,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
       query: queryParams.value,
     })
   })
-  const getDefaultOption = (param: string, options: string[], defaultValue: string) => {
+  const getDefaultOption = <T>(param: string, options: string[], defaultValue: T) => {
     const paramValue = route.query[param]?.toString() as string
     return options.includes(paramValue) ? paramValue : defaultValue
   }
@@ -95,7 +115,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
       sortDirection.value = getDefaultOption('order', sortDirectionOptions, 'Ascending')
 
       name.value = route.query.name?.toString() || ''
-      hero.value = route.query.hero?.toString() || null
+      hero.value = getDefaultOption('hero', heroOptions, null)
+      heroClass.value = getDefaultOption('heroClass', classOptions, null)
       show.value = getDefaultOption('show', showOptions, 'Complete Decks')
       cards.value = (
         ((route.query.cards && typeof route.query.cards === 'string'
@@ -113,6 +134,7 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     sortDirection,
     name,
     hero,
+    heroClass,
     show,
     cards,
     queryParams,

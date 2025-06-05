@@ -11,12 +11,10 @@
       <InputText id="deckName" type="text" placeholder="Heal Midrose" v-model="form.name" />
 
       <span id="heroLabel">Hero</span>
-      <HeroSelect
-        v-model="form.hero as any"
-        aria-labelledby="heroLabel"
-        showClear
-        class="hero-picker"
-      />
+      <HeroSelect v-model="form.hero as any" aria-labelledby="heroLabel" showClear />
+
+      <span id="classLabel">Class</span>
+      <ClassSelect v-model="form.heroClass as any" aria-labelledby="classLabel" showClear />
 
       <label for="cards">Includes Cards</label>
       <AutoComplete
@@ -28,6 +26,7 @@
         multiple
         fluid
         inputId="cards"
+        placeholder="Peashooter"
       >
         <template #option="slotProps">
           <div class="autocomplete-item">
@@ -48,8 +47,12 @@
         <Button label="Query Help" link />
       </router-link>
 
-      <label for="show">Show</label>
-      <Select inputId="show" v-model="form.show" :options="['Complete Decks', 'All Decks']" />
+      <span id="showLabel">Show</span>
+      <Select
+        v-model="form.show"
+        :options="['Complete Decks', 'All Decks']"
+        aria-labelledby="showLabel"
+      />
 
       <Button type="submit" label="Search">
         <template #icon="iconClass">
@@ -78,6 +81,7 @@ import {
 } from 'primevue'
 import { Search, X } from 'lucide-vue-next'
 import HeroSelect from '@/components/HeroSelect.vue'
+import ClassSelect from '@/components/ClassSelect.vue'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
 import { useDeckFilters } from '@/store/deckFilters'
@@ -123,8 +127,7 @@ watch(
 
 <style scoped>
 label,
-#heroLabel,
-#sort {
+span:has(+ .p-select) {
   display: block;
   margin-bottom: var(--inline-space);
 }
