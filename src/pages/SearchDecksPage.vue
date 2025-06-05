@@ -1,69 +1,77 @@
 <template>
   <main>
-    <h1>Search <span class="primary-color">Decks</span></h1>
-    <form @submit.prevent="submit">
-      <label for="deckName">Deck Name</label>
-      <InputText id="deckName" type="text" placeholder="Heal Midrose" v-model="form.name" />
-      <span id="heroLabel">Hero</span>
-      <HeroSelect
-        v-model="form.hero as any"
-        aria-labelledby="heroLabel"
-        showClear
-        class="hero-picker"
-      />
-      <label for="cards">Includes Cards</label>
-      <AutoComplete
-        v-model="form.cards"
-        optionLabel="name"
-        :suggestions="cardSuggestions"
-        @complete="searchCards"
-        forceSelection
-        multiple
-        fluid
-        inputId="cards"
-      >
-        <template #option="slotProps">
-          <div class="autocomplete-item">
-            <img :alt="slotProps.option.name" :src="slotProps.option.image" />
-            <div>{{ slotProps.option.name }}</div>
-          </div>
-        </template>
-        <template #chip="slotProps">
-          <Chip
-            :label="slotProps.value.name"
-            :image="slotProps.value.image"
-            removable
-            @remove="removeCard(slotProps.value.name)"
-          />
-        </template>
-      </AutoComplete>
-      <router-link :to="{ name: 'QueryHelp' }" class="help-message">
-        <Button label="Query Help" link />
-      </router-link>
-      <label for="show-incomplete">Show Incomplete Decks</label>
-      <ToggleSwitch inputId="show-incomplete" v-model="form.showIncomplete" />
-      <label for="search">Search</label>
-      <SelectButton
+    <FilterModal />
+    <!--
+    <SelectButton
         inputId="search"
         v-model="form.search"
         :options="['All', 'Your Decks', 'Liked Decks']"
       />
-      <span id="sort">Sort</span>
-      <div class="order-container">
-        <Select :options="['Name', 'Recently Edited', 'Created', 'Likes']" v-model="form.sort" />
-        <Select :options="['Ascending', 'Descending']" v-model="form.order" />
+    -->
+    <h1>Search <span class="primary-color">Decks</span></h1>
+    <div class="search-bar">
+      <div class="left">
+        <Select
+          inputId="search"
+          v-model="deckFilters.searchTarget"
+          :options="['All Decks', 'Your Decks', 'Liked Decks']"
+        />
+        <InputGroup>
+          <InputText
+            type="text"
+            v-model="deckFilters.searchTerm"
+            @keydown.enter="searchWithTerm"
+            placeholder="Search for a deck"
+          />
+          <Button @click="searchWithTerm">
+            <template #icon="iconClass">
+              <Search :class="iconClass.class" />
+            </template>
+          </Button>
+        </InputGroup>
       </div>
-      <Button type="submit" label="Search">
-        <template #icon="iconClass">
-          <Search :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button label="Clear" severity="secondary" @click.prevent="clear">
-        <template #icon="iconClass">
-          <X :class="iconClass.class" />
-        </template>
-      </Button>
-    </form>
+      <div class="right">
+        <Button @click="deckFilters.isModalVisible = true" label="Filters" aria-label="Filters">
+          <template #icon="iconClass">
+            <ListFilter :class="iconClass.class" />
+          </template>
+        </Button>
+        <Button @click="togglePopover" label="Sort" aria-label="Sort">
+          <template #icon="iconClass">
+            <ArrowUpNarrowWide :class="iconClass.class" />
+          </template>
+        </Button>
+        <Popover ref="sortPopover">
+          <div style="display: flex; flex-direction: column; gap: var(--inline-space)">
+            <span style="font-weight: bold">Sort By</span>
+            <template v-for="(sortOption, id) in sortOptions" :key="id">
+              <label :for="id"
+                ><RadioButton
+                  v-model="deckFilters.sortOption"
+                  :input-id="id"
+                  name="sortOption"
+                  :value="sortOption"
+                  style="margin-right: var(--inline-space)"
+                />{{ sortOption }}</label
+              >
+            </template>
+            <Divider style="margin: 0" />
+            <span style="font-weight: bold">Sort Direction</span>
+            <template v-for="(sortDirection, id) in sortDirectionOptions" :key="id">
+              <label :for="id"
+                ><RadioButton
+                  v-model="deckFilters.sortDirection"
+                  :input-id="id"
+                  name="sortDirection"
+                  :value="sortDirection"
+                  style="margin-right: var(--inline-space)"
+                />{{ sortDirection }}</label
+              >
+            </template>
+          </div>
+        </Popover>
+      </div>
+    </div>
 
     <h2>Results</h2>
     <div v-if="isSearching" class="deck-container">
@@ -80,7 +88,10 @@
         @page="paginate"
         :rows="paginatorAmount"
         :totalRecords="totalRecords"
-        template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+        :template="{
+          '475px': 'PrevPageLink PageLinks NextPageLink',
+          default: 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink',
+        }"
       />
     </div>
   </main>
@@ -88,100 +99,48 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, reactive, ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
-  AutoComplete,
-  type AutoCompleteCompleteEvent,
   Button,
-  Chip,
+  Divider,
+  InputGroup,
   InputText,
   Message,
   type PageState,
   Paginator,
-  Select,
-  SelectButton,
+  Popover,
+  RadioButton,
   Skeleton,
-  ToggleSwitch,
+  Select,
 } from 'primevue'
-import { Search, X } from 'lucide-vue-next'
+import { ArrowUpNarrowWide, ListFilter, Search } from 'lucide-vue-next'
 import DeckCard from '@/components/DeckCard.vue'
-import HeroSelect from '@/components/HeroSelect.vue'
+import FilterModal from '@/components/searchdecks/FilterModal.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
-import getCard from '@/lib/getCard'
-import generateQuery from '@/lib/parse-query/generateQuery'
-import doesMatchQuery from '@/lib/matchQuery'
 import throwError from '@/lib/throwError'
+import { useDeckFilters } from '@/store/deckFilters'
 import { useHeartStore } from '@/store/hearts'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
-import type { Card, Deck } from '@/lib/types'
+import type { Deck } from '@/lib/types'
 
 const route = useRoute()
 const router = useRouter()
 const { supabase } = useSupabase()
 const { id, isSignedIn } = useAuthUser()
+const deckFilters = useDeckFilters()
 
-const form = reactive({
-  name: route.query.name?.toString() || '',
-  hero: route.query.hero?.toString() || null,
-  showIncomplete: route.query.showIncomplete === 'true',
-  cards: (
-    ((route.query.cards && typeof route.query.cards === 'string'
-      ? [route.query.cards]
-      : route.query.cards) || []) as string[]
-  ).map((card) => getCard(card)) as Card[],
-  sort: route.query.sort?.toString() || 'Name',
-  order: route.query.order?.toString() || 'Ascending',
-  search: route.query.search?.toString() || 'All',
-})
-
-const submit = () =>
-  router.push({
-    name: 'SearchDecks',
-    query: {
-      ...form,
-      showIncomplete: form.showIncomplete.toString(),
-      cards: form.cards.map((e) => e.name),
-    },
-  })
-const clear = () => {
-  Object.assign(form, {
-    name: '',
-    hero: null,
-    showIncomplete: false,
-    cards: [],
-    sort: 'Name',
-    order: 'Ascending',
-    search: 'All',
-  })
+const sortOptions = {
+  name: 'Name',
+  recentlyEdited: 'Recently Edited',
+  created: 'Created',
+  likes: 'Likes',
 }
-const removeCard = (cardName: string) => {
-  form.cards = form.cards.filter((card) => card.name !== cardName)
-}
-
-const cardSuggestions = ref<Card[]>([])
-const cards = [
-  ...plants.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name)),
-  ...zombies.sort((a, b) => a.cost - b.cost || a.name.localeCompare(b.name)),
-] as Card[]
-const searchCards = (event: AutoCompleteCompleteEvent) => {
-  if (!event.query.trim().length) {
-    cardSuggestions.value = [...cards]
-  } else {
-    const { query } = generateQuery(event.query)
-    cardSuggestions.value = cards.filter((card) => {
-      return (
-        card.class !== 'Removed' &&
-        card.set !== 'token' &&
-        card.set !== 'superpower' &&
-        doesMatchQuery(card, query) &&
-        !form.cards.includes(card)
-      )
-    })
-  }
+const sortDirectionOptions = { ascending: 'Ascending', descending: 'Descending' }
+const sortPopover = ref()
+const togglePopover = (event: Event) => {
+  sortPopover.value.toggle(event)
 }
 
 const paginatorAmount = 20
@@ -197,32 +156,38 @@ const paginate = (pageState: PageState) =>
   router.push({
     name: 'SearchDecks',
     query: {
-      ...form,
-      showIncomplete: form.showIncomplete.toString(),
-      cards: form.cards.map((e) => e.name),
+      ...deckFilters.queryParams,
       page: pageState.page + 1,
     },
   })
 
+const searchWithTerm = () => {
+  router.push({
+    name: 'SearchDecks',
+    query: deckFilters.queryParams,
+  })
+}
+
 const search = async () => {
   isSearching.value = true
   isSearchError.value = false
-
-  let query = supabase
+  const query = supabase
     .rpc('get_decks_with_heart_counts')
-    .ilike('name', `%${(route.query.name || '').toString().replace(/ /g, '%')}%`)
-  if (!route.query.showIncomplete || route.query.showIncomplete === 'false') {
-    query = query.eq('is_complete', true)
+    .ilike('name', `%${deckFilters.name.replace(/ /g, '%')}%`)
+  if (deckFilters.searchTerm) {
+    query.or(
+      `name.ilike.%${deckFilters.searchTerm.replace(/ /g, '%')}%,hero.ilike.%${deckFilters.searchTerm.replace(/ /g, '%') || ''}%,list->>${deckFilters.searchTerm}.gte.1`,
+    )
   }
-  if (route.query.hero) {
-    query = query.eq('hero', route.query.hero)
+  if (deckFilters.show === 'Complete Decks') {
+    query.eq('is_complete', true)
   }
-  const cards =
-    (route.query.cards && typeof route.query.cards === 'string'
-      ? [route.query.cards]
-      : route.query.cards) || []
-  for (const card of cards) {
-    query = query.gte(`list->>${card}`, 1)
+  if (deckFilters.hero) {
+    query.eq('hero', deckFilters.hero)
+  }
+
+  for (const card of deckFilters.cards) {
+    query.gte(`list->>${card.name}`, 1)
   }
 
   const orders: Record<string, string> = {
@@ -232,23 +197,23 @@ const search = async () => {
     Likes: 'hearts',
   }
 
-  if (route.query.search === 'Your Decks') {
+  if (deckFilters.searchTarget === 'Your Decks') {
     if (isSignedIn.value) {
-      query = query.eq('creator', id.value)
+      query.eq('creator', id.value)
     } else {
       results.value = []
       totalRecords.value = 0
       isSearching.value = false
       return
     }
-  } else if (route.query.search === 'Liked Decks') {
+  } else if (deckFilters.searchTarget === 'Liked Decks') {
     const hearts = useHeartStore()
-    query = query.in('id', hearts.hearts)
+    query.in('id', hearts.hearts)
   }
 
   const { data, error, count } = await query
-    .order(orders[route.query.sort?.toString() || 'Name'] as string, {
-      ascending: route.query.order ? route.query.order === 'Ascending' : true,
+    .order(orders[deckFilters.sortOption] ?? 'name', {
+      ascending: deckFilters.sortDirection === 'Ascending',
     })
     .range(firstValue.value, firstValue.value + paginatorAmount - 1)
 
@@ -264,8 +229,7 @@ const search = async () => {
   isSearching.value = false
 }
 
-watch(() => route.query, search)
-onMounted(search)
+watch(() => route.query, search, { immediate: true })
 </script>
 
 <style scoped>
@@ -283,70 +247,47 @@ h2 {
   text-align: center;
 }
 
-form {
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--block-space);
+  width: 100%;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--block-space);
+}
+@media (max-width: 600px) {
+  .search-bar {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    justify-content: center;
+  }
+}
+.p-select {
+  width: 170px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.p-inputgroup {
   max-width: 500px;
   margin: 0 auto;
 }
-label,
-#heroLabel,
-#sort {
-  display: block;
-  margin-bottom: var(--inline-space);
+
+:deep(.p-button) {
+  flex-shrink: 0;
 }
 
-.error {
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
-  color: var(--p-red-300);
-  display: block;
-}
-
-.p-inputtext,
-.p-select,
-.p-autocomplete,
-.card-list-textarea {
-  width: 100%;
-}
-.p-toggleswitch {
-  display: block;
-}
-
-:is(
-    .p-inputtext,
-    .order-container,
-    .p-autocomplete,
-    .hero-picker,
-    .card-list-textarea,
-    .p-toggleswitch,
-    .p-selectbutton
-  ):has(+ :not(:is(small, .help-message))) {
-  margin-bottom: var(--block-space);
-}
-
-.order-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--inline-space);
-}
-
-.p-button + .p-button {
-  margin-left: var(--inline-space);
-}
-
-.autocomplete-item {
+:deep(.p-popover-content) {
   display: flex;
-  align-items: center;
-  gap: var(--inline-space);
-}
-.autocomplete-item img {
-  width: 2em;
-  height: 100%;
-}
-
-.help-message .p-button {
-  padding: 0;
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
+  flex-direction: column;
 }
 
 .p-message {

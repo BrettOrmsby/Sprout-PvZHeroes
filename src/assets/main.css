@@ -58,7 +58,14 @@ main {
 }
 
 .legendary {
-  --rarity-background: linear-gradient(to bottom right, #a158dc, #f462f4, #f3ea94, #c5f882, #5ba3f0);
+  --rarity-background: linear-gradient(
+    to bottom right,
+    #a158dc,
+    #f462f4,
+    #f3ea94,
+    #c5f882,
+    #5ba3f0
+  );
 }
 
 .event {
@@ -66,5 +73,5 @@ main {
 }
 
 .token {
-  --rarity-background: var(--p-surface-800)
+  --rarity-background: var(--p-surface-800);
 }

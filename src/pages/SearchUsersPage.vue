@@ -2,7 +2,12 @@
   <main>
     <h1>Search <span class="primary-color">Users</span></h1>
     <InputGroup>
-      <InputText type="text" v-model="searchTerm" @keydown.enter="updateQuery" />
+      <InputText
+        type="text"
+        v-model="searchTerm"
+        @keydown.enter="updateQuery"
+        placeholder="Search for a user"
+      />
       <Button @click="updateQuery">
         <template #icon="iconClass">
           <Search :class="iconClass.class" />
@@ -24,23 +29,21 @@
           :to="{ name: 'Profile', params: { username: user.username } }"
         >
           <Card>
-            <template #title>
-              <div class="title-container">
-                <Avatar
-                  size="normal"
-                  shape="circle"
-                  class="hero"
-                  :image="getHero(user.profile_image).image"
-                >
-                </Avatar>
-                <h3>{{ user.username }}</h3>
-              </div>
-            </template>
             <template #content>
-              <p class="joined">
-                Joined
-                {{ joined(user) }}
-              </p>
+              <Avatar
+                size="normal"
+                shape="circle"
+                class="hero"
+                :image="getHero(user.profile_image).image"
+              >
+              </Avatar>
+              <div class="card-text-container">
+                <h3>{{ user.username }}</h3>
+                <p class="joined">
+                  Joined
+                  {{ joined(user) }}
+                </p>
+              </div>
             </template>
           </Card>
         </RouterLink>
@@ -50,7 +53,10 @@
         @page="paginate"
         :rows="paginatorAmount"
         :totalRecords="totalRecords"
-        template="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+        :template="{
+          '475px': 'PrevPageLink PageLinks NextPageLink',
+          default: 'FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink',
+        }"
       />
     </div>
   </main>
@@ -161,8 +167,8 @@ h2 {
 }
 
 a {
-  flex-grow: 1;
   max-width: 400px;
+  width: 100%;
 }
 .p-card {
   width: 100%;
@@ -175,7 +181,7 @@ a {
   border: 1px solid var(--p-primary-400);
 }
 
-.title-container {
+:deep(.p-card-content) {
   display: flex;
   align-items: center;
 }
@@ -184,15 +190,18 @@ a {
   flex-shrink: 0;
   background-color: var(--p-surface-950);
 }
+
+:deep(.card-text-container) {
+  width: 100%;
+  overflow: hidden;
+}
 h3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
   -webkit-box-orient: vertical;
-}
-
-h3 {
+  font-size: 1rem;
   margin: 0;
 }
 
