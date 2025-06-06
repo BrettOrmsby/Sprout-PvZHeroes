@@ -10,6 +10,7 @@ export type Deck = {
   last_updated: string
   description: string
   hearts: number
+  sparks: number
 }
 
 export type Hero = {

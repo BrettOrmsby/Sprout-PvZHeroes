@@ -110,11 +110,7 @@ const updateDeck = async () => {
   }
 
   isLoading.value = true
-  await deck.update({
-    ...newInfo,
-    is_complete:
-      Object.values(newInfo.list).reduce((prev: number, curr: number) => prev + curr, 0) === 40,
-  })
+  await deck.update(newInfo)
 
   isLoading.value = false
   states.editModal = false

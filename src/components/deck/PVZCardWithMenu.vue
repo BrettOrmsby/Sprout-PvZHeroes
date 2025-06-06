@@ -57,7 +57,6 @@ const isValid = computed(
 const updateDeck = async (newList: Record<string, number>) => {
   await deck.update({
     list: newList,
-    is_complete: Object.values(newList).reduce((prev, curr) => prev + curr, 0) === 40,
   })
 }
 
