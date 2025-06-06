@@ -116,7 +116,7 @@ import useAuthUser from '@/composables/UseAuthUser'
 import throwError from '@/lib/throwError'
 import { useDeckFilters } from '@/store/deckFilters'
 import { useHeartStore } from '@/store/hearts'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Deck } from '@/lib/types'
 
 const route = useRoute()
@@ -182,7 +182,7 @@ const search = async () => {
     query.eq('hero', deckFilters.hero)
   }
   if (deckFilters.heroClass) {
-    const heroesMatchingClass = [...heroData.plants, ...heroData.zombies]
+    const heroesMatchingClass = heroData
       .filter((hero) => hero.class.includes(deckFilters.heroClass!))
       .map((hero) => hero.name)
     // No decks will appear if class and hero are conflicting

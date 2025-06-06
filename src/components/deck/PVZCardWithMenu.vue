@@ -31,15 +31,13 @@ import { Menu } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
 import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Card, Hero } from '@/lib/types'
 
 const props = defineProps<{ card: Card; isInDeck: boolean }>()
 
 const deck = useDeckStore()
-const hero = computed<Hero>(
-  () => [...heroData.plants, ...heroData.zombies].find((e) => e.name === deck.hero) as Hero,
-)
+const hero = computed<Hero>(() => heroData.find((e) => e.name === deck.hero) as Hero)
 
 const numberLeft = computed(() => {
   if (deck.list[props.card.name] !== undefined) {

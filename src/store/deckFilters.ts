@@ -2,7 +2,7 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 import { computed, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import getCard from '@/lib/getCard'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Card } from '@/lib/types'
 
 const sortOrderOptions = ['Name', 'Recently Edited', 'Created', 'Likes']
@@ -21,7 +21,7 @@ const classOptions = [
   'Hearty',
   'Sneaky',
 ]
-const heroOptions = [...heroData.plants, ...heroData.zombies].map((hero) => hero.name)
+const heroOptions = heroData.map((hero) => hero.name)
 
 export const useDeckFilters = defineStore('deckFilters', () => {
   const route = useRoute()

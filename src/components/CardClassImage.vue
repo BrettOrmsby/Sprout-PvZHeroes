@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-import heros from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Card } from '@/lib/types'
 import { computed } from 'vue'
 
@@ -44,7 +44,7 @@ const classImages = computed(() => {
 })
 
 const getMainSuperClasses = (superpower: Card) =>
-  [...heros.plants, ...heros.zombies].find((hero) => hero.mainSuperPower === superpower.name)!.class
+  heroData.find((hero) => hero.mainSuperPower === superpower.name)!.class
 </script>
 
 <style scoped>

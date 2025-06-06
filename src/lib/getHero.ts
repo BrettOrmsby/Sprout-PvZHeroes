@@ -1,6 +1,6 @@
-import heros from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Hero } from './types'
 
 export default function getHero(name: string) {
-  return [...heros.plants, ...heros.zombies].find((e) => e.name === name) as Hero
+  return heroData.find((e) => e.name === name) as Hero
 }

@@ -12,7 +12,7 @@
     <h1>Gallery</h1>
     <div class="hero-container">
       <Avatar
-        v-for="hero in [...heroData.plants, ...heroData.zombies]"
+        v-for="hero in heroData"
         size="xlarge"
         shape="circle"
         :image="hero.image"
@@ -94,7 +94,7 @@ import TheFooter from '@/components/TheFooter.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
 import states from '@/store/states'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'

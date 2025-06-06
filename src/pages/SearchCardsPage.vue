@@ -50,7 +50,7 @@ import states from '@/store/states'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import superpowers from '@/content/superpowers.json'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 import type { Card } from '@/lib/types'
 
 const route = useRoute()
@@ -62,9 +62,7 @@ const allCards: Card[] = [
   ...plants,
   ...zombies,
   ...superpowers.flatMap((superPower) => {
-    const hero = [...heroData.plants, ...heroData.zombies].find(
-      (hero) => hero.mainSuperPower === superPower.name,
-    )!
+    const hero = heroData.find((hero) => hero.mainSuperPower === superPower.name)!
     return [
       { ...superPower, class: hero.class[0] },
       { ...superPower, class: hero.class[1] },

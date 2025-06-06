@@ -1,7 +1,7 @@
 <template>
   <Select
     v-model="hero"
-    :options="[...heroData.plants, ...heroData.zombies]"
+    :options="heroData"
     optionLabel="name"
     optionValue="name"
     placeholder="Select a Hero"
@@ -27,7 +27,7 @@
 <script lang="ts" setup>
 import { Select } from 'primevue'
 import getHero from '@/lib/getHero'
-import heroData from '@/content/heros.json'
+import heroData from '@/content/heroes.json'
 
 const hero = defineModel<string>({ required: true })
 </script>

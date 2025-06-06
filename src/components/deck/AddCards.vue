@@ -49,7 +49,6 @@ import PVZCardWithMenu from './PVZCardWithMenu.vue'
 import getHero from '@/lib/getHero'
 import { useDeckStore } from '@/store/deck'
 import states from '@/store/states'
-import heroData from '@/content/heros.json'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'
@@ -57,7 +56,10 @@ import type { Card } from '@/lib/types'
 const deck = useDeckStore()
 
 const hero = computed(() => getHero(deck.hero))
-const isPlant = computed(() => heroData.plants.some((e) => e.name === deck.hero))
+
+const isPlant = computed(() =>
+  ['Guardian', 'Kabloom', 'Mega-Grow', 'Smarty', 'Solar'].includes(hero.value.class[0]),
+)
 
 const cards = computed(
   () =>
