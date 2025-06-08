@@ -4,8 +4,8 @@ import { useRoute, useRouter } from 'vue-router'
 import getCard from '@/lib/getCard'
 import heroData from '@/content/heroes.json'
 import type { Card } from '@/lib/types'
-
-const sortOrderOptions = ['Name', 'Recently Edited', 'Created', 'Likes']
+// TODO: just make it reactive??
+const sortOrderOptions = ['Name', 'Recently Edited', 'Created', 'Likes', 'Sparks']
 const sortDirectionOptions = ['Ascending', 'Descending']
 const targetOptions = ['All Decks', 'Your Decks', 'Liked Decks']
 const showOptions = ['Complete Decks', 'All Decks']
@@ -37,6 +37,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
   const heroClass = ref<string | null>('')
   const show = ref('')
   const cards = ref<Card[]>([])
+  const sparksMin = ref(0)
+  const sparksMax = ref(160000)
 
   type FormValue = {
     name: string
@@ -44,6 +46,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     heroClass: string | null
     show: string
     cards: Card[]
+    sparksMin: number
+    sparksMax: number
   }
   const getFormValues = (): FormValue => {
     return {
@@ -52,6 +56,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
       heroClass: heroClass.value,
       show: show.value,
       cards: cards.value,
+      sparksMin: sparksMin.value,
+      sparksMax: sparksMax.value,
     }
   }
 
@@ -62,6 +68,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     heroClass.value = form.heroClass
     show.value = form.show
     cards.value = form.cards
+    sparksMin.value = form.sparksMin
+    sparksMax.value = form.sparksMax
     router.push({
       name: 'SearchDecks',
       query: queryParams.value,
@@ -75,6 +83,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     heroClass.value = null
     show.value = "Complete Decks'"
     cards.value = []
+    sparksMin.value = 0
+    sparksMax.value = 160000
     router.push({
       name: 'SearchDecks',
       query: queryParams.value,
@@ -90,6 +100,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     name: name.value,
     hero: hero.value,
     heroClass: heroClass.value,
+    sparksMin: sparksMin.value,
+    sparksMax: sparksMax.value,
     show: show.value,
     cards: cards.value.map((e) => e.name),
   }))
@@ -123,6 +135,12 @@ export const useDeckFilters = defineStore('deckFilters', () => {
           ? [route.query.cards]
           : route.query.cards) || []) as string[]
       ).map((card) => getCard(card))
+
+      const toNumber = (str: string) => (isNaN(parseInt(str)) ? null : parseInt(str))
+      const sparksEnd1 = toNumber(route.query.sparksMin as string) ?? 0
+      const sparksEnd2 = toNumber(route.query.sparksMax as string) ?? 160000
+      sparksMin.value = Math.min(sparksEnd1, sparksEnd2)
+      sparksMax.value = Math.max(sparksEnd1, sparksEnd2)
     },
     { immediate: true },
   )
@@ -137,6 +155,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     heroClass,
     show,
     cards,
+    sparksMin,
+    sparksMax,
     queryParams,
     getFormValues,
     setFormValues,

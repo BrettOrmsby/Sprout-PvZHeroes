@@ -47,6 +47,13 @@
         <Button label="Query Help" link />
       </router-link>
 
+      <label>Sparks Cost</label>
+      <div class="spark-container">
+        Between
+        <InputNumber v-model="form.sparksMin" inputId="min" :min="0" :max="160000" fluid />
+        and <InputNumber v-model="form.sparksMax" inputId="minmax" :min="0" :max="160000" fluid />
+      </div>
+
       <span id="showLabel">Show</span>
       <Select
         v-model="form.show"
@@ -77,6 +84,7 @@ import {
   Chip,
   Dialog,
   InputText,
+  InputNumber,
   Select,
 } from 'primevue'
 import { Search, X } from 'lucide-vue-next'
@@ -130,6 +138,7 @@ label,
 span:has(+ .p-select) {
   display: block;
   margin-bottom: var(--inline-space);
+  font-weight: bold;
 }
 
 .error {
@@ -149,14 +158,22 @@ span:has(+ .p-select) {
   display: block;
 }
 
-:is(.p-inputtext, .p-autocomplete, .hero-picker, .card-list-textarea, .p-select):has(
-    + :not(:is(small, .help-message))
-  ) {
+:is(
+    .p-inputtext,
+    .spark-container,
+    .p-autocomplete,
+    .hero-picker,
+    .card-list-textarea,
+    .p-select
+  ):has(+ :not(:is(small, .help-message))) {
   margin-bottom: var(--block-space);
 }
 
-.p-button + .p-button {
-  margin-left: var(--inline-space);
+.spark-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inline-space);
 }
 
 .autocomplete-item {
@@ -173,5 +190,9 @@ span:has(+ .p-select) {
   padding: 0;
   margin-top: var(--inline-space);
   margin-bottom: var(--block-space);
+}
+
+.p-button + .p-button {
+  margin-left: var(--inline-space);
 }
 </style>

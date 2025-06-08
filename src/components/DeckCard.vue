@@ -31,26 +31,21 @@ import { Avatar, Card, Tag } from 'primevue'
 import getHero from '@/lib/getHero'
 import type { Deck } from '@/lib/types'
 
-dayjs.extend(relativeTime)
-
 const props = defineProps<{
   deck: Deck
   showVisibility?: boolean
 }>()
 
+dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)
 const timeSinceUpdate = computed(() => {
   // eslint-disable-next-line
   refreshDateKey.value
   const lastUpdated = dayjs(props.deck.last_updated).fromNow()
-  if (lastUpdated.startsWith('in')) {
-    return 'a few seconds ago'
-  }
-  return dayjs(props.deck.last_updated).fromNow()
+  return lastUpdated.startsWith('in') ? 'a few seconds ago' : lastUpdated
 })
 
 const interval = setInterval(() => ++refreshDateKey.value, 60000)
-
 onUnmounted(() => clearInterval(interval))
 </script>
 

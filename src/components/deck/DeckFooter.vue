@@ -11,7 +11,7 @@
       />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ summary.totalCost.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
+      {{ deck.sparks.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
     </span>
   </footer>
 </template>
@@ -19,7 +19,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { Badge } from 'primevue'
-import calculateSparkCost from '@/lib/calculateSparkCost'
 import getCard from '@/lib/getCard'
 import { useDeckStore } from '@/store/deck'
 
@@ -34,17 +33,15 @@ const summary = computed(() => {
     legendary: 0,
     event: 0,
   }
-  let totalCost = 0
   let totalCards = 0
 
   for (const [name, quantity] of Object.entries(deck.list)) {
     const card = getCard(name)
     counts[card.rarity] += quantity
-    totalCost += quantity * calculateSparkCost(card)
     totalCards += quantity
   }
 
-  return { counts, totalCost, totalCards }
+  return { counts, totalCards }
 })
 
 const badgeMeta = [

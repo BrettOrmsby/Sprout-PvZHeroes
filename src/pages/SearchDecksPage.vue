@@ -92,7 +92,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import {
   Button,
@@ -130,6 +130,7 @@ const sortOptions = {
   recentlyEdited: 'Recently Edited',
   created: 'Created',
   likes: 'Likes',
+  sparks: 'Sparks',
 }
 const sortDirectionOptions = { ascending: 'Ascending', descending: 'Descending' }
 const sortPopover = ref()
@@ -162,12 +163,11 @@ const searchWithTerm = () => {
   })
 }
 
-const search = async () => {
-  isSearching.value = true
-  isSearchError.value = false
-  const query = supabase
-    .rpc('get_decks_with_heart_counts')
+const applyFilters = (query: ReturnType<typeof supabase.rpc>) => {
+  query
     .ilike('name', `%${deckFilters.name.replace(/ /g, '%')}%`)
+    .gte('sparks', deckFilters.sparksMin)
+    .lte('sparks', deckFilters.sparksMax)
   if (deckFilters.searchTerm) {
     const searchTerm = deckFilters.searchTerm.replace(/ /g, '%')
     query.or(
@@ -190,20 +190,13 @@ const search = async () => {
       results.value = []
       totalRecords.value = 0
       isSearching.value = false
-      return
+      return false
     }
     query.in('hero', heroesMatchingClass)
   }
 
   for (const card of deckFilters.cards) {
     query.gte(`list->>${card.name}`, 1)
-  }
-
-  const orders: Record<string, string> = {
-    Name: 'name',
-    'Recently Edited': 'last_updated',
-    Created: 'created_at',
-    Likes: 'hearts',
   }
 
   if (deckFilters.searchTarget === 'Your Decks') {
@@ -213,14 +206,31 @@ const search = async () => {
       results.value = []
       totalRecords.value = 0
       isSearching.value = false
-      return
+      return false
     }
   } else if (deckFilters.searchTarget === 'Liked Decks') {
     const hearts = useHeartStore()
     query.in('id', hearts.hearts)
   }
+  return true
+}
 
-  const { data, error, count } = await query
+const fetchData = async () => {
+  const query = supabase.rpc('get_decks_with_heart_counts')
+
+  if (!applyFilters(query)) {
+    return
+  }
+
+  const orders: Record<string, string> = {
+    Name: 'name',
+    'Recently Edited': 'last_updated',
+    Created: 'created_at',
+    Likes: 'hearts',
+    Sparks: 'sparks',
+  }
+
+  const { data, error } = await query
     .order(orders[deckFilters.sortOption] ?? 'name', {
       ascending: deckFilters.sortDirection === 'Ascending',
     })
@@ -230,15 +240,47 @@ const search = async () => {
     throwError(error)
     isSearchError.value = true
     isSearching.value = false
+    throw error
+  }
+  results.value = data as Deck[]
+}
+
+const fetchCount = async () => {
+  const query = supabase.from('decks').select('id', { count: 'exact', head: true })
+  if (!applyFilters(query)) {
     return
   }
+  const { count, error } = await query
+  if (error) {
+    throwError(error)
+    isSearchError.value = true
+    isSearching.value = false
+    throw error
+  }
 
-  results.value = data as Deck[]
   totalRecords.value = count as number
+}
+
+const search = async () => {
+  isSearching.value = true
+  isSearchError.value = false
+  try {
+    await Promise.all([fetchData(), fetchCount()])
+  } catch (e) {
+    console.log(e)
+  }
+
   isSearching.value = false
 }
 
-watch(() => route.query, search, { immediate: true })
+watch(
+  () => route.query,
+  async () => {
+    await nextTick()
+    search()
+  },
+  { immediate: true },
+)
 </script>
 
 <style scoped>
