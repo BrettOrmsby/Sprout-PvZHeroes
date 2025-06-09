@@ -1,10 +1,10 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { computed, ref, watch } from 'vue'
+import { computed, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import getCard from '@/lib/getCard'
 import heroData from '@/content/heroes.json'
 import type { Card } from '@/lib/types'
-// TODO: just make it reactive??
+
 const sortOrderOptions = ['Name', 'Recently Edited', 'Created', 'Likes', 'Sparks']
 const sortDirectionOptions = ['Ascending', 'Descending']
 const targetOptions = ['All Decks', 'Your Decks', 'Liked Decks']
@@ -32,14 +32,6 @@ export const useDeckFilters = defineStore('deckFilters', () => {
   const sortOption = ref('')
   const sortDirection = ref('')
 
-  const name = ref('')
-  const hero = ref<string | null>('')
-  const heroClass = ref<string | null>('')
-  const show = ref('')
-  const cards = ref<Card[]>([])
-  const sparksMin = ref(0)
-  const sparksMax = ref(160000)
-
   type FormValue = {
     name: string
     hero: string | null
@@ -49,27 +41,20 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     sparksMin: number
     sparksMax: number
   }
-  const getFormValues = (): FormValue => {
-    return {
-      name: name.value,
-      hero: hero.value,
-      heroClass: heroClass.value,
-      show: show.value,
-      cards: cards.value,
-      sparksMin: sparksMin.value,
-      sparksMax: sparksMax.value,
-    }
-  }
+
+  const formFilters = reactive<FormValue>({
+    name: '',
+    hero: null,
+    heroClass: null,
+    show: 'Complete Decks',
+    cards: [],
+    sparksMin: 0,
+    sparksMax: 160000,
+  })
 
   const router = useRouter()
   const setFormValues = (form: FormValue) => {
-    name.value = form.name
-    hero.value = form.hero
-    heroClass.value = form.heroClass
-    show.value = form.show
-    cards.value = form.cards
-    sparksMin.value = form.sparksMin
-    sparksMax.value = form.sparksMax
+    Object.assign(formFilters, form)
     router.push({
       name: 'SearchDecks',
       query: queryParams.value,
@@ -78,13 +63,15 @@ export const useDeckFilters = defineStore('deckFilters', () => {
   }
 
   const reset = () => {
-    name.value = ''
-    hero.value = null
-    heroClass.value = null
-    show.value = "Complete Decks'"
-    cards.value = []
-    sparksMin.value = 0
-    sparksMax.value = 160000
+    Object.assign(formFilters, {
+      name: '',
+      hero: null,
+      heroClass: null,
+      show: 'Complete Decks',
+      cards: [],
+      sparksMin: 0,
+      sparksMax: 160000,
+    })
     router.push({
       name: 'SearchDecks',
       query: queryParams.value,
@@ -97,21 +84,10 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     target: searchTarget.value,
     sort: sortOption.value,
     order: sortDirection.value,
-    name: name.value,
-    hero: hero.value,
-    heroClass: heroClass.value,
-    sparksMin: sparksMin.value,
-    sparksMax: sparksMax.value,
-    show: show.value,
-    cards: cards.value.map((e) => e.name),
+    ...formFilters,
+    cards: formFilters.cards.map((e) => e.name),
   }))
 
-  watch([sortOption, sortDirection, searchTarget], () => {
-    router.push({
-      name: 'SearchDecks',
-      query: queryParams.value,
-    })
-  })
   const getDefaultOption = <T>(param: string, options: string[], defaultValue: T) => {
     const paramValue = route.query[param]?.toString() as string
     return options.includes(paramValue) ? paramValue : defaultValue
@@ -126,11 +102,11 @@ export const useDeckFilters = defineStore('deckFilters', () => {
       sortOption.value = getDefaultOption('sort', sortOrderOptions, 'Name')
       sortDirection.value = getDefaultOption('order', sortDirectionOptions, 'Ascending')
 
-      name.value = route.query.name?.toString() || ''
-      hero.value = getDefaultOption('hero', heroOptions, null)
-      heroClass.value = getDefaultOption('heroClass', classOptions, null)
-      show.value = getDefaultOption('show', showOptions, 'Complete Decks')
-      cards.value = (
+      formFilters.name = route.query.name?.toString() || ''
+      formFilters.hero = getDefaultOption('hero', heroOptions, null)
+      formFilters.heroClass = getDefaultOption('heroClass', classOptions, null)
+      formFilters.show = getDefaultOption('show', showOptions, 'Complete Decks')
+      formFilters.cards = (
         ((route.query.cards && typeof route.query.cards === 'string'
           ? [route.query.cards]
           : route.query.cards) || []) as string[]
@@ -139,8 +115,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
       const toNumber = (str: string) => (isNaN(parseInt(str)) ? null : parseInt(str))
       const sparksEnd1 = toNumber(route.query.sparksMin as string) ?? 0
       const sparksEnd2 = toNumber(route.query.sparksMax as string) ?? 160000
-      sparksMin.value = Math.min(sparksEnd1, sparksEnd2)
-      sparksMax.value = Math.max(sparksEnd1, sparksEnd2)
+      formFilters.sparksMin = Math.min(sparksEnd1, sparksEnd2)
+      formFilters.sparksMax = Math.max(sparksEnd1, sparksEnd2)
     },
     { immediate: true },
   )
@@ -150,15 +126,8 @@ export const useDeckFilters = defineStore('deckFilters', () => {
     searchTarget,
     sortOption,
     sortDirection,
-    name,
-    hero,
-    heroClass,
-    show,
-    cards,
-    sparksMin,
-    sparksMax,
+    formFilters,
     queryParams,
-    getFormValues,
     setFormValues,
     reset,
   }

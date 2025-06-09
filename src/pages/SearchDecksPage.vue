@@ -8,6 +8,7 @@
           inputId="search"
           v-model="deckFilters.searchTarget"
           :options="['All Decks', 'Your Decks', 'Liked Decks']"
+          @change="searchWithTerm"
         />
         <InputGroup>
           <InputText
@@ -45,6 +46,7 @@
                   name="sortOption"
                   :value="sortOption"
                   style="margin-right: var(--inline-space)"
+                  @change="searchWithTerm"
                 />{{ sortOption }}</label
               >
             </template>
@@ -58,6 +60,7 @@
                   name="sortDirection"
                   :value="sortDirection"
                   style="margin-right: var(--inline-space)"
+                  @change="searchWithTerm"
                 />{{ sortDirection }}</label
               >
             </template>
@@ -165,9 +168,9 @@ const searchWithTerm = () => {
 
 const applyFilters = (query: ReturnType<typeof supabase.rpc>) => {
   query
-    .ilike('name', `%${deckFilters.name.replace(/ /g, '%')}%`)
-    .gte('sparks', deckFilters.sparksMin)
-    .lte('sparks', deckFilters.sparksMax)
+    .ilike('name', `%${deckFilters.formFilters.name.replace(/ /g, '%')}%`)
+    .gte('sparks', deckFilters.formFilters.sparksMin)
+    .lte('sparks', deckFilters.formFilters.sparksMax)
   if (deckFilters.searchTerm) {
     const searchTerm = deckFilters.searchTerm.replace(/ /g, '%')
     query.or(
@@ -175,18 +178,21 @@ const applyFilters = (query: ReturnType<typeof supabase.rpc>) => {
         `,list->>${deckFilters.searchTerm}.gte.1`,
     )
   }
-  if (deckFilters.show === 'Complete Decks') {
+  if (deckFilters.formFilters.show === 'Complete Decks') {
     query.eq('is_complete', true)
   }
-  if (deckFilters.hero) {
-    query.eq('hero', deckFilters.hero)
+  if (deckFilters.formFilters.hero) {
+    query.eq('hero', deckFilters.formFilters.hero)
   }
-  if (deckFilters.heroClass) {
+  if (deckFilters.formFilters.heroClass) {
     const heroesMatchingClass = heroData
-      .filter((hero) => hero.class.includes(deckFilters.heroClass!))
+      .filter((hero) => hero.class.includes(deckFilters.formFilters.heroClass!))
       .map((hero) => hero.name)
     // No decks will appear if class and hero are conflicting
-    if (deckFilters.hero && !heroesMatchingClass.includes(deckFilters.hero)) {
+    if (
+      deckFilters.formFilters.hero &&
+      !heroesMatchingClass.includes(deckFilters.formFilters.hero)
+    ) {
       results.value = []
       totalRecords.value = 0
       isSearching.value = false
@@ -195,7 +201,7 @@ const applyFilters = (query: ReturnType<typeof supabase.rpc>) => {
     query.in('hero', heroesMatchingClass)
   }
 
-  for (const card of deckFilters.cards) {
+  for (const card of deckFilters.formFilters.cards) {
     query.gte(`list->>${card.name}`, 1)
   }
 

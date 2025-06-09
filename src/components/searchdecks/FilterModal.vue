@@ -98,7 +98,7 @@ import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'
 
 const deckFilters = useDeckFilters()
-const form = reactive(deckFilters.getFormValues())
+const form = reactive({ ...deckFilters.formFilters })
 
 const submit = () => deckFilters.setFormValues(form)
 
@@ -129,7 +129,7 @@ const searchCards = (event: AutoCompleteCompleteEvent) => {
 }
 watch(
   () => deckFilters.isModalVisible,
-  () => deckFilters.isModalVisible && Object.assign(form, deckFilters.getFormValues()),
+  () => deckFilters.isModalVisible && Object.assign(form, deckFilters.formFilters),
 )
 </script>
 
