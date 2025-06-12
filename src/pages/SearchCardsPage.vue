@@ -2,21 +2,37 @@
   <CardModal />
   <main>
     <h1>Search <span class="primary-color">Cards</span></h1>
+    <div class="help-links">
+      <Button asChild v-slot="slotProps" aria-label="a">
+        <RouterLink
+          to="/query-help"
+          style="text-decoration: none"
+          :class="(slotProps as Record<string, string>).class"
+        >
+          <SearchCode class="p-button-icon p-button-icon-left" />
+          <span class="p-button-label">Query Help</span></RouterLink
+        >
+      </Button>
+      <Button asChild v-slot="slotProps" aria-label="a">
+        <RouterLink
+          to="/search/cards/advanced"
+          style="text-decoration: none"
+          :class="(slotProps as Record<string, string>).class"
+        >
+          <Filter class="p-button-icon p-button-icon-left" />
+          <span class="p-button-label">Advanced Search</span></RouterLink
+        >
+      </Button>
+    </div>
     <SideBarLayout>
-      <Toolbar>
-        <template #center>
-          <InputText type="text" v-model="query" placeholder="Search Query" />
-        </template>
-        <template #end>
-          <Tag value="Primary"
-            ><span
-              >{{ matchingCards.length }}&nbsp;Card<span v-if="matchingCards.length > 1"
-                >s</span
-              ></span
-            ></Tag
-          >
-        </template>
-      </Toolbar>
+      <InputGroup>
+        <InputText type="text" v-model="query" placeholder="Search Query" />
+        <InputGroupAddon>
+          {{ matchingCards.length }}&nbsp;Card<span v-if="matchingCards.length > 1"
+            >s</span
+          ></InputGroupAddon
+        >
+      </InputGroup>
       <div class="errors" v-if="parsedQuery.errors.length > 0">
         <Message severity="error" v-for="(error, index) in parsedQuery.errors" :key="index">{{
           error.message
@@ -39,7 +55,8 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { InputText, Message, ScrollTop, Tag, Toolbar } from 'primevue'
+import { Button, InputGroup, InputGroupAddon, InputText, Message, ScrollTop } from 'primevue'
+import { Filter, SearchCode } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import CardModal from '@/components/CardModal.vue'
@@ -134,19 +151,21 @@ main {
 h1 {
   text-align: center;
 }
+.help-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--inline-space);
+  margin-bottom: var(--block-space);
+}
 
-.p-toolbar {
+.p-inputgroup {
   margin-bottom: var(--block-space);
   position: sticky;
   top: calc(var(--block-space) * 4);
   z-index: 10;
   flex-wrap: nowrap;
   overflow: scroll;
-  width: 100%;
-}
-
-:deep(:is(.p-inputtext, .p-toolbar-center)) {
-  width: 100%;
 }
 
 .p-message {

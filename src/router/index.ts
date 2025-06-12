@@ -163,6 +163,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'SearchAdvanced',
+      path: '/search/cards/advanced',
+      component: () => import('@/pages/SearchAdvancedPage.vue'),
+      meta: {
+        title: 'Advanced Search • Sprout',
+      },
+    },
+    {
       name: 'SignOut',
       path: '/sign-out',
       component: () => null,
