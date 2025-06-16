@@ -3,8 +3,14 @@
     <h1><Sprout class="sprout" />Sprout</h1>
     <div class="subtitle">A deck building website for Plants vs. Zombies Heros.</div>
     <Message style="margin-top: var(--inline-space)"
-      >Card texts have been changed following the recent update. Images may take longer to be
-      updated. Please report any discrepancies to the
+      >Card texts have been changed following update 1.61.34 (Guardian, Mega-Grow and Solar). Images
+      may take longer to be updated since they are sourced from
+      <a
+        style="color: inherit; text-decoration: underline"
+        href="https://plantsvszombies.fandom.com/wiki/Plants_(PvZH)"
+        rel="noopener noreferrer"
+        >wiki</a
+      >. Please report any discrepancies to the
       <a
         href="https://github.com/BrettOrmsby/Sprout-PvZHeroes"
         style="color: inherit; text-decoration: underline"

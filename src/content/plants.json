@@ -24,7 +24,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n{{Truestrike}}<b>Bullseye</b>",
+    "abilities": "<b>Amphibious</b>, {{Truestrike}}<b>Bullseye</b>, <b>Team-Up</b>",
     "flavour": "\"I try to warn them, \"This is going to sting.\" But the Zombies, they never listen.\""
   },
   {
@@ -51,8 +51,8 @@
     "tribes": ["Nut"],
     "cost": 2,
     "strength": 2,
-    "health": 3,
-    "abilities": "",
+    "health": 4,
+    "abilities": "<b>Team-Up</b>",
     "flavour": "\"I'm a kind of ice cream! Sort of!\""
   },
   {
@@ -91,8 +91,8 @@
     "class": "Guardian",
     "type": "Plant",
     "tribes": ["Cactus", "Flower"],
-    "cost": 2,
-    "strength": 1,
+    "cost": 3,
+    "strength": 2,
     "health": 5,
     "abilities": "{{Truestrike}}<b>Bullseye</b>",
     "flavour": "\"It's true. I'm prickly on the outside but spongy on the inside.\""
@@ -119,7 +119,7 @@
     "class": "Guardian",
     "type": "Plant",
     "tribes": ["Mushroom"],
-    "cost": 2,
+    "cost": 1,
     "strength": 2,
     "health": 2,
     "abilities": "<b>Amphibious</b>",
@@ -162,7 +162,7 @@
     "type": "Plant",
     "tribes": ["Flower"],
     "cost": 3,
-    "strength": 2,
+    "strength": 3,
     "health": 2,
     "abilities": "<b>When played:</b> Plants here and next door get +2{{Heart}}.",
     "flavour": "She's got nerves of steel... and everything else of steel!"
@@ -330,9 +330,9 @@
     "type": "Plant",
     "tribes": ["Nut"],
     "cost": 4,
-    "strength": 3,
+    "strength": 4,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut}}, and its {{Strength}} becomes 3{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut}}, and its {{Strength}} becomes 4{{Strength}}.",
     "flavour": "A staunch believer in numerology, he'll go on at length about the significance of the number 3 if you let him."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play another {{Root:tribe:root type:f include:token}}, that {{Root:tribe:root type:f include:token}} gets +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root include:token}}.",
+    "abilities": "When you play a {{Root:tribe:root type:f include:token}}, both the {{Roots:tribe:root type:f include:token}} get +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root include:token}}.",
     "flavour": "His destiny is written in the starch."
   },
   {
@@ -385,10 +385,10 @@
     "class": "Guardian",
     "type": "Plant",
     "tribes": ["Nut"],
-    "cost": 2,
+    "cost": 3,
     "strength": 2,
-    "health": 2,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Truestrike}}<b>Bullseye</b>",
+    "health": 3,
+    "abilities": "{{Armored}}<b>Armored 1</b>, {{Truestrike}}<b>Bullseye</b>, <b>Team-Up</b>",
     "flavour": "What's better than a Wall-Nut? A Wall-Nut in a suit of armor, that's what."
   },
   {
@@ -430,7 +430,7 @@
     "cost": 5,
     "strength": null,
     "health": null,
-    "abilities": "Destroy all Plants and Zombies with 4{{Strength}} or more.",
+    "abilities": "Destroy all Plants and Zombies with 4{{Strength}} or more.\n<b>Conjure</b> a {{Mushroom:tribe:mushroom cost<5}} card that costs 4 or less",
     "flavour": "\"I could destroy everything you hold dear. It wouldn't be hard.\""
   },
   {
@@ -539,7 +539,7 @@
     "class": "Guardian",
     "type": "Plant",
     "tribes": ["Flower", "Root"],
-    "cost": 7,
+    "cost": 6,
     "strength": 5,
     "health": 10,
     "abilities": "{{Armored}}<b>Armored 1</b>\nIf your Hero would get hurt, this gets hurt instead.",
@@ -553,7 +553,7 @@
     "class": "Guardian",
     "type": "Trick",
     "tribes": ["Nut"],
-    "cost": 9,
+    "cost": 8,
     "strength": null,
     "health": null,
     "abilities": "Make a {{Wall-Nut:Wall-Nut c:1}} in each Ground lane.\nAttack for 6 damage in those lanes.",
@@ -568,7 +568,7 @@
     "type": "Plant",
     "tribes": ["Squash"],
     "cost": 5,
-    "strength": 3,
+    "strength": 4,
     "health": 6,
     "abilities": "<b>Team-Up</b>\n<b>Amphibious</b>\n<b>When played:</b> Fill your Super-Block Meter to full.",
     "flavour": "He moonlights as a decorative center piece during the fall."
@@ -626,7 +626,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "Zombie Tricks cost 1{{Brain}} more.",
+    "abilities": "Zombie Tricks cost 2{{Brain}} more.",
     "flavour": "\"I'd forget my own flower if it wasn't stuck to my head. Wait, what were we talking about?\""
   },
   {
@@ -696,7 +696,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a {{Grizzly Pear:Grizzly Pear}} here.",
+    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a 5{{Strength}}/4{{Heart}} {{Grizzly Pear:Grizzly Pear}} with <b>Amphibious</b> here and {{Fruit:t:Fruit type:f include:token}} Plants get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "So cute and cuddly and ... wait, what's that growling sound?"
   },
   {
@@ -722,9 +722,9 @@
     "type": "Plant",
     "tribes": ["Flower"],
     "cost": 4,
-    "strength": 2,
+    "strength": 3,
     "health": 7,
-    "abilities": "<b>Team-Up</b>\n<b>When played behind a Plant:</b> This becomes 7{{Strength}}/2{{Heart}}.",
+    "abilities": "<b>Team-Up</b>\n<b>When played behind a Plant:</b> This becomes 7{{Strength}}/3{{Heart}}.",
     "flavour": "\"I do stretching exercises every morning,\" he says. \"It's important to stay physically and mentally nimble.\""
   },
   {
@@ -752,7 +752,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant. It gets +4{{Heart}}.",
+    "abilities": "Move a Plant. It gets +4{{Heart}} and <b>Team-Up</b>.",
     "flavour": "Who doesn't like bubbles? Zombies...that's who."
   },
   {
@@ -1578,7 +1578,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}}.",
+    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "\"Feel the burn, I COMMAND YOU!\""
   },
   {
@@ -1590,7 +1590,7 @@
     "type": "Plant",
     "tribes": ["Leafy"],
     "cost": 2,
-    "strength": 1,
+    "strength": 2,
     "health": 3,
     "abilities": "<b>When played on Heights:</b> This gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "\"Coleslaw from above!\""
@@ -1606,7 +1606,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "A Plant gets +4{{Strength}}/+4{{Heart}}.",
     "flavour": "Stinky, sure, but powerful stuff. Ask any Plant."
   },
   {
@@ -1647,7 +1647,7 @@
     "tribes": ["Pea"],
     "cost": 3,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "{{DoubleStrike}}<b>Double Strike</b>",
     "flavour": "\"Yes! Yes! Let's do this! Let's do this!\""
   },
@@ -1662,7 +1662,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played:</b> This gets +1{{Strength}} this turn.",
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> This gets +1{{Strength}} this turn.",
     "flavour": "Little known fact: He used to have two teeth."
   },
   {
@@ -1717,7 +1717,7 @@
     "tribes": ["Pea"],
     "cost": 4,
     "strength": 3,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>When played on Heights:</b> This gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "The youngest Peashooter ever to earn a pilot's license. Also the only Peashooter ever to earn a pilot's license."
   },
@@ -1773,7 +1773,7 @@
     "tribes": ["Leafy", "Flower"],
     "cost": 1,
     "strength": 0,
-    "health": 1,
+    "health": 2,
     "abilities": "<b>Team-Up</b>\nOther Plants here and next door are {{Untrickable}}<b>Untrickable</b>.",
     "flavour": "She's not very frond of getting wet."
   },
@@ -1927,7 +1927,7 @@
     "tribes": ["Leafy", "Pea"],
     "cost": 2,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>Fusion:</b> A Plant played on this gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "Don't let the Dog Walker anywhere near it."
   },
@@ -1981,7 +1981,7 @@
     "class": "Mega-Grow",
     "type": "Trick",
     "tribes": ["Bean"],
-    "cost": 8,
+    "cost": 7,
     "strength": null,
     "health": null,
     "abilities": "A Plant does three Bonus Attacks.",
@@ -2192,7 +2192,7 @@
     "type": "Plant",
     "tribes": ["Flower"],
     "cost": 2,
-    "strength": 1,
+    "strength": 2,
     "health": 2,
     "abilities": "When you play another Plant on the Heights, that Plant gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "She's always trying to elevate her friends. She's good like that."
@@ -2207,7 +2207,7 @@
     "tribes": ["Fruit"],
     "cost": 4,
     "strength": 4,
-    "health": 4,
+    "health": 5,
     "abilities": "<b>When destroyed:</b> Make two {{Half-Bananas:Half-Banana}} next door.",
     "flavour": "\"I don't want to brag, but hanging out in a tub full of ice-cream all day ... not a bad gig if you can get it.\""
   },
@@ -2220,7 +2220,7 @@
     "type": "Plant",
     "tribes": ["Leafy"],
     "cost": 5,
-    "strength": 1,
+    "strength": 2,
     "health": 5,
     "abilities": "<b>When played: Conjure</b> an {{Event:is:plant r:e}} card. Plucky Clover gets +{{Strength}} equal to that card's cost.",
     "flavour": "She's a giver, no doubt. But she feels like she gets a lot out of it too."
@@ -3129,7 +3129,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Nut"],
-    "cost": 3,
+    "cost": 2,
     "strength": 2,
     "health": 2,
     "abilities": "<b>When played:</b> This gets +2{{Strength}}/+2{{Heart}} if there's a Plant with <b>{{Team-Up:a:team-up type:f}}</b> here.",
@@ -3159,7 +3159,7 @@
     "tribes": ["Squash"],
     "cost": 6,
     "strength": 6,
-    "health": 5,
+    "health": 6,
     "abilities": "",
     "flavour": "Sure, he and Squash are pals. But there's always an undercurrent of competition between them."
   },
@@ -3241,9 +3241,9 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Flower"],
-    "cost": 4,
+    "cost": 5,
     "strength": 3,
-    "health": 3,
+    "health": 5,
     "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
     "flavour": "\"Magnets? Gravity? Crikey, I don't have a clue why they come back.\""
   },
@@ -3272,7 +3272,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When an Environment is played, this gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "When an Environment is played, this gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "He's Peel deGrass Lichen's biggest fan."
   },
   {
@@ -3355,7 +3355,7 @@
     "tribes": ["Leafy"],
     "cost": 2,
     "strength": 2,
-    "health": 1,
+    "health": 3,
     "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, draw a card.",
     "flavour": "Got his start writing messages for fortune cookies."
   },
@@ -3409,7 +3409,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Flower"],
-    "cost": 5,
+    "cost": 4,
     "strength": 3,
     "health": 5,
     "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Start of Turn:</b> Heal your Hero for 1 for each {{Flower:t:flower -type:t}}.",
@@ -3425,7 +3425,7 @@
     "tribes": ["Flower"],
     "cost": 3,
     "strength": 2,
-    "health": 1,
+    "health": 2,
     "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> <b>Conjure</b> a {{Flower:t:flower}}, and it gets {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "She enjoys the simple things in life - hanging out with friends, fighting Zombies, and basking in cosmic rays."
   },
@@ -3509,7 +3509,7 @@
     "tribes": ["Flytrap"],
     "cost": 4,
     "strength": 2,
-    "health": 2,
+    "health": 3,
     "abilities": "<b>When played:</b> Destroy a Zombie here with 3{{Strength}} or less.",
     "flavour": "\"A free buffet? How kind! Don't mind if I do!\""
   },
@@ -3563,7 +3563,7 @@
     "class": "Solar",
     "type": "Trick",
     "tribes": ["Fruit"],
-    "cost": 6,
+    "cost": 5,
     "strength": null,
     "health": null,
     "abilities": "Destroy all Plants and Zombies on the Ground.",
@@ -3580,7 +3580,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Start of turn:</b> You get +1{{Sun}}.",
+    "abilities": "<b>Start of turn:</b> You get +2{{Sun}}.",
     "flavour": "Sunflowers are notorious pacifists. But isolated in the center of Hollow Earth, they evolved a new savagery. Sunny, adorable savagery."
   },
   {
@@ -3591,7 +3591,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Flower", "Seed"],
-    "cost": 3,
+    "cost": 2,
     "strength": 2,
     "health": 2,
     "abilities": "<b>When destroyed</b>: Make a {{Sunflower:Sunflower c:1 s:0}} here.",
@@ -3620,8 +3620,8 @@
     "type": "Plant",
     "tribes": ["Flower"],
     "cost": 5,
-    "strength": 3,
-    "health": 4,
+    "strength": 4,
+    "health": 5,
     "abilities": "When a Zombie hurts a {{Flower:t:flower type:f}}, destroy that Zombie.",
     "flavour": "\"You mess with the rose, you get the thorns!\""
   },
@@ -3647,7 +3647,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Corn"],
-    "cost": 10,
+    "cost": 9,
     "strength": 6,
     "health": 6,
     "abilities": "<b>When played:</b> Make a random Plant in each other lane.",
@@ -3731,7 +3731,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Mushroom"],
-    "cost": 2,
+    "cost": 1,
     "strength": 0,
     "health": 2,
     "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn and this transforms into a {{Sunnier-Shroom:Sunnier-Shroom}}.",
@@ -3775,7 +3775,7 @@
     "tribes": ["Mushroom", "Animal"],
     "cost": 6,
     "strength": 4,
-    "health": 4,
+    "health": 5,
     "abilities": "<b>When played:</b> Destroy a Zombie here with 4{{Strength}} or less.\n<b>Start of Turn:</b> You get +1{{Sun}} this turn.",
     "flavour": "Toadstool can't stand being idle. When there's work to be done, she's always the first to hop to it."
   },
