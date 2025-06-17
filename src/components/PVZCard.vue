@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="userSettings.cardView === 'text' && !forceImage"
+    v-if="userSettings.cardViewSettings.card_view === 'text' && !forceImage"
     @mouseover="() => (states.cardHover = card.name)"
     :class="{ 'text-view': true, 'not-valid': !isValid }"
   >
@@ -9,11 +9,11 @@
       <span class="card-name">{{ card.name }}</span>
     </div>
     <div class="right">
-      <div class="stats">
+      <div class="stats" v-if="userSettings.cardViewSettings.show_stats">
         <span v-if="card.strength !== null">{{ card.strength }}/{{ card.health }}</span>
       </div>
-      <span class="cost">{{ card.cost }}</span>
-      <SetPill :card="card" />
+      <span class="cost" v-if="userSettings.cardViewSettings.show_cost">{{ card.cost }}</span>
+      <SetPill :card="card" v-if="userSettings.cardViewSettings.show_set" />
     </div>
   </div>
   <div

@@ -47,6 +47,9 @@ export type User = {
 
 export type UserSettings = {
   card_view: 'text' | 'image'
+  show_set: boolean
+  show_cost: boolean
+  show_stats: boolean
 }
 
 export type Notification = {

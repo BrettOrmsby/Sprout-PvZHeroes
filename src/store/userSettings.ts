@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { ref } from 'vue'
+import { reactive } from 'vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
@@ -10,18 +10,23 @@ const { id } = useAuthUser()
 
 export const useUserSettingsStore = defineStore('user-settings', () => {
   // TODO: local storage this too
-  const cardView = ref('image')
+  const cardViewSettings = reactive({
+    card_view: 'image' as 'text' | 'image',
+    show_stats: true,
+    show_cost: true,
+    show_set: true,
+  })
   async function load() {
     const { data, error } = await supabase
       .from('profiles')
-      .select('card_view')
+      .select('card_view,show_cost,show_set,show_stats')
       .eq('id', id.value)
       .single()
     if (error) {
       throwError(error)
       return
     }
-    cardView.value = data.card_view
+    set(data)
   }
 
   async function update(data: Partial<UserSettings>) {
@@ -29,7 +34,7 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
       .from('profiles')
       .update(data)
       .eq('id', id.value)
-      .select()
+      .select('card_view,show_cost,show_set,show_stats')
       .single<UserSettings>()
 
     if (error) {
@@ -39,14 +44,19 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
   }
 
   async function set(data: UserSettings) {
-    cardView.value = data.card_view
+    Object.assign(cardViewSettings, data)
   }
 
   const $reset = () => {
-    cardView.value = 'image'
+    set({
+      card_view: 'image',
+      show_stats: true,
+      show_cost: true,
+      show_set: true,
+    })
   }
 
-  return { cardView, load, $reset, update }
+  return { cardViewSettings, load, set, $reset, update }
 })
 
 if (import.meta.hot) {

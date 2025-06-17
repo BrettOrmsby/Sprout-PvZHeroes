@@ -14,7 +14,8 @@
   gap: var(--block-space);
   justify-content: flex-start;
 }
-.card-container:has(.text-view) {
+.card-container:has(.text-view),
+.card-container:deep(:has(.text-view)) {
   gap: 0px;
   flex-direction: column;
 }

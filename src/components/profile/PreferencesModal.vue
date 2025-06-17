@@ -4,20 +4,32 @@
     :draggable="false"
     :modal="true"
     v-model:visible="isOpen"
-    style="mx-width: 900px; width: 100%; margin: var(--block-space)"
+    style="max-width: 900px; width: 100%; margin: var(--block-space)"
     header="User Preferences"
     ><span id="cardView">Card View</span>
-    <InputGroup>
-      <Select
-        aria-labelledby="cardView"
-        v-model="userSettings.cardView"
-        :options="cardViewOptions"
-        option-label="label"
-        option-value="value"
-      />
-      <Button label="Update" @click="updateCardView" :loading="isUpdatingCardView" />
-    </InputGroup>
-    <h2>Example Deck</h2>
+    <Select
+      aria-labelledby="cardView"
+      v-model="userSettings.cardViewSettings.card_view"
+      :options="cardViewOptions"
+      option-label="label"
+      option-value="value"
+      fluid
+    />
+    <span>Include Extras for Text View</span>
+    <label for="showStats"
+      ><Checkbox v-model="intermediateCheckboxes" inputId="showStats" value="show_stats" />
+      Stats</label
+    >
+    <label for="showCost"
+      ><Checkbox v-model="intermediateCheckboxes" inputId="showCost" value="show_cost" />
+      Cost</label
+    >
+    <label for="showSet"
+      ><Checkbox v-model="intermediateCheckboxes" inputId="showSet" value="show_set" /> Set</label
+    >
+
+    <Button label="Update" @click="updateCardView" :loading="isUpdating" />
+    <h2>Preview Changes</h2>
     <SideBarLayout>
       <CardContainer>
         <PVZCard
@@ -34,8 +46,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
-import { Button, Dialog, InputGroup, Select } from 'primevue'
+import { computed, ref, watch } from 'vue'
+import { Button, Checkbox, Dialog, Select } from 'primevue'
 import CardModal from '@/components/CardModal.vue'
 import CardContainer from '@/components/CardContainer.vue'
 import PVZCard from '@/components/PVZCard.vue'
@@ -48,9 +60,9 @@ import getCard from '@/lib/getCard'
 const userSettings = useUserSettingsStore()
 
 const isOpen = defineModel('open', { default: false, required: true })
-const initialCardView = ref(userSettings.cardView)
-const isUpdatingCardView = ref(false)
-const hasUpdatedCardView = ref(false)
+const initialValue = ref(userSettings.cardViewSettings)
+const isUpdating = ref(false)
+const hasUpdated = ref(false)
 
 const cardViewOptions = [
   { label: 'Image', value: 'image' },
@@ -60,32 +72,38 @@ const cardViewOptions = [
   },
 ]
 
-const updateCardView = async () => {
-  if (userSettings.cardView === initialCardView.value) {
-    isOpen.value = false
-    return
-  }
+const intermediateCheckboxes = computed({
+  get() {
+    return (['show_stats', 'show_set', 'show_cost'] as const).filter(
+      (key) => userSettings.cardViewSettings[key],
+    )
+  },
+  set(value: ('show_stats' | 'show_set' | 'show_cost')[]) {
+    for (const key of ['show_stats', 'show_set', 'show_cost'] as const) {
+      userSettings.cardViewSettings[key] = value.includes(key)
+    }
+  },
+})
 
-  isUpdatingCardView.value = true
-  const error = await userSettings.update({
-    card_view: userSettings.cardView as 'image' | 'text',
-  })
-  isUpdatingCardView.value = false
+const updateCardView = async () => {
+  isUpdating.value = true
+  const error = await userSettings.update(userSettings.cardViewSettings)
+  isUpdating.value = false
   if (error) {
     throwError(error)
   } else {
-    hasUpdatedCardView.value = true
+    hasUpdated.value = true
     isOpen.value = false
   }
 }
 
 watch(isOpen, () => {
   if (isOpen.value) {
-    initialCardView.value = userSettings.cardView
-  } else if (hasUpdatedCardView.value) {
-    hasUpdatedCardView.value = false
+    initialValue.value = { ...userSettings.cardViewSettings }
+  } else if (hasUpdated.value) {
+    hasUpdated.value = false
   } else {
-    userSettings.cardView = initialCardView.value
+    userSettings.set(initialValue.value)
   }
 })
 
@@ -121,8 +139,15 @@ const exampleCards = Object.keys(exampleDeck)
 
 <style scoped>
 label,
-span:has(+ :is(.p-select, .p-inputgroup)) {
+span {
   display: block;
   margin-bottom: var(--inline-space);
+}
+
+.p-select {
+  margin-bottom: var(--block-space);
+}
+.p-button {
+  margin-top: var(--block-space);
 }
 </style>
