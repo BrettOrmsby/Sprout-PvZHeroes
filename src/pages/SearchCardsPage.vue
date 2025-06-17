@@ -41,11 +41,11 @@
       <Message v-else-if="matchingCards.length === 0" :severity="'warn'" :closable="false">
         No Cards Found
       </Message>
-      <div v-else class="card-group">
+      <CardContainer v-else>
         <div v-for="card in matchingCards" :key="card.name">
           <PVZCard :is-valid="true" :card="card" :amount="4" @click="showCard(card.name)" />
         </div>
-      </div>
+      </CardContainer>
     </SideBarLayout>
     <ScrollTop />
   </main>
@@ -59,6 +59,7 @@ import { Button, InputGroup, InputGroupAddon, InputText, Message, ScrollTop } fr
 import { Filter, SearchCode } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
+import CardContainer from '@/components/CardContainer.vue'
 import CardModal from '@/components/CardModal.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
 import generateQuery from '@/lib/parse-query/generateQuery'
@@ -176,14 +177,7 @@ h1 {
   gap: var(--inline-space);
   flex-direction: column;
 }
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--block-space);
-  justify-content: center;
-  align-items: stretch;
-}
-:deep(.card-container) {
+:deep(.individual-card-container) {
   width: 100%;
   height: 100%;
   position: relative;

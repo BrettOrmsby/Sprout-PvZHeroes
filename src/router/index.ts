@@ -37,6 +37,12 @@ const router = createRouter({
       meta: {
         title: 'Gallery • Sprout',
       },
+      beforeEnter: () => {
+        states.deckFilter.hideCards = false
+        states.deckFilter.cardsMatchingFilter = []
+        states.deckFilter.errors = []
+        states.deckFilter.textQuery = ''
+      },
     },
     {
       name: 'Me',
@@ -112,6 +118,8 @@ const router = createRouter({
         document.title = `${deck.name} • Sprout`
         states.deckFilter.hideCards = false
         states.deckFilter.cardsMatchingFilter = []
+        states.deckFilter.errors = []
+        states.deckFilter.textQuery = ''
       },
     },
     {

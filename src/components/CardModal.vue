@@ -28,7 +28,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { Dialog } from 'primevue'
-import SetPill from './deck/SetPill.vue'
+import SetPill from './SetPill.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import CardClassImage from './CardClassImage.vue'
 import getCard from '@/lib/getCard'

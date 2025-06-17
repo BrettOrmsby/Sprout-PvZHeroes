@@ -22,7 +22,7 @@
       </TabList>
       <TabPanels>
         <TabPanel v-for="(cards, className) in cardsByClass" :key="className" :value="className">
-          <div class="library-container">
+          <CardContainer>
             <PVZCardWithMenu
               v-for="card in cards"
               :key="card.name"
@@ -35,7 +35,7 @@
                   !states.deckFilter.cardsMatchingFilter.includes(card.name),
               }"
             />
-          </div>
+          </CardContainer>
         </TabPanel>
       </TabPanels>
     </Tabs>
@@ -45,6 +45,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from 'primevue'
+import CardContainer from '@/components/CardContainer.vue'
 import PVZCardWithMenu from './PVZCardWithMenu.vue'
 import getHero from '@/lib/getHero'
 import { useDeckStore } from '@/store/deck'
@@ -101,21 +102,5 @@ const cardsByClass = computed(() => {
 .class {
   height: 1em;
   width: 1em;
-}
-
-.library-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: var(--block-space);
-  padding: var(--block-space);
-  justify-content: flex-start;
-}
-:deep(.hidden) {
-  display: none;
-}
-:deep(.highlighted) {
-  outline-offset: 4px;
-  outline: 2px solid var(--p-yellow-400);
 }
 </style>

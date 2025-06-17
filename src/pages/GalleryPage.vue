@@ -60,7 +60,7 @@
           <img class="class" :src="`/images/classes/${key.toLowerCase()}.png`" :alt="key" />
           <span>{{ key }}</span>
         </h2>
-        <div class="card-group">
+        <CardContainer>
           <div v-for="card in value" :key="card.name">
             <PVZCard
               :is-valid="true"
@@ -75,7 +75,7 @@
               }"
             />
           </div>
-        </div>
+        </CardContainer>
       </template>
     </SideBarLayout>
     <ScrollTop />
@@ -88,6 +88,7 @@ import { ref } from 'vue'
 import { Avatar, Button, Dialog, ScrollTop, Toolbar } from 'primevue'
 import { Highlighter } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
+import CardContainer from '@/components/CardContainer.vue'
 import CardModal from '@/components/CardModal.vue'
 import HeroModal from '@/components/HeroModal.vue'
 import TheFooter from '@/components/TheFooter.vue'
@@ -196,25 +197,13 @@ h2 {
   height: 1em;
   width: 1em;
 }
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--block-space);
-  justify-content: center;
-  align-items: stretch;
-}
 :deep(.amount) {
   display: none;
 }
-:deep(.card-container) {
+:deep(.individual-card-container) {
   width: 100%;
   height: 100%;
 }
-:deep(.highlighted) {
-  outline-offset: 4px;
-  outline: 2px solid var(--p-yellow-400);
-}
-:deep(.hidden),
 :deep(div:has(> .hidden)) {
   display: none;
 }

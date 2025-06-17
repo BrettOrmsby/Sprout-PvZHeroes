@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import { computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import SetPill from '@/components/deck/SetPill.vue'
+import SetPill from '@/components/SetPill.vue'
 import CardClassImage from '@/components/CardClassImage.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import getCard from '@/lib/getCard'
@@ -41,6 +41,10 @@ const route = useRoute()
 onMounted(() => {
   if (route.name === 'Gallery') {
     states.cardHover = 'Forget-Me-Nuts'
+    return
+  }
+  if (route.name === 'Profile') {
+    states.cardHover = 'Pea Pod'
     return
   }
   if (route.name === 'SearchCards') {

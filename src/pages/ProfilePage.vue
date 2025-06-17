@@ -2,6 +2,7 @@
   <main>
     <ChangeHeroModal v-model:open="isChangeHeroModalOpen" />
     <ChangeUsernameModal v-model:open="isChangeUsernameModalOpen" />
+    <PreferencesModal v-model:open="isPreferencesModalOpen" />
     <header>
       <div class="profile-container">
         <Avatar
@@ -46,6 +47,11 @@
           <CircleUser :class="iconClass.class" />
         </template>
       </Button>
+      <Button label="Preferences" severity="secondary" @click="openPreferences">
+        <template #icon="iconClass">
+          <Settings :class="iconClass.class" />
+        </template>
+      </Button>
     </div>
 
     <h2>Decks</h2>
@@ -66,12 +72,13 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
-import { CircleUser, Plus, UserPen } from 'lucide-vue-next'
+import { CircleUser, Plus, Settings, UserPen } from 'lucide-vue-next'
 import { Avatar, Button, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import ChangeHeroModal from '@/components/profile/ChangeHeroModal.vue'
 import ChangeUsernameModal from '@/components/profile/ChangeUsernameModal.vue'
+import PreferencesModal from '@/components/profile/PreferencesModal.vue'
 import getHero from '@/lib/getHero'
 import useAuthUser from '@/composables/UseAuthUser'
 import { useUserStore } from '@/store/user'
@@ -95,6 +102,10 @@ const changeHero = () => {
 const isChangeUsernameModalOpen = ref(false)
 const changeUsername = () => {
   isChangeUsernameModalOpen.value = true
+}
+const isPreferencesModalOpen = ref(false)
+const openPreferences = () => {
+  isPreferencesModalOpen.value = true
 }
 
 onBeforeRouteUpdate(async (to) => {

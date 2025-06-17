@@ -18,7 +18,7 @@
         <Message v-if="Object.values(value).length === 0" :severity="'warn'" :closable="false"
           >No Unique Cards</Message
         >
-        <div v-else class="card-group">
+        <CardContainer v-else>
           <PVZCard
             v-for="card in sortList(value)"
             :key="card.name"
@@ -27,7 +27,7 @@
             :amount="value[card.name]"
             @click="showCard(card.name)"
           />
-        </div>
+        </CardContainer>
       </template>
     </SideBarLayout>
   </main>
@@ -39,6 +39,7 @@ import { computed, ref } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { Message } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
+import CardContainer from '@/components/CardContainer.vue'
 import CardModal from '@/components/CardModal.vue'
 import CompareInput from '@/components/CompareInput.vue'
 import TheFooter from '@/components/TheFooter.vue'
@@ -134,14 +135,6 @@ h2 {
 .p-message {
   margin: 0 auto;
   width: fit-content;
-}
-
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--block-space);
-  justify-content: center;
-  align-items: stretch;
 }
 
 a {

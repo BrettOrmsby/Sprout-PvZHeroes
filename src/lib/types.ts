@@ -45,6 +45,10 @@ export type User = {
   hearts: string[]
 }
 
+export type UserSettings = {
+  card_view: 'text' | 'image'
+}
+
 export type Notification = {
   id: string
   is_read: boolean

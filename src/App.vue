@@ -7,18 +7,22 @@ import useAuthUser from '@/composables/UseAuthUser'
 import { useHeartStore } from '@/store/hearts'
 import { useNotificationsStore } from '@/store/notifications'
 import states from '@/store/states'
+import { useUserSettingsStore } from './store/userSettings'
 
 const { isSignedIn } = useAuthUser()
 const hearts = useHeartStore()
 const notifications = useNotificationsStore()
+const userSettings = useUserSettingsStore()
 
 const loadUserData = (isSignedIn: boolean) => {
   if (isSignedIn) {
     hearts.load()
     notifications.loadUnreadCount()
+    userSettings.load()
   } else {
     hearts.hearts = []
     notifications.unreadNotificationsCount = 0
+    userSettings.$reset()
   }
 }
 watch(isSignedIn, (newVal) => loadUserData(newVal))

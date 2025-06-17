@@ -16,6 +16,7 @@
           :is-valid="true"
           :amount="0"
           @click="viewCard(card.cardName)"
+          :force-image="true"
         />
         <Button
           :disabled="!card.hasMulligan"
@@ -132,8 +133,8 @@ h2,
   align-items: center;
   gap: var(--inline-space);
 }
-
-.card-container {
+/* TODO: is broken? */
+.individual-card-container {
   width: fit-content;
 }
 

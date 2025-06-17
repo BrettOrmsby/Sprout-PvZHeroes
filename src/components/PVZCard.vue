@@ -1,8 +1,26 @@
 <template>
   <div
+    v-if="userSettings.cardView === 'text' && !forceImage"
+    @mouseover="() => (states.cardHover = card.name)"
+    :class="{ 'text-view': true, 'not-valid': !isValid }"
+  >
+    <div class="left">
+      <span class="amount">{{ amount }}</span>
+      <span class="card-name">{{ card.name }}</span>
+    </div>
+    <div class="right">
+      <div class="stats">
+        <span v-if="card.strength !== null">{{ card.strength }}/{{ card.health }}</span>
+      </div>
+      <span class="cost">{{ card.cost }}</span>
+      <SetPill :card="card" />
+    </div>
+  </div>
+  <div
+    v-else
     @mouseover="() => (states.cardHover = card.name)"
     :class="{
-      'card-container': true,
+      'individual-card-container': true,
       'not-valid': !isValid,
       [card.rarity.toLowerCase()]: true,
     }"
@@ -23,14 +41,54 @@
 </template>
 
 <script lang="ts" setup>
+import SetPill from '@/components/SetPill.vue'
 import states from '@/store/states'
+import { useUserSettingsStore } from '@/store/userSettings'
 import type { Card } from '@/lib/types'
 
-defineProps<{ card: Card; amount: number; isValid: boolean }>()
+defineProps<{ card: Card; amount: number; isValid: boolean; forceImage?: boolean }>()
+
+const userSettings = useUserSettingsStore()
 </script>
 
 <style scoped>
-.card-container {
+.text-view {
+  width: 100%;
+  display: flex;
+  gap: var(--inline-space);
+  border-bottom: 1px solid var(--p-content-border-color);
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--inline-space);
+  cursor: pointer;
+  transition-duration: var(--p-transition-duration);
+}
+.left,
+.right {
+  display: flex;
+  gap: var(--inline-space);
+  align-items: center;
+}
+.text-view:hover .card-name {
+  text-decoration: underline;
+  text-decoration-color: var(--p-primary-400);
+}
+.text-view .stats {
+  width: 3ch;
+  text-align: center;
+}
+.text-view .amount {
+  color: var(--p-text-muted-color);
+  width: 1ch;
+}
+.p-badge {
+  width: 80px;
+}
+.text-view.highlighted {
+  background-color: var(--p-content-hover-background);
+}
+
+.individual-card-container {
   border-radius: var(--p-border-radius-md);
   aspect-ratio: 1/1;
   display: flex;
@@ -41,9 +99,15 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
   padding: var(--inline-space);
   cursor: pointer;
   background: var(--rarity-background);
+  transition-duration: var(--p-transition-duration);
+  outline: 1px solid transparent;
+}
+.individual-card-container.highlighted {
+  outline-offset: 4px;
+  outline: 2px solid var(--p-yellow-400);
 }
 
-.card-container:hover {
+.individual-card-container:hover {
   outline: 1px solid var(--p-primary-400);
 }
 
@@ -85,6 +149,9 @@ defineProps<{ card: Card; amount: number; isValid: boolean }>()
 }
 .not-valid img {
   filter: grayscale(100%);
+}
+.hidden {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {

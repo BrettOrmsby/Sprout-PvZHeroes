@@ -3,7 +3,7 @@
   <Message v-if="cards.length === 0" :severity="'warn'" :closable="false"
     >The Deck Is Empty</Message
   >
-  <div v-else class="library-container">
+  <CardContainer v-else>
     <template v-if="deck.isUsersDeck">
       <PVZCardWithMenu
         v-for="card in cards"
@@ -34,13 +34,14 @@
         @click="showCard(card.name)"
       />
     </template>
-  </div>
+  </CardContainer>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
 import { Message } from 'primevue'
+import CardContainer from '@/components/CardContainer.vue'
 import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import getCard from '@/lib/getCard'
@@ -82,19 +83,4 @@ onBeforeRouteUpdate(async (to) => {
 })
 </script>
 
-<style scoped>
-.library-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  gap: var(--block-space);
-  justify-content: flex-start;
-}
-:deep(.hidden) {
-  display: none;
-}
-:deep(.highlighted) {
-  outline-offset: 4px;
-  outline: 2px solid var(--p-yellow-400);
-}
-</style>
+<style scoped></style>
