@@ -11,7 +11,7 @@ const { id } = useAuthUser()
 export const useUserSettingsStore = defineStore('user-settings', () => {
   // TODO: local storage this too
   const cardViewSettings = reactive({
-    card_view: 'image' as 'text' | 'image',
+    card_view: 'image' as 'text' | 'image' | 'full_text',
     show_stats: true,
     show_cost: true,
     show_set: true,

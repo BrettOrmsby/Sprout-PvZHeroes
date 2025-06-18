@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="userSettings.cardViewSettings.card_view === 'text' && !forceImage"
+    v-if="userSettings.cardViewSettings.card_view !== 'image' && !forceImage"
     @mouseover="() => (states.cardHover = card.name)"
     :class="{ 'text-view': true, 'not-valid': !isValid }"
   >
@@ -10,9 +10,26 @@
     </div>
     <div class="right">
       <div class="stats" v-if="userSettings.cardViewSettings.show_stats">
-        <span v-if="card.strength !== null">{{ card.strength }}/{{ card.health }}</span>
+        <template v-if="card.strength !== null">
+          <span v-if="userSettings.cardViewSettings.card_view === 'full_text'"
+            >{{ card.strength }}/{{ card.health }}</span
+          >
+          <span v-else class="stats-image-container">
+            <img
+              :src="`/images/stats/strength/${card.strength}.png`"
+              :alt="card.strength.toString()"
+            />/
+            <img :src="`/images/stats/health/${card.health}.png`" :alt="card.health!.toString()" />
+          </span>
+        </template>
       </div>
-      <span class="cost" v-if="userSettings.cardViewSettings.show_cost">{{ card.cost }}</span>
+      <span class="cost" v-if="userSettings.cardViewSettings.show_cost"
+        ><span v-if="userSettings.cardViewSettings.card_view === 'full_text'">{{ card.cost }}</span
+        ><img
+          v-else
+          :src="`/images/stats/${isPlant ? 'sun' : 'brain'}/${card.cost}.png`"
+          :alt="card.cost.toString()"
+      /></span>
       <SetPill :card="card" v-if="userSettings.cardViewSettings.show_set" />
     </div>
   </div>
@@ -41,14 +58,19 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue'
 import SetPill from '@/components/SetPill.vue'
-import states from '@/store/states'
 import { useUserSettingsStore } from '@/store/userSettings'
+import states from '@/store/states'
 import type { Card } from '@/lib/types'
 
-defineProps<{ card: Card; amount: number; isValid: boolean; forceImage?: boolean }>()
+const props = defineProps<{ card: Card; amount: number; isValid: boolean; forceImage?: boolean }>()
 
 const userSettings = useUserSettingsStore()
+
+const isPlant = computed(() =>
+  ['Guardian', 'Kabloom', 'Mega-Grow', 'Smarty', 'Solar'].includes(props.card.class),
+)
 </script>
 
 <style scoped>
@@ -76,6 +98,22 @@ const userSettings = useUserSettingsStore()
 .text-view .stats {
   width: 3ch;
   text-align: center;
+}
+.text-view .stats:has(.stats-image-container) {
+  width: calc(3em + 1ch);
+}
+.stats-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stats-image-container img {
+  height: 1.5em;
+  width: 1.5em;
+}
+.text-view .cost img {
+  height: 1.5em;
+  width: 1.5em;
 }
 .text-view .amount {
   color: var(--p-text-muted-color);

@@ -15,7 +15,7 @@
       option-value="value"
       fluid
     />
-    <span>Include Extras for Text View</span>
+    <span>Include Extras for Text Views</span>
     <label for="showStats"
       ><Checkbox v-model="intermediateCheckboxes" inputId="showStats" value="show_stats" />
       Stats</label
@@ -69,6 +69,10 @@ const cardViewOptions = [
   {
     label: 'Text',
     value: 'text',
+  },
+  {
+    label: 'Full Text',
+    value: 'full_text',
   },
 ]
 
