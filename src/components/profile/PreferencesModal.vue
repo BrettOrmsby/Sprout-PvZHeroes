@@ -28,6 +28,16 @@
       ><Checkbox v-model="intermediateCheckboxes" inputId="showSet" value="show_set" /> Set</label
     >
 
+    <span id="showRealStats">Show Real Stats on Sidebar and When Viewing Card</span>
+    <Select
+      aria-labelledby="showRealStats"
+      v-model="userSettings.show_real_stats"
+      :options="showRealStatsOptions"
+      option-label="label"
+      option-value="value"
+      fluid
+    />
+
     <Button label="Update" @click="updateCardView" :loading="isUpdating" />
     <h2>Preview Changes</h2>
     <SideBarLayout>
@@ -60,7 +70,8 @@ import getCard from '@/lib/getCard'
 const userSettings = useUserSettingsStore()
 
 const isOpen = defineModel('open', { default: false, required: true })
-const initialValue = ref(userSettings.cardViewSettings)
+const initialCardViewValue = ref(userSettings.cardViewSettings)
+const initialShowRealStatsValue = ref(userSettings.show_real_stats)
 const isUpdating = ref(false)
 const hasUpdated = ref(false)
 
@@ -73,6 +84,13 @@ const cardViewOptions = [
   {
     label: 'Full Text',
     value: 'full_text',
+  },
+]
+const showRealStatsOptions = [
+  { label: 'Show Real Stats', value: true },
+  {
+    label: 'Hide Real Stats',
+    value: false,
   },
 ]
 
@@ -91,7 +109,10 @@ const intermediateCheckboxes = computed({
 
 const updateCardView = async () => {
   isUpdating.value = true
-  const error = await userSettings.update(userSettings.cardViewSettings)
+  const error = await userSettings.update({
+    show_real_stats: userSettings.show_real_stats,
+    ...userSettings.cardViewSettings,
+  })
   isUpdating.value = false
   if (error) {
     throwError(error)
@@ -103,11 +124,15 @@ const updateCardView = async () => {
 
 watch(isOpen, () => {
   if (isOpen.value) {
-    initialValue.value = { ...userSettings.cardViewSettings }
+    initialCardViewValue.value = { ...userSettings.cardViewSettings }
+    initialShowRealStatsValue.value = userSettings.show_real_stats
   } else if (hasUpdated.value) {
     hasUpdated.value = false
   } else {
-    userSettings.set(initialValue.value)
+    userSettings.set({
+      show_real_stats: initialShowRealStatsValue.value,
+      ...initialCardViewValue.value,
+    })
   }
 })
 
@@ -148,10 +173,8 @@ span {
   margin-bottom: var(--inline-space);
 }
 
-.p-select {
+.p-select,
+label:has(.p-checkbox-input):last-of-type {
   margin-bottom: var(--block-space);
-}
-.p-button {
-  margin-top: var(--block-space);
 }
 </style>

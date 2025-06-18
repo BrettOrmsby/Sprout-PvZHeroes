@@ -1,5 +1,5 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
-import { reactive } from 'vue'
+import { ref, reactive } from 'vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
@@ -16,10 +16,12 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
     show_cost: true,
     show_set: true,
   })
+  const show_real_stats = ref(false)
+
   async function load() {
     const { data, error } = await supabase
       .from('profiles')
-      .select('card_view,show_cost,show_set,show_stats')
+      .select('card_view,show_cost,show_set,show_stats,show_real_stats')
       .eq('id', id.value)
       .single()
     if (error) {
@@ -34,7 +36,7 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
       .from('profiles')
       .update(data)
       .eq('id', id.value)
-      .select('card_view,show_cost,show_set,show_stats')
+      .select('card_view,show_cost,show_set,show_stats,show_real_stats')
       .single<UserSettings>()
 
     if (error) {
@@ -44,7 +46,9 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
   }
 
   async function set(data: UserSettings) {
-    Object.assign(cardViewSettings, data)
+    const { show_real_stats: realStatChange, ...cardViewSettingsChanges } = data
+    Object.assign(cardViewSettingsChanges, data)
+    show_real_stats.value = realStatChange
   }
 
   const $reset = () => {
@@ -53,10 +57,11 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
       show_stats: true,
       show_cost: true,
       show_set: true,
+      show_real_stats: false,
     })
   }
 
-  return { cardViewSettings, load, set, $reset, update }
+  return { cardViewSettings, show_real_stats, load, set, $reset, update }
 })
 
 if (import.meta.hot) {

@@ -50,6 +50,7 @@ export type UserSettings = {
   show_set: boolean
   show_cost: boolean
   show_stats: boolean
+  show_real_stats: boolean
 }
 
 export type Notification = {
