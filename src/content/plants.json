@@ -183,7 +183,7 @@
   },
   {
     "name": "Spikeweed Sector",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/79/Spikeweed_SectorH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/spikeweed-sector.png",
     "set": "galactic",
     "rarity": "uncommon",
     "class": "Guardian",
@@ -281,7 +281,7 @@
   },
   {
     "name": "Prickly Pear",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/9b/Prickly_PearH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/prickly-pear.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Guardian",
@@ -295,7 +295,7 @@
   },
   {
     "name": "Smackadamia",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/bf/SmackadamiaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/smackadamia.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Guardian",
@@ -309,7 +309,7 @@
   },
   {
     "name": "Tough Beets",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/15/Tough_BeetsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/tough-beets.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Guardian",
@@ -463,7 +463,7 @@
   },
   {
     "name": "Gravitree",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/GravitreeH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/gravitree.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -491,7 +491,7 @@
   },
   {
     "name": "Primal Wall-Nut",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/81/Primal_Wall-NutH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/primal-wall-nut.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -505,7 +505,7 @@
   },
   {
     "name": "Marine Bean",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Marine_BeanH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750359430/marine-bean.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -785,7 +785,7 @@
   },
   {
     "name": "Ensign Uproot",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6a/Ensign_UprootH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/ensign-uproot.png",
     "set": "superpower",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -855,7 +855,7 @@
   },
   {
     "name": "Zapricot",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5b/ZapricotH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356586/zapricot.png",
     "set": "basic",
     "rarity": "common",
     "class": "Kabloom",
@@ -953,7 +953,7 @@
   },
   {
     "name": "Sizzle",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/58/SizzleH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/sizzle.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Kabloom",
@@ -995,7 +995,7 @@
   },
   {
     "name": "Invasive Species",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/89/Invasive_SpeciesH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/invasive-species.png",
     "set": "galactic",
     "rarity": "uncommon",
     "class": "Kabloom",
@@ -1023,7 +1023,7 @@
   },
   {
     "name": "Hot Lava",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/93/Hot_LavaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/hot-lava.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Kabloom",
@@ -1065,7 +1065,7 @@
   },
   {
     "name": "Wild Berry",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a3/Wild_BerryH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/wild-berry.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Kabloom",
@@ -1107,7 +1107,7 @@
   },
   {
     "name": "Poison Oak",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/a6/Poison_OakH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/poison-oak.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Kabloom",
@@ -1135,7 +1135,7 @@
   },
   {
     "name": "Lava Guava",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e5/Lava_GuavaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/lava-guava.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Kabloom",
@@ -1415,7 +1415,7 @@
   },
   {
     "name": "Blooming Heart",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0d/Blooming_HeartH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750359486/blooming-heart.png",
     "set": "event",
     "rarity": "event",
     "class": "Kabloom",
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "Atomic Bombegranate",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/af/Atomic_BombegranateH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/atomic-bombegranate.png",
     "set": "event",
     "rarity": "event",
     "class": "Kabloom",
@@ -1779,7 +1779,7 @@
   },
   {
     "name": "Half-Banana",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Half-BananaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/half-banana.png",
     "set": "triassic",
     "rarity": "uncommon",
     "class": "Mega-Grow",
@@ -1807,7 +1807,7 @@
   },
   {
     "name": "The Podfather",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/78/The_PodfatherH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/the-podfather.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Mega-Grow",
@@ -1849,7 +1849,7 @@
   },
   {
     "name": "Whipvine",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/26/WhipvineH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/whipvine.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Mega-Grow",
@@ -1863,7 +1863,7 @@
   },
   {
     "name": "Super-Phat Beets",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7a/Super-Phat_BeetsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356595/super-phat-beets.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Mega-Grow",
@@ -1877,7 +1877,7 @@
   },
   {
     "name": "Banana Peel",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/da/Banana_PeelH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/banana-peel.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Mega-Grow",
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "Cosmic Pea",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/14/Cosmic_PeaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356587/cosmic-pea.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Mega-Grow",
@@ -1947,7 +1947,7 @@
   },
   {
     "name": "Black-Eyed Pea",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/59/Black-Eyed_PeaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750359375/black-eyed-pea.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Mega-Grow",
@@ -1961,7 +1961,7 @@
   },
   {
     "name": "Potted Powerhouse",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/04/Potted_PowerhouseH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356586/potted-powerhouse.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Mega-Grow",
@@ -2423,7 +2423,7 @@
   },
   {
     "name": "Carrotillery",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/94/CarrotilleryH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/carrotillery.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Smarty",
@@ -2535,7 +2535,7 @@
   },
   {
     "name": "Lightning Reed",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/24/Lightning_ReedH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356589/lightning-reed.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Smarty",
@@ -2563,7 +2563,7 @@
   },
   {
     "name": "Navy Bean",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/9/96/Navy_BeanH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356586/navy-bean.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Smarty",
@@ -2661,7 +2661,7 @@
   },
   {
     "name": "Bean Counter",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/6b/Bean_CounterH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/bean-counter.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Smarty",
@@ -2703,7 +2703,7 @@
   },
   {
     "name": "Laser Cattail",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/0c/Laser_CattailH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/laser-cattail.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Smarty",
@@ -2913,7 +2913,7 @@
   },
   {
     "name": "Mayflower",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c2/MayflowerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/mayflower.png",
     "set": "event",
     "rarity": "event",
     "class": "Smarty",
@@ -3221,7 +3221,7 @@
   },
   {
     "name": "Venus Flytrap",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/74/Venus_FlytrapH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356586/venus-flytrap.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Solar",
@@ -3277,7 +3277,7 @@
   },
   {
     "name": "Apple-Saucer",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/c/c5/Apple-SaucerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/apple-saucer.png",
     "set": "galactic",
     "rarity": "uncommon",
     "class": "Solar",
@@ -3361,7 +3361,7 @@
   },
   {
     "name": "Magnifying Grass",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/86/Magnifying_GrassH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/magnifying-grass.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Solar",
@@ -3445,7 +3445,7 @@
   },
   {
     "name": "Elderberry",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/ElderberryH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356594/elderberry.png",
     "set": "colossal",
     "rarity": "rare",
     "class": "Solar",
@@ -3515,7 +3515,7 @@
   },
   {
     "name": "Laser Bean",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/8/8a/Laser_BeanH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356589/laser-bean.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Solar",
@@ -3599,7 +3599,7 @@
   },
   {
     "name": "Cross-Pollination",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/10/Cross-PollinationH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356588/cross-pollination.png",
     "set": "triassic",
     "rarity": "super-rare",
     "class": "Solar",
@@ -3683,7 +3683,7 @@
   },
   {
     "name": "Cob Cannon",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Cob_CannonH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356586/cob-cannon.png",
     "set": "colossal",
     "rarity": "legendary",
     "class": "Solar",
@@ -3711,7 +3711,7 @@
   },
   {
     "name": "Haunted Pumpking",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Haunted_PumpkingH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750356593/haunted-pumpking.png",
     "set": "event",
     "rarity": "event",
     "class": "Solar",
