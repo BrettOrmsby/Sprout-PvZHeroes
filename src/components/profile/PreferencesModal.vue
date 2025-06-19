@@ -6,7 +6,8 @@
     v-model:visible="isOpen"
     style="max-width: 900px; width: 100%; margin: var(--block-space)"
     header="User Preferences"
-    ><span id="cardView">Card View</span>
+  >
+    <span id="cardView">Card View</span>
     <Select
       aria-labelledby="cardView"
       v-model="userSettings.cardViewSettings.card_view"
@@ -70,8 +71,6 @@ import getCard from '@/lib/getCard'
 const userSettings = useUserSettingsStore()
 
 const isOpen = defineModel('open', { default: false, required: true })
-const initialCardViewValue = ref(userSettings.cardViewSettings)
-const initialShowRealStatsValue = ref(userSettings.show_real_stats)
 const isUpdating = ref(false)
 const hasUpdated = ref(false)
 
@@ -124,15 +123,11 @@ const updateCardView = async () => {
 
 watch(isOpen, () => {
   if (isOpen.value) {
-    initialCardViewValue.value = { ...userSettings.cardViewSettings }
-    initialShowRealStatsValue.value = userSettings.show_real_stats
+    userSettings.backup()
   } else if (hasUpdated.value) {
     hasUpdated.value = false
   } else {
-    userSettings.set({
-      show_real_stats: initialShowRealStatsValue.value,
-      ...initialCardViewValue.value,
-    })
+    userSettings.restore()
   }
 })
 

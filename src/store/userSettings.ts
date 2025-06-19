@@ -47,7 +47,7 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
 
   async function set(data: UserSettings) {
     const { show_real_stats: realStatChange, ...cardViewSettingsChanges } = data
-    Object.assign(cardViewSettingsChanges, data)
+    Object.assign(cardViewSettings, cardViewSettingsChanges)
     show_real_stats.value = realStatChange
   }
 
@@ -61,7 +61,17 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
     })
   }
 
-  return { cardViewSettings, show_real_stats, load, set, $reset, update }
+  const backupValue = ref({ ...cardViewSettings, show_real_stats: show_real_stats.value })
+  function backup() {
+    backupValue.value = { ...cardViewSettings, show_real_stats: show_real_stats.value }
+    console.log(backupValue.value)
+  }
+  function restore() {
+    console.log('Set', backupValue.value)
+    set(backupValue.value)
+  }
+
+  return { cardViewSettings, show_real_stats, load, $reset, update, backup, restore }
 })
 
 if (import.meta.hot) {

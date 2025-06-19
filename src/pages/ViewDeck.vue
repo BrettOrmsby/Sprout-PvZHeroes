@@ -3,8 +3,11 @@
   <HeroModal />
   <DeckHeader />
   <main>
+    <DeckToolbar />
     <SideBarLayout>
-      <DeckToolbar />
+      <Divider />
+      <ViewSettings />
+      <Divider />
       <TheDeck />
       <AddCards v-if="deck.isUsersDeck" />
     </SideBarLayout>
@@ -29,6 +32,7 @@ import DeckFooter from '@/components/deck/DeckFooter.vue'
 import DrawSimulator from '@/components/deck/DrawSimulator.vue'
 import DeckCharts from '@/components/deck/DeckCharts.vue'
 import DeckToolbar from '@/components/deck/DeckToolbar.vue'
+import ViewSettings from '@/components/deck/ViewSettings.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import useHoverShortcut from '@/composables/useHoverShortcut'
 import { useDeckStore } from '@/store/deck'
