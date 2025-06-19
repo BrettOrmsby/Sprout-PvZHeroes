@@ -9,7 +9,6 @@ const { supabase } = useSupabase()
 const { id } = useAuthUser()
 
 export const useUserSettingsStore = defineStore('user-settings', () => {
-  // TODO: local storage this too
   const cardViewSettings = reactive({
     card_view: 'image' as 'text' | 'image' | 'full_text',
     show_stats: true,
@@ -64,10 +63,8 @@ export const useUserSettingsStore = defineStore('user-settings', () => {
   const backupValue = ref({ ...cardViewSettings, show_real_stats: show_real_stats.value })
   function backup() {
     backupValue.value = { ...cardViewSettings, show_real_stats: show_real_stats.value }
-    console.log(backupValue.value)
   }
   function restore() {
-    console.log('Set', backupValue.value)
     set(backupValue.value)
   }
 
