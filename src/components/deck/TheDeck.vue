@@ -83,4 +83,8 @@ onBeforeRouteUpdate(async (to) => {
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+h2 {
+  margin-top: 1rem;
+}
+</style>

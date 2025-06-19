@@ -96,6 +96,7 @@ onUnmounted(() => userSettings.restore())
   align-items: center;
   gap: var(--block-space);
   flex-wrap: wrap;
+  margin-top: var(--block-space);
 }
 .option {
   display: flex;
