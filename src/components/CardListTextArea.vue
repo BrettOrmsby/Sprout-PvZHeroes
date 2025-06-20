@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 // Note: this does not re-update if the modelValue changes from the parent
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { Textarea } from 'primevue'
 import getCard from '@/lib/getCard'
 import getHero from '@/lib/getHero'
@@ -140,6 +140,9 @@ const formatErrorMessage = (key: keyof CardListErrors, list: (string | number)[]
 
 const arrayToList = (array: (string | number)[]) =>
   array.join(', ').replace(/, ((?:.(?!, ))+)$/, ' and $1')
+
+// If the hero is changed, some cards may not be valid
+watch(computedHero, onChange)
 </script>
 
 <style scoped>
