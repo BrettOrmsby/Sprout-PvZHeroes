@@ -58,6 +58,8 @@ import HeroSelect from '@/components/HeroSelect.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
 import useAuthUser from '@/composables/UseAuthUser'
+import calculateSparkCost from '@/lib/calculateSparkCost'
+import getCard from '@/lib/getCard'
 import throwError from '@/lib/throwError'
 
 const visibilityOptions = [
@@ -114,6 +116,10 @@ const createDeck = async () => {
       is_complete:
         Object.values(deckInfo.list).reduce((prev: number, curr: number) => prev + curr, 0) === 40,
       list: deckInfo.list,
+      sparks: Object.entries(deckInfo.list).reduce(
+        (sum, [card, quantity]) => sum + quantity * calculateSparkCost(getCard(card)),
+        0,
+      ),
     })
     .select('id')
     .single()
