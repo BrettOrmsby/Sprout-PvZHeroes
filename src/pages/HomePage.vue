@@ -2,7 +2,7 @@
   <main>
     <h1><Sprout class="sprout" />Sprout</h1>
     <div class="subtitle">A deck building website for Plants vs. Zombies Heros.</div>
-    <Message style="margin-top: var(--inline-space)"
+    <!-- <Message style="margin-top: var(--inline-space)"
       >Card texts have been changed following update 1.61.34 (Guardian, Mega-Grow and Solar). Images
       may take longer to be updated since they are sourced from
       <a
@@ -17,7 +17,7 @@
         target="_blank"
         >Github</a
       >.</Message
-    >
+    > -->
 
     <div v-if="isSignedIn">
       <h2>Your Latest Decks</h2>

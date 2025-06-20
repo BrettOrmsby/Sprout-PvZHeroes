@@ -43,7 +43,7 @@
   },
   {
     "name": "Pismashio",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/4/43/PismashioH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750437961/pismashio.png",
     "set": "basic",
     "rarity": "common",
     "class": "Guardian",
@@ -85,7 +85,7 @@
   },
   {
     "name": "Cactus",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/67/CactusH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438081/cactus.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Guardian",
@@ -113,7 +113,7 @@
   },
   {
     "name": "Sea-Shroom",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/2/29/Sea-ShroomH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438020/sea-shroom.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Guardian",
@@ -155,7 +155,7 @@
   },
   {
     "name": "Steel Magnolia",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/ea/Steel_MagnoliaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438137/steel-magnolia.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Guardian",
@@ -323,7 +323,7 @@
   },
   {
     "name": "Cosmic Nut",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b6/Cosmic_NutH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438456/cosmic-nut.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Guardian",
@@ -379,7 +379,7 @@
   },
   {
     "name": "Jugger-Nut",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/38/Jugger-NutH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438229/jugger-nut.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Guardian",
@@ -533,7 +533,7 @@
   },
   {
     "name": "Soul Patch",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/52/Soul_PatchH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438281/soul-patch.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Guardian",
@@ -547,7 +547,7 @@
   },
   {
     "name": "Wall-Nut Bowling",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/6/63/Wall-Nut_BowlingH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438347/wall-nut-bowling.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Guardian",
@@ -561,7 +561,7 @@
   },
   {
     "name": "Body-Gourd",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/Body-GourdH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438518/body-gourd.png",
     "set": "galactic",
     "rarity": "legendary",
     "class": "Guardian",
@@ -715,7 +715,7 @@
   },
   {
     "name": "Red Stinger",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/55/Red_StingerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438392/red-stinger.png",
     "set": "event",
     "rarity": "event",
     "class": "Guardian",
@@ -1583,7 +1583,7 @@
   },
   {
     "name": "Cabbage-Pult",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d9/Cabbage-PultH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438588/cabbage-pult.png",
     "set": "basic",
     "rarity": "common",
     "class": "Mega-Grow",
@@ -1639,7 +1639,7 @@
   },
   {
     "name": "Repeater",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d8/RepeaterH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446438/repeater.png",
     "set": "basic",
     "rarity": "common",
     "class": "Mega-Grow",
@@ -1709,7 +1709,7 @@
   },
   {
     "name": "Skyshooter",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d4/SkyshooterH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750438635/skyshooter.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Mega-Grow",
@@ -1765,7 +1765,7 @@
   },
   {
     "name": "Umbrella Leaf",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/0/05/Umbrella_LeafH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446724/pea-patch.png",
     "set": "colossal",
     "rarity": "uncommon",
     "class": "Mega-Grow",
@@ -1975,7 +1975,7 @@
   },
   {
     "name": "Espresso Fiesta",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d3/Espresso_FiestaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446489/espresso-fiesta.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Mega-Grow",
@@ -2185,7 +2185,7 @@
   },
   {
     "name": "Lily of the Valley",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/d7/Lily_of_the_ValleyH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446585/lily-of%20the-valley.png",
     "set": "event",
     "rarity": "event",
     "class": "Mega-Grow",
@@ -2199,7 +2199,7 @@
   },
   {
     "name": "Banana Split",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/3/3c/Banana_SplitH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446532/banana-split.png",
     "set": "event",
     "rarity": "event",
     "class": "Mega-Grow",
@@ -2213,7 +2213,7 @@
   },
   {
     "name": "Plucky Clover",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/75/Plucky_CloverH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446630/plucky-clover.png",
     "set": "event",
     "rarity": "event",
     "class": "Mega-Grow",
@@ -3123,7 +3123,7 @@
   },
   {
     "name": "Mixed Nuts",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/b/b3/Mixed_NutsH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446909/mixed-nuts.png",
     "set": "basic",
     "rarity": "common",
     "class": "Solar",
@@ -3151,7 +3151,7 @@
   },
   {
     "name": "Smashing Pumpkin",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/aa/Smashing_PumpkinH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446774/smashing-pumpkin.png",
     "set": "basic",
     "rarity": "common",
     "class": "Solar",
@@ -3235,7 +3235,7 @@
   },
   {
     "name": "Bloomerang",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f4/BloomerangH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446953/bloomerang.png",
     "set": "premium",
     "rarity": "uncommon",
     "class": "Solar",
@@ -3347,7 +3347,7 @@
   },
   {
     "name": "Sage Sage",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e2/Sage_SageH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446814/sage-sage.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Solar",
@@ -3403,7 +3403,7 @@
   },
   {
     "name": "Power Flower",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/7/7d/Power_FlowerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750447005/power-flower.png",
     "set": "premium",
     "rarity": "rare",
     "class": "Solar",
@@ -3417,7 +3417,7 @@
   },
   {
     "name": "Cosmic Flower",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/1b/Cosmic_FlowerH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750447128/cosmic-flower.png",
     "set": "galactic",
     "rarity": "rare",
     "class": "Solar",
@@ -3501,7 +3501,7 @@
   },
   {
     "name": "Chomper",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/e/e9/ChomperH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750447039/chomper.png",
     "set": "premium",
     "rarity": "super-rare",
     "class": "Solar",
@@ -3557,7 +3557,7 @@
   },
   {
     "name": "Tactical Cuke",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/f/f0/Tactical_CukeH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750447191/tactical-cuke.png",
     "set": "galactic",
     "rarity": "super-rare",
     "class": "Solar",
@@ -3585,7 +3585,7 @@
   },
   {
     "name": "Sunflower Seed",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/5f/Sunflower_SeedH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750448783/sunflower-seed.png",
     "set": "colossal",
     "rarity": "super-rare",
     "class": "Solar",
@@ -3613,7 +3613,7 @@
   },
   {
     "name": "Briar Rose",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/5/50/Briar_RoseH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750447086/briar-rose.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Solar",
@@ -3641,7 +3641,7 @@
   },
   {
     "name": "Cornucopia",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/d/df/CornucopiaH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750446853/cornucopia.png",
     "set": "premium",
     "rarity": "legendary",
     "class": "Solar",
@@ -3725,7 +3725,7 @@
   },
   {
     "name": "Sun-Shroom",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/a/ac/Sun-ShroomH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750448700/sun-shroom.png",
     "set": "event",
     "rarity": "event",
     "class": "Solar",
@@ -3767,7 +3767,7 @@
   },
   {
     "name": "Toadstool",
-    "image": "https://static.wikia.nocookie.net/plantsvszombies/images/1/12/ToadstoolH.png",
+    "image": "https://res.cloudinary.com/dfdd6nopw/image/upload/v1750448736/toadstool.png",
     "set": "event",
     "rarity": "event",
     "class": "Solar",
