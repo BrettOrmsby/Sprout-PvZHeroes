@@ -6,13 +6,14 @@ import TheHeader from '@/components/TheHeader.vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import { useHeartStore } from '@/store/hearts'
 import { useNotificationsStore } from '@/store/notifications'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import { useUserSettingsStore } from './store/userSettings'
 
 const { isSignedIn } = useAuthUser()
 const hearts = useHeartStore()
 const notifications = useNotificationsStore()
 const userSettings = useUserSettingsStore()
+const states = useStatesStore()
 
 const loadUserData = (isSignedIn: boolean) => {
   if (isSignedIn) {

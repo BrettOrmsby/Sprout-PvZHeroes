@@ -71,13 +71,14 @@ import { Button, Dialog, InputText, Select, Textarea, useConfirm } from 'primevu
 import CardListTextArea from '@/components/CardListTextArea.vue'
 import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 
 const visibilityOptions = [
   { label: 'Public', value: false },
   { label: 'Private', value: true },
 ]
+const states = useStatesStore()
 const deck = useDeckStore()
 
 const { supabase } = useSupabase()

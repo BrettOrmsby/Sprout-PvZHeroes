@@ -38,8 +38,10 @@ import { Button, Message } from 'primevue'
 import { Grid2X2, RotateCw } from 'lucide-vue-next'
 import PVZCard from '@/components/PVZCard.vue'
 import getCard from '@/lib/getCard'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import { useDeckStore } from '@/store/deck'
+
+const states = useStatesStore()
 
 type DrawCard = {
   cardName: string
@@ -133,7 +135,7 @@ h2,
   align-items: center;
   gap: var(--inline-space);
 }
-/* TODO: is broken? */
+
 .individual-card-container {
   width: fit-content;
 }

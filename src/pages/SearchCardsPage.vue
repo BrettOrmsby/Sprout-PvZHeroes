@@ -64,7 +64,7 @@ import CardModal from '@/components/CardModal.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import superpowers from '@/content/superpowers.json'
@@ -73,6 +73,7 @@ import type { Card } from '@/lib/types'
 
 const route = useRoute()
 const router = useRouter()
+const states = useStatesStore()
 
 const query = ref(route.query.query?.toString() || '')
 

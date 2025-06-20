@@ -49,11 +49,12 @@ import CardContainer from '@/components/CardContainer.vue'
 import PVZCardWithMenu from './PVZCardWithMenu.vue'
 import getHero from '@/lib/getHero'
 import { useDeckStore } from '@/store/deck'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'
 
+const states = useStatesStore()
 const deck = useDeckStore()
 
 const hero = computed(() => getHero(deck.hero))

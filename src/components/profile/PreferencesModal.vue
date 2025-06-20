@@ -65,10 +65,11 @@ import PVZCard from '@/components/PVZCard.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
 import throwError from '@/lib/throwError'
 import { useUserSettingsStore } from '@/store/userSettings'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import getCard from '@/lib/getCard'
 
 const userSettings = useUserSettingsStore()
+const states = useStatesStore()
 
 const isOpen = defineModel('open', { default: false, required: true })
 const isUpdating = ref(false)

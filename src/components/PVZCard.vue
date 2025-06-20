@@ -61,11 +61,12 @@
 import { computed } from 'vue'
 import SetPill from '@/components/SetPill.vue'
 import { useUserSettingsStore } from '@/store/userSettings'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import type { Card } from '@/lib/types'
 
 const props = defineProps<{ card: Card; amount: number; isValid: boolean; forceImage?: boolean }>()
 
+const states = useStatesStore()
 const userSettings = useUserSettingsStore()
 
 const isPlant = computed(() =>

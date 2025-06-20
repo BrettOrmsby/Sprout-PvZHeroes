@@ -42,7 +42,7 @@ import CardClassImage from '@/components/CardClassImage.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import getCard from '@/lib/getCard'
 import getHero from '@/lib/getHero'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 import { useUserSettingsStore } from '@/store/userSettings'
 import plants from '@/content/plants.json'
@@ -50,6 +50,7 @@ import zombies from '@/content/zombies.json'
 
 const deck = useDeckStore()
 const userSettings = useUserSettingsStore()
+const states = useStatesStore()
 
 const card = computed(() => getCard(states.cardHover))
 const isPlant = computed(() =>

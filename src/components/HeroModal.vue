@@ -39,10 +39,11 @@
 import { computed } from 'vue'
 import { Dialog } from 'primevue'
 import getCard from '@/lib/getCard'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import heroData from '@/content/heroes.json'
 import type { Hero } from '@/lib/types'
 
+const states = useStatesStore()
 const hero = computed<Hero>(() => heroData.find((e) => e.name === states.heroModal.hero) as Hero)
 
 const superPowers = computed(() => [hero.value.mainSuperPower, ...hero.value.altSuperPowers])

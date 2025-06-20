@@ -47,9 +47,10 @@ import ReplaceCardText from '@/components/ReplaceCardText.vue'
 import CardClassImage from './CardClassImage.vue'
 import getCard from '@/lib/getCard'
 import { useUserSettingsStore } from '@/store/userSettings'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 
 const userSettings = useUserSettingsStore()
+const states = useStatesStore()
 const card = computed(() => getCard(states.cardModal.card))
 
 const isPlant = computed(() =>

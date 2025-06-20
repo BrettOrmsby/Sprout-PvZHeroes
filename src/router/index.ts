@@ -3,7 +3,7 @@ import useAuthUser from '@/composables/UseAuthUser'
 import useSupabase from '@/composables/UseSupabase'
 import { useUserStore } from '@/store/user'
 import { useCompareStore, useDeckStore } from '@/store/deck'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -38,10 +38,13 @@ const router = createRouter({
         title: 'Gallery • Sprout',
       },
       beforeEnter: () => {
-        states.deckFilter.hideCards = false
-        states.deckFilter.cardsMatchingFilter = []
-        states.deckFilter.errors = []
-        states.deckFilter.textQuery = ''
+        const states = useStatesStore()
+        Object.assign(states.deckFilter, {
+          hideCards: false,
+          cardsMatchingFilter: [],
+          errors: [],
+          textQuery: '',
+        })
       },
     },
     {
@@ -116,10 +119,13 @@ const router = createRouter({
         }
 
         document.title = `${deck.name} • Sprout`
-        states.deckFilter.hideCards = false
-        states.deckFilter.cardsMatchingFilter = []
-        states.deckFilter.errors = []
-        states.deckFilter.textQuery = ''
+        const states = useStatesStore()
+        Object.assign(states.deckFilter, {
+          hideCards: false,
+          cardsMatchingFilter: [],
+          errors: [],
+          textQuery: '',
+        })
       },
     },
     {
@@ -228,6 +234,7 @@ router.beforeEach((to, _, next) => {
 })
 
 router.beforeEach(async (to) => {
+  const states = useStatesStore()
   states.loadingRoute = true
 
   if (to.meta.requiresAuth) {
@@ -238,6 +245,9 @@ router.beforeEach(async (to) => {
     }
   }
 })
-router.afterEach(() => (states.loadingRoute = false))
+router.afterEach(() => {
+  const states = useStatesStore()
+  states.loadingRoute = false
+})
 
 export default router

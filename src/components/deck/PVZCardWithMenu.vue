@@ -30,12 +30,13 @@ import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from 'lucide-vue-next'
 import { Menu } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
 import { useDeckStore } from '@/store/deck'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import heroData from '@/content/heroes.json'
 import type { Card, Hero } from '@/lib/types'
 
 const props = defineProps<{ card: Card; isInDeck: boolean }>()
 
+const states = useStatesStore()
 const deck = useDeckStore()
 const hero = computed<Hero>(() => heroData.find((e) => e.name === deck.hero) as Hero)
 
@@ -90,7 +91,7 @@ const viewCard = () => {
   states.cardModal.card = props.card.name
   states.cardModal.show = true
 }
-// TODO: somehow show loading for commands
+
 const menu = ref()
 
 const toggle = (event: Event) => {

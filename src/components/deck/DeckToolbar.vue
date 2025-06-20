@@ -45,10 +45,11 @@ import useSupabase from '@/composables/UseSupabase'
 import throwError from '@/lib/throwError'
 import { useDeckStore } from '@/store/deck'
 import { useToast } from 'primevue/usetoast'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import type { Deck } from '@/lib/types'
 
 const deck = useDeckStore()
+const states = useStatesStore()
 
 const { id, isSignedIn } = useAuthUser()
 const { supabase } = useSupabase()

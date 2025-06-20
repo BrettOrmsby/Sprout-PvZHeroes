@@ -94,11 +94,13 @@ import HeroModal from '@/components/HeroModal.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import heroData from '@/content/heroes.json'
 import plants from '@/content/plants.json'
 import zombies from '@/content/zombies.json'
 import type { Card } from '@/lib/types'
+
+const states = useStatesStore()
 
 const cards: Card[] = [...plants, ...zombies].filter(
   (e) => e.class !== 'Removed' && e.set !== 'token' && e.set !== 'superpower',

@@ -94,11 +94,12 @@ import useAuthUser from '@/composables/UseAuthUser'
 import { useUserStore } from '@/store/user'
 import { useHeartStore } from '@/store/hearts'
 import { useDeckStore } from '@/store/deck'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 
 const user = useUserStore()
 const deck = useDeckStore()
 const hearts = useHeartStore()
+const states = useStatesStore()
 const { isSignedIn } = useAuthUser()
 
 dayjs.extend(relativeTime)

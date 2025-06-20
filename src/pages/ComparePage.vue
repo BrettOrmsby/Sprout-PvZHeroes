@@ -46,12 +46,13 @@ import TheFooter from '@/components/TheFooter.vue'
 import SideBarLayout from '@/components/SideBarLayout.vue'
 import getCard from '@/lib/getCard'
 import { useCompareStore, useDeckStore } from '@/store/deck'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 
 defineProps<{ id: string; to: string }>()
 
 const deck = useDeckStore()
 const compareDeck = useCompareStore()
+const states = useStatesStore()
 
 const getDeck = (id: string) => (deck.id === id ? deck : compareDeck)
 const getListCount = (list: Record<string, number>) =>

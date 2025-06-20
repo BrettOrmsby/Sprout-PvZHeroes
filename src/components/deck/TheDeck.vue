@@ -45,12 +45,13 @@ import CardContainer from '@/components/CardContainer.vue'
 import PVZCardWithMenu from '@/components/deck/PVZCardWithMenu.vue'
 import PVZCard from '@/components/PVZCard.vue'
 import getCard from '@/lib/getCard'
-import states from '@/store/states'
+import { useStatesStore } from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 import { useUserStore } from '@/store/user'
 
 const user = useUserStore()
 const deck = useDeckStore()
+const states = useStatesStore()
 
 const cards = computed(() =>
   Object.keys(deck.list)
