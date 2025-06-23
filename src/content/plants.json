@@ -626,7 +626,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "Zombie Tricks cost 2{{Brain}} more.",
+    "abilities": "Zombie Tricks cost 1{{Brain}} more.",
     "flavour": "\"I'd forget my own flower if it wasn't stuck to my head. Wait, what were we talking about?\""
   },
   {
@@ -1242,7 +1242,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen you play another Plant, do 1 damage to the Zombie Hero.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nWhen you play a Plant, do 1 damage to the Zombie Hero.",
     "flavour": "He's had good meetings with a lot of smaller asteroids. They really made an impression."
   },
   {
@@ -1578,7 +1578,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}}.",
     "flavour": "\"Feel the burn, I COMMAND YOU!\""
   },
   {
@@ -1788,7 +1788,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: All {{Fruit:t:Fruit type:f include:token}} in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When destroyed</b>: All {{Fruits:t:Fruit type:f include:token}} in your hand get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "\"Have you met my better half? She's around here somewhere.\""
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "When you play another {{Pea:tribe:pea type:f}}, that Pea gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When you play a {{Pea:tribe:pea type:f}}, that Pea gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "\"It ain't easy keeping the peas in this family.\""
   },
   {
@@ -2096,7 +2096,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Plant.",
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Plant.",
     "flavour": "\"Can you spot me, bro?\""
   },
   {
@@ -2194,7 +2194,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play another Plant on the Heights, that Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When you play a Plant on the Heights, that Plant gets +2{{Strength}}/+2{{Heart}}.",
     "flavour": "She's always trying to elevate her friends. She's good like that."
   },
   {
@@ -2530,7 +2530,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play another {{Bean:t:bean}}, do 2 damage to the Zombie Hero.",
+    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play a {{Bean:t:bean}}, do 2 damage to the Zombie Hero.",
     "flavour": "\"Heavy is the weight of my command. And my cap. Heavy is the cap.\""
   },
   {
@@ -2572,7 +2572,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\n<b>When played:</b> All <b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\n<b>When played:</b> All <b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants get +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Was *this* close to becoming an Army Bean."
   },
   {
@@ -2670,7 +2670,7 @@
     "cost": 4,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play another {{Bean:t:bean}}.\n<b>When played:</b> Gain two {{Weenie Beanies:Weenie Beanie}}.",
+    "abilities": "<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a {{Bean:t:bean}}.\n<b>When played:</b> Gain two 1{{Strength}}/1{{Heart}} {{Weenie Beanies:Weenie Beanie}}.",
     "flavour": "\"Every bean is accounted for. I assure you, they all add up.\""
   },
   {
@@ -2712,7 +2712,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a Plant here.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a Plant here.",
     "flavour": "He's really good at entertaining himself."
   },
   {
@@ -3580,7 +3580,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Start of turn:</b> You get +2{{Sun}}.",
+    "abilities": "<b>Start of turn:</b> You get +1{{Sun}}.",
     "flavour": "Sunflowers are notorious pacifists. But isolated in the center of Hollow Earth, they evolved a new savagery. Sunny, adorable savagery."
   },
   {
@@ -3604,11 +3604,11 @@
     "rarity": "super-rare",
     "class": "Solar",
     "type": "Trick",
-    "tribes": ["Fruit"],
+    "tribes": ["Fruit", "Flower"],
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a {{Flower:t:flower}}. <b>Conjure</b> a {{Trick:is:plant type:t}}.\nThey both cost 1 less.",
+    "abilities": "<b>Conjure</b> a {{Flower:t:flower}}. <b>Conjure</b> a {{Fruit:t:fruit}}.\nThey both cost 1 less.",
     "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
   },
   {

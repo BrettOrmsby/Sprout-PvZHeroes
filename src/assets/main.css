@@ -74,4 +74,5 @@ main {
 
 .token {
   --rarity-background: var(--p-surface-800);
+  color: var(--p-gray-200) !important;
 }

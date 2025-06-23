@@ -8,7 +8,7 @@ export default function doesMatchQuery(card: Card, query: Query): boolean {
   if (!query.includeTokens && card.set === 'token') {
     return false
   }
-  if (!query.includeTokens && card.tribes.includes('Superpower')) {
+  if (!query.includeSuperpowers && card.tribes.includes('Superpower')) {
     return false
   }
 

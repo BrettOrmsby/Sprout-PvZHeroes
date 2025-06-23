@@ -38,7 +38,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "When you play another {{Pet:t:pet include:token}}, all {{Pets:t:pet type:f include:token}} get +1{{Strength}}.",
+    "abilities": "When you play a {{Pet:t:pet include:token}}, all {{Pets:t:pet type:f include:token}} get +1{{Strength}}.",
     "flavour": "Snaaaaake!"
   },
   {
@@ -304,7 +304,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When hurt:</b> <b>Bounce</b> this kangaroo.",
+    "abilities": "<b>When hurt:</b> <b>Bounce</b> this Kangaroo.",
     "flavour": "Sure, it's a bumpy ride, but it beats walking. Have you seen an Imp's legs?"
   },
   {
@@ -388,7 +388,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "This gets +3{{Strength}} this turn when you play another {{Pet:t:pet include:token}}.",
+    "abilities": "This gets +3{{Strength}} this turn when you play a {{Pet:t:pet include:token}}.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
   {
@@ -416,7 +416,7 @@
     "cost": 6,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\n<b>Hunt</b>\nWhen any Zombie enters any lane, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>, <b>Hunt</b>\nWhen any Zombie enters any lane, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
     "flavour": "Has every single issue of Deep Sea Quarterly, but rarely has time to read them."
   },
   {
@@ -1144,7 +1144,7 @@
     "cost": 3,
     "strength": 2,
     "health": 5,
-    "abilities": "<b>Zombie Evolution</b>: This gets +1{{Strength}} for each {{Brain}} you got this turn.",
+    "abilities": "<b>Zombie Evolution</b>: This gets +1{{Strength}} for each Brain you got this turn.",
     "flavour": "This is why you shouldn't drink primordial soup."
   },
   {
@@ -1690,7 +1690,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play another Zombie.",
+    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Zombie.",
     "flavour": "His archenemy is the Wall-Flower."
   },
   {
