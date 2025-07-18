@@ -18,6 +18,12 @@
         >Github</a
       >.</Message
     > -->
+    <Message style="margin: 0 auto; margin-top: var(--inline-space); width: fit-content"
+      >Introducing the new
+      <RouterLink :to="{ name: 'CardCreator' }" style="color: inherit; text-decoration: underline"
+        >Card Creator!</RouterLink
+      ></Message
+    >
 
     <div v-if="isSignedIn">
       <h2>Your Latest Decks</h2>

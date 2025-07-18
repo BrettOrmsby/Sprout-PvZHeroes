@@ -9,9 +9,10 @@
           size="xlarge"
           shape="circle"
           class="profile-image"
-          :image="getHero(user.profile_image).image"
+          :image="profileHero.image"
           :class="{ 'is-user': user.id === id }"
           @click="user.id === id && changeHero()"
+          :pt="{ image: { alt: profileHero.name } }"
         >
         </Avatar>
         <div>
@@ -94,6 +95,7 @@ const joined = computed(() =>
   new Date(user.created_at).toLocaleDateString('en', { month: 'long', year: 'numeric' }),
 )
 
+const profileHero = computed(() => getHero(user.profile_image))
 const isChangeHeroModalOpen = ref(false)
 const changeHero = () => {
   isChangeHeroModalOpen.value = true

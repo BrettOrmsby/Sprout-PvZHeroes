@@ -1,5 +1,11 @@
 <template>
-  <Select v-model="chosenClass" :options="options" placeholder="Select a Class">
+  <Select
+    v-model="chosenClass"
+    :options="options"
+    placeholder="Select a Class"
+    option-label="label"
+    option-value="value"
+  >
     <template #value="slotProps">
       <div v-if="slotProps.value" class="class-select-container">
         <img
@@ -7,7 +13,7 @@
           :src="`/images/classes/${slotProps.value.toLowerCase()}.png`"
           class="class-image"
         />
-        <div>{{ slotProps.value }}</div>
+        <div>{{ options.find((e) => e.value === slotProps.value)!.label }}</div>
       </div>
       <span v-else>
         {{ slotProps.placeholder }}
@@ -16,11 +22,11 @@
     <template #option="slotProps">
       <div class="class-select-container">
         <img
-          :alt="slotProps.option"
-          :src="`/images/classes/${slotProps.option.toLowerCase()}.png`"
+          :alt="slotProps.option.label"
+          :src="`/images/classes/${slotProps.option.label.toLowerCase()}.png`"
           class="class-image"
         />
-        <div>{{ slotProps.option }}</div>
+        <div>{{ slotProps.option.label }}</div>
       </div>
     </template>
   </Select>
@@ -28,10 +34,11 @@
 
 <script lang="ts" setup>
 import { Select } from 'primevue'
+import { computed } from 'vue'
 
 const chosenClass = defineModel<string>({ required: true })
-
-const options = [
+const props = defineProps<{ toLowerCase?: boolean }>()
+const classes = [
   'Guardian',
   'Kabloom',
   'Mega-Grow',
@@ -43,6 +50,12 @@ const options = [
   'Hearty',
   'Sneaky',
 ]
+const options = computed(() =>
+  classes.map((className) => ({
+    label: className,
+    value: props.toLowerCase ? className.toLowerCase() : className,
+  })),
+)
 </script>
 
 <style scoped>

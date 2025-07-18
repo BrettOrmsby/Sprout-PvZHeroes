@@ -35,6 +35,7 @@
                 shape="circle"
                 class="hero"
                 :image="getHero(user.profile_image).image"
+                :pt="{ image: { alt: getHero(user.profile_image).name } }"
               >
               </Avatar>
               <div class="card-text-container">

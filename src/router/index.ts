@@ -211,6 +211,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'CardCreator',
+      path: '/tools/cardcreator',
+      component: () => import('@/pages/tools/CardCreator.vue'),
+      meta: {
+        title: 'Card Creator • Sprout',
+      },
+    },
+    {
       name: '404',
       path: '/404',
       component: () => import('@/pages/404Page.vue'),

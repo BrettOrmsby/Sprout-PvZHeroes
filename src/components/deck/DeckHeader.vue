@@ -17,6 +17,7 @@
         :image="hero.image"
         @click="openModal"
         class="clickable"
+        :pt="{ image: { alt: hero.name } }"
       />
       <div class="class-container">
         <img

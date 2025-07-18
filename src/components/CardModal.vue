@@ -81,7 +81,6 @@ const isPlant = computed(() =>
 }
 .stats-image-container img {
   height: 1.5em;
-  width: 1.5em;
 }
 .types {
   color: var(--p-text-muted-color);

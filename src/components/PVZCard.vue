@@ -110,7 +110,6 @@ const isPlant = computed(() =>
 }
 .stats-image-container img {
   height: 1.5em;
-  width: 1.5em;
 }
 .text-view .cost img {
   height: 1.5em;

@@ -3,7 +3,13 @@
     <Card>
       <template #title>
         <div class="title-container">
-          <Avatar size="normal" shape="circle" class="hero" :image="getHero(deck.hero).image">
+          <Avatar
+            size="normal"
+            shape="circle"
+            class="hero"
+            :image="hero.image"
+            :pt="{ image: { alt: hero.name } }"
+          >
           </Avatar>
           <h3>{{ deck.name }}</h3>
         </div>
@@ -35,6 +41,8 @@ const props = defineProps<{
   deck: Deck
   showVisibility?: boolean
 }>()
+
+const hero = computed(() => getHero(props.deck.hero))
 
 dayjs.extend(relativeTime)
 const refreshDateKey = ref(0)

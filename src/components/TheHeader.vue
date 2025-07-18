@@ -65,6 +65,7 @@ import {
   ShieldQuestion,
   Sprout,
   UserSearch,
+  PencilRuler,
 } from 'lucide-vue-next'
 import useAuthUser from '@/composables/UseAuthUser'
 import { useNotificationsStore } from '@/store/notifications'
@@ -108,6 +109,11 @@ const items = computed(() => {
       label: 'Tools',
       iconComponent: Hammer,
       items: [
+        {
+          label: 'Card Creator',
+          route: '/tools/cardcreator',
+          iconComponent: PencilRuler,
+        },
         {
           label: 'Block Meter Probability',
           route: '/tools/blockmeter',

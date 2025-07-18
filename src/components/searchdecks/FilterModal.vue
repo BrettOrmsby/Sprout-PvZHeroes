@@ -154,9 +154,6 @@ span:has(+ .p-select) {
 .card-list-textarea {
   width: 100%;
 }
-.p-toggleswitch {
-  display: block;
-}
 
 :is(
     .p-inputtext,

@@ -19,6 +19,7 @@
         @click="showHero(hero.name)"
         class="clickable"
         :key="hero.name"
+        :pt="{ image: { alt: hero.name } }"
       />
     </div>
     <SideBarLayout>
