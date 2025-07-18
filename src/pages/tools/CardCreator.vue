@@ -76,6 +76,7 @@
           placeholder='"I take pity on no one. For I am Galacta-Cactus!"'
           v-model="card.flavour"
         />
+        <small>The flavour text is white even on light mode.</small>
 
         <Divider />
         <h2>Card Image</h2>
@@ -363,6 +364,9 @@ form {
   height: fit-content;
 }
 
+small {
+  color: var(--p-text-muted-color);
+}
 a {
   color: var(--p-text-muted-color);
   text-decoration: underline;

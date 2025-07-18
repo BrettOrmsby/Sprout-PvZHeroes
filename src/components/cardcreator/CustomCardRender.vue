@@ -188,6 +188,7 @@ const cardAbilities = computed(() => {
   font-family: 'Cafeteria', sans-serif;
   word-spacing: 0.5px;
   letter-spacing: 0.5px;
+  color: white;
 }
 
 .card-cost {
