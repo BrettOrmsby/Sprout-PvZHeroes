@@ -3,6 +3,7 @@
     <div class="side-layout">
       <form @submit.prevent="submit">
         <h1><PencilRuler />Card Creator</h1>
+        <Message severity="warn">Card Creator may generate malformed images on mobile.</Message>
         <label for="cardName">Card Name</label>
         <InputText id="cardName" type="text" placeholder="Galacta-Cactus" v-model="card.name" />
         <span id="classLabel">Class</span>
@@ -170,6 +171,7 @@ import {
   InputGroup,
   InputGroupAddon,
   FileUpload,
+  Message,
   Select,
   Textarea,
   type AutoCompleteCompleteEvent,
@@ -177,7 +179,7 @@ import {
   type SelectChangeEvent,
   type ColorPickerChangeEvent,
 } from 'primevue'
-import { toPng } from 'html-to-image'
+import { toBlob } from 'html-to-image'
 import { Download, PencilRuler } from 'lucide-vue-next'
 import TheFooter from '@/components/TheFooter.vue'
 import CustomCardRender, { type CustomCard } from '@/components/cardcreator/CustomCardRender.vue'
@@ -188,6 +190,7 @@ import zombies from '@/content/zombies.json'
 import superPowers from '@/content/superpowers.json'
 import throwError from '@/lib/throwError'
 import AbilityAccordionHelp from '@/components/cardcreator/AbilityAccordionHelp.vue'
+import FileSaver from 'file-saver'
 
 const card = reactive<CustomCard<'fighter' | 'trick' | 'environment'>>({
   className: 'guardian',
@@ -300,11 +303,8 @@ const submit = async () => {
   isDownloading.value = true
   const cardContainer = document.querySelector('.card-container') as HTMLElement
   try {
-    const png = await toPng(cardContainer, { canvasWidth: 600, canvasHeight: 800 })
-    const link = document.createElement('a')
-    link.download = `${card.name}.png`
-    link.href = png
-    link.click()
+    const blob = await toBlob(cardContainer, { canvasWidth: 600, canvasHeight: 800 })
+    FileSaver.saveAs(blob as Blob, `${card.name}.png`)
   } catch {
     throwError({ message: 'Failed to download image', hint: 'Please try again.' })
   }
@@ -336,6 +336,15 @@ h1 svg {
   height: 1em;
   flex-shrink: 0;
 }
+.p-message {
+  display: none;
+}
+@media only screen and (hover: none) and (pointer: coarse) and (max-width: 600px) {
+  .p-message {
+    display: block;
+    margin-bottom: var(--block-space);
+  }
+}
 
 .side-layout {
   display: flex;
@@ -345,6 +354,7 @@ h1 svg {
 @media only screen and (max-width: 600px) {
   .side-layout {
     flex-direction: column;
+    align-items: center;
   }
   .card-render-container {
     width: 100%;
@@ -362,6 +372,7 @@ form {
   left: 0;
   flex-shrink: 0;
   height: fit-content;
+  width: 300px;
 }
 
 small {
