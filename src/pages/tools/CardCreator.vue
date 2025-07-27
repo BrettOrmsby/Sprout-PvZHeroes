@@ -3,7 +3,6 @@
     <div class="side-layout">
       <form @submit.prevent="submit">
         <h1><PencilRuler />Card Creator</h1>
-        <Message severity="warn">Card Creator may generate malformed images on mobile.</Message>
         <label for="cardName">Card Name</label>
         <InputText id="cardName" type="text" placeholder="Galacta-Cactus" v-model="card.name" />
         <span id="classLabel">Class</span>
@@ -143,6 +142,10 @@
           </InputGroup>
         </template>
         <Divider />
+        <Message severity="warn"
+          >Card Creator may not download images on mobile. Instead, you can screen shot the image
+          below.</Message
+        >
         <Button type="submit" label="Download" :loading="isDownloading">
           <template #icon="iconClass">
             <Download :class="iconClass.class" />

@@ -353,6 +353,7 @@ const cardAbilities = computed(() => {
   margin: 2px auto 0 auto;
   width: 150px;
   text-wrap: wrap;
+  white-space: pre-wrap;
 }
 :deep(.card-abilities) img {
   height: 1.2em;
@@ -381,6 +382,7 @@ const cardAbilities = computed(() => {
   margin: 0 auto;
   transform: skew(-10deg);
   -webkit-transform: skew(-10deg);
+  white-space: pre-wrap;
 }
 
 .card-background {
