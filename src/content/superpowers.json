@@ -66,7 +66,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a Hothead.",
+    "abilities": "Make a {{Hothead: Hothead include:t}}.",
     "flavour": "Spudow is one tranquil tuber. Still, sometimes he loses his head."
   },
   {
@@ -108,7 +108,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a Poison Mushroom.\nDo 2 damage to a Zombie there.",
+    "abilities": "Make a {{Poison Mushroom:Poison Mushroom}}.\nDo 2 damage to a Zombie there.",
     "flavour": "Night Cap and his mushroom friends are not to be truffled with."
   },
   {
@@ -122,7 +122,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie with the highest Attack into a 1{{Strength}}/1{{Heart}} Goat.",
+    "abilities": "Transform a Zombie with the highest Attack into a 1{{Strength}}/1{{Heart}} {{Goat:Goat c:0}}.",
     "flavour": "Rose turns Zombies into goats because... GOATS!"
   },
   {
@@ -150,7 +150,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost Plant. It gets +2{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
+    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost {{Plant: c:2 type:p}}. It gets +2{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
     "flavour": "The modifications are controversial, sure. But the results are hard to argue with."
   },
   {
@@ -192,7 +192,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make two Impfinity Clones in random lanes.",
+    "abilities": "Make two {{Impfinity Clones:Impfinity Clone include:t}} in random lanes.",
     "flavour": "That's how you get Imps."
   },
   {
@@ -262,7 +262,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make Zom-Bats.",
+    "abilities": "Make {{Zom-Bats:Zom-Bats include:token}}.",
     "flavour": "Immorticia was cleaning her belfry when, lo and behold, she found bats in there."
   },
   {
@@ -290,7 +290,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 3{{Strength}}/2{{Heart}} Octo-Pet with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "Make a 3{{Strength}}/2{{Heart}} {{Octo-Pet:Octo-Pet include:t}} with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "Octopus incoming! Two words a Plant never wants to hear."
   },
   {
@@ -304,7 +304,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> an Environment and a trick. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
+    "abilities": "<b>Conjure</b> an {{Environment:type:e is:z}} and a {{trick:type:t is:z}}. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
     "flavour": "This is Huge-Gigantacus' greatest invention ever. It's also his only invention. But it's best not to point that out to him."
   }
 ]
