@@ -1,7 +1,7 @@
 <template>
   <div class="card-container">
     <img
-      class="card-background"
+      :class="['card-background', card.className]"
       :style="{
         'background-color': card.backgroundColour,
       }"
@@ -389,5 +389,11 @@ const cardAbilities = computed(() => {
   width: 300px;
   position: absolute;
   z-index: -1;
+}
+.card-background.kabloom {
+  left: -1px;
+}
+.card-background.hearty {
+  top: 1px;
 }
 </style>
