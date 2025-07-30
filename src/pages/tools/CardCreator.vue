@@ -160,6 +160,17 @@
     <div class="side-layout">
       <form @submit.prevent="downloadSmallImage">
         <h2>Small Card</h2>
+        <template v-if="card.tribes.includes('Superpower')">
+          <span id="frame">Frame</span>
+          <Select
+            v-model="frameOverwrite"
+            :options="frameOptions"
+            option-label="label"
+            option-value="value"
+            aria-labelledby="frame"
+            placeholder="Default "
+          />
+        </template>
         <label for="imgWidthSmall">Image Width</label>
         <InputNumber v-model="smallImageSettings.width" inputId="imgWidthSmall" placeholder="80" />
         <label for="imgXOffsetSmall">Image X Offset</label>
@@ -187,7 +198,11 @@
         </Button>
       </form>
       <div class="card-render-container">
-        <SmallCustomCardRender :card="card" :image-settings="smallImageSettings" />
+        <SmallCustomCardRender
+          :card="card"
+          :image-settings="smallImageSettings"
+          :frame-overwrite="frameOverwrite"
+        />
       </div>
     </div>
     <h2 id="ability-syntax">Ability Syntax</h2>
@@ -198,7 +213,6 @@
 
 <script lang="ts" setup>
 // TODO: allow common rarity? allow event?
-// TODO: allow super frames (sig and not)
 import { reactive, ref } from 'vue'
 import {
   AutoComplete,
@@ -345,6 +359,22 @@ const updateBackground = (e: SelectChangeEvent) => {
 const updateBackgroundFromColour = (e: ColorPickerChangeEvent) => {
   card.backgroundColour = '#' + e.value
 }
+
+const frameOverwrite = ref<'default' | 'super' | 'signature'>('default')
+const frameOptions = [
+  {
+    value: 'default',
+    label: 'Default',
+  },
+  {
+    value: 'super',
+    label: 'Super Power',
+  },
+  {
+    value: 'signature',
+    label: 'Signature Super Power',
+  },
+]
 
 const isDownloadingMain = ref(false)
 const downloadMainImage = async () => {

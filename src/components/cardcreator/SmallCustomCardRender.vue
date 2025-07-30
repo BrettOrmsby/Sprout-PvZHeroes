@@ -5,11 +5,7 @@
       'background-color': card.backgroundColour,
     }"
   >
-    <img
-      :class="['card-frame', card.type, card.rarity]"
-      :src="`/images/cardcreator/frames/${card.type}/${card.rarity}.webp`"
-      :alt="`${card.rarity} ${card.type} frame`"
-    />
+    <img :class="['card-frame', card.type, card.rarity]" :src="frameSrc" alt="card frame" />
     <div class="card-cost" :class="{ 'is-zombie': !isPlant }">
       <img
         class="card-cost-image"
@@ -36,7 +32,10 @@
       />
       <span>{{ card.health }}</span>
     </div>
-    <div class="inner-card" :class="[card.className, card.type]">
+    <div
+      class="inner-card"
+      :class="[card.className, card.type, card.tribes.includes('Superpower') && frameOverwrite]"
+    >
       <img
         class="card-image"
         alt="Card Image"
@@ -61,10 +60,20 @@ export type SmallImageSettings = { width: number; top: number; left: number; rot
 const props = defineProps<{
   card: CustomCard<'fighter' | 'trick' | 'environment'>
   imageSettings: SmallImageSettings
+  frameOverwrite: 'default' | 'super' | 'signature'
 }>()
 const isPlant = computed(() =>
   ['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(props.card.className),
 )
+const frameSrc = computed(() => {
+  if (!props.card.tribes.includes('Superpower') || props.frameOverwrite === 'default') {
+    return `/images/cardcreator/frames/${props.card.type}/${props.card.rarity}.webp`
+  } else if (props.frameOverwrite === 'super') {
+    return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}.webp`
+  } else {
+    return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}-signature.webp`
+  }
+})
 </script>
 
 <style scoped>
@@ -110,9 +119,6 @@ const isPlant = computed(() =>
   z-index: 0;
   overflow: hidden;
 }
-.inner-card.trick {
-  clip-path: ellipse(47.87% 46.27% at 50% 50%);
-}
 .inner-card.environment {
   clip-path: polygon(
     1.06% 70.88%,
@@ -122,6 +128,11 @@ const isPlant = computed(() =>
     97.87% 70.88%,
     50% 97.06%
   );
+}
+.inner-card.trick,
+.inner-card.super,
+.inner-card.signature {
+  clip-path: ellipse(47.87% 46.27% at 50% 50%);
 }
 
 .inner-card.guardian {
