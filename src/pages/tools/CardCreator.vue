@@ -212,7 +212,6 @@
 </template>
 
 <script lang="ts" setup>
-// TODO: allow common rarity? allow event?
 import { reactive, ref } from 'vue'
 import {
   AutoComplete,
@@ -274,10 +273,13 @@ const smallImageSettings = reactive<SmallImageSettings>({
 })
 
 const rarityOptions = [
+  { label: 'Common', value: 'common' },
   { label: 'Uncommon', value: 'uncommon' },
   { label: 'Rare', value: 'rare' },
   { label: 'Super-Rare', value: 'super-rare' },
   { label: 'Legendary', value: 'legendary' },
+  { label: 'Event', value: 'event' },
+  { label: 'Token', value: 'token' },
 ]
 
 const typeOptions = [

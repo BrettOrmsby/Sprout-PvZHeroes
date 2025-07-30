@@ -44,7 +44,26 @@
       <span class="type-line">- {{ card.tribes.join(' ') }} {{ cardType }} -</span>
       <pre class="card-abilities" v-html="cardAbilities"></pre>
     </div>
-    <img class="card-banner" :alt="card.rarity" :src="`/images/cardcreator/${card.rarity}.png`" />
+    <div
+      v-if="card.rarity === 'common' || card.rarity === 'event' || card.rarity === 'token'"
+      class="card-banner-container"
+      :class="card.rarity"
+    >
+      <img
+        class="card-banner-image"
+        :alt="card.rarity"
+        :src="`/images/cardcreator/rarity-banner/${card.rarity === 'token' ? 'common' : card.rarity}.png`"
+      />
+      <div class="card-rarity-text">
+        {{ card.rarity }}
+      </div>
+    </div>
+    <img
+      v-else
+      class="card-banner"
+      :alt="card.rarity"
+      :src="`/images/cardcreator/rarity-banner/${card.rarity}.png`"
+    />
     <pre class="card-flavour">{{ card.flavour }}</pre>
   </div>
 </template>
@@ -80,7 +99,7 @@ export interface CustomCard<T extends 'fighter' | 'trick' | 'environment'> {
   type: T
   tribes: string[]
   abilities: string
-  rarity: 'uncommon' | 'rare' | 'super-rare' | 'legendary'
+  rarity: 'uncommon' | 'rare' | 'super-rare' | 'legendary' | 'common' | 'event' | 'token'
   flavour: string
   cost: number
   strength: T extends 'fighter' ? number : undefined
@@ -370,6 +389,36 @@ const cardAbilities = computed(() => {
   position: absolute;
   top: 75px;
 }
+.card-banner-container {
+  position: absolute;
+  top: 308px;
+  width: 300px;
+}
+.card-banner-image {
+  width: 200px;
+  position: absolute;
+  top: -15px;
+  left: 50px;
+  z-index: -1;
+}
+.card-rarity-text {
+  font-family: 'Cafeteria', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  width: 300px;
+  -webkit-text-stroke: 0.7px black;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.event .card-banner-image {
+  width: 250px;
+  top: -30px;
+  left: 25px;
+}
+:is(.common, .token) .card-banner-image {
+  opacity: 0.95;
+}
+
 .card-flavour {
   font-family: 'Cafeteria', sans-serif;
   font-size: 14px;

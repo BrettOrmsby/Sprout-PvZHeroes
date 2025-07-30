@@ -67,7 +67,7 @@ const isPlant = computed(() =>
 )
 const frameSrc = computed(() => {
   if (!props.card.tribes.includes('Superpower') || props.frameOverwrite === 'default') {
-    return `/images/cardcreator/frames/${props.card.type}/${props.card.rarity}.webp`
+    return `/images/cardcreator/frames/${props.card.type}/${props.card.rarity === 'token' ? 'common' : props.card.rarity}.webp`
   } else if (props.frameOverwrite === 'super') {
     return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}.webp`
   } else {
@@ -109,6 +109,9 @@ const frameSrc = computed(() => {
 }
 .card-frame.fighter.legendary {
   top: -1px;
+}
+.card-frame.fighter.event {
+  top: 19px;
 }
 .inner-card {
   position: relative;
