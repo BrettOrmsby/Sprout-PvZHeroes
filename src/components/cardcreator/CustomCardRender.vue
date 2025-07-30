@@ -44,11 +44,13 @@
       <span class="type-line">- {{ card.tribes.join(' ') }} {{ cardType }} -</span>
       <pre class="card-abilities" v-html="cardAbilities"></pre>
     </div>
-    <div
-      v-if="card.rarity === 'common' || card.rarity === 'event' || card.rarity === 'token'"
-      class="card-banner-container"
-      :class="card.rarity"
-    >
+    <img
+      v-if="card.rarity === 'legendary'"
+      class="card-banner"
+      :alt="card.rarity"
+      :src="`/images/cardcreator/rarity-banner/${card.rarity}.png`"
+    />
+    <div v-else class="card-banner-container" :class="card.rarity">
       <img
         class="card-banner-image"
         :alt="card.rarity"
@@ -58,12 +60,6 @@
         {{ card.rarity }}
       </div>
     </div>
-    <img
-      v-else
-      class="card-banner"
-      :alt="card.rarity"
-      :src="`/images/cardcreator/rarity-banner/${card.rarity}.png`"
-    />
     <pre class="card-flavour">{{ card.flavour }}</pre>
   </div>
 </template>
@@ -417,6 +413,21 @@ const cardAbilities = computed(() => {
 }
 :is(.common, .token) .card-banner-image {
   opacity: 0.95;
+}
+.uncommon .card-banner-image {
+  top: -3px;
+}
+.rare .card-banner-image {
+  top: -3px;
+}
+.rare .card-rarity-text {
+  color: #fced8f;
+}
+.super-rare .card-banner-image {
+  top: -11px;
+}
+.super-rare .card-rarity-text {
+  color: #b2dcfc;
 }
 
 .card-flavour {
