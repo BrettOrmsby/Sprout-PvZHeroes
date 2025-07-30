@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="side-layout">
-      <form @submit.prevent="submit">
+      <form @submit.prevent="downloadMainImage">
         <h1><PencilRuler />Card Creator</h1>
         <label for="cardName">Card Name</label>
         <InputText id="cardName" type="text" placeholder="Galacta-Cactus" v-model="card.name" />
@@ -146,7 +146,7 @@
           >Card Creator may not download images on mobile. Instead, you can screen shot the image
           below.</Message
         >
-        <Button type="submit" label="Download" :loading="isDownloading">
+        <Button type="submit" label="Download" :loading="isDownloadingMain">
           <template #icon="iconClass">
             <Download :class="iconClass.class" />
           </template>
@@ -156,6 +156,40 @@
         <CustomCardRender :card="card" />
       </div>
     </div>
+    <Divider />
+    <div class="side-layout">
+      <form @submit.prevent="downloadSmallImage">
+        <h2>Small Card</h2>
+        <label for="imgWidthSmall">Image Width</label>
+        <InputNumber v-model="smallImageSettings.width" inputId="imgWidthSmall" placeholder="80" />
+        <label for="imgXOffsetSmall">Image X Offset</label>
+        <InputNumber
+          v-model="smallImageSettings.left"
+          inputId="imgXOffsetSmall"
+          placeholder="-11"
+        />
+        <label for="imgYOffsetSmall">Image Y Offset</label>
+        <InputNumber v-model="smallImageSettings.top" inputId="imgYOffsetSmall" placeholder="-20" />
+        <label for="imgSmallRotation">Image Rotation</label>
+        <InputNumber
+          v-model="smallImageSettings.rotate"
+          inputId="imgSmallRotation"
+          placeholder="15"
+        />
+        <Message severity="warn"
+          >Card Creator may not download images on mobile. Instead, you can screen shot the image
+          below.</Message
+        >
+        <Button type="submit" label="Download" :loading="isDownloadingSmall">
+          <template #icon="iconClass">
+            <Download :class="iconClass.class" />
+          </template>
+        </Button>
+      </form>
+      <div class="card-render-container">
+        <SmallCustomCardRender :card="card" :image-settings="smallImageSettings" />
+      </div>
+    </div>
     <h2 id="ability-syntax">Ability Syntax</h2>
     <AbilityAccordionHelp />
   </main>
@@ -163,6 +197,8 @@
 </template>
 
 <script lang="ts" setup>
+// TODO: allow common rarity? allow event?
+// TODO: allow super frames (sig and not)
 import { reactive, ref } from 'vue'
 import {
   AutoComplete,
@@ -194,7 +230,9 @@ import superPowers from '@/content/superpowers.json'
 import throwError from '@/lib/throwError'
 import AbilityAccordionHelp from '@/components/cardcreator/AbilityAccordionHelp.vue'
 import FileSaver from 'file-saver'
-
+import SmallCustomCardRender, {
+  type SmallImageSettings,
+} from '@/components/cardcreator/SmallCustomCardRender.vue'
 const card = reactive<CustomCard<'fighter' | 'trick' | 'environment'>>({
   className: 'guardian',
   name: 'Galacta-Cactus',
@@ -214,6 +252,13 @@ const card = reactive<CustomCard<'fighter' | 'trick' | 'environment'>>({
   imgYOffset: 80,
   backgroundColour: 'transparent',
 })
+const smallImageSettings = reactive<SmallImageSettings>({
+  width: 80,
+  top: -20,
+  left: -11,
+  rotate: 15,
+})
+
 const rarityOptions = [
   { label: 'Uncommon', value: 'uncommon' },
   { label: 'Rare', value: 'rare' },
@@ -301,9 +346,9 @@ const updateBackgroundFromColour = (e: ColorPickerChangeEvent) => {
   card.backgroundColour = '#' + e.value
 }
 
-const isDownloading = ref(false)
-const submit = async () => {
-  isDownloading.value = true
+const isDownloadingMain = ref(false)
+const downloadMainImage = async () => {
+  isDownloadingMain.value = true
   const cardContainer = document.querySelector('.card-container') as HTMLElement
   try {
     const blob = await toBlob(cardContainer, { canvasWidth: 600, canvasHeight: 800 })
@@ -311,7 +356,19 @@ const submit = async () => {
   } catch {
     throwError({ message: 'Failed to download image', hint: 'Please try again.' })
   }
-  isDownloading.value = false
+  isDownloadingMain.value = false
+}
+const isDownloadingSmall = ref(false)
+const downloadSmallImage = async () => {
+  isDownloadingSmall.value = true
+  const cardContainer = document.querySelector('.small-card-container') as HTMLElement
+  try {
+    const blob = await toBlob(cardContainer, { canvasWidth: 300, canvasHeight: 244 })
+    FileSaver.saveAs(blob as Blob, `${card.name}-small.png`)
+  } catch {
+    throwError({ message: 'Failed to download image', hint: 'Please try again.' })
+  }
+  isDownloadingSmall.value = false
 }
 </script>
 
@@ -361,8 +418,6 @@ h1 svg {
   }
   .card-render-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
 }
 form {
@@ -376,6 +431,8 @@ form {
   flex-shrink: 0;
   height: fit-content;
   width: 300px;
+  display: flex;
+  justify-content: center;
 }
 
 small {
