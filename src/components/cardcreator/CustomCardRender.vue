@@ -8,19 +8,8 @@
       :src="`/images/cardcreator/${card.className}.png`"
       :alt="`${card.className} background`"
     />
-    <span class="card-cost" :class="{ 'double-digit': card.cost > 9 && card.cost < 100 }">{{
-      card.cost
-    }}</span>
-    <img
-      class="card-image"
-      alt="Card Image"
-      :src="card.img"
-      :style="{
-        width: `${card.imgWidth}px`,
-        left: `${card.imgXOffset}px`,
-        top: `${card.imgYOffset}px`,
-      }"
-    />
+    <span class="card-cost" :class="costClass">{{ card.cost }}</span>
+    <img class="card-image" alt="Card Image" :src="card.img" :style="cardImageStyle" />
     <div class="card-strength" v-if="card.type === 'fighter' && card.strength">
       <img
         class="card-strength-image"
@@ -67,63 +56,33 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import sanitizeHtml from 'sanitize-html'
+import { useCustomCardStore } from '@/store/cardcreator/customCard'
 
-export type StrengthImage =
-  | 'anti-hero'
-  | 'deadly'
-  | 'doublestrike'
-  | 'frenzy'
-  | 'overshoot'
-  | 'star'
-  | 'strength'
-  | 'strikethrough'
-  | 'truestrike'
-export type HealthImage = 'armored' | 'heart' | 'star' | 'untrickable' | 'strength-heart'
-export interface CustomCard<T extends 'fighter' | 'trick' | 'environment'> {
-  className:
-    | 'beastly'
-    | 'brainy'
-    | 'crazy'
-    | 'guardian'
-    | 'hearty'
-    | 'kabloom'
-    | 'mega-grow'
-    | 'smarty'
-    | 'sneaky'
-    | 'solar'
-  name: string
-  type: T
-  tribes: string[]
-  abilities: string
-  rarity: 'uncommon' | 'rare' | 'super-rare' | 'legendary' | 'common' | 'event' | 'token'
-  flavour: string
-  cost: number
-  strength: T extends 'fighter' ? number : undefined
-  health: T extends 'fighter' ? number : undefined
-  strengthImg: T extends 'fighter' ? StrengthImage : undefined
-  healthImg: T extends 'fighter' ? HealthImage : undefined
-  img: string
-  imgWidth: number
-  imgXOffset: number
-  imgYOffset: number
-  backgroundColour: string
-}
+const card = useCustomCardStore()
 
-const props = defineProps<{ card: CustomCard<'fighter' | 'trick' | 'environment'> }>()
+const cardImageStyle = computed(() => ({
+  width: `${card.imgWidth}px`,
+  left: `${card.imgXOffset}px`,
+  top: `${card.imgYOffset}px`,
+}))
+const costClass = computed(() => ({
+  'double-digit': card.cost > 9 && card.cost < 100,
+}))
+
 const cardType = computed(() => {
-  if (props.card.type === 'fighter') {
-    if (['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(props.card.className)) {
+  if (card.type === 'fighter') {
+    if (['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(card.className)) {
       return 'Plant'
     }
     return 'Zombie'
-  } else if (props.card.type === 'trick') {
+  } else if (card.type === 'trick') {
     return 'Trick'
   }
   return 'Environment'
 })
 
 const cardAbilities = computed(() => {
-  const simpleTransformedAbilities = props.card.abilities
+  const simpleTransformedAbilities = card.abilities
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/\{\{(.+?)\}\}/g, (item) => {

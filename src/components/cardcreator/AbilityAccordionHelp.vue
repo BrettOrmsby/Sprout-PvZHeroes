@@ -57,8 +57,6 @@ const abilityImages = [
   'untrickable',
   'brain',
   'frozen',
-  'heart',
-  'strength',
   'sun',
   'bullseye',
   'strength-heart',

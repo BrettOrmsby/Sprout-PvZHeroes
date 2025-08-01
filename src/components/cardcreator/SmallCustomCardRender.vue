@@ -34,41 +34,37 @@
     </div>
     <div
       class="inner-card"
-      :class="[card.className, card.type, card.tribes.includes('Superpower') && frameOverwrite]"
+      :class="[
+        card.className,
+        card.type,
+        card.tribes.includes('Superpower') && card.frameOverwrite,
+      ]"
     >
-      <img
-        class="card-image"
-        alt="Card Image"
-        :src="card.img"
-        :style="{
-          width: `${imageSettings.width}px`,
-          left: `${imageSettings.left}px`,
-          top: `${imageSettings.top}px`,
-          rotate: `${imageSettings.rotate}deg`,
-        }"
-      />
+      <img class="card-image" alt="Card Image" :src="card.img" :style="imageStyle" />
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import type { CustomCard } from './CustomCardRender.vue'
+import { useCustomCardStore } from '@/store/cardcreator/customCard'
 
-export type SmallImageSettings = { width: number; top: number; left: number; rotate: number }
+const card = useCustomCardStore()
 
-const props = defineProps<{
-  card: CustomCard<'fighter' | 'trick' | 'environment'>
-  imageSettings: SmallImageSettings
-  frameOverwrite: 'default' | 'super' | 'signature'
-}>()
+const imageStyle = computed(() => ({
+  width: `${card.smallImageSettings.width}px`,
+  left: `${card.smallImageSettings.left}px`,
+  top: `${card.smallImageSettings.top}px`,
+  rotate: `${card.smallImageSettings.rotate}deg`,
+}))
+
 const isPlant = computed(() =>
-  ['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(props.card.className),
+  ['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(card.className),
 )
 const frameSrc = computed(() => {
-  if (!props.card.tribes.includes('Superpower') || props.frameOverwrite === 'default') {
-    return `/images/cardcreator/frames/${props.card.type}/${props.card.rarity === 'token' ? 'common' : props.card.rarity}.webp`
-  } else if (props.frameOverwrite === 'super') {
+  if (!card.tribes.includes('Superpower') || card.frameOverwrite === 'default') {
+    return `/images/cardcreator/frames/${card.type}/${card.rarity === 'token' ? 'common' : card.rarity}.webp`
+  } else if (card.frameOverwrite === 'super') {
     return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}.webp`
   } else {
     return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}-signature.webp`
@@ -198,7 +194,6 @@ const frameSrc = computed(() => {
   color: black;
   text-align: center;
   display: block;
-  text-align: center;
 }
 .card-cost.is-zombie > span {
   left: 12px;
