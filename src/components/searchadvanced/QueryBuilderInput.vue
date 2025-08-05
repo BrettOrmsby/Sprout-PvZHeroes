@@ -110,6 +110,7 @@ const generateID = (kind: string, queryName: string, index: number) =>
   height: 1.2rem;
   color: var(--p-primary-400);
 }
+
 .input-container {
   display: flex;
   flex-direction: column;

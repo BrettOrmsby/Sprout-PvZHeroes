@@ -64,7 +64,7 @@
       autoResize
       :placeholder="'{{Bullseye}}[[Bullseye]]\n**When destroyed**: Do 1 damage to everything.'"
     />
-    <small><a href="#ability-syntax">View ability syntax</a></small>
+    <small class="help"><a href="#ability-syntax">View ability syntax</a></small>
 
     <label for="flavour">Flavour</label>
     <InputText
@@ -73,7 +73,7 @@
       placeholder='"I take pity on no one. For I am Galacta-Cactus!"'
       v-model="card.flavour"
     />
-    <small>The flavour text is white even on light mode.</small>
+    <small class="help">The flavour text is white even on light mode.</small>
 
     <Divider />
     <h2>Card Image</h2>
@@ -297,13 +297,6 @@ const downloadMainImage = async () => {
 form {
   width: 100%;
 }
-
-small {
-  color: var(--p-text-muted-color);
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
-  display: block;
-}
 a {
   color: var(--p-text-muted-color);
   text-decoration: underline;
@@ -311,34 +304,6 @@ a {
 }
 a:hover {
   color: var(--p-text-hover-muted-color);
-}
-
-label,
-span:has(+ .p-select) {
-  display: block;
-  margin-bottom: var(--inline-space);
-  font-weight: bold;
-}
-
-.p-inputtext,
-.p-select,
-.p-inputnumber,
-.p-autocomplete,
-.p-textarea,
-.p-button,
-:deep(.p-fileupload-choose-button) {
-  width: 100%;
-}
-
-:is(
-    :not(.p-inputgroup) > .p-inputtext,
-    .p-autocomplete,
-    .p-select,
-    .p-inputnumber,
-    .p-textarea,
-    .p-fileupload
-  ):has(+ :not(:is(small, .help-message))) {
-  margin-bottom: var(--block-space);
 }
 
 .autocomplete-item {

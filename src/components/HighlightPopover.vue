@@ -14,7 +14,7 @@
         autocorrect="off"
         spellcheck="false"
       />
-      <div class="errors">
+      <div class="errors" v-if="states.deckFilter.errors.length">
         <Message severity="error" v-for="(error, index) in states.deckFilter.errors" :key="index">{{
           error.message
         }}</Message>
@@ -71,29 +71,12 @@ h2 {
   margin-top: 0;
 }
 
-label,
-#heroLabel {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
 .errors {
   margin-top: var(--inline-space);
   margin-bottom: var(--block-space);
   display: flex;
   gap: var(--inline-space);
   flex-direction: column;
-}
-
-.p-inputtext,
-.p-textarea,
-.card-list-textarea {
-  width: 100%;
-}
-
-.p-inputtext:has(+ :not(.errors)),
-.p-toggleswitch {
-  margin-bottom: var(--block-space);
 }
 
 .p-button {

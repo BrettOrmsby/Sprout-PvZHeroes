@@ -7,39 +7,41 @@
     style="max-width: 900px; width: 100%; margin: var(--block-space)"
     header="User Preferences"
   >
-    <span id="cardView">Card View</span>
-    <Select
-      aria-labelledby="cardView"
-      v-model="userSettings.cardViewSettings.card_view"
-      :options="cardViewOptions"
-      option-label="label"
-      option-value="value"
-      fluid
-    />
-    <span>Include Extras for Text Views</span>
-    <label for="showStats"
-      ><Checkbox v-model="intermediateCheckboxes" inputId="showStats" value="show_stats" />
-      Stats</label
-    >
-    <label for="showCost"
-      ><Checkbox v-model="intermediateCheckboxes" inputId="showCost" value="show_cost" />
-      Cost</label
-    >
-    <label for="showSet"
-      ><Checkbox v-model="intermediateCheckboxes" inputId="showSet" value="show_set" /> Set</label
-    >
+    <form @submit.prevent="updateCardView">
+      <span id="cardView">Card View</span>
+      <Select
+        aria-labelledby="cardView"
+        v-model="userSettings.cardViewSettings.card_view"
+        :options="cardViewOptions"
+        option-label="label"
+        option-value="value"
+        fluid
+      />
+      <span class="label">Include Extras for Text Views</span>
+      <label for="showStats"
+        ><Checkbox v-model="intermediateCheckboxes" inputId="showStats" value="show_stats" />
+        Stats</label
+      >
+      <label for="showCost"
+        ><Checkbox v-model="intermediateCheckboxes" inputId="showCost" value="show_cost" />
+        Cost</label
+      >
+      <label for="showSet"
+        ><Checkbox v-model="intermediateCheckboxes" inputId="showSet" value="show_set" /> Set</label
+      >
 
-    <span id="showRealStats">Show Real Stats on Sidebar and When Viewing Card</span>
-    <Select
-      aria-labelledby="showRealStats"
-      v-model="userSettings.show_real_stats"
-      :options="showRealStatsOptions"
-      option-label="label"
-      option-value="value"
-      fluid
-    />
+      <span id="showRealStats">Show Real Stats on Sidebar and When Viewing Card</span>
+      <Select
+        aria-labelledby="showRealStats"
+        v-model="userSettings.show_real_stats"
+        :options="showRealStatsOptions"
+        option-label="label"
+        option-value="value"
+        fluid
+      />
 
-    <Button label="Update" @click="updateCardView" :loading="isUpdating" />
+      <Button label="Update" type="submit" :loading="isUpdating" />
+    </form>
     <h2>Preview Changes</h2>
     <SideBarLayout>
       <CardContainer>
@@ -163,13 +165,6 @@ const exampleCards = Object.keys(exampleDeck)
 </script>
 
 <style scoped>
-label,
-span {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
-.p-select,
 label:has(.p-checkbox-input):last-of-type {
   margin-bottom: var(--block-space);
 }

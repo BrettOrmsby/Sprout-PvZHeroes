@@ -99,29 +99,4 @@ const downloadSmallImage = async () => {
 form {
   width: 100%;
 }
-
-label,
-span:has(+ .p-select) {
-  display: block;
-  margin-bottom: var(--inline-space);
-  font-weight: bold;
-}
-
-.p-select,
-.p-inputnumber,
-.p-button,
-:deep(.p-fileupload-choose-button) {
-  width: 100%;
-}
-
-:is(
-    :not(.p-inputgroup) > .p-inputtext,
-    .p-autocomplete,
-    .p-select,
-    .p-inputnumber,
-    .p-textarea,
-    .p-fileupload
-  ):has(+ :not(:is(small, .help-message))) {
-  margin-bottom: var(--block-space);
-}
 </style>

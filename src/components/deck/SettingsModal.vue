@@ -179,30 +179,6 @@ h2 {
   margin: 0;
 }
 
-label,
-span:has(+ .p-select) {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
-.error {
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
-  color: var(--p-red-300);
-  display: block;
-}
-
-.p-inputtext,
-.p-textarea,
-.card-list-textarea,
-.p-select {
-  width: 100%;
-}
-
-:is(.p-inputtext, .p-textarea, .card-list-textarea, .p-select):has(+ :not(small)) {
-  margin-bottom: var(--block-space);
-}
-
 .footer {
   display: flex;
   justify-content: flex-end;

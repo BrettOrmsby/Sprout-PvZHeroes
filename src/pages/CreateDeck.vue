@@ -141,30 +141,6 @@ main {
   margin-right: auto;
 }
 
-label,
-span:has(+ .p-select) {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
-.error {
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
-  color: var(--p-red-300);
-  display: block;
-}
-
-.p-inputtext,
-.p-select,
-.p-textarea,
-.card-list-textarea {
-  width: 100%;
-}
-
-:is(.p-inputtext, .p-select, .p-textarea, .p-select, .card-list-textarea):has(+ :not(small)) {
-  margin-bottom: var(--block-space);
-}
-
 .p-button {
   display: flex;
   width: fit-content;
