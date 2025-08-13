@@ -24,12 +24,25 @@
     />
 
     <label for="cost">Cost</label>
-    <InputNumber v-model="card.cost" inputId="cost" :min="0" placeholder="1" />
+    <InputNumber
+      v-model="card.cost"
+      inputId="cost"
+      :useGrouping="false"
+      locale="en-US"
+      placeholder="1"
+    />
     <template v-if="card.type === 'fighter'">
       <label for="strength">Strength</label>
-      <InputNumber v-model="card.strength" inputId="strength" :min="0" placeholder="2" />
+      <InputNumber
+        v-model="card.strength"
+        inputId="strength"
+        :useGrouping="false"
+        locale="en-US"
+        :min="0"
+        placeholder="2"
+      />
       <label for="health">Health</label>
-      <InputNumber v-model="card.health" inputId="health" :min="1" placeholder="1" />
+      <InputNumber v-model="card.health" inputId="health" placeholder="1" />
 
       <span id="strengthImage">Strength Image</span>
       <ImageSelect
