@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="downloadSmallImage">
+  <form>
     <h2>Small Card</h2>
     <template v-if="card.tribes.includes('Superpower')">
       <span id="frame">Frame</span>
@@ -19,24 +19,30 @@
       v-model="card.smallImageSettings.left"
       inputId="imgXOffsetSmall"
       placeholder="-11"
+      :useGrouping="false"
+      locale="en-US"
     />
     <label for="imgYOffsetSmall">Image Y Offset</label>
     <InputNumber
       v-model="card.smallImageSettings.top"
       inputId="imgYOffsetSmall"
       placeholder="-20"
+      :useGrouping="false"
+      locale="en-US"
     />
     <label for="imgSmallRotation">Image Rotation</label>
     <InputNumber
       v-model="card.smallImageSettings.rotate"
       inputId="imgSmallRotation"
       placeholder="15"
+      :useGrouping="false"
+      locale="en-US"
     />
     <Message severity="warn"
       >Card Creator may not download images on mobile. Instead, you can screen shot the image
       below.</Message
     >
-    <Button type="submit" label="Download" :loading="isDownloading">
+    <Button label="Download" :loading="isDownloading" @click="downloadSmallImage">
       <template #icon="iconClass">
         <Download :class="iconClass.class" />
       </template>

@@ -40,6 +40,8 @@
             v-model="value.value as number"
             :placeholder="placeholder"
             :id="generateID('input', name, index)"
+            :useGrouping="false"
+            locale="en-US"
           />
           <InputGroupAddon v-if="values.length > 1">
             <Button

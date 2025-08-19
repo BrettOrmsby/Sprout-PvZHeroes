@@ -12,7 +12,7 @@
         :src="`/images/abilities/${isPlant ? 'sun' : 'brain'}.png`"
         :alt="isPlant ? 'sun' : 'brain'"
       />
-      <span :class="{ 'double-digit': card.cost > 9 && card.cost < 100 }">{{ card.cost }}</span>
+      <span :class="costClass">{{ card.cost }}</span>
     </div>
     <div class="card-strength" v-if="card.type === 'fighter' && card.strength">
       <img
@@ -21,7 +21,7 @@
         :src="`/images/abilities/${card.strengthImg}.png`"
         :alt="card.strengthImg"
       />
-      <span>{{ card.strength }}</span>
+      <span :class="strengthClass">{{ card.strength }}</span>
     </div>
     <div class="card-health" v-if="card.type === 'fighter'">
       <img
@@ -30,7 +30,7 @@
         :src="`/images/abilities/${card.healthImg}.png`"
         :alt="card.healthImg"
       />
-      <span>{{ card.health }}</span>
+      <span :class="healthClass">{{ card.health }}</span>
     </div>
     <div
       class="inner-card"
@@ -56,6 +56,16 @@ const imageStyle = computed(() => ({
   left: `${card.smallImageSettings.left}px`,
   top: `${card.smallImageSettings.top}px`,
   rotate: `${card.smallImageSettings.rotate}deg`,
+}))
+
+const costClass = computed(() => ({
+  'double-digit': card.cost > 9 && card.cost < 100,
+}))
+const strengthClass = computed(() => ({
+  'double-digit': card.strength > 9 && card.strength < 100,
+}))
+const healthClass = computed(() => ({
+  'double-digit': card.health > 9 && card.health < 100,
 }))
 
 const isPlant = computed(() =>
@@ -240,6 +250,9 @@ const frameSrc = computed(() => {
   -webkit-text-stroke: 1px black;
   display: block;
   text-align: center;
+}
+:is(.card-health, .card-strength) > span.double-digit {
+  margin-left: -2px;
 }
 
 .anti-hero,

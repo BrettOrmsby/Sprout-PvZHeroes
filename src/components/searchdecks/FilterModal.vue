@@ -51,8 +51,25 @@
       <label>Sparks Cost</label>
       <div class="spark-container">
         Between
-        <InputNumber v-model="form.sparksMin" inputId="min" :min="0" :max="160000" fluid />
-        and <InputNumber v-model="form.sparksMax" inputId="minmax" :min="0" :max="160000" fluid />
+        <InputNumber
+          v-model="form.sparksMin"
+          inputId="min"
+          :min="0"
+          :max="160000"
+          fluid
+          :useGrouping="false"
+          locale="en-US"
+        />
+        and
+        <InputNumber
+          v-model="form.sparksMax"
+          inputId="minmax"
+          :min="0"
+          :max="160000"
+          fluid
+          :useGrouping="false"
+          locale="en-US"
+        />
       </div>
 
       <span id="showLabel">Show</span>

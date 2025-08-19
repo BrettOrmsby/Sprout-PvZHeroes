@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="downloadMainImage">
+  <form>
     <label for="cardName">Card Name</label>
     <InputText id="cardName" type="text" placeholder="Galacta-Cactus" v-model="card.name" />
     <span id="classLabel">Class</span>
@@ -29,6 +29,7 @@
       inputId="cost"
       :useGrouping="false"
       locale="en-US"
+      :min="0"
       placeholder="1"
     />
     <template v-if="card.type === 'fighter'">
@@ -42,7 +43,14 @@
         placeholder="2"
       />
       <label for="health">Health</label>
-      <InputNumber v-model="card.health" inputId="health" placeholder="1" />
+      <InputNumber
+        v-model="card.health"
+        inputId="health"
+        :useGrouping="false"
+        locale="en-US"
+        :min="0"
+        placeholder="1"
+      />
 
       <span id="strengthImage">Strength Image</span>
       <ImageSelect
@@ -106,16 +114,18 @@
     <InputNumber
       v-model="card.imgXOffset"
       inputId="imgXOffset"
+      :useGrouping="false"
+      locale="en-US"
       :min="0"
-      :max="300"
       placeholder="100"
     />
     <label for="imgYOffset">Image Y Offset</label>
     <InputNumber
       v-model="card.imgYOffset"
       inputId="imgYOffset"
+      :useGrouping="false"
+      locale="en-US"
       :min="0"
-      :max="400"
       placeholder="100"
     />
     <Divider />
@@ -150,7 +160,7 @@
       >Card Creator may not download images on mobile. Instead, you can screen shot the image
       below.</Message
     >
-    <Button type="submit" label="Download" :loading="isDownloading">
+    <Button label="Download" :loading="isDownloading" @click="downloadMainImage">
       <template #icon="iconClass">
         <Download :class="iconClass.class" />
       </template>
