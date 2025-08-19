@@ -347,6 +347,10 @@ h2 {
   flex-direction: column;
 }
 
+:deep(label:has(.p-radiobutton)) {
+  margin-bottom: 0;
+}
+
 .p-message {
   margin: 0 auto;
   width: fit-content;

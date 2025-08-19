@@ -27,6 +27,7 @@
         fluid
         inputId="cards"
         placeholder="Peashooter"
+        class="no-margin"
       >
         <template #option="slotProps">
           <div class="autocomplete-item">
@@ -43,15 +44,32 @@
           />
         </template>
       </AutoComplete>
-      <router-link :to="{ name: 'QueryHelp' }" class="help-message">
-        <Button label="Query Help" link />
+      <router-link :to="{ name: 'QueryHelp' }">
+        <Button label="Query Help" link class="help" />
       </router-link>
 
       <label>Sparks Cost</label>
       <div class="spark-container">
         Between
-        <InputNumber v-model="form.sparksMin" inputId="min" :min="0" :max="160000" fluid />
-        and <InputNumber v-model="form.sparksMax" inputId="minmax" :min="0" :max="160000" fluid />
+        <InputNumber
+          v-model="form.sparksMin"
+          inputId="min"
+          :min="0"
+          :max="160000"
+          fluid
+          :useGrouping="false"
+          locale="en-US"
+        />
+        and
+        <InputNumber
+          v-model="form.sparksMax"
+          inputId="minmax"
+          :min="0"
+          :max="160000"
+          fluid
+          :useGrouping="false"
+          locale="en-US"
+        />
       </div>
 
       <span id="showLabel">Show</span>
@@ -61,16 +79,18 @@
         aria-labelledby="showLabel"
       />
 
-      <Button type="submit" label="Search">
-        <template #icon="iconClass">
-          <Search :class="iconClass.class" />
-        </template>
-      </Button>
-      <Button label="Reset" severity="secondary" @click.prevent="deckFilters.reset">
-        <template #icon="iconClass">
-          <X :class="iconClass.class" />
-        </template>
-      </Button>
+      <div class="button-container">
+        <Button type="submit" label="Search">
+          <template #icon="iconClass">
+            <Search :class="iconClass.class" />
+          </template>
+        </Button>
+        <Button label="Reset" severity="secondary" @click.prevent="deckFilters.reset">
+          <template #icon="iconClass">
+            <X :class="iconClass.class" />
+          </template>
+        </Button>
+      </div>
     </form>
   </Dialog>
 </template>
@@ -134,43 +154,16 @@ watch(
 </script>
 
 <style scoped>
-label,
-span:has(+ .p-select) {
-  display: block;
-  margin-bottom: var(--inline-space);
-  font-weight: bold;
-}
-
-.error {
-  margin-top: var(--inline-space);
-  margin-bottom: var(--block-space);
-  color: var(--p-red-300);
-  display: block;
-}
-
-.p-inputtext,
-.p-select,
-.p-autocomplete,
-.card-list-textarea {
-  width: 100%;
-}
-
-:is(
-    .p-inputtext,
-    .spark-container,
-    .p-autocomplete,
-    .hero-picker,
-    .card-list-textarea,
-    .p-select
-  ):has(+ :not(:is(small, .help-message))) {
-  margin-bottom: var(--block-space);
-}
-
+/*TODO: does .hero-picker need bottom margin */
 .spark-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--inline-space);
+  margin-bottom: var(--block-space);
+}
+.spark-container .p-inputnumber {
+  margin: 0 !important;
 }
 
 .autocomplete-item {
@@ -183,13 +176,18 @@ span:has(+ .p-select) {
   height: 100%;
 }
 
-.help-message .p-button {
+.no-margin {
+  margin: 0 !important;
+}
+.help {
   padding: 0;
   margin-top: var(--inline-space);
   margin-bottom: var(--block-space);
+  width: fit-content;
 }
 
-.p-button + .p-button {
-  margin-left: var(--inline-space);
+.button-container {
+  display: flex;
+  gap: var(--inline-space);
 }
 </style>

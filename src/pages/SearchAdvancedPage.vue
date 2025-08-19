@@ -380,4 +380,8 @@ main {
 h1 {
   text-align: center;
 }
+
+a.p-button {
+  width: 100%;
+}
 </style>

@@ -9,8 +9,6 @@ import Tooltip from 'primevue/tooltip'
 import Aura from '@primevue/themes/aura'
 import { definePreset } from '@primevue/themes'
 
-// http://127.0.0.1:5173/deck/b5e22c7a-647b-41aa-8ca4-401eeea25c4a
-//https://pvzcc.fandom.com/wiki/Page_of_Resources
 /*
 TODO:
 - official decks
@@ -19,6 +17,7 @@ TODO:
 */
 
 import './assets/main.css'
+import './assets/form.css'
 const pinia = createPinia()
 
 const app = createApp(App)

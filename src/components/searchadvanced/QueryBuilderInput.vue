@@ -40,6 +40,8 @@
             v-model="value.value as number"
             :placeholder="placeholder"
             :id="generateID('input', name, index)"
+            :useGrouping="false"
+            locale="en-US"
           />
           <InputGroupAddon v-if="values.length > 1">
             <Button
@@ -110,6 +112,7 @@ const generateID = (kind: string, queryName: string, index: number) =>
   height: 1.2rem;
   color: var(--p-primary-400);
 }
+
 .input-container {
   display: flex;
   flex-direction: column;

@@ -154,11 +154,6 @@ watch(computedHero, onChange)
   margin-bottom: var(--inline-space) !important;
 }
 
-label {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
 small {
   display: block;
   white-space: pre-line;

@@ -142,17 +142,6 @@ const compareDecks = async () => {
 </script>
 
 <style scoped>
-.error {
-  margin-top: var(--inline-space);
-  color: var(--p-red-300);
-  display: block;
-}
-
-label {
-  display: block;
-  margin-bottom: var(--inline-space);
-}
-
 .hero-image {
   height: 2em;
   margin-right: var(--inline-space);
