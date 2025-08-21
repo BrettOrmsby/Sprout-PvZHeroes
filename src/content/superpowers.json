@@ -24,7 +24,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Do 2 damage.\nYou get +1{{Sun}} for the rest of the game.",
+    "abilities": "Do 2 damage.\nYou get {{+1Sun}} for the rest of the game.",
     "flavour": "Solar Flare never met a sunscreen strong enough to stop her."
   },
   {
@@ -66,7 +66,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a {{Hothead: Hothead include:t}}.",
+    "abilities": "Make a {{1Health}} {{Hothead: Hothead include:t}} that says \"<b>Team-Up</b>. When destroyed: Do 6 damage to a Zombie here.\"",
     "flavour": "Spudow is one tranquil tuber. Still, sometimes he loses his head."
   },
   {
@@ -108,7 +108,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a {{Poison Mushroom:Poison Mushroom}}.\nDo 2 damage to a Zombie there.",
+    "abilities": "Make a {{1Strength}}/{{1Health}} {{Poison Mushroom:Poison Mushroom}} with {{Anti-Hero}}<b>Anti-Hero 2</b>.\nDo 2 damage to a Zombie there.",
     "flavour": "Night Cap and his mushroom friends are not to be truffled with."
   },
   {
@@ -122,7 +122,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie with the highest Attack into a 1{{Strength}}/1{{Heart}} {{Goat:Goat c:0}}.",
+    "abilities": "Transform a Zombie with the highest Attack into a {{Goat:Goat c:0}}.",
     "flavour": "Rose turns Zombies into goats because... GOATS!"
   },
   {
@@ -136,7 +136,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +4{{Strength}}.",
+    "abilities": "A Plant gets {{+4Strength}}.",
     "flavour": "Captain Combustible knows how to light a fire under his teammates."
   },
   {
@@ -150,7 +150,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a 2{{Sun}}-cost {{Plant: c:2 type:p}}. It gets +2{{Strength}}/+1{{Heart}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
+    "abilities": "<b>Conjure</b> a {{Plant: c:2 type:p}} that costs {{2Sun}}. It gets {{+2Strength}}/{{+1Health}}, <b>Amphibious</b>, and <b>Team-Up</b>.",
     "flavour": "The modifications are controversial, sure. But the results are hard to argue with."
   },
   {
@@ -164,7 +164,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Move a Zombie. It gets +1{{Strength}}/+1{{Heart}}. Then it does a Bonus Attack.",
+    "abilities": "Move a Zombie. It gets {{+1Strength}}/{{+1Health}}. Then it does a Bonus Attack.",
     "flavour": "It's just Super Brainz' way of sharing the wonder of flight with his fellow Zombies."
   },
   {
@@ -178,7 +178,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Plant with 4{{Strength}} or less.",
+    "abilities": "Destroy a Plant with {{4Strength}} or less.",
     "flavour": "The Smash's wrestling moves are real all right. Too real. Just ask any Plant."
   },
   {
@@ -192,7 +192,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make two {{Impfinity Clones:Impfinity Clone include:t}} in random lanes.",
+    "abilities": "Make two {{2Strength}}/{{1Health}} {{Impfinity Clones:Impfinity Clone include:t}} with <b>Amphibious</b> in random lanes.",
     "flavour": "That's how you get Imps."
   },
   {
@@ -206,7 +206,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A plant gets -3{{Strength}}.\nDraw a card.",
+    "abilities": "A plant gets {{-3Strength}}.\nDraw a card.",
     "flavour": "Rustbolt gets a kick out of belittling Plants."
   },
   {
@@ -290,7 +290,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 3{{Strength}}/2{{Heart}} {{Octo-Pet:Octo-Pet include:t}} with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "Make a {{3Strength}}/{{2Health}} {{Octo-Pet:Octo-Pet include:t}} with <b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "Octopus incoming! Two words a Plant never wants to hear."
   },
   {
@@ -304,7 +304,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> an {{Environment:type:e is:z}} and a {{trick:type:t is:z}}. All Environment and Trick cards in your hand cost 1{{Brain}} less.",
+    "abilities": "<b>Conjure</b> an {{Environment:type:e is:z}} and a {{trick:type:t is:z}}. All Environment and Trick cards in your hand cost {{1Brain}} less.",
     "flavour": "This is Huge-Gigantacus' greatest invention ever. It's also his only invention. But it's best not to point that out to him."
   }
 ]

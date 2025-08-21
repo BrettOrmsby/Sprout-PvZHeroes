@@ -66,7 +66,7 @@
     "cost": 3,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>When played:</b> Plants with no Strength get +2{{Strength}}.",
+    "abilities": "<b>When played:</b> Plants with no Strength get {{+2Strength}}.",
     "flavour": "Don't let his gruff exterior fool you, he is always looking out for the little guy."
   },
   {
@@ -136,7 +136,7 @@
     "cost": 2,
     "strength": 0,
     "health": 8,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>",
     "flavour": "\"300 laps a day, every day. That's how I do it.\""
   },
   {
@@ -164,7 +164,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> Plants here and next door get +2{{Heart}}.",
+    "abilities": "<b>When played:</b> Plants here and next door get {{+2Health}}.",
     "flavour": "She's got nerves of steel... and everything else of steel!"
   },
   {
@@ -178,7 +178,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +2{{Heart}}.\n<b>Conjure</b> a {{Galactic Gardens:is:plant set:g}} card.",
+    "abilities": "A Plant gets {{+2Health}}.\n<b>Conjure</b> a {{Galactic Gardens:is:plant set:g}} card.",
     "flavour": "\"The galaxy is one beautiful melody, so play!\""
   },
   {
@@ -206,7 +206,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>While in an Environment:</b> This gets +1{{Strength}}/+1{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "<b>While in an Environment:</b> This gets {{+1Strength}}/{{+1Health}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "Past job experience includes: Shooing away creepy fog."
   },
   {
@@ -276,7 +276,7 @@
     "cost": 3,
     "strength": 0,
     "health": 8,
-    "abilities": "<b>When hurt:</b> This gets +4{{Strength}}.",
+    "abilities": "<b>When hurt:</b> This gets {{+4Strength}}.",
     "flavour": "Don't poke the beary."
   },
   {
@@ -304,7 +304,7 @@
     "cost": 5,
     "strength": 4,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your {{Nuts:tribe:nut type:f}} get +2{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Your {{Nuts:tribe:nut type:f}} get {{+2Health}} Health.",
     "flavour": "Smackadamia wasn't born with smack smarts. He studied hard. He's a smackademic."
   },
   {
@@ -318,7 +318,7 @@
     "cost": 5,
     "strength": 2,
     "health": 2,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} for each other Plant and Zombie.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\n<b>When played:</b> This gets {{+1Strength}}/{{+1Health}} for each other Plant and Zombie.",
     "flavour": "He grew up on the wrong side of the garden."
   },
   {
@@ -332,7 +332,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut}}, and its {{Strength}} becomes 4{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Nut:tribe:nut}}, and its {{Strength}} becomes {{4Strength}}.",
     "flavour": "A staunch believer in numerology, he'll go on at length about the significance of the number 3 if you let him."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play a {{Root:tribe:root type:f include:token}}, both the {{Roots:tribe:root type:f include:token}} get +1{{Strength}}/+1{{Heart}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root include:token}}.",
+    "abilities": "When you play a {{Root:tribe:root type:f include:token}}, both the {{Roots:tribe:root type:f include:token}} get {{+1Strength}}/{{+1Health}}.\n<b>Start of turn:</b> <b>Conjure</b> a {{Root:tribe:root include:token}}.",
     "flavour": "His destiny is written in the starch."
   },
   {
@@ -374,7 +374,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Fusion:</b> A Plant played on this gets +2{{Strength}}/+4{{Heart}}.",
+    "abilities": "<b>Fusion:</b> A Plant played on this gets {{+2Strength}}/{{+4Health}}.",
     "flavour": "\"Build your house on a solid foundation,\" they said. \"Build your house on pumpkin.\""
   },
   {
@@ -416,7 +416,7 @@
     "cost": 4,
     "strength": 0,
     "health": 11,
-    "abilities": "<b>Team-Up</b>\n{{Truestrike}}<b>Bullseye</b>\nWhen your {{Nuts:tribe:nut type:f}} get hurt, do 1 damage to the Zombie Hero.",
+    "abilities": "<b>Team-Up</b>, {{Truestrike}}<b>Bullseye</b>\nWhen your {{Nuts:tribe:nut type:f}} get hurt, do 1 damage to the Zombie Hero.",
     "flavour": "Dressed up as a mirrorball for a disco-themed party. Never looked back."
   },
   {
@@ -430,7 +430,7 @@
     "cost": 5,
     "strength": null,
     "health": null,
-    "abilities": "Destroy all Plants and Zombies with 4{{Strength}} or more.\n<b>Conjure</b> a {{Mushroom:tribe:mushroom cost<5}} card that costs 4 or less",
+    "abilities": "Destroy all Plants and Zombies with {{4Strength}} or more.\n<b>Conjure</b> a {{Mushroom:tribe:mushroom cost<5}} card that costs {{4Sun}} or less.",
     "flavour": "\"I could destroy everything you hold dear. It wouldn't be hard.\""
   },
   {
@@ -472,7 +472,7 @@
     "cost": 6,
     "strength": 7,
     "health": 7,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n\n{{Untrickable}}<b>Untrickable</b>\nWhen a Zombie is played, move it here.",
+    "abilities": "{{Armored}}<b>Armored 1</b>, {{Untrickable}}<b>Untrickable</b>\nWhen a Zombie is played, move it here.",
     "flavour": "The apple doesn't fall far from the tree. Neither does anything else."
   },
   {
@@ -486,7 +486,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When a Plant is played</b>: That plant's {{Strength}} becomes 3{{Strength}}.",
+    "abilities": "When you play a Plant, that Plant's {{Strength}} becomes {{3Strength}}.",
     "flavour": "They say two heads are better than one. Three-Nut just took the next evolutionary step."
   },
   {
@@ -500,7 +500,7 @@
     "cost": 3,
     "strength": 0,
     "health": 8,
-    "abilities": "<b>Team-Up</b>\n{{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a {{card: is:plant c>=4}} that costs 4{{Sun}} or more.",
+    "abilities": "<b>Team-Up</b>, {{Untrickable}}<b>Untrickable</b>\n<b>When played</b>: <b>Conjure</b> a {{card: is:plant c>=4}} that costs {{4Sun}} or more.",
     "flavour": "You can't be destroyed by a Rolling Stone when you basically are a Rolling Stone."
   },
   {
@@ -514,7 +514,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>When played</b>: This gets +1{{Strength}}/+1{{Heart}} for each other {{Amphibious:is:plant a:amphibious type:p}} Plant.",
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: This gets {{+1Strength}}/{{+1Health}} for each other {{Amphibious:is:plant a:amphibious type:p}} Plant.",
     "flavour": "Of course beans evolved gills. How else would they breathe underwater?"
   },
   {
@@ -570,7 +570,7 @@
     "cost": 5,
     "strength": 4,
     "health": 6,
-    "abilities": "<b>Team-Up</b>\n<b>Amphibious</b>\n<b>When played:</b> Fill your Super-Block Meter to full.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\n<b>When played:</b> Fill your Super-Block Meter to full.",
     "flavour": "He moonlights as a decorative center piece during the fall."
   },
   {
@@ -598,7 +598,7 @@
     "cost": 2,
     "strength": 1,
     "health": 2,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>Dino-Roar:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Beta-Carrotina tracked Huge-Gigantacus all the way down the Meteor-Z-carved tunnel to Hollow Earth. Carrots there had evolved in a very different direction."
   },
   {
@@ -612,7 +612,7 @@
     "cost": 6,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>When played</b>: Make {{Wall-Nuts:Wall-Nut c:1}} next door.\n<b>Nut Evolution</b>: All Plants with no {{Strength}} get +3{{Strength}}.",
+    "abilities": "<b>When played</b>: Make {{Wall-Nuts:Wall-Nut c:1}} next door.\n<b>Nut Evolution</b>: All Plants with no {{Strength}} get {{+3Strength}}.",
     "flavour": "He crowned himself King of All Hollow Earth. No one had the heart to tell him it was actually a parliamentary democracy."
   },
   {
@@ -626,7 +626,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "Zombie Tricks cost 1{{Brain}} more.",
+    "abilities": "Zombie Tricks cost {{1Brain}} more.",
     "flavour": "\"I'd forget my own flower if it wasn't stuck to my head. Wait, what were we talking about?\""
   },
   {
@@ -654,7 +654,7 @@
     "cost": 2,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Amphibious</b> <b>Hunt</b>",
+    "abilities": "<b>Amphibious</b>, <b>Hunt</b>",
     "flavour": "\"Who's a good vegetable? You are! Yes, you are!\""
   },
   {
@@ -696,7 +696,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a 5{{Strength}}/4{{Heart}} {{Grizzly Pear:Grizzly Pear}} with <b>Amphibious</b> here and {{Fruit:t:Fruit type:f include:token}} Plants get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n<b>When destroyed:</b> Make a {{5Strength}}/{{4Health}} {{Grizzly Pear:Grizzly Pear}} with <b>Amphibious</b> here and {{Fruit:t:Fruit type:f include:token}} Plants get {{+1Strength}}/{{+1Health}}.",
     "flavour": "So cute and cuddly and ... wait, what's that growling sound?"
   },
   {
@@ -710,7 +710,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Zombie with 4{{Strength}} or more.",
+    "abilities": "Destroy a Zombie with {{4Strength}} or more.",
     "flavour": "The bigger they are, the harder they go boom."
   },
   {
@@ -724,7 +724,7 @@
     "cost": 4,
     "strength": 3,
     "health": 7,
-    "abilities": "<b>Team-Up</b>\n<b>When played behind a Plant:</b> This becomes 7{{Strength}}/3{{Heart}}.",
+    "abilities": "<b>Team-Up</b>\n<b>When played behind a Plant:</b> This becomes {{7Strength}}/{{3Health}}.",
     "flavour": "\"I do stretching exercises every morning,\" he says. \"It's important to stay physically and mentally nimble.\""
   },
   {
@@ -752,7 +752,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Move a Plant. It gets +4{{Heart}} and <b>Team-Up</b>.",
+    "abilities": "Move a Plant. It gets {{+4Health}} and <b>Team-Up</b>.",
     "flavour": "Who doesn't like bubbles? Zombies...that's who."
   },
   {
@@ -780,7 +780,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +2{{Heart}} and can't be hurt this turn.",
+    "abilities": "A Plant gets {{+2Health}} and can't be hurt this turn.",
     "flavour": "A good way to root for the Plants."
   },
   {
@@ -836,7 +836,7 @@
     "cost": 2,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> All {{Mushrooms:tribe:mushroom type:f}} get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When played:</b> All {{Mushrooms:tribe:mushroom type:f}} get {{+1Strength}}/{{+1Health}}.",
     "flavour": "You might know him from his wildly popular series of workout videos called \"30 Days to a Buff-Shroom Body.\""
   },
   {
@@ -850,7 +850,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6 include:token -\"Magic Beanstalk\"}} that costs 6{{Sun}} or less.",
+    "abilities": "<b>Start of Turn:</b> This transforms into a random {{Plant:is:plant type:f c<=6 include:token -\"Magic Beanstalk\"}} that costs {{6Sun}} or less.",
     "flavour": "t's the tiny seed of a... nobody actually knows."
   },
   {
@@ -892,7 +892,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "All Plants get +2{{Strength}}.",
+    "abilities": "All Plants get {{+2Strength}}.",
     "flavour": "\"Now you've done it! That's the last straw! I'm gonna berry you!\""
   },
   {
@@ -906,7 +906,7 @@
     "cost": 3,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>When played:</b> This gets +2{{Strength}} for each other Plant.",
+    "abilities": "<b>When played:</b> This gets {{+2Strength}} for each other Plant.",
     "flavour": "Leadership comes with a lot of responsibility, but he knew what he signed up for."
   },
   {
@@ -934,7 +934,7 @@
     "cost": 4,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> Make a {{Pear Pal:Pear Pal}} here.",
+    "abilities": "<b>When played:</b> Make a {{2Strength}}/{{2Health}} {{Pear Pal:Pear Pal}} with <b>Team-Up</b> here.",
     "flavour": "It's cute how they're always completing each other's sentences."
   },
   {
@@ -990,7 +990,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "When you play a Plant here, make a {{Puff-Shroom:Puff-Shroom}} in another random lane.",
+    "abilities": "When you play a Plant here, make a {{1Strength}}/{{1Health}} {{Puff-Shroom:Puff-Shroom}} with <b>Team-Up</b> in another random lane.",
     "flavour": "Sometimes beautiful things grow out of the darkest places. Ponder that for a few moments."
   },
   {
@@ -1004,7 +1004,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>While in an Environment:</b> This gets +3{{Strength}}.",
+    "abilities": "<b>While in an Environment:</b> This gets {{+3Strength}}.",
     "flavour": "\"Call me a 'weed.' Go on. I consider it a compliment.\""
   },
   {
@@ -1046,7 +1046,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "<b>Dino-Roar:</b> This gets +1{{Strength}}.",
+    "abilities": "<b>Dino-Roar:</b> This gets {{+1Strength}}.",
     "flavour": "The root of all primeval."
   },
   {
@@ -1060,7 +1060,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> Make a {{Puff-Shroom:Puff-Shroom}} here.",
+    "abilities": "<b>When played:</b> Make a {{1Strength}}/{{1Health}} {{Puff-Shroom:Puff-Shroom}} with <b>Team-Up</b> here.",
     "flavour": "Shrooms, bless their hearts, always wanting to cuddle up cuddly-like."
   },
   {
@@ -1130,7 +1130,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Mushroom:tribe:mushroom}}, and it gets +2{{Strength}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Mushroom:tribe:mushroom}}, and it gets {{+2Strength}}.",
     "flavour": "He's far out all right. Like, waaaay far out."
   },
   {
@@ -1158,7 +1158,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Plant Evolution</b>: Plants here and next door get +2{{Strength}}.",
+    "abilities": "<b>Plant Evolution</b>: Plants here and next door get {{+2Strength}}.",
     "flavour": "In the secret groves of Hollow Earth, Magnolias evolved to shun steely stoicism, boasting blunt barbarity."
   },
   {
@@ -1200,7 +1200,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "When another {{Berry:tribe:berry (type:f or a:do a:damage)}} hurts a Zombie or Zombie Hero, Sergeant Strongberry does 2 more damage to it.",
+    "abilities": "When another {{Berry:tribe:berry (type:f or a:do a:damage)}} hurts a Zombie or Zombie Hero, Sergeant Strongberry does 2 more damage to that enemy.",
     "flavour": "He's intense, sure. But he just wants the berries to be all they can be."
   },
   {
@@ -1312,7 +1312,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When you play a {{Berry:tribe:berry}}, do 1 damage to Zombies next door. <b>Berry Evolution:</b> Gain a {{Berry Blast:Berry Blast}}.",
+    "abilities": "When you play a {{Berry:tribe:berry}}, do 1 damage to Zombies next door to Strawberrian.\n<b>Berry Evolution:</b> Gain a {{Berry Blast:Berry Blast}}.",
     "flavour": "When it's time to fight, he gets pretty juiced."
   },
   {
@@ -1326,7 +1326,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> Transform all Plants into Pineclones.",
+    "abilities": "<b>When played:</b> Transform all Plants into {{3Strength}}/{{3Health}} Pineclones.",
     "flavour": "It's nothing personal; she just prefers the company of other Pineclones."
   },
   {
@@ -1368,7 +1368,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>While in your hand:</b> At end of turn, this transforms into a random Plant with +1{{Strength}}/+1{{Heart}}. It keeps this ability.",
+    "abilities": "<b>While in your hand:</b> At end of turn, this transforms into a random Plant with {{+1Strength}}/{{+1Health}}. It keeps this ability.",
     "flavour": "\"You never know what the next life has in store for you,\" she says. \"So get the most out of this one while you can.\""
   },
   {
@@ -1382,7 +1382,7 @@
     "cost": 4,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> Each other Plant transforms into a random Plant that costs 1{{Sun}} more.",
+    "abilities": "<b>When played:</b> Each other Plant transforms into a random Plant that costs {{1Sun}} more.",
     "flavour": "\"And you thought spinach made you strong. Please. I am spinach times infinity.\""
   },
   {
@@ -1410,7 +1410,7 @@
     "cost": 3,
     "strength": 1,
     "health": 3,
-    "abilities": "<b>When played:</b> Make a copy of this with <b>Team-Up</b> here.\n<b>Dino-Roar:</b> This gets +1{{Strength}}.",
+    "abilities": "<b>When played:</b> Make a copy of this with <b>Team-Up</b> here.\n<b>Dino-Roar:</b> This gets {{+1Strength}}.",
     "flavour": "Dedicated pack hunters, one roars a distraction while the other strikes from the side."
   },
   {
@@ -1424,7 +1424,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "When this does damage, it gets +1{{Strength}}.",
+    "abilities": "When this does damage, it gets {{+1Strength}}.",
     "flavour": "Sometimes we hurt the ones we love. Blooming Heart knows this all too well."
   },
   {
@@ -1438,7 +1438,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}} when another Berry does damage.\n<b>When played: Conjure</b> a {{Berry:tribe:berry}}.",
+    "abilities": "This gets {{+1Strength}} when another Berry does damage.\n<b>When played: Conjure</b> a {{Berry:tribe:berry}}.",
     "flavour": "These trouble makers are just asking to get grounded."
   },
   {
@@ -1466,7 +1466,7 @@
     "cost": 4,
     "strength": 4,
     "health": 7,
-    "abilities": "<b>End of Turn:</b> This transforms into a random Plant that costs 1 more.\nIt keeps this ability.",
+    "abilities": "<b>End of Turn:</b> This transforms into a random Plant that costs {{1Sun}} more.\nIt keeps this ability.",
     "flavour": "\"By Heisenberg's Uncertainty Principle, if you look at a Plant too closely, you actually change what that Plant is...\""
   },
   {
@@ -1536,7 +1536,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 1{{Strength}}/1{{Heart}} {{Button Mushroom:Button Mushroom}} in a lane of your choice. Then another appears in a random lane.",
+    "abilities": "Make a {{1Strength}}/{{1Health}} {{Button Mushroom:Button Mushroom}} in a lane of your choice. Then another appears in a random lane.",
     "flavour": "One good mushroom deserves another."
   },
   {
@@ -1550,7 +1550,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "All Plants get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "All Plants get {{+1Strength}}/{{+1Health}}.",
     "flavour": "Bad for your picnic. Good for your plants."
   },
   {
@@ -1578,7 +1578,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get +2{{Strength}}.",
+    "abilities": "<b>Team-Up</b>\n{{Peas:t:pea}} behind this get {{+2Strength}}.",
     "flavour": "\"Feel the burn, I COMMAND YOU!\""
   },
   {
@@ -1592,7 +1592,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>When played on Heights:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When played on Heights:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "\"Coleslaw from above!\""
   },
   {
@@ -1606,7 +1606,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +4{{Strength}}/+4{{Heart}}.",
+    "abilities": "A Plant gets {{+4Strength}}/{{+4Health}}.",
     "flavour": "Stinky, sure, but powerful stuff. Ask any Plant."
   },
   {
@@ -1634,7 +1634,7 @@
     "cost": 3,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played:</b> Another Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>When played:</b> Another Plant gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "She's always bringing out the best in others."
   },
   {
@@ -1662,7 +1662,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played:</b> This gets +1{{Strength}} this turn.",
+    "abilities": "<b>Team-Up</b>\n<b>When played:</b> This gets {{+1Strength}} this turn.",
     "flavour": "Little known fact: He used to have two teeth."
   },
   {
@@ -1676,7 +1676,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Start of Turn:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Start of Turn:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Sometimes they squabble, but they usually get along like five peas in a pod."
   },
   {
@@ -1718,7 +1718,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played on Heights:</b> This gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>When played on Heights:</b> This gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "The youngest Peashooter ever to earn a pilot's license. Also the only Peashooter ever to earn a pilot's license."
   },
   {
@@ -1732,7 +1732,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "All Plants on Heights and Environments get +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "All Plants on Heights and Environments get {{+2Strength}}/{{+2Health}}.",
     "flavour": "Environmentalism at its finest."
   },
   {
@@ -1788,7 +1788,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When destroyed</b>: All {{Fruits:t:Fruit type:f include:token}} in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When destroyed</b>: All {{Fruits:t:Fruit type:f include:token}} in your hand get {{+1Strength}}/{{+1Health}}.",
     "flavour": "\"Have you met my better half? She's around here somewhere.\""
   },
   {
@@ -1802,7 +1802,7 @@
     "cost": 3,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played next to a {{Leafy:tribe:leafy type:f}} Plant</b>: This gets +1{{Heart}} and Conjure a {{Leafy:t:leafy}} card.",
+    "abilities": "<b>When played next to a {{Leafy:tribe:leafy type:f}} Plant</b>: This gets {{+1Health}} and <b>Conjure</b> a {{Leafy:t:leafy}} card.",
     "flavour": "\"Everyone's magic in their own special way. Everyone except me.\""
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "When you play a {{Pea:tribe:pea type:f}}, that Pea gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When you play a {{Pea:tribe:pea type:f}}, that Pea gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "\"It ain't easy keeping the peas in this family.\""
   },
   {
@@ -1830,7 +1830,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +1{{Strength}}/+1{{Heart}} then does a Bonus Attack.",
+    "abilities": "A Plant gets {{+1Strength}}/{{+1Health}} then does a Bonus Attack.",
     "flavour": "The most important meal of the day."
   },
   {
@@ -1872,7 +1872,7 @@
     "cost": 6,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} for each other Plant and Zombie.",
+    "abilities": "<b>When played:</b> This gets {{+1Strength}}/{{+1Health}} for each other Plant and Zombie.",
     "flavour": "When he drops the beet, everyone feels it. Especially the Zombies."
   },
   {
@@ -1928,7 +1928,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Fusion:</b> A Plant played on this gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>Fusion:</b> A Plant played on this gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "Don't let the Dog Walker anywhere near it."
   },
   {
@@ -1956,7 +1956,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Zombie Trick is played.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when a Zombie Trick is played.",
     "flavour": "\"You shoulda seen the other guy!\""
   },
   {
@@ -1970,7 +1970,7 @@
     "cost": 5,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>While in your hand:</b> This gets +1{{Strength}}/+1{{Heart}} when a Plant gains Strength or Health.",
+    "abilities": "<b>While in your hand:</b> This gets {{+1Strength}}/{{+1Health}} when a Plant gains Strength or Health.",
     "flavour": "She loves living out of a pot. It's not for every Plant. But to her, it's home."
   },
   {
@@ -2012,7 +2012,7 @@
     "cost": 5,
     "strength": null,
     "health": null,
-    "abilities": "Plants here get +5{{Strength}}/+5{{Heart}}.",
+    "abilities": "Plants here get {{+5Strength}}/{{+5Health}}.",
     "flavour": "It may seem an inhospitable place for Plants, but with a little TLC and some patience, it'll grow more than just potatoes. Much more."
   },
   {
@@ -2068,7 +2068,7 @@
     "cost": 4,
     "strength": 3,
     "health": 6,
-    "abilities": "<b>Leafy Evolution</b>: All Plants in all lanes and your hand get +2{{Strength}}.",
+    "abilities": "<b>Leafy Evolution</b>: All Plants in all lanes and your hand get {{+2Strength}}.",
     "flavour": "Neptuna planned her Triassic Invasion perfectly. But like so many conquerors before her, she underestimated the Spinach."
   },
   {
@@ -2096,7 +2096,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Plant.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when you play a Plant.",
     "flavour": "\"Can you spot me, bro?\""
   },
   {
@@ -2110,7 +2110,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{DoubleStrike}}<b>Double Strike</b>\n<b>Dino-Roar:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "She's a banana first and a dinosaur second. But it's a close second."
   },
   {
@@ -2124,7 +2124,7 @@
     "cost": 3,
     "strength": 1,
     "health": 4,
-    "abilities": "Cards you <b>Conjure</b> cost 1{{Sun}} less.\nWhen this does damage, <b>Conjure</b> a {{Legendary:is:plant r:l}} card.",
+    "abilities": "Cards you <b>Conjure</b> cost {{1Sun}} less.\nWhen this does damage, <b>Conjure</b> a {{Legendary:is:plant r:l}} card.",
     "flavour": "He's steered his crew through many a pickle."
   },
   {
@@ -2138,7 +2138,7 @@
     "cost": 5,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When played:</b> Each Plant in your hand becomes 4{{Strength}}/4{{Heart}}.",
+    "abilities": "<b>When played:</b> Each Plant in your hand becomes {{4Strength}}/{{4Health}}.",
     "flavour": "So powerful it makes you cry."
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root include:token}}.\n<b>Dino-Roar:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>When Played</b>: <b>Conjure</b> a {{Root:t:root include:token}}.\n<b>Dino-Roar:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Some potatoes are sweet. Others are dinosaurs."
   },
   {
@@ -2180,7 +2180,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> Shuffle two {{Clique Peas:Clique Peas}} into your deck. For the rest of the game, all Clique Peas get +1{{Strength}}/+1{{Heart}} and cost +1{{Sun}}.",
+    "abilities": "<b>When played:</b> Shuffle two {{Clique Peas:Clique Peas}} into your deck. For the rest of the game, all Clique Peas get {{+1Strength}}/{{+1Health}} and cost {{+1Sun}}.",
     "flavour": "On Wednesdays we wear sunglasses."
   },
   {
@@ -2194,7 +2194,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a Plant on the Heights, that Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When you play a Plant on the Heights, that Plant gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "She's always trying to elevate her friends. She's good like that."
   },
   {
@@ -2236,7 +2236,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "A Plant gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "Livin' large, oh yeah."
   },
   {
@@ -2278,7 +2278,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Zombie is {{frozen:is:plant a:freeze}}.",
+    "abilities": "This gets {{+2Strength}}/{{+2Health}} when a Zombie is {{frozen:is:plant a:freeze}}.",
     "flavour": "Zombies are always looking at her with a frozen expression."
   },
   {
@@ -2348,7 +2348,7 @@
     "cost": 5,
     "strength": 1,
     "health": 5,
-    "abilities": "Attacks here and next door.",
+    "abilities": "This attacks here and next door.",
     "flavour": "\"My favorite number is 5.\""
   },
   {
@@ -2502,7 +2502,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>",
     "flavour": "Has codependency issues, but he's working on it."
   },
   {
@@ -2530,7 +2530,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>Team-Up</b>\nWhen you play a {{Bean:t:bean}}, do 2 damage to the Zombie Hero.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\nWhen you play a {{Bean:t:bean}}, do 2 damage to the Zombie Hero.",
     "flavour": "\"Heavy is the weight of my command. And my cap. Heavy is the cap.\""
   },
   {
@@ -2544,7 +2544,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\n<b>Splash Damage 1</b>",
+    "abilities": "<b>Amphibious</b>, <b>Splash Damage 1</b>",
     "flavour": "\"I do it for the shock value.\""
   },
   {
@@ -2572,7 +2572,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\n<b>When played:</b> All <b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\n<b>When played:</b> All <b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants get {{+1Strength}}/{{+1Health}}.",
     "flavour": "Was *this* close to becoming an Army Bean."
   },
   {
@@ -2628,7 +2628,7 @@
     "cost": 6,
     "strength": 2,
     "health": 6,
-    "abilities": "Attacks here and next door.\n<b>Plant Evolution</b>: This gets +2{{Strength}}.",
+    "abilities": "Attacks here and next door.\n<b>Plant Evolution</b>: This gets {{+2Strength}}.",
     "flavour": "\"Labor to keep alive in your breast that little spark of celestial fire called conscience.\" -Gourd Squashington"
   },
   {
@@ -2670,7 +2670,7 @@
     "cost": 4,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a {{Bean:t:bean}}.\n<b>When played:</b> Gain two 1{{Strength}}/1{{Heart}} {{Weenie Beanies:Weenie Beanie}}.",
+    "abilities": "<b>Team-Up</b>\nThis gets {{+1Strength}}/{{+1Health}} when you play a {{Bean:t:bean}}.\n<b>When played:</b> Gain two {{1Strength}}/{{1Health}} {{Weenie Beanies:Weenie Beanie}}.",
     "flavour": "\"Every bean is accounted for. I assure you, they all add up.\""
   },
   {
@@ -2684,7 +2684,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>Amphibious</b>.\n<b>Splash Damage 3</b>",
+    "abilities": "<b>Amphibious</b>, <b>Splash Damage 3</b>",
     "flavour": "\"I'm a dragon; I'm a Plant... I'm a mystery!\""
   },
   {
@@ -2698,7 +2698,7 @@
     "cost": 4,
     "strength": 2,
     "health": 6,
-    "abilities": "When a Zombie or Gravestone becomes {{frozen:is:plant a:freeze}}, destroy it.",
+    "abilities": "When a Zombie or Gravestone is {{frozen:is:plant a:freeze}}, destroy it.",
     "flavour": "\"My complexion is more of a summer.\""
   },
   {
@@ -2712,7 +2712,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\nThis gets +1{{Strength}}/+1{{Heart}} when you play a Plant here.",
+    "abilities": "<b>Amphibious</b>, <b>Team-Up</b>\nThis gets {{+1Strength}}/{{+1Health}} when you play a Plant here.",
     "flavour": "He's really good at entertaining himself."
   },
   {
@@ -2740,7 +2740,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "<b>{{Amphibious:a:amphibious is:plant type:f}}</b> Plants here get +2{{Strength}}. Non-<b>Amphibious</b> Zombies here get -2{{Strength}}.",
+    "abilities": "Plants here that are <b>{{Amphibious:a:amphibious is:plant type:f}}</b> get {{+2Strength}}.\nZombies here that aren't <b>Amphibious</b> get {{-2Strength}}.",
     "flavour": "Good for Plants, it is. Good for Zombies, it is not!"
   },
   {
@@ -2754,7 +2754,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when anything is bounced.\n<b>Bean Evolution</b>: <b>Bounce</b> a Zombie.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when anything is bounced.\n<b>Bean Evolution</b>: <b>Bounce</b> a Zombie.",
     "flavour": "\"It's not how hard the Zombies knock you down. It's how hard you bounce back.\""
   },
   {
@@ -2782,7 +2782,7 @@
     "cost": 4,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie and Zombies next door get -2{{Strength}}. Then destroy any of those Zombies that have 0{{Strength}}.",
+    "abilities": "A Zombie and Zombies next door to it get {{-2Strength}}. Then destroy any of those Zombies that have {{0Strength}}.",
     "flavour": "Is she cute or terrifying? Yes."
   },
   {
@@ -2824,7 +2824,7 @@
     "cost": 9,
     "strength": 7,
     "health": 7,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Transform all Zombies into 1{{Strength}}/1{{Heart}} {{Zombies:is:zombie s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities",
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> Transform all Zombies into {{1Strength}}/{{1Health}} {{Zombies:is:zombie s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities",
     "flavour": "\"Presto change-o! Now you see a powerful Zombie. Now you don't!\""
   },
   {
@@ -2852,7 +2852,7 @@
     "cost": 8,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\n<b>Splash Damage 6</b>\nZombie Tricks cost 6{{Brain}} more.",
+    "abilities": "<b>Amphibious</b>, <b>Splash Damage 6</b>\nZombie Tricks cost {{6Brain}} more.",
     "flavour": "Their ancestors were hunted to the depths of space. Now their descendants are back for cold, fruity vengeance."
   },
   {
@@ -2908,7 +2908,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Team-Up</b>\nWhen you play a <b>{{Team-Up:a:team-up type:f}}</b> Plant, all <b>Team-Up</b> Plants get +1{{Strength}}.",
+    "abilities": "<b>Team-Up</b>\nWhen you play a <b>{{Team-Up:a:team-up type:f}}</b> Plant, all <b>Team-Up</b> Plants get {{+1Strength}}.",
     "flavour": "\"GROW-Nuts! THROW-Nuts! When we get big we GO-Nuts! Goooooooo PLANTS!\""
   },
   {
@@ -2964,7 +2964,7 @@
     "cost": 4,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>End of Turn</b>: Destroy a random Zombie and make a {{Puff-Shroom:Puff-Shroom}} there.",
+    "abilities": "<b>End of Turn</b>: Destroy a random Zombie and make a {{1Strength}}/{{1Health}} {{Puff-Shroom:Puff-Shroom}} with <b>Team-Up</b> there.",
     "flavour": "Zombies are always trying to build a bridge out of her."
   },
   {
@@ -3048,7 +3048,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie into a random {{Zombie:is:zombie type:f c:1 include:token}} that costs 1{{Brain}}.",
+    "abilities": "Transform a Zombie into a random {{Zombie:is:zombie type:f c:1 include:token}} that costs {{1Brain}}.",
     "flavour": "It's a life-changing experience. Actually, it's an everything-changing experience."
   },
   {
@@ -3118,7 +3118,7 @@
     "cost": 1,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn.",
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get {{+1Sun}} this turn.",
     "flavour": "\"Not to brag, but I'm pretty much your basic franchise-founding superstar.\""
   },
   {
@@ -3132,7 +3132,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> This gets +2{{Strength}}/+2{{Heart}} if there's a Plant with <b>{{Team-Up:a:team-up type:f}}</b> here.",
+    "abilities": "<b>When played:</b> This gets {{+2Strength}}/{{+2Health}} if there's a Plant with <b>{{Team-Up:a:team-up type:f}}</b> here.",
     "flavour": "They work hard but they also like to party. That's them in a nutshell."
   },
   {
@@ -3174,7 +3174,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> This gets +1{{Strength}}/+1{{Heart}} if you made at least 6{{Sun}} this turn.",
+    "abilities": "<b>When played:</b> This gets {{+1Strength}}/{{+1Health}} if you made at least {{6Sun}} this turn.",
     "flavour": "Just don't talk to her before she's had her Coffee Bean."
   },
   {
@@ -3202,7 +3202,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "This gets +2{{Strength}}/+2{{Heart}} when a Plant or your Hero is healed.",
+    "abilities": "This gets {{+2Strength}}/{{+2Health}} when a Plant or your Hero is healed.",
     "flavour": "\"A toast to your health... and mine!\""
   },
   {
@@ -3216,7 +3216,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A non-Amphibious Zombie gets -2{{Strength}}/-2{{Heart}}. If you made at least 6{{Sun}} this turn, it gets -3{{Strength}}/-3{{Heart}} instead.",
+    "abilities": "A non-Amphibious Zombie gets {{-2Strength}}/{{-2Health}}. If you made at least {{6Sun}} this turn, it gets {{-3Strength}}/{{-3Health}} instead.",
     "flavour": "You're gonna need a towel for this one."
   },
   {
@@ -3241,7 +3241,7 @@
     "class": "Solar",
     "type": "Plant",
     "tribes": ["Flower"],
-    "cost": 5,
+    "cost": 4,
     "strength": 3,
     "health": 5,
     "abilities": "{{Strikethrough}}<b>Strikethrough</b>",
@@ -3258,7 +3258,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Start of Turn:</b> You gain +1{{Sun}} this turn.",
+    "abilities": "<b>Start of Turn:</b> You gain {{+1Sun}} this turn.",
     "flavour": "\"Time to put the metal to the petal, baby!\""
   },
   {
@@ -3272,7 +3272,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When an Environment is played, this gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "When an Environment is played, this gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "He's Peel deGrass Lichen's biggest fan."
   },
   {
@@ -3286,7 +3286,7 @@
     "cost": 2,
     "strength": 3,
     "health": 1,
-    "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, this gets {{Strikethrough}}<b>Strikethrough</b>.",
+    "abilities": "<b>When played:</b> If you made at least {{6Sun}} this turn, this gets {{Strikethrough}}<b>Strikethrough</b>.",
     "flavour": "Watchful Quasar Wizards sometimes spot an Unidentified Fruiting Object."
   },
   {
@@ -3314,7 +3314,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Team-Up</b>\n<b>When played on Heights</b>: A Zombie gets -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>Team-Up</b>\n<b>When played on Heights</b>: A Zombie gets {{-1Strength}}/{{-1Health}}.",
     "flavour": "Insert corny joke here."
   },
   {
@@ -3342,7 +3342,7 @@
     "cost": 3,
     "strength": 0,
     "health": 3,
-    "abilities": "<b>Team-Up</b>\n<b>Start of Turn: </b>You get +2{{Sun}} this turn.",
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn: </b>You get {{+2Sun}} this turn.",
     "flavour": "Compared to his little brother, he's the one with the sunnier disposition."
   },
   {
@@ -3356,7 +3356,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>When played:</b> If you made at least 6{{Sun}} this turn, draw a card.",
+    "abilities": "<b>When played:</b> If you made at least {{6Sun}} this turn, draw a card.",
     "flavour": "Got his start writing messages for fortune cookies."
   },
   {
@@ -3370,7 +3370,7 @@
     "cost": 3,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>When played:</b> This gets +1{{Strength}} for each Sun you made this turn.",
+    "abilities": "<b>When played:</b> This gets {{+1Strength}} for each Sun you made this turn.",
     "flavour": "Zombies may appear closer than they are."
   },
   {
@@ -3384,7 +3384,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Zombie with 3{{Strength}} or less.",
+    "abilities": "Destroy a Zombie with {{3Strength}} or less.",
     "flavour": "It's hammer time. #hadtobesaid"
   },
   {
@@ -3454,7 +3454,7 @@
     "cost": 4,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Plant Evolution</b>: This gets +3{{Strength}}.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\n<b>Plant Evolution</b>: This gets {{+3Strength}}.",
     "flavour": "He makes yelling \"Get off my lawn\" into an art form."
   },
   {
@@ -3482,7 +3482,7 @@
     "cost": 2,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +2{{Sun}} this turn.",
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get {{+2Sun}} this turn.",
     "flavour": "\"We're actually only fraternal twins.\""
   },
   {
@@ -3510,7 +3510,7 @@
     "cost": 4,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>When played:</b> Destroy a Zombie here with 3{{Strength}} or less.",
+    "abilities": "<b>When played:</b> Destroy a Zombie here with {{3Strength}} or less.",
     "flavour": "\"A free buffet? How kind! Don't mind if I do!\""
   },
   {
@@ -3524,7 +3524,7 @@
     "cost": 6,
     "strength": 0,
     "health": 5,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>.\n<b>When played:</b> This gets +1{{Strength}} for each Sun you made this turn.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>.\n<b>When played:</b> This gets {{+1Strength}} for each Sun you made this turn.",
     "flavour": "\"Physics, baby! I'm emittin' all KINDS of coherent radiation!\""
   },
   {
@@ -3552,7 +3552,7 @@
     "cost": 4,
     "strength": 3,
     "health": 7,
-    "abilities": "Zombies can't do {{Bonus Attacks:is:zombie a:\"bonus attack\" -bucket}}.",
+    "abilities": "Zombies can't do {{Bonus Attacks:is:zombie (a:\"bonus attack\" or a:frenzy) include:s -bucket}}.",
     "flavour": "Firmly believes that Elvis is alive, Zombies never walked on the Moon, and that Dr. Zomboss is secretly studying aliens at Area 22. Crazy!"
   },
   {
@@ -3580,7 +3580,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Start of turn:</b> You get +1{{Sun}}.",
+    "abilities": "<b>Start of turn:</b> You get {{+1Sun}}.",
     "flavour": "Sunflowers are notorious pacifists. But isolated in the center of Hollow Earth, they evolved a new savagery. Sunny, adorable savagery."
   },
   {
@@ -3608,7 +3608,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "<b>Conjure</b> a {{Flower:t:flower}}. <b>Conjure</b> a {{Fruit:t:fruit}}.\nThey both cost 1 less.",
+    "abilities": "<b>Conjure</b> a {{Flower:t:flower}}. <b>Conjure</b> a {{Fruit:t:fruit}}.\nThey both cost {{1Sun}} less.",
     "flavour": "Each Plant is grown with the power of solar radiation. Sometimes you just have to let it out."
   },
   {
@@ -3692,7 +3692,7 @@
     "cost": 6,
     "strength": 4,
     "health": 6,
-    "abilities": "<b>When played</b>: Zombies here and next door get -1{{Strength}}/-1{{Heart}}.\n<b>Team-Up Evolution</b>: Destroy a Zombie.",
+    "abilities": "<b>When played</b>: Zombies here and next door get {{-1Strength}}/{{-1Health}}.\n<b>Team-Up Evolution</b>: Destroy a Zombie.",
     "flavour": "He focuses his fearsome firepower with a single, ringing credo: \"One Team. One Dream.\""
   },
   {
@@ -3734,7 +3734,7 @@
     "cost": 1,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get +1{{Sun}} this turn and this transforms into a {{Sunnier-Shroom:Sunnier-Shroom}}.",
+    "abilities": "<b>Team-Up</b>\n<b>Start of Turn:</b> You get {{+1Sun}} this turn and this transforms into a {{Sunnier-Shroom:Sunnier-Shroom}}.",
     "flavour": "\"Fun in the Sun? That's for other Plants. I just make the stuff. I don't actually like it.\""
   },
   {
@@ -3748,7 +3748,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\nThis gets +1{{Strength}} when it hurts the Zombie Hero.",
+    "abilities": "{{Strikethrough}}<b>Strikethrough</b>\nThis gets {{+1Strength}} when it hurts the Zombie Hero.",
     "flavour": "\"I just love to get Zombies all fired up. If you catch my drift.\""
   },
   {
@@ -3762,7 +3762,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played</b>: For each Zombie, this gets +1{{Strength}}/+1{{Heart}} and Heal the Plant Hero for 1.",
+    "abilities": "<b>When played</b>: For each Zombie, this gets {{+1Strength}}/{{+1Health}} and Heal the Plant Hero for 1.",
     "flavour": "Catchup mechanics help you get back in a game when you're behind. Ketchup Mechanics fix your fruit."
   },
   {
@@ -3776,7 +3776,7 @@
     "cost": 6,
     "strength": 4,
     "health": 5,
-    "abilities": "<b>When played:</b> Destroy a Zombie here with 4{{Strength}} or less.\n<b>Start of Turn:</b> You get +1{{Sun}} this turn.",
+    "abilities": "<b>When played:</b> Destroy a Zombie here with {{4Strength}} or less.\n<b>Start of Turn:</b> You get {{+1Sun}} this turn.",
     "flavour": "Toadstool can't stand being idle. When there's work to be done, she's always the first to hop to it."
   },
   {
@@ -3818,7 +3818,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies on the Ground get -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "All Zombies on the Ground get {{-1Strength}}/{{-1Health}}.",
     "flavour": "Unfortunately the Zombies were all out of SPF 9000."
   },
   {
@@ -3832,7 +3832,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets -2{{Strength}}/-2{{Heart}}.",
+    "abilities": "A Zombie gets {{-2Strength}}/{{-2Health}}.",
     "flavour": "Good for weeding out Zombies."
   },
   {
@@ -3860,7 +3860,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "A Plant gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "One small step for Plants. One giant leap for Plant-kind!"
   },
   {

@@ -65,7 +65,7 @@ const allAbilityImages = [...abilityImages]
 for (const stat of ['sun', 'brain', 'health', 'strength']) {
   for (let i = 0; i < 10; i++) {
     allAbilityImages.push(i + stat)
-    if (i > 0 && ['health', 'strength'].includes(stat)) {
+    if (i > 0) {
       allAbilityImages.push('+' + i + stat)
       allAbilityImages.push('-' + i + stat)
     }
@@ -76,7 +76,7 @@ const getAbilityImageSrc = (imageName: string) => {
     return `/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png`
   } else if (/^[0-9](sun|brain|health|strength)$/i.test(imageName)) {
     return `/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png`
-  } else if (/^(\+|-)[1-9](health|strength)$/i.test(imageName)) {
+  } else if (/^(\+|-)[1-9](health|strength|sun|brain)$/i.test(imageName)) {
     return `/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png`
   }
   return ''

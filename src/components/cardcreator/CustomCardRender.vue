@@ -117,7 +117,7 @@ const cardAbilities = computed(() => {
         return `<img src="/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png"/>`
       } else if (/^[0-9](sun|brain|health|strength)$/i.test(imageName)) {
         return `<img src="/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png"/>`
-      } else if (/^(\+|-)[1-9](health|strength)$/i.test(imageName)) {
+      } else if (/^(\+|-)[1-9](health|strength|sun|brain)$/i.test(imageName)) {
         return `<img src="/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png"/>`
       }
       return imageName

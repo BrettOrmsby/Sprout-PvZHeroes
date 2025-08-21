@@ -24,7 +24,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Plants here get -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Plants here get {{-1Strength}}/{{-1Health}}.",
     "flavour": "He was told that playing the pipe would summon raccoons. But whatevs."
   },
   {
@@ -38,7 +38,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "When you play a {{Pet:t:pet include:token}}, all {{Pets:t:pet type:f include:token}} get +1{{Strength}}.",
+    "abilities": "When you play a {{Pet:t:pet include:token}}, all {{Pets:t:pet type:f include:token}} get {{+1Strength}}.",
     "flavour": "Snaaaaake!"
   },
   {
@@ -94,7 +94,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -1{{Strength}}/-1{{Heart}}.\n If this destroys that Plant, <b>Conjure</b> a {{Gourmet:t:gourmet}} card.",
+    "abilities": "A Plant gets {{-1Strength}}/{{-1Health}}.\n If this destroys that Plant, <b>Conjure</b> a {{Gourmet:t:gourmet}} card.",
     "flavour": "Just a quick bite."
   },
   {
@@ -122,7 +122,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}. If it is a {{Pet:t:pet type:f include:token}}, it gets +2{{Strength}}/+1{{Heart}} instead.",
+    "abilities": "A Zombie gets {{+1Strength}}/{{+1Health}}. If it is a {{Pet:t:pet type:f include:token}}, it gets {{+2Strength}}/{{+1Health}} instead.",
     "flavour": "What's inside? A peanut butter and brains sandwich... with the crusts cut off."
   },
   {
@@ -150,7 +150,7 @@
     "cost": 3,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Zombie gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "What he lacks in size, he makes up for in volume."
   },
   {
@@ -178,7 +178,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Plants here get -1 {{Strength}}/-1 {{Heart}}.",
+    "abilities": "Plants here get {{-1Strength}}/{{-1Health}}.",
     "flavour": "Zombies love a good eclipse. They usually celebrate by eating Plants. And brains."
   },
   {
@@ -192,7 +192,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -3{{Strength}}/-3{{Heart}}.\nIf it's on Heights or an Environment, it gets -6{{Strength}}/-6{{Heart}} instead.",
+    "abilities": "A Plant gets {{-3Strength}}/{{-3Health}}.\nIf it's on Heights or an Environment, it gets {{-6Strength}}/{{-6Health}} instead.",
     "flavour": "Oozin' for a bruisin!"
   },
   {
@@ -206,7 +206,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "<b>Amphibious</b>\n<center>{{Frenzy}}<b>Frenzy</b></center>",
+    "abilities": "<b>Amphibious</b>, {{Frenzy}}<b>Frenzy</b>",
     "flavour": "He used to hang 10 with the best of them, but ever since he lost that toe to a shark he hasn't been able to hang more than 9."
   },
   {
@@ -220,7 +220,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>When played</b>: A Plant gets -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n<b>When played</b>: A Plant gets {{-1Strength}}/{{-1Health}}.",
     "flavour": "Is he a zombie? Is he a ghost? He refuses to be pigeonholed."
   },
   {
@@ -234,7 +234,7 @@
     "cost": 0,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when any kind of {{Goat:goat}} is hurt.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when any kind of {{Goat:goat}} is hurt.",
     "flavour": "Hungry... Smelly... A lot like a Zombie but with 100% more goat."
   },
   {
@@ -276,7 +276,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\nThis gets +2{{Strength}}/+2{{Heart}} when it destroys a Plant.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\nThis gets {{+2Strength}}/{{+2Health}} when it destroys a Plant.",
     "flavour": "He vants to suck your chlorophyll."
   },
   {
@@ -290,7 +290,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "A Zombie gets {{+3Strength}}/{{+3Health}}.",
     "flavour": "Side effects include headaches, blurred vision, and insatiable hunger."
   },
   {
@@ -332,7 +332,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>When played:</b> Make a 1 {{Strength}}/1 {{Heart}} {{Plant:is:plant s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities.",
+    "abilities": "<b>When played:</b> Make a {{1Strength}}/{{1Health}} {{Plant:is:plant s:1 h:1 -a:a -a:e -a:i -a:o -a:u -a:y}} with no abilities.",
     "flavour": "Growing Plants in Space? Some of his fellow Zombies think he's crazy, but others appreciate the effort."
   },
   {
@@ -346,7 +346,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet include:token}}, and it gets +1 {{Strength}}/+1 {{Heart}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Pet:t:pet include:token}}, and it gets {{+1Strength}}/{{+1Health}}.\n<b>End of turn:</b> <b>Bounce</b> this Yeti.",
     "flavour": "He's hoping they name a constellation after him. \"The Big Yeti\" does have a ring to it."
   },
   {
@@ -374,7 +374,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Zombie played on this gets +2{{Strength}}/+1{{Heart}} and <b>Amphibious</b>.",
+    "abilities": "<b>Amphibious</b>\n<b>Fusion:</b> A Zombie played on this gets {{+2Strength}}/{{+1Health}} and <b>Amphibious</b>.",
     "flavour": "Flooding Hollow Earth with water from above, Neptuna attacked with flying whale cavalry. Or really, falling whale cavalry."
   },
   {
@@ -388,7 +388,7 @@
     "cost": 1,
     "strength": 0,
     "health": 3,
-    "abilities": "This gets +3{{Strength}} this turn when you play a {{Pet:t:pet include:token}}.",
+    "abilities": "This gets {{+3Strength}} this turn when you play a {{Pet:t:pet include:token}}.",
     "flavour": "The cat on the left is a Z-Tube celebrity."
   },
   {
@@ -416,7 +416,7 @@
     "cost": 6,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>, <b>Hunt</b>\nWhen any Zombie enters any lane, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Amphibious</b>, <b>Hunt</b>\nWhen any Zombie enters any lane, that Zombie gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Has every single issue of Deep Sea Quarterly, but rarely has time to read them."
   },
   {
@@ -430,7 +430,7 @@
     "cost": 6,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +5{{Strength}}/+5{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "A Zombie gets {{+5Strength}}/{{+5Health}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "It's not so much \"hahaha\" as it is \"mwahahaha.\""
   },
   {
@@ -444,7 +444,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When this hurts the Plant Hero</b>: <b>Conjure</b> a {{Gourmet:t:gourmet}} card, and it costs 1 {{Brain}} less.",
+    "abilities": "<b>When this hurts the Plant Hero</b>: <b>Conjure</b> a {{Gourmet:t:gourmet}} card, and it costs {{1Brain}} less.",
     "flavour": "Is that the exquisite scent of an aged Camembert, or just rotting flesh?"
   },
   {
@@ -472,7 +472,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here get +2 {{Strength}}/+2 {{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "Zombies here get {{+2Strength}}/{{+2Health}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "\"Zombies from outer space? What an absurd conspiracy theory! Now move along. Nothing to see here.\" - Dr. Zomboss"
   },
   {
@@ -486,7 +486,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\nWhen a Zombie with {{Frenzy}}<b>Frenzy</b> destroys a Plant, that Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\nWhen any Zombie with {{Frenzy}}<b>Frenzy</b> destroys a Plant, that Zombie gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "Vimpirism - an ancient curse evolved from the dawn of time."
   },
   {
@@ -500,7 +500,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A Plant gets -2{{Strength}}/-2{{Heart}}. All other copies of that Plant also get -2{{Strength}}/-2{{Heart}}.",
+    "abilities": "A Plant gets {{-2Strength}}/{{-2Health}}. All other copies of that Plant also get {{-2Strength}}/{{-2Health}}.",
     "flavour": "Sometimes the evolutionary tree withers at the root."
   },
   {
@@ -514,7 +514,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here get <b>Hunt</b>. When a Zombie enters or leaves this lane, it gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "Zombies here have <b>Hunt</b>. When a Zombie enters or leaves this lane, it gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Are the Zombies hunting dinosaurs, or are the dinosaurs hunting them?"
   },
   {
@@ -542,7 +542,7 @@
     "cost": 8,
     "strength": 8,
     "health": 8,
-    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Make a 3{{Strength}}/2{{Heart}} {{Octo-Pet:Octo-Pet include:token}} with <b>Amphibious</b> and {{Frenzy}}<b>Frenzy</b>.\n<b>When destroyed</b>: Gain an {{Octo Zombie:Octo Zombie}}.",
+    "abilities": "<b>Amphibious</b>\n{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Make a {{3Strength}}/{{2Health}} {{Octo-Pet:Octo-Pet include:token}} with <b>Amphibious</b> and {{Frenzy}}<b>Frenzy</b>.\n<b>When destroyed</b>: Gain an {{Octo Zombie:Octo Zombie}}.",
     "flavour": "Is the correct term 'octopuses' or 'octopi'? You'd think he'd have an opinion, but he doesn't."
   },
   {
@@ -570,7 +570,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>Hunt</b>\n{{Frenzy}}<b>Frenzy</b>\nWhen this destroys a Plant, draw a card.",
+    "abilities": "<b>Hunt</b>, {{Frenzy}}<b>Frenzy</b>\nWhen this destroys a Plant, draw a card.",
     "flavour": "If you have a bounty on your head, she won't stop until she eats your brains. It's not personal. It's just business."
   },
   {
@@ -598,7 +598,7 @@
     "cost": 5,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: This gets +1{{Strength}}/+1{{Heart}} and destroy all Plants here.",
+    "abilities": "<b>Amphibious</b>\n<b>Dino-Roar</b>: This gets {{+1Strength}}/{{+1Health}} and destroy all Plants here.",
     "flavour": "Deep in Hollow Earth, Zombie warrior women tame herds of enormous dinosaurs. Any good history book will tell you that."
   },
   {
@@ -612,7 +612,7 @@
     "cost": 7,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>When hurt</b>: Make a random {{Gargantuar:t:gargantuar type:f}} in a random lane.",
+    "abilities": "<b>When hurt</b>: Make another random {{Gargantuar:t:gargantuar type:f}} in a random lane.",
     "flavour": "The ultimate, epic, last, absolutely final conclusion to the Zombie-throwing Zombie saga. ...or is it?"
   },
   {
@@ -626,7 +626,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When a Plant Trick is played, this gets +1{{Strength}}/+1{{Heart}} and moves to a random lane.",
+    "abilities": "When a Plant Trick is played, this gets {{+1Strength}}/{{+1Health}} and moves to a random lane.",
     "flavour": "What's a black cat's favorite color? Purrrrr-ple."
   },
   {
@@ -640,7 +640,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "<b>Bounce</b> a Zombie, and it gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "<b>Bounce</b> a Zombie, and it gets {{+3Strength}}/{{+3Health}}.",
     "flavour": "He likes his brains shaken, not stirred."
   },
   {
@@ -654,7 +654,7 @@
     "cost": 2,
     "strength": 1,
     "health": 1,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Start of Tricks:</b> This gets +1{{Strength}}/+1{{Heart}} and moves to a random lane.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Start of Tricks:</b> This gets {{+1Strength}}/{{+1Health}} and moves to a random lane.",
     "flavour": "He can quit any time he wants."
   },
   {
@@ -682,7 +682,7 @@
     "cost": 3,
     "strength": 1,
     "health": 3,
-    "abilities": "<b>Amphibious.</b>\n<b>When played</b>: Another Zombie gets +2{{Strength}}/+2{{Heart}}.\n<b>When hurt</b>: <b>Bounce</b> this Goat.",
+    "abilities": "<b>Amphibious.</b>\n<b>When played</b>: Another Zombie gets {{+2Strength}}/{{+2Health}}.\n<b>When hurt</b>: <b>Bounce</b> this Goat.",
     "flavour": "The future is Hovering. The future is Radical. The future is Goat."
   },
   {
@@ -710,7 +710,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "Plants and the Plant Hero can't be healed.\n<b>When played:</b> All Plants get -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "Plants and the Plant Hero can't be healed.\n<b>When played:</b> All Plants get {{-1Strength}}/{{-1Health}}.",
     "flavour": "Flowers give her awful allergies and sickening sneezes. Is that why she wears one on her head?"
   },
   {
@@ -752,7 +752,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "All Plants on the Ground get -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "All Plants on the Ground get {{-1Strength}}/{{-1Health}}.",
     "flavour": "Strong enough to destroy a Plant, but pH-balanced for a Zombie."
   },
   {
@@ -780,7 +780,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "A Zombie gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "To protect and serve... brains."
   },
   {
@@ -808,7 +808,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Trick.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when you play a Trick.",
     "flavour": "Why is everyone always screaming and running away in his photos?"
   },
   {
@@ -864,7 +864,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played on Heights:</b> This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When played on Heights:</b> This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "It's a growth industry."
   },
   {
@@ -878,7 +878,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Make a 2{{Strength}}/3{{Heart}} {{Space Cadet:Space Cadet include:token}} Zombie.",
+    "abilities": "Make a {{2Strength}}/{{3Health}} {{Space Cadet:Space Cadet include:token}} Zombie.",
     "flavour": "A sure way to get Space Cadet's attention."
   },
   {
@@ -920,7 +920,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nWhen a {{Science:t:science type:f include:token}} Zombie does damage, that Zombie gets +1{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Science:t:science type:f include:token}} Zombie does damage, that Zombie gets {{+1Strength}}.",
     "flavour": "He's not entirely sure how to fly this thing."
   },
   {
@@ -934,7 +934,7 @@
     "cost": 3,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played:</b> You get 3{{Brain}} this turn.",
+    "abilities": "<b>When played:</b> You get {{+3Brain}} this turn.",
     "flavour": "Sells only 100% organic brains."
   },
   {
@@ -948,7 +948,7 @@
     "cost": 4,
     "strength": 2,
     "health": 2,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played on Heights:</b> This gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>When played on Heights:</b> This gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "She's climbed 'em all: Everest. K2. Your house."
   },
   {
@@ -962,7 +962,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "You get +1 {{Brain}} for the rest of the game.",
+    "abilities": "You get {{+1Brain}} for the rest of the game.",
     "flavour": "Putting brains on ice is the best way to keep them fresh. Ask any Zombie."
   },
   {
@@ -976,7 +976,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "When you play a Zombie here, you get +2 {{Brain}} this turn.",
+    "abilities": "When you play a Zombie here, you get {{+2Brain}} this turn.",
     "flavour": "Zombies often find brains in space. It's usually the space between your ears."
   },
   {
@@ -990,7 +990,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played on Heights or an Environment:</b> This gets +2 {{Strength}}/+2 {{Heart}}.",
+    "abilities": "<b>When played on Heights or an Environment:</b> This gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "That's one small nibble for Zombies, one giant bite for Zombiekind."
   },
   {
@@ -1018,7 +1018,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a {{Mustache:t:mustache}}, this gets +2{{Heart}} and you get +1{{Brain}}.",
+    "abilities": "When you play a {{Mustache:t:mustache}}, this gets {{+2Health}} and you get {{+1Brain}}.",
     "flavour": "Customers have been telling him \"Get a brain\" for years now."
   },
   {
@@ -1029,7 +1029,7 @@
     "class": "Brainy",
     "type": "Trick",
     "tribes": ["Barrel", "Professional"],
-    "cost": 5,
+    "cost": 4,
     "strength": null,
     "health": null,
     "abilities": "Strength of a Zombie becomes 4, then it does a Bonus Attack.",
@@ -1046,7 +1046,7 @@
     "cost": 3,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\n<b>Start of Tricks:</b> You get +2{{Brain}} this turn.",
+    "abilities": "<b>Gravestone</b>\n<b>Start of Tricks:</b> You get {{+2Brain}} this turn.",
     "flavour": "Life comes and goes, but proper manners are forever."
   },
   {
@@ -1088,7 +1088,7 @@
     "cost": 6,
     "strength": null,
     "health": null,
-    "abilities": "Make a 6{{Strength}}/5{{Heart}} {{Copter Commando:Copter Commando}} Imp.",
+    "abilities": "Make a {{6Strength}}/{{5Health}} {{Copter Commando:Copter Commando}} Imp.",
     "flavour": "Refuses to fly over water due to a severe case of aquaphobia."
   },
   {
@@ -1102,7 +1102,7 @@
     "cost": 6,
     "strength": 5,
     "health": 6,
-    "abilities": "All {{Gargantuars:t:gargantuar (type:f or Zombot's Wrath)}} have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs 1 more.",
+    "abilities": "All {{Gargantuars:t:gargantuar (type:f or Zombot's Wrath)}} have {{Truestrike}}<b>Bullseye</b>.\n<b>When played:</b> Transform another Zombie into a random Zombie that costs {{1Brain}} more.",
     "flavour": "A wizard did it. An enormous, green, Zombie wizard."
   },
   {
@@ -1144,7 +1144,7 @@
     "cost": 3,
     "strength": 2,
     "health": 5,
-    "abilities": "<b>Zombie Evolution</b>: This gets +1{{Strength}} for each Brain you got this turn.",
+    "abilities": "<b>Zombie Evolution</b>: This gets {{+1Strength}} for each Brain you got this turn.",
     "flavour": "This is why you shouldn't drink primordial soup."
   },
   {
@@ -1186,7 +1186,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Plant that has 4{{Strength}} or more.",
+    "abilities": "Destroy a Plant that has {{4Strength}} or more.",
     "flavour": "Turns out, it IS rocket science."
   },
   {
@@ -1200,7 +1200,7 @@
     "cost": 4,
     "strength": 3,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Trick:is:zombie type:t}}, and it costs 1 less.",
+    "abilities": "<b>Gravestone</b>\nWhen you play your first {{Trick:is:zombie type:t}} each turn, <b>Conjure</b> a {{Trick:is:zombie type:t}}, and it costs {{1Brain}} less.",
     "flavour": "He's not so much \"mad\" as he is \"mildly annoyed.\""
   },
   {
@@ -1228,7 +1228,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play an {{Environment:type:e is:zombie}}, this does a Bonus Attack.",
+    "abilities": "When an {{Environment:type:e include:s}} is played, this does a Bonus Attack.",
     "flavour": "He's not small, he's just very compact."
   },
   {
@@ -1242,7 +1242,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "<b>Start of turn:</b> Transform the Zombie here into a random Zombie that costs 1 {{Brain}} more.",
+    "abilities": "<b>Start of turn:</b> Transform the Zombie here into a random Zombie that costs {{1Brain}} more.",
     "flavour": "According to the Transformation Station brochure, every Zombie who visits is guaranteed to shuffle away feeling like a brand new Zombie."
   },
   {
@@ -1270,7 +1270,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Transform a Zombie into a random Zombie that costs 1{{Brain}} more.\nDraw a card.",
+    "abilities": "Transform a Zombie into a random Zombie that costs {{1Brain}} more.\nDraw a card.",
     "flavour": "When Dr. Zomboss sent Meteor Z and Huge-Gigantacus from space, they smashed a tunnel to the center of the Earth. There, Plants and Zombies had evolved into insane new forms."
   },
   {
@@ -1298,7 +1298,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "When this does damage, <b>Conjure</b> a {{Mustache:t:mustache}}.\n<b>Mustache Evolution</b>: This gets +3{{Strength}}/+3{{Heart}}.",
+    "abilities": "When this does damage, <b>Conjure</b> a {{Mustache:t:mustache}}.\n<b>Mustache Evolution</b>: This gets {{+3Strength}}/{{+3Health}}.",
     "flavour": "Determined to find every Mustache Monument in Hollow Earth, Neptuna brought in the experts."
   },
   {
@@ -1340,7 +1340,7 @@
     "cost": 10,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>While in your hand:</b> This costs 1{{Brain}} less when you play a {{Trick:type:t is:zombie}}.\n<b>When played:</b> This does a Bonus Attack.",
+    "abilities": "<b>While in your hand:</b> This costs {{1Brain}} less when you play a {{Trick:type:t is:zombie}}.\n<b>When played:</b> This does a Bonus Attack.",
     "flavour": "Never gets tired of the rubber chicken gag."
   },
   {
@@ -1354,7 +1354,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "When you play a {{Science:t:science}} card, this transforms into a {{Zombie:is:zombie c:3 type:f include:token}} that costs 3{{Brain}}.",
+    "abilities": "When you play a {{Science:t:science}} card, this transforms into a random {{Zombie:is:zombie c:3 type:f include:token}} that costs {{3Brain}}.",
     "flavour": "In a parallel dimension, this zombie is a Space Pirate. In another he's a Trash Can Zombie. Turns out, little choices in life can make a big difference."
   },
   {
@@ -1368,7 +1368,7 @@
     "cost": 2,
     "strength": 1,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\n{{Truestrike}}<b>Bullseye</b>\nYou can play Zombies when it's time for Tricks.",
+    "abilities": "<b>Gravestone</b>, {{Truestrike}}<b>Bullseye</b>\nYou can play Zombies when it's time for Tricks.",
     "flavour": "The phone cord stretches to another dimension."
   },
   {
@@ -1424,7 +1424,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Zombie:type:f is:zombie}}, and it gets +1{{Strength}}/+1{{Heart}}. The Plant player <b>Conjures</b> a {{Plant:is:plant type:f}}, and that Plant gets -1{{Strength}}/-1{{Heart}}.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Zombie:type:f is:zombie}}, and it gets {{+1Strength}}/{{+1Health}}. The Plant player <b>Conjures</b> a {{Plant:is:plant type:f}}, and that Plant gets {{-1Strength}}/{{-1Health}}.",
     "flavour": "Regifting: Is it really an embarrassing social faux pas? Or is it just good ol' recycling?"
   },
   {
@@ -1466,7 +1466,7 @@
     "cost": 6,
     "strength": 3,
     "health": 6,
-    "abilities": "<b>{{Truestrike}}Bullseye</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Armored}}<b>Armored 1</b>\n{{Overshoot}}<b>Overshoot 2</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "abilities": "<b>{{Truestrike}}Bullseye</b>, {{Frenzy}}<b>Frenzy</b>, {{Armored}}<b>Armored 1</b>, {{Overshoot}}<b>Overshoot 2</b>, {{Anti-Hero}}<b>Anti-Hero 3</b>",
     "flavour": "He's got everything but the - no wait, he's got that too."
   },
   {
@@ -1480,7 +1480,7 @@
     "cost": 7,
     "strength": null,
     "health": null,
-    "abilities": "Transform every Zombie into random {{Zombies:is:zombie c>=5}} that costs 5{{Brain}} or more.",
+    "abilities": "Transform every Zombie into random {{Zombies:is:zombie c>=5}} that costs {{5Brain}} or more.",
     "flavour": "Sometimes a full moon turns bad dreams into horrible nightmares."
   },
   {
@@ -1536,7 +1536,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Plant that has 5{{Strength}} or more.",
+    "abilities": "Destroy a Plant that has {{5Strength}} or more.",
     "flavour": "\"The tallest blade of grass is the first to get cut. Braaainz!\" - Ancient Zombie Proverb"
   },
   {
@@ -1550,7 +1550,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a random {{Zombie:is:zombie type:f c<=2}} that costs 2{{Brain}} or less.",
+    "abilities": "Make a random {{Zombie:is:zombie type:f c<=2}} that costs {{2Brain}} or less.",
     "flavour": "It's like a blind date... but with Zombies... and fighting."
   },
   {
@@ -1578,7 +1578,7 @@
     "cost": 1,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>While in an Environment</b>: This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\n<b>While in an Environment</b>: This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Working for a Huge-Gigantacus isn't the worst job he's ever had. It comes with a 401Z plan, which is more than what most Zombie employers offer."
   },
   {
@@ -1648,7 +1648,7 @@
     "cost": 3,
     "strength": 3,
     "health": 1,
-    "abilities": "<b>When played:</b> Make a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}}.",
+    "abilities": "<b>When played:</b> Make a {{1Strength}}/{{1Health}} {{Backup Dancer:Backup Dancer}}.",
     "flavour": "Disco is undead."
   },
   {
@@ -1676,7 +1676,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "<b>When played:</b> This gets +3{{Strength}} this turn.",
+    "abilities": "<b>When played:</b> This gets {{+3Strength}} this turn.",
     "flavour": "When it's Plants vs. Zombies, the score is never love-love."
   },
   {
@@ -1690,7 +1690,7 @@
     "cost": 1,
     "strength": 1,
     "health": 1,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when you play a Zombie.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when you play a Zombie.",
     "flavour": "His archenemy is the Wall-Flower."
   },
   {
@@ -1718,7 +1718,7 @@
     "cost": 2,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\n<b>When hurt:</b> This gets +4{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\n<b>When hurt:</b> This gets {{+4Strength}}.",
     "flavour": "Newspapers are an undead medium."
   },
   {
@@ -1746,7 +1746,7 @@
     "cost": 4,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>When played:</b> All Zombies get +2{{Strength}}.",
+    "abilities": "<b>When played:</b> All Zombies get {{+2Strength}}.",
     "flavour": "He isn't in it for the music. He just likes waving sticks."
   },
   {
@@ -1788,7 +1788,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here have +2 {{Strength}}.",
+    "abilities": "Zombies here have {{+2Strength}}.",
     "flavour": "Huge-Gigantacus drove Meteor Z deep into the Earth, creating a tunnel to a hidden world of strange creatures...but what's down there???"
   },
   {
@@ -1816,7 +1816,7 @@
     "cost": 1,
     "strength": 0,
     "health": 2,
-    "abilities": "<b>Start of Tricks:</b> Transform this into a random {{zombie:is:zombie type:f c<=2 include:token}} that costs 2{{Brain}} or less.",
+    "abilities": "<b>Start of Tricks:</b> Transform this into a random {{zombie:is:zombie type:f c<=2 include:token}} that costs {{2Brain}} or less.",
     "flavour": "\"Mommy, where do little Zombies come from?\" Asked and answered."
   },
   {
@@ -1830,7 +1830,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +3{{Strength}}/+1{{Heart}}.",
+    "abilities": "A Zombie gets {{+3Strength}}/{{+1Health}}.",
     "flavour": "Tooth decay: Not exactly a big concern for Zombies."
   },
   {
@@ -1914,7 +1914,7 @@
     "cost": 5,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>When hurt:</b> Make a 1{{Strength}}/1{{Heart}}{{Swabbie:Swabbie}} with <b>Amphibious </b>in a random lane.",
+    "abilities": "<b>When hurt:</b> Make a {{1Strength}}/{{1Health}}{{Swabbie:Swabbie}} with <b>Amphibious </b>in a random lane.",
     "flavour": "Seems like a better idea than a Gargantuar-Throwing Imp."
   },
   {
@@ -1984,7 +1984,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Start of Turn:</b> All {{Dancing:t:dancing type:f}} Zombies get +2{{Strength}}.",
+    "abilities": "<b>Start of Turn:</b> All {{Dancing:t:dancing type:f}} Zombies get {{+2Strength}}.",
     "flavour": "Aerobics really bring the dead to life."
   },
   {
@@ -2026,7 +2026,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a 3{{Strength}}/1{{Heart}} {{Disco Zombie:Disco Zombie}} that makes a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}}.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Make a {{3Strength}}/{{1Health}} {{Disco Zombie:Disco Zombie}} that makes a {{1Strength}}/{{1Health}} {{Backup Dancer:Backup Dancer}}.",
     "flavour": "A fully weaponized jukebox."
   },
   {
@@ -2040,7 +2040,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "Zombies with 2{{Strength}} or less have {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "Zombies with {{2Strength}} or less have {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "Nothing focuses your aim like the super-sick wailing of a space keytar solo."
   },
   {
@@ -2096,7 +2096,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "{{Truestrike}}<b>Bullseye</b>\nThis gets +1{{Strength}} when a Zombie is revealed from a Gravestone.",
+    "abilities": "{{Truestrike}}<b>Bullseye</b>\nThis gets {{+1Strength}} when a Zombie is revealed from a Gravestone.",
     "flavour": "Why not rob graves? They're not going to miss it. It's not like the dead are rising up or anything."
   },
   {
@@ -2110,7 +2110,7 @@
     "cost": 2,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When played next to a Zombie</b>: Make a random {{Zombie:is:zombie c=1 type:f}} that costs 1{{Brain}}.",
+    "abilities": "<b>When played next to a Zombie</b>: Make another random {{Zombie:is:zombie c=1 type:f}} that costs {{1Brain}}.",
     "flavour": "\"What counts is not necessarily the size of the dog in the fight; it's the size of the fight in the dog.\" - Wight Z. Diesenhower"
   },
   {
@@ -2124,7 +2124,7 @@
     "cost": 2,
     "strength": 0,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n4{{Strength}}/3{{Heart}} {{Captain Deadbeard:Captain Deadbeard include:token}} here.",
+    "abilities": "<b>When destroyed:</b> Do 1 damage to all Plants and Zombies, then make a\n{{4Strength}}/{{3Health}} {{Captain Deadbeard:Captain Deadbeard include:token}} here.",
     "flavour": "No monkeys, just Zombies."
   },
   {
@@ -2138,7 +2138,7 @@
     "cost": 4,
     "strength": 0,
     "health": 6,
-    "abilities": "<b>While in your hand:</b> This gets +2{{Strength}} when a Zombie is destroyed.",
+    "abilities": "<b>While in your hand:</b> This gets {{+2Strength}} when a Zombie is destroyed.",
     "flavour": "It's not easy hitting those high notes when all you can sing is, \"Braaaaains.\""
   },
   {
@@ -2166,7 +2166,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> If there is a Zombie next door, <b>Conjure</b> a {{Superpower:is:zombie t:superpower include:superpower}}.",
+    "abilities": "<b>When played next to a Zombie:</b> <b>Conjure</b> a {{Superpower:is:zombie t:superpower include:superpower}}.",
     "flavour": "You can call him Quazard for short."
   },
   {
@@ -2208,7 +2208,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "When you play a {{Dancing:t:dancing}} card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets +2{{Strength}}/+2{{Heart}} and {{Truestrike}}<b>Bullseye</b>.",
+    "abilities": "When you play a {{Dancing:t:dancing}} card, do 2 damage to the Plant Hero.\n<b>Dancing Evolution</b>: This gets {{+2Strength}}/{{+2Health}} and {{Truestrike}}<b>Bullseye</b>.",
     "flavour": "He offers a special deal: Two of his heads for one of yours. Anyway you slice it, you still come out a head."
   },
   {
@@ -2250,7 +2250,7 @@
     "cost": 4,
     "strength": 4,
     "health": 2,
-    "abilities": "<b>When played:</b> Do 1 damage to a Plant. That Plant has 0{{Strength}} this turn.",
+    "abilities": "<b>When played:</b> Do 1 damage to a Plant. That Plant has {{0Strength}} this turn.",
     "flavour": "What's love got to do with it? Honestly, he has no idea."
   },
   {
@@ -2264,7 +2264,7 @@
     "cost": 5,
     "strength": 5,
     "health": 7,
-    "abilities": "<b>Splash Damage 2</b>\nThis gets +1{{Strength}}/+1{{Heart}} when a Zombie is destroyed.",
+    "abilities": "<b>Splash Damage 2</b>\nThis gets {{+1Strength}}/{{+1Health}} when a Zombie is destroyed.",
     "flavour": "IT'S ALIVE! IT'S ALI-I-I-IVE! Ok, strictly speaking, it's not alive."
   },
   {
@@ -2278,7 +2278,7 @@
     "cost": 4,
     "strength": 1,
     "health": 2,
-    "abilities": "<b>When hurt:</b> Make a random {{Gargantuar:t:gargantuar c:5 type:f}} that costs 5 in a random lane.",
+    "abilities": "<b>When hurt:</b> Make a random {{Gargantuar:t:gargantuar c:5 type:f}} that costs {{5Brain}} in a random lane.",
     "flavour": "When lifting a Gargantuar, always bend at the knees. He learned this the hard way."
   },
   {
@@ -2334,7 +2334,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +3{{Strength}}.",
+    "abilities": "A Zombie gets {{+3Strength}}.",
     "flavour": "Is there any other kind?"
   },
   {
@@ -2348,7 +2348,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Make a 1{{Strength}}/1{{Heart}} {{Backup Dancer:Backup Dancer}} in a lane of your choice. Then another appears in a random lane.",
+    "abilities": "Make a {{1Strength}}/{{1Health}} {{Backup Dancer:Backup Dancer}} in a lane of your choice. Then another appears in a random lane.",
     "flavour": "You put your right foot in! No, wait, you might need that."
   },
   {
@@ -2390,7 +2390,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Destroy a Plant with 2{{Strength}} or less.",
+    "abilities": "Destroy a Plant with {{2Strength}} or less.",
     "flavour": "Gives new meaning to the phrase \"rock n' roll\"."
   },
   {
@@ -2418,7 +2418,7 @@
     "cost": 3,
     "strength": 1,
     "health": 4,
-    "abilities": "<b>Start of Turn:</b> All {{Sports:t:sport type:f}} Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Start of Turn:</b> All {{Sports:t:sport type:f}} Zombies get {{+1Strength}}/{{+1Health}}.",
     "flavour": "Say what you will about the costume - Zombie morale has never been better."
   },
   {
@@ -2446,7 +2446,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "This gets +1{{Strength}}/+1{{Heart}} when a Plant enters this lane.",
+    "abilities": "This gets {{+1Strength}}/{{+1Health}} when a Plant enters this lane.",
     "flavour": "Lots of carbs, lots of protein, and five brain shakes a day."
   },
   {
@@ -2460,7 +2460,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies get +2{{Heart}}.",
+    "abilities": "All Zombies get {{+2Health}}.",
     "flavour": "Camels - they're filthy, ill-tempered animals that'll spit on you just for fun. But Zombies love 'em all the same."
   },
   {
@@ -2474,7 +2474,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "Zombies cost 1{{Brain}} less.",
+    "abilities": "Zombies cost {{1Brain}} less.",
     "flavour": "He's not patriotic; he just likes fabric suspended from sticks."
   },
   {
@@ -2530,7 +2530,7 @@
     "cost": 5,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>When played:</b> The Plant Hero loses 2{{Sun}} this turn.",
+    "abilities": "<b>When played:</b> The Plant Hero loses {{2Sun}} this turn.",
     "flavour": "Some nights sundown comes early..."
   },
   {
@@ -2544,7 +2544,7 @@
     "cost": 2,
     "strength": null,
     "health": null,
-    "abilities": "Zombies here get +3{{Heart}}.",
+    "abilities": "Zombies here get {{+3Health}}.",
     "flavour": "You are about to enter another dimension. A dimension not only of sight and sound, but of cones."
   },
   {
@@ -2558,7 +2558,7 @@
     "cost": 4,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>When played in an Environment:</b> Destroy a Plant with 3{{Strength}} or less.",
+    "abilities": "<b>When played in an Environment:</b> Destroy a Plant with {{3Strength}} or less.",
     "flavour": "Don't call him a \"Space Janitor.\" He's a \"Celestial Custodian\" and darn proud of it."
   },
   {
@@ -2586,7 +2586,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+3{{Heart}}.",
+    "abilities": "A Zombie gets {{+1Strength}}/{{+3Health}}.",
     "flavour": "Great for Zombie Health. Like a vitamin only sweeter."
   },
   {
@@ -2600,7 +2600,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "This gets +1{{Strength}} when another {{Professional:t:professional type:f}} gets hurt.\n<b>When played</b>: <b>Conjure</b> a {{Professional:t:professional}}.",
+    "abilities": "This gets {{+1Strength}} when another {{Professional:t:professional type:f}} gets hurt.\n<b>When played</b>: <b>Conjure</b> a {{Professional:t:professional}}.",
     "flavour": "Like most managers, bringing pain to his employees gives him strength."
   },
   {
@@ -2614,7 +2614,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "All Zombies get {{+1Strength}}/{{+1Health}}.",
     "flavour": "Zombies love them almost as much as brains."
   },
   {
@@ -2656,7 +2656,7 @@
     "cost": 5,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies get +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "All Zombies get {{+2Strength}}/{{+2Health}}.",
     "flavour": "Zombies never feel more alive than when they're dancing."
   },
   {
@@ -2712,7 +2712,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Sports:t:sports}} card, and it costs 2{{Brain}} less.",
+    "abilities": "<b>When played:</b> <b>Conjure</b> a {{Sports:t:sports}} card, and it costs {{2Brain}} less.",
     "flavour": "He's been named Most Valuable Zombie of the Galaxy two years in a row!"
   },
   {
@@ -2726,7 +2726,7 @@
     "cost": 5,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>Zombie Evolution</b>: All Zombies get +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "<b>Zombie Evolution</b>: All Zombies get {{+2Strength}}/{{+2Health}}.",
     "flavour": "What's for lunch? Mostly solid stone."
   },
   {
@@ -2740,7 +2740,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Fusion:</b> A Zombie played on this gets +2{{Strength}}/+3{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>Fusion:</b> A Zombie played on this gets {{+2Strength}}/{{+3Health}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "The Legend of the Mustache Monuments led Zombie explorers to uncover ancient colosseums."
   },
   {
@@ -2754,7 +2754,7 @@
     "cost": 3,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Plant gets -2{{Strength}}.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> A Plant gets {{-2Strength}}.",
     "flavour": "If barren rock and wilted Plants are what you want, he's the landscaper for the job."
   },
   {
@@ -2768,7 +2768,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Destroy each Plant with 2{{Strength}} or less.",
+    "abilities": "Destroy each Plant with {{2Strength}} or less.",
     "flavour": "Act now! Rids your lawn of pesky weeds... and Peashooters and Sunflowers. Also Wall-Nuts."
   },
   {
@@ -2782,7 +2782,7 @@
     "cost": 5,
     "strength": 4,
     "health": 6,
-    "abilities": "{{Armored}}<b>Armored 1</b>\n{{Frenzy}}<b>Frenzy</b>\n{{Untrickable}}<b>Untrickable</b>",
+    "abilities": "{{Armored}}<b>Armored 1</b>, {{Frenzy}}<b>Frenzy</b>, {{Untrickable}}<b>Untrickable</b>",
     "flavour": "Gives 110% on the field. Has no idea what a football is."
   },
   {
@@ -2796,7 +2796,7 @@
     "cost": 6,
     "strength": 5,
     "health": 4,
-    "abilities": "<b>When played:</b> All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "<b>When played:</b> All Zombies get {{+1Strength}}/{{+1Health}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "He's been trying to cut back."
   },
   {
@@ -2824,7 +2824,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>Start of Tricks:</b> This gets +1{{Strength}}/+1{{Heart}} if there's a Zombie next door.",
+    "abilities": "<b>Start of Tricks:</b> This gets {{+1Strength}}/{{+1Health}} if there's a Zombie next door.",
     "flavour": "Pickled Zombie is the best kind of Zombie."
   },
   {
@@ -2838,7 +2838,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Plants here get -1{{Strength}}.\nWhen a Plant is played, move it here.",
+    "abilities": "Plants here get {{-1Strength}}.\nWhen a Plant is played, move it here.",
     "flavour": "Plants usually like being planted in holes. Black holes? Not so much."
   },
   {
@@ -2852,7 +2852,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>Professional Evolution</b>: This gets +2{{Strength}}/+2{{Heart}}.",
+    "abilities": "{{Untrickable}}<b>Untrickable</b>\n<b>Professional Evolution</b>: This gets {{+2Strength}}/{{+2Health}}.",
     "flavour": "For him, Fossilheading isn't just a hobby. It's a career."
   },
   {
@@ -2866,7 +2866,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "Choose a lane. Destroy all Plants there with 3{{Strength}} or less.",
+    "abilities": "Choose a lane. Destroy all Plants there with {{3Strength}} or less.",
     "flavour": "No one knows where the giant green hand and the giant purple hand comes from. What will happen when they clap?"
   },
   {
@@ -2880,7 +2880,7 @@
     "cost": 4,
     "strength": 2,
     "health": 6,
-    "abilities": "<b>Gravestone</b>\n<b>Start of turn</b>: The Plant Player loses 1{{Sun}}. This gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\n<b>Start of turn</b>: The Plant Player loses {{1Sun}}. This gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "The mystical Turquoise Skull stole the sun itself, lighting the way to the Mustache Monuments."
   },
   {
@@ -2894,7 +2894,7 @@
     "cost": 4,
     "strength": 3,
     "health": 6,
-    "abilities": "<b>End of Turn:</b> Transform another random Zombie into a 5{{Strength}}/5{{Heart}} {{Knight of the Living Dead:Knight of the Living Dead}} with <b>Armored 2</b>{{Armored}}.",
+    "abilities": "<b>End of Turn:</b> Transform another random Zombie into a {{5Strength}}/{{5Health}} {{Knight of the Living Dead:Knight of the Living Dead}} with <b>Armored 2</b>{{Armored}}.",
     "flavour": "Contrary to popular opinion, it's just OK to be king."
   },
   {
@@ -2922,7 +2922,7 @@
     "cost": 7,
     "strength": 6,
     "health": 1,
-    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Heal 3 Then this gets +1{{Heart}} for each Health your Hero has.",
+    "abilities": "{{Frenzy}}<b>Frenzy</b>\n<b>When played:</b> Heal 3 Then this gets {{+1Health}} for each Health your Hero has.",
     "flavour": "He has Super Brainz stickers all over his binder."
   },
   {
@@ -2936,7 +2936,7 @@
     "cost": 5,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>When played:</b> For the rest of the game, all Zombies get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>When played:</b> For the rest of the game, all Zombies get {{+1Strength}}/{{+1Health}}.",
     "flavour": "In space Zombie circles, he's a very powerful figure. Just don't talk about him in front of Huge-Gigantacus. There's some jealousy there."
   },
   {
@@ -2964,7 +2964,7 @@
     "cost": 4,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Dino-Roar:</b> All Zombies in your hand get +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Dino-Roar:</b> All Zombies in your hand get {{+1Strength}}/{{+1Health}}.",
     "flavour": "With a cerebellum the size of a Wall-Nut, it specializes in oversized bodies for little brains."
   },
   {
@@ -2978,7 +2978,7 @@
     "cost": 5,
     "strength": 4,
     "health": 4,
-    "abilities": "<b>When played</b>: All Plants get -1{{Strength}}.\n<b>Sports Evolution</b>: Destroy each Plant with 2{{Strength}} or less.",
+    "abilities": "<b>When played</b>: All Plants get {{-1Strength}}.\n<b>Sports Evolution</b>: Destroy each Plant with {{2Strength}} or less.",
     "flavour": "The Retiarius gladiator was classically armed with a trident, a net, and a 10-day-old fish."
   },
   {
@@ -2992,7 +2992,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "Zombie Tricks cost 1{{Brain}} less.",
+    "abilities": "Zombie Tricks cost {{1Brain}} less.",
     "flavour": "\"If you don't pay attention in class, you'll never improve your brains...\""
   },
   {
@@ -3006,7 +3006,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "{{Gargantuars:t:gargantuar}} cost 2{{Brain}} less.",
+    "abilities": "{{Gargantuars:t:gargantuar}} cost {{2Brain}} less.",
     "flavour": "After years of studying Gargantuars in the wild, she's dedicated herself to telling the world they're just misunderstood gentle giants. So far, nobody's buying it."
   },
   {
@@ -3034,7 +3034,7 @@
     "cost": 3,
     "strength": null,
     "health": null,
-    "abilities": "All Zombies get +1{{Strength}}/+1{{Heart}} and {{Frenzy}}<b>Frenzy</b>.\nShuffle three {{Going Viral:Going Viral}} cards into your deck.\nDraw a card.",
+    "abilities": "All Zombies get {{+1Strength}}/{{+1Health}} and {{Frenzy}}<b>Frenzy</b>.\nShuffle three {{Going Viral:Going Viral}} cards into your deck.\nDraw a card.",
     "flavour": "Though Zombies can't get ill, this plague is totally sick."
   },
   {
@@ -3048,7 +3048,7 @@
     "cost": 4,
     "strength": 4,
     "health": 4,
-    "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do {{Bonus Attacks:is:plant a:bonus a:attack -\"Party Thyme\" -\"Wing-Nut\"}}.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\nPlants can't do {{Bonus Attacks:is:plant (a:bonus a:attack or a:double a:strike) -\"Party Thyme\" -\"Wing-Nut\" i:s}}.",
     "flavour": "He put all his favorite songs on that mixtape. If only he could find the right Zombie to give it to."
   },
   {
@@ -3062,7 +3062,7 @@
     "cost": 6,
     "strength": 6,
     "health": 5,
-    "abilities": "{{Armored}}<b>Armored 1</b>\nPlant Tricks cost 2{{Sun}} more.",
+    "abilities": "{{Armored}}<b>Armored 1</b>\nPlant Tricks cost {{2Sun}} more.",
     "flavour": "Somebody once told him the best defense is a good offence. He disagrees. Da fence he like best is da one he SMASH through."
   },
   {
@@ -3104,7 +3104,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +2{{Heart}} and {{Frenzy}}<b>Frenzy</b>.",
+    "abilities": "A Zombie gets {{+2Health}} and {{Frenzy}}<b>Frenzy</b>.",
     "flavour": "There's nothing like a good possession to perk a Zombie up."
   },
   {
@@ -3118,7 +3118,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +5{{Heart}}.",
+    "abilities": "A Zombie gets {{+5Health}}.",
     "flavour": "Better than a wall of scissors, but worse than a wall of paper."
   },
   {
@@ -3160,7 +3160,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Move a Zombie. It gets +1{{Strength}}.",
+    "abilities": "Move a Zombie. It gets {{+1Strength}}.",
     "flavour": "Good for eluding the enemy. Bad for the lungs"
   },
   {
@@ -3188,7 +3188,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\n{{Deadly}}<b>Deadly</b>",
+    "abilities": "<b>Gravestone</b>, {{Deadly}}<b>Deadly</b>",
     "flavour": "Casual acquaintances don't understand where his pets are. They don't realize that stinkflies can be such tender little friends."
   },
   {
@@ -3202,7 +3202,7 @@
     "cost": 1,
     "strength": 1,
     "health": 3,
-    "abilities": "When a Zombie is revealed from a Gravestone, that Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "When a Zombie is revealed from a Gravestone, that Zombie gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "His epitaphs have been published on headstones around the world."
   },
   {
@@ -3244,7 +3244,7 @@
     "cost": 2,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\nWhen a {{Pirate:t:pirate type:f include:token}} hurts the Plant Hero, that Pirate gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "<b>Gravestone</b>\nWhen a {{Pirate:t:pirate type:f include:token}} hurts the Plant Hero, that Pirate gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Buckles his swash like no other."
   },
   {
@@ -3272,7 +3272,7 @@
     "cost": 3,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\n{{Anti-Hero}}<b>Anti-Hero 4</b>",
+    "abilities": "<b>Gravestone</b>, {{Anti-Hero}}<b>Anti-Hero 4</b>",
     "flavour": "Don't look, but there's one behind you right now!"
   },
   {
@@ -3300,7 +3300,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "Zombies played here are Gravestones.\nWhen a Zombie is revealed from a Gravestone here, it gets +1{{Strength}}.",
+    "abilities": "Zombies played here are Gravestones.\nWhen a Zombie is revealed from a Gravestone here, it gets {{+1Strength}}.",
     "flavour": "Super Brainz always wanted a house with a nice yard."
   },
   {
@@ -3370,7 +3370,7 @@
     "cost": 2,
     "strength": 2,
     "health": 3,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Steal 1 section from the Plant Hero's Super-Block Meter.",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed:</b> Steal a section from the Plant Hero's Super-Block Meter.",
     "flavour": "Piracy is serious monkey business."
   },
   {
@@ -3398,7 +3398,7 @@
     "cost": 4,
     "strength": 3,
     "health": 3,
-    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When destroyed:</b> Make 1{{Strength}}/1{{Heart}} {{Swabbies:Swabbie}} with <b>Amphibious</b> next door.",
+    "abilities": "{{Deadly}}<b>Deadly</b>\n<b>When destroyed:</b> Make {{1Strength}}/{{1Health}} {{Swabbies:Swabbie}} with <b>Amphibious</b> next door.",
     "flavour": "The second-most affordable way to transport Imps."
   },
   {
@@ -3426,7 +3426,7 @@
     "cost": 5,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Amphibious</b>\n{{Anti-Hero}}<b>Anti-Hero 3</b>",
+    "abilities": "<b>Amphibious</b>, {{Anti-Hero}}<b>Anti-Hero 3</b>",
     "flavour": "A walrus seemed the obvious choice. After all, horses don't go on land *and* water."
   },
   {
@@ -3496,7 +3496,7 @@
     "cost": 1,
     "strength": 2,
     "health": 2,
-    "abilities": "<b>Fusion:</b> <b>Conjure</b> a {{Legendary:r:l is:zombie}} card, and it costs 1{{Brain}} less.",
+    "abilities": "<b>Fusion:</b> <b>Conjure</b> a {{Legendary:r:l is:zombie}} card, and it costs {{1Brain}} less.",
     "flavour": "Neptuna knew only one way to motivate an army of invading zombie pirates. Tell them about the secret treasure."
   },
   {
@@ -3566,7 +3566,7 @@
     "cost": 1,
     "strength": 1,
     "health": 2,
-    "abilities": "<b>Amphibious</b>\nThis gets +1{{Strength}}/+1{{Heart}} when it hurts the Plant Hero.",
+    "abilities": "<b>Amphibious</b>\nThis gets {{+1Strength}}/{{+1Health}} when it hurts the Plant Hero.",
     "flavour": "Zombie Ducky, joy of joys. When it squeezes, you make noise!"
   },
   {
@@ -3580,7 +3580,7 @@
     "cost": 2,
     "strength": 1,
     "health": 5,
-    "abilities": "Cards you <b>Conjure</b> cost 1{{Brain}} less.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{Galactic Gardens:is:zombie set:g}} card.",
+    "abilities": "Cards you <b>Conjure</b> cost {{1Brain}} less.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{Galactic Gardens:is:zombie set:g}} card.",
     "flavour": "He insists it's more than a screwdriver. Much more."
   },
   {
@@ -3636,7 +3636,7 @@
     "cost": 4,
     "strength": 4,
     "health": 3,
-    "abilities": "<b>Amphibious</b>\n<b>When played:</b> {{Frozen}}<b>Freeze</b> all Plants here. <b>Pirate Evolution:</b> Instead, this gets +1{{Strength}}/+1{{Heart}} and {{Frozen}}<b>Freeze</b> all Plants in all lanes.",
+    "abilities": "<b>Amphibious</b>\n<b>When played:</b> {{Frozen}}<b>Freeze</b> all Plants here.\n<b>Pirate Evolution:</b> Instead, this gets {{+1Strength}}/{{+1Health}} and {{Frozen}}<b>Freeze</b> all Plants in all lanes.",
     "flavour": "What's the best way to cross the ocean? Freeze it first. How hard could it be?"
   },
   {
@@ -3664,7 +3664,7 @@
     "cost": 6,
     "strength": 5,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\nWhen a Plant gets hurt, destroy it.\nWhen any Plant is destroyed, this gets +1{{Strength}}.",
+    "abilities": "<b>Amphibious</b>\nWhen a Plant gets hurt, destroy it.\nWhen any Plant is destroyed, this gets {{+1Strength}}.",
     "flavour": "Ever dream of piloting a giant shark robot? Join Dr. Zomboss now!"
   },
   {
@@ -3678,7 +3678,7 @@
     "cost": 8,
     "strength": 6,
     "health": 6,
-    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random {{Pirates:t:pirate type:f -\"Zombot Plank Walker\" include:token}} in random lanes.",
+    "abilities": "<b>Amphibious</b>, {{Strikethrough}}<b>Strikethrough</b>\n<b>When played:</b> Make two other random {{Pirates:t:pirate type:f -\"Zombot Plank Walker\" include:token}} in random lanes.",
     "flavour": "Deploying Pirates here, there and everywhere."
   },
   {
@@ -3692,7 +3692,7 @@
     "cost": 4,
     "strength": 3,
     "health": 5,
-    "abilities": "<b>Amphibious</b>\n{{Strikethrough}}<b>Strikethrough</b>\nThis Zombie moves to the right when it hurts the Plant Hero.",
+    "abilities": "<b>Amphibious</b>, {{Strikethrough}}<b>Strikethrough</b>\nThis Zombie moves to the right when it hurts the Plant Hero.",
     "flavour": "Only in the big wide sky will he find Serenity."
   },
   {
@@ -3706,7 +3706,7 @@
     "cost": 5,
     "strength": 3,
     "health": 4,
-    "abilities": "<b>Gravestone</b>\nThis gets +2{{Strength}}/+2{{Heart}} when a Plant or Zombie is frozen. <b>When revealed:</b> {{Frozen}}<b>Freeze</b> a Plant.\n</p>",
+    "abilities": "<b>Gravestone</b>\nThis gets {{+2Strength}}/{{+2Health}} when a Plant or Zombie is frozen.\n<b>When revealed:</b> {{Frozen}}<b>Freeze</b> a Plant.\n</p>",
     "flavour": "Freezing Plants in the far reaches of Space is not what he'd imagined he'd spend his life doing. But as the old Yeti saying goes, \"When life hands you snow, you make snow cones.\""
   },
   {
@@ -3734,7 +3734,7 @@
     "cost": 3,
     "strength": 2,
     "health": 4,
-    "abilities": "<b>Dino-Roar</b>: This gets +2{{Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{card:is:zombie c<=2}} that costs 2{{Brain}} or less.",
+    "abilities": "<b>Dino-Roar</b>: This gets {{+2Strength}}.\nWhen this hurts the Plant Hero, <b>Conjure</b> a {{card:is:zombie c<=2}} that costs {{2Brain}} or less.",
     "flavour": "Amazomb helmets mostly protect their ears from all the roaring."
   },
   {
@@ -3748,7 +3748,7 @@
     "cost": 1,
     "strength": 2,
     "health": 1,
-    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a 1{{Brain}}-cost {{Imp:t:imp c:1 include:token}}. It gains a Mustache.",
+    "abilities": "<b>When destroyed:</b> <b>Conjure</b> a {{1Brain}}-cost {{Imp:t:imp c:1 include:token}}. It gains a Mustache.",
     "flavour": "It's IMPossible to tell who he really is."
   },
   {
@@ -3776,7 +3776,7 @@
     "cost": 2,
     "strength": 1,
     "health": 3,
-    "abilities": "<b>When hurt</b>: Make a random {{Imp:t:imp type:f c<=2 include:token}} that costs 2{{Brain}} or less in a random lane.",
+    "abilities": "<b>When hurt</b>: Make a random {{Imp:t:imp type:f c<=2 include:token}} that costs {{2Brain}} or less in a random lane.",
     "flavour": "But where is the Imp-Throwing-Imp-Throwing-Imp?? We have to go deeper..."
   },
   {
@@ -3804,7 +3804,7 @@
     "cost": 3,
     "strength": 3,
     "health": 2,
-    "abilities": "<b>Gravestone</b>\n<b>When revealed on Heights:</b> This moves to the Water and gets +1{{Strength}}/+1{{Heart}}",
+    "abilities": "<b>Gravestone</b>\n<b>When revealed on Heights:</b> This moves to the Water and gets {{+1Strength}}/{{+1Health}}",
     "flavour": "He used to be afraid of heights... and water. True story."
   },
   {
@@ -3972,7 +3972,7 @@
     "cost": 1,
     "strength": null,
     "health": null,
-    "abilities": "A Zombie gets +1{{Strength}}/+1{{Heart}}.",
+    "abilities": "A Zombie gets {{+1Strength}}/{{+1Health}}.",
     "flavour": "Ask not what the Zombies can do for you. Ask what you can do for the Zombies!"
   }
 ]

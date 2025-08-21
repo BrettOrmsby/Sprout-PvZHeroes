@@ -31,7 +31,7 @@
         / <img :src="`/images/stats/health/${card.health}.png`" :alt="card.health!.toString()"
       /></span>
     </span>
-    <p class="types">- {{ card.type }} {{ card.tribes.join(' ') }} -</p>
+    <p class="types">- {{ card.tribes.join(' ') }} {{ card.type }} -</p>
     <p class="abilities"><ReplaceCardText :text="card.abilities" /></p>
     <p class="flavour">
       <em>{{ card.flavour }}</em>
@@ -92,7 +92,7 @@ const isPlant = computed(() =>
   text-align: center;
 }
 :deep(.abilityIcon) {
-  height: 1em;
+  height: 1.2em;
   display: inline;
   vertical-align: middle;
 }

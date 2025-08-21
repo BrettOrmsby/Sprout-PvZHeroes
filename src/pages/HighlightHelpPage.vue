@@ -286,7 +286,7 @@
         these images in the abilities text, the image name can be typed between two sets of curly
         brackets (<code>{{ '{' + '{strength}' + '}' }}</code
         >). A more useful example would be to find all cards that pump something +1/+1:
-        <code>abilities:"+1{{ '{' + '{strength}' + '}' }}/+1{{ '{' + '{health}' + '}' }}"</code>.
+        <code>abilities:"{{ '{' + '{+1strength}' + '}' }}/{{ '{' + '{+1health}' + '}' }}"</code>.
         The following are all the names of the images which appear in the abilities:
       </p>
       <ul>
@@ -315,6 +315,27 @@
             }}</span></span
           >
         </li>
+        <template v-for="image in ['strength', 'health', 'sun', 'brain']" :key="image">
+          <li v-for="modifier in ['', 'plus', 'minus']" :key="modifier">
+            <span class="ability-list-item"
+              ><img
+                :alt="image"
+                :src="`/images/stats/${image}/${modifier ? `${modifier}/` : ''}1.png`"
+              /><span
+                >{{
+                  '{' +
+                  '{' +
+                  (modifier === 'plus' ? '+' : modifier === 'minus' ? '-' : '') +
+                  '1' +
+                  image +
+                  '}' +
+                  '}'
+                }}
+                ({{ !modifier ? 0 : 1 }} to 9)</span
+              ></span
+            >
+          </li>
+        </template>
       </ul>
     </NotePanel>
     <NotePanel type="warning">
