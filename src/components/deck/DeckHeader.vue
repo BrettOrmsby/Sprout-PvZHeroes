@@ -188,6 +188,7 @@ header {
 h1 {
   font-size: 3em;
   margin: var(--block-space) 0;
+  hyphens: auto;
 }
 .username {
   text-decoration: none;

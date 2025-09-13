@@ -81,6 +81,7 @@ a {
 
 h3 {
   margin: 0;
+  hyphens: auto;
 }
 
 .hero {

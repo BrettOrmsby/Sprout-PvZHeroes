@@ -132,6 +132,7 @@ main {
 h1,
 h2 {
   text-align: center;
+  hyphens: auto;
 }
 .p-message {
   margin: 0 auto;
