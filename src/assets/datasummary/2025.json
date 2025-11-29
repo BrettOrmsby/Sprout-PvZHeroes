@@ -1,0 +1,616 @@
+{
+  "completedDecks": 1229,
+  "sparks": 52829500,
+  "plantDecks": 638,
+  "zombieDecks": 591,
+  "graphs": {
+    "heroes": {
+      "plants": {
+        "type": "bar",
+        "data": {
+          "labels": [
+            "Green Shadow",
+            "Solar Flare",
+            "Chompzilla",
+            "Wall-Knight",
+            "Captain Combustible",
+            "Grass Knuckles",
+            "Spudow",
+            "Rose",
+            "Nightcap",
+            "Citron",
+            "Beta-Carrotina"
+          ],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [88, 82, 76, 68, 63, 60, 56, 54, 39, 37, 15],
+              "backgroundColor": "#6366f1",
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "indexAxis": "y",
+          "scales": { "x": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      },
+      "zombies": {
+        "type": "bar",
+        "data": {
+          "labels": [
+            "Rustbolt",
+            "Neptuna",
+            "Immorticia",
+            "Impfinity",
+            "Professor Brainstorm",
+            "Z-Mech",
+            "Electric Boogaloo",
+            "The Smash",
+            "Super Brainz",
+            "Brain Freeze",
+            "Huge-Gigantacus"
+          ],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [73, 67, 61, 61, 58, 53, 51, 49, 45, 43, 30],
+              "backgroundColor": "#6366f1",
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "indexAxis": "y",
+          "scales": { "x": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      },
+      "all": {
+        "type": "bar",
+        "data": {
+          "labels": [
+            "Green Shadow",
+            "Solar Flare",
+            "Chompzilla",
+            "Rustbolt",
+            "Wall-Knight",
+            "Neptuna",
+            "Captain Combustible",
+            "Immorticia",
+            "Impfinity",
+            "Grass Knuckles",
+            "Professor Brainstorm",
+            "Spudow",
+            "Rose",
+            "Z-Mech",
+            "Electric Boogaloo",
+            "The Smash",
+            "Super Brainz",
+            "Brain Freeze",
+            "Nightcap",
+            "Citron",
+            "Huge-Gigantacus",
+            "Beta-Carrotina"
+          ],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [
+                88, 82, 76, 73, 68, 67, 63, 61, 61, 60, 58, 56, 54, 53, 51, 49, 45, 43, 39, 37, 30,
+                15
+              ],
+              "backgroundColor": "#6366f1",
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "indexAxis": "y",
+          "scales": { "x": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      }
+    },
+    "classes": {
+      "plants": {
+        "type": "bar",
+        "data": {
+          "labels": ["Mega-Grow", "Solar", "Kabloom", "Guardian", "Smarty"],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [287, 280, 240, 236, 233],
+              "backgroundColor": ["#64A65B", "#D6D848", "#A03732", "#492F1C", "#A3A2A4"],
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "scales": { "y": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      },
+      "zombies": {
+        "type": "bar",
+        "data": {
+          "labels": ["Brainy", "Sneaky", "Hearty", "Crazy", "Beastly"],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [267, 246, 242, 223, 204],
+              "backgroundColor": ["#91398D", "#3A3939", "#9B762C", "#6331B9", "#4771A6"],
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "scales": { "y": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      },
+      "all": {
+        "type": "bar",
+        "data": {
+          "labels": [
+            "Mega-Grow",
+            "Solar",
+            "Brainy",
+            "Sneaky",
+            "Hearty",
+            "Kabloom",
+            "Guardian",
+            "Smarty",
+            "Crazy",
+            "Beastly"
+          ],
+          "datasets": [
+            {
+              "label": "Decks",
+              "data": [287, 280, 267, 246, 242, 240, 236, 233, 223, 204],
+              "backgroundColor": [
+                "#64A65B",
+                "#D6D848",
+                "#91398D",
+                "#3A3939",
+                "#9B762C",
+                "#A03732",
+                "#492F1C",
+                "#A3A2A4",
+                "#6331B9",
+                "#4771A6"
+              ],
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "scales": { "y": { "title": { "text": "Decks", "display": true } } },
+          "plugins": { "legend": { "display": false } }
+        }
+      },
+      "cardUsage": {
+        "type": "bar",
+        "data": {
+          "labels": [
+            "Guardian",
+            "Hearty",
+            "Brainy",
+            "Solar",
+            "Beastly",
+            "Mega-Grow",
+            "Kabloom",
+            "Sneaky",
+            "Smarty",
+            "Crazy"
+          ],
+          "datasets": [
+            {
+              "label": "Number of Cards",
+              "data": [
+                21.27542372881356, 21.21900826446281, 20.39325842696629, 20.335714285714285,
+                20.274509803921568, 20.128919860627178, 19.970833333333335, 19.95528455284553,
+                18.175965665236053, 18.004484304932735
+              ],
+              "backgroundColor": [
+                "#492F1C",
+                "#9B762C",
+                "#91398D",
+                "#D6D848",
+                "#4771A6",
+                "#64A65B",
+                "#A03732",
+                "#3A3939",
+                "#A3A2A4",
+                "#6331B9"
+              ],
+              "borderColor": "black",
+              "borderWidth": 1
+            }
+          ]
+        },
+        "options": {
+          "indexAxis": "y",
+          "scales": {
+            "x": { "title": { "text": "Average Number of Cards Used", "display": true } }
+          },
+          "plugins": { "legend": { "display": false } }
+        }
+      }
+    },
+    "rarity": {
+      "type": "bar",
+      "data": {
+        "labels": ["Uncommon", "Super-Rare", "Legendary", "Rare", "Event", "Common"],
+        "datasets": [
+          {
+            "label": "Number of Cards",
+            "data": [
+              9.668836452400326, 8.986167615947926, 6.5231895850284785, 5.505288852725793,
+              5.319772172497966, 3.9967453213995117
+            ],
+            "backgroundColor": ["#959a9d", "#885cd5", "#ddcb25ff", "#ea9c45", "#e66d59", "#f5f5dc"],
+            "borderColor": "black",
+            "borderWidth": 1
+          }
+        ]
+      },
+      "options": {
+        "scales": {
+          "y": { "title": { "text": "Average Number of Cards in a Deck", "display": true } }
+        },
+        "plugins": { "legend": { "display": false } }
+      }
+    },
+    "curve": {
+      "type": "bar",
+      "data": {
+        "labels": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
+        "datasets": [
+          {
+            "label": "Number of Cards",
+            "data": [
+              0.7941415785191213, 11.386493083807974, 9.491456468673718, 8.075671277461351,
+              4.7233523189585025, 2.6053702196908057, 1.7209113100081368, 0.54759967453214,
+              0.39056143205858423, 0.05777054515866558, 0.14646053702196907, 0.060211554109031735
+            ],
+            "backgroundColor": "#6366f1",
+            "borderColor": "black",
+            "borderWidth": 1
+          }
+        ]
+      },
+      "options": {
+        "scales": {
+          "y": { "title": { "text": "Average Number of Cards in a Deck", "display": true } },
+          "x": { "title": { "text": "Card Cost", "display": true } }
+        },
+        "plugins": { "legend": { "display": false } }
+      }
+    },
+    "types": {
+      "type": "bar",
+      "data": {
+        "labels": ["Fighter", "Trick", "Environment"],
+        "datasets": [
+          {
+            "label": "Plants",
+            "data": [30.66457680250784, 7.551724137931035, 1.7836990595611286],
+            "backgroundColor": "#64A65B",
+            "borderColor": "black",
+            "borderWidth": 1
+          },
+          {
+            "label": "Zombies",
+            "data": [25.849407783417934, 11.59560067681895, 2.5549915397631136],
+            "backgroundColor": "#91398D",
+            "borderColor": "black",
+            "borderWidth": 1
+          }
+        ]
+      },
+      "options": {
+        "scales": {
+          "y": { "title": { "text": "Average Number of Cards in a Deck", "display": true } },
+          "x": { "title": { "text": "Card Type", "display": true } }
+        },
+        "plugins": { "legend": { "position": "bottom" } }
+      }
+    }
+  },
+  "bestWorst": {
+    "best": [
+      { "card": "Berry Blast", "usage": 3.2083333333333335 },
+      { "card": "Bungee Plumber", "usage": 2.780269058295964 },
+      { "card": "Going Viral", "usage": 2.4628099173553717 },
+      { "card": "Clique Peas", "usage": 2.299651567944251 },
+      { "card": "Cheese Cutter", "usage": 2.1862745098039214 },
+      { "card": "Teleport", "usage": 1.9775280898876404 },
+      { "card": "Lil' Buddy", "usage": 1.9035714285714285 },
+      { "card": "Forget-Me-Nuts", "usage": 1.8644067796610169 },
+      { "card": "Rolling Stone", "usage": 1.7851239669421488 },
+      { "card": "Photosynthesizer", "usage": 1.7796610169491525 }
+    ],
+    "worst": [
+      { "card": "Conehead", "usage": 0.01652892561983471 },
+      { "card": "Knight of the Living Dead", "usage": 0.01652892561983471 },
+      { "card": "Mountain Climber", "usage": 0.011235955056179775 },
+      { "card": "Baseball Zombie", "usage": 0.008264462809917356 },
+      { "card": "Screen Door Zombie", "usage": 0.004132231404958678 },
+      { "card": "Copter Commando", "usage": 0.003745318352059925 },
+      { "card": "Bellflower", "usage": 0 },
+      { "card": "Skunk Punk", "usage": 0 },
+      { "card": "Buckethead", "usage": 0 },
+      { "card": "Monster Mash", "usage": 0 }
+    ],
+    "classes": {
+      "Kabloom": {
+        "best": [
+          { "card": "Berry Blast", "usage": 3.2083333333333335 },
+          { "card": "Transfiguration", "usage": 1.3208333333333333 },
+          { "card": "Veloci-Radish Packmate", "usage": 1.2666666666666666 },
+          { "card": "Shroom for Two", "usage": 1.0958333333333334 },
+          { "card": "Puff-Shroom", "usage": 0.9583333333333334 },
+          { "card": "Sizzle", "usage": 0.9333333333333333 },
+          { "card": "Wild Berry", "usage": 0.7958333333333333 },
+          { "card": "Imitater", "usage": 0.7166666666666667 },
+          { "card": "Astro-Shroom", "usage": 0.7041666666666667 },
+          { "card": "Fireweed", "usage": 0.6833333333333333 }
+        ],
+        "worst": [
+          { "card": "Sonic Bloom", "usage": 0.0875 },
+          { "card": "Cosmic Mushroom", "usage": 0.075 },
+          { "card": "Sour Grapes", "usage": 0.05416666666666667 },
+          { "card": "Mushroom Ringleader", "usage": 0.041666666666666664 },
+          { "card": "Petal-Morphosis", "usage": 0.041666666666666664 },
+          { "card": "Bluesberry", "usage": 0.0375 },
+          { "card": "Electric Blueberry", "usage": 0.0375 },
+          { "card": "Poison Oak", "usage": 0.03333333333333333 },
+          { "card": "Pair of Pears", "usage": 0.025 },
+          { "card": "Button Mushroom", "usage": 0.020833333333333332 }
+        ]
+      },
+      "Crazy": {
+        "best": [
+          { "card": "Bungee Plumber", "usage": 2.780269058295964 },
+          { "card": "Quickdraw Con Man", "usage": 1.5964125560538116 },
+          { "card": "Quasar Wizard", "usage": 1.0089686098654709 },
+          { "card": "Exploding Fruitcake", "usage": 0.7802690582959642 },
+          { "card": "Unlife of the Party", "usage": 0.6412556053811659 },
+          { "card": "Binary Stars", "usage": 0.57847533632287 },
+          { "card": "Aerobics Instructor", "usage": 0.5695067264573991 },
+          { "card": "Barrel of Deadbeards", "usage": 0.5381165919282511 },
+          { "card": "Grave Robber", "usage": 0.5246636771300448 },
+          { "card": "Mystery Egg", "usage": 0.5067264573991032 }
+        ],
+        "worst": [
+          { "card": "Cakesplosion", "usage": 0.1031390134529148 },
+          { "card": "Tennis Champ", "usage": 0.09865470852017937 },
+          { "card": "Zombie's Best Friend", "usage": 0.08968609865470852 },
+          { "card": "Newspaper Zombie", "usage": 0.08520179372197309 },
+          { "card": "Imp-Throwing Gargantuar", "usage": 0.07174887892376682 },
+          { "card": "Bobblehead", "usage": 0.05829596412556054 },
+          { "card": "Stupid Cupid", "usage": 0.04932735426008968 },
+          { "card": "Cuckoo Zombie", "usage": 0.04484304932735426 },
+          { "card": "Foot Soldier Zombie", "usage": 0.04484304932735426 },
+          { "card": "Exploding Imp", "usage": 0.04035874439461883 }
+        ]
+      },
+      "Hearty": {
+        "best": [
+          { "card": "Going Viral", "usage": 2.4628099173553717 },
+          { "card": "Rolling Stone", "usage": 1.7851239669421488 },
+          { "card": "Black Hole", "usage": 1.4297520661157024 },
+          { "card": "Zombie Middle Manager", "usage": 1.165289256198347 },
+          { "card": "Flag Zombie", "usage": 1.0909090909090908 },
+          { "card": "Zombology Teacher", "usage": 1.078512396694215 },
+          { "card": "Sumo Wrestler", "usage": 0.9917355371900827 },
+          { "card": "Healthy Treat", "usage": 0.9173553719008265 },
+          { "card": "Arm Wrestler", "usage": 0.8388429752066116 },
+          { "card": "Planetary Gladiator", "usage": 0.6942148760330579 }
+        ],
+        "worst": [
+          { "card": "Chum Champion", "usage": 0.06611570247933884 },
+          { "card": "Bonus Track Buckethead", "usage": 0.06611570247933884 },
+          { "card": "Cone Zone", "usage": 0.06198347107438017 },
+          { "card": "Celestial Custodian", "usage": 0.045454545454545456 },
+          { "card": "Conehead", "usage": 0.01652892561983471 },
+          { "card": "Knight of the Living Dead", "usage": 0.01652892561983471 },
+          { "card": "Baseball Zombie", "usage": 0.008264462809917356 },
+          { "card": "Screen Door Zombie", "usage": 0.004132231404958678 },
+          { "card": "Buckethead", "usage": 0 },
+          { "card": "Monster Mash", "usage": 0 }
+        ]
+      },
+      "Mega-Grow": {
+        "best": [
+          { "card": "Clique Peas", "usage": 2.299651567944251 },
+          { "card": "Bonk Choy", "usage": 1.4843205574912892 },
+          { "card": "Plant Food", "usage": 1.421602787456446 },
+          { "card": "Coffee Grounds", "usage": 0.9198606271777003 },
+          { "card": "Split Pea", "usage": 0.8641114982578397 },
+          { "card": "Gatling Pea", "usage": 0.8222996515679443 },
+          { "card": "Vegetation Mutation", "usage": 0.7212543554006968 },
+          { "card": "Cabbage-Pult", "usage": 0.7003484320557491 },
+          { "card": "Black-Eyed Pea", "usage": 0.6968641114982579 },
+          { "card": "Espresso Fiesta", "usage": 0.6167247386759582 }
+        ],
+        "worst": [
+          { "card": "Cosmic Pea", "usage": 0.0975609756097561 },
+          { "card": "Sweet Potato", "usage": 0.09407665505226481 },
+          { "card": "Pod Fighter", "usage": 0.09407665505226481 },
+          { "card": "Whipvine", "usage": 0.08362369337979095 },
+          { "card": "Skyshooter", "usage": 0.06620209059233449 },
+          { "card": "Banana Split", "usage": 0.059233449477351915 },
+          { "card": "Bamboozle", "usage": 0.04878048780487805 },
+          { "card": "Plucky Clover", "usage": 0.04878048780487805 },
+          { "card": "Peashooter", "usage": 0.041811846689895474 },
+          { "card": "Super-Phat Beets", "usage": 0.03832752613240418 }
+        ]
+      },
+      "Beastly": {
+        "best": [
+          { "card": "Cheese Cutter", "usage": 2.1862745098039214 },
+          { "card": "Cyborg Zombie", "usage": 1.6029411764705883 },
+          { "card": "Area 22", "usage": 1.3431372549019607 },
+          { "card": "Alien Ooze", "usage": 1.2647058823529411 },
+          { "card": "Extinction Event", "usage": 1.2401960784313726 },
+          { "card": "Nibble", "usage": 1.2009803921568627 },
+          { "card": "Dog Walker", "usage": 0.7401960784313726 },
+          { "card": "Hunting Grounds", "usage": 0.6421568627450981 },
+          { "card": "Interstellar Bounty Hunter", "usage": 0.6323529411764706 },
+          { "card": "Gargantuar-Throwing Gargantuar", "usage": 0.6127450980392157 }
+        ],
+        "worst": [
+          { "card": "Killer Whale", "usage": 0.0784313725490196 },
+          { "card": "Dolphin Rider", "usage": 0.07352941176470588 },
+          { "card": "Locust Swarm", "usage": 0.06862745098039216 },
+          { "card": "Squirrel Herder", "usage": 0.05392156862745098 },
+          { "card": "Pied Piper", "usage": 0.0392156862745098 },
+          { "card": "Haunting Zombie", "usage": 0.03431372549019608 },
+          { "card": "Sneezing Zombie", "usage": 0.03431372549019608 },
+          { "card": "Vengeful Cyborg", "usage": 0.0196078431372549 },
+          { "card": "Kangaroo Rider", "usage": 0.0196078431372549 },
+          { "card": "Skunk Punk", "usage": 0 }
+        ]
+      },
+      "Brainy": {
+        "best": [
+          { "card": "Teleport", "usage": 1.9775280898876404 },
+          { "card": "Teleportation Zombie", "usage": 1.4681647940074907 },
+          { "card": "Rocket Science", "usage": 1.1123595505617978 },
+          { "card": "Lurch for Lunch", "usage": 1.0337078651685394 },
+          { "card": "Fun-Dead Raiser", "usage": 0.7265917602996255 },
+          { "card": "Thinking Cap", "usage": 0.6928838951310862 },
+          { "card": "Trickster", "usage": 0.6741573033707865 },
+          { "card": "Beam Me Up", "usage": 0.6554307116104869 },
+          { "card": "Mustache Waxer", "usage": 0.6067415730337079 },
+          { "card": "Brain Vendor", "usage": 0.5842696629213483 }
+        ],
+        "worst": [
+          { "card": "Pool Shark", "usage": 0.13857677902621723 },
+          { "card": "Wizard Gargantuar", "usage": 0.12734082397003746 },
+          { "card": "Regifting Zombie", "usage": 0.09737827715355805 },
+          { "card": "Cell Phone Zombie", "usage": 0.09363295880149813 },
+          { "card": "Portal Technician", "usage": 0.06741573033707865 },
+          { "card": "Kitchen Sink Zombie", "usage": 0.06741573033707865 },
+          { "card": "Cardboard Robot Zombie", "usage": 0.0599250936329588 },
+          { "card": "Drum Major", "usage": 0.0299625468164794 },
+          { "card": "Mountain Climber", "usage": 0.011235955056179775 },
+          { "card": "Copter Commando", "usage": 0.003745318352059925 }
+        ]
+      },
+      "Solar": {
+        "best": [
+          { "card": "Lil' Buddy", "usage": 1.9035714285714285 },
+          { "card": "Ketchup Mechanic", "usage": 1.6571428571428573 },
+          { "card": "Pepper M.D.", "usage": 1.4285714285714286 },
+          { "card": "Kernel-Pult", "usage": 0.9285714285714286 },
+          { "card": "Astrocado", "usage": 0.9107142857142857 },
+          { "card": "Sun-Shroom", "usage": 0.9 },
+          { "card": "Primal Sunflower", "usage": 0.8857142857142857 },
+          { "card": "Cob Cannon", "usage": 0.8642857142857143 },
+          { "card": "Power Flower", "usage": 0.8285714285714286 },
+          { "card": "Elderberry", "usage": 0.7642857142857142 }
+        ],
+        "worst": [
+          { "card": "Metal Petal Sunflower", "usage": 0.09642857142857143 },
+          { "card": "Magnifying Grass", "usage": 0.09642857142857143 },
+          { "card": "Sunflower Seed", "usage": 0.09642857142857143 },
+          { "card": "Three-Headed Chomper", "usage": 0.09285714285714286 },
+          { "card": "Sage Sage", "usage": 0.08571428571428572 },
+          { "card": "Fume-Shroom", "usage": 0.08214285714285714 },
+          { "card": "Chomper", "usage": 0.075 },
+          { "card": "Smashing Pumpkin", "usage": 0.04285714285714286 },
+          { "card": "Cornucopia", "usage": 0.04285714285714286 },
+          { "card": "Bellflower", "usage": 0 }
+        ]
+      },
+      "Guardian": {
+        "best": [
+          { "card": "Forget-Me-Nuts", "usage": 1.8644067796610169 },
+          { "card": "Photosynthesizer", "usage": 1.7796610169491525 },
+          { "card": "Shamrocket", "usage": 1.194915254237288 },
+          { "card": "Blockbuster", "usage": 1.055084745762712 },
+          { "card": "Galacta-Cactus", "usage": 1.0296610169491525 },
+          { "card": "Gravitree", "usage": 0.9194915254237288 },
+          { "card": "Tricarrotops", "usage": 0.847457627118644 },
+          { "card": "Starch-Lord", "usage": 0.7033898305084746 },
+          { "card": "Poppin' Poppies", "usage": 0.6483050847457628 },
+          { "card": "Primal Potato Mine", "usage": 0.597457627118644 }
+        ],
+        "worst": [
+          { "card": "Prickly Pear", "usage": 0.1016949152542373 },
+          { "card": "Loco Coco", "usage": 0.09322033898305085 },
+          { "card": "Pumpkin Shell", "usage": 0.08898305084745763 },
+          { "card": "Spineapple", "usage": 0.0847457627118644 },
+          { "card": "Pea-Nut", "usage": 0.08050847457627118 },
+          { "card": "Guacodile", "usage": 0.07627118644067797 },
+          { "card": "Gardening Gloves", "usage": 0.06779661016949153 },
+          { "card": "Grizzly Pear", "usage": 0.0635593220338983 },
+          { "card": "Small-Nut", "usage": 0.03389830508474576 },
+          { "card": "Cactus", "usage": 0.0211864406779661 }
+        ]
+      },
+      "Smarty": {
+        "best": [
+          { "card": "Lima-Pleurodon", "usage": 1.7639484978540771 },
+          { "card": "Brainana", "usage": 1.1244635193133048 },
+          { "card": "Admiral Navy Bean", "usage": 0.9871244635193133 },
+          { "card": "Laser Cattail", "usage": 0.8025751072961373 },
+          { "card": "Primal Peashooter", "usage": 0.7553648068669528 },
+          { "card": "Grave Mistake", "usage": 0.7424892703862661 },
+          { "card": "Rotobaga", "usage": 0.6223175965665236 },
+          { "card": "Jelly Bean", "usage": 0.6051502145922747 },
+          { "card": "Cool Bean", "usage": 0.5836909871244635 },
+          { "card": "Dark Matter Dragonfruit", "usage": 0.5622317596566524 }
+        ],
+        "worst": [
+          { "card": "Carrotillery", "usage": 0.1072961373390558 },
+          { "card": "Snake Grass", "usage": 0.07296137339055794 },
+          { "card": "Weenie Beanie", "usage": 0.05150214592274678 },
+          { "card": "Sap-Fling", "usage": 0.05150214592274678 },
+          { "card": "Witch Hazel", "usage": 0.04721030042918455 },
+          { "card": "The Great Zucchini", "usage": 0.04291845493562232 },
+          { "card": "Cattail", "usage": 0.03862660944206009 },
+          { "card": "Melon-Pult", "usage": 0.034334763948497854 },
+          { "card": "Vanilla", "usage": 0.030042918454935622 },
+          { "card": "Smoosh-Shroom", "usage": 0.02145922746781116 }
+        ]
+      },
+      "Sneaky": {
+        "best": [
+          { "card": "Dr. Spacetime", "usage": 1.2113821138211383 },
+          { "card": "Space Cowboy", "usage": 1.1382113821138211 },
+          { "card": "Buried Treasure", "usage": 1.1219512195121952 },
+          { "card": "Smoke Bomb", "usage": 0.9390243902439024 },
+          { "card": "Pogo Bouncer", "usage": 0.9308943089430894 },
+          { "card": "Mini-Ninja", "usage": 0.8211382113821138 },
+          { "card": "Laser Base Alpha", "usage": 0.8008130081300813 },
+          { "card": "Mixed-Up Gravedigger", "usage": 0.7357723577235772 },
+          { "card": "Imposter", "usage": 0.6707317073170732 },
+          { "card": "Cryo-Yeti", "usage": 0.6504065040650406 }
+        ],
+        "worst": [
+          { "card": "Zombot Sharktronic Sub", "usage": 0.13008130081300814 },
+          { "card": "Imp", "usage": 0.12601626016260162 },
+          { "card": "Zombot Aerostatic Gondola", "usage": 0.09349593495934959 },
+          { "card": "Blowgun Imp", "usage": 0.06910569105691057 },
+          { "card": "Firefighter", "usage": 0.06097560975609756 },
+          { "card": "Zombot Stomp", "usage": 0.056910569105691054 },
+          { "card": "Trapper Zombie", "usage": 0.052845528455284556 },
+          { "card": "Barrel Roller Zombie", "usage": 0.04878048780487805 },
+          { "card": "Zombie High Diver", "usage": 0.04878048780487805 },
+          { "card": "Walrus Rider", "usage": 0.032520325203252036 }
+        ]
+      }
+    }
+  }
+}

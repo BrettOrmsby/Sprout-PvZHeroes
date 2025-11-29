@@ -219,6 +219,18 @@ const router = createRouter({
       },
     },
     {
+      name: 'DataSummary',
+      path: '/datasummary/:year(2\\d{3})',
+      component: () => import('@/pages/DataSummary.vue'),
+      props: true,
+      beforeEnter: (to) => {
+        document.title = `Data Summary ${to.params.year} • Sprout`
+      },
+      meta: {
+        title: 'Data Summary • Sprout',
+      },
+    },
+    {
       name: '404',
       path: '/404',
       component: () => import('@/pages/404Page.vue'),

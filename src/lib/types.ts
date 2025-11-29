@@ -126,3 +126,48 @@ export type SubQuery = (
       orSections: SubQuery[]
     }
 )[]
+
+// For data summary
+export type DeckGraphCollection = {
+  heroes: {
+    plants: Graph
+    zombies: Graph
+    all: Graph
+  }
+  classes: {
+    plants: Graph
+    zombies: Graph
+    all: Graph
+    cardUsage: Graph
+  }
+  rarity: Graph
+  curve: Graph
+  types: Graph
+}
+
+export type Graph = {
+  type: 'doughnut' | 'bar'
+  data: object
+  options: object
+}
+
+export type CardAndUsage = {
+  card: string
+  usage: number
+}
+export type BestAndWorst = {
+  best: CardAndUsage[]
+  worst: CardAndUsage[]
+}
+export type BestAndWorstCollection = BestAndWorst & {
+  classes: Record<string, BestAndWorst>
+}
+
+export type DataSummary = {
+  completedDecks: number
+  sparks: number
+  plantDecks: number
+  zombieDecks: number
+  graphs: DeckGraphCollection
+  bestWorst: BestAndWorstCollection
+}

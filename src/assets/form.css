@@ -1,50 +1,56 @@
 small.error {
-    margin-top: var(--inline-space);
-    color: var(--p-red-300);
-    display: block;
+  margin-top: var(--inline-space);
+  color: var(--p-red-300);
+  display: block;
 }
 
 small.help {
-    color: var(--p-text-muted-color);
-    margin-top: var(--inline-space);
-    margin-bottom: var(--block-space);
-    display: block;
+  color: var(--p-text-muted-color);
+  margin-top: var(--inline-space);
+  margin-bottom: var(--block-space);
+  display: block;
 }
 
 small:is(.error, .help):not(:last-child) {
-    margin-bottom: var(--block-space);
+  margin-bottom: var(--block-space);
 }
 
 label,
 span:has(+ .p-select),
 form span.label {
-    display: block;
-    margin-bottom: var(--inline-space);
-    font-weight: bold;
+  display: block;
+  margin-bottom: var(--inline-space);
+  font-weight: bold;
 }
 
 label:has(.p-checkbox, .p-radiobutton) {
-    font-weight: normal;
+  font-weight: normal;
 }
 
-
-form :is(.card-list-textarea,
+form
+  :is(
+    .card-list-textarea,
     .p-inputtext,
     .p-select,
     .p-inputnumber,
     .p-autocomplete,
     .p-textarea,
     .p-button,
-    :deep(.p-fileupload-choose-button)) {
-    width: 100%;
+    :deep(.p-fileupload-choose-button)
+  ) {
+  width: 100%;
 }
 
-form :is(:not(.p-inputgroup, .p-inputgroup .p-autocomplete) > .p-inputtext,
+form
+  :is(
+    :not(.p-inputgroup, .p-inputgroup .p-autocomplete) > .p-inputtext,
     :not(.p-inputgroup) > .p-autocomplete,
     .p-select,
     .card-list-textarea,
     .p-inputnumber,
     .p-textarea,
-    .p-toggleswitch, .p-fileupload):has(+ :not(:is(small, .help, .errors))) {
-    margin-bottom: var(--block-space);
+    .p-toggleswitch,
+    .p-fileupload
+  ):has(+ :not(:is(small, .help, .errors))) {
+  margin-bottom: var(--block-space);
 }

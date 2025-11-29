@@ -50,13 +50,14 @@
 import { computed } from 'vue'
 import { Menubar, OverlayBadge } from 'primevue'
 import {
+  BarChart3,
+  CircleEllipsis,
   ChevronDown,
   CircleUserRound,
   Bell,
   FileSearch,
   FolderSearch,
   Grid2x2,
-  Hammer,
   LayoutGrid,
   LogOut,
   Plus,
@@ -106,8 +107,8 @@ const items = computed(() => {
       ],
     },
     {
-      label: 'Tools',
-      iconComponent: Hammer,
+      label: 'More',
+      iconComponent: CircleEllipsis,
       items: [
         {
           label: 'Card Creator',
@@ -118,6 +119,11 @@ const items = computed(() => {
           label: 'Block Meter Probability',
           route: '/tools/blockmeter',
           iconComponent: ShieldQuestion,
+        },
+        {
+          label: 'Data Summary',
+          route: '/datasummary/' + (new Date().getFullYear() - 1),
+          iconComponent: BarChart3,
         },
       ],
     },
