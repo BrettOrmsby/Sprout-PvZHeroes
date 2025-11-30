@@ -193,10 +193,8 @@ import { toBlob } from 'html-to-image'
 import FileSaver from 'file-saver'
 import ClassSelect from '@/components/ClassSelect.vue'
 import ImageSelect from '@/components/cardcreator/ImageSelect.vue'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
-import superPowers from '@/content/superpowers.json'
 import throwError from '@/lib/throwError'
+import { getAllCardsIterator } from '@/lib/getCard'
 import { useCustomCardStore } from '@/store/cardcreator/customCard'
 
 const card = useCustomCardStore()
@@ -251,7 +249,7 @@ function getReadableImageLabel(name: string) {
   }
 }
 
-const tribes = new Set([...plants, ...zombies, ...superPowers].flatMap((card) => card.tribes))
+const tribes = new Set([...getAllCardsIterator()].flatMap((card) => card.tribes))
 const tribesItems = ref<string[]>([])
 const searchTribes = (event: AutoCompleteCompleteEvent) => {
   tribesItems.value = [...tribes, event.query].filter((tribe) =>

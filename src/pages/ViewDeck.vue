@@ -2,6 +2,7 @@
   <CardModal />
   <HeroModal />
   <DeckHeader />
+  <SuggestPackModal />
   <main>
     <DeckToolbar />
     <SideBarLayout>
@@ -28,6 +29,7 @@ import TheDeck from '@/components/deck/TheDeck.vue'
 import AddCards from '@/components/deck/AddCards.vue'
 import CardModal from '@/components/CardModal.vue'
 import HeroModal from '@/components/HeroModal.vue'
+import SuggestPackModal from '@/components/deck/SuggestPackModal.vue'
 import DeckFooter from '@/components/deck/DeckFooter.vue'
 import DrawSimulator from '@/components/deck/DrawSimulator.vue'
 import DeckCharts from '@/components/deck/DeckCharts.vue'

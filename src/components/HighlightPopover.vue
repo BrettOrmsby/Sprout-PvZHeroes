@@ -34,15 +34,13 @@ import { onMounted, watch } from 'vue'
 import { Button, InputText, Message, ToggleSwitch } from 'primevue'
 import generateQuery from '@/lib/parse-query/generateQuery'
 import doesMatchQuery from '@/lib/matchQuery'
+import { getAllCardsIterator } from '@/lib/getCard'
 import { useStatesStore } from '@/store/states'
-import zombies from '@/content/zombies.json'
-import plants from '@/content/plants.json'
-import type { Card } from '@/lib/types'
 
 const { isTitleVisible } = defineProps<{ isTitleVisible?: boolean }>()
 
 const states = useStatesStore()
-const cards = [...plants, ...zombies] as Card[]
+const cards = [...getAllCardsIterator()]
 
 onMounted(() => update(states.deckFilter.textQuery))
 

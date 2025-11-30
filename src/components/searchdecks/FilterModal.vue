@@ -154,7 +154,6 @@ watch(
 </script>
 
 <style scoped>
-/*TODO: does .hero-picker need bottom margin */
 .spark-container {
   display: flex;
   align-items: center;

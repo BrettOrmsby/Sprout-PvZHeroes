@@ -29,3 +29,43 @@ export default function calculateSparkCost(card: Card): number {
   }
   return regularSparkCosts[card.rarity]
 }
+
+const regularSparkScraps: Record<string, number> = {
+  common: 0,
+  uncommon: 15,
+  rare: 50,
+  'super-rare': 250,
+  legendary: 1000,
+  event: 250,
+}
+
+const specialSparkScraps: Record<string, number> = {
+  'Red Stinger': 500,
+  'Hot Date': 500,
+  'Leprechaun Imp': 500,
+  'Hippity Hop Gargantuar': 500,
+  'Gargantuar-Throwing Imp': 500,
+  'King of the Grill': 500,
+  'Kitchen Sink Zombie': 500,
+  'Zombology Teacher': 500,
+  'Witch Hazel': 500,
+  Transfiguration: 500,
+  'Exploding Fruitcake': 500,
+  'Planet of the Grapes': 50,
+  'Barrel of Barrels': 50,
+  'Shelf Mushroom': 250,
+  'Sergeant Strongberry': 1000,
+  'Solar Winds': 1000,
+  'Disco-Naut': 1000,
+  Fireweed: 1000,
+  Strawberrian: 1000,
+  'Briar Rose': 4000,
+  Valkyrie: 4000,
+}
+
+export function calculateSparkScraps(card: Card): number {
+  if (card.name in specialSparkScraps) {
+    return specialSparkScraps[card.name]
+  }
+  return regularSparkScraps[card.rarity]
+}

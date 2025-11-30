@@ -24,10 +24,8 @@
 // Note: this does not re-update if the modelValue changes from the parent
 import { computed, ref, watch } from 'vue'
 import { Textarea } from 'primevue'
-import getCard from '@/lib/getCard'
+import getCard, { getAllCardsIterator } from '@/lib/getCard'
 import getHero from '@/lib/getHero'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
 
 const props = defineProps<{
   modelValue: Record<string, number> | null
@@ -57,7 +55,9 @@ const isError = computed(() => Object.values(errors.value).flat().length > 0)
 const computedHero = computed(() => getHero(props.hero))
 const placeholder = computed(() => {
   const hero = computedHero.value
-  const card = [...plants, ...zombies].find((e) => hero.class.includes(e.class))
+  const card = [...getAllCardsIterator()].find(
+    (e) => hero.class.includes(e.class) && e.set != 'superpower',
+  )
   return `4 ${card?.name}`
 })
 

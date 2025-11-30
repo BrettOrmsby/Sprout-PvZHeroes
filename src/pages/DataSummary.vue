@@ -104,7 +104,7 @@
     <div v-if="availableYears.length && !isLoading">
       <h2>All Data Summaries</h2>
       <ul>
-        <li v-for="year in availableYears">
+        <li v-for="year in availableYears" :key="year">
           <RouterLink :to="{ name: 'DataSummary', params: { year } }">{{ year }}</RouterLink>
         </li>
       </ul>

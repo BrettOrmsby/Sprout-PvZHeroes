@@ -48,9 +48,7 @@ import {
 import { Button } from 'primevue'
 import QueryBuilderInput from '@/components/searchadvanced/QueryBuilderInput.vue'
 import TheFooter from '@/components/TheFooter.vue'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
-import superPowers from '@/content/superpowers.json'
+import { getAllCardsIterator } from '@/lib/getCard'
 
 const values = reactive<Record<string, { query: string; value: string | number | null }[]>>({})
 
@@ -73,7 +71,7 @@ const query = computed(() => {
 
 const getTribes = () => {
   const tribes = new Set<string>()
-  ;[...plants, ...zombies, ...superPowers].forEach((card) => {
+  ;[...getAllCardsIterator()].forEach((card) => {
     card.tribes.forEach((tribe) => tribes.add(tribe))
   })
   return [...tribes].sort().map((tribe) => ({ value: tribe, label: tribe }))

@@ -40,13 +40,11 @@ import { useRoute } from 'vue-router'
 import SetPill from '@/components/SetPill.vue'
 import CardClassImage from '@/components/CardClassImage.vue'
 import ReplaceCardText from '@/components/ReplaceCardText.vue'
-import getCard from '@/lib/getCard'
+import getCard, { getAllCardsIterator } from '@/lib/getCard'
 import getHero from '@/lib/getHero'
 import { useStatesStore } from '@/store/states'
 import { useDeckStore } from '@/store/deck'
 import { useUserSettingsStore } from '@/store/userSettings'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
 
 const deck = useDeckStore()
 const userSettings = useUserSettingsStore()
@@ -73,7 +71,7 @@ onMounted(() => {
   if (Object.keys(deck.list).length === 0) {
     const hero = getHero(deck.hero)
     // Get the basic 1/1 zombie
-    states.cardHover = [...plants, ...zombies].find(
+    states.cardHover = [...getAllCardsIterator()].find(
       (card) =>
         card.class === hero.class[0] &&
         card.set === 'basic' &&

@@ -103,6 +103,9 @@ onUnmounted(() => userSettings.restore())
   align-items: center;
   gap: var(--inline-space);
 }
+.option > span {
+  margin-bottom: 0;
+}
 @media only screen and (max-width: 700px) {
   .option {
     display: grid;

@@ -189,6 +189,7 @@ h1 {
   font-size: 3em;
   margin: var(--block-space) 0;
   hyphens: auto;
+  word-break: break-word;
 }
 .username {
   text-decoration: none;
@@ -196,6 +197,7 @@ h1 {
   font-size: 1.5em;
   margin-left: var(--inline-space);
   transition: 0.25s;
+  word-break: break-word;
 }
 .username:hover {
   color: var(--p-primary-500);

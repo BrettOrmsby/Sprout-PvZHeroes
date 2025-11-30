@@ -12,3 +12,11 @@ for (const card of [...plants, ...zombies, ...superPowers]) {
 export default function getCard(name: string): Card {
   return cardMap.get(name.toLowerCase())!
 }
+
+export function getAllCardNamesIterator() {
+  return cardMap.keys()
+}
+
+export function getAllCardsIterator() {
+  return cardMap.values()
+}
