@@ -122,7 +122,7 @@ const items = computed(() => {
         },
         {
           label: 'Data Summary',
-          route: '/datasummary/' + (new Date().getFullYear() - 1),
+          route: '/datasummary/' + Math.max(2025, new Date().getFullYear() - 1),
           iconComponent: BarChart3,
         },
       ],
