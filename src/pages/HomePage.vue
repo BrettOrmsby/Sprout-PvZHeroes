@@ -15,15 +15,15 @@
         href="https://github.com/BrettOrmsby/Sprout-PvZHeroes"
         style="color: inherit; text-decoration: underline"
         target="_blank"00221
-        
+
         >Github</a
       >.</Message
     > -->
     <Message style="margin: 0 auto; margin-top: var(--inline-space); width: fit-content"
-      >Introducing the
-      <RouterLink to="/datasummary/2025" style="color: inherit; text-decoration: underline"
-        >2025 Data Summary!</RouterLink
-      ></Message
+      >New: Add Sets to
+      <RouterLink to="/tools/cardcreator" style="color: inherit; text-decoration: underline"
+        >Custom Cards</RouterLink
+      >!</Message
     >
 
     <div v-if="isSignedIn">

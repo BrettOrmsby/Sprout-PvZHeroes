@@ -12,7 +12,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "@primevue/themes": "^4.2.4",
+    "@primeuix/themes": "^2.0.3",
     "@supabase/supabase-js": "^2.44.3",
     "chart.js": "^4.4.3",
     "dayjs": "^1.11.11",

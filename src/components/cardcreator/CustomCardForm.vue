@@ -4,6 +4,8 @@
     <InputText id="cardName" type="text" placeholder="Galacta-Cactus" v-model="card.name" />
     <span id="classLabel">Class</span>
     <ClassSelect v-model="card.className" aria-labelledby="classLabel" :to-lower-case="true" />
+    <label for="set">Set</label>
+    <InputText id="set" type="text" placeholder="Premium" v-model="card.set" />
     <span id="rarityLabel">Rarity</span>
     <Select
       v-model="card.rarity"

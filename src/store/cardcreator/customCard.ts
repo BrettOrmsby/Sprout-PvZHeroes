@@ -31,6 +31,7 @@ export const useCustomCardStore = defineStore('customCard', () => {
   const type = ref<'fighter' | 'trick' | 'environment'>('fighter')
   const tribes = ref<string[]>(['Cactus', 'Flower'])
   const abilities = ref('{{Bullseye}}[[Bullseye]]\n**When destroyed:** Do 1 damage to everything.')
+  const set = ref('Galactic')
   const rarity = ref<Rarity>('super-rare')
   const flavour = ref('"I take pity on no one. For I am Galacta-Cactus!"')
   const cost = ref(1)
@@ -59,6 +60,7 @@ export const useCustomCardStore = defineStore('customCard', () => {
     type,
     tribes,
     abilities,
+    set,
     rarity,
     flavour,
     cost,

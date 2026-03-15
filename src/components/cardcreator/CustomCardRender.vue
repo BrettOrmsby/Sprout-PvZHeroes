@@ -33,19 +33,14 @@
       <span class="type-line">- {{ card.tribes.join(' ') }} {{ cardType }} -</span>
       <pre class="card-abilities" v-html="cardAbilities"></pre>
     </div>
-    <img
-      v-if="card.rarity === 'legendary'"
-      class="card-banner"
-      :alt="card.rarity"
-      :src="`/images/cardcreator/rarity-banner/${card.rarity}.png`"
-    />
-    <div v-else class="card-banner-container" :class="card.rarity">
+    <div class="card-banner-container" :class="card.rarity">
       <img
         class="card-banner-image"
         :alt="card.rarity"
         :src="`/images/cardcreator/rarity-banner/${card.rarity === 'token' ? 'common' : card.rarity}.png`"
       />
       <div class="card-rarity-text">
+        <span v-if="card.set">{{ card.set }} -</span>
         {{ card.rarity }}
       </div>
     </div>
@@ -367,7 +362,7 @@ const cardAbilities = computed(() => {
 }
 .card-rarity-text {
   font-family: 'Cafeteria', sans-serif;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
   width: 300px;
   -webkit-text-stroke: 0.7px black;
@@ -384,6 +379,9 @@ const cardAbilities = computed(() => {
 }
 .uncommon .card-banner-image {
   top: -3px;
+}
+.legendary .card-banner-image {
+  top: -2px;
 }
 .rare .card-banner-image {
   top: -3px;
