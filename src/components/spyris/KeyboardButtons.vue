@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useSpyrisStore } from '@/store/games/spyris'
 import { Button } from 'primevue'
+import { useSpyrisStore } from '@/store/games/spyris'
 
 const keyboardButtons = [
   ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],

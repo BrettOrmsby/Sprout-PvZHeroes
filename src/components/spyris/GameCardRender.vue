@@ -3,8 +3,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useSpyrisStore } from '@/store/games/spyris'
 import FullCardRender from '../FullCardRender.vue'
+import { useSpyrisStore } from '@/store/games/spyris'
 
 const spyris = useSpyrisStore()
 </script>

@@ -41,18 +41,18 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, onMounted, watch } from 'vue'
 import { Button } from 'primevue'
 import { HatGlasses } from '@lucide/vue'
-import TheFooter from '@/components/TheFooter.vue'
-import { useSpyrisStore } from '@/store/games/spyris'
 import GameCardRender from '@/components/spyris/GameCardRender.vue'
-import KeyboardButtons from '@/components/spyris/KeyboardButtons.vue'
+import GuessSymbolModal from '@/components/spyris/GuessSymbolModal.vue'
 import HowToPlayModal from '@/components/spyris/HowToPlayModal.vue'
+import KeyboardButtons from '@/components/spyris/KeyboardButtons.vue'
 import NameInput from '@/components/spyris/NameInput.vue'
 import FullCardRender from '@/components/FullCardRender.vue'
-import { computed, onMounted, watch } from 'vue'
+import TheFooter from '@/components/TheFooter.vue'
+import { useSpyrisStore } from '@/store/games/spyris'
 import type { CardRenderData, CardType, ClassName, Rarity } from '@/lib/types'
-import GuessSymbolModal from '@/components/spyris/GuessSymbolModal.vue'
 
 const spyris = useSpyrisStore()
 

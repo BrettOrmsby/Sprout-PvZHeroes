@@ -34,9 +34,9 @@
 </template>
 
 <script lang="ts" setup>
-import { useSpyrisStore } from '@/store/games/spyris'
-import { Button, InputOtp, InputText } from 'primevue'
 import { computed, ref } from 'vue'
+import { Button, InputOtp, InputText } from 'primevue'
+import { useSpyrisStore } from '@/store/games/spyris'
 
 const spyris = useSpyrisStore()
 const mask = computed(() => {

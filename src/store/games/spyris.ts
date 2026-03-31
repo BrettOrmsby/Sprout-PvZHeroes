@@ -1,11 +1,9 @@
-import getCard from '@/lib/getCard'
-import { type Card, type CardRenderData, type CardType } from '@/lib/types'
-import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
+import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useLocalStorage } from '@vueuse/core'
 import dayjs from 'dayjs'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
+import getCard, { getAllCardsIterator } from '@/lib/getCard'
+import { type Card, type CardRenderData, type CardType } from '@/lib/types'
 
 const MAX_GUESSES = 9
 
@@ -140,7 +138,7 @@ export const useSpyrisStore = defineStore('spyris', () => {
 
   const init = () => {
     const START_DATE = new Date('2026-03-30')
-    const allCards = ([...plants, ...zombies] as Card[]).filter(
+    const allCards = [...getAllCardsIterator()].filter(
       (card) => card.class !== 'Removed' && card.set !== 'token' && card.set !== 'superpower',
     )
     const shuffledCards = shuffle(allCards, 111)

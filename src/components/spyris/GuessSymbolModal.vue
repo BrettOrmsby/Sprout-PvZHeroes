@@ -26,9 +26,9 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, ref } from 'vue'
 import { Dialog, Button, InputText } from 'primevue'
 import { useSpyrisStore } from '@/store/games/spyris'
-import { computed, ref } from 'vue'
 
 const spyris = useSpyrisStore()
 
