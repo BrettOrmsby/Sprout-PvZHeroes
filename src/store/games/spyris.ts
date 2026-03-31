@@ -3,6 +3,9 @@ import { type Card, type CardRenderData, type CardType } from '@/lib/types'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
 import { useLocalStorage } from '@vueuse/core'
+import dayjs from 'dayjs'
+import plants from '@/content/plants.json'
+import zombies from '@/content/zombies.json'
 
 const MAX_GUESSES = 9
 
@@ -14,6 +17,7 @@ export const useSpyrisStore = defineStore('spyris', () => {
   const answer = useLocalStorage('spyris-answer', getCard('Galacta-Cactus'))
   const guesses = useLocalStorage<string[]>('spyris-guesses', [])
   const guessesRemaining = useLocalStorage('spyris-guessesRemaining', MAX_GUESSES)
+  const dayNumber = useLocalStorage('spyris-dayNumber', 0)
   const cardRender = useLocalStorage<CardRenderData>('spyris-cardRender', {
     className: 'unknown',
     name: '',
@@ -45,22 +49,22 @@ export const useSpyrisStore = defineStore('spyris', () => {
     answer.value = card
     cardRender.value = {
       className: 'unknown',
-      name: toUnserscores(card.name),
+      name: toUnderscores(card.name),
       type: normalizeCardType(card.type),
-      tribes: card.tribes.map(toUnserscores),
-      abilities: toUnserscores(normalizeAbilities(card.abilities)),
-      set: card.set === 'event' ? '' : toUnserscores(card.set),
-      flavour: toUnserscores(card.flavour),
+      tribes: card.tribes.map(toUnderscores),
+      abilities: toUnderscores(normalizeAbilities(card.abilities)),
+      set: card.set === 'event' ? '' : toUnderscores(card.set),
+      flavour: toUnderscores(card.flavour),
       rarity: 'common',
       strengthImg: 'strength',
       healthImg: 'heart',
-      cost: toUnserscores(card.cost.toString()),
+      cost: toUnderscores(card.cost.toString()),
       strength: toQuestions(card.strength),
-      health: toQuestions(card.strength),
+      health: toQuestions(card.health),
 
       overrideShowStats: true,
-      typeText: toUnserscores(card.type),
-      rarityText: toUnserscores(card.rarity),
+      typeText: toUnderscores(card.type),
+      rarityText: toUnderscores(card.rarity),
 
       img: '',
       imgWidth: 0,
@@ -134,6 +138,21 @@ export const useSpyrisStore = defineStore('spyris', () => {
     }
   }
 
+  const init = () => {
+    const START_DATE = new Date('2026-03-30')
+    const allCards = ([...plants, ...zombies] as Card[]).filter(
+      (card) => card.class !== 'Removed' && card.set !== 'token' && card.set !== 'superpower',
+    )
+    const shuffledCards = shuffle(allCards, 111)
+    const dayDiff = dayjs(Date.now()).diff(START_DATE, 'days')
+    const card = shuffledCards[dayDiff % allCards.length]
+    if (card.name !== answer.value.name) {
+      // Restart the game
+      dayNumber.value = dayDiff
+      setCard(shuffledCards[dayDiff % allCards.length])
+    }
+  }
+
   return {
     MAX_GUESSES,
     isHowToPlayOpen,
@@ -143,9 +162,11 @@ export const useSpyrisStore = defineStore('spyris', () => {
     answer,
     guesses,
     guessesRemaining,
+    dayNumber,
     setCard,
     guess,
     guessAnswer,
+    init,
   }
 })
 
@@ -227,7 +248,7 @@ function decodeMessage(
   return output
 }
 
-function toUnserscores(str: string) {
+function toUnderscores(str: string) {
   return str.replace(/ /g, '  ').replace(/[a-zA-Z0-9@]/g, '_' + String.fromCharCode(160)) // 160 = &npsp;
 }
 
@@ -255,4 +276,26 @@ function normalizeCardType(type: string): CardType {
   if (type === 'Plant' || type === 'Zombie') return 'fighter'
   if (type === 'Trick') return 'trick'
   return 'environment'
+}
+
+// Source - https://stackoverflow.com/a/53758827
+// Posted by Ulf Aslak
+// Retrieved 2026-03-30, License - CC BY-SA 4.0
+function shuffle<T>(array: T[], seed: number): T[] {
+  let m = array.length,
+    t,
+    i
+  while (m) {
+    i = Math.floor(random(seed) * m--)
+    t = array[m]
+    array[m] = array[i]
+    array[i] = t
+    ++seed
+  }
+  return array
+}
+// Not completely random, but good enough
+function random(seed: number) {
+  const x = Math.sin(seed++) * 10000
+  return x - Math.floor(x)
 }

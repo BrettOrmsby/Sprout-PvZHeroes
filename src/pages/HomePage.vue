@@ -20,9 +20,9 @@
       >.</Message
     > -->
     <Message style="margin: 0 auto; margin-top: var(--inline-space); width: fit-content"
-      >New: Add Sets to
-      <RouterLink to="/tools/cardcreator" style="color: inherit; text-decoration: underline"
-        >Custom Cards</RouterLink
+      >Play the new daily word game
+      <RouterLink to="/games/spyris" style="color: inherit; text-decoration: underline"
+        >Spyris</RouterLink
       >!</Message
     >
 

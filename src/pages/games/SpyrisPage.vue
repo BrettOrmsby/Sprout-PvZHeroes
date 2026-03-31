@@ -1,15 +1,22 @@
 <template>
   <main>
-    <h1><HatGlasses />Spyris</h1>
+    <h1><HatGlasses />Spyris - Day {{ spyris.dayNumber }}</h1>
     <HowToPlayModal />
     <GuessSymbolModal />
     <template v-if="spyris.gameState === 'won'">
-      <h2>You won in {{ spyris.MAX_GUESSES - spyris.guessesRemaining }} guesses!</h2>
+      <h2>
+        You won in {{ spyris.MAX_GUESSES - spyris.guessesRemaining }} guess<span
+          v-if="spyris.MAX_GUESSES - spyris.guessesRemaining !== 1"
+          >es</span
+        >!
+      </h2>
       <FullCardRender :card="answerCardRender" />
+      <p class="done-message">Come back tomorrow for a new card!</p>
     </template>
     <template v-else-if="spyris.gameState === 'lost'">
       <h2>You lost!</h2>
       <FullCardRender :card="answerCardRender" />
+      <p class="done-message">Come back tomorrow for a new card!</p>
     </template>
     <template v-else>
       <GameCardRender />
@@ -43,27 +50,17 @@ import KeyboardButtons from '@/components/spyris/KeyboardButtons.vue'
 import HowToPlayModal from '@/components/spyris/HowToPlayModal.vue'
 import NameInput from '@/components/spyris/NameInput.vue'
 import FullCardRender from '@/components/FullCardRender.vue'
-import { computed, watch } from 'vue'
-import type { Card, CardRenderData, CardType, ClassName, Rarity } from '@/lib/types'
+import { computed, onMounted, watch } from 'vue'
+import type { CardRenderData, CardType, ClassName, Rarity } from '@/lib/types'
 import GuessSymbolModal from '@/components/spyris/GuessSymbolModal.vue'
-import dayjs from 'dayjs'
-import plants from '@/content/plants.json'
-import zombies from '@/content/zombies.json'
 
 const spyris = useSpyrisStore()
 
-// TODO: import the cards, filter out tokens? supers? removed?
-const START_DATE = new Date('2026-03-30')
-const allCards = ([...plants, ...zombies] as Card[]).filter(
-  (card) => card.class !== 'Removed' && card.set !== 'token' && card.set !== 'superpower',
+onMounted(spyris.init)
+watch(
+  () => spyris.gameState,
+  () => window.scrollTo({ top: 0 }),
 )
-const suffledCards = shuffle(allCards, 111)
-const dayNumber = dayjs(Date.now()).diff(START_DATE, 'days')
-const card = suffledCards[dayNumber % allCards.length]
-if (card.name !== spyris.answer.name) {
-  // Restart the game
-  spyris.setCard(suffledCards[dayNumber % allCards.length])
-}
 
 const answerCardRender = computed(
   (): CardRenderData => ({
@@ -101,33 +98,6 @@ function normalizeCardType(type: string): CardType {
   if (type === 'Plant' || type === 'Zombie') return 'fighter'
   if (type === 'Trick') return 'trick'
   return 'environment'
-}
-
-watch(
-  () => spyris.gameState,
-  () => window.scrollTo({ top: 0 }),
-)
-
-// Source - https://stackoverflow.com/a/53758827
-// Posted by Ulf Aslak
-// Retrieved 2026-03-30, License - CC BY-SA 4.0
-function shuffle<T>(array: T[], seed: number): T[] {
-  let m = array.length,
-    t,
-    i
-  while (m) {
-    i = Math.floor(random(seed) * m--)
-    t = array[m]
-    array[m] = array[i]
-    array[i] = t
-    ++seed
-  }
-  return array
-}
-// Not completely random, but good enough
-function random(seed: number) {
-  const x = Math.sin(seed++) * 10000
-  return x - Math.floor(x)
 }
 </script>
 
@@ -168,5 +138,8 @@ h2 {
 }
 .card-container {
   margin-top: -90px;
+}
+.done-message {
+  margin-top: 0;
 }
 </style>

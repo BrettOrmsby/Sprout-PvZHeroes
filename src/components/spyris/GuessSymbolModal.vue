@@ -14,7 +14,7 @@
         :disabled="spyris.guesses.includes(imgName)"
         @click="
           () => {
-            spyris.guess(imgName === 'truestrick' ? 'bullseye' : imgName)
+            spyris.guess(imgName === 'bullseye' ? 'truestrike' : imgName)
             spyris.isSymbolModalOpen = false
           }
         "

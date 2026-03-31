@@ -6,7 +6,7 @@
     style="max-width: 500px; width: 100%; margin: var(--block-space)"
     header="How to Play Spyris"
   >
-    <p>
+    <p style="margin-top: 0">
       If you've played Hangman, you already know the basics. Each day, a random card is chosen. Your
       goal is to guess its name in {{ spyris.MAX_GUESSES }} tries or fewer. On each guess, you can:
     </p>
@@ -25,7 +25,7 @@
     <p>A new card is available every day.</p>
     <Button @click="() => (spyris.isHowToPlayOpen = false)" fluid>Close</Button>
     <h2>Additional Information</h2>
-    <ul>
+    <ul style="margin-bottom: 0">
       <li>Strength and health icons are shown for all cards (even Tricks and Environments).</li>
       <li>The class icon and border colour are blank. The cards can have any class.</li>
       <li>

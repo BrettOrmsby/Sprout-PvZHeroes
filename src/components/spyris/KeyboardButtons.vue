@@ -1,6 +1,6 @@
 <template>
   <div class="button-rows">
-    <div v-for="(row, index) of keybordButtons" :key="index" class="row">
+    <div v-for="(row, index) of keyboardButtons" :key="index" class="row">
       <template v-for="key of row" :key="key">
         <Button
           v-if="key"
@@ -19,7 +19,7 @@
 import { useSpyrisStore } from '@/store/games/spyris'
 import { Button } from 'primevue'
 
-const keybordButtons = [
+const keyboardButtons = [
   ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
   ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
   ['', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ''],

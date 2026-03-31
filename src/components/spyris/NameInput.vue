@@ -57,7 +57,6 @@ const prefixes = computed(() => mask.value.split('_'))
 const inputOptClasses = ref('')
 const isButtonAnimating = ref(false)
 const guessCard = () => {
-  console.log(guess.value)
   spyris.guessAnswer(guess.value)
   isButtonAnimating.value = true
   inputOptClasses.value = 'horizontal-shaking'
