@@ -26,7 +26,7 @@
 
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
-import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from 'lucide-vue-next'
+import { Eye, Grid2x2Check, Grid2x2X, Minus, Plus } from '@lucide/vue'
 import { Menu } from 'primevue'
 import PVZCard from '@/components/PVZCard.vue'
 import { useDeckStore } from '@/store/deck'

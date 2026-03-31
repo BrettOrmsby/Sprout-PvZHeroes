@@ -32,7 +32,7 @@
 import { computed, onUnmounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
-import { Heart } from 'lucide-vue-next'
+import { Heart } from '@lucide/vue'
 import { Avatar, Card, Tag } from 'primevue'
 import getHero from '@/lib/getHero'
 import type { Deck } from '@/lib/types'

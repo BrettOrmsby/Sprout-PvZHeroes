@@ -211,6 +211,14 @@ const router = createRouter({
       },
     },
     {
+      name: 'SpyrisGame',
+      path: '/games/spyris',
+      component: () => import('@/pages/games/SpyrisPage.vue'),
+      meta: {
+        title: 'Spyris • Sprout',
+      },
+    },
+    {
       name: 'CardCreator',
       path: '/tools/cardcreator',
       component: () => import('@/pages/tools/CardCreator.vue'),

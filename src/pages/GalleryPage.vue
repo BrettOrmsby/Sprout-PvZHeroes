@@ -87,7 +87,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { Avatar, Button, Dialog, ScrollTop, Toolbar } from 'primevue'
-import { Highlighter } from 'lucide-vue-next'
+import { Highlighter } from '@lucide/vue'
 import PVZCard from '@/components/PVZCard.vue'
 import CardContainer from '@/components/CardContainer.vue'
 import CardModal from '@/components/CardModal.vue'

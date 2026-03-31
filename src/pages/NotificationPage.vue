@@ -43,7 +43,7 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
 import { Card, Message, Skeleton } from 'primevue'
-import { Bell, Heart } from 'lucide-vue-next'
+import { Bell, Heart } from '@lucide/vue'
 import { useNotificationsStore } from '@/store/notifications'
 import TheFooter from '@/components/TheFooter.vue'
 

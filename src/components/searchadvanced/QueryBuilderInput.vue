@@ -65,7 +65,7 @@
 
 <script lang="ts" setup>
 import { Button, InputGroupAddon, InputGroup, InputText, InputNumber, Select } from 'primevue'
-import { Minus, Plus } from 'lucide-vue-next'
+import { Minus, Plus } from '@lucide/vue'
 const props = defineProps<{
   name: string
   modifiers: { value: string; label: string }[]

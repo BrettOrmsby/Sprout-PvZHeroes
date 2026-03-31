@@ -110,7 +110,7 @@ import {
   Skeleton,
   Select,
 } from 'primevue'
-import { ArrowUpNarrowWide, ListFilter, Search } from 'lucide-vue-next'
+import { ArrowUpNarrowWide, ListFilter, Search } from '@lucide/vue'
 import DeckCard from '@/components/DeckCard.vue'
 import FilterModal from '@/components/searchdecks/FilterModal.vue'
 import TheFooter from '@/components/TheFooter.vue'

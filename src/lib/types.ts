@@ -127,6 +127,55 @@ export type SubQuery = (
     }
 )[]
 
+export type StrengthImage =
+  | 'anti-hero'
+  | 'deadly'
+  | 'doublestrike'
+  | 'frenzy'
+  | 'overshoot'
+  | 'star'
+  | 'strength'
+  | 'strikethrough'
+  | 'truestrike'
+export type HealthImage = 'armored' | 'heart' | 'star' | 'untrickable' | 'strength-heart'
+export type ClassName =
+  | 'beastly'
+  | 'brainy'
+  | 'crazy'
+  | 'guardian'
+  | 'hearty'
+  | 'kabloom'
+  | 'mega-grow'
+  | 'smarty'
+  | 'sneaky'
+  | 'solar'
+  | 'unknown'
+export type Rarity = 'uncommon' | 'rare' | 'super-rare' | 'legendary' | 'common' | 'event' | 'token'
+export type CardType = 'fighter' | 'trick' | 'environment'
+export type CardRenderData = {
+  className: ClassName
+  name: string
+  type: CardType
+  tribes: string[]
+  abilities: string
+  set: string
+  rarity: Rarity
+  flavour: string
+  cost: number | string
+  strength: number | string
+  health: number | string
+  strengthImg: StrengthImage
+  healthImg: HealthImage
+  img: string
+  imgWidth: number
+  imgXOffset: number
+  imgYOffset: number
+  backgroundColour: string
+  overrideShowStats?: boolean
+  typeText?: string
+  rarityText?: string
+}
+
 // For data summary
 export type DeckGraphCollection = {
   heroes: {

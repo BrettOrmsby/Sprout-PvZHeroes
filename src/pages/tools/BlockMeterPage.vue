@@ -83,7 +83,7 @@ import {
   DataTable,
   Column,
 } from 'primevue'
-import { ShieldQuestion } from 'lucide-vue-next'
+import { ShieldQuestion } from '@lucide/vue'
 import TheFooter from '@/components/TheFooter.vue'
 
 const isMaxValue = (rowData: (typeof table)[number], number: number) => {

@@ -58,6 +58,7 @@ import {
   FileSearch,
   FolderSearch,
   Grid2x2,
+  HatGlasses,
   LayoutGrid,
   LogOut,
   Plus,
@@ -67,7 +68,7 @@ import {
   Sprout,
   UserSearch,
   PencilRuler,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import { useNotificationsStore } from '@/store/notifications'
 
@@ -116,14 +117,19 @@ const items = computed(() => {
           iconComponent: PencilRuler,
         },
         {
-          label: 'Block Meter Probability',
-          route: '/tools/blockmeter',
-          iconComponent: ShieldQuestion,
+          label: 'Spyris',
+          route: '/games/spyris',
+          iconComponent: HatGlasses,
         },
         {
           label: 'Data Summary',
           route: '/datasummary/' + Math.max(2025, new Date().getFullYear() - 1),
           iconComponent: BarChart3,
+        },
+        {
+          label: 'Block Meter Probability',
+          route: '/tools/blockmeter',
+          iconComponent: ShieldQuestion,
         },
       ],
     },

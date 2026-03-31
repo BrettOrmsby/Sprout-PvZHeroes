@@ -470,7 +470,7 @@ import {
   Star,
   Sun,
   Text,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import { Button, Column, DataTable, Divider, ScrollTop } from 'primevue'
 import NotePanel from '@/components/NotePanel.vue'
 

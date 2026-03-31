@@ -107,7 +107,7 @@ import {
   InputNumber,
   Select,
 } from 'primevue'
-import { Search, X } from 'lucide-vue-next'
+import { Search, X } from '@lucide/vue'
 import HeroSelect from '@/components/HeroSelect.vue'
 import ClassSelect from '@/components/ClassSelect.vue'
 import generateQuery from '@/lib/parse-query/generateQuery'

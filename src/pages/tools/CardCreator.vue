@@ -6,7 +6,7 @@
         <CustomCardForm />
       </div>
       <div class="card-render-container">
-        <CustomCardRender />
+        <FullCardRender :card="card" />
       </div>
     </div>
     <Divider />
@@ -24,13 +24,16 @@
 
 <script lang="ts" setup>
 import { Divider } from 'primevue'
-import { PencilRuler } from 'lucide-vue-next'
+import { PencilRuler } from '@lucide/vue'
 import TheFooter from '@/components/TheFooter.vue'
-import CustomCardRender from '@/components/cardcreator/CustomCardRender.vue'
+import FullCardRender from '@/components/FullCardRender.vue'
 import AbilityAccordionHelp from '@/components/cardcreator/AbilityAccordionHelp.vue'
 import SmallCustomCardRender from '@/components/cardcreator/SmallCustomCardRender.vue'
 import CustomCardForm from '@/components/cardcreator/CustomCardForm.vue'
 import SmallCardForm from '@/components/cardcreator/SmallCardForm.vue'
+import { useCustomCardStore } from '@/store/cardcreator/customCard'
+
+const card = useCustomCardStore()
 </script>
 
 <style scoped>

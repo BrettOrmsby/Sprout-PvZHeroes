@@ -126,7 +126,7 @@ import {
   ShieldBan,
   ShieldQuestion,
   Star,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import TheFooter from '@/components/TheFooter.vue'
 import CardUsageList from '@/components/datasummary/CardUsageList.vue'
 import BestWorstTabs from '@/components/datasummary/BestWorstTabs.vue'

@@ -10,7 +10,10 @@
     />
     <span class="card-cost" :class="costClass">{{ card.cost }}</span>
     <img class="card-image" alt="Card Image" :src="card.img" :style="cardImageStyle" />
-    <div class="card-strength" v-if="card.type === 'fighter' && card.strength">
+    <div
+      class="card-strength"
+      v-if="card.overrideShowStats || (card.type === 'fighter' && card.strength)"
+    >
       <img
         class="card-strength-image"
         :class="card.strengthImg"
@@ -19,7 +22,7 @@
       />
       <span :class="strengthClass">{{ card.strength }}</span>
     </div>
-    <div class="card-health" v-if="card.type === 'fighter'">
+    <div class="card-health" v-if="card.overrideShowStats || card.type === 'fighter'">
       <img
         class="card-health-image"
         :class="card.healthImg"
@@ -41,7 +44,7 @@
       />
       <div class="card-rarity-text">
         <span v-if="card.set">{{ card.set }} -</span>
-        {{ card.rarity }}
+        {{ card.rarityText || card.rarity }}
       </div>
     </div>
     <pre class="card-flavour">{{ card.flavour }}</pre>
@@ -51,39 +54,45 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import sanitizeHtml from 'sanitize-html'
-import { useCustomCardStore } from '@/store/cardcreator/customCard'
+import type { CardRenderData } from '@/lib/types'
 
-const card = useCustomCardStore()
+const props = defineProps<{ card: CardRenderData }>()
 
 const cardImageStyle = computed(() => ({
-  width: `${card.imgWidth}px`,
-  left: `${card.imgXOffset}px`,
-  top: `${card.imgYOffset}px`,
+  width: `${props.card.imgWidth}px`,
+  left: `${props.card.imgXOffset}px`,
+  top: `${props.card.imgYOffset}px`,
 }))
+
+const isDoubleDigit = (val: string | number): boolean => {
+  return val.toString().length > 1
+}
 const costClass = computed(() => ({
-  'double-digit': card.cost > 9 && card.cost < 100,
+  'double-digit': isDoubleDigit(props.card.cost),
 }))
 const strengthClass = computed(() => ({
-  'double-digit': card.strength > 9 && card.strength < 100,
+  'double-digit': isDoubleDigit(props.card.strength),
 }))
 const healthClass = computed(() => ({
-  'double-digit': card.health > 9 && card.health < 100,
+  'double-digit': isDoubleDigit(props.card.health),
 }))
 
 const cardType = computed(() => {
-  if (card.type === 'fighter') {
-    if (['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(card.className)) {
+  if (props.card.typeText) return props.card.typeText
+
+  if (props.card.type === 'fighter') {
+    if (['guardian', 'kabloom', 'mega-grow', 'smarty', 'solar'].includes(props.card.className)) {
       return 'Plant'
     }
     return 'Zombie'
-  } else if (card.type === 'trick') {
+  } else if (props.card.type === 'trick') {
     return 'Trick'
   }
   return 'Environment'
 })
 
 const cardAbilities = computed(() => {
-  const simpleTransformedAbilities = card.abilities
+  const simpleTransformedAbilities = props.card.abilities
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/\{\{(.+?)\}\}/g, (item) => {

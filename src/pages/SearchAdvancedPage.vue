@@ -44,7 +44,7 @@ import {
   Star,
   Sun,
   Text,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import { Button } from 'primevue'
 import QueryBuilderInput from '@/components/searchadvanced/QueryBuilderInput.vue'
 import TheFooter from '@/components/TheFooter.vue'

@@ -73,7 +73,7 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { onBeforeRouteUpdate, useRouter } from 'vue-router'
-import { CircleUser, Plus, Settings, UserPen } from 'lucide-vue-next'
+import { CircleUser, Plus, Settings, UserPen } from '@lucide/vue'
 import { Avatar, Button, Message, Skeleton } from 'primevue'
 import DeckCard from '@/components/DeckCard.vue'
 import TheFooter from '@/components/TheFooter.vue'

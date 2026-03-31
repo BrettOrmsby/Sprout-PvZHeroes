@@ -51,7 +51,7 @@ import {
   PackageOpen,
   Paperclip,
   Repeat,
-} from 'lucide-vue-next'
+} from '@lucide/vue'
 import CompareInput from '@/components/CompareInput.vue'
 import HighlightPopover from '@/components/HighlightPopover.vue'
 import useAuthUser from '@/composables/UseAuthUser'

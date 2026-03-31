@@ -58,7 +58,7 @@
 
 <script lang="ts" setup>
 import { Button, Message, Skeleton } from 'primevue'
-import { Sprout } from 'lucide-vue-next'
+import { Sprout } from '@lucide/vue'
 import useAuthUser from '@/composables/UseAuthUser'
 import DeckCard from '@/components/DeckCard.vue'
 import TheFooter from '@/components/TheFooter.vue'

@@ -78,7 +78,7 @@ import {
   Skeleton,
   type PageState,
 } from 'primevue'
-import { Search } from 'lucide-vue-next'
+import { Search } from '@lucide/vue'
 import TheFooter from '@/components/TheFooter.vue'
 import useSupabase from '@/composables/UseSupabase'
 import getHero from '@/lib/getHero'

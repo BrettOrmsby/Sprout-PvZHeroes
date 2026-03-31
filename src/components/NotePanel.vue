@@ -9,7 +9,7 @@
 
 <script lang="ts" setup>
 import { Panel } from 'primevue'
-import { CircleX, Info, Lightbulb, TriangleAlert } from 'lucide-vue-next'
+import { CircleX, Info, Lightbulb, TriangleAlert } from '@lucide/vue'
 
 defineProps<{ type: 'tip' | 'note' | 'warning' | 'error' }>()
 

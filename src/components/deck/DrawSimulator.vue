@@ -35,7 +35,7 @@
 <script lang="ts" setup>
 import { computed, onMounted, ref, watch } from 'vue'
 import { Button, Message } from 'primevue'
-import { Grid2X2, RotateCw } from 'lucide-vue-next'
+import { Grid2X2, RotateCw } from '@lucide/vue'
 import PVZCard from '@/components/PVZCard.vue'
 import getCard from '@/lib/getCard'
 import { useStatesStore } from '@/store/states'

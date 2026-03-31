@@ -53,7 +53,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { Button, InputNumber, Message, Select } from 'primevue'
-import { Download } from 'lucide-vue-next'
+import { Download } from '@lucide/vue'
 import { toBlob } from 'html-to-image'
 import FileSaver from 'file-saver'
 import throwError from '@/lib/throwError'

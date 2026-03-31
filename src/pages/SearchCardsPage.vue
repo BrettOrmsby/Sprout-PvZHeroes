@@ -56,7 +56,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Button, InputGroup, InputGroupAddon, InputText, Message, ScrollTop } from 'primevue'
-import { Filter, SearchCode } from 'lucide-vue-next'
+import { Filter, SearchCode } from '@lucide/vue'
 import PVZCard from '@/components/PVZCard.vue'
 import TheFooter from '@/components/TheFooter.vue'
 import CardContainer from '@/components/CardContainer.vue'

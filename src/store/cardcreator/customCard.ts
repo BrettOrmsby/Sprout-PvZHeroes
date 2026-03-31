@@ -1,29 +1,6 @@
+import type { ClassName, HealthImage, Rarity, StrengthImage } from '@/lib/types'
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { ref } from 'vue'
-
-export type StrengthImage =
-  | 'anti-hero'
-  | 'deadly'
-  | 'doublestrike'
-  | 'frenzy'
-  | 'overshoot'
-  | 'star'
-  | 'strength'
-  | 'strikethrough'
-  | 'truestrike'
-export type HealthImage = 'armored' | 'heart' | 'star' | 'untrickable' | 'strength-heart'
-export type ClassName =
-  | 'beastly'
-  | 'brainy'
-  | 'crazy'
-  | 'guardian'
-  | 'hearty'
-  | 'kabloom'
-  | 'mega-grow'
-  | 'smarty'
-  | 'sneaky'
-  | 'solar'
-export type Rarity = 'uncommon' | 'rare' | 'super-rare' | 'legendary' | 'common' | 'event' | 'token'
 
 export const useCustomCardStore = defineStore('customCard', () => {
   const className = ref<ClassName>('guardian')

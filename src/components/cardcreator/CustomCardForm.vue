@@ -190,7 +190,7 @@ import {
   type SelectChangeEvent,
   type ColorPickerChangeEvent,
 } from 'primevue'
-import { Download } from 'lucide-vue-next'
+import { Download } from '@lucide/vue'
 import { toBlob } from 'html-to-image'
 import FileSaver from 'file-saver'
 import ClassSelect from '@/components/ClassSelect.vue'
