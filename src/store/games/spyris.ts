@@ -137,12 +137,12 @@ export const useSpyrisStore = defineStore('spyris', () => {
   }
 
   const init = () => {
-    const START_DATE = new Date('2026-03-30')
+    const START_DATE = new Date('2026-04-1')
     const allCards = [...getAllCardsIterator()].filter(
       (card) => card.class !== 'Removed' && card.set !== 'token' && card.set !== 'superpower',
     )
     const shuffledCards = shuffle(allCards, 111)
-    const dayDiff = dayjs(Date.now()).diff(START_DATE, 'days')
+    const dayDiff = dayjs(Date.now()).diff(START_DATE, 'days') + 1
     const card = shuffledCards[dayDiff % allCards.length]
     if (card.name !== answer.value.name) {
       // Restart the game
