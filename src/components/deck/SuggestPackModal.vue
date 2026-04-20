@@ -8,12 +8,20 @@
   >
     <div class="pack-list">
       <div v-for="pack of sortedPacks" :key="pack.set" class="pack-item">
-        <img :src="`/images/packs/${pack.set}.png`" :alt="pack.set" class="pack-image" />
+        <img
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/packs/${pack.set}.png`"
+          :alt="pack.set"
+          class="pack-image"
+        />
         <div>
           <h3>{{ packNames[pack.set] }}</h3>
           <span class="image-text">
             {{ Math.floor(pack.sparks).toLocaleString() }}
-            <img src="/images/assets/spark.png" alt="spark" v-tooltip.bottom="'Sparks'" />
+            <img
+              src="https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/assets/spark.png"
+              alt="spark"
+              v-tooltip.bottom="'Sparks'"
+            />
           </span>
         </div>
       </div>

@@ -10,7 +10,7 @@
       <div v-if="slotProps.value" class="class-select-container">
         <img
           :alt="slotProps.value"
-          :src="`/images/classes/${slotProps.value.toLowerCase()}.png`"
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/classes/${slotProps.value.toLowerCase()}.png`"
           class="class-image"
         />
         <div>{{ options.find((e) => e.value === slotProps.value)!.label }}</div>
@@ -23,7 +23,7 @@
       <div class="class-select-container">
         <img
           :alt="slotProps.option.label"
-          :src="`/images/classes/${slotProps.option.label.toLowerCase()}.png`"
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/classes/${slotProps.option.label.toLowerCase()}.png`"
           class="class-image"
         />
         <div>{{ slotProps.option.label }}</div>

@@ -230,14 +230,14 @@ const strengthImageOptions = [
 ].map((name) => ({
   label: getReadableImageLabel(name),
   value: name,
-  imgSrc: `/images/abilities/${name}.png`,
+  imgSrc: `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${name}.png`,
 }))
 
 const healthImageOptions = ['armored', 'heart', 'star', 'strength-heart', 'untrickable'].map(
   (name) => ({
     label: getReadableImageLabel(name),
     value: name,
-    imgSrc: `/images/abilities/${name}.png`,
+    imgSrc: `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${name}.png`,
   }),
 )
 

@@ -73,11 +73,11 @@ for (const stat of ['sun', 'brain', 'health', 'strength']) {
 }
 const getAbilityImageSrc = (imageName: string) => {
   if (abilityImages.includes(imageName)) {
-    return `/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png`
   } else if (/^[0-9](sun|brain|health|strength)$/i.test(imageName)) {
-    return `/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png`
   } else if (/^(\+|-)[1-9](health|strength|sun|brain)$/i.test(imageName)) {
-    return `/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png`
   }
   return ''
 }

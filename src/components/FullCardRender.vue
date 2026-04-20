@@ -5,7 +5,7 @@
       :style="{
         'background-color': card.backgroundColour,
       }"
-      :src="`/images/cardcreator/${card.className}.png`"
+      :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/cardcreator/${card.className}.png`"
       :alt="`${card.className} background`"
     />
     <span class="card-cost" :class="costClass">{{ card.cost }}</span>
@@ -17,7 +17,7 @@
       <img
         class="card-strength-image"
         :class="card.strengthImg"
-        :src="`/images/abilities/${card.strengthImg}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${card.strengthImg}.png`"
         :alt="card.strengthImg"
       />
       <span :class="strengthClass">{{ card.strength }}</span>
@@ -26,7 +26,7 @@
       <img
         class="card-health-image"
         :class="card.healthImg"
-        :src="`/images/abilities/${card.healthImg}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${card.healthImg}.png`"
         :alt="card.healthImg"
       />
       <span :class="healthClass">{{ card.health }}</span>
@@ -40,7 +40,7 @@
       <img
         class="card-banner-image"
         :alt="card.rarity"
-        :src="`/images/cardcreator/rarity-banner/${card.rarity === 'token' ? 'common' : card.rarity}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/cardcreator/rarity-banner/${card.rarity === 'token' ? 'common' : card.rarity}.png`"
       />
       <div class="card-rarity-text">
         <span v-if="card.set">{{ card.set }} -</span>
@@ -118,11 +118,11 @@ const cardAbilities = computed(() => {
         'bullseye',
       ]
       if (abilityImages.includes(imageName)) {
-        return `<img src="/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png"/>`
+        return `<img src="https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${imageName === 'bullseye' ? 'truestrike' : imageName}.png"/>`
       } else if (/^[0-9](sun|brain|health|strength)$/i.test(imageName)) {
-        return `<img src="/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png"/>`
+        return `<img src="https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${imageName.replace(/\d/, '').toLowerCase()}/${imageName.match(/^\d/)}.png"/>`
       } else if (/^(\+|-)[1-9](health|strength|sun|brain)$/i.test(imageName)) {
-        return `<img src="/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png"/>`
+        return `<img src="https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${imageName.replace(/(\+|-)\d/, '').toLowerCase()}/${imageName.includes('+') ? 'plus' : 'minus'}/${imageName.match(/\d/)}.png"/>`
       }
       return imageName
     })

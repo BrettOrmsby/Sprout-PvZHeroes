@@ -310,9 +310,10 @@
           :key="image"
         >
           <span class="ability-list-item"
-            ><img :alt="image" :src="`/images/abilities/${image}.png`" /><span>{{
-              '{' + '{' + image + '}' + '}'
-            }}</span></span
+            ><img
+              :alt="image"
+              :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${image}.png`"
+            /><span>{{ '{' + '{' + image + '}' + '}' }}</span></span
           >
         </li>
         <template v-for="image in ['strength', 'health', 'sun', 'brain']" :key="image">
@@ -320,7 +321,7 @@
             <span class="ability-list-item"
               ><img
                 :alt="image"
-                :src="`/images/stats/${image}/${modifier ? `${modifier}/` : ''}1.png`"
+                :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${image}/${modifier ? `${modifier}/` : ''}1.png`"
               /><span
                 >{{
                   '{' +

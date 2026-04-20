@@ -11,7 +11,11 @@
       />
     </span>
     <span class="image-text" v-tooltip.left="'Deck Cost'">
-      {{ deck.sparks.toLocaleString() }}<img src="/images/assets/spark.png" alt="spark" />
+      {{ deck.sparks.toLocaleString()
+      }}<img
+        src="https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/assets/spark.png"
+        alt="spark"
+      />
     </span>
   </footer>
 </template>

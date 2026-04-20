@@ -16,10 +16,13 @@
           >
           <span v-else class="stats-image-container">
             <img
-              :src="`/images/stats/strength/${card.strength}.png`"
+              :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/strength/${card.strength}.png`"
               :alt="card.strength.toString()"
             />/
-            <img :src="`/images/stats/health/${card.health}.png`" :alt="card.health!.toString()" />
+            <img
+              :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/health/${card.health}.png`"
+              :alt="card.health!.toString()"
+            />
           </span>
         </template>
       </div>
@@ -27,7 +30,7 @@
         ><span v-if="userSettings.cardViewSettings.card_view === 'full_text'">{{ card.cost }}</span
         ><img
           v-else
-          :src="`/images/stats/${isPlant ? 'sun' : 'brain'}/${card.cost}.png`"
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${isPlant ? 'sun' : 'brain'}/${card.cost}.png`"
           :alt="card.cost.toString()"
       /></span>
       <SetPill :card="card" v-if="userSettings.cardViewSettings.show_set" />

@@ -49,7 +49,7 @@
               <img
                 class="class"
                 :class="iconClass.class"
-                :src="`/images/classes/${cardClass.toLowerCase()}.png`"
+                :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/classes/${cardClass.toLowerCase()}.png`"
                 :alt="cardClass"
               />
             </template>
@@ -58,7 +58,11 @@
       </Toolbar>
       <template v-for="(value, key) in cardByClass" :key="key">
         <h2 :id="`title-${key}`">
-          <img class="class" :src="`/images/classes/${key.toLowerCase()}.png`" :alt="key" />
+          <img
+            class="class"
+            :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/classes/${key.toLowerCase()}.png`"
+            :alt="key"
+          />
           <span>{{ key }}</span>
         </h2>
         <CardContainer>

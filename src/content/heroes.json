@@ -1,7 +1,7 @@
 [
   {
     "name": "Green Shadow",
-    "image": "/images/heroes/green-shadow.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/green-shadow.png",
     "class": ["Mega-Grow", "Smarty"],
     "mainSuperPower": "Precision Blast",
     "altSuperPowers": ["Big Chill", "Whirlwind", "Embiggen"],
@@ -9,7 +9,7 @@
   },
   {
     "name": "Solar Flare",
-    "image": "/images/heroes/solar-flare.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/solar-flare.png",
     "class": ["Kabloom", "Solar"],
     "mainSuperPower": "Sunburn",
     "altSuperPowers": ["Weed Whack", "More Spore", "Scorched Earth"],
@@ -17,7 +17,7 @@
   },
   {
     "name": "Wall-Knight",
-    "image": "/images/heroes/wall-knight.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/wall-knight.png",
     "class": ["Guardian", "Solar"],
     "mainSuperPower": "Uncrackable",
     "altSuperPowers": ["Geyser", "Nut Signal", "Bubble Up"],
@@ -25,7 +25,7 @@
   },
   {
     "name": "Chompzilla",
-    "image": "/images/heroes/chompzilla.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/chompzilla.png",
     "class": ["Mega-Grow", "Solar"],
     "mainSuperPower": "Devour",
     "altSuperPowers": ["Holo-Flora", "Geyser", "Scorched Earth"],
@@ -33,7 +33,7 @@
   },
   {
     "name": "Spudow",
-    "image": "/images/heroes/spudow.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/spudow.png",
     "class": ["Kabloom", "Guardian"],
     "mainSuperPower": "Tater Toss",
     "altSuperPowers": ["Bubble Up", "Storm Front", "Meteor Strike"],
@@ -41,7 +41,7 @@
   },
   {
     "name": "Citron",
-    "image": "/images/heroes/citron.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/citron.png",
     "class": ["Guardian", "Smarty"],
     "mainSuperPower": "Peel Shield",
     "altSuperPowers": ["Transmogrify", "Nut Signal", "Root Wall"],
@@ -49,7 +49,7 @@
   },
   {
     "name": "Grass Knuckles",
-    "image": "/images/heroes/grass-knuckles.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/grass-knuckles.png",
     "class": ["Mega-Grow", "Guardian"],
     "mainSuperPower": "Power Pummel",
     "altSuperPowers": ["Holo-Flora", "Time to Shine", "Root Wall"],
@@ -57,7 +57,7 @@
   },
   {
     "name": "Nightcap",
-    "image": "/images/heroes/nightcap.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/nightcap.png",
     "class": ["Kabloom", "Smarty"],
     "mainSuperPower": "Mush-Boom",
     "altSuperPowers": ["More Spore", "Whirlwind", "Storm Front"],
@@ -65,7 +65,7 @@
   },
   {
     "name": "Rose",
-    "image": "/images/heroes/rose.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/rose.png",
     "class": ["Smarty", "Solar"],
     "mainSuperPower": "Goatify",
     "altSuperPowers": ["Transmogrify", "Big Chill", "Weed Whack"],
@@ -73,7 +73,7 @@
   },
   {
     "name": "Captain Combustible",
-    "image": "/images/heroes/captain-combustible.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/captain-combustible.png",
     "class": ["Kabloom", "Mega-Grow"],
     "mainSuperPower": "Blazing Bark",
     "altSuperPowers": ["Meteor Strike", "Embiggen", "Time to Shine"],
@@ -81,7 +81,7 @@
   },
   {
     "name": "Beta-Carrotina",
-    "image": "/images/heroes/beta-carrotina.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/beta-carrotina.png",
     "class": ["Guardian", "Smarty"],
     "mainSuperPower": "Genetic Amplification",
     "altSuperPowers": ["Ensign Uproot", "Lieutenant Carrotron", "Lightspeed Seed"],
@@ -89,7 +89,7 @@
   },
   {
     "name": "Super Brainz",
-    "image": "/images/heroes/super-brainz.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/super-brainz.png",
     "class": ["Brainy", "Sneaky"],
     "mainSuperPower": "Carried Away",
     "altSuperPowers": ["Telepathy", "Cut Down to Size", "Super Stench"],
@@ -97,7 +97,7 @@
   },
   {
     "name": "The Smash",
-    "image": "/images/heroes/the-smash.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/the-smash.png",
     "class": ["Hearty", "Beastly"],
     "mainSuperPower": "Slammin' Smackdown",
     "altSuperPowers": ["Heroic Health", "Possessed", "Galvanize"],
@@ -105,7 +105,7 @@
   },
   {
     "name": "Impfinity",
-    "image": "/images/heroes/impfinity.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/impfinity.png",
     "class": ["Sneaky", "Crazy"],
     "mainSuperPower": "Triple Threat",
     "altSuperPowers": ["Super Stench", "In-Crypted", "Brute Strength"],
@@ -113,7 +113,7 @@
   },
   {
     "name": "Rustbolt",
-    "image": "/images/heroes/rustbolt.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/rustbolt.png",
     "class": ["Brainy", "Hearty"],
     "mainSuperPower": "Shrink Ray",
     "altSuperPowers": ["Heroic Health", "Cut Down to Size", "Rock Wall"],
@@ -121,7 +121,7 @@
   },
   {
     "name": "Electric Boogaloo",
-    "image": "/images/heroes/electric-boogaloo.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/electric-boogaloo.png",
     "class": ["Beastly", "Crazy"],
     "mainSuperPower": "Stayin' Alive",
     "altSuperPowers": ["Dance Off", "Evaporate", "Electrobolt"],
@@ -129,7 +129,7 @@
   },
   {
     "name": "Brain Freeze",
-    "image": "/images/heroes/brain-freeze.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/brain-freeze.png",
     "class": ["Beastly", "Sneaky"],
     "mainSuperPower": "Frozen Tundra",
     "altSuperPowers": ["Dolphinado", "Acid Rain", "Galvanize"],
@@ -137,7 +137,7 @@
   },
   {
     "name": "Professor Brainstorm",
-    "image": "/images/heroes/professor-brainstorm.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/professor-brainstorm.png",
     "class": ["Brainy", "Crazy"],
     "mainSuperPower": "Eureka",
     "altSuperPowers": ["Summoning", "Telepathy", "Dance Off"],
@@ -145,7 +145,7 @@
   },
   {
     "name": "Immorticia",
-    "image": "/images/heroes/immorticia.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/immorticia.png",
     "class": ["Brainy", "Beastly"],
     "mainSuperPower": "Witch's Familiar",
     "altSuperPowers": ["Summoning", "Evaporate", "Acid Rain"],
@@ -153,7 +153,7 @@
   },
   {
     "name": "Z-Mech",
-    "image": "/images/heroes/z-mech.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/z-mech.png",
     "class": ["Hearty", "Crazy"],
     "mainSuperPower": "Missile Madness",
     "altSuperPowers": ["Rock Wall", "Brute Strength", "Electrobolt"],
@@ -161,7 +161,7 @@
   },
   {
     "name": "Neptuna",
-    "image": "/images/heroes/neptuna.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/neptuna.png",
     "class": ["Hearty", "Sneaky"],
     "mainSuperPower": "Octo-Pult",
     "altSuperPowers": ["Dolphinado", "Possessed", "In-Crypted"],
@@ -169,7 +169,7 @@
   },
   {
     "name": "Huge-Gigantacus",
-    "image": "/images/heroes/huge-gigantacus.png",
+    "image": "https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/heroes/huge-gigantacus.png",
     "class": ["Sneaky", "Brainy"],
     "mainSuperPower": "Terror-Former 10,000",
     "altSuperPowers": ["Iron Boarder", "Teleportation Station", "Ice Moon"],

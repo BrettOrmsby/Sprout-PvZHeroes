@@ -6,7 +6,7 @@
         v-for="className in classImages"
         :key="className"
         class="class-icon"
-        :src="`/images/classes/${className.toLowerCase()}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/classes/${className.toLowerCase()}.png`"
         :alt="className"
       />
     </template>

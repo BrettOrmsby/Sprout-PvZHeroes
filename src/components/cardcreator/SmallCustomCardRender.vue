@@ -9,7 +9,7 @@
     <div class="card-cost" :class="{ 'is-zombie': !isPlant }">
       <img
         class="card-cost-image"
-        :src="`/images/abilities/${isPlant ? 'sun' : 'brain'}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${isPlant ? 'sun' : 'brain'}.png`"
         :alt="isPlant ? 'sun' : 'brain'"
       />
       <span :class="costClass">{{ card.cost }}</span>
@@ -18,7 +18,7 @@
       <img
         class="card-strength-image"
         :class="card.strengthImg"
-        :src="`/images/abilities/${card.strengthImg}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${card.strengthImg}.png`"
         :alt="card.strengthImg"
       />
       <span :class="strengthClass">{{ card.strength }}</span>
@@ -27,7 +27,7 @@
       <img
         class="card-health-image"
         :class="card.healthImg"
-        :src="`/images/abilities/${card.healthImg}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/abilities/${card.healthImg}.png`"
         :alt="card.healthImg"
       />
       <span :class="healthClass">{{ card.health }}</span>
@@ -73,11 +73,11 @@ const isPlant = computed(() =>
 )
 const frameSrc = computed(() => {
   if (!card.tribes.includes('Superpower') || card.frameOverwrite === 'default') {
-    return `/images/cardcreator/frames/${card.type}/${card.rarity === 'token' ? 'common' : card.rarity}.webp`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/cardcreator/frames/${card.type}/${card.rarity === 'token' ? 'common' : card.rarity}.webp`
   } else if (card.frameOverwrite === 'super') {
-    return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}.webp`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}.webp`
   } else {
-    return `/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}-signature.webp`
+    return `https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/cardcreator/frames/super/${isPlant.value ? 'plant' : 'zombie'}-signature.webp`
   }
 })
 </script>

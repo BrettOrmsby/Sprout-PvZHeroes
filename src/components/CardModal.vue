@@ -20,15 +20,18 @@
     <span class="stats-image-container" v-if="userSettings.show_real_stats">
       <img
         class="cost"
-        :src="`/images/stats/${isPlant ? 'sun' : 'brain'}/${card.cost}.png`"
+        :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/${isPlant ? 'sun' : 'brain'}/${card.cost}.png`"
         :alt="card.cost.toString()"
       />
       <span v-if="card.strength || card.health">
         -
         <img
-          :src="`/images/stats/strength/${card.strength}.png`"
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/strength/${card.strength}.png`"
           :alt="card.strength!.toString()" />
-        / <img :src="`/images/stats/health/${card.health}.png`" :alt="card.health!.toString()"
+        /
+        <img
+          :src="`https://res.cloudinary.com/datxpws7h/image/upload/v1776647713/images/stats/health/${card.health}.png`"
+          :alt="card.health!.toString()"
       /></span>
     </span>
     <p class="types">- {{ card.tribes.join(' ') }} {{ card.type }} -</p>
