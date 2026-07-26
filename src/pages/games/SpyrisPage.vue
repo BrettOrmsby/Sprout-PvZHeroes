@@ -62,37 +62,35 @@ watch(
   () => window.scrollTo({ top: 0 }),
 )
 
-const answerCardRender = computed(
-  (): CardRenderData => ({
-    className: spyris.answer.class.toLowerCase() as ClassName,
-    name: spyris.answer.name,
-    type: normalizeCardType(spyris.answer.type),
-    tribes: spyris.answer.tribes,
-    abilities: spyris.answer.abilities
-      .replace(/<b>(.+?)<\/b>/g, '**$1**')
-      .replace(/\{\{(.+?)\}\}/g, (substr) => {
-        if (substr.includes(':')) {
-          return substr.split(':')[0].slice(2)
-        } else {
-          return substr
-        }
-      }),
-    set: spyris.answer.set === 'event' ? '' : spyris.answer.set,
-    flavour: spyris.answer.flavour,
-    rarity: spyris.answer.rarity as Rarity,
-    strengthImg: 'strength',
-    healthImg: 'heart',
-    cost: spyris.answer.cost,
-    strength: spyris.answer.strength ?? 0,
-    health: spyris.answer.health ?? 0,
+const answerCardRender = computed((): CardRenderData => ({
+  className: spyris.answer.class.toLowerCase() as ClassName,
+  name: spyris.answer.name,
+  type: normalizeCardType(spyris.answer.type),
+  tribes: spyris.answer.tribes,
+  abilities: spyris.answer.abilities
+    .replace(/<b>(.+?)<\/b>/g, '**$1**')
+    .replace(/\{\{(.+?)\}\}/g, (substr) => {
+      if (substr.includes(':')) {
+        return substr.split(':')[0].slice(2)
+      } else {
+        return substr
+      }
+    }),
+  set: spyris.answer.set === 'event' ? '' : spyris.answer.set,
+  flavour: spyris.answer.flavour,
+  rarity: spyris.answer.rarity as Rarity,
+  strengthImg: 'strength',
+  healthImg: 'heart',
+  cost: spyris.answer.cost,
+  strength: spyris.answer.strength ?? 0,
+  health: spyris.answer.health ?? 0,
 
-    img: '',
-    imgWidth: 0,
-    imgXOffset: 0,
-    imgYOffset: 0,
-    backgroundColour: 'transparent',
-  }),
-)
+  img: '',
+  imgWidth: 0,
+  imgXOffset: 0,
+  imgYOffset: 0,
+  backgroundColour: 'transparent',
+}))
 
 function normalizeCardType(type: string): CardType {
   if (type === 'Plant' || type === 'Zombie') return 'fighter'
